@@ -16,6 +16,7 @@ import com.pulumi.gcp.notebooks.outputs.RuntimeSoftwareConfig;
 import com.pulumi.gcp.notebooks.outputs.RuntimeVirtualMachine;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -65,8 +66,8 @@ public class Runtime extends com.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ RuntimeAccessConfig> accessConfig() {
-        return this.accessConfig;
+    public Output<Optional<RuntimeAccessConfig>> accessConfig() {
+        return Codegen.optional(this.accessConfig);
     }
     /**
      * The health state of this runtime. For a list of possible output values, see
@@ -185,8 +186,8 @@ public class Runtime extends com.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ RuntimeVirtualMachine> virtualMachine() {
-        return this.virtualMachine;
+    public Output<Optional<RuntimeVirtualMachine>> virtualMachine() {
+        return Codegen.optional(this.virtualMachine);
     }
 
     /**

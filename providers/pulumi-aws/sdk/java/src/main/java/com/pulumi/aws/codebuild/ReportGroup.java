@@ -14,6 +14,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -71,8 +72,8 @@ public class ReportGroup extends com.pulumi.resources.CustomResource {
      * @return If `true`, deletes any reports that belong to a report group before deleting the report group. If `false`, you must delete any reports in the report group before deleting it. Default value is `false`.
      * 
      */
-    public Output</* @Nullable */ Boolean> deleteReports() {
-        return this.deleteReports;
+    public Output<Optional<Boolean>> deleteReports() {
+        return Codegen.optional(this.deleteReports);
     }
     /**
      * Information about the destination where the raw data of this Report Group is exported. see Export Config documented below.
@@ -113,8 +114,8 @@ public class ReportGroup extends com.pulumi.resources.CustomResource {
      * @return Key-value mapping of resource tags. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * A map of tags assigned to the resource, including those inherited from the provider .

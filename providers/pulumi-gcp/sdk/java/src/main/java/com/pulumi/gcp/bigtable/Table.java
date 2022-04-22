@@ -13,6 +13,7 @@ import com.pulumi.gcp.bigtable.inputs.TableState;
 import com.pulumi.gcp.bigtable.outputs.TableColumnFamily;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -54,8 +55,8 @@ public class Table extends com.pulumi.resources.CustomResource {
      * @return A group of columns within a table which share a common configuration. This can be specified multiple times. Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ List<TableColumnFamily>> columnFamilies() {
-        return this.columnFamilies;
+    public Output<Optional<List<TableColumnFamily>>> columnFamilies() {
+        return Codegen.optional(this.columnFamilies);
     }
     /**
      * The name of the Bigtable instance.
@@ -116,8 +117,8 @@ public class Table extends com.pulumi.resources.CustomResource {
      * to delete/recreate the entire `gcp.bigtable.Table` resource.
      * 
      */
-    public Output</* @Nullable */ List<String>> splitKeys() {
-        return this.splitKeys;
+    public Output<Optional<List<String>>> splitKeys() {
+        return Codegen.optional(this.splitKeys);
     }
 
     /**

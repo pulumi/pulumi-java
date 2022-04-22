@@ -14,6 +14,7 @@ import com.pulumi.gcp.compute.inputs.AutoscalerState;
 import com.pulumi.gcp.compute.outputs.AutoscalerAutoscalingPolicy;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -103,8 +104,8 @@ public class Autoscaler extends com.pulumi.resources.CustomResource {
      * @return An optional description of this resource.
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * The identifier for this object. Format specified above.

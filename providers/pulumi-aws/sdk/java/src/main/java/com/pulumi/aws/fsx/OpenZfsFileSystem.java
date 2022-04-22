@@ -17,6 +17,7 @@ import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -75,8 +76,8 @@ public class OpenZfsFileSystem extends com.pulumi.resources.CustomResource {
      * @return The number of days to retain automatic backups. Setting this to 0 disables automatic backups. You can retain automatic backups for a maximum of 90 days.
      * 
      */
-    public Output</* @Nullable */ Integer> automaticBackupRetentionDays() {
-        return this.automaticBackupRetentionDays;
+    public Output<Optional<Integer>> automaticBackupRetentionDays() {
+        return Codegen.optional(this.automaticBackupRetentionDays);
     }
     /**
      * The ID of the source backup to create the filesystem from.
@@ -89,8 +90,8 @@ public class OpenZfsFileSystem extends com.pulumi.resources.CustomResource {
      * @return The ID of the source backup to create the filesystem from.
      * 
      */
-    public Output</* @Nullable */ String> backupId() {
-        return this.backupId;
+    public Output<Optional<String>> backupId() {
+        return Codegen.optional(this.backupId);
     }
     /**
      * A boolean flag indicating whether tags for the file system should be copied to backups. The default value is false.
@@ -103,8 +104,8 @@ public class OpenZfsFileSystem extends com.pulumi.resources.CustomResource {
      * @return A boolean flag indicating whether tags for the file system should be copied to backups. The default value is false.
      * 
      */
-    public Output</* @Nullable */ Boolean> copyTagsToBackups() {
-        return this.copyTagsToBackups;
+    public Output<Optional<Boolean>> copyTagsToBackups() {
+        return Codegen.optional(this.copyTagsToBackups);
     }
     /**
      * A boolean flag indicating whether tags for the file system should be copied to snapshots. The default value is false.
@@ -117,8 +118,8 @@ public class OpenZfsFileSystem extends com.pulumi.resources.CustomResource {
      * @return A boolean flag indicating whether tags for the file system should be copied to snapshots. The default value is false.
      * 
      */
-    public Output</* @Nullable */ Boolean> copyTagsToVolumes() {
-        return this.copyTagsToVolumes;
+    public Output<Optional<Boolean>> copyTagsToVolumes() {
+        return Codegen.optional(this.copyTagsToVolumes);
     }
     /**
      * A recurring daily time, in the format HH:MM. HH is the zero-padded hour of the day (0-23), and MM is the zero-padded minute of the hour. For example, 05:00 specifies 5 AM daily. Requires `automatic_backup_retention_days` to be set.
@@ -257,8 +258,8 @@ public class OpenZfsFileSystem extends com.pulumi.resources.CustomResource {
      * @return A list of IDs for the security groups that apply to the specified network interfaces created for file system access. These security groups will apply to all network interfaces.
      * 
      */
-    public Output</* @Nullable */ List<String>> securityGroupIds() {
-        return this.securityGroupIds;
+    public Output<Optional<List<String>>> securityGroupIds() {
+        return Codegen.optional(this.securityGroupIds);
     }
     /**
      * The storage capacity (GiB) of the file system. Valid values between `64` and `524288`.
@@ -271,8 +272,8 @@ public class OpenZfsFileSystem extends com.pulumi.resources.CustomResource {
      * @return The storage capacity (GiB) of the file system. Valid values between `64` and `524288`.
      * 
      */
-    public Output</* @Nullable */ Integer> storageCapacity() {
-        return this.storageCapacity;
+    public Output<Optional<Integer>> storageCapacity() {
+        return Codegen.optional(this.storageCapacity);
     }
     /**
      * The filesystem storage type. Only `SSD` is supported.
@@ -285,8 +286,8 @@ public class OpenZfsFileSystem extends com.pulumi.resources.CustomResource {
      * @return The filesystem storage type. Only `SSD` is supported.
      * 
      */
-    public Output</* @Nullable */ String> storageType() {
-        return this.storageType;
+    public Output<Optional<String>> storageType() {
+        return Codegen.optional(this.storageType);
     }
     /**
      * A list of IDs for the subnets that the file system will be accessible from. Exactly 1 subnet need to be provided.
@@ -313,8 +314,8 @@ public class OpenZfsFileSystem extends com.pulumi.resources.CustomResource {
      * @return A map of tags to assign to the file system. If configured with a provider [`default_tags` configuration block](https://www.terraform.io/docs/providers/aws/index.html#default_tags-configuration-block) present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * A map of tags assigned to the resource, including those inherited from the provider [`default_tags` configuration block](https://www.terraform.io/docs/providers/aws/index.html#default_tags-configuration-block).

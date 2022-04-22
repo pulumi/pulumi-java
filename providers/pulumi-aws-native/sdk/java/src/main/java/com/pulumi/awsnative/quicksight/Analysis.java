@@ -18,6 +18,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -91,8 +92,8 @@ public class Analysis extends com.pulumi.resources.CustomResource {
      * @return &lt;p&gt;Errors associated with the analysis.&lt;/p&gt;
      * 
      */
-    public Output</* @Nullable */ List<AnalysisError>> errors() {
-        return this.errors;
+    public Output<Optional<List<AnalysisError>>> errors() {
+        return Codegen.optional(this.errors);
     }
     /**
      * &lt;p&gt;The time that the analysis was last updated.&lt;/p&gt;
@@ -119,14 +120,14 @@ public class Analysis extends com.pulumi.resources.CustomResource {
      * @return &lt;p&gt;The descriptive name of the analysis.&lt;/p&gt;
      * 
      */
-    public Output</* @Nullable */ String> name() {
-        return this.name;
+    public Output<Optional<String>> name() {
+        return Codegen.optional(this.name);
     }
     @Export(name="parameters", type=AnalysisParameters.class, parameters={})
     private Output</* @Nullable */ AnalysisParameters> parameters;
 
-    public Output</* @Nullable */ AnalysisParameters> parameters() {
-        return this.parameters;
+    public Output<Optional<AnalysisParameters>> parameters() {
+        return Codegen.optional(this.parameters);
     }
     /**
      * &lt;p&gt;A structure that describes the principals and the resource-level permissions on an
@@ -149,8 +150,8 @@ public class Analysis extends com.pulumi.resources.CustomResource {
      *         &lt;p&gt;To specify no permissions, omit &lt;code&gt;Permissions&lt;/code&gt;.&lt;/p&gt;
      * 
      */
-    public Output</* @Nullable */ List<AnalysisResourcePermission>> permissions() {
-        return this.permissions;
+    public Output<Optional<List<AnalysisResourcePermission>>> permissions() {
+        return Codegen.optional(this.permissions);
     }
     /**
      * &lt;p&gt;A list of the associated sheets with the unique identifier and name of each sheet.&lt;/p&gt;
@@ -191,8 +192,8 @@ public class Analysis extends com.pulumi.resources.CustomResource {
      *             analysis.&lt;/p&gt;
      * 
      */
-    public Output</* @Nullable */ List<AnalysisTag>> tags() {
-        return this.tags;
+    public Output<Optional<List<AnalysisTag>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * &lt;p&gt;The ARN of the theme of the analysis.&lt;/p&gt;
@@ -205,8 +206,8 @@ public class Analysis extends com.pulumi.resources.CustomResource {
      * @return &lt;p&gt;The ARN of the theme of the analysis.&lt;/p&gt;
      * 
      */
-    public Output</* @Nullable */ String> themeArn() {
-        return this.themeArn;
+    public Output<Optional<String>> themeArn() {
+        return Codegen.optional(this.themeArn);
     }
 
     /**

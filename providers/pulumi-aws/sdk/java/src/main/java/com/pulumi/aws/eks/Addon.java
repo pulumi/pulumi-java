@@ -12,6 +12,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -138,8 +139,8 @@ public class Addon extends com.pulumi.resources.CustomResource {
      * version updates to the add-on. Valid values are `NONE` and `OVERWRITE`.
      * 
      */
-    public Output</* @Nullable */ String> resolveConflicts() {
-        return this.resolveConflicts;
+    public Output<Optional<String>> resolveConflicts() {
+        return Codegen.optional(this.resolveConflicts);
     }
     /**
      * The Amazon Resource Name (ARN) of an
@@ -162,8 +163,8 @@ public class Addon extends com.pulumi.resources.CustomResource {
      * in the Amazon EKS User Guide.
      * 
      */
-    public Output</* @Nullable */ String> serviceAccountRoleArn() {
-        return this.serviceAccountRoleArn;
+    public Output<Optional<String>> serviceAccountRoleArn() {
+        return Codegen.optional(this.serviceAccountRoleArn);
     }
     /**
      * Key-value map of resource tags. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
@@ -176,8 +177,8 @@ public class Addon extends com.pulumi.resources.CustomResource {
      * @return Key-value map of resource tags. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * (Optional) Key-value map of resource tags, including those inherited from the provider .

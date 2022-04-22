@@ -14,6 +14,7 @@ import com.pulumi.gcp.storage.outputs.DefaultObjectAccessControlProjectTeam;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -161,8 +162,8 @@ public class DefaultObjectAccessControl extends com.pulumi.resources.CustomResou
      * @return The name of the object, if applied to an object.
      * 
      */
-    public Output</* @Nullable */ String> object() {
-        return this.object;
+    public Output<Optional<String>> object() {
+        return Codegen.optional(this.object);
     }
     /**
      * The project team associated with the entity

@@ -13,6 +13,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -34,8 +35,8 @@ public class CustomMetric extends com.pulumi.resources.CustomResource {
      * @return Field represents a friendly name in the console for the custom metric; it doesn&#39;t have to be unique. Don&#39;t use this name as the metric identifier in the device metric report. Can be updated once defined.
      * 
      */
-    public Output</* @Nullable */ String> displayName() {
-        return this.displayName;
+    public Output<Optional<String>> displayName() {
+        return Codegen.optional(this.displayName);
     }
     /**
      * The Amazon Resource Number (ARN) of the custom metric.
@@ -62,8 +63,8 @@ public class CustomMetric extends com.pulumi.resources.CustomResource {
      * @return The name of the custom metric. This will be used in the metric report submitted from the device/thing. Shouldn&#39;t begin with aws: . Cannot be updated once defined.
      * 
      */
-    public Output</* @Nullable */ String> metricName() {
-        return this.metricName;
+    public Output<Optional<String>> metricName() {
+        return Codegen.optional(this.metricName);
     }
     /**
      * The type of the custom metric. Types include string-list, ip-address-list, number-list, and number.
@@ -90,8 +91,8 @@ public class CustomMetric extends com.pulumi.resources.CustomResource {
      * @return An array of key-value pairs to apply to this resource.
      * 
      */
-    public Output</* @Nullable */ List<CustomMetricTag>> tags() {
-        return this.tags;
+    public Output<Optional<List<CustomMetricTag>>> tags() {
+        return Codegen.optional(this.tags);
     }
 
     /**

@@ -13,6 +13,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -48,8 +49,8 @@ public class UserDefinedFunction extends com.pulumi.resources.CustomResource {
      * @return ID of the Glue Catalog to create the function in. If omitted, this defaults to the AWS Account ID.
      * 
      */
-    public Output</* @Nullable */ String> catalogId() {
-        return this.catalogId;
+    public Output<Optional<String>> catalogId() {
+        return Codegen.optional(this.catalogId);
     }
     /**
      * The Java class that contains the function code.
@@ -138,8 +139,8 @@ public class UserDefinedFunction extends com.pulumi.resources.CustomResource {
      * @return The configuration block for Resource URIs. See resource uris below for more details.
      * 
      */
-    public Output</* @Nullable */ List<UserDefinedFunctionResourceUri>> resourceUris() {
-        return this.resourceUris;
+    public Output<Optional<List<UserDefinedFunctionResourceUri>>> resourceUris() {
+        return Codegen.optional(this.resourceUris);
     }
 
     /**

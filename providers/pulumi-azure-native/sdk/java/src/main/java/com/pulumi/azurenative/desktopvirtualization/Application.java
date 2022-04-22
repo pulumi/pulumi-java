@@ -14,6 +14,7 @@ import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -44,8 +45,8 @@ public class Application extends com.pulumi.resources.CustomResource {
      * @return Resource Type of Application.
      * 
      */
-    public Output</* @Nullable */ String> applicationType() {
-        return this.applicationType;
+    public Output<Optional<String>> applicationType() {
+        return Codegen.optional(this.applicationType);
     }
     /**
      * Command Line Arguments for Application.
@@ -58,8 +59,8 @@ public class Application extends com.pulumi.resources.CustomResource {
      * @return Command Line Arguments for Application.
      * 
      */
-    public Output</* @Nullable */ String> commandLineArguments() {
-        return this.commandLineArguments;
+    public Output<Optional<String>> commandLineArguments() {
+        return Codegen.optional(this.commandLineArguments);
     }
     /**
      * Specifies whether this published application can be launched with command line arguments provided by the client, command line arguments specified at publish time, or no command line arguments at all.
@@ -86,8 +87,8 @@ public class Application extends com.pulumi.resources.CustomResource {
      * @return Description of Application.
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * Specifies a path for the executable file for the application.
@@ -100,8 +101,8 @@ public class Application extends com.pulumi.resources.CustomResource {
      * @return Specifies a path for the executable file for the application.
      * 
      */
-    public Output</* @Nullable */ String> filePath() {
-        return this.filePath;
+    public Output<Optional<String>> filePath() {
+        return Codegen.optional(this.filePath);
     }
     /**
      * Friendly name of Application.
@@ -114,8 +115,8 @@ public class Application extends com.pulumi.resources.CustomResource {
      * @return Friendly name of Application.
      * 
      */
-    public Output</* @Nullable */ String> friendlyName() {
-        return this.friendlyName;
+    public Output<Optional<String>> friendlyName() {
+        return Codegen.optional(this.friendlyName);
     }
     /**
      * the icon a 64 bit string as a byte array.
@@ -156,8 +157,8 @@ public class Application extends com.pulumi.resources.CustomResource {
      * @return Index of the icon.
      * 
      */
-    public Output</* @Nullable */ Integer> iconIndex() {
-        return this.iconIndex;
+    public Output<Optional<Integer>> iconIndex() {
+        return Codegen.optional(this.iconIndex);
     }
     /**
      * Path to icon.
@@ -170,8 +171,8 @@ public class Application extends com.pulumi.resources.CustomResource {
      * @return Path to icon.
      * 
      */
-    public Output</* @Nullable */ String> iconPath() {
-        return this.iconPath;
+    public Output<Optional<String>> iconPath() {
+        return Codegen.optional(this.iconPath);
     }
     /**
      * Specifies the package application Id for MSIX applications
@@ -184,8 +185,8 @@ public class Application extends com.pulumi.resources.CustomResource {
      * @return Specifies the package application Id for MSIX applications
      * 
      */
-    public Output</* @Nullable */ String> msixPackageApplicationId() {
-        return this.msixPackageApplicationId;
+    public Output<Optional<String>> msixPackageApplicationId() {
+        return Codegen.optional(this.msixPackageApplicationId);
     }
     /**
      * Specifies the package family name for MSIX applications
@@ -198,8 +199,8 @@ public class Application extends com.pulumi.resources.CustomResource {
      * @return Specifies the package family name for MSIX applications
      * 
      */
-    public Output</* @Nullable */ String> msixPackageFamilyName() {
-        return this.msixPackageFamilyName;
+    public Output<Optional<String>> msixPackageFamilyName() {
+        return Codegen.optional(this.msixPackageFamilyName);
     }
     /**
      * The name of the resource
@@ -240,8 +241,8 @@ public class Application extends com.pulumi.resources.CustomResource {
      * @return Specifies whether to show the RemoteApp program in the RD Web Access server.
      * 
      */
-    public Output</* @Nullable */ Boolean> showInPortal() {
-        return this.showInPortal;
+    public Output<Optional<Boolean>> showInPortal() {
+        return Codegen.optional(this.showInPortal);
     }
     /**
      * The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;

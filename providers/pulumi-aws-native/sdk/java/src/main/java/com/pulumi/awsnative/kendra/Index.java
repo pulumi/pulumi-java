@@ -18,6 +18,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -43,8 +44,8 @@ public class Index extends com.pulumi.resources.CustomResource {
      * @return Capacity units
      * 
      */
-    public Output</* @Nullable */ IndexCapacityUnitsConfiguration> capacityUnits() {
-        return this.capacityUnits;
+    public Output<Optional<IndexCapacityUnitsConfiguration>> capacityUnits() {
+        return Codegen.optional(this.capacityUnits);
     }
     /**
      * A description for the index
@@ -57,8 +58,8 @@ public class Index extends com.pulumi.resources.CustomResource {
      * @return A description for the index
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * Document metadata configurations
@@ -71,8 +72,8 @@ public class Index extends com.pulumi.resources.CustomResource {
      * @return Document metadata configurations
      * 
      */
-    public Output</* @Nullable */ List<IndexDocumentMetadataConfiguration>> documentMetadataConfigurations() {
-        return this.documentMetadataConfigurations;
+    public Output<Optional<List<IndexDocumentMetadataConfiguration>>> documentMetadataConfigurations() {
+        return Codegen.optional(this.documentMetadataConfigurations);
     }
     @Export(name="edition", type=IndexEdition.class, parameters={})
     private Output<IndexEdition> edition;
@@ -103,8 +104,8 @@ public class Index extends com.pulumi.resources.CustomResource {
      * @return Server side encryption configuration
      * 
      */
-    public Output</* @Nullable */ IndexServerSideEncryptionConfiguration> serverSideEncryptionConfiguration() {
-        return this.serverSideEncryptionConfiguration;
+    public Output<Optional<IndexServerSideEncryptionConfiguration>> serverSideEncryptionConfiguration() {
+        return Codegen.optional(this.serverSideEncryptionConfiguration);
     }
     /**
      * Tags for labeling the index
@@ -117,20 +118,20 @@ public class Index extends com.pulumi.resources.CustomResource {
      * @return Tags for labeling the index
      * 
      */
-    public Output</* @Nullable */ List<IndexTag>> tags() {
-        return this.tags;
+    public Output<Optional<List<IndexTag>>> tags() {
+        return Codegen.optional(this.tags);
     }
     @Export(name="userContextPolicy", type=IndexUserContextPolicy.class, parameters={})
     private Output</* @Nullable */ IndexUserContextPolicy> userContextPolicy;
 
-    public Output</* @Nullable */ IndexUserContextPolicy> userContextPolicy() {
-        return this.userContextPolicy;
+    public Output<Optional<IndexUserContextPolicy>> userContextPolicy() {
+        return Codegen.optional(this.userContextPolicy);
     }
     @Export(name="userTokenConfigurations", type=List.class, parameters={IndexUserTokenConfiguration.class})
     private Output</* @Nullable */ List<IndexUserTokenConfiguration>> userTokenConfigurations;
 
-    public Output</* @Nullable */ List<IndexUserTokenConfiguration>> userTokenConfigurations() {
-        return this.userTokenConfigurations;
+    public Output<Optional<List<IndexUserTokenConfiguration>>> userTokenConfigurations() {
+        return Codegen.optional(this.userTokenConfigurations);
     }
 
     /**

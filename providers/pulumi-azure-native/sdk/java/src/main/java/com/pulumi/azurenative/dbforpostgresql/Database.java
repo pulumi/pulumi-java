@@ -12,6 +12,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -42,8 +43,8 @@ public class Database extends com.pulumi.resources.CustomResource {
      * @return The charset of the database.
      * 
      */
-    public Output</* @Nullable */ String> charset() {
-        return this.charset;
+    public Output<Optional<String>> charset() {
+        return Codegen.optional(this.charset);
     }
     /**
      * The collation of the database.
@@ -56,8 +57,8 @@ public class Database extends com.pulumi.resources.CustomResource {
      * @return The collation of the database.
      * 
      */
-    public Output</* @Nullable */ String> collation() {
-        return this.collation;
+    public Output<Optional<String>> collation() {
+        return Codegen.optional(this.collation);
     }
     /**
      * The name of the resource

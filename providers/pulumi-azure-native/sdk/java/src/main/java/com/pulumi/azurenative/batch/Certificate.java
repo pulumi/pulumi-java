@@ -13,6 +13,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -71,8 +72,8 @@ public class Certificate extends com.pulumi.resources.CustomResource {
      * @return The format of the certificate - either Pfx or Cer. If omitted, the default is Pfx.
      * 
      */
-    public Output</* @Nullable */ String> format() {
-        return this.format;
+    public Output<Optional<String>> format() {
+        return Codegen.optional(this.format);
     }
     /**
      * The name of the resource.
@@ -145,8 +146,8 @@ public class Certificate extends com.pulumi.resources.CustomResource {
      * @return This must match the thumbprint from the name.
      * 
      */
-    public Output</* @Nullable */ String> thumbprint() {
-        return this.thumbprint;
+    public Output<Optional<String>> thumbprint() {
+        return Codegen.optional(this.thumbprint);
     }
     /**
      * This must match the first portion of the certificate name. Currently required to be &#39;SHA1&#39;.
@@ -159,8 +160,8 @@ public class Certificate extends com.pulumi.resources.CustomResource {
      * @return This must match the first portion of the certificate name. Currently required to be &#39;SHA1&#39;.
      * 
      */
-    public Output</* @Nullable */ String> thumbprintAlgorithm() {
-        return this.thumbprintAlgorithm;
+    public Output<Optional<String>> thumbprintAlgorithm() {
+        return Codegen.optional(this.thumbprintAlgorithm);
     }
     /**
      * The type of the resource.

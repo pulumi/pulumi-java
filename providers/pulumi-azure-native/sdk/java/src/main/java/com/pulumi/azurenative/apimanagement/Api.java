@@ -16,6 +16,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -46,8 +47,8 @@ public class Api extends com.pulumi.resources.CustomResource {
      * @return Describes the Revision of the Api. If no value is provided, default revision 1 is created
      * 
      */
-    public Output</* @Nullable */ String> apiRevision() {
-        return this.apiRevision;
+    public Output<Optional<String>> apiRevision() {
+        return Codegen.optional(this.apiRevision);
     }
     /**
      * Description of the Api Revision.
@@ -60,8 +61,8 @@ public class Api extends com.pulumi.resources.CustomResource {
      * @return Description of the Api Revision.
      * 
      */
-    public Output</* @Nullable */ String> apiRevisionDescription() {
-        return this.apiRevisionDescription;
+    public Output<Optional<String>> apiRevisionDescription() {
+        return Codegen.optional(this.apiRevisionDescription);
     }
     /**
      * Type of API.
@@ -74,8 +75,8 @@ public class Api extends com.pulumi.resources.CustomResource {
      * @return Type of API.
      * 
      */
-    public Output</* @Nullable */ String> apiType() {
-        return this.apiType;
+    public Output<Optional<String>> apiType() {
+        return Codegen.optional(this.apiType);
     }
     /**
      * Indicates the Version identifier of the API if the API is versioned
@@ -88,8 +89,8 @@ public class Api extends com.pulumi.resources.CustomResource {
      * @return Indicates the Version identifier of the API if the API is versioned
      * 
      */
-    public Output</* @Nullable */ String> apiVersion() {
-        return this.apiVersion;
+    public Output<Optional<String>> apiVersion() {
+        return Codegen.optional(this.apiVersion);
     }
     /**
      * Description of the Api Version.
@@ -102,8 +103,8 @@ public class Api extends com.pulumi.resources.CustomResource {
      * @return Description of the Api Version.
      * 
      */
-    public Output</* @Nullable */ String> apiVersionDescription() {
-        return this.apiVersionDescription;
+    public Output<Optional<String>> apiVersionDescription() {
+        return Codegen.optional(this.apiVersionDescription);
     }
     /**
      * Version set details
@@ -116,8 +117,8 @@ public class Api extends com.pulumi.resources.CustomResource {
      * @return Version set details
      * 
      */
-    public Output</* @Nullable */ ApiVersionSetContractDetailsResponse> apiVersionSet() {
-        return this.apiVersionSet;
+    public Output<Optional<ApiVersionSetContractDetailsResponse>> apiVersionSet() {
+        return Codegen.optional(this.apiVersionSet);
     }
     /**
      * A resource identifier for the related ApiVersionSet.
@@ -130,8 +131,8 @@ public class Api extends com.pulumi.resources.CustomResource {
      * @return A resource identifier for the related ApiVersionSet.
      * 
      */
-    public Output</* @Nullable */ String> apiVersionSetId() {
-        return this.apiVersionSetId;
+    public Output<Optional<String>> apiVersionSetId() {
+        return Codegen.optional(this.apiVersionSetId);
     }
     /**
      * Collection of authentication settings included into this API.
@@ -144,8 +145,8 @@ public class Api extends com.pulumi.resources.CustomResource {
      * @return Collection of authentication settings included into this API.
      * 
      */
-    public Output</* @Nullable */ AuthenticationSettingsContractResponse> authenticationSettings() {
-        return this.authenticationSettings;
+    public Output<Optional<AuthenticationSettingsContractResponse>> authenticationSettings() {
+        return Codegen.optional(this.authenticationSettings);
     }
     /**
      * Description of the API. May include HTML formatting tags.
@@ -158,8 +159,8 @@ public class Api extends com.pulumi.resources.CustomResource {
      * @return Description of the API. May include HTML formatting tags.
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * API name. Must be 1 to 300 characters long.
@@ -172,8 +173,8 @@ public class Api extends com.pulumi.resources.CustomResource {
      * @return API name. Must be 1 to 300 characters long.
      * 
      */
-    public Output</* @Nullable */ String> displayName() {
-        return this.displayName;
+    public Output<Optional<String>> displayName() {
+        return Codegen.optional(this.displayName);
     }
     /**
      * Indicates if API revision is current api revision.
@@ -186,8 +187,8 @@ public class Api extends com.pulumi.resources.CustomResource {
      * @return Indicates if API revision is current api revision.
      * 
      */
-    public Output</* @Nullable */ Boolean> isCurrent() {
-        return this.isCurrent;
+    public Output<Optional<Boolean>> isCurrent() {
+        return Codegen.optional(this.isCurrent);
     }
     /**
      * Indicates if API revision is accessible via the gateway.
@@ -242,8 +243,8 @@ public class Api extends com.pulumi.resources.CustomResource {
      * @return Describes on which protocols the operations in this API can be invoked.
      * 
      */
-    public Output</* @Nullable */ List<String>> protocols() {
-        return this.protocols;
+    public Output<Optional<List<String>>> protocols() {
+        return Codegen.optional(this.protocols);
     }
     /**
      * Absolute URL of the backend service implementing this API. Cannot be more than 2000 characters long.
@@ -256,8 +257,8 @@ public class Api extends com.pulumi.resources.CustomResource {
      * @return Absolute URL of the backend service implementing this API. Cannot be more than 2000 characters long.
      * 
      */
-    public Output</* @Nullable */ String> serviceUrl() {
-        return this.serviceUrl;
+    public Output<Optional<String>> serviceUrl() {
+        return Codegen.optional(this.serviceUrl);
     }
     /**
      * API identifier of the source API.
@@ -270,8 +271,8 @@ public class Api extends com.pulumi.resources.CustomResource {
      * @return API identifier of the source API.
      * 
      */
-    public Output</* @Nullable */ String> sourceApiId() {
-        return this.sourceApiId;
+    public Output<Optional<String>> sourceApiId() {
+        return Codegen.optional(this.sourceApiId);
     }
     /**
      * Protocols over which API is made available.
@@ -284,8 +285,8 @@ public class Api extends com.pulumi.resources.CustomResource {
      * @return Protocols over which API is made available.
      * 
      */
-    public Output</* @Nullable */ SubscriptionKeyParameterNamesContractResponse> subscriptionKeyParameterNames() {
-        return this.subscriptionKeyParameterNames;
+    public Output<Optional<SubscriptionKeyParameterNamesContractResponse>> subscriptionKeyParameterNames() {
+        return Codegen.optional(this.subscriptionKeyParameterNames);
     }
     /**
      * Specifies whether an API or Product subscription is required for accessing the API.
@@ -298,8 +299,8 @@ public class Api extends com.pulumi.resources.CustomResource {
      * @return Specifies whether an API or Product subscription is required for accessing the API.
      * 
      */
-    public Output</* @Nullable */ Boolean> subscriptionRequired() {
-        return this.subscriptionRequired;
+    public Output<Optional<Boolean>> subscriptionRequired() {
+        return Codegen.optional(this.subscriptionRequired);
     }
     /**
      * Resource type for API Management resource.

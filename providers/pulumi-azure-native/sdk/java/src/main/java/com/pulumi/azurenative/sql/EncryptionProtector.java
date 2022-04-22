@@ -13,6 +13,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -43,8 +44,8 @@ public class EncryptionProtector extends com.pulumi.resources.CustomResource {
      * @return Key auto rotation opt-in flag. Either true or false.
      * 
      */
-    public Output</* @Nullable */ Boolean> autoRotationEnabled() {
-        return this.autoRotationEnabled;
+    public Output<Optional<Boolean>> autoRotationEnabled() {
+        return Codegen.optional(this.autoRotationEnabled);
     }
     /**
      * Kind of encryption protector. This is metadata used for the Azure portal experience.
@@ -99,8 +100,8 @@ public class EncryptionProtector extends com.pulumi.resources.CustomResource {
      * @return The name of the server key.
      * 
      */
-    public Output</* @Nullable */ String> serverKeyName() {
-        return this.serverKeyName;
+    public Output<Optional<String>> serverKeyName() {
+        return Codegen.optional(this.serverKeyName);
     }
     /**
      * The encryption protector type like &#39;ServiceManaged&#39;, &#39;AzureKeyVault&#39;.

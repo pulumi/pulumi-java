@@ -13,6 +13,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -43,8 +44,8 @@ public class SqlServer extends com.pulumi.resources.CustomResource {
      * @return Cores of the Sql Server.
      * 
      */
-    public Output</* @Nullable */ Integer> cores() {
-        return this.cores;
+    public Output<Optional<Integer>> cores() {
+        return Codegen.optional(this.cores);
     }
     /**
      * Sql Server Edition.
@@ -57,8 +58,8 @@ public class SqlServer extends com.pulumi.resources.CustomResource {
      * @return Sql Server Edition.
      * 
      */
-    public Output</* @Nullable */ String> edition() {
-        return this.edition;
+    public Output<Optional<String>> edition() {
+        return Codegen.optional(this.edition);
     }
     /**
      * The name of the resource
@@ -85,8 +86,8 @@ public class SqlServer extends com.pulumi.resources.CustomResource {
      * @return Sql Server Json Property Bag.
      * 
      */
-    public Output</* @Nullable */ String> propertyBag() {
-        return this.propertyBag;
+    public Output<Optional<String>> propertyBag() {
+        return Codegen.optional(this.propertyBag);
     }
     /**
      * ID for Parent Sql Server Registration.
@@ -99,8 +100,8 @@ public class SqlServer extends com.pulumi.resources.CustomResource {
      * @return ID for Parent Sql Server Registration.
      * 
      */
-    public Output</* @Nullable */ String> registrationID() {
-        return this.registrationID;
+    public Output<Optional<String>> registrationID() {
+        return Codegen.optional(this.registrationID);
     }
     /**
      * The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.
@@ -127,8 +128,8 @@ public class SqlServer extends com.pulumi.resources.CustomResource {
      * @return Version of the Sql Server.
      * 
      */
-    public Output</* @Nullable */ String> version() {
-        return this.version;
+    public Output<Optional<String>> version() {
+        return Codegen.optional(this.version);
     }
 
     /**

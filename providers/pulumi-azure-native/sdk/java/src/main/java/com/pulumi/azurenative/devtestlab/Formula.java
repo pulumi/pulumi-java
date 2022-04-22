@@ -15,6 +15,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -73,8 +74,8 @@ public class Formula extends com.pulumi.resources.CustomResource {
      * @return The description of the formula.
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * The content of the formula.
@@ -87,8 +88,8 @@ public class Formula extends com.pulumi.resources.CustomResource {
      * @return The content of the formula.
      * 
      */
-    public Output</* @Nullable */ LabVirtualMachineCreationParameterResponse> formulaContent() {
-        return this.formulaContent;
+    public Output<Optional<LabVirtualMachineCreationParameterResponse>> formulaContent() {
+        return Codegen.optional(this.formulaContent);
     }
     /**
      * The location of the resource.
@@ -101,8 +102,8 @@ public class Formula extends com.pulumi.resources.CustomResource {
      * @return The location of the resource.
      * 
      */
-    public Output</* @Nullable */ String> location() {
-        return this.location;
+    public Output<Optional<String>> location() {
+        return Codegen.optional(this.location);
     }
     /**
      * The name of the resource.
@@ -129,8 +130,8 @@ public class Formula extends com.pulumi.resources.CustomResource {
      * @return The OS type of the formula.
      * 
      */
-    public Output</* @Nullable */ String> osType() {
-        return this.osType;
+    public Output<Optional<String>> osType() {
+        return Codegen.optional(this.osType);
     }
     /**
      * The provisioning status of the resource.
@@ -157,8 +158,8 @@ public class Formula extends com.pulumi.resources.CustomResource {
      * @return The tags of the resource.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * The type of the resource.
@@ -199,8 +200,8 @@ public class Formula extends com.pulumi.resources.CustomResource {
      * @return Information about a VM from which a formula is to be created.
      * 
      */
-    public Output</* @Nullable */ FormulaPropertiesFromVmResponse> vm() {
-        return this.vm;
+    public Output<Optional<FormulaPropertiesFromVmResponse>> vm() {
+        return Codegen.optional(this.vm);
     }
 
     /**

@@ -12,6 +12,7 @@ import com.pulumi.gcp.billing.SubAccountArgs;
 import com.pulumi.gcp.billing.inputs.SubAccountState;
 import java.lang.Boolean;
 import java.lang.String;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -59,8 +60,8 @@ public class SubAccount extends com.pulumi.resources.CustomResource {
      * Default is &#34;&#34;.
      * 
      */
-    public Output</* @Nullable */ String> deletionPolicy() {
-        return this.deletionPolicy;
+    public Output<Optional<String>> deletionPolicy() {
+        return Codegen.optional(this.deletionPolicy);
     }
     /**
      * The display name of the billing account.

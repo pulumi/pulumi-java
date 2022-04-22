@@ -18,6 +18,7 @@ import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -62,8 +63,8 @@ public class FluxConfiguration extends com.pulumi.resources.CustomResource {
      * @return Key-value pairs of protected configuration settings for the configuration
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> configurationProtectedSettings() {
-        return this.configurationProtectedSettings;
+    public Output<Optional<Map<String,String>>> configurationProtectedSettings() {
+        return Codegen.optional(this.configurationProtectedSettings);
     }
     /**
      * Error message returned to the user in the case of provisioning failure.
@@ -90,8 +91,8 @@ public class FluxConfiguration extends com.pulumi.resources.CustomResource {
      * @return Parameters to reconcile to the GitRepository source kind type.
      * 
      */
-    public Output</* @Nullable */ GitRepositoryDefinitionResponse> gitRepository() {
-        return this.gitRepository;
+    public Output<Optional<GitRepositoryDefinitionResponse>> gitRepository() {
+        return Codegen.optional(this.gitRepository);
     }
     /**
      * Array of kustomizations used to reconcile the artifact pulled by the source type on the cluster.
@@ -104,8 +105,8 @@ public class FluxConfiguration extends com.pulumi.resources.CustomResource {
      * @return Array of kustomizations used to reconcile the artifact pulled by the source type on the cluster.
      * 
      */
-    public Output</* @Nullable */ Map<String,KustomizationDefinitionResponse>> kustomizations() {
-        return this.kustomizations;
+    public Output<Optional<Map<String,KustomizationDefinitionResponse>>> kustomizations() {
+        return Codegen.optional(this.kustomizations);
     }
     /**
      * Datetime the fluxConfiguration last synced its source on the cluster.
@@ -160,8 +161,8 @@ public class FluxConfiguration extends com.pulumi.resources.CustomResource {
      * @return The namespace to which this configuration is installed to. Maximum of 253 lower case alphanumeric characters, hyphen and period only.
      * 
      */
-    public Output</* @Nullable */ String> namespace() {
-        return this.namespace;
+    public Output<Optional<String>> namespace() {
+        return Codegen.optional(this.namespace);
     }
     /**
      * Status of the creation of the fluxConfiguration.
@@ -202,8 +203,8 @@ public class FluxConfiguration extends com.pulumi.resources.CustomResource {
      * @return Scope at which the operator will be installed.
      * 
      */
-    public Output</* @Nullable */ String> scope() {
-        return this.scope;
+    public Output<Optional<String>> scope() {
+        return Codegen.optional(this.scope);
     }
     /**
      * Source Kind to pull the configuration data from.
@@ -216,8 +217,8 @@ public class FluxConfiguration extends com.pulumi.resources.CustomResource {
      * @return Source Kind to pull the configuration data from.
      * 
      */
-    public Output</* @Nullable */ String> sourceKind() {
-        return this.sourceKind;
+    public Output<Optional<String>> sourceKind() {
+        return Codegen.optional(this.sourceKind);
     }
     /**
      * Statuses of the Flux Kubernetes resources created by the fluxConfiguration or created by the managed objects provisioned by the fluxConfiguration.
@@ -244,8 +245,8 @@ public class FluxConfiguration extends com.pulumi.resources.CustomResource {
      * @return Whether this configuration should suspend its reconciliation of its kustomizations and sources.
      * 
      */
-    public Output</* @Nullable */ Boolean> suspend() {
-        return this.suspend;
+    public Output<Optional<Boolean>> suspend() {
+        return Codegen.optional(this.suspend);
     }
     /**
      * Top level metadata https://github.com/Azure/azure-resource-manager-rpc/blob/master/v1.0/common-api-contracts.md#system-metadata-for-all-azure-resources

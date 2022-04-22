@@ -14,6 +14,7 @@ import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -41,8 +42,8 @@ public class WebAppDeployment extends com.pulumi.resources.CustomResource {
      * @return True if deployment is currently active, false if completed and null if not started.
      * 
      */
-    public Output</* @Nullable */ Boolean> active() {
-        return this.active;
+    public Output<Optional<Boolean>> active() {
+        return Codegen.optional(this.active);
     }
     /**
      * Who authored the deployment.
@@ -55,8 +56,8 @@ public class WebAppDeployment extends com.pulumi.resources.CustomResource {
      * @return Who authored the deployment.
      * 
      */
-    public Output</* @Nullable */ String> author() {
-        return this.author;
+    public Output<Optional<String>> author() {
+        return Codegen.optional(this.author);
     }
     /**
      * Author email.
@@ -69,8 +70,8 @@ public class WebAppDeployment extends com.pulumi.resources.CustomResource {
      * @return Author email.
      * 
      */
-    public Output</* @Nullable */ String> authorEmail() {
-        return this.authorEmail;
+    public Output<Optional<String>> authorEmail() {
+        return Codegen.optional(this.authorEmail);
     }
     /**
      * Who performed the deployment.
@@ -83,8 +84,8 @@ public class WebAppDeployment extends com.pulumi.resources.CustomResource {
      * @return Who performed the deployment.
      * 
      */
-    public Output</* @Nullable */ String> deployer() {
-        return this.deployer;
+    public Output<Optional<String>> deployer() {
+        return Codegen.optional(this.deployer);
     }
     /**
      * Details on deployment.
@@ -97,8 +98,8 @@ public class WebAppDeployment extends com.pulumi.resources.CustomResource {
      * @return Details on deployment.
      * 
      */
-    public Output</* @Nullable */ String> details() {
-        return this.details;
+    public Output<Optional<String>> details() {
+        return Codegen.optional(this.details);
     }
     /**
      * End time.
@@ -111,8 +112,8 @@ public class WebAppDeployment extends com.pulumi.resources.CustomResource {
      * @return End time.
      * 
      */
-    public Output</* @Nullable */ String> endTime() {
-        return this.endTime;
+    public Output<Optional<String>> endTime() {
+        return Codegen.optional(this.endTime);
     }
     /**
      * Kind of resource.
@@ -125,8 +126,8 @@ public class WebAppDeployment extends com.pulumi.resources.CustomResource {
      * @return Kind of resource.
      * 
      */
-    public Output</* @Nullable */ String> kind() {
-        return this.kind;
+    public Output<Optional<String>> kind() {
+        return Codegen.optional(this.kind);
     }
     /**
      * Details about deployment status.
@@ -139,8 +140,8 @@ public class WebAppDeployment extends com.pulumi.resources.CustomResource {
      * @return Details about deployment status.
      * 
      */
-    public Output</* @Nullable */ String> message() {
-        return this.message;
+    public Output<Optional<String>> message() {
+        return Codegen.optional(this.message);
     }
     /**
      * Resource Name.
@@ -167,8 +168,8 @@ public class WebAppDeployment extends com.pulumi.resources.CustomResource {
      * @return Start time.
      * 
      */
-    public Output</* @Nullable */ String> startTime() {
-        return this.startTime;
+    public Output<Optional<String>> startTime() {
+        return Codegen.optional(this.startTime);
     }
     /**
      * Deployment status.
@@ -181,8 +182,8 @@ public class WebAppDeployment extends com.pulumi.resources.CustomResource {
      * @return Deployment status.
      * 
      */
-    public Output</* @Nullable */ Integer> status() {
-        return this.status;
+    public Output<Optional<Integer>> status() {
+        return Codegen.optional(this.status);
     }
     /**
      * Resource type.

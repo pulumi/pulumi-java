@@ -10,6 +10,7 @@ import com.pulumi.core.annotations.Export;
 import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -29,8 +30,8 @@ public class Account extends com.pulumi.resources.CustomResource {
      * @return The Amazon Resource Name (ARN) of an IAM role that has write access to CloudWatch Logs in your account.
      * 
      */
-    public Output</* @Nullable */ String> cloudWatchRoleArn() {
-        return this.cloudWatchRoleArn;
+    public Output<Optional<String>> cloudWatchRoleArn() {
+        return Codegen.optional(this.cloudWatchRoleArn);
     }
 
     /**

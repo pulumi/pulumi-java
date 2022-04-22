@@ -14,6 +14,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -55,8 +56,8 @@ public class Route extends com.pulumi.resources.CustomResource {
     @Export(name="routeType", type=RouteType.class, parameters={})
     private Output</* @Nullable */ RouteType> routeType;
 
-    public Output</* @Nullable */ RouteType> routeType() {
-        return this.routeType;
+    public Output<Optional<RouteType>> routeType() {
+        return Codegen.optional(this.routeType);
     }
     @Export(name="serviceIdentifier", type=String.class, parameters={})
     private Output<String> serviceIdentifier;
@@ -75,14 +76,14 @@ public class Route extends com.pulumi.resources.CustomResource {
      * @return Metadata that you can assign to help organize the frameworks that you create. Each tag is a key-value pair.
      * 
      */
-    public Output</* @Nullable */ List<RouteTag>> tags() {
-        return this.tags;
+    public Output<Optional<List<RouteTag>>> tags() {
+        return Codegen.optional(this.tags);
     }
     @Export(name="uriPathRoute", type=RouteUriPathRouteInput.class, parameters={})
     private Output</* @Nullable */ RouteUriPathRouteInput> uriPathRoute;
 
-    public Output</* @Nullable */ RouteUriPathRouteInput> uriPathRoute() {
-        return this.uriPathRoute;
+    public Output<Optional<RouteUriPathRouteInput>> uriPathRoute() {
+        return Codegen.optional(this.uriPathRoute);
     }
 
     /**

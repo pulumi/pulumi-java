@@ -16,6 +16,7 @@ import java.lang.Object;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -50,8 +51,8 @@ public class Job extends com.pulumi.resources.CustomResource {
      * @return List of experiments that should be used by the job. An example value is `[&#34;enable_stackdriver_agent_metrics&#34;]`.
      * 
      */
-    public Output</* @Nullable */ List<String>> additionalExperiments() {
-        return this.additionalExperiments;
+    public Output<Optional<List<String>>> additionalExperiments() {
+        return Codegen.optional(this.additionalExperiments);
     }
     /**
      * Enable/disable the use of [Streaming Engine](https://cloud.google.com/dataflow/docs/guides/deploying-a-pipeline#streaming-engine) for the job. Note that Streaming Engine is enabled by default for pipelines developed against the Beam SDK for Python v2.21.0 or later when using Python 3.
@@ -64,8 +65,8 @@ public class Job extends com.pulumi.resources.CustomResource {
      * @return Enable/disable the use of [Streaming Engine](https://cloud.google.com/dataflow/docs/guides/deploying-a-pipeline#streaming-engine) for the job. Note that Streaming Engine is enabled by default for pipelines developed against the Beam SDK for Python v2.21.0 or later when using Python 3.
      * 
      */
-    public Output</* @Nullable */ Boolean> enableStreamingEngine() {
-        return this.enableStreamingEngine;
+    public Output<Optional<Boolean>> enableStreamingEngine() {
+        return Codegen.optional(this.enableStreamingEngine);
     }
     /**
      * The configuration for VM IPs.  Options are `&#34;WORKER_IP_PUBLIC&#34;` or `&#34;WORKER_IP_PRIVATE&#34;`.
@@ -78,8 +79,8 @@ public class Job extends com.pulumi.resources.CustomResource {
      * @return The configuration for VM IPs.  Options are `&#34;WORKER_IP_PUBLIC&#34;` or `&#34;WORKER_IP_PRIVATE&#34;`.
      * 
      */
-    public Output</* @Nullable */ String> ipConfiguration() {
-        return this.ipConfiguration;
+    public Output<Optional<String>> ipConfiguration() {
+        return Codegen.optional(this.ipConfiguration);
     }
     /**
      * The unique ID of this job.
@@ -106,8 +107,8 @@ public class Job extends com.pulumi.resources.CustomResource {
      * @return The name for the Cloud KMS key for the job. Key format is: `projects/PROJECT_ID/locations/LOCATION/keyRings/KEY_RING/cryptoKeys/KEY`
      * 
      */
-    public Output</* @Nullable */ String> kmsKeyName() {
-        return this.kmsKeyName;
+    public Output<Optional<String>> kmsKeyName() {
+        return Codegen.optional(this.kmsKeyName);
     }
     /**
      * User labels to be specified for the job. Keys and values should follow the restrictions
@@ -128,8 +129,8 @@ public class Job extends com.pulumi.resources.CustomResource {
      * &lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
      * 
      */
-    public Output</* @Nullable */ Map<String,Object>> labels() {
-        return this.labels;
+    public Output<Optional<Map<String,Object>>> labels() {
+        return Codegen.optional(this.labels);
     }
     /**
      * The machine type to use for the job.
@@ -142,8 +143,8 @@ public class Job extends com.pulumi.resources.CustomResource {
      * @return The machine type to use for the job.
      * 
      */
-    public Output</* @Nullable */ String> machineType() {
-        return this.machineType;
+    public Output<Optional<String>> machineType() {
+        return Codegen.optional(this.machineType);
     }
     /**
      * The number of workers permitted to work on the job.  More workers may improve processing speed at additional cost.
@@ -156,8 +157,8 @@ public class Job extends com.pulumi.resources.CustomResource {
      * @return The number of workers permitted to work on the job.  More workers may improve processing speed at additional cost.
      * 
      */
-    public Output</* @Nullable */ Integer> maxWorkers() {
-        return this.maxWorkers;
+    public Output<Optional<Integer>> maxWorkers() {
+        return Codegen.optional(this.maxWorkers);
     }
     /**
      * A unique name for the resource, required by Dataflow.
@@ -184,8 +185,8 @@ public class Job extends com.pulumi.resources.CustomResource {
      * @return The network to which VMs will be assigned. If it is not provided, &#34;default&#34; will be used.
      * 
      */
-    public Output</* @Nullable */ String> network() {
-        return this.network;
+    public Output<Optional<String>> network() {
+        return Codegen.optional(this.network);
     }
     /**
      * One of &#34;drain&#34; or &#34;cancel&#34;.  Specifies behavior of deletion during `pulumi destroy`.  See above note.
@@ -198,8 +199,8 @@ public class Job extends com.pulumi.resources.CustomResource {
      * @return One of &#34;drain&#34; or &#34;cancel&#34;.  Specifies behavior of deletion during `pulumi destroy`.  See above note.
      * 
      */
-    public Output</* @Nullable */ String> onDelete() {
-        return this.onDelete;
+    public Output<Optional<String>> onDelete() {
+        return Codegen.optional(this.onDelete);
     }
     /**
      * Key/Value pairs to be passed to the Dataflow job (as used in the template).
@@ -212,8 +213,8 @@ public class Job extends com.pulumi.resources.CustomResource {
      * @return Key/Value pairs to be passed to the Dataflow job (as used in the template).
      * 
      */
-    public Output</* @Nullable */ Map<String,Object>> parameters() {
-        return this.parameters;
+    public Output<Optional<Map<String,Object>>> parameters() {
+        return Codegen.optional(this.parameters);
     }
     /**
      * The project in which the resource belongs. If it is not provided, the provider project is used.
@@ -240,8 +241,8 @@ public class Job extends com.pulumi.resources.CustomResource {
      * @return The region in which the created job should run.
      * 
      */
-    public Output</* @Nullable */ String> region() {
-        return this.region;
+    public Output<Optional<String>> region() {
+        return Codegen.optional(this.region);
     }
     /**
      * The Service Account email used to create the job.
@@ -254,8 +255,8 @@ public class Job extends com.pulumi.resources.CustomResource {
      * @return The Service Account email used to create the job.
      * 
      */
-    public Output</* @Nullable */ String> serviceAccountEmail() {
-        return this.serviceAccountEmail;
+    public Output<Optional<String>> serviceAccountEmail() {
+        return Codegen.optional(this.serviceAccountEmail);
     }
     /**
      * The current state of the resource, selected from the [JobState enum](https://cloud.google.com/dataflow/docs/reference/rest/v1b3/projects.jobs#Job.JobState)
@@ -282,8 +283,8 @@ public class Job extends com.pulumi.resources.CustomResource {
      * @return The subnetwork to which VMs will be assigned. Should be of the form &#34;regions/REGION/subnetworks/SUBNETWORK&#34;. If the [subnetwork is located in a Shared VPC network](https://cloud.google.com/dataflow/docs/guides/specifying-networks#shared), you must use the complete URL. For example `&#34;googleapis.com/compute/v1/projects/PROJECT_ID/regions/REGION/subnetworks/SUBNET_NAME&#34;`
      * 
      */
-    public Output</* @Nullable */ String> subnetwork() {
-        return this.subnetwork;
+    public Output<Optional<String>> subnetwork() {
+        return Codegen.optional(this.subnetwork);
     }
     /**
      * A writeable location on GCS for the Dataflow job to dump its temporary data.
@@ -326,8 +327,8 @@ public class Job extends com.pulumi.resources.CustomResource {
      * &gt; &gt; &gt; &gt; &gt; &gt; &gt; v4.1.0
      * 
      */
-    public Output</* @Nullable */ Map<String,Object>> transformNameMapping() {
-        return this.transformNameMapping;
+    public Output<Optional<Map<String,Object>>> transformNameMapping() {
+        return Codegen.optional(this.transformNameMapping);
     }
     /**
      * The type of this job, selected from the [JobType enum](https://cloud.google.com/dataflow/docs/reference/rest/v1b3/projects.jobs#Job.JobType)
@@ -354,8 +355,8 @@ public class Job extends com.pulumi.resources.CustomResource {
      * @return The zone in which the created job should run. If it is not provided, the provider zone is used.
      * 
      */
-    public Output</* @Nullable */ String> zone() {
-        return this.zone;
+    public Output<Optional<String>> zone() {
+        return Codegen.optional(this.zone);
     }
 
     /**

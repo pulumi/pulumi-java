@@ -13,6 +13,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -34,8 +35,8 @@ public class Group extends com.pulumi.resources.CustomResource {
      * @return The filter expression defining criteria by which to group traces.
      * 
      */
-    public Output</* @Nullable */ String> filterExpression() {
-        return this.filterExpression;
+    public Output<Optional<String>> filterExpression() {
+        return Codegen.optional(this.filterExpression);
     }
     /**
      * The ARN of the group that was generated on creation.
@@ -62,20 +63,20 @@ public class Group extends com.pulumi.resources.CustomResource {
      * @return The case-sensitive name of the new group. Names must be unique.
      * 
      */
-    public Output</* @Nullable */ String> groupName() {
-        return this.groupName;
+    public Output<Optional<String>> groupName() {
+        return Codegen.optional(this.groupName);
     }
     @Export(name="insightsConfiguration", type=GroupInsightsConfiguration.class, parameters={})
     private Output</* @Nullable */ GroupInsightsConfiguration> insightsConfiguration;
 
-    public Output</* @Nullable */ GroupInsightsConfiguration> insightsConfiguration() {
-        return this.insightsConfiguration;
+    public Output<Optional<GroupInsightsConfiguration>> insightsConfiguration() {
+        return Codegen.optional(this.insightsConfiguration);
     }
     @Export(name="tags", type=List.class, parameters={TagsItemProperties.class})
     private Output</* @Nullable */ List<TagsItemProperties>> tags;
 
-    public Output</* @Nullable */ List<TagsItemProperties>> tags() {
-        return this.tags;
+    public Output<Optional<List<TagsItemProperties>>> tags() {
+        return Codegen.optional(this.tags);
     }
 
     /**

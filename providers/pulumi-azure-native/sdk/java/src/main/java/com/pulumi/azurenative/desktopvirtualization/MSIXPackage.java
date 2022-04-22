@@ -15,6 +15,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -45,8 +46,8 @@ public class MSIXPackage extends com.pulumi.resources.CustomResource {
      * @return User friendly Name to be displayed in the portal.
      * 
      */
-    public Output</* @Nullable */ String> displayName() {
-        return this.displayName;
+    public Output<Optional<String>> displayName() {
+        return Codegen.optional(this.displayName);
     }
     /**
      * VHD/CIM image path on Network Share.
@@ -59,8 +60,8 @@ public class MSIXPackage extends com.pulumi.resources.CustomResource {
      * @return VHD/CIM image path on Network Share.
      * 
      */
-    public Output</* @Nullable */ String> imagePath() {
-        return this.imagePath;
+    public Output<Optional<String>> imagePath() {
+        return Codegen.optional(this.imagePath);
     }
     /**
      * Make this version of the package the active one across the hostpool.
@@ -73,8 +74,8 @@ public class MSIXPackage extends com.pulumi.resources.CustomResource {
      * @return Make this version of the package the active one across the hostpool.
      * 
      */
-    public Output</* @Nullable */ Boolean> isActive() {
-        return this.isActive;
+    public Output<Optional<Boolean>> isActive() {
+        return Codegen.optional(this.isActive);
     }
     /**
      * Specifies how to register Package in feed.
@@ -87,8 +88,8 @@ public class MSIXPackage extends com.pulumi.resources.CustomResource {
      * @return Specifies how to register Package in feed.
      * 
      */
-    public Output</* @Nullable */ Boolean> isRegularRegistration() {
-        return this.isRegularRegistration;
+    public Output<Optional<Boolean>> isRegularRegistration() {
+        return Codegen.optional(this.isRegularRegistration);
     }
     /**
      * Date Package was last updated, found in the appxmanifest.xml.
@@ -101,8 +102,8 @@ public class MSIXPackage extends com.pulumi.resources.CustomResource {
      * @return Date Package was last updated, found in the appxmanifest.xml.
      * 
      */
-    public Output</* @Nullable */ String> lastUpdated() {
-        return this.lastUpdated;
+    public Output<Optional<String>> lastUpdated() {
+        return Codegen.optional(this.lastUpdated);
     }
     /**
      * The name of the resource
@@ -129,8 +130,8 @@ public class MSIXPackage extends com.pulumi.resources.CustomResource {
      * @return List of package applications.
      * 
      */
-    public Output</* @Nullable */ List<MsixPackageApplicationsResponse>> packageApplications() {
-        return this.packageApplications;
+    public Output<Optional<List<MsixPackageApplicationsResponse>>> packageApplications() {
+        return Codegen.optional(this.packageApplications);
     }
     /**
      * List of package dependencies.
@@ -143,8 +144,8 @@ public class MSIXPackage extends com.pulumi.resources.CustomResource {
      * @return List of package dependencies.
      * 
      */
-    public Output</* @Nullable */ List<MsixPackageDependenciesResponse>> packageDependencies() {
-        return this.packageDependencies;
+    public Output<Optional<List<MsixPackageDependenciesResponse>>> packageDependencies() {
+        return Codegen.optional(this.packageDependencies);
     }
     /**
      * Package Family Name from appxmanifest.xml. Contains Package Name and Publisher name.
@@ -157,8 +158,8 @@ public class MSIXPackage extends com.pulumi.resources.CustomResource {
      * @return Package Family Name from appxmanifest.xml. Contains Package Name and Publisher name.
      * 
      */
-    public Output</* @Nullable */ String> packageFamilyName() {
-        return this.packageFamilyName;
+    public Output<Optional<String>> packageFamilyName() {
+        return Codegen.optional(this.packageFamilyName);
     }
     /**
      * Package Name from appxmanifest.xml.
@@ -171,8 +172,8 @@ public class MSIXPackage extends com.pulumi.resources.CustomResource {
      * @return Package Name from appxmanifest.xml.
      * 
      */
-    public Output</* @Nullable */ String> packageName() {
-        return this.packageName;
+    public Output<Optional<String>> packageName() {
+        return Codegen.optional(this.packageName);
     }
     /**
      * Relative Path to the package inside the image.
@@ -185,8 +186,8 @@ public class MSIXPackage extends com.pulumi.resources.CustomResource {
      * @return Relative Path to the package inside the image.
      * 
      */
-    public Output</* @Nullable */ String> packageRelativePath() {
-        return this.packageRelativePath;
+    public Output<Optional<String>> packageRelativePath() {
+        return Codegen.optional(this.packageRelativePath);
     }
     /**
      * The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
@@ -213,8 +214,8 @@ public class MSIXPackage extends com.pulumi.resources.CustomResource {
      * @return Package Version found in the appxmanifest.xml.
      * 
      */
-    public Output</* @Nullable */ String> version() {
-        return this.version;
+    public Output<Optional<String>> version() {
+        return Codegen.optional(this.version);
     }
 
     /**

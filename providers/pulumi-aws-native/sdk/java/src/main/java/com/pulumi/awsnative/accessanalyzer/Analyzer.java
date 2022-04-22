@@ -13,6 +13,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -34,14 +35,14 @@ public class Analyzer extends com.pulumi.resources.CustomResource {
      * @return Analyzer name
      * 
      */
-    public Output</* @Nullable */ String> analyzerName() {
-        return this.analyzerName;
+    public Output<Optional<String>> analyzerName() {
+        return Codegen.optional(this.analyzerName);
     }
     @Export(name="archiveRules", type=List.class, parameters={AnalyzerArchiveRule.class})
     private Output</* @Nullable */ List<AnalyzerArchiveRule>> archiveRules;
 
-    public Output</* @Nullable */ List<AnalyzerArchiveRule>> archiveRules() {
-        return this.archiveRules;
+    public Output<Optional<List<AnalyzerArchiveRule>>> archiveRules() {
+        return Codegen.optional(this.archiveRules);
     }
     /**
      * Amazon Resource Name (ARN) of the analyzer
@@ -68,8 +69,8 @@ public class Analyzer extends com.pulumi.resources.CustomResource {
      * @return An array of key-value pairs to apply to this resource.
      * 
      */
-    public Output</* @Nullable */ List<AnalyzerTag>> tags() {
-        return this.tags;
+    public Output<Optional<List<AnalyzerTag>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * The type of the analyzer, must be ACCOUNT or ORGANIZATION

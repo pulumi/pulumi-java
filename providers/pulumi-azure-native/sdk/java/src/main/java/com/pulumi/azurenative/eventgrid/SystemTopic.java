@@ -15,6 +15,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -45,8 +46,8 @@ public class SystemTopic extends com.pulumi.resources.CustomResource {
      * @return Identity information for the resource.
      * 
      */
-    public Output</* @Nullable */ IdentityInfoResponse> identity() {
-        return this.identity;
+    public Output<Optional<IdentityInfoResponse>> identity() {
+        return Codegen.optional(this.identity);
     }
     /**
      * Location of the resource.
@@ -115,8 +116,8 @@ public class SystemTopic extends com.pulumi.resources.CustomResource {
      * @return Source for the system topic.
      * 
      */
-    public Output</* @Nullable */ String> source() {
-        return this.source;
+    public Output<Optional<String>> source() {
+        return Codegen.optional(this.source);
     }
     /**
      * The system metadata relating to System Topic resource.
@@ -143,8 +144,8 @@ public class SystemTopic extends com.pulumi.resources.CustomResource {
      * @return Tags of the resource.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * TopicType for the system topic.
@@ -157,8 +158,8 @@ public class SystemTopic extends com.pulumi.resources.CustomResource {
      * @return TopicType for the system topic.
      * 
      */
-    public Output</* @Nullable */ String> topicType() {
-        return this.topicType;
+    public Output<Optional<String>> topicType() {
+        return Codegen.optional(this.topicType);
     }
     /**
      * Type of the resource.

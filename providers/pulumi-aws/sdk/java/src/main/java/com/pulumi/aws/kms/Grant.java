@@ -14,6 +14,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -43,8 +44,8 @@ public class Grant extends com.pulumi.resources.CustomResource {
      * @return A structure that you can use to allow certain operations in the grant only when the desired encryption context is present. For more information about encryption context, see [Encryption Context](http://docs.aws.amazon.com/kms/latest/developerguide/encryption-context.html).
      * 
      */
-    public Output</* @Nullable */ List<GrantConstraint>> constraints() {
-        return this.constraints;
+    public Output<Optional<List<GrantConstraint>>> constraints() {
+        return Codegen.optional(this.constraints);
     }
     /**
      * A list of grant tokens to be used when creating the grant. See [Grant Tokens](http://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#grant_token) for more information about grant tokens.
@@ -57,8 +58,8 @@ public class Grant extends com.pulumi.resources.CustomResource {
      * @return A list of grant tokens to be used when creating the grant. See [Grant Tokens](http://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#grant_token) for more information about grant tokens.
      * 
      */
-    public Output</* @Nullable */ List<String>> grantCreationTokens() {
-        return this.grantCreationTokens;
+    public Output<Optional<List<String>>> grantCreationTokens() {
+        return Codegen.optional(this.grantCreationTokens);
     }
     /**
      * The unique identifier for the grant.
@@ -157,8 +158,8 @@ public class Grant extends com.pulumi.resources.CustomResource {
      * See [RetireGrant](https://docs.aws.amazon.com/kms/latest/APIReference/API_RetireGrant.html) for more information.
      * 
      */
-    public Output</* @Nullable */ Boolean> retireOnDelete() {
-        return this.retireOnDelete;
+    public Output<Optional<Boolean>> retireOnDelete() {
+        return Codegen.optional(this.retireOnDelete);
     }
     /**
      * The principal that is given permission to retire the grant by using RetireGrant operation in ARN format. Note that due to eventual consistency issues around IAM principals, the providers&#39;s state may not always be refreshed to reflect what is true in AWS.
@@ -171,8 +172,8 @@ public class Grant extends com.pulumi.resources.CustomResource {
      * @return The principal that is given permission to retire the grant by using RetireGrant operation in ARN format. Note that due to eventual consistency issues around IAM principals, the providers&#39;s state may not always be refreshed to reflect what is true in AWS.
      * 
      */
-    public Output</* @Nullable */ String> retiringPrincipal() {
-        return this.retiringPrincipal;
+    public Output<Optional<String>> retiringPrincipal() {
+        return Codegen.optional(this.retiringPrincipal);
     }
 
     /**

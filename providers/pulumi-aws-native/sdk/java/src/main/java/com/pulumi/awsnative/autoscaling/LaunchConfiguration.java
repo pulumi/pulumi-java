@@ -14,6 +14,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -33,8 +34,8 @@ public class LaunchConfiguration extends com.pulumi.resources.CustomResource {
      * @return For Auto Scaling groups that are running in a virtual private cloud (VPC), specifies whether to assign a public IP address to the group&#39;s instances.
      * 
      */
-    public Output</* @Nullable */ Boolean> associatePublicIpAddress() {
-        return this.associatePublicIpAddress;
+    public Output<Optional<Boolean>> associatePublicIpAddress() {
+        return Codegen.optional(this.associatePublicIpAddress);
     }
     /**
      * Specifies how block devices are exposed to the instance. You can specify virtual devices and EBS volumes.
@@ -47,8 +48,8 @@ public class LaunchConfiguration extends com.pulumi.resources.CustomResource {
      * @return Specifies how block devices are exposed to the instance. You can specify virtual devices and EBS volumes.
      * 
      */
-    public Output</* @Nullable */ List<LaunchConfigurationBlockDeviceMapping>> blockDeviceMappings() {
-        return this.blockDeviceMappings;
+    public Output<Optional<List<LaunchConfigurationBlockDeviceMapping>>> blockDeviceMappings() {
+        return Codegen.optional(this.blockDeviceMappings);
     }
     /**
      * The ID of a ClassicLink-enabled VPC to link your EC2-Classic instances to.
@@ -61,8 +62,8 @@ public class LaunchConfiguration extends com.pulumi.resources.CustomResource {
      * @return The ID of a ClassicLink-enabled VPC to link your EC2-Classic instances to.
      * 
      */
-    public Output</* @Nullable */ String> classicLinkVPCId() {
-        return this.classicLinkVPCId;
+    public Output<Optional<String>> classicLinkVPCId() {
+        return Codegen.optional(this.classicLinkVPCId);
     }
     /**
      * The IDs of one or more security groups for the VPC that you specified in the ClassicLinkVPCId property.
@@ -75,8 +76,8 @@ public class LaunchConfiguration extends com.pulumi.resources.CustomResource {
      * @return The IDs of one or more security groups for the VPC that you specified in the ClassicLinkVPCId property.
      * 
      */
-    public Output</* @Nullable */ List<String>> classicLinkVPCSecurityGroups() {
-        return this.classicLinkVPCSecurityGroups;
+    public Output<Optional<List<String>>> classicLinkVPCSecurityGroups() {
+        return Codegen.optional(this.classicLinkVPCSecurityGroups);
     }
     /**
      * Specifies whether the launch configuration is optimized for EBS I/O (true) or not (false).
@@ -89,8 +90,8 @@ public class LaunchConfiguration extends com.pulumi.resources.CustomResource {
      * @return Specifies whether the launch configuration is optimized for EBS I/O (true) or not (false).
      * 
      */
-    public Output</* @Nullable */ Boolean> ebsOptimized() {
-        return this.ebsOptimized;
+    public Output<Optional<Boolean>> ebsOptimized() {
+        return Codegen.optional(this.ebsOptimized);
     }
     /**
      * Provides the name or the Amazon Resource Name (ARN) of the instance profile associated with the IAM role for the instance. The instance profile contains the IAM role.
@@ -103,8 +104,8 @@ public class LaunchConfiguration extends com.pulumi.resources.CustomResource {
      * @return Provides the name or the Amazon Resource Name (ARN) of the instance profile associated with the IAM role for the instance. The instance profile contains the IAM role.
      * 
      */
-    public Output</* @Nullable */ String> iamInstanceProfile() {
-        return this.iamInstanceProfile;
+    public Output<Optional<String>> iamInstanceProfile() {
+        return Codegen.optional(this.iamInstanceProfile);
     }
     /**
      * Provides the unique ID of the Amazon Machine Image (AMI) that was assigned during registration.
@@ -131,8 +132,8 @@ public class LaunchConfiguration extends com.pulumi.resources.CustomResource {
      * @return The ID of the Amazon EC2 instance you want to use to create the launch configuration.
      * 
      */
-    public Output</* @Nullable */ String> instanceId() {
-        return this.instanceId;
+    public Output<Optional<String>> instanceId() {
+        return Codegen.optional(this.instanceId);
     }
     /**
      * Controls whether instances in this group are launched with detailed (true) or basic (false) monitoring.
@@ -145,8 +146,8 @@ public class LaunchConfiguration extends com.pulumi.resources.CustomResource {
      * @return Controls whether instances in this group are launched with detailed (true) or basic (false) monitoring.
      * 
      */
-    public Output</* @Nullable */ Boolean> instanceMonitoring() {
-        return this.instanceMonitoring;
+    public Output<Optional<Boolean>> instanceMonitoring() {
+        return Codegen.optional(this.instanceMonitoring);
     }
     /**
      * Specifies the instance type of the EC2 instance.
@@ -173,8 +174,8 @@ public class LaunchConfiguration extends com.pulumi.resources.CustomResource {
      * @return Provides the ID of the kernel associated with the EC2 AMI.
      * 
      */
-    public Output</* @Nullable */ String> kernelId() {
-        return this.kernelId;
+    public Output<Optional<String>> kernelId() {
+        return Codegen.optional(this.kernelId);
     }
     /**
      * Provides the name of the EC2 key pair.
@@ -187,8 +188,8 @@ public class LaunchConfiguration extends com.pulumi.resources.CustomResource {
      * @return Provides the name of the EC2 key pair.
      * 
      */
-    public Output</* @Nullable */ String> keyName() {
-        return this.keyName;
+    public Output<Optional<String>> keyName() {
+        return Codegen.optional(this.keyName);
     }
     /**
      * The name of the launch configuration. This name must be unique per Region per account.
@@ -201,8 +202,8 @@ public class LaunchConfiguration extends com.pulumi.resources.CustomResource {
      * @return The name of the launch configuration. This name must be unique per Region per account.
      * 
      */
-    public Output</* @Nullable */ String> launchConfigurationName() {
-        return this.launchConfigurationName;
+    public Output<Optional<String>> launchConfigurationName() {
+        return Codegen.optional(this.launchConfigurationName);
     }
     /**
      * The metadata options for the instances.
@@ -215,8 +216,8 @@ public class LaunchConfiguration extends com.pulumi.resources.CustomResource {
      * @return The metadata options for the instances.
      * 
      */
-    public Output</* @Nullable */ LaunchConfigurationMetadataOptions> metadataOptions() {
-        return this.metadataOptions;
+    public Output<Optional<LaunchConfigurationMetadataOptions>> metadataOptions() {
+        return Codegen.optional(this.metadataOptions);
     }
     /**
      * The tenancy of the instance, either default or dedicated.
@@ -229,8 +230,8 @@ public class LaunchConfiguration extends com.pulumi.resources.CustomResource {
      * @return The tenancy of the instance, either default or dedicated.
      * 
      */
-    public Output</* @Nullable */ String> placementTenancy() {
-        return this.placementTenancy;
+    public Output<Optional<String>> placementTenancy() {
+        return Codegen.optional(this.placementTenancy);
     }
     /**
      * The ID of the RAM disk to select.
@@ -243,8 +244,8 @@ public class LaunchConfiguration extends com.pulumi.resources.CustomResource {
      * @return The ID of the RAM disk to select.
      * 
      */
-    public Output</* @Nullable */ String> ramDiskId() {
-        return this.ramDiskId;
+    public Output<Optional<String>> ramDiskId() {
+        return Codegen.optional(this.ramDiskId);
     }
     /**
      * A list that contains the security groups to assign to the instances in the Auto Scaling group.
@@ -257,8 +258,8 @@ public class LaunchConfiguration extends com.pulumi.resources.CustomResource {
      * @return A list that contains the security groups to assign to the instances in the Auto Scaling group.
      * 
      */
-    public Output</* @Nullable */ List<String>> securityGroups() {
-        return this.securityGroups;
+    public Output<Optional<List<String>>> securityGroups() {
+        return Codegen.optional(this.securityGroups);
     }
     /**
      * The maximum hourly price you are willing to pay for any Spot Instances launched to fulfill the request.
@@ -271,8 +272,8 @@ public class LaunchConfiguration extends com.pulumi.resources.CustomResource {
      * @return The maximum hourly price you are willing to pay for any Spot Instances launched to fulfill the request.
      * 
      */
-    public Output</* @Nullable */ String> spotPrice() {
-        return this.spotPrice;
+    public Output<Optional<String>> spotPrice() {
+        return Codegen.optional(this.spotPrice);
     }
     /**
      * The Base64-encoded user data to make available to the launched EC2 instances.
@@ -285,8 +286,8 @@ public class LaunchConfiguration extends com.pulumi.resources.CustomResource {
      * @return The Base64-encoded user data to make available to the launched EC2 instances.
      * 
      */
-    public Output</* @Nullable */ String> userData() {
-        return this.userData;
+    public Output<Optional<String>> userData() {
+        return Codegen.optional(this.userData);
     }
 
     /**

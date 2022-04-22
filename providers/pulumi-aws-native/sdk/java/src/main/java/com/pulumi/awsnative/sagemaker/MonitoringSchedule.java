@@ -15,6 +15,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -40,8 +41,8 @@ public class MonitoringSchedule extends com.pulumi.resources.CustomResource {
     @Export(name="endpointName", type=String.class, parameters={})
     private Output</* @Nullable */ String> endpointName;
 
-    public Output</* @Nullable */ String> endpointName() {
-        return this.endpointName;
+    public Output<Optional<String>> endpointName() {
+        return Codegen.optional(this.endpointName);
     }
     /**
      * Contains the reason a monitoring job failed, if it failed.
@@ -54,8 +55,8 @@ public class MonitoringSchedule extends com.pulumi.resources.CustomResource {
      * @return Contains the reason a monitoring job failed, if it failed.
      * 
      */
-    public Output</* @Nullable */ String> failureReason() {
-        return this.failureReason;
+    public Output<Optional<String>> failureReason() {
+        return Codegen.optional(this.failureReason);
     }
     /**
      * A timestamp that indicates the last time the monitoring job was modified.
@@ -82,8 +83,8 @@ public class MonitoringSchedule extends com.pulumi.resources.CustomResource {
      * @return Describes metadata on the last execution to run, if there was one.
      * 
      */
-    public Output</* @Nullable */ MonitoringScheduleMonitoringExecutionSummary> lastMonitoringExecutionSummary() {
-        return this.lastMonitoringExecutionSummary;
+    public Output<Optional<MonitoringScheduleMonitoringExecutionSummary>> lastMonitoringExecutionSummary() {
+        return Codegen.optional(this.lastMonitoringExecutionSummary);
     }
     /**
      * The Amazon Resource Name (ARN) of the monitoring schedule.
@@ -122,8 +123,8 @@ public class MonitoringSchedule extends com.pulumi.resources.CustomResource {
      * @return The status of a schedule job.
      * 
      */
-    public Output</* @Nullable */ MonitoringScheduleStatus> monitoringScheduleStatus() {
-        return this.monitoringScheduleStatus;
+    public Output<Optional<MonitoringScheduleStatus>> monitoringScheduleStatus() {
+        return Codegen.optional(this.monitoringScheduleStatus);
     }
     /**
      * An array of key-value pairs to apply to this resource.
@@ -136,8 +137,8 @@ public class MonitoringSchedule extends com.pulumi.resources.CustomResource {
      * @return An array of key-value pairs to apply to this resource.
      * 
      */
-    public Output</* @Nullable */ List<MonitoringScheduleTag>> tags() {
-        return this.tags;
+    public Output<Optional<List<MonitoringScheduleTag>>> tags() {
+        return Codegen.optional(this.tags);
     }
 
     /**

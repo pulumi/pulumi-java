@@ -13,6 +13,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -46,8 +47,8 @@ public class Repository extends com.pulumi.resources.CustomResource {
      * @return A text description of the repository.
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * The name of the domain that contains the repository.
@@ -88,8 +89,8 @@ public class Repository extends com.pulumi.resources.CustomResource {
      * @return A list of external connections associated with the repository.
      * 
      */
-    public Output</* @Nullable */ List<String>> externalConnections() {
-        return this.externalConnections;
+    public Output<Optional<List<String>>> externalConnections() {
+        return Codegen.optional(this.externalConnections);
     }
     /**
      * The name of the repository. This is used for GetAtt
@@ -116,8 +117,8 @@ public class Repository extends com.pulumi.resources.CustomResource {
      * @return The access control resource policy on the provided repository.
      * 
      */
-    public Output</* @Nullable */ Object> permissionsPolicyDocument() {
-        return this.permissionsPolicyDocument;
+    public Output<Optional<Object>> permissionsPolicyDocument() {
+        return Codegen.optional(this.permissionsPolicyDocument);
     }
     /**
      * The name of the repository.
@@ -144,8 +145,8 @@ public class Repository extends com.pulumi.resources.CustomResource {
      * @return An array of key-value pairs to apply to this resource.
      * 
      */
-    public Output</* @Nullable */ List<RepositoryTag>> tags() {
-        return this.tags;
+    public Output<Optional<List<RepositoryTag>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * A list of upstream repositories associated with the repository.
@@ -158,8 +159,8 @@ public class Repository extends com.pulumi.resources.CustomResource {
      * @return A list of upstream repositories associated with the repository.
      * 
      */
-    public Output</* @Nullable */ List<String>> upstreams() {
-        return this.upstreams;
+    public Output<Optional<List<String>>> upstreams() {
+        return Codegen.optional(this.upstreams);
     }
 
     /**

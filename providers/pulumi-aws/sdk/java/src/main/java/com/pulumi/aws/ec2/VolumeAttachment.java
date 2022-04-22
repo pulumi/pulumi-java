@@ -12,6 +12,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -68,8 +69,8 @@ public class VolumeAttachment extends com.pulumi.resources.CustomResource {
      * [Detaching an Amazon EBS Volume from an Instance](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-detaching-volume.html) for more information.
      * 
      */
-    public Output</* @Nullable */ Boolean> forceDetach() {
-        return this.forceDetach;
+    public Output<Optional<Boolean>> forceDetach() {
+        return Codegen.optional(this.forceDetach);
     }
     /**
      * ID of the Instance to attach to
@@ -104,8 +105,8 @@ public class VolumeAttachment extends com.pulumi.resources.CustomResource {
      * means attached.
      * 
      */
-    public Output</* @Nullable */ Boolean> skipDestroy() {
-        return this.skipDestroy;
+    public Output<Optional<Boolean>> skipDestroy() {
+        return Codegen.optional(this.skipDestroy);
     }
     /**
      * Set this to true to ensure that the target instance is stopped
@@ -120,8 +121,8 @@ public class VolumeAttachment extends com.pulumi.resources.CustomResource {
      * before trying to detach the volume. Stops the instance, if it is not already stopped.
      * 
      */
-    public Output</* @Nullable */ Boolean> stopInstanceBeforeDetaching() {
-        return this.stopInstanceBeforeDetaching;
+    public Output<Optional<Boolean>> stopInstanceBeforeDetaching() {
+        return Codegen.optional(this.stopInstanceBeforeDetaching);
     }
     /**
      * ID of the Volume to be attached

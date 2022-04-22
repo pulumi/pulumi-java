@@ -21,6 +21,7 @@ import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -51,8 +52,8 @@ public class VirtualNetworkGateway extends com.pulumi.resources.CustomResource {
      * @return ActiveActive flag.
      * 
      */
-    public Output</* @Nullable */ Boolean> activeActive() {
-        return this.activeActive;
+    public Output<Optional<Boolean>> activeActive() {
+        return Codegen.optional(this.activeActive);
     }
     /**
      * Virtual network gateway&#39;s BGP speaker settings.
@@ -65,8 +66,8 @@ public class VirtualNetworkGateway extends com.pulumi.resources.CustomResource {
      * @return Virtual network gateway&#39;s BGP speaker settings.
      * 
      */
-    public Output</* @Nullable */ BgpSettingsResponse> bgpSettings() {
-        return this.bgpSettings;
+    public Output<Optional<BgpSettingsResponse>> bgpSettings() {
+        return Codegen.optional(this.bgpSettings);
     }
     /**
      * The reference to the address space resource which represents the custom routes address space specified by the customer for virtual network gateway and VpnClient.
@@ -79,8 +80,8 @@ public class VirtualNetworkGateway extends com.pulumi.resources.CustomResource {
      * @return The reference to the address space resource which represents the custom routes address space specified by the customer for virtual network gateway and VpnClient.
      * 
      */
-    public Output</* @Nullable */ AddressSpaceResponse> customRoutes() {
-        return this.customRoutes;
+    public Output<Optional<AddressSpaceResponse>> customRoutes() {
+        return Codegen.optional(this.customRoutes);
     }
     /**
      * Whether BGP is enabled for this virtual network gateway or not.
@@ -93,8 +94,8 @@ public class VirtualNetworkGateway extends com.pulumi.resources.CustomResource {
      * @return Whether BGP is enabled for this virtual network gateway or not.
      * 
      */
-    public Output</* @Nullable */ Boolean> enableBgp() {
-        return this.enableBgp;
+    public Output<Optional<Boolean>> enableBgp() {
+        return Codegen.optional(this.enableBgp);
     }
     /**
      * Whether dns forwarding is enabled or not.
@@ -107,8 +108,8 @@ public class VirtualNetworkGateway extends com.pulumi.resources.CustomResource {
      * @return Whether dns forwarding is enabled or not.
      * 
      */
-    public Output</* @Nullable */ Boolean> enableDnsForwarding() {
-        return this.enableDnsForwarding;
+    public Output<Optional<Boolean>> enableDnsForwarding() {
+        return Codegen.optional(this.enableDnsForwarding);
     }
     /**
      * Whether private IP needs to be enabled on this gateway for connections or not.
@@ -121,8 +122,8 @@ public class VirtualNetworkGateway extends com.pulumi.resources.CustomResource {
      * @return Whether private IP needs to be enabled on this gateway for connections or not.
      * 
      */
-    public Output</* @Nullable */ Boolean> enablePrivateIpAddress() {
-        return this.enablePrivateIpAddress;
+    public Output<Optional<Boolean>> enablePrivateIpAddress() {
+        return Codegen.optional(this.enablePrivateIpAddress);
     }
     /**
      * A unique read-only string that changes whenever the resource is updated.
@@ -149,8 +150,8 @@ public class VirtualNetworkGateway extends com.pulumi.resources.CustomResource {
      * @return The extended location of type local virtual network gateway.
      * 
      */
-    public Output</* @Nullable */ ExtendedLocationResponse> extendedLocation() {
-        return this.extendedLocation;
+    public Output<Optional<ExtendedLocationResponse>> extendedLocation() {
+        return Codegen.optional(this.extendedLocation);
     }
     /**
      * The reference to the LocalNetworkGateway resource which represents local network site having default routes. Assign Null value in case of removing existing default site setting.
@@ -163,8 +164,8 @@ public class VirtualNetworkGateway extends com.pulumi.resources.CustomResource {
      * @return The reference to the LocalNetworkGateway resource which represents local network site having default routes. Assign Null value in case of removing existing default site setting.
      * 
      */
-    public Output</* @Nullable */ SubResourceResponse> gatewayDefaultSite() {
-        return this.gatewayDefaultSite;
+    public Output<Optional<SubResourceResponse>> gatewayDefaultSite() {
+        return Codegen.optional(this.gatewayDefaultSite);
     }
     /**
      * The type of this virtual network gateway.
@@ -177,8 +178,8 @@ public class VirtualNetworkGateway extends com.pulumi.resources.CustomResource {
      * @return The type of this virtual network gateway.
      * 
      */
-    public Output</* @Nullable */ String> gatewayType() {
-        return this.gatewayType;
+    public Output<Optional<String>> gatewayType() {
+        return Codegen.optional(this.gatewayType);
     }
     /**
      * The IP address allocated by the gateway to which dns requests can be sent.
@@ -205,8 +206,8 @@ public class VirtualNetworkGateway extends com.pulumi.resources.CustomResource {
      * @return IP configurations for virtual network gateway.
      * 
      */
-    public Output</* @Nullable */ List<VirtualNetworkGatewayIPConfigurationResponse>> ipConfigurations() {
-        return this.ipConfigurations;
+    public Output<Optional<List<VirtualNetworkGatewayIPConfigurationResponse>>> ipConfigurations() {
+        return Codegen.optional(this.ipConfigurations);
     }
     /**
      * Resource location.
@@ -219,8 +220,8 @@ public class VirtualNetworkGateway extends com.pulumi.resources.CustomResource {
      * @return Resource location.
      * 
      */
-    public Output</* @Nullable */ String> location() {
-        return this.location;
+    public Output<Optional<String>> location() {
+        return Codegen.optional(this.location);
     }
     /**
      * Resource name.
@@ -275,8 +276,8 @@ public class VirtualNetworkGateway extends com.pulumi.resources.CustomResource {
      * @return The reference to the VirtualNetworkGatewaySku resource which represents the SKU selected for Virtual network gateway.
      * 
      */
-    public Output</* @Nullable */ VirtualNetworkGatewaySkuResponse> sku() {
-        return this.sku;
+    public Output<Optional<VirtualNetworkGatewaySkuResponse>> sku() {
+        return Codegen.optional(this.sku);
     }
     /**
      * Resource tags.
@@ -289,8 +290,8 @@ public class VirtualNetworkGateway extends com.pulumi.resources.CustomResource {
      * @return Resource tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * Resource type.
@@ -317,8 +318,8 @@ public class VirtualNetworkGateway extends com.pulumi.resources.CustomResource {
      * @return Customer vnet resource id. VirtualNetworkGateway of type local gateway is associated with the customer vnet.
      * 
      */
-    public Output</* @Nullable */ String> vNetExtendedLocationResourceId() {
-        return this.vNetExtendedLocationResourceId;
+    public Output<Optional<String>> vNetExtendedLocationResourceId() {
+        return Codegen.optional(this.vNetExtendedLocationResourceId);
     }
     /**
      * The reference to the VpnClientConfiguration resource which represents the P2S VpnClient configurations.
@@ -331,8 +332,8 @@ public class VirtualNetworkGateway extends com.pulumi.resources.CustomResource {
      * @return The reference to the VpnClientConfiguration resource which represents the P2S VpnClient configurations.
      * 
      */
-    public Output</* @Nullable */ VpnClientConfigurationResponse> vpnClientConfiguration() {
-        return this.vpnClientConfiguration;
+    public Output<Optional<VpnClientConfigurationResponse>> vpnClientConfiguration() {
+        return Codegen.optional(this.vpnClientConfiguration);
     }
     /**
      * The generation for this VirtualNetworkGateway. Must be None if gatewayType is not VPN.
@@ -345,8 +346,8 @@ public class VirtualNetworkGateway extends com.pulumi.resources.CustomResource {
      * @return The generation for this VirtualNetworkGateway. Must be None if gatewayType is not VPN.
      * 
      */
-    public Output</* @Nullable */ String> vpnGatewayGeneration() {
-        return this.vpnGatewayGeneration;
+    public Output<Optional<String>> vpnGatewayGeneration() {
+        return Codegen.optional(this.vpnGatewayGeneration);
     }
     /**
      * The type of this virtual network gateway.
@@ -359,8 +360,8 @@ public class VirtualNetworkGateway extends com.pulumi.resources.CustomResource {
      * @return The type of this virtual network gateway.
      * 
      */
-    public Output</* @Nullable */ String> vpnType() {
-        return this.vpnType;
+    public Output<Optional<String>> vpnType() {
+        return Codegen.optional(this.vpnType);
     }
 
     /**

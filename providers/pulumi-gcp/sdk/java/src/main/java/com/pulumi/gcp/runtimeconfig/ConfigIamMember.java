@@ -12,6 +12,7 @@ import com.pulumi.gcp.runtimeconfig.ConfigIamMemberArgs;
 import com.pulumi.gcp.runtimeconfig.inputs.ConfigIamMemberState;
 import com.pulumi.gcp.runtimeconfig.outputs.ConfigIamMemberCondition;
 import java.lang.String;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -45,8 +46,8 @@ public class ConfigIamMember extends com.pulumi.resources.CustomResource {
     @Export(name="condition", type=ConfigIamMemberCondition.class, parameters={})
     private Output</* @Nullable */ ConfigIamMemberCondition> condition;
 
-    public Output</* @Nullable */ ConfigIamMemberCondition> condition() {
-        return this.condition;
+    public Output<Optional<ConfigIamMemberCondition>> condition() {
+        return Codegen.optional(this.condition);
     }
     /**
      * Used to find the parent resource to bind the IAM policy to

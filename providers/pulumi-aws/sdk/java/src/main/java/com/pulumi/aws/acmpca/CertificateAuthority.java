@@ -16,6 +16,7 @@ import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -117,8 +118,8 @@ public class CertificateAuthority extends com.pulumi.resources.CustomResource {
      * @return Boolean value that specifies whether certificate revocation lists (CRLs) are enabled. Defaults to `false`.
      * 
      */
-    public Output</* @Nullable */ Boolean> enabled() {
-        return this.enabled;
+    public Output<Optional<Boolean>> enabled() {
+        return Codegen.optional(this.enabled);
     }
     /**
      * Date and time after which the certificate authority is not valid. Only available after the certificate authority certificate has been imported.
@@ -159,8 +160,8 @@ public class CertificateAuthority extends com.pulumi.resources.CustomResource {
      * @return The number of days to make a CA restorable after it has been deleted, must be between 7 to 30 days, with default to 30 days.
      * 
      */
-    public Output</* @Nullable */ Integer> permanentDeletionTimeInDays() {
-        return this.permanentDeletionTimeInDays;
+    public Output<Optional<Integer>> permanentDeletionTimeInDays() {
+        return Codegen.optional(this.permanentDeletionTimeInDays);
     }
     /**
      * Nested argument containing revocation configuration. Defined below.
@@ -173,8 +174,8 @@ public class CertificateAuthority extends com.pulumi.resources.CustomResource {
      * @return Nested argument containing revocation configuration. Defined below.
      * 
      */
-    public Output</* @Nullable */ CertificateAuthorityRevocationConfiguration> revocationConfiguration() {
-        return this.revocationConfiguration;
+    public Output<Optional<CertificateAuthorityRevocationConfiguration>> revocationConfiguration() {
+        return Codegen.optional(this.revocationConfiguration);
     }
     /**
      * Serial number of the certificate authority. Only available after the certificate authority certificate has been imported.
@@ -215,8 +216,8 @@ public class CertificateAuthority extends com.pulumi.resources.CustomResource {
      * @return Specifies a key-value map of user-defined tags that are attached to the certificate authority. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * A map of tags assigned to the resource, including those inherited from the provider .
@@ -243,8 +244,8 @@ public class CertificateAuthority extends com.pulumi.resources.CustomResource {
      * @return The type of the certificate authority. Defaults to `SUBORDINATE`. Valid values: `ROOT` and `SUBORDINATE`.
      * 
      */
-    public Output</* @Nullable */ String> type() {
-        return this.type;
+    public Output<Optional<String>> type() {
+        return Codegen.optional(this.type);
     }
 
     /**

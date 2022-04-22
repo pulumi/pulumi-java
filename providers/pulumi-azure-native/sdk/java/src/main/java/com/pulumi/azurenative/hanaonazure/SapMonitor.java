@@ -14,6 +14,7 @@ import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -44,8 +45,8 @@ public class SapMonitor extends com.pulumi.resources.CustomResource {
      * @return The value indicating whether to send analytics to Microsoft
      * 
      */
-    public Output</* @Nullable */ Boolean> enableCustomerAnalytics() {
-        return this.enableCustomerAnalytics;
+    public Output<Optional<Boolean>> enableCustomerAnalytics() {
+        return Codegen.optional(this.enableCustomerAnalytics);
     }
     /**
      * The geo-location where the resource lives
@@ -72,8 +73,8 @@ public class SapMonitor extends com.pulumi.resources.CustomResource {
      * @return The ARM ID of the Log Analytics Workspace that is used for monitoring
      * 
      */
-    public Output</* @Nullable */ String> logAnalyticsWorkspaceArmId() {
-        return this.logAnalyticsWorkspaceArmId;
+    public Output<Optional<String>> logAnalyticsWorkspaceArmId() {
+        return Codegen.optional(this.logAnalyticsWorkspaceArmId);
     }
     /**
      * The workspace ID of the log analytics workspace to be used for monitoring
@@ -86,8 +87,8 @@ public class SapMonitor extends com.pulumi.resources.CustomResource {
      * @return The workspace ID of the log analytics workspace to be used for monitoring
      * 
      */
-    public Output</* @Nullable */ String> logAnalyticsWorkspaceId() {
-        return this.logAnalyticsWorkspaceId;
+    public Output<Optional<String>> logAnalyticsWorkspaceId() {
+        return Codegen.optional(this.logAnalyticsWorkspaceId);
     }
     /**
      * The shared key of the log analytics workspace that is used for monitoring
@@ -100,8 +101,8 @@ public class SapMonitor extends com.pulumi.resources.CustomResource {
      * @return The shared key of the log analytics workspace that is used for monitoring
      * 
      */
-    public Output</* @Nullable */ String> logAnalyticsWorkspaceSharedKey() {
-        return this.logAnalyticsWorkspaceSharedKey;
+    public Output<Optional<String>> logAnalyticsWorkspaceSharedKey() {
+        return Codegen.optional(this.logAnalyticsWorkspaceSharedKey);
     }
     /**
      * The name of the resource group the SAP Monitor resources get deployed into.
@@ -128,8 +129,8 @@ public class SapMonitor extends com.pulumi.resources.CustomResource {
      * @return The subnet which the SAP monitor will be deployed in
      * 
      */
-    public Output</* @Nullable */ String> monitorSubnet() {
-        return this.monitorSubnet;
+    public Output<Optional<String>> monitorSubnet() {
+        return Codegen.optional(this.monitorSubnet);
     }
     /**
      * The name of the resource
@@ -184,8 +185,8 @@ public class SapMonitor extends com.pulumi.resources.CustomResource {
      * @return Resource tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;

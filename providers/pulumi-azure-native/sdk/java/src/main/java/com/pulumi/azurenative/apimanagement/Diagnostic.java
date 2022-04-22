@@ -15,6 +15,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -45,8 +46,8 @@ public class Diagnostic extends com.pulumi.resources.CustomResource {
      * @return Specifies for what type of messages sampling settings should not apply.
      * 
      */
-    public Output</* @Nullable */ String> alwaysLog() {
-        return this.alwaysLog;
+    public Output<Optional<String>> alwaysLog() {
+        return Codegen.optional(this.alwaysLog);
     }
     /**
      * Diagnostic settings for incoming/outgoing HTTP messages to the Backend
@@ -59,8 +60,8 @@ public class Diagnostic extends com.pulumi.resources.CustomResource {
      * @return Diagnostic settings for incoming/outgoing HTTP messages to the Backend
      * 
      */
-    public Output</* @Nullable */ PipelineDiagnosticSettingsResponse> backend() {
-        return this.backend;
+    public Output<Optional<PipelineDiagnosticSettingsResponse>> backend() {
+        return Codegen.optional(this.backend);
     }
     /**
      * Diagnostic settings for incoming/outgoing HTTP messages to the Gateway.
@@ -73,8 +74,8 @@ public class Diagnostic extends com.pulumi.resources.CustomResource {
      * @return Diagnostic settings for incoming/outgoing HTTP messages to the Gateway.
      * 
      */
-    public Output</* @Nullable */ PipelineDiagnosticSettingsResponse> frontend() {
-        return this.frontend;
+    public Output<Optional<PipelineDiagnosticSettingsResponse>> frontend() {
+        return Codegen.optional(this.frontend);
     }
     /**
      * Sets correlation protocol to use for Application Insights diagnostics.
@@ -87,8 +88,8 @@ public class Diagnostic extends com.pulumi.resources.CustomResource {
      * @return Sets correlation protocol to use for Application Insights diagnostics.
      * 
      */
-    public Output</* @Nullable */ String> httpCorrelationProtocol() {
-        return this.httpCorrelationProtocol;
+    public Output<Optional<String>> httpCorrelationProtocol() {
+        return Codegen.optional(this.httpCorrelationProtocol);
     }
     /**
      * Log the ClientIP. Default is false.
@@ -101,8 +102,8 @@ public class Diagnostic extends com.pulumi.resources.CustomResource {
      * @return Log the ClientIP. Default is false.
      * 
      */
-    public Output</* @Nullable */ Boolean> logClientIp() {
-        return this.logClientIp;
+    public Output<Optional<Boolean>> logClientIp() {
+        return Codegen.optional(this.logClientIp);
     }
     /**
      * Resource Id of a target logger.
@@ -143,8 +144,8 @@ public class Diagnostic extends com.pulumi.resources.CustomResource {
      * @return The format of the Operation Name for Application Insights telemetries. Default is Name.
      * 
      */
-    public Output</* @Nullable */ String> operationNameFormat() {
-        return this.operationNameFormat;
+    public Output<Optional<String>> operationNameFormat() {
+        return Codegen.optional(this.operationNameFormat);
     }
     /**
      * Sampling settings for Diagnostic.
@@ -157,8 +158,8 @@ public class Diagnostic extends com.pulumi.resources.CustomResource {
      * @return Sampling settings for Diagnostic.
      * 
      */
-    public Output</* @Nullable */ SamplingSettingsResponse> sampling() {
-        return this.sampling;
+    public Output<Optional<SamplingSettingsResponse>> sampling() {
+        return Codegen.optional(this.sampling);
     }
     /**
      * Resource type for API Management resource.
@@ -185,8 +186,8 @@ public class Diagnostic extends com.pulumi.resources.CustomResource {
      * @return The verbosity level applied to traces emitted by trace policies.
      * 
      */
-    public Output</* @Nullable */ String> verbosity() {
-        return this.verbosity;
+    public Output<Optional<String>> verbosity() {
+        return Codegen.optional(this.verbosity);
     }
 
     /**

@@ -13,6 +13,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -54,8 +55,8 @@ public class UserGroup extends com.pulumi.resources.CustomResource {
     @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     @Export(name="tagsAll", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> tagsAll;
@@ -88,8 +89,8 @@ public class UserGroup extends com.pulumi.resources.CustomResource {
      * @return The list of user IDs that belong to the user group.
      * 
      */
-    public Output</* @Nullable */ List<String>> userIds() {
-        return this.userIds;
+    public Output<Optional<List<String>>> userIds() {
+        return Codegen.optional(this.userIds);
     }
 
     /**

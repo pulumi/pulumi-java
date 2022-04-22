@@ -13,6 +13,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -36,8 +37,8 @@ public class Application extends com.pulumi.resources.CustomResource {
     @Export(name="attributesToDelete", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> attributesToDelete;
 
-    public Output</* @Nullable */ List<String>> attributesToDelete() {
-        return this.attributesToDelete;
+    public Output<Optional<List<String>>> attributesToDelete() {
+        return Codegen.optional(this.attributesToDelete);
     }
     @Export(name="createdTime", type=String.class, parameters={})
     private Output<String> createdTime;
@@ -48,14 +49,14 @@ public class Application extends com.pulumi.resources.CustomResource {
     @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     @Export(name="displayName", type=String.class, parameters={})
     private Output</* @Nullable */ String> displayName;
 
-    public Output</* @Nullable */ String> displayName() {
-        return this.displayName;
+    public Output<Optional<String>> displayName() {
+        return Codegen.optional(this.displayName);
     }
     @Export(name="iconS3Location", type=ApplicationS3Location.class, parameters={})
     private Output<ApplicationS3Location> iconS3Location;
@@ -72,8 +73,8 @@ public class Application extends com.pulumi.resources.CustomResource {
     @Export(name="launchParameters", type=String.class, parameters={})
     private Output</* @Nullable */ String> launchParameters;
 
-    public Output</* @Nullable */ String> launchParameters() {
-        return this.launchParameters;
+    public Output<Optional<String>> launchParameters() {
+        return Codegen.optional(this.launchParameters);
     }
     @Export(name="launchPath", type=String.class, parameters={})
     private Output<String> launchPath;
@@ -96,14 +97,14 @@ public class Application extends com.pulumi.resources.CustomResource {
     @Export(name="tags", type=List.class, parameters={ApplicationTag.class})
     private Output</* @Nullable */ List<ApplicationTag>> tags;
 
-    public Output</* @Nullable */ List<ApplicationTag>> tags() {
-        return this.tags;
+    public Output<Optional<List<ApplicationTag>>> tags() {
+        return Codegen.optional(this.tags);
     }
     @Export(name="workingDirectory", type=String.class, parameters={})
     private Output</* @Nullable */ String> workingDirectory;
 
-    public Output</* @Nullable */ String> workingDirectory() {
-        return this.workingDirectory;
+    public Output<Optional<String>> workingDirectory() {
+        return Codegen.optional(this.workingDirectory);
     }
 
     /**

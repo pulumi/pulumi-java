@@ -13,6 +13,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -43,8 +44,8 @@ public class Application extends com.pulumi.resources.CustomResource {
      * @return A value indicating whether packages within the application may be overwritten using the same version string.
      * 
      */
-    public Output</* @Nullable */ Boolean> allowUpdates() {
-        return this.allowUpdates;
+    public Output<Optional<Boolean>> allowUpdates() {
+        return Codegen.optional(this.allowUpdates);
     }
     /**
      * The package to use if a client requests the application but does not specify a version. This property can only be set to the name of an existing package.
@@ -57,8 +58,8 @@ public class Application extends com.pulumi.resources.CustomResource {
      * @return The package to use if a client requests the application but does not specify a version. This property can only be set to the name of an existing package.
      * 
      */
-    public Output</* @Nullable */ String> defaultVersion() {
-        return this.defaultVersion;
+    public Output<Optional<String>> defaultVersion() {
+        return Codegen.optional(this.defaultVersion);
     }
     /**
      * The display name for the application.
@@ -71,8 +72,8 @@ public class Application extends com.pulumi.resources.CustomResource {
      * @return The display name for the application.
      * 
      */
-    public Output</* @Nullable */ String> displayName() {
-        return this.displayName;
+    public Output<Optional<String>> displayName() {
+        return Codegen.optional(this.displayName);
     }
     /**
      * The ETag of the resource, used for concurrency statements.

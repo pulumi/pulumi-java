@@ -14,6 +14,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -35,8 +36,8 @@ public class LocationObjectStorage extends com.pulumi.resources.CustomResource {
      * @return Optional. The access key is used if credentials are required to access the self-managed object storage server.
      * 
      */
-    public Output</* @Nullable */ String> accessKey() {
-        return this.accessKey;
+    public Output<Optional<String>> accessKey() {
+        return Codegen.optional(this.accessKey);
     }
     /**
      * The Amazon Resource Name (ARN) of the agents associated with the self-managed object storage server location.
@@ -105,8 +106,8 @@ public class LocationObjectStorage extends com.pulumi.resources.CustomResource {
      * @return Optional. The secret key is used if credentials are required to access the self-managed object storage server.
      * 
      */
-    public Output</* @Nullable */ String> secretKey() {
-        return this.secretKey;
+    public Output<Optional<String>> secretKey() {
+        return Codegen.optional(this.secretKey);
     }
     /**
      * The name of the self-managed object storage server. This value is the IP address or Domain Name Service (DNS) name of the object storage server.
@@ -133,8 +134,8 @@ public class LocationObjectStorage extends com.pulumi.resources.CustomResource {
      * @return The port that your self-managed server accepts inbound network traffic on.
      * 
      */
-    public Output</* @Nullable */ Integer> serverPort() {
-        return this.serverPort;
+    public Output<Optional<Integer>> serverPort() {
+        return Codegen.optional(this.serverPort);
     }
     /**
      * The protocol that the object storage server uses to communicate.
@@ -147,8 +148,8 @@ public class LocationObjectStorage extends com.pulumi.resources.CustomResource {
      * @return The protocol that the object storage server uses to communicate.
      * 
      */
-    public Output</* @Nullable */ LocationObjectStorageServerProtocol> serverProtocol() {
-        return this.serverProtocol;
+    public Output<Optional<LocationObjectStorageServerProtocol>> serverProtocol() {
+        return Codegen.optional(this.serverProtocol);
     }
     /**
      * The subdirectory in the self-managed object storage server that is used to read data from.
@@ -161,8 +162,8 @@ public class LocationObjectStorage extends com.pulumi.resources.CustomResource {
      * @return The subdirectory in the self-managed object storage server that is used to read data from.
      * 
      */
-    public Output</* @Nullable */ String> subdirectory() {
-        return this.subdirectory;
+    public Output<Optional<String>> subdirectory() {
+        return Codegen.optional(this.subdirectory);
     }
     /**
      * An array of key-value pairs to apply to this resource.
@@ -175,8 +176,8 @@ public class LocationObjectStorage extends com.pulumi.resources.CustomResource {
      * @return An array of key-value pairs to apply to this resource.
      * 
      */
-    public Output</* @Nullable */ List<LocationObjectStorageTag>> tags() {
-        return this.tags;
+    public Output<Optional<List<LocationObjectStorageTag>>> tags() {
+        return Codegen.optional(this.tags);
     }
 
     /**

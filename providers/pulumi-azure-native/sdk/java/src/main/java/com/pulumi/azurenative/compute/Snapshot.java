@@ -22,6 +22,7 @@ import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -66,8 +67,8 @@ public class Snapshot extends com.pulumi.resources.CustomResource {
      * @return ARM id of the DiskAccess resource for using private endpoints on disks.
      * 
      */
-    public Output</* @Nullable */ String> diskAccessId() {
-        return this.diskAccessId;
+    public Output<Optional<String>> diskAccessId() {
+        return Codegen.optional(this.diskAccessId);
     }
     /**
      * The size of the disk in bytes. This field is read only.
@@ -94,8 +95,8 @@ public class Snapshot extends com.pulumi.resources.CustomResource {
      * @return If creationData.createOption is Empty, this field is mandatory and it indicates the size of the disk to create. If this field is present for updates or creation with other options, it indicates a resize. Resizes are only allowed if the disk is not attached to a running VM, and can only increase the disk&#39;s size.
      * 
      */
-    public Output</* @Nullable */ Integer> diskSizeGB() {
-        return this.diskSizeGB;
+    public Output<Optional<Integer>> diskSizeGB() {
+        return Codegen.optional(this.diskSizeGB);
     }
     /**
      * The state of the snapshot.
@@ -122,8 +123,8 @@ public class Snapshot extends com.pulumi.resources.CustomResource {
      * @return Encryption property can be used to encrypt data at rest with customer managed keys or platform managed keys.
      * 
      */
-    public Output</* @Nullable */ EncryptionResponse> encryption() {
-        return this.encryption;
+    public Output<Optional<EncryptionResponse>> encryption() {
+        return Codegen.optional(this.encryption);
     }
     /**
      * Encryption settings collection used be Azure Disk Encryption, can contain multiple encryption settings per disk or snapshot.
@@ -136,8 +137,8 @@ public class Snapshot extends com.pulumi.resources.CustomResource {
      * @return Encryption settings collection used be Azure Disk Encryption, can contain multiple encryption settings per disk or snapshot.
      * 
      */
-    public Output</* @Nullable */ EncryptionSettingsCollectionResponse> encryptionSettingsCollection() {
-        return this.encryptionSettingsCollection;
+    public Output<Optional<EncryptionSettingsCollectionResponse>> encryptionSettingsCollection() {
+        return Codegen.optional(this.encryptionSettingsCollection);
     }
     /**
      * The extended location where the snapshot will be created. Extended location cannot be changed.
@@ -150,8 +151,8 @@ public class Snapshot extends com.pulumi.resources.CustomResource {
      * @return The extended location where the snapshot will be created. Extended location cannot be changed.
      * 
      */
-    public Output</* @Nullable */ ExtendedLocationResponse> extendedLocation() {
-        return this.extendedLocation;
+    public Output<Optional<ExtendedLocationResponse>> extendedLocation() {
+        return Codegen.optional(this.extendedLocation);
     }
     /**
      * The hypervisor generation of the Virtual Machine. Applicable to OS disks only.
@@ -164,8 +165,8 @@ public class Snapshot extends com.pulumi.resources.CustomResource {
      * @return The hypervisor generation of the Virtual Machine. Applicable to OS disks only.
      * 
      */
-    public Output</* @Nullable */ String> hyperVGeneration() {
-        return this.hyperVGeneration;
+    public Output<Optional<String>> hyperVGeneration() {
+        return Codegen.optional(this.hyperVGeneration);
     }
     /**
      * Whether a snapshot is incremental. Incremental snapshots on the same disk occupy less space than full snapshots and can be diffed.
@@ -178,8 +179,8 @@ public class Snapshot extends com.pulumi.resources.CustomResource {
      * @return Whether a snapshot is incremental. Incremental snapshots on the same disk occupy less space than full snapshots and can be diffed.
      * 
      */
-    public Output</* @Nullable */ Boolean> incremental() {
-        return this.incremental;
+    public Output<Optional<Boolean>> incremental() {
+        return Codegen.optional(this.incremental);
     }
     /**
      * Resource location
@@ -234,8 +235,8 @@ public class Snapshot extends com.pulumi.resources.CustomResource {
      * @return Policy for accessing the disk via network.
      * 
      */
-    public Output</* @Nullable */ String> networkAccessPolicy() {
-        return this.networkAccessPolicy;
+    public Output<Optional<String>> networkAccessPolicy() {
+        return Codegen.optional(this.networkAccessPolicy);
     }
     /**
      * The Operating System type.
@@ -248,8 +249,8 @@ public class Snapshot extends com.pulumi.resources.CustomResource {
      * @return The Operating System type.
      * 
      */
-    public Output</* @Nullable */ String> osType() {
-        return this.osType;
+    public Output<Optional<String>> osType() {
+        return Codegen.optional(this.osType);
     }
     /**
      * The disk provisioning state.
@@ -276,8 +277,8 @@ public class Snapshot extends com.pulumi.resources.CustomResource {
      * @return Purchase plan information for the image from which the source disk for the snapshot was originally created.
      * 
      */
-    public Output</* @Nullable */ PurchasePlanResponse> purchasePlan() {
-        return this.purchasePlan;
+    public Output<Optional<PurchasePlanResponse>> purchasePlan() {
+        return Codegen.optional(this.purchasePlan);
     }
     /**
      * The snapshots sku name. Can be Standard_LRS, Premium_LRS, or Standard_ZRS. This is an optional parameter for incremental snapshot and the default behavior is the SKU will be set to the same sku as the previous snapshot
@@ -290,8 +291,8 @@ public class Snapshot extends com.pulumi.resources.CustomResource {
      * @return The snapshots sku name. Can be Standard_LRS, Premium_LRS, or Standard_ZRS. This is an optional parameter for incremental snapshot and the default behavior is the SKU will be set to the same sku as the previous snapshot
      * 
      */
-    public Output</* @Nullable */ SnapshotSkuResponse> sku() {
-        return this.sku;
+    public Output<Optional<SnapshotSkuResponse>> sku() {
+        return Codegen.optional(this.sku);
     }
     /**
      * Indicates the OS on a snapshot supports hibernation.
@@ -304,8 +305,8 @@ public class Snapshot extends com.pulumi.resources.CustomResource {
      * @return Indicates the OS on a snapshot supports hibernation.
      * 
      */
-    public Output</* @Nullable */ Boolean> supportsHibernation() {
-        return this.supportsHibernation;
+    public Output<Optional<Boolean>> supportsHibernation() {
+        return Codegen.optional(this.supportsHibernation);
     }
     /**
      * Resource tags
@@ -318,8 +319,8 @@ public class Snapshot extends com.pulumi.resources.CustomResource {
      * @return Resource tags
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * The time when the snapshot was created.

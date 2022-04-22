@@ -10,6 +10,7 @@ import com.pulumi.core.annotations.Export;
 import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -29,8 +30,8 @@ public class BasePathMapping extends com.pulumi.resources.CustomResource {
      * @return The base path name that callers of the API must provide in the URL after the domain name.
      * 
      */
-    public Output</* @Nullable */ String> basePath() {
-        return this.basePath;
+    public Output<Optional<String>> basePath() {
+        return Codegen.optional(this.basePath);
     }
     /**
      * The DomainName of an AWS::ApiGateway::DomainName resource.
@@ -57,8 +58,8 @@ public class BasePathMapping extends com.pulumi.resources.CustomResource {
      * @return The ID of the API.
      * 
      */
-    public Output</* @Nullable */ String> restApiId() {
-        return this.restApiId;
+    public Output<Optional<String>> restApiId() {
+        return Codegen.optional(this.restApiId);
     }
     /**
      * The name of the API&#39;s stage.
@@ -71,8 +72,8 @@ public class BasePathMapping extends com.pulumi.resources.CustomResource {
      * @return The name of the API&#39;s stage.
      * 
      */
-    public Output</* @Nullable */ String> stage() {
-        return this.stage;
+    public Output<Optional<String>> stage() {
+        return Codegen.optional(this.stage);
     }
 
     /**

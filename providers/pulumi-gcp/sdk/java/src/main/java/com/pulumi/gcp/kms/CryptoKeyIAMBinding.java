@@ -13,6 +13,7 @@ import com.pulumi.gcp.kms.inputs.CryptoKeyIAMBindingState;
 import com.pulumi.gcp.kms.outputs.CryptoKeyIAMBindingCondition;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -74,8 +75,8 @@ public class CryptoKeyIAMBinding extends com.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ CryptoKeyIAMBindingCondition> condition() {
-        return this.condition;
+    public Output<Optional<CryptoKeyIAMBindingCondition>> condition() {
+        return Codegen.optional(this.condition);
     }
     /**
      * The crypto key ID, in the form

@@ -13,6 +13,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -43,8 +44,8 @@ public class ContentType extends com.pulumi.resources.CustomResource {
      * @return Content type description.
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * Resource name.
@@ -71,8 +72,8 @@ public class ContentType extends com.pulumi.resources.CustomResource {
      * @return Content type schema.
      * 
      */
-    public Output</* @Nullable */ Object> schema() {
-        return this.schema;
+    public Output<Optional<Object>> schema() {
+        return Codegen.optional(this.schema);
     }
     /**
      * Resource type for API Management resource.
@@ -99,8 +100,8 @@ public class ContentType extends com.pulumi.resources.CustomResource {
      * @return Content type version.
      * 
      */
-    public Output</* @Nullable */ String> version() {
-        return this.version;
+    public Output<Optional<String>> version() {
+        return Codegen.optional(this.version);
     }
 
     /**

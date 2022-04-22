@@ -12,6 +12,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -42,8 +43,8 @@ public class CloudLink extends com.pulumi.resources.CustomResource {
      * @return Identifier of the other private cloud participating in the link.
      * 
      */
-    public Output</* @Nullable */ String> linkedCloud() {
-        return this.linkedCloud;
+    public Output<Optional<String>> linkedCloud() {
+        return Codegen.optional(this.linkedCloud);
     }
     /**
      * Resource name.

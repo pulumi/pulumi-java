@@ -13,6 +13,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -56,8 +57,8 @@ public class SqlInjectionMatchSet extends com.pulumi.resources.CustomResource {
      * @return The parts of web requests that you want AWS WAF to inspect for malicious SQL code and, if you want AWS WAF to inspect a header, the name of the header.
      * 
      */
-    public Output</* @Nullable */ List<SqlInjectionMatchSetSqlInjectionMatchTuple>> sqlInjectionMatchTuples() {
-        return this.sqlInjectionMatchTuples;
+    public Output<Optional<List<SqlInjectionMatchSetSqlInjectionMatchTuple>>> sqlInjectionMatchTuples() {
+        return Codegen.optional(this.sqlInjectionMatchTuples);
     }
 
     /**

@@ -14,6 +14,7 @@ import java.lang.Integer;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -45,8 +46,8 @@ public class RandomInteger extends com.pulumi.resources.CustomResource {
      * @return Arbitrary map of values that, when changed, will trigger recreation of resource. See the main provider documentation for more information.
      * 
      */
-    public Output</* @Nullable */ Map<String,Object>> keepers() {
-        return this.keepers;
+    public Output<Optional<Map<String,Object>>> keepers() {
+        return Codegen.optional(this.keepers);
     }
     /**
      * The maximum inclusive value of the range.
@@ -101,8 +102,8 @@ public class RandomInteger extends com.pulumi.resources.CustomResource {
      * @return A custom seed to always produce the same value.
      * 
      */
-    public Output</* @Nullable */ String> seed() {
-        return this.seed;
+    public Output<Optional<String>> seed() {
+        return Codegen.optional(this.seed);
     }
 
     /**

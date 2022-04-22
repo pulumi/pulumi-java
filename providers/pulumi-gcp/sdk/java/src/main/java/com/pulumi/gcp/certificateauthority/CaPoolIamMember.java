@@ -12,6 +12,7 @@ import com.pulumi.gcp.certificateauthority.CaPoolIamMemberArgs;
 import com.pulumi.gcp.certificateauthority.inputs.CaPoolIamMemberState;
 import com.pulumi.gcp.certificateauthority.outputs.CaPoolIamMemberCondition;
 import java.lang.String;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -75,8 +76,8 @@ public class CaPoolIamMember extends com.pulumi.resources.CustomResource {
     @Export(name="condition", type=CaPoolIamMemberCondition.class, parameters={})
     private Output</* @Nullable */ CaPoolIamMemberCondition> condition;
 
-    public Output</* @Nullable */ CaPoolIamMemberCondition> condition() {
-        return this.condition;
+    public Output<Optional<CaPoolIamMemberCondition>> condition() {
+        return Codegen.optional(this.condition);
     }
     /**
      * (Computed) The etag of the IAM policy.

@@ -18,6 +18,7 @@ import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -62,8 +63,8 @@ public class ExpressRoutePort extends com.pulumi.resources.CustomResource {
      * @return Bandwidth of procured ports in Gbps.
      * 
      */
-    public Output</* @Nullable */ Integer> bandwidthInGbps() {
-        return this.bandwidthInGbps;
+    public Output<Optional<Integer>> bandwidthInGbps() {
+        return Codegen.optional(this.bandwidthInGbps);
     }
     /**
      * Reference the ExpressRoute circuit(s) that are provisioned on this ExpressRoutePort resource.
@@ -90,8 +91,8 @@ public class ExpressRoutePort extends com.pulumi.resources.CustomResource {
      * @return Encapsulation method on physical ports.
      * 
      */
-    public Output</* @Nullable */ String> encapsulation() {
-        return this.encapsulation;
+    public Output<Optional<String>> encapsulation() {
+        return Codegen.optional(this.encapsulation);
     }
     /**
      * A unique read-only string that changes whenever the resource is updated.
@@ -132,8 +133,8 @@ public class ExpressRoutePort extends com.pulumi.resources.CustomResource {
      * @return The identity of ExpressRoutePort, if configured.
      * 
      */
-    public Output</* @Nullable */ ManagedServiceIdentityResponse> identity() {
-        return this.identity;
+    public Output<Optional<ManagedServiceIdentityResponse>> identity() {
+        return Codegen.optional(this.identity);
     }
     /**
      * The set of physical links of the ExpressRoutePort resource.
@@ -146,8 +147,8 @@ public class ExpressRoutePort extends com.pulumi.resources.CustomResource {
      * @return The set of physical links of the ExpressRoutePort resource.
      * 
      */
-    public Output</* @Nullable */ List<ExpressRouteLinkResponse>> links() {
-        return this.links;
+    public Output<Optional<List<ExpressRouteLinkResponse>>> links() {
+        return Codegen.optional(this.links);
     }
     /**
      * Resource location.
@@ -160,8 +161,8 @@ public class ExpressRoutePort extends com.pulumi.resources.CustomResource {
      * @return Resource location.
      * 
      */
-    public Output</* @Nullable */ String> location() {
-        return this.location;
+    public Output<Optional<String>> location() {
+        return Codegen.optional(this.location);
     }
     /**
      * Maximum transmission unit of the physical port pair(s).
@@ -202,8 +203,8 @@ public class ExpressRoutePort extends com.pulumi.resources.CustomResource {
      * @return The name of the peering location that the ExpressRoutePort is mapped to physically.
      * 
      */
-    public Output</* @Nullable */ String> peeringLocation() {
-        return this.peeringLocation;
+    public Output<Optional<String>> peeringLocation() {
+        return Codegen.optional(this.peeringLocation);
     }
     /**
      * Aggregate Gbps of associated circuit bandwidths.
@@ -258,8 +259,8 @@ public class ExpressRoutePort extends com.pulumi.resources.CustomResource {
      * @return Resource tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * Resource type.

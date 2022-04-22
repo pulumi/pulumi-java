@@ -14,6 +14,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -25,14 +26,14 @@ public class Firewall extends com.pulumi.resources.CustomResource {
     @Export(name="deleteProtection", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> deleteProtection;
 
-    public Output</* @Nullable */ Boolean> deleteProtection() {
-        return this.deleteProtection;
+    public Output<Optional<Boolean>> deleteProtection() {
+        return Codegen.optional(this.deleteProtection);
     }
     @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     @Export(name="endpointIds", type=List.class, parameters={String.class})
     private Output<List<String>> endpointIds;
@@ -67,14 +68,14 @@ public class Firewall extends com.pulumi.resources.CustomResource {
     @Export(name="firewallPolicyChangeProtection", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> firewallPolicyChangeProtection;
 
-    public Output</* @Nullable */ Boolean> firewallPolicyChangeProtection() {
-        return this.firewallPolicyChangeProtection;
+    public Output<Optional<Boolean>> firewallPolicyChangeProtection() {
+        return Codegen.optional(this.firewallPolicyChangeProtection);
     }
     @Export(name="subnetChangeProtection", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> subnetChangeProtection;
 
-    public Output</* @Nullable */ Boolean> subnetChangeProtection() {
-        return this.subnetChangeProtection;
+    public Output<Optional<Boolean>> subnetChangeProtection() {
+        return Codegen.optional(this.subnetChangeProtection);
     }
     @Export(name="subnetMappings", type=List.class, parameters={FirewallSubnetMapping.class})
     private Output<List<FirewallSubnetMapping>> subnetMappings;
@@ -85,8 +86,8 @@ public class Firewall extends com.pulumi.resources.CustomResource {
     @Export(name="tags", type=List.class, parameters={FirewallTag.class})
     private Output</* @Nullable */ List<FirewallTag>> tags;
 
-    public Output</* @Nullable */ List<FirewallTag>> tags() {
-        return this.tags;
+    public Output<Optional<List<FirewallTag>>> tags() {
+        return Codegen.optional(this.tags);
     }
     @Export(name="vpcId", type=String.class, parameters={})
     private Output<String> vpcId;

@@ -18,6 +18,7 @@ import java.lang.Double;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -98,8 +99,8 @@ public class Bot extends com.pulumi.resources.CustomResource {
      * @return The message that Amazon Lex uses when it doesn&#39;t understand the user&#39;s request. Attributes are documented under prompt.
      * 
      */
-    public Output</* @Nullable */ BotClarificationPrompt> clarificationPrompt() {
-        return this.clarificationPrompt;
+    public Output<Optional<BotClarificationPrompt>> clarificationPrompt() {
+        return Codegen.optional(this.clarificationPrompt);
     }
     /**
      * Determines if a new bot version is created when the initial resource is created and on each update. Defaults to `false`.
@@ -112,8 +113,8 @@ public class Bot extends com.pulumi.resources.CustomResource {
      * @return Determines if a new bot version is created when the initial resource is created and on each update. Defaults to `false`.
      * 
      */
-    public Output</* @Nullable */ Boolean> createVersion() {
-        return this.createVersion;
+    public Output<Optional<Boolean>> createVersion() {
+        return Codegen.optional(this.createVersion);
     }
     /**
      * The date when the bot version was created.
@@ -140,8 +141,8 @@ public class Bot extends com.pulumi.resources.CustomResource {
      * @return A description of the bot. Must be less than or equal to 200 characters in length.
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * When set to true user utterances are sent to Amazon Comprehend for sentiment analysis. If you don&#39;t specify detectSentiment, the default is `false`.
@@ -154,8 +155,8 @@ public class Bot extends com.pulumi.resources.CustomResource {
      * @return When set to true user utterances are sent to Amazon Comprehend for sentiment analysis. If you don&#39;t specify detectSentiment, the default is `false`.
      * 
      */
-    public Output</* @Nullable */ Boolean> detectSentiment() {
-        return this.detectSentiment;
+    public Output<Optional<Boolean>> detectSentiment() {
+        return Codegen.optional(this.detectSentiment);
     }
     /**
      * Set to `true` to enable access to natural language understanding improvements. When you set the `enable_model_improvements` parameter to true you can use the `nlu_intent_confidence_threshold` parameter to configure confidence scores. For more information, see [Confidence Scores](https://docs.aws.amazon.com/lex/latest/dg/confidence-scores.html). You can only set the `enable_model_improvements` parameter in certain Regions. If you set the parameter to true, your bot has access to accuracy improvements. For more information see the [Amazon Lex Bot PutBot API Docs](https://docs.aws.amazon.com/lex/latest/dg/API_PutBot.html#lex-PutBot-request-enableModelImprovements).
@@ -168,8 +169,8 @@ public class Bot extends com.pulumi.resources.CustomResource {
      * @return Set to `true` to enable access to natural language understanding improvements. When you set the `enable_model_improvements` parameter to true you can use the `nlu_intent_confidence_threshold` parameter to configure confidence scores. For more information, see [Confidence Scores](https://docs.aws.amazon.com/lex/latest/dg/confidence-scores.html). You can only set the `enable_model_improvements` parameter in certain Regions. If you set the parameter to true, your bot has access to accuracy improvements. For more information see the [Amazon Lex Bot PutBot API Docs](https://docs.aws.amazon.com/lex/latest/dg/API_PutBot.html#lex-PutBot-request-enableModelImprovements).
      * 
      */
-    public Output</* @Nullable */ Boolean> enableModelImprovements() {
-        return this.enableModelImprovements;
+    public Output<Optional<Boolean>> enableModelImprovements() {
+        return Codegen.optional(this.enableModelImprovements);
     }
     /**
      * If status is FAILED, Amazon Lex provides the reason that it failed to build the bot.
@@ -196,8 +197,8 @@ public class Bot extends com.pulumi.resources.CustomResource {
      * @return The maximum time in seconds that Amazon Lex retains the data gathered in a conversation. Default is `300`. Must be a number between 60 and 86400 (inclusive).
      * 
      */
-    public Output</* @Nullable */ Integer> idleSessionTtlInSeconds() {
-        return this.idleSessionTtlInSeconds;
+    public Output<Optional<Integer>> idleSessionTtlInSeconds() {
+        return Codegen.optional(this.idleSessionTtlInSeconds);
     }
     /**
      * A set of Intent objects. Each intent represents a command that a user can express. Attributes are documented under intent. Can have up to 100 Intent objects.
@@ -238,8 +239,8 @@ public class Bot extends com.pulumi.resources.CustomResource {
      * @return Specifies the target locale for the bot. Any intent used in the bot must be compatible with the locale of the bot. For available locales, see [Amazon Lex Bot PutBot API Docs](https://docs.aws.amazon.com/lex/latest/dg/API_PutBot.html#lex-PutBot-request-locale). Default is `en-US`.
      * 
      */
-    public Output</* @Nullable */ String> locale() {
-        return this.locale;
+    public Output<Optional<String>> locale() {
+        return Codegen.optional(this.locale);
     }
     /**
      * The name of the bot that you want to create, case sensitive. Must be between 2 and 50 characters in length.
@@ -266,8 +267,8 @@ public class Bot extends com.pulumi.resources.CustomResource {
      * @return Determines the threshold where Amazon Lex will insert the AMAZON.FallbackIntent, AMAZON.KendraSearchIntent, or both when returning alternative intents in a PostContent or PostText response. AMAZON.FallbackIntent and AMAZON.KendraSearchIntent are only inserted if they are configured for the bot. For more information see [Amazon Lex Bot PutBot API Docs](https://docs.aws.amazon.com/lex/latest/dg/API_PutBot.html#lex-PutBot-request-nluIntentConfidenceThreshold) This value requires `enable_model_improvements` to be set to `true` and the default is `0`. Must be a float between 0 and 1.
      * 
      */
-    public Output</* @Nullable */ Double> nluIntentConfidenceThreshold() {
-        return this.nluIntentConfidenceThreshold;
+    public Output<Optional<Double>> nluIntentConfidenceThreshold() {
+        return Codegen.optional(this.nluIntentConfidenceThreshold);
     }
     /**
      * If you set the `process_behavior` element to `BUILD`, Amazon Lex builds the bot so that it can be run. If you set the element to `SAVE` Amazon Lex saves the bot, but doesn&#39;t build it. Default is `SAVE`.
@@ -280,8 +281,8 @@ public class Bot extends com.pulumi.resources.CustomResource {
      * @return If you set the `process_behavior` element to `BUILD`, Amazon Lex builds the bot so that it can be run. If you set the element to `SAVE` Amazon Lex saves the bot, but doesn&#39;t build it. Default is `SAVE`.
      * 
      */
-    public Output</* @Nullable */ String> processBehavior() {
-        return this.processBehavior;
+    public Output<Optional<String>> processBehavior() {
+        return Codegen.optional(this.processBehavior);
     }
     /**
      * When you send a request to create or update a bot, Amazon Lex sets the status response

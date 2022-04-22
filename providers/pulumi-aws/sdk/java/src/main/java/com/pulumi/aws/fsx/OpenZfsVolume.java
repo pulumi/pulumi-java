@@ -18,6 +18,7 @@ import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -62,8 +63,8 @@ public class OpenZfsVolume extends com.pulumi.resources.CustomResource {
      * @return A boolean flag indicating whether tags for the file system should be copied to snapshots. The default value is false.
      * 
      */
-    public Output</* @Nullable */ Boolean> copyTagsToSnapshots() {
-        return this.copyTagsToSnapshots;
+    public Output<Optional<Boolean>> copyTagsToSnapshots() {
+        return Codegen.optional(this.copyTagsToSnapshots);
     }
     /**
      * Method used to compress the data on the volume. Valid values are `NONE` or `ZSTD`. Child volumes that don&#39;t specify compression option will inherit from parent volume. This option on file system applies to the root volume.
@@ -76,8 +77,8 @@ public class OpenZfsVolume extends com.pulumi.resources.CustomResource {
      * @return Method used to compress the data on the volume. Valid values are `NONE` or `ZSTD`. Child volumes that don&#39;t specify compression option will inherit from parent volume. This option on file system applies to the root volume.
      * 
      */
-    public Output</* @Nullable */ String> dataCompressionType() {
-        return this.dataCompressionType;
+    public Output<Optional<String>> dataCompressionType() {
+        return Codegen.optional(this.dataCompressionType);
     }
     /**
      * The name of the Volume. You can use a maximum of 203 alphanumeric characters, plus the underscore (_) special character.
@@ -104,8 +105,8 @@ public class OpenZfsVolume extends com.pulumi.resources.CustomResource {
      * @return NFS export configuration for the root volume. Exactly 1 item. See NFS Exports Below.
      * 
      */
-    public Output</* @Nullable */ OpenZfsVolumeNfsExports> nfsExports() {
-        return this.nfsExports;
+    public Output<Optional<OpenZfsVolumeNfsExports>> nfsExports() {
+        return Codegen.optional(this.nfsExports);
     }
     /**
      * The ARN of the source snapshot to create the volume from.
@@ -118,8 +119,8 @@ public class OpenZfsVolume extends com.pulumi.resources.CustomResource {
      * @return The ARN of the source snapshot to create the volume from.
      * 
      */
-    public Output</* @Nullable */ OpenZfsVolumeOriginSnapshot> originSnapshot() {
-        return this.originSnapshot;
+    public Output<Optional<OpenZfsVolumeOriginSnapshot>> originSnapshot() {
+        return Codegen.optional(this.originSnapshot);
     }
     /**
      * The volume id of volume that will be the parent volume for the volume being created, this could be the root volume created from the `aws.fsx.OpenZfsFileSystem` resource with the `root_volume_id` or the `id` property of another `aws.fsx.OpenZfsVolume`.
@@ -188,8 +189,8 @@ public class OpenZfsVolume extends com.pulumi.resources.CustomResource {
      * @return A map of tags to assign to the file system. If configured with a provider [`default_tags` configuration block](https://www.terraform.io/docs/providers/aws/index.html#default_tags-configuration-block) present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * A map of tags assigned to the resource, including those inherited from the provider [`default_tags` configuration block](https://www.terraform.io/docs/providers/aws/index.html#default_tags-configuration-block).
@@ -222,8 +223,8 @@ public class OpenZfsVolume extends com.pulumi.resources.CustomResource {
     @Export(name="volumeType", type=String.class, parameters={})
     private Output</* @Nullable */ String> volumeType;
 
-    public Output</* @Nullable */ String> volumeType() {
-        return this.volumeType;
+    public Output<Optional<String>> volumeType() {
+        return Codegen.optional(this.volumeType);
     }
 
     /**

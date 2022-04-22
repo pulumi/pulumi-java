@@ -14,6 +14,7 @@ import com.pulumi.gcp.networkservices.outputs.EdgeCacheKeysetPublicKey;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -54,8 +55,8 @@ public class EdgeCacheKeyset extends com.pulumi.resources.CustomResource {
      * @return A human-readable description of the resource.
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * Set of label tags associated with the EdgeCache resource.
@@ -68,8 +69,8 @@ public class EdgeCacheKeyset extends com.pulumi.resources.CustomResource {
      * @return Set of label tags associated with the EdgeCache resource.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> labels() {
-        return this.labels;
+    public Output<Optional<Map<String,String>>> labels() {
+        return Codegen.optional(this.labels);
     }
     /**
      * Name of the resource; provided by the client when the resource is created.

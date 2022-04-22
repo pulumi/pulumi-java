@@ -15,6 +15,7 @@ import java.lang.Integer;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -64,8 +65,8 @@ public class Role extends com.pulumi.resources.CustomResource {
      * @return A description of the role that you provide.
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * A list of Amazon Resource Names (ARNs) of the IAM managed policies that you want to attach to the role.
@@ -78,8 +79,8 @@ public class Role extends com.pulumi.resources.CustomResource {
      * @return A list of Amazon Resource Names (ARNs) of the IAM managed policies that you want to attach to the role.
      * 
      */
-    public Output</* @Nullable */ List<String>> managedPolicyArns() {
-        return this.managedPolicyArns;
+    public Output<Optional<List<String>>> managedPolicyArns() {
+        return Codegen.optional(this.managedPolicyArns);
     }
     /**
      * The maximum session duration (in seconds) that you want to set for the specified role. If you do not specify a value for this setting, the default maximum of one hour is applied. This setting can have a value from 1 hour to 12 hours.
@@ -92,8 +93,8 @@ public class Role extends com.pulumi.resources.CustomResource {
      * @return The maximum session duration (in seconds) that you want to set for the specified role. If you do not specify a value for this setting, the default maximum of one hour is applied. This setting can have a value from 1 hour to 12 hours.
      * 
      */
-    public Output</* @Nullable */ Integer> maxSessionDuration() {
-        return this.maxSessionDuration;
+    public Output<Optional<Integer>> maxSessionDuration() {
+        return Codegen.optional(this.maxSessionDuration);
     }
     /**
      * The path to the role.
@@ -106,8 +107,8 @@ public class Role extends com.pulumi.resources.CustomResource {
      * @return The path to the role.
      * 
      */
-    public Output</* @Nullable */ String> path() {
-        return this.path;
+    public Output<Optional<String>> path() {
+        return Codegen.optional(this.path);
     }
     /**
      * The ARN of the policy used to set the permissions boundary for the role.
@@ -120,8 +121,8 @@ public class Role extends com.pulumi.resources.CustomResource {
      * @return The ARN of the policy used to set the permissions boundary for the role.
      * 
      */
-    public Output</* @Nullable */ String> permissionsBoundary() {
-        return this.permissionsBoundary;
+    public Output<Optional<String>> permissionsBoundary() {
+        return Codegen.optional(this.permissionsBoundary);
     }
     /**
      * Adds or updates an inline policy document that is embedded in the specified IAM role.
@@ -134,8 +135,8 @@ public class Role extends com.pulumi.resources.CustomResource {
      * @return Adds or updates an inline policy document that is embedded in the specified IAM role.
      * 
      */
-    public Output</* @Nullable */ List<RolePolicy>> policies() {
-        return this.policies;
+    public Output<Optional<List<RolePolicy>>> policies() {
+        return Codegen.optional(this.policies);
     }
     /**
      * The stable and unique string identifying the role.
@@ -162,8 +163,8 @@ public class Role extends com.pulumi.resources.CustomResource {
      * @return A name for the IAM role, up to 64 characters in length.
      * 
      */
-    public Output</* @Nullable */ String> roleName() {
-        return this.roleName;
+    public Output<Optional<String>> roleName() {
+        return Codegen.optional(this.roleName);
     }
     /**
      * A list of tags that are attached to the role.
@@ -176,8 +177,8 @@ public class Role extends com.pulumi.resources.CustomResource {
      * @return A list of tags that are attached to the role.
      * 
      */
-    public Output</* @Nullable */ List<RoleTag>> tags() {
-        return this.tags;
+    public Output<Optional<List<RoleTag>>> tags() {
+        return Codegen.optional(this.tags);
     }
 
     /**

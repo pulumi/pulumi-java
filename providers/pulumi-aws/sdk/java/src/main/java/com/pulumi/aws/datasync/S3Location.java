@@ -14,6 +14,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -43,8 +44,8 @@ public class S3Location extends com.pulumi.resources.CustomResource {
      * @return A list of DataSync Agent ARNs with which this location will be associated.
      * 
      */
-    public Output</* @Nullable */ List<String>> agentArns() {
-        return this.agentArns;
+    public Output<Optional<List<String>>> agentArns() {
+        return Codegen.optional(this.agentArns);
     }
     /**
      * Amazon Resource Name (ARN) of the DataSync Location.
@@ -127,8 +128,8 @@ public class S3Location extends com.pulumi.resources.CustomResource {
      * @return Key-value pairs of resource tags to assign to the DataSync Location. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * A map of tags assigned to the resource, including those inherited from the provider .

@@ -17,6 +17,7 @@ import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -75,8 +76,8 @@ public class AvailabilitySet extends com.pulumi.resources.CustomResource {
      * @return Fault Domain count.
      * 
      */
-    public Output</* @Nullable */ Integer> platformFaultDomainCount() {
-        return this.platformFaultDomainCount;
+    public Output<Optional<Integer>> platformFaultDomainCount() {
+        return Codegen.optional(this.platformFaultDomainCount);
     }
     /**
      * Update Domain count.
@@ -89,8 +90,8 @@ public class AvailabilitySet extends com.pulumi.resources.CustomResource {
      * @return Update Domain count.
      * 
      */
-    public Output</* @Nullable */ Integer> platformUpdateDomainCount() {
-        return this.platformUpdateDomainCount;
+    public Output<Optional<Integer>> platformUpdateDomainCount() {
+        return Codegen.optional(this.platformUpdateDomainCount);
     }
     /**
      * Specifies information about the proximity placement group that the availability set should be assigned to. &lt;br&gt;&lt;br&gt;Minimum api-version: 2018-04-01.
@@ -103,8 +104,8 @@ public class AvailabilitySet extends com.pulumi.resources.CustomResource {
      * @return Specifies information about the proximity placement group that the availability set should be assigned to. &lt;br&gt;&lt;br&gt;Minimum api-version: 2018-04-01.
      * 
      */
-    public Output</* @Nullable */ SubResourceResponse> proximityPlacementGroup() {
-        return this.proximityPlacementGroup;
+    public Output<Optional<SubResourceResponse>> proximityPlacementGroup() {
+        return Codegen.optional(this.proximityPlacementGroup);
     }
     /**
      * Sku of the availability set, only name is required to be set. See AvailabilitySetSkuTypes for possible set of values. Use &#39;Aligned&#39; for virtual machines with managed disks and &#39;Classic&#39; for virtual machines with unmanaged disks. Default value is &#39;Classic&#39;.
@@ -117,8 +118,8 @@ public class AvailabilitySet extends com.pulumi.resources.CustomResource {
      * @return Sku of the availability set, only name is required to be set. See AvailabilitySetSkuTypes for possible set of values. Use &#39;Aligned&#39; for virtual machines with managed disks and &#39;Classic&#39; for virtual machines with unmanaged disks. Default value is &#39;Classic&#39;.
      * 
      */
-    public Output</* @Nullable */ SkuResponse> sku() {
-        return this.sku;
+    public Output<Optional<SkuResponse>> sku() {
+        return Codegen.optional(this.sku);
     }
     /**
      * The resource status information.
@@ -145,8 +146,8 @@ public class AvailabilitySet extends com.pulumi.resources.CustomResource {
      * @return Resource tags
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * Resource type
@@ -173,8 +174,8 @@ public class AvailabilitySet extends com.pulumi.resources.CustomResource {
      * @return A list of references to all virtual machines in the availability set.
      * 
      */
-    public Output</* @Nullable */ List<SubResourceResponse>> virtualMachines() {
-        return this.virtualMachines;
+    public Output<Optional<List<SubResourceResponse>>> virtualMachines() {
+        return Codegen.optional(this.virtualMachines);
     }
 
     /**

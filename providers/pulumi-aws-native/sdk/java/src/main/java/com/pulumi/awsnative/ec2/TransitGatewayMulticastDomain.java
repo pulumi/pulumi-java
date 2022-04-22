@@ -13,6 +13,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -46,8 +47,8 @@ public class TransitGatewayMulticastDomain extends com.pulumi.resources.CustomRe
      * @return The options for the transit gateway multicast domain.
      * 
      */
-    public Output</* @Nullable */ OptionsProperties> options() {
-        return this.options;
+    public Output<Optional<OptionsProperties>> options() {
+        return Codegen.optional(this.options);
     }
     /**
      * The state of the transit gateway multicast domain.
@@ -74,8 +75,8 @@ public class TransitGatewayMulticastDomain extends com.pulumi.resources.CustomRe
      * @return The tags for the transit gateway multicast domain.
      * 
      */
-    public Output</* @Nullable */ List<TransitGatewayMulticastDomainTag>> tags() {
-        return this.tags;
+    public Output<Optional<List<TransitGatewayMulticastDomainTag>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * The ID of the transit gateway.

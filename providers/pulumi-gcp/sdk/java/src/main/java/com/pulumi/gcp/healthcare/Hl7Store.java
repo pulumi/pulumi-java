@@ -16,6 +16,7 @@ import com.pulumi.gcp.healthcare.outputs.Hl7StoreParserConfig;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -86,8 +87,8 @@ public class Hl7Store extends com.pulumi.resources.CustomResource {
      * Example: { &#34;name&#34;: &#34;wrench&#34;, &#34;mass&#34;: &#34;1.3kg&#34;, &#34;count&#34;: &#34;3&#34; }.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> labels() {
-        return this.labels;
+    public Output<Optional<Map<String,String>>> labels() {
+        return Codegen.optional(this.labels);
     }
     /**
      * The resource name for the Hl7V2Store.
@@ -126,8 +127,8 @@ public class Hl7Store extends com.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ Hl7StoreNotificationConfig> notificationConfig() {
-        return this.notificationConfig;
+    public Output<Optional<Hl7StoreNotificationConfig>> notificationConfig() {
+        return Codegen.optional(this.notificationConfig);
     }
     /**
      * A list of notification configs. Each configuration uses a filter to determine whether to publish a
@@ -146,8 +147,8 @@ public class Hl7Store extends com.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ List<Hl7StoreNotificationConfigs>> notificationConfigs() {
-        return this.notificationConfigs;
+    public Output<Optional<List<Hl7StoreNotificationConfigs>>> notificationConfigs() {
+        return Codegen.optional(this.notificationConfigs);
     }
     /**
      * A nested object resource

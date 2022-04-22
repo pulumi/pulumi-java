@@ -13,6 +13,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -48,8 +49,8 @@ public class Domain extends com.pulumi.resources.CustomResource {
      * @return The URL of the SQS dead letter queue
      * 
      */
-    public Output</* @Nullable */ String> deadLetterQueueUrl() {
-        return this.deadLetterQueueUrl;
+    public Output<Optional<String>> deadLetterQueueUrl() {
+        return Codegen.optional(this.deadLetterQueueUrl);
     }
     /**
      * The default encryption key
@@ -62,8 +63,8 @@ public class Domain extends com.pulumi.resources.CustomResource {
      * @return The default encryption key
      * 
      */
-    public Output</* @Nullable */ String> defaultEncryptionKey() {
-        return this.defaultEncryptionKey;
+    public Output<Optional<String>> defaultEncryptionKey() {
+        return Codegen.optional(this.defaultEncryptionKey);
     }
     /**
      * The default number of days until the data within the domain expires.
@@ -76,8 +77,8 @@ public class Domain extends com.pulumi.resources.CustomResource {
      * @return The default number of days until the data within the domain expires.
      * 
      */
-    public Output</* @Nullable */ Integer> defaultExpirationDays() {
-        return this.defaultExpirationDays;
+    public Output<Optional<Integer>> defaultExpirationDays() {
+        return Codegen.optional(this.defaultExpirationDays);
     }
     /**
      * The unique name of the domain.
@@ -118,8 +119,8 @@ public class Domain extends com.pulumi.resources.CustomResource {
      * @return The tags (keys and values) associated with the domain
      * 
      */
-    public Output</* @Nullable */ List<DomainTag>> tags() {
-        return this.tags;
+    public Output<Optional<List<DomainTag>>> tags() {
+        return Codegen.optional(this.tags);
     }
 
     /**

@@ -16,6 +16,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -46,8 +47,8 @@ public class AFDOrigin extends com.pulumi.resources.CustomResource {
      * @return Resource reference to the Azure origin resource.
      * 
      */
-    public Output</* @Nullable */ ResourceReferenceResponse> azureOrigin() {
-        return this.azureOrigin;
+    public Output<Optional<ResourceReferenceResponse>> azureOrigin() {
+        return Codegen.optional(this.azureOrigin);
     }
     @Export(name="deploymentStatus", type=String.class, parameters={})
     private Output<String> deploymentStatus;
@@ -66,8 +67,8 @@ public class AFDOrigin extends com.pulumi.resources.CustomResource {
      * @return Whether to enable health probes to be made against backends defined under backendPools. Health probes can only be disabled if there is a single enabled backend in single enabled backend pool.
      * 
      */
-    public Output</* @Nullable */ String> enabledState() {
-        return this.enabledState;
+    public Output<Optional<String>> enabledState() {
+        return Codegen.optional(this.enabledState);
     }
     /**
      * The address of the origin. Domain names, IPv4 addresses, and IPv6 addresses are supported.This should be unique across all origins in an endpoint.
@@ -94,8 +95,8 @@ public class AFDOrigin extends com.pulumi.resources.CustomResource {
      * @return The value of the HTTP port. Must be between 1 and 65535.
      * 
      */
-    public Output</* @Nullable */ Integer> httpPort() {
-        return this.httpPort;
+    public Output<Optional<Integer>> httpPort() {
+        return Codegen.optional(this.httpPort);
     }
     /**
      * The value of the HTTPS port. Must be between 1 and 65535.
@@ -108,8 +109,8 @@ public class AFDOrigin extends com.pulumi.resources.CustomResource {
      * @return The value of the HTTPS port. Must be between 1 and 65535.
      * 
      */
-    public Output</* @Nullable */ Integer> httpsPort() {
-        return this.httpsPort;
+    public Output<Optional<Integer>> httpsPort() {
+        return Codegen.optional(this.httpsPort);
     }
     /**
      * Resource name.
@@ -136,8 +137,8 @@ public class AFDOrigin extends com.pulumi.resources.CustomResource {
      * @return The host header value sent to the origin with each request. If you leave this blank, the request hostname determines this value. Azure CDN origins, such as Web Apps, Blob Storage, and Cloud Services require this host header value to match the origin hostname by default. This overrides the host header defined at Endpoint
      * 
      */
-    public Output</* @Nullable */ String> originHostHeader() {
-        return this.originHostHeader;
+    public Output<Optional<String>> originHostHeader() {
+        return Codegen.optional(this.originHostHeader);
     }
     /**
      * Priority of origin in given origin group for load balancing. Higher priorities will not be used for load balancing if any lower priority origin is healthy.Must be between 1 and 5
@@ -150,8 +151,8 @@ public class AFDOrigin extends com.pulumi.resources.CustomResource {
      * @return Priority of origin in given origin group for load balancing. Higher priorities will not be used for load balancing if any lower priority origin is healthy.Must be between 1 and 5
      * 
      */
-    public Output</* @Nullable */ Integer> priority() {
-        return this.priority;
+    public Output<Optional<Integer>> priority() {
+        return Codegen.optional(this.priority);
     }
     /**
      * Provisioning status
@@ -178,8 +179,8 @@ public class AFDOrigin extends com.pulumi.resources.CustomResource {
      * @return The properties of the private link resource for private origin.
      * 
      */
-    public Output</* @Nullable */ SharedPrivateLinkResourcePropertiesResponse> sharedPrivateLinkResource() {
-        return this.sharedPrivateLinkResource;
+    public Output<Optional<SharedPrivateLinkResourcePropertiesResponse>> sharedPrivateLinkResource() {
+        return Codegen.optional(this.sharedPrivateLinkResource);
     }
     /**
      * Read only system data
@@ -220,8 +221,8 @@ public class AFDOrigin extends com.pulumi.resources.CustomResource {
      * @return Weight of the origin in given origin group for load balancing. Must be between 1 and 1000
      * 
      */
-    public Output</* @Nullable */ Integer> weight() {
-        return this.weight;
+    public Output<Optional<Integer>> weight() {
+        return Codegen.optional(this.weight);
     }
 
     /**

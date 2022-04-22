@@ -17,6 +17,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -28,8 +29,8 @@ public class App extends com.pulumi.resources.CustomResource {
     @Export(name="accessToken", type=String.class, parameters={})
     private Output</* @Nullable */ String> accessToken;
 
-    public Output</* @Nullable */ String> accessToken() {
-        return this.accessToken;
+    public Output<Optional<String>> accessToken() {
+        return Codegen.optional(this.accessToken);
     }
     @Export(name="appId", type=String.class, parameters={})
     private Output<String> appId;
@@ -52,32 +53,32 @@ public class App extends com.pulumi.resources.CustomResource {
     @Export(name="autoBranchCreationConfig", type=AppAutoBranchCreationConfig.class, parameters={})
     private Output</* @Nullable */ AppAutoBranchCreationConfig> autoBranchCreationConfig;
 
-    public Output</* @Nullable */ AppAutoBranchCreationConfig> autoBranchCreationConfig() {
-        return this.autoBranchCreationConfig;
+    public Output<Optional<AppAutoBranchCreationConfig>> autoBranchCreationConfig() {
+        return Codegen.optional(this.autoBranchCreationConfig);
     }
     @Export(name="basicAuthConfig", type=AppBasicAuthConfig.class, parameters={})
     private Output</* @Nullable */ AppBasicAuthConfig> basicAuthConfig;
 
-    public Output</* @Nullable */ AppBasicAuthConfig> basicAuthConfig() {
-        return this.basicAuthConfig;
+    public Output<Optional<AppBasicAuthConfig>> basicAuthConfig() {
+        return Codegen.optional(this.basicAuthConfig);
     }
     @Export(name="buildSpec", type=String.class, parameters={})
     private Output</* @Nullable */ String> buildSpec;
 
-    public Output</* @Nullable */ String> buildSpec() {
-        return this.buildSpec;
+    public Output<Optional<String>> buildSpec() {
+        return Codegen.optional(this.buildSpec);
     }
     @Export(name="customHeaders", type=String.class, parameters={})
     private Output</* @Nullable */ String> customHeaders;
 
-    public Output</* @Nullable */ String> customHeaders() {
-        return this.customHeaders;
+    public Output<Optional<String>> customHeaders() {
+        return Codegen.optional(this.customHeaders);
     }
     @Export(name="customRules", type=List.class, parameters={AppCustomRule.class})
     private Output</* @Nullable */ List<AppCustomRule>> customRules;
 
-    public Output</* @Nullable */ List<AppCustomRule>> customRules() {
-        return this.customRules;
+    public Output<Optional<List<AppCustomRule>>> customRules() {
+        return Codegen.optional(this.customRules);
     }
     @Export(name="defaultDomain", type=String.class, parameters={})
     private Output<String> defaultDomain;
@@ -88,26 +89,26 @@ public class App extends com.pulumi.resources.CustomResource {
     @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     @Export(name="enableBranchAutoDeletion", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> enableBranchAutoDeletion;
 
-    public Output</* @Nullable */ Boolean> enableBranchAutoDeletion() {
-        return this.enableBranchAutoDeletion;
+    public Output<Optional<Boolean>> enableBranchAutoDeletion() {
+        return Codegen.optional(this.enableBranchAutoDeletion);
     }
     @Export(name="environmentVariables", type=List.class, parameters={AppEnvironmentVariable.class})
     private Output</* @Nullable */ List<AppEnvironmentVariable>> environmentVariables;
 
-    public Output</* @Nullable */ List<AppEnvironmentVariable>> environmentVariables() {
-        return this.environmentVariables;
+    public Output<Optional<List<AppEnvironmentVariable>>> environmentVariables() {
+        return Codegen.optional(this.environmentVariables);
     }
     @Export(name="iAMServiceRole", type=String.class, parameters={})
     private Output</* @Nullable */ String> iAMServiceRole;
 
-    public Output</* @Nullable */ String> iAMServiceRole() {
-        return this.iAMServiceRole;
+    public Output<Optional<String>> iAMServiceRole() {
+        return Codegen.optional(this.iAMServiceRole);
     }
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
@@ -118,20 +119,20 @@ public class App extends com.pulumi.resources.CustomResource {
     @Export(name="oauthToken", type=String.class, parameters={})
     private Output</* @Nullable */ String> oauthToken;
 
-    public Output</* @Nullable */ String> oauthToken() {
-        return this.oauthToken;
+    public Output<Optional<String>> oauthToken() {
+        return Codegen.optional(this.oauthToken);
     }
     @Export(name="repository", type=String.class, parameters={})
     private Output</* @Nullable */ String> repository;
 
-    public Output</* @Nullable */ String> repository() {
-        return this.repository;
+    public Output<Optional<String>> repository() {
+        return Codegen.optional(this.repository);
     }
     @Export(name="tags", type=List.class, parameters={AppTag.class})
     private Output</* @Nullable */ List<AppTag>> tags;
 
-    public Output</* @Nullable */ List<AppTag>> tags() {
-        return this.tags;
+    public Output<Optional<List<AppTag>>> tags() {
+        return Codegen.optional(this.tags);
     }
 
     /**

@@ -13,6 +13,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -32,8 +33,8 @@ public class DeviceFleet extends com.pulumi.resources.CustomResource {
      * @return Description for the edge device fleet
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * The name of the edge device fleet
@@ -88,8 +89,8 @@ public class DeviceFleet extends com.pulumi.resources.CustomResource {
      * @return Associate tags with the resource
      * 
      */
-    public Output</* @Nullable */ List<DeviceFleetTag>> tags() {
-        return this.tags;
+    public Output<Optional<List<DeviceFleetTag>>> tags() {
+        return Codegen.optional(this.tags);
     }
 
     /**

@@ -13,6 +13,7 @@ import com.pulumi.gcp.iap.inputs.WebTypeComputeIamBindingState;
 import com.pulumi.gcp.iap.outputs.WebTypeComputeIamBindingCondition;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -76,8 +77,8 @@ public class WebTypeComputeIamBinding extends com.pulumi.resources.CustomResourc
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ WebTypeComputeIamBindingCondition> condition() {
-        return this.condition;
+    public Output<Optional<WebTypeComputeIamBindingCondition>> condition() {
+        return Codegen.optional(this.condition);
     }
     /**
      * (Computed) The etag of the IAM policy.

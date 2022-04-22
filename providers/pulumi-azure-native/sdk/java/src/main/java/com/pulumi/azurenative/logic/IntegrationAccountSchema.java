@@ -15,6 +15,7 @@ import java.lang.Object;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -59,8 +60,8 @@ public class IntegrationAccountSchema extends com.pulumi.resources.CustomResourc
      * @return The content.
      * 
      */
-    public Output</* @Nullable */ String> content() {
-        return this.content;
+    public Output<Optional<String>> content() {
+        return Codegen.optional(this.content);
     }
     /**
      * The content link.
@@ -87,8 +88,8 @@ public class IntegrationAccountSchema extends com.pulumi.resources.CustomResourc
      * @return The content type.
      * 
      */
-    public Output</* @Nullable */ String> contentType() {
-        return this.contentType;
+    public Output<Optional<String>> contentType() {
+        return Codegen.optional(this.contentType);
     }
     /**
      * The created time.
@@ -115,8 +116,8 @@ public class IntegrationAccountSchema extends com.pulumi.resources.CustomResourc
      * @return The document name.
      * 
      */
-    public Output</* @Nullable */ String> documentName() {
-        return this.documentName;
+    public Output<Optional<String>> documentName() {
+        return Codegen.optional(this.documentName);
     }
     /**
      * The file name.
@@ -129,8 +130,8 @@ public class IntegrationAccountSchema extends com.pulumi.resources.CustomResourc
      * @return The file name.
      * 
      */
-    public Output</* @Nullable */ String> fileName() {
-        return this.fileName;
+    public Output<Optional<String>> fileName() {
+        return Codegen.optional(this.fileName);
     }
     /**
      * The resource location.
@@ -143,8 +144,8 @@ public class IntegrationAccountSchema extends com.pulumi.resources.CustomResourc
      * @return The resource location.
      * 
      */
-    public Output</* @Nullable */ String> location() {
-        return this.location;
+    public Output<Optional<String>> location() {
+        return Codegen.optional(this.location);
     }
     /**
      * The metadata.
@@ -157,8 +158,8 @@ public class IntegrationAccountSchema extends com.pulumi.resources.CustomResourc
      * @return The metadata.
      * 
      */
-    public Output</* @Nullable */ Object> metadata() {
-        return this.metadata;
+    public Output<Optional<Object>> metadata() {
+        return Codegen.optional(this.metadata);
     }
     /**
      * Gets the resource name.
@@ -199,8 +200,8 @@ public class IntegrationAccountSchema extends com.pulumi.resources.CustomResourc
      * @return The resource tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * The target namespace of the schema.
@@ -213,8 +214,8 @@ public class IntegrationAccountSchema extends com.pulumi.resources.CustomResourc
      * @return The target namespace of the schema.
      * 
      */
-    public Output</* @Nullable */ String> targetNamespace() {
-        return this.targetNamespace;
+    public Output<Optional<String>> targetNamespace() {
+        return Codegen.optional(this.targetNamespace);
     }
     /**
      * Gets the resource type.

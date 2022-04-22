@@ -13,6 +13,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -32,8 +33,8 @@ public class User extends com.pulumi.resources.CustomResource {
      * @return Access permissions string used for this user account.
      * 
      */
-    public Output</* @Nullable */ String> accessString() {
-        return this.accessString;
+    public Output<Optional<String>> accessString() {
+        return Codegen.optional(this.accessString);
     }
     /**
      * The Amazon Resource Name (ARN) of the user account.
@@ -74,8 +75,8 @@ public class User extends com.pulumi.resources.CustomResource {
      * @return Indicates a password is not required for this user account.
      * 
      */
-    public Output</* @Nullable */ Boolean> noPasswordRequired() {
-        return this.noPasswordRequired;
+    public Output<Optional<Boolean>> noPasswordRequired() {
+        return Codegen.optional(this.noPasswordRequired);
     }
     /**
      * Passwords used for this user account. You can create up to two passwords for each user.
@@ -88,8 +89,8 @@ public class User extends com.pulumi.resources.CustomResource {
      * @return Passwords used for this user account. You can create up to two passwords for each user.
      * 
      */
-    public Output</* @Nullable */ List<String>> passwords() {
-        return this.passwords;
+    public Output<Optional<List<String>>> passwords() {
+        return Codegen.optional(this.passwords);
     }
     /**
      * Indicates the user status. Can be &#34;active&#34;, &#34;modifying&#34; or &#34;deleting&#34;.

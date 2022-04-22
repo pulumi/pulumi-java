@@ -15,6 +15,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -143,8 +144,8 @@ public class DefaultAdminRule extends com.pulumi.resources.CustomResource {
      * @return Default rule flag.
      * 
      */
-    public Output</* @Nullable */ String> flag() {
-        return this.flag;
+    public Output<Optional<String>> flag() {
+        return Codegen.optional(this.flag);
     }
     /**
      * Whether the rule is custom or default.

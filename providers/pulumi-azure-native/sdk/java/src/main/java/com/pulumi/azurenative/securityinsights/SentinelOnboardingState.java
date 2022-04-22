@@ -14,6 +14,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -44,8 +45,8 @@ public class SentinelOnboardingState extends com.pulumi.resources.CustomResource
      * @return Flag that indicates the status of the CMK setting
      * 
      */
-    public Output</* @Nullable */ Boolean> customerManagedKey() {
-        return this.customerManagedKey;
+    public Output<Optional<Boolean>> customerManagedKey() {
+        return Codegen.optional(this.customerManagedKey);
     }
     /**
      * Etag of the azure resource
@@ -58,8 +59,8 @@ public class SentinelOnboardingState extends com.pulumi.resources.CustomResource
      * @return Etag of the azure resource
      * 
      */
-    public Output</* @Nullable */ String> etag() {
-        return this.etag;
+    public Output<Optional<String>> etag() {
+        return Codegen.optional(this.etag);
     }
     /**
      * Azure resource name

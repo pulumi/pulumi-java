@@ -13,6 +13,7 @@ import com.pulumi.gcp.compute.inputs.SubnetworkIAMBindingState;
 import com.pulumi.gcp.compute.outputs.SubnetworkIAMBindingCondition;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -76,8 +77,8 @@ public class SubnetworkIAMBinding extends com.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ SubnetworkIAMBindingCondition> condition() {
-        return this.condition;
+    public Output<Optional<SubnetworkIAMBindingCondition>> condition() {
+        return Codegen.optional(this.condition);
     }
     /**
      * (Computed) The etag of the IAM policy.

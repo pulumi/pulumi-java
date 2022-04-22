@@ -16,6 +16,7 @@ import com.pulumi.gcp.recaptcha.outputs.EnterpriseKeyTestingOptions;
 import com.pulumi.gcp.recaptcha.outputs.EnterpriseKeyWebSettings;
 import java.lang.String;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -53,8 +54,8 @@ public class EnterpriseKey extends com.pulumi.resources.CustomResource {
      * @return Settings for keys that can be used by Android apps.
      * 
      */
-    public Output</* @Nullable */ EnterpriseKeyAndroidSettings> androidSettings() {
-        return this.androidSettings;
+    public Output<Optional<EnterpriseKeyAndroidSettings>> androidSettings() {
+        return Codegen.optional(this.androidSettings);
     }
     /**
      * The timestamp corresponding to the creation of this Key.
@@ -95,8 +96,8 @@ public class EnterpriseKey extends com.pulumi.resources.CustomResource {
      * @return Settings for keys that can be used by iOS apps.
      * 
      */
-    public Output</* @Nullable */ EnterpriseKeyIosSettings> iosSettings() {
-        return this.iosSettings;
+    public Output<Optional<EnterpriseKeyIosSettings>> iosSettings() {
+        return Codegen.optional(this.iosSettings);
     }
     /**
      * See [Creating and managing labels](https://cloud.google.com/recaptcha-enterprise/docs/labels).
@@ -109,8 +110,8 @@ public class EnterpriseKey extends com.pulumi.resources.CustomResource {
      * @return See [Creating and managing labels](https://cloud.google.com/recaptcha-enterprise/docs/labels).
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> labels() {
-        return this.labels;
+    public Output<Optional<Map<String,String>>> labels() {
+        return Codegen.optional(this.labels);
     }
     /**
      * The resource name for the Key in the format &#34;projects/{project}/keys/{key}&#34;.
@@ -151,8 +152,8 @@ public class EnterpriseKey extends com.pulumi.resources.CustomResource {
      * @return Options for user acceptance testing.
      * 
      */
-    public Output</* @Nullable */ EnterpriseKeyTestingOptions> testingOptions() {
-        return this.testingOptions;
+    public Output<Optional<EnterpriseKeyTestingOptions>> testingOptions() {
+        return Codegen.optional(this.testingOptions);
     }
     /**
      * Settings for keys that can be used by websites.
@@ -165,8 +166,8 @@ public class EnterpriseKey extends com.pulumi.resources.CustomResource {
      * @return Settings for keys that can be used by websites.
      * 
      */
-    public Output</* @Nullable */ EnterpriseKeyWebSettings> webSettings() {
-        return this.webSettings;
+    public Output<Optional<EnterpriseKeyWebSettings>> webSettings() {
+        return Codegen.optional(this.webSettings);
     }
 
     /**

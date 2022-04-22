@@ -19,6 +19,7 @@ import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -64,8 +65,8 @@ public class LoadBalancer extends com.pulumi.resources.CustomResource {
      * @return An Access Logs block. Access Logs documented below.
      * 
      */
-    public Output</* @Nullable */ LoadBalancerAccessLogs> accessLogs() {
-        return this.accessLogs;
+    public Output<Optional<LoadBalancerAccessLogs>> accessLogs() {
+        return Codegen.optional(this.accessLogs);
     }
     /**
      * The ARN of the ELB
@@ -106,8 +107,8 @@ public class LoadBalancer extends com.pulumi.resources.CustomResource {
      * @return Boolean to enable connection draining. Default: `false`
      * 
      */
-    public Output</* @Nullable */ Boolean> connectionDraining() {
-        return this.connectionDraining;
+    public Output<Optional<Boolean>> connectionDraining() {
+        return Codegen.optional(this.connectionDraining);
     }
     /**
      * The time in seconds to allow for connections to drain. Default: `300`
@@ -120,8 +121,8 @@ public class LoadBalancer extends com.pulumi.resources.CustomResource {
      * @return The time in seconds to allow for connections to drain. Default: `300`
      * 
      */
-    public Output</* @Nullable */ Integer> connectionDrainingTimeout() {
-        return this.connectionDrainingTimeout;
+    public Output<Optional<Integer>> connectionDrainingTimeout() {
+        return Codegen.optional(this.connectionDrainingTimeout);
     }
     /**
      * Enable cross-zone load balancing. Default: `true`
@@ -134,8 +135,8 @@ public class LoadBalancer extends com.pulumi.resources.CustomResource {
      * @return Enable cross-zone load balancing. Default: `true`
      * 
      */
-    public Output</* @Nullable */ Boolean> crossZoneLoadBalancing() {
-        return this.crossZoneLoadBalancing;
+    public Output<Optional<Boolean>> crossZoneLoadBalancing() {
+        return Codegen.optional(this.crossZoneLoadBalancing);
     }
     /**
      * Determines how the load balancer handles requests that might pose a security risk to an application due to HTTP desync. Valid values are `monitor`, `defensive` (default), `strictest`.
@@ -148,8 +149,8 @@ public class LoadBalancer extends com.pulumi.resources.CustomResource {
      * @return Determines how the load balancer handles requests that might pose a security risk to an application due to HTTP desync. Valid values are `monitor`, `defensive` (default), `strictest`.
      * 
      */
-    public Output</* @Nullable */ String> desyncMitigationMode() {
-        return this.desyncMitigationMode;
+    public Output<Optional<String>> desyncMitigationMode() {
+        return Codegen.optional(this.desyncMitigationMode);
     }
     /**
      * The DNS name of the ELB
@@ -190,8 +191,8 @@ public class LoadBalancer extends com.pulumi.resources.CustomResource {
      * @return The time in seconds that the connection is allowed to be idle. Default: `60`
      * 
      */
-    public Output</* @Nullable */ Integer> idleTimeout() {
-        return this.idleTimeout;
+    public Output<Optional<Integer>> idleTimeout() {
+        return Codegen.optional(this.idleTimeout);
     }
     /**
      * A list of instance ids to place in the ELB pool.
@@ -262,8 +263,8 @@ public class LoadBalancer extends com.pulumi.resources.CustomResource {
      * prefix. Conflicts with `name`.
      * 
      */
-    public Output</* @Nullable */ String> namePrefix() {
-        return this.namePrefix;
+    public Output<Optional<String>> namePrefix() {
+        return Codegen.optional(this.namePrefix);
     }
     /**
      * A list of security group IDs to assign to the ELB.
@@ -342,8 +343,8 @@ public class LoadBalancer extends com.pulumi.resources.CustomResource {
      * @return A map of tags to assign to the resource. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.

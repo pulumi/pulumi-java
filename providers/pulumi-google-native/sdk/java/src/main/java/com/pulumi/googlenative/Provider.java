@@ -10,6 +10,7 @@ import com.pulumi.core.internal.Codegen;
 import com.pulumi.googlenative.ProviderArgs;
 import com.pulumi.googlenative.Utilities;
 import java.lang.String;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -29,8 +30,8 @@ public class Provider extends com.pulumi.resources.ProviderResource {
      * @return The default project to manage resources in. If another project is specified on a resource, it will take precedence.
      * 
      */
-    public Output</* @Nullable */ String> project() {
-        return this.project;
+    public Output<Optional<String>> project() {
+        return Codegen.optional(this.project);
     }
     /**
      * The default region to manage resources in. If another region is specified on a regional resource, it will take precedence.
@@ -43,8 +44,8 @@ public class Provider extends com.pulumi.resources.ProviderResource {
      * @return The default region to manage resources in. If another region is specified on a regional resource, it will take precedence.
      * 
      */
-    public Output</* @Nullable */ String> region() {
-        return this.region;
+    public Output<Optional<String>> region() {
+        return Codegen.optional(this.region);
     }
     /**
      * The default zone to manage resources in. Generally, this zone should be within the default region you specified. If another zone is specified on a zonal resource, it will take precedence.
@@ -57,8 +58,8 @@ public class Provider extends com.pulumi.resources.ProviderResource {
      * @return The default zone to manage resources in. Generally, this zone should be within the default region you specified. If another zone is specified on a zonal resource, it will take precedence.
      * 
      */
-    public Output</* @Nullable */ String> zone() {
-        return this.zone;
+    public Output<Optional<String>> zone() {
+        return Codegen.optional(this.zone);
     }
 
     /**

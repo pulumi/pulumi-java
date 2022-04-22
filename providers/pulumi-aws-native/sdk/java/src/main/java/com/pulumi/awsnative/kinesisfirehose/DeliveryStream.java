@@ -22,6 +22,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -35,8 +36,8 @@ public class DeliveryStream extends com.pulumi.resources.CustomResource {
     @Export(name="amazonopensearchserviceDestinationConfiguration", type=DeliveryStreamAmazonopensearchserviceDestinationConfiguration.class, parameters={})
     private Output</* @Nullable */ DeliveryStreamAmazonopensearchserviceDestinationConfiguration> amazonopensearchserviceDestinationConfiguration;
 
-    public Output</* @Nullable */ DeliveryStreamAmazonopensearchserviceDestinationConfiguration> amazonopensearchserviceDestinationConfiguration() {
-        return this.amazonopensearchserviceDestinationConfiguration;
+    public Output<Optional<DeliveryStreamAmazonopensearchserviceDestinationConfiguration>> amazonopensearchserviceDestinationConfiguration() {
+        return Codegen.optional(this.amazonopensearchserviceDestinationConfiguration);
     }
     @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
@@ -47,68 +48,68 @@ public class DeliveryStream extends com.pulumi.resources.CustomResource {
     @Export(name="deliveryStreamEncryptionConfigurationInput", type=DeliveryStreamEncryptionConfigurationInput.class, parameters={})
     private Output</* @Nullable */ DeliveryStreamEncryptionConfigurationInput> deliveryStreamEncryptionConfigurationInput;
 
-    public Output</* @Nullable */ DeliveryStreamEncryptionConfigurationInput> deliveryStreamEncryptionConfigurationInput() {
-        return this.deliveryStreamEncryptionConfigurationInput;
+    public Output<Optional<DeliveryStreamEncryptionConfigurationInput>> deliveryStreamEncryptionConfigurationInput() {
+        return Codegen.optional(this.deliveryStreamEncryptionConfigurationInput);
     }
     @Export(name="deliveryStreamName", type=String.class, parameters={})
     private Output</* @Nullable */ String> deliveryStreamName;
 
-    public Output</* @Nullable */ String> deliveryStreamName() {
-        return this.deliveryStreamName;
+    public Output<Optional<String>> deliveryStreamName() {
+        return Codegen.optional(this.deliveryStreamName);
     }
     @Export(name="deliveryStreamType", type=DeliveryStreamType.class, parameters={})
     private Output</* @Nullable */ DeliveryStreamType> deliveryStreamType;
 
-    public Output</* @Nullable */ DeliveryStreamType> deliveryStreamType() {
-        return this.deliveryStreamType;
+    public Output<Optional<DeliveryStreamType>> deliveryStreamType() {
+        return Codegen.optional(this.deliveryStreamType);
     }
     @Export(name="elasticsearchDestinationConfiguration", type=DeliveryStreamElasticsearchDestinationConfiguration.class, parameters={})
     private Output</* @Nullable */ DeliveryStreamElasticsearchDestinationConfiguration> elasticsearchDestinationConfiguration;
 
-    public Output</* @Nullable */ DeliveryStreamElasticsearchDestinationConfiguration> elasticsearchDestinationConfiguration() {
-        return this.elasticsearchDestinationConfiguration;
+    public Output<Optional<DeliveryStreamElasticsearchDestinationConfiguration>> elasticsearchDestinationConfiguration() {
+        return Codegen.optional(this.elasticsearchDestinationConfiguration);
     }
     @Export(name="extendedS3DestinationConfiguration", type=DeliveryStreamExtendedS3DestinationConfiguration.class, parameters={})
     private Output</* @Nullable */ DeliveryStreamExtendedS3DestinationConfiguration> extendedS3DestinationConfiguration;
 
-    public Output</* @Nullable */ DeliveryStreamExtendedS3DestinationConfiguration> extendedS3DestinationConfiguration() {
-        return this.extendedS3DestinationConfiguration;
+    public Output<Optional<DeliveryStreamExtendedS3DestinationConfiguration>> extendedS3DestinationConfiguration() {
+        return Codegen.optional(this.extendedS3DestinationConfiguration);
     }
     @Export(name="httpEndpointDestinationConfiguration", type=DeliveryStreamHttpEndpointDestinationConfiguration.class, parameters={})
     private Output</* @Nullable */ DeliveryStreamHttpEndpointDestinationConfiguration> httpEndpointDestinationConfiguration;
 
-    public Output</* @Nullable */ DeliveryStreamHttpEndpointDestinationConfiguration> httpEndpointDestinationConfiguration() {
-        return this.httpEndpointDestinationConfiguration;
+    public Output<Optional<DeliveryStreamHttpEndpointDestinationConfiguration>> httpEndpointDestinationConfiguration() {
+        return Codegen.optional(this.httpEndpointDestinationConfiguration);
     }
     @Export(name="kinesisStreamSourceConfiguration", type=DeliveryStreamKinesisStreamSourceConfiguration.class, parameters={})
     private Output</* @Nullable */ DeliveryStreamKinesisStreamSourceConfiguration> kinesisStreamSourceConfiguration;
 
-    public Output</* @Nullable */ DeliveryStreamKinesisStreamSourceConfiguration> kinesisStreamSourceConfiguration() {
-        return this.kinesisStreamSourceConfiguration;
+    public Output<Optional<DeliveryStreamKinesisStreamSourceConfiguration>> kinesisStreamSourceConfiguration() {
+        return Codegen.optional(this.kinesisStreamSourceConfiguration);
     }
     @Export(name="redshiftDestinationConfiguration", type=DeliveryStreamRedshiftDestinationConfiguration.class, parameters={})
     private Output</* @Nullable */ DeliveryStreamRedshiftDestinationConfiguration> redshiftDestinationConfiguration;
 
-    public Output</* @Nullable */ DeliveryStreamRedshiftDestinationConfiguration> redshiftDestinationConfiguration() {
-        return this.redshiftDestinationConfiguration;
+    public Output<Optional<DeliveryStreamRedshiftDestinationConfiguration>> redshiftDestinationConfiguration() {
+        return Codegen.optional(this.redshiftDestinationConfiguration);
     }
     @Export(name="s3DestinationConfiguration", type=DeliveryStreamS3DestinationConfiguration.class, parameters={})
     private Output</* @Nullable */ DeliveryStreamS3DestinationConfiguration> s3DestinationConfiguration;
 
-    public Output</* @Nullable */ DeliveryStreamS3DestinationConfiguration> s3DestinationConfiguration() {
-        return this.s3DestinationConfiguration;
+    public Output<Optional<DeliveryStreamS3DestinationConfiguration>> s3DestinationConfiguration() {
+        return Codegen.optional(this.s3DestinationConfiguration);
     }
     @Export(name="splunkDestinationConfiguration", type=DeliveryStreamSplunkDestinationConfiguration.class, parameters={})
     private Output</* @Nullable */ DeliveryStreamSplunkDestinationConfiguration> splunkDestinationConfiguration;
 
-    public Output</* @Nullable */ DeliveryStreamSplunkDestinationConfiguration> splunkDestinationConfiguration() {
-        return this.splunkDestinationConfiguration;
+    public Output<Optional<DeliveryStreamSplunkDestinationConfiguration>> splunkDestinationConfiguration() {
+        return Codegen.optional(this.splunkDestinationConfiguration);
     }
     @Export(name="tags", type=List.class, parameters={DeliveryStreamTag.class})
     private Output</* @Nullable */ List<DeliveryStreamTag>> tags;
 
-    public Output</* @Nullable */ List<DeliveryStreamTag>> tags() {
-        return this.tags;
+    public Output<Optional<List<DeliveryStreamTag>>> tags() {
+        return Codegen.optional(this.tags);
     }
 
     /**

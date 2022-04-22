@@ -11,6 +11,7 @@ import com.pulumi.core.annotations.Export;
 import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -110,8 +111,8 @@ public class SigningProfilePermission extends com.pulumi.resources.CustomResourc
      * @return A statement identifier prefix. The provider will generate a unique suffix. Conflicts with `statement_id`.
      * 
      */
-    public Output</* @Nullable */ String> statementIdPrefix() {
-        return this.statementIdPrefix;
+    public Output<Optional<String>> statementIdPrefix() {
+        return Codegen.optional(this.statementIdPrefix);
     }
 
     /**

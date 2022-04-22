@@ -17,6 +17,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -47,8 +48,8 @@ public class PostgresInstance extends com.pulumi.resources.CustomResource {
      * @return The extendedLocation of the resource.
      * 
      */
-    public Output</* @Nullable */ ExtendedLocationResponse> extendedLocation() {
-        return this.extendedLocation;
+    public Output<Optional<ExtendedLocationResponse>> extendedLocation() {
+        return Codegen.optional(this.extendedLocation);
     }
     /**
      * The geo-location where the resource lives
@@ -103,8 +104,8 @@ public class PostgresInstance extends com.pulumi.resources.CustomResource {
      * @return Resource sku.
      * 
      */
-    public Output</* @Nullable */ PostgresInstanceSkuResponse> sku() {
-        return this.sku;
+    public Output<Optional<PostgresInstanceSkuResponse>> sku() {
+        return Codegen.optional(this.sku);
     }
     /**
      * Read only system data
@@ -131,8 +132,8 @@ public class PostgresInstance extends com.pulumi.resources.CustomResource {
      * @return Resource tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.

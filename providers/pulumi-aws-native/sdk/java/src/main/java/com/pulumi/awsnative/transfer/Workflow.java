@@ -13,6 +13,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -46,8 +47,8 @@ public class Workflow extends com.pulumi.resources.CustomResource {
      * @return A textual description for the workflow.
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * Specifies the steps (actions) to take if any errors are encountered during execution of the workflow.
@@ -60,8 +61,8 @@ public class Workflow extends com.pulumi.resources.CustomResource {
      * @return Specifies the steps (actions) to take if any errors are encountered during execution of the workflow.
      * 
      */
-    public Output</* @Nullable */ List<WorkflowStep>> onExceptionSteps() {
-        return this.onExceptionSteps;
+    public Output<Optional<List<WorkflowStep>>> onExceptionSteps() {
+        return Codegen.optional(this.onExceptionSteps);
     }
     /**
      * Specifies the details for the steps that are in the specified workflow.
@@ -88,8 +89,8 @@ public class Workflow extends com.pulumi.resources.CustomResource {
      * @return Key-value pairs that can be used to group and search for workflows. Tags are metadata attached to workflows for any purpose.
      * 
      */
-    public Output</* @Nullable */ List<WorkflowTag>> tags() {
-        return this.tags;
+    public Output<Optional<List<WorkflowTag>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * A unique identifier for the workflow.

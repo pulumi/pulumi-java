@@ -12,6 +12,7 @@ import com.pulumi.gcp.bigtable.TableIamMemberArgs;
 import com.pulumi.gcp.bigtable.inputs.TableIamMemberState;
 import com.pulumi.gcp.bigtable.outputs.TableIamMemberCondition;
 import java.lang.String;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -57,8 +58,8 @@ public class TableIamMember extends com.pulumi.resources.CustomResource {
     @Export(name="condition", type=TableIamMemberCondition.class, parameters={})
     private Output</* @Nullable */ TableIamMemberCondition> condition;
 
-    public Output</* @Nullable */ TableIamMemberCondition> condition() {
-        return this.condition;
+    public Output<Optional<TableIamMemberCondition>> condition() {
+        return Codegen.optional(this.condition);
     }
     /**
      * (Computed) The etag of the tables&#39;s IAM policy.

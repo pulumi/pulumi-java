@@ -11,6 +11,7 @@ import com.pulumi.gcp.Utilities;
 import com.pulumi.gcp.sql.UserArgs;
 import com.pulumi.gcp.sql.inputs.UserState;
 import java.lang.String;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -50,8 +51,8 @@ public class User extends com.pulumi.resources.CustomResource {
      * for Postgres, where users cannot be deleted from the API if they have been granted SQL roles.
      * 
      */
-    public Output</* @Nullable */ String> deletionPolicy() {
-        return this.deletionPolicy;
+    public Output<Optional<String>> deletionPolicy() {
+        return Codegen.optional(this.deletionPolicy);
     }
     /**
      * The host the user can connect from. This is only supported
@@ -116,8 +117,8 @@ public class User extends com.pulumi.resources.CustomResource {
      * instances this is a Required field.
      * 
      */
-    public Output</* @Nullable */ String> password() {
-        return this.password;
+    public Output<Optional<String>> password() {
+        return Codegen.optional(this.password);
     }
     /**
      * The ID of the project in which the resource belongs. If it
@@ -150,8 +151,8 @@ public class User extends com.pulumi.resources.CustomResource {
      * include &#34;BUILT_IN&#34;, &#34;CLOUD_IAM_USER&#34;, or &#34;CLOUD_IAM_SERVICE_ACCOUNT&#34;.
      * 
      */
-    public Output</* @Nullable */ String> type() {
-        return this.type;
+    public Output<Optional<String>> type() {
+        return Codegen.optional(this.type);
     }
 
     /**

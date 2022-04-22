@@ -15,6 +15,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -45,8 +46,8 @@ public class PrivateEndpointConnection extends com.pulumi.resources.CustomResour
      * @return Array of group IDs.
      * 
      */
-    public Output</* @Nullable */ List<String>> groupIds() {
-        return this.groupIds;
+    public Output<Optional<List<String>>> groupIds() {
+        return Codegen.optional(this.groupIds);
     }
     /**
      * The name of the resource
@@ -73,8 +74,8 @@ public class PrivateEndpointConnection extends com.pulumi.resources.CustomResour
      * @return The resource of private end point.
      * 
      */
-    public Output</* @Nullable */ PrivateEndpointResponse> privateEndpoint() {
-        return this.privateEndpoint;
+    public Output<Optional<PrivateEndpointResponse>> privateEndpoint() {
+        return Codegen.optional(this.privateEndpoint);
     }
     /**
      * A collection of information about the state of the connection between service consumer and provider.

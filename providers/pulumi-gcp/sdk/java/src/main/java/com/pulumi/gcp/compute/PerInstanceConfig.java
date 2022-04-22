@@ -13,6 +13,7 @@ import com.pulumi.gcp.compute.inputs.PerInstanceConfigState;
 import com.pulumi.gcp.compute.outputs.PerInstanceConfigPreservedState;
 import java.lang.Boolean;
 import java.lang.String;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -85,8 +86,8 @@ public class PerInstanceConfig extends com.pulumi.resources.CustomResource {
      * * NONE
      * 
      */
-    public Output</* @Nullable */ String> minimalAction() {
-        return this.minimalAction;
+    public Output<Optional<String>> minimalAction() {
+        return Codegen.optional(this.minimalAction);
     }
     /**
      * The most disruptive action to perform on the instance during an update.
@@ -109,8 +110,8 @@ public class PerInstanceConfig extends com.pulumi.resources.CustomResource {
      * * NONE
      * 
      */
-    public Output</* @Nullable */ String> mostDisruptiveAllowedAction() {
-        return this.mostDisruptiveAllowedAction;
+    public Output<Optional<String>> mostDisruptiveAllowedAction() {
+        return Codegen.optional(this.mostDisruptiveAllowedAction);
     }
     /**
      * The name for this per-instance config and its corresponding instance.
@@ -139,8 +140,8 @@ public class PerInstanceConfig extends com.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ PerInstanceConfigPreservedState> preservedState() {
-        return this.preservedState;
+    public Output<Optional<PerInstanceConfigPreservedState>> preservedState() {
+        return Codegen.optional(this.preservedState);
     }
     /**
      * The ID of the project in which the resource belongs.
@@ -173,8 +174,8 @@ public class PerInstanceConfig extends com.pulumi.resources.CustomResource {
      * State will be removed on the next instance recreation or update.
      * 
      */
-    public Output</* @Nullable */ Boolean> removeInstanceStateOnDestroy() {
-        return this.removeInstanceStateOnDestroy;
+    public Output<Optional<Boolean>> removeInstanceStateOnDestroy() {
+        return Codegen.optional(this.removeInstanceStateOnDestroy);
     }
     /**
      * Zone where the containing instance group manager is located
@@ -187,8 +188,8 @@ public class PerInstanceConfig extends com.pulumi.resources.CustomResource {
      * @return Zone where the containing instance group manager is located
      * 
      */
-    public Output</* @Nullable */ String> zone() {
-        return this.zone;
+    public Output<Optional<String>> zone() {
+        return Codegen.optional(this.zone);
     }
 
     /**

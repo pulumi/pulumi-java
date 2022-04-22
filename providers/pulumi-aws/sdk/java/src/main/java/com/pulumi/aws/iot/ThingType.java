@@ -14,6 +14,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -57,8 +58,8 @@ public class ThingType extends com.pulumi.resources.CustomResource {
      * @return Whether the thing type is deprecated. If true, no new things could be associated with this type.
      * 
      */
-    public Output</* @Nullable */ Boolean> deprecated() {
-        return this.deprecated;
+    public Output<Optional<Boolean>> deprecated() {
+        return Codegen.optional(this.deprecated);
     }
     /**
      * The name of the thing type.
@@ -85,8 +86,8 @@ public class ThingType extends com.pulumi.resources.CustomResource {
      * @return , Configuration block that can contain the following properties of the thing type:
      * 
      */
-    public Output</* @Nullable */ ThingTypeProperties> properties() {
-        return this.properties;
+    public Output<Optional<ThingTypeProperties>> properties() {
+        return Codegen.optional(this.properties);
     }
     /**
      * Key-value mapping of resource tags. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
@@ -99,8 +100,8 @@ public class ThingType extends com.pulumi.resources.CustomResource {
      * @return Key-value mapping of resource tags. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * Map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.

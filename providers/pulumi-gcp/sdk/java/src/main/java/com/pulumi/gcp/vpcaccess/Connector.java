@@ -13,6 +13,7 @@ import com.pulumi.gcp.vpcaccess.inputs.ConnectorState;
 import com.pulumi.gcp.vpcaccess.outputs.ConnectorSubnet;
 import java.lang.Integer;
 import java.lang.String;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -60,8 +61,8 @@ public class Connector extends com.pulumi.resources.CustomResource {
      * @return The range of internal addresses that follows RFC 4632 notation. Example: `10.132.0.0/28`.
      * 
      */
-    public Output</* @Nullable */ String> ipCidrRange() {
-        return this.ipCidrRange;
+    public Output<Optional<String>> ipCidrRange() {
+        return Codegen.optional(this.ipCidrRange);
     }
     /**
      * Machine type of VM Instance underlying connector. Default is e2-micro
@@ -74,8 +75,8 @@ public class Connector extends com.pulumi.resources.CustomResource {
      * @return Machine type of VM Instance underlying connector. Default is e2-micro
      * 
      */
-    public Output</* @Nullable */ String> machineType() {
-        return this.machineType;
+    public Output<Optional<String>> machineType() {
+        return Codegen.optional(this.machineType);
     }
     /**
      * Maximum value of instances in autoscaling group underlying the connector.
@@ -102,8 +103,8 @@ public class Connector extends com.pulumi.resources.CustomResource {
      * @return Maximum throughput of the connector in Mbps, must be greater than `min_throughput`. Default is 300.
      * 
      */
-    public Output</* @Nullable */ Integer> maxThroughput() {
-        return this.maxThroughput;
+    public Output<Optional<Integer>> maxThroughput() {
+        return Codegen.optional(this.maxThroughput);
     }
     /**
      * Minimum value of instances in autoscaling group underlying the connector.
@@ -130,8 +131,8 @@ public class Connector extends com.pulumi.resources.CustomResource {
      * @return Minimum throughput of the connector in Mbps. Default and min is 200.
      * 
      */
-    public Output</* @Nullable */ Integer> minThroughput() {
-        return this.minThroughput;
+    public Output<Optional<Integer>> minThroughput() {
+        return Codegen.optional(this.minThroughput);
     }
     /**
      * Subnet name (relative, not fully qualified). E.g. if the full subnet selfLink is
@@ -160,8 +161,8 @@ public class Connector extends com.pulumi.resources.CustomResource {
      * @return Name or self_link of the VPC network. Required if `ip_cidr_range` is set.
      * 
      */
-    public Output</* @Nullable */ String> network() {
-        return this.network;
+    public Output<Optional<String>> network() {
+        return Codegen.optional(this.network);
     }
     /**
      * The ID of the project in which the resource belongs.
@@ -234,8 +235,8 @@ public class Connector extends com.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ ConnectorSubnet> subnet() {
-        return this.subnet;
+    public Output<Optional<ConnectorSubnet>> subnet() {
+        return Codegen.optional(this.subnet);
     }
 
     /**

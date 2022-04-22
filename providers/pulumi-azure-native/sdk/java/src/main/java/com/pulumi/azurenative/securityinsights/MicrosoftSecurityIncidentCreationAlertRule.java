@@ -13,6 +13,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -43,8 +44,8 @@ public class MicrosoftSecurityIncidentCreationAlertRule extends com.pulumi.resou
      * @return The Name of the alert rule template used to create this rule.
      * 
      */
-    public Output</* @Nullable */ String> alertRuleTemplateName() {
-        return this.alertRuleTemplateName;
+    public Output<Optional<String>> alertRuleTemplateName() {
+        return Codegen.optional(this.alertRuleTemplateName);
     }
     /**
      * The description of the alert rule.
@@ -57,8 +58,8 @@ public class MicrosoftSecurityIncidentCreationAlertRule extends com.pulumi.resou
      * @return The description of the alert rule.
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * The display name for alerts created by this alert rule.
@@ -85,8 +86,8 @@ public class MicrosoftSecurityIncidentCreationAlertRule extends com.pulumi.resou
      * @return the alerts&#39; displayNames on which the cases will not be generated
      * 
      */
-    public Output</* @Nullable */ List<String>> displayNamesExcludeFilter() {
-        return this.displayNamesExcludeFilter;
+    public Output<Optional<List<String>>> displayNamesExcludeFilter() {
+        return Codegen.optional(this.displayNamesExcludeFilter);
     }
     /**
      * the alerts&#39; displayNames on which the cases will be generated
@@ -99,8 +100,8 @@ public class MicrosoftSecurityIncidentCreationAlertRule extends com.pulumi.resou
      * @return the alerts&#39; displayNames on which the cases will be generated
      * 
      */
-    public Output</* @Nullable */ List<String>> displayNamesFilter() {
-        return this.displayNamesFilter;
+    public Output<Optional<List<String>>> displayNamesFilter() {
+        return Codegen.optional(this.displayNamesFilter);
     }
     /**
      * Determines whether this alert rule is enabled or disabled.
@@ -127,8 +128,8 @@ public class MicrosoftSecurityIncidentCreationAlertRule extends com.pulumi.resou
      * @return Etag of the azure resource
      * 
      */
-    public Output</* @Nullable */ String> etag() {
-        return this.etag;
+    public Output<Optional<String>> etag() {
+        return Codegen.optional(this.etag);
     }
     /**
      * The kind of the alert rule
@@ -199,8 +200,8 @@ public class MicrosoftSecurityIncidentCreationAlertRule extends com.pulumi.resou
      * @return the alerts&#39; severities on which the cases will be generated
      * 
      */
-    public Output</* @Nullable */ List<String>> severitiesFilter() {
-        return this.severitiesFilter;
+    public Output<Optional<List<String>>> severitiesFilter() {
+        return Codegen.optional(this.severitiesFilter);
     }
     /**
      * Azure resource type

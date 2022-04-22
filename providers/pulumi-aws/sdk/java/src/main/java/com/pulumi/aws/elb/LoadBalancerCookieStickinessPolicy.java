@@ -14,6 +14,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -37,8 +38,8 @@ public class LoadBalancerCookieStickinessPolicy extends com.pulumi.resources.Cus
      * the session cookie should be considered stale, expressed in seconds.
      * 
      */
-    public Output</* @Nullable */ Integer> cookieExpirationPeriod() {
-        return this.cookieExpirationPeriod;
+    public Output<Optional<Integer>> cookieExpirationPeriod() {
+        return Codegen.optional(this.cookieExpirationPeriod);
     }
     /**
      * The load balancer port to which the policy

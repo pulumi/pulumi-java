@@ -12,6 +12,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -55,8 +56,8 @@ public class RegexPatternSet extends com.pulumi.resources.CustomResource {
      * @return A list of regular expression (regex) patterns that you want AWS WAF to search for, such as `B[a@]dB[o0]t`.
      * 
      */
-    public Output</* @Nullable */ List<String>> regexPatternStrings() {
-        return this.regexPatternStrings;
+    public Output<Optional<List<String>>> regexPatternStrings() {
+        return Codegen.optional(this.regexPatternStrings);
     }
 
     /**

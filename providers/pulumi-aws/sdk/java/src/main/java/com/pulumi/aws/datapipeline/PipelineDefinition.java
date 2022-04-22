@@ -15,6 +15,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -44,8 +45,8 @@ public class PipelineDefinition extends com.pulumi.resources.CustomResource {
      * @return Configuration block for the parameter objects used in the pipeline definition. See below
      * 
      */
-    public Output</* @Nullable */ List<PipelineDefinitionParameterObject>> parameterObjects() {
-        return this.parameterObjects;
+    public Output<Optional<List<PipelineDefinitionParameterObject>>> parameterObjects() {
+        return Codegen.optional(this.parameterObjects);
     }
     /**
      * Configuration block for the parameter values used in the pipeline definition. See below
@@ -58,8 +59,8 @@ public class PipelineDefinition extends com.pulumi.resources.CustomResource {
      * @return Configuration block for the parameter values used in the pipeline definition. See below
      * 
      */
-    public Output</* @Nullable */ List<PipelineDefinitionParameterValue>> parameterValues() {
-        return this.parameterValues;
+    public Output<Optional<List<PipelineDefinitionParameterValue>>> parameterValues() {
+        return Codegen.optional(this.parameterValues);
     }
     /**
      * ID of the pipeline.

@@ -16,6 +16,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -59,8 +60,8 @@ public class FeatureGroup extends com.pulumi.resources.CustomResource {
      * @return A free-form description of a Feature Group.
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * The name of the feature that stores the EventTime of a Record in a Feature Group.
@@ -115,8 +116,8 @@ public class FeatureGroup extends com.pulumi.resources.CustomResource {
      * @return The Offline Feature Store Configuration. See Offline Store Config Below.
      * 
      */
-    public Output</* @Nullable */ FeatureGroupOfflineStoreConfig> offlineStoreConfig() {
-        return this.offlineStoreConfig;
+    public Output<Optional<FeatureGroupOfflineStoreConfig>> offlineStoreConfig() {
+        return Codegen.optional(this.offlineStoreConfig);
     }
     /**
      * The Online Feature Store Configuration. See Online Store Config Below.
@@ -129,8 +130,8 @@ public class FeatureGroup extends com.pulumi.resources.CustomResource {
      * @return The Online Feature Store Configuration. See Online Store Config Below.
      * 
      */
-    public Output</* @Nullable */ FeatureGroupOnlineStoreConfig> onlineStoreConfig() {
-        return this.onlineStoreConfig;
+    public Output<Optional<FeatureGroupOnlineStoreConfig>> onlineStoreConfig() {
+        return Codegen.optional(this.onlineStoreConfig);
     }
     /**
      * The name of the Feature whose value uniquely identifies a Record defined in the Feature Store. Only the latest record per identifier value will be stored in the Online Store.
@@ -171,8 +172,8 @@ public class FeatureGroup extends com.pulumi.resources.CustomResource {
      * @return Map of resource tags for the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * A map of tags assigned to the resource, including those inherited from the provider .

@@ -17,6 +17,7 @@ import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -129,8 +130,8 @@ public class Authority extends com.pulumi.resources.CustomResource {
      * created.
      * 
      */
-    public Output</* @Nullable */ String> gcsBucket() {
-        return this.gcsBucket;
+    public Output<Optional<String>> gcsBucket() {
+        return Codegen.optional(this.gcsBucket);
     }
     /**
      * This field allows the CA to be deleted even if the CA has active certs. Active certs include both unrevoked and unexpired certs.
@@ -145,8 +146,8 @@ public class Authority extends com.pulumi.resources.CustomResource {
      * Use with care. Defaults to `false`.
      * 
      */
-    public Output</* @Nullable */ Boolean> ignoreActiveCertificatesOnDeletion() {
-        return this.ignoreActiveCertificatesOnDeletion;
+    public Output<Optional<Boolean>> ignoreActiveCertificatesOnDeletion() {
+        return Codegen.optional(this.ignoreActiveCertificatesOnDeletion);
     }
     /**
      * Used when issuing certificates for this CertificateAuthority. If this CertificateAuthority
@@ -183,8 +184,8 @@ public class Authority extends com.pulumi.resources.CustomResource {
      * &#34;1.3kg&#34;, &#34;count&#34;: &#34;3&#34; }.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> labels() {
-        return this.labels;
+    public Output<Optional<Map<String,String>>> labels() {
+        return Codegen.optional(this.labels);
     }
     /**
      * The desired lifetime of the CA certificate. Used to create the &#34;notBeforeTime&#34; and
@@ -201,8 +202,8 @@ public class Authority extends com.pulumi.resources.CustomResource {
      * fractional digits, terminated by &#39;s&#39;. Example: &#34;3.5s&#34;.
      * 
      */
-    public Output</* @Nullable */ String> lifetime() {
-        return this.lifetime;
+    public Output<Optional<String>> lifetime() {
+        return Codegen.optional(this.lifetime);
     }
     /**
      * Location of the CertificateAuthority. A full list of valid locations can be found by
@@ -317,8 +318,8 @@ public class Authority extends com.pulumi.resources.CustomResource {
      * Possible values are `SELF_SIGNED` and `SUBORDINATE`.
      * 
      */
-    public Output</* @Nullable */ String> type() {
-        return this.type;
+    public Output<Optional<String>> type() {
+        return Codegen.optional(this.type);
     }
     /**
      * The time at which this CertificateAuthority was updated. A timestamp in RFC3339 UTC &#34;Zulu&#34; format, with nanosecond

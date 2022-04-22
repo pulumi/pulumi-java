@@ -11,6 +11,7 @@ import com.pulumi.core.annotations.Export;
 import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -47,8 +48,8 @@ public class RouteTableAssociation extends com.pulumi.resources.CustomResource {
      * @return The gateway ID to create an association. Conflicts with `subnet_id`.
      * 
      */
-    public Output</* @Nullable */ String> gatewayId() {
-        return this.gatewayId;
+    public Output<Optional<String>> gatewayId() {
+        return Codegen.optional(this.gatewayId);
     }
     /**
      * The ID of the routing table to associate with.
@@ -75,8 +76,8 @@ public class RouteTableAssociation extends com.pulumi.resources.CustomResource {
      * @return The subnet ID to create an association. Conflicts with `gateway_id`.
      * 
      */
-    public Output</* @Nullable */ String> subnetId() {
-        return this.subnetId;
+    public Output<Optional<String>> subnetId() {
+        return Codegen.optional(this.subnetId);
     }
 
     /**

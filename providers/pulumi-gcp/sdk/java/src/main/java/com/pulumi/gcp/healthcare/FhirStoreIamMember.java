@@ -12,6 +12,7 @@ import com.pulumi.gcp.healthcare.FhirStoreIamMemberArgs;
 import com.pulumi.gcp.healthcare.inputs.FhirStoreIamMemberState;
 import com.pulumi.gcp.healthcare.outputs.FhirStoreIamMemberCondition;
 import java.lang.String;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -63,8 +64,8 @@ public class FhirStoreIamMember extends com.pulumi.resources.CustomResource {
     @Export(name="condition", type=FhirStoreIamMemberCondition.class, parameters={})
     private Output</* @Nullable */ FhirStoreIamMemberCondition> condition;
 
-    public Output</* @Nullable */ FhirStoreIamMemberCondition> condition() {
-        return this.condition;
+    public Output<Optional<FhirStoreIamMemberCondition>> condition() {
+        return Codegen.optional(this.condition);
     }
     /**
      * (Computed) The etag of the FHIR store&#39;s IAM policy.

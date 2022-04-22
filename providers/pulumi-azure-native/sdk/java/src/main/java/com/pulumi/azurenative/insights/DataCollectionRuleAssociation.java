@@ -12,6 +12,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -42,8 +43,8 @@ public class DataCollectionRuleAssociation extends com.pulumi.resources.CustomRe
      * @return The resource ID of the data collection rule that is to be associated.
      * 
      */
-    public Output</* @Nullable */ String> dataCollectionRuleId() {
-        return this.dataCollectionRuleId;
+    public Output<Optional<String>> dataCollectionRuleId() {
+        return Codegen.optional(this.dataCollectionRuleId);
     }
     /**
      * Description of the association.
@@ -56,8 +57,8 @@ public class DataCollectionRuleAssociation extends com.pulumi.resources.CustomRe
      * @return Description of the association.
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * Resource entity tag (ETag).

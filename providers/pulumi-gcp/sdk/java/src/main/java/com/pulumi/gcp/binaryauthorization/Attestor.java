@@ -12,6 +12,7 @@ import com.pulumi.gcp.binaryauthorization.AttestorArgs;
 import com.pulumi.gcp.binaryauthorization.inputs.AttestorState;
 import com.pulumi.gcp.binaryauthorization.outputs.AttestorAttestationAuthorityNote;
 import java.lang.String;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -73,8 +74,8 @@ public class Attestor extends com.pulumi.resources.CustomResource {
      * displayed in chooser dialogs.
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * The resource name.

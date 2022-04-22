@@ -14,6 +14,7 @@ import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -71,8 +72,8 @@ public class EventSubscription extends com.pulumi.resources.CustomResource {
      * @return A boolean flag to enable/disable the subscription. Defaults to true.
      * 
      */
-    public Output</* @Nullable */ Boolean> enabled() {
-        return this.enabled;
+    public Output<Optional<Boolean>> enabled() {
+        return Codegen.optional(this.enabled);
     }
     /**
      * A list of event categories for a SourceType that you want to subscribe to. See https://docs.aws.amazon.com/redshift/latest/mgmt/working-with-event-notifications.html or run `aws redshift describe-event-categories`.
@@ -85,8 +86,8 @@ public class EventSubscription extends com.pulumi.resources.CustomResource {
      * @return A list of event categories for a SourceType that you want to subscribe to. See https://docs.aws.amazon.com/redshift/latest/mgmt/working-with-event-notifications.html or run `aws redshift describe-event-categories`.
      * 
      */
-    public Output</* @Nullable */ List<String>> eventCategories() {
-        return this.eventCategories;
+    public Output<Optional<List<String>>> eventCategories() {
+        return Codegen.optional(this.eventCategories);
     }
     /**
      * The name of the Redshift event subscription.
@@ -113,8 +114,8 @@ public class EventSubscription extends com.pulumi.resources.CustomResource {
      * @return The event severity to be published by the notification subscription. Valid options are `INFO` or `ERROR`.
      * 
      */
-    public Output</* @Nullable */ String> severity() {
-        return this.severity;
+    public Output<Optional<String>> severity() {
+        return Codegen.optional(this.severity);
     }
     /**
      * The ARN of the SNS topic to send events to.
@@ -141,8 +142,8 @@ public class EventSubscription extends com.pulumi.resources.CustomResource {
      * @return A list of identifiers of the event sources for which events will be returned. If not specified, then all sources are included in the response. If specified, a source_type must also be specified.
      * 
      */
-    public Output</* @Nullable */ List<String>> sourceIds() {
-        return this.sourceIds;
+    public Output<Optional<List<String>>> sourceIds() {
+        return Codegen.optional(this.sourceIds);
     }
     /**
      * The type of source that will be generating the events. Valid options are `cluster`, `cluster-parameter-group`, `cluster-security-group`, or `cluster-snapshot`. If not set, all sources will be subscribed to.
@@ -155,8 +156,8 @@ public class EventSubscription extends com.pulumi.resources.CustomResource {
      * @return The type of source that will be generating the events. Valid options are `cluster`, `cluster-parameter-group`, `cluster-security-group`, or `cluster-snapshot`. If not set, all sources will be subscribed to.
      * 
      */
-    public Output</* @Nullable */ String> sourceType() {
-        return this.sourceType;
+    public Output<Optional<String>> sourceType() {
+        return Codegen.optional(this.sourceType);
     }
     @Export(name="status", type=String.class, parameters={})
     private Output<String> status;
@@ -175,8 +176,8 @@ public class EventSubscription extends com.pulumi.resources.CustomResource {
      * @return A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * A map of tags assigned to the resource, including those inherited from the provider .

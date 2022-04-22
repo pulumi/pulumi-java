@@ -26,6 +26,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -68,8 +69,8 @@ public class Pool extends com.pulumi.resources.CustomResource {
      * @return The list of application licenses must be a subset of available Batch service application licenses. If a license is requested which is not supported, pool creation will fail.
      * 
      */
-    public Output</* @Nullable */ List<String>> applicationLicenses() {
-        return this.applicationLicenses;
+    public Output<Optional<List<String>>> applicationLicenses() {
+        return Codegen.optional(this.applicationLicenses);
     }
     /**
      * Changes to application package references affect all new compute nodes joining the pool, but do not affect compute nodes that are already in the pool until they are rebooted or reimaged. There is a maximum of 10 application package references on any given pool.
@@ -82,8 +83,8 @@ public class Pool extends com.pulumi.resources.CustomResource {
      * @return Changes to application package references affect all new compute nodes joining the pool, but do not affect compute nodes that are already in the pool until they are rebooted or reimaged. There is a maximum of 10 application package references on any given pool.
      * 
      */
-    public Output</* @Nullable */ List<ApplicationPackageReferenceResponse>> applicationPackages() {
-        return this.applicationPackages;
+    public Output<Optional<List<ApplicationPackageReferenceResponse>>> applicationPackages() {
+        return Codegen.optional(this.applicationPackages);
     }
     /**
      * This property is set only if the pool automatically scales, i.e. autoScaleSettings are used.
@@ -110,8 +111,8 @@ public class Pool extends com.pulumi.resources.CustomResource {
      * @return For Windows compute nodes, the Batch service installs the certificates to the specified certificate store and location. For Linux compute nodes, the certificates are stored in a directory inside the task working directory and an environment variable AZ_BATCH_CERTIFICATES_DIR is supplied to the task to query for this location. For certificates with visibility of &#39;remoteUser&#39;, a &#39;certs&#39; directory is created in the user&#39;s home directory (e.g., /home/{user-name}/certs) and certificates are placed in that directory.
      * 
      */
-    public Output</* @Nullable */ List<CertificateReferenceResponse>> certificates() {
-        return this.certificates;
+    public Output<Optional<List<CertificateReferenceResponse>>> certificates() {
+        return Codegen.optional(this.certificates);
     }
     @Export(name="creationTime", type=String.class, parameters={})
     private Output<String> creationTime;
@@ -142,8 +143,8 @@ public class Pool extends com.pulumi.resources.CustomResource {
      * @return Using CloudServiceConfiguration specifies that the nodes should be creating using Azure Cloud Services (PaaS), while VirtualMachineConfiguration uses Azure Virtual Machines (IaaS).
      * 
      */
-    public Output</* @Nullable */ DeploymentConfigurationResponse> deploymentConfiguration() {
-        return this.deploymentConfiguration;
+    public Output<Optional<DeploymentConfigurationResponse>> deploymentConfiguration() {
+        return Codegen.optional(this.deploymentConfiguration);
     }
     /**
      * The display name need not be unique and can contain any Unicode characters up to a maximum length of 1024.
@@ -156,8 +157,8 @@ public class Pool extends com.pulumi.resources.CustomResource {
      * @return The display name need not be unique and can contain any Unicode characters up to a maximum length of 1024.
      * 
      */
-    public Output</* @Nullable */ String> displayName() {
-        return this.displayName;
+    public Output<Optional<String>> displayName() {
+        return Codegen.optional(this.displayName);
     }
     /**
      * The ETag of the resource, used for concurrency statements.
@@ -184,8 +185,8 @@ public class Pool extends com.pulumi.resources.CustomResource {
      * @return The type of identity used for the Batch Pool.
      * 
      */
-    public Output</* @Nullable */ BatchPoolIdentityResponse> identity() {
-        return this.identity;
+    public Output<Optional<BatchPoolIdentityResponse>> identity() {
+        return Codegen.optional(this.identity);
     }
     /**
      * This imposes restrictions on which nodes can be assigned to the pool. Enabling this value can reduce the chance of the requested number of nodes to be allocated in the pool. If not specified, this value defaults to &#39;Disabled&#39;.
@@ -198,8 +199,8 @@ public class Pool extends com.pulumi.resources.CustomResource {
      * @return This imposes restrictions on which nodes can be assigned to the pool. Enabling this value can reduce the chance of the requested number of nodes to be allocated in the pool. If not specified, this value defaults to &#39;Disabled&#39;.
      * 
      */
-    public Output</* @Nullable */ String> interNodeCommunication() {
-        return this.interNodeCommunication;
+    public Output<Optional<String>> interNodeCommunication() {
+        return Codegen.optional(this.interNodeCommunication);
     }
     /**
      * This is the last time at which the pool level data, such as the targetDedicatedNodes or autoScaleSettings, changed. It does not factor in node-level changes such as a compute node changing state.
@@ -226,8 +227,8 @@ public class Pool extends com.pulumi.resources.CustomResource {
      * @return The Batch service does not assign any meaning to metadata; it is solely for the use of user code.
      * 
      */
-    public Output</* @Nullable */ List<MetadataItemResponse>> metadata() {
-        return this.metadata;
+    public Output<Optional<List<MetadataItemResponse>>> metadata() {
+        return Codegen.optional(this.metadata);
     }
     /**
      * This supports Azure Files, NFS, CIFS/SMB, and Blobfuse.
@@ -240,8 +241,8 @@ public class Pool extends com.pulumi.resources.CustomResource {
      * @return This supports Azure Files, NFS, CIFS/SMB, and Blobfuse.
      * 
      */
-    public Output</* @Nullable */ List<MountConfigurationResponse>> mountConfiguration() {
-        return this.mountConfiguration;
+    public Output<Optional<List<MountConfigurationResponse>>> mountConfiguration() {
+        return Codegen.optional(this.mountConfiguration);
     }
     /**
      * The name of the resource.
@@ -268,8 +269,8 @@ public class Pool extends com.pulumi.resources.CustomResource {
      * @return The network configuration for a pool.
      * 
      */
-    public Output</* @Nullable */ NetworkConfigurationResponse> networkConfiguration() {
-        return this.networkConfiguration;
+    public Output<Optional<NetworkConfigurationResponse>> networkConfiguration() {
+        return Codegen.optional(this.networkConfiguration);
     }
     @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
@@ -308,8 +309,8 @@ public class Pool extends com.pulumi.resources.CustomResource {
      * @return Defines the desired size of the pool. This can either be &#39;fixedScale&#39; where the requested targetDedicatedNodes is specified, or &#39;autoScale&#39; which defines a formula which is periodically reevaluated. If this property is not specified, the pool will have a fixed scale with 0 targetDedicatedNodes.
      * 
      */
-    public Output</* @Nullable */ ScaleSettingsResponse> scaleSettings() {
-        return this.scaleSettings;
+    public Output<Optional<ScaleSettingsResponse>> scaleSettings() {
+        return Codegen.optional(this.scaleSettings);
     }
     /**
      * In an PATCH (update) operation, this property can be set to an empty object to remove the start task from the pool.
@@ -322,8 +323,8 @@ public class Pool extends com.pulumi.resources.CustomResource {
      * @return In an PATCH (update) operation, this property can be set to an empty object to remove the start task from the pool.
      * 
      */
-    public Output</* @Nullable */ StartTaskResponse> startTask() {
-        return this.startTask;
+    public Output<Optional<StartTaskResponse>> startTask() {
+        return Codegen.optional(this.startTask);
     }
     /**
      * If not specified, the default is spread.
@@ -336,8 +337,8 @@ public class Pool extends com.pulumi.resources.CustomResource {
      * @return If not specified, the default is spread.
      * 
      */
-    public Output</* @Nullable */ TaskSchedulingPolicyResponse> taskSchedulingPolicy() {
-        return this.taskSchedulingPolicy;
+    public Output<Optional<TaskSchedulingPolicyResponse>> taskSchedulingPolicy() {
+        return Codegen.optional(this.taskSchedulingPolicy);
     }
     /**
      * The default value is 1. The maximum value is the smaller of 4 times the number of cores of the vmSize of the pool or 256.
@@ -350,8 +351,8 @@ public class Pool extends com.pulumi.resources.CustomResource {
      * @return The default value is 1. The maximum value is the smaller of 4 times the number of cores of the vmSize of the pool or 256.
      * 
      */
-    public Output</* @Nullable */ Integer> taskSlotsPerNode() {
-        return this.taskSlotsPerNode;
+    public Output<Optional<Integer>> taskSlotsPerNode() {
+        return Codegen.optional(this.taskSlotsPerNode);
     }
     /**
      * The type of the resource.
@@ -370,8 +371,8 @@ public class Pool extends com.pulumi.resources.CustomResource {
     @Export(name="userAccounts", type=List.class, parameters={UserAccountResponse.class})
     private Output</* @Nullable */ List<UserAccountResponse>> userAccounts;
 
-    public Output</* @Nullable */ List<UserAccountResponse>> userAccounts() {
-        return this.userAccounts;
+    public Output<Optional<List<UserAccountResponse>>> userAccounts() {
+        return Codegen.optional(this.userAccounts);
     }
     /**
      * For information about available sizes of virtual machines for Cloud Services pools (pools created with cloudServiceConfiguration), see Sizes for Cloud Services (https://azure.microsoft.com/documentation/articles/cloud-services-sizes-specs/). Batch supports all Cloud Services VM sizes except ExtraSmall. For information about available VM sizes for pools using images from the Virtual Machines Marketplace (pools created with virtualMachineConfiguration) see Sizes for Virtual Machines (Linux) (https://azure.microsoft.com/documentation/articles/virtual-machines-linux-sizes/) or Sizes for Virtual Machines (Windows) (https://azure.microsoft.com/documentation/articles/virtual-machines-windows-sizes/). Batch supports all Azure VM sizes except STANDARD_A0 and those with premium storage (STANDARD_GS, STANDARD_DS, and STANDARD_DSV2 series).
@@ -384,8 +385,8 @@ public class Pool extends com.pulumi.resources.CustomResource {
      * @return For information about available sizes of virtual machines for Cloud Services pools (pools created with cloudServiceConfiguration), see Sizes for Cloud Services (https://azure.microsoft.com/documentation/articles/cloud-services-sizes-specs/). Batch supports all Cloud Services VM sizes except ExtraSmall. For information about available VM sizes for pools using images from the Virtual Machines Marketplace (pools created with virtualMachineConfiguration) see Sizes for Virtual Machines (Linux) (https://azure.microsoft.com/documentation/articles/virtual-machines-linux-sizes/) or Sizes for Virtual Machines (Windows) (https://azure.microsoft.com/documentation/articles/virtual-machines-windows-sizes/). Batch supports all Azure VM sizes except STANDARD_A0 and those with premium storage (STANDARD_GS, STANDARD_DS, and STANDARD_DSV2 series).
      * 
      */
-    public Output</* @Nullable */ String> vmSize() {
-        return this.vmSize;
+    public Output<Optional<String>> vmSize() {
+        return Codegen.optional(this.vmSize);
     }
 
     /**

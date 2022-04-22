@@ -18,6 +18,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -37,44 +38,44 @@ public class Dataset extends com.pulumi.resources.CustomResource {
     @Export(name="contentDeliveryRules", type=List.class, parameters={DatasetContentDeliveryRule.class})
     private Output</* @Nullable */ List<DatasetContentDeliveryRule>> contentDeliveryRules;
 
-    public Output</* @Nullable */ List<DatasetContentDeliveryRule>> contentDeliveryRules() {
-        return this.contentDeliveryRules;
+    public Output<Optional<List<DatasetContentDeliveryRule>>> contentDeliveryRules() {
+        return Codegen.optional(this.contentDeliveryRules);
     }
     @Export(name="datasetName", type=String.class, parameters={})
     private Output</* @Nullable */ String> datasetName;
 
-    public Output</* @Nullable */ String> datasetName() {
-        return this.datasetName;
+    public Output<Optional<String>> datasetName() {
+        return Codegen.optional(this.datasetName);
     }
     @Export(name="lateDataRules", type=List.class, parameters={DatasetLateDataRule.class})
     private Output</* @Nullable */ List<DatasetLateDataRule>> lateDataRules;
 
-    public Output</* @Nullable */ List<DatasetLateDataRule>> lateDataRules() {
-        return this.lateDataRules;
+    public Output<Optional<List<DatasetLateDataRule>>> lateDataRules() {
+        return Codegen.optional(this.lateDataRules);
     }
     @Export(name="retentionPeriod", type=DatasetRetentionPeriod.class, parameters={})
     private Output</* @Nullable */ DatasetRetentionPeriod> retentionPeriod;
 
-    public Output</* @Nullable */ DatasetRetentionPeriod> retentionPeriod() {
-        return this.retentionPeriod;
+    public Output<Optional<DatasetRetentionPeriod>> retentionPeriod() {
+        return Codegen.optional(this.retentionPeriod);
     }
     @Export(name="tags", type=List.class, parameters={DatasetTag.class})
     private Output</* @Nullable */ List<DatasetTag>> tags;
 
-    public Output</* @Nullable */ List<DatasetTag>> tags() {
-        return this.tags;
+    public Output<Optional<List<DatasetTag>>> tags() {
+        return Codegen.optional(this.tags);
     }
     @Export(name="triggers", type=List.class, parameters={DatasetTrigger.class})
     private Output</* @Nullable */ List<DatasetTrigger>> triggers;
 
-    public Output</* @Nullable */ List<DatasetTrigger>> triggers() {
-        return this.triggers;
+    public Output<Optional<List<DatasetTrigger>>> triggers() {
+        return Codegen.optional(this.triggers);
     }
     @Export(name="versioningConfiguration", type=DatasetVersioningConfiguration.class, parameters={})
     private Output</* @Nullable */ DatasetVersioningConfiguration> versioningConfiguration;
 
-    public Output</* @Nullable */ DatasetVersioningConfiguration> versioningConfiguration() {
-        return this.versioningConfiguration;
+    public Output<Optional<DatasetVersioningConfiguration>> versioningConfiguration() {
+        return Codegen.optional(this.versioningConfiguration);
     }
 
     /**

@@ -13,6 +13,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -56,8 +57,8 @@ public class EmailChannel extends com.pulumi.resources.CustomResource {
      * @return The ARN of the Amazon SES configuration set that you want to apply to messages that you send through the channel.
      * 
      */
-    public Output</* @Nullable */ String> configurationSet() {
-        return this.configurationSet;
+    public Output<Optional<String>> configurationSet() {
+        return Codegen.optional(this.configurationSet);
     }
     /**
      * Whether the channel is enabled or disabled. Defaults to `true`.
@@ -70,8 +71,8 @@ public class EmailChannel extends com.pulumi.resources.CustomResource {
      * @return Whether the channel is enabled or disabled. Defaults to `true`.
      * 
      */
-    public Output</* @Nullable */ Boolean> enabled() {
-        return this.enabled;
+    public Output<Optional<Boolean>> enabled() {
+        return Codegen.optional(this.enabled);
     }
     /**
      * The email address used to send emails from. You can use email only (`user@example.com`) or friendly address (`User &lt;user@example.com&gt;`). This field comply with [RFC 5322](https://www.ietf.org/rfc/rfc5322.txt).
@@ -126,8 +127,8 @@ public class EmailChannel extends com.pulumi.resources.CustomResource {
      * @return The ARN of an IAM Role used to submit events to Mobile Analytics&#39; event ingestion service.
      * 
      */
-    public Output</* @Nullable */ String> roleArn() {
-        return this.roleArn;
+    public Output<Optional<String>> roleArn() {
+        return Codegen.optional(this.roleArn);
     }
 
     /**

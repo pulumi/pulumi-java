@@ -13,6 +13,7 @@ import com.pulumi.gcp.compute.inputs.HaVpnGatewayState;
 import com.pulumi.gcp.compute.outputs.HaVpnGatewayVpnInterface;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -63,8 +64,8 @@ public class HaVpnGateway extends com.pulumi.resources.CustomResource {
      * @return An optional description of this resource.
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * Name of the resource. Provided by the client when the resource is

@@ -10,6 +10,7 @@ import com.pulumi.core.internal.Codegen;
 import com.pulumi.example.ResourceInputArgs;
 import com.pulumi.example.Utilities;
 import java.lang.String;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 @ResourceType(type="example::ResourceInput")
@@ -17,8 +18,8 @@ public class ResourceInput extends com.pulumi.resources.CustomResource {
     @Export(name="bar", type=String.class, parameters={})
     private Output</* @Nullable */ String> bar;
 
-    public Output</* @Nullable */ String> bar() {
-        return this.bar;
+    public Output<Optional<String>> bar() {
+        return Codegen.optional(this.bar);
     }
 
     /**

@@ -12,6 +12,7 @@ import com.pulumi.gcp.compute.SubnetworkIAMMemberArgs;
 import com.pulumi.gcp.compute.inputs.SubnetworkIAMMemberState;
 import com.pulumi.gcp.compute.outputs.SubnetworkIAMMemberCondition;
 import java.lang.String;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -75,8 +76,8 @@ public class SubnetworkIAMMember extends com.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ SubnetworkIAMMemberCondition> condition() {
-        return this.condition;
+    public Output<Optional<SubnetworkIAMMemberCondition>> condition() {
+        return Codegen.optional(this.condition);
     }
     /**
      * (Computed) The etag of the IAM policy.

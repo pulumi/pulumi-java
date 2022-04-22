@@ -12,6 +12,7 @@ import com.pulumi.gcp.compute.GlobalNetworkEndpointArgs;
 import com.pulumi.gcp.compute.inputs.GlobalNetworkEndpointState;
 import java.lang.Integer;
 import java.lang.String;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -59,8 +60,8 @@ public class GlobalNetworkEndpoint extends com.pulumi.resources.CustomResource {
      * This can only be specified when network_endpoint_type of the NEG is INTERNET_FQDN_PORT.
      * 
      */
-    public Output</* @Nullable */ String> fqdn() {
-        return this.fqdn;
+    public Output<Optional<String>> fqdn() {
+        return Codegen.optional(this.fqdn);
     }
     /**
      * The global network endpoint group this endpoint is part of.
@@ -87,8 +88,8 @@ public class GlobalNetworkEndpoint extends com.pulumi.resources.CustomResource {
      * @return IPv4 address external endpoint.
      * 
      */
-    public Output</* @Nullable */ String> ipAddress() {
-        return this.ipAddress;
+    public Output<Optional<String>> ipAddress() {
+        return Codegen.optional(this.ipAddress);
     }
     /**
      * Port number of the external endpoint.

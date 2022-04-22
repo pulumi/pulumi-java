@@ -13,6 +13,7 @@ import com.pulumi.gcp.accesscontextmanager.inputs.AccessLevelsState;
 import com.pulumi.gcp.accesscontextmanager.outputs.AccessLevelsAccessLevel;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -56,8 +57,8 @@ public class AccessLevels extends com.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ List<AccessLevelsAccessLevel>> accessLevels() {
-        return this.accessLevels;
+    public Output<Optional<List<AccessLevelsAccessLevel>>> accessLevels() {
+        return Codegen.optional(this.accessLevels);
     }
     /**
      * The AccessPolicy this AccessLevel lives in.

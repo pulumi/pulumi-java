@@ -17,6 +17,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 @ResourceType(type="aws:lakeformation/permissions:Permissions")
@@ -32,8 +33,8 @@ public class Permissions extends com.pulumi.resources.CustomResource {
      * @return Identifier for the Data Catalog. By default, it is the account ID of the caller.
      * 
      */
-    public Output</* @Nullable */ String> catalogId() {
-        return this.catalogId;
+    public Output<Optional<String>> catalogId() {
+        return Codegen.optional(this.catalogId);
     }
     /**
      * Whether the permissions are to be granted for the Data Catalog. Defaults to `false`.
@@ -46,8 +47,8 @@ public class Permissions extends com.pulumi.resources.CustomResource {
      * @return Whether the permissions are to be granted for the Data Catalog. Defaults to `false`.
      * 
      */
-    public Output</* @Nullable */ Boolean> catalogResource() {
-        return this.catalogResource;
+    public Output<Optional<Boolean>> catalogResource() {
+        return Codegen.optional(this.catalogResource);
     }
     /**
      * Configuration block for a data location resource. Detailed below.

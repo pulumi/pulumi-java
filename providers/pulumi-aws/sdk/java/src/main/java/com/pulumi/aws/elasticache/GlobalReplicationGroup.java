@@ -12,6 +12,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -157,8 +158,8 @@ public class GlobalReplicationGroup extends com.pulumi.resources.CustomResource 
      * @return A user-created description for the global replication group.
      * 
      */
-    public Output</* @Nullable */ String> globalReplicationGroupDescription() {
-        return this.globalReplicationGroupDescription;
+    public Output<Optional<String>> globalReplicationGroupDescription() {
+        return Codegen.optional(this.globalReplicationGroupDescription);
     }
     /**
      * The full ID of the global replication group.

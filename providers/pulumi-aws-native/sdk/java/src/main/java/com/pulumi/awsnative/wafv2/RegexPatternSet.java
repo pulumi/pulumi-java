@@ -13,6 +13,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -46,8 +47,8 @@ public class RegexPatternSet extends com.pulumi.resources.CustomResource {
      * @return Description of the entity.
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * Name of the RegexPatternSet.
@@ -60,8 +61,8 @@ public class RegexPatternSet extends com.pulumi.resources.CustomResource {
      * @return Name of the RegexPatternSet.
      * 
      */
-    public Output</* @Nullable */ String> name() {
-        return this.name;
+    public Output<Optional<String>> name() {
+        return Codegen.optional(this.name);
     }
     @Export(name="regularExpressionList", type=List.class, parameters={String.class})
     private Output<List<String>> regularExpressionList;
@@ -86,8 +87,8 @@ public class RegexPatternSet extends com.pulumi.resources.CustomResource {
     @Export(name="tags", type=List.class, parameters={RegexPatternSetTag.class})
     private Output</* @Nullable */ List<RegexPatternSetTag>> tags;
 
-    public Output</* @Nullable */ List<RegexPatternSetTag>> tags() {
-        return this.tags;
+    public Output<Optional<List<RegexPatternSetTag>>> tags() {
+        return Codegen.optional(this.tags);
     }
 
     /**

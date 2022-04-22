@@ -13,6 +13,7 @@ import com.pulumi.gcp.compute.inputs.RegionPerInstanceConfigState;
 import com.pulumi.gcp.compute.outputs.RegionPerInstanceConfigPreservedState;
 import java.lang.Boolean;
 import java.lang.String;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -72,8 +73,8 @@ public class RegionPerInstanceConfig extends com.pulumi.resources.CustomResource
      * * NONE
      * 
      */
-    public Output</* @Nullable */ String> minimalAction() {
-        return this.minimalAction;
+    public Output<Optional<String>> minimalAction() {
+        return Codegen.optional(this.minimalAction);
     }
     /**
      * The most disruptive action to perform on the instance during an update.
@@ -96,8 +97,8 @@ public class RegionPerInstanceConfig extends com.pulumi.resources.CustomResource
      * * NONE
      * 
      */
-    public Output</* @Nullable */ String> mostDisruptiveAllowedAction() {
-        return this.mostDisruptiveAllowedAction;
+    public Output<Optional<String>> mostDisruptiveAllowedAction() {
+        return Codegen.optional(this.mostDisruptiveAllowedAction);
     }
     /**
      * The name for this per-instance config and its corresponding instance.
@@ -126,8 +127,8 @@ public class RegionPerInstanceConfig extends com.pulumi.resources.CustomResource
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ RegionPerInstanceConfigPreservedState> preservedState() {
-        return this.preservedState;
+    public Output<Optional<RegionPerInstanceConfigPreservedState>> preservedState() {
+        return Codegen.optional(this.preservedState);
     }
     /**
      * The ID of the project in which the resource belongs.
@@ -188,8 +189,8 @@ public class RegionPerInstanceConfig extends com.pulumi.resources.CustomResource
      * State will be removed on the next instance recreation or update.
      * 
      */
-    public Output</* @Nullable */ Boolean> removeInstanceStateOnDestroy() {
-        return this.removeInstanceStateOnDestroy;
+    public Output<Optional<Boolean>> removeInstanceStateOnDestroy() {
+        return Codegen.optional(this.removeInstanceStateOnDestroy);
     }
 
     /**

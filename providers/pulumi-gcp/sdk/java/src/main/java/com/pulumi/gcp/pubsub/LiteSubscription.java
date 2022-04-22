@@ -12,6 +12,7 @@ import com.pulumi.gcp.pubsub.LiteSubscriptionArgs;
 import com.pulumi.gcp.pubsub.inputs.LiteSubscriptionState;
 import com.pulumi.gcp.pubsub.outputs.LiteSubscriptionDeliveryConfig;
 import java.lang.String;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -62,8 +63,8 @@ public class LiteSubscription extends com.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ LiteSubscriptionDeliveryConfig> deliveryConfig() {
-        return this.deliveryConfig;
+    public Output<Optional<LiteSubscriptionDeliveryConfig>> deliveryConfig() {
+        return Codegen.optional(this.deliveryConfig);
     }
     /**
      * Name of the subscription.
@@ -106,8 +107,8 @@ public class LiteSubscription extends com.pulumi.resources.CustomResource {
      * @return The region of the pubsub lite topic.
      * 
      */
-    public Output</* @Nullable */ String> region() {
-        return this.region;
+    public Output<Optional<String>> region() {
+        return Codegen.optional(this.region);
     }
     /**
      * A reference to a Topic resource.
@@ -134,8 +135,8 @@ public class LiteSubscription extends com.pulumi.resources.CustomResource {
      * @return The zone of the pubsub lite topic.
      * 
      */
-    public Output</* @Nullable */ String> zone() {
-        return this.zone;
+    public Output<Optional<String>> zone() {
+        return Codegen.optional(this.zone);
     }
 
     /**

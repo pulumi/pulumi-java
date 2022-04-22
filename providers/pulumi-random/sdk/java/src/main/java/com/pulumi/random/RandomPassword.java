@@ -15,6 +15,7 @@ import java.lang.Integer;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -46,8 +47,8 @@ public class RandomPassword extends com.pulumi.resources.CustomResource {
      * @return Arbitrary map of values that, when changed, will trigger recreation of resource. See the main provider documentation for more information.
      * 
      */
-    public Output</* @Nullable */ Map<String,Object>> keepers() {
-        return this.keepers;
+    public Output<Optional<Map<String,Object>>> keepers() {
+        return Codegen.optional(this.keepers);
     }
     /**
      * The length of the string desired.
@@ -74,8 +75,8 @@ public class RandomPassword extends com.pulumi.resources.CustomResource {
      * @return Include lowercase alphabet characters in the result.
      * 
      */
-    public Output</* @Nullable */ Boolean> lower() {
-        return this.lower;
+    public Output<Optional<Boolean>> lower() {
+        return Codegen.optional(this.lower);
     }
     /**
      * Minimum number of lowercase alphabet characters in the result.
@@ -88,8 +89,8 @@ public class RandomPassword extends com.pulumi.resources.CustomResource {
      * @return Minimum number of lowercase alphabet characters in the result.
      * 
      */
-    public Output</* @Nullable */ Integer> minLower() {
-        return this.minLower;
+    public Output<Optional<Integer>> minLower() {
+        return Codegen.optional(this.minLower);
     }
     /**
      * Minimum number of numeric characters in the result.
@@ -102,8 +103,8 @@ public class RandomPassword extends com.pulumi.resources.CustomResource {
      * @return Minimum number of numeric characters in the result.
      * 
      */
-    public Output</* @Nullable */ Integer> minNumeric() {
-        return this.minNumeric;
+    public Output<Optional<Integer>> minNumeric() {
+        return Codegen.optional(this.minNumeric);
     }
     /**
      * Minimum number of special characters in the result.
@@ -116,8 +117,8 @@ public class RandomPassword extends com.pulumi.resources.CustomResource {
      * @return Minimum number of special characters in the result.
      * 
      */
-    public Output</* @Nullable */ Integer> minSpecial() {
-        return this.minSpecial;
+    public Output<Optional<Integer>> minSpecial() {
+        return Codegen.optional(this.minSpecial);
     }
     /**
      * Minimum number of uppercase alphabet characters in the result.
@@ -130,8 +131,8 @@ public class RandomPassword extends com.pulumi.resources.CustomResource {
      * @return Minimum number of uppercase alphabet characters in the result.
      * 
      */
-    public Output</* @Nullable */ Integer> minUpper() {
-        return this.minUpper;
+    public Output<Optional<Integer>> minUpper() {
+        return Codegen.optional(this.minUpper);
     }
     /**
      * Include numeric characters in the result.
@@ -144,8 +145,8 @@ public class RandomPassword extends com.pulumi.resources.CustomResource {
      * @return Include numeric characters in the result.
      * 
      */
-    public Output</* @Nullable */ Boolean> number() {
-        return this.number;
+    public Output<Optional<Boolean>> number() {
+        return Codegen.optional(this.number);
     }
     /**
      * Supply your own list of special characters to use for string generation.  This overrides the default character list in the special argument.  The `special` argument must still be set to true for any overwritten characters to be used in generation.
@@ -158,8 +159,8 @@ public class RandomPassword extends com.pulumi.resources.CustomResource {
      * @return Supply your own list of special characters to use for string generation.  This overrides the default character list in the special argument.  The `special` argument must still be set to true for any overwritten characters to be used in generation.
      * 
      */
-    public Output</* @Nullable */ String> overrideSpecial() {
-        return this.overrideSpecial;
+    public Output<Optional<String>> overrideSpecial() {
+        return Codegen.optional(this.overrideSpecial);
     }
     /**
      * The generated random string.
@@ -186,8 +187,8 @@ public class RandomPassword extends com.pulumi.resources.CustomResource {
      * @return Include special characters in the result. These are `!@#$%&amp;*()-_=+[]{}&lt;&gt;:?`
      * 
      */
-    public Output</* @Nullable */ Boolean> special() {
-        return this.special;
+    public Output<Optional<Boolean>> special() {
+        return Codegen.optional(this.special);
     }
     /**
      * Include uppercase alphabet characters in the result.
@@ -200,8 +201,8 @@ public class RandomPassword extends com.pulumi.resources.CustomResource {
      * @return Include uppercase alphabet characters in the result.
      * 
      */
-    public Output</* @Nullable */ Boolean> upper() {
-        return this.upper;
+    public Output<Optional<Boolean>> upper() {
+        return Codegen.optional(this.upper);
     }
 
     /**

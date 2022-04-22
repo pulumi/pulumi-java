@@ -17,6 +17,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -47,8 +48,8 @@ public class IoTRole extends com.pulumi.resources.CustomResource {
      * @return Resource allocation
      * 
      */
-    public Output</* @Nullable */ ComputeResourceResponse> computeResource() {
-        return this.computeResource;
+    public Output<Optional<ComputeResourceResponse>> computeResource() {
+        return Codegen.optional(this.computeResource);
     }
     /**
      * Host OS supported by the IoT role.
@@ -103,8 +104,8 @@ public class IoTRole extends com.pulumi.resources.CustomResource {
      * @return Iot edge agent details to download the agent and bootstrap iot runtime.
      * 
      */
-    public Output</* @Nullable */ IoTEdgeAgentInfoResponse> ioTEdgeAgentInfo() {
-        return this.ioTEdgeAgentInfo;
+    public Output<Optional<IoTEdgeAgentInfoResponse>> ioTEdgeAgentInfo() {
+        return Codegen.optional(this.ioTEdgeAgentInfo);
     }
     /**
      * IoT edge device to which the IoT role needs to be configured.
@@ -175,8 +176,8 @@ public class IoTRole extends com.pulumi.resources.CustomResource {
      * @return Mount points of shares in role(s).
      * 
      */
-    public Output</* @Nullable */ List<MountPointMapResponse>> shareMappings() {
-        return this.shareMappings;
+    public Output<Optional<List<MountPointMapResponse>>> shareMappings() {
+        return Codegen.optional(this.shareMappings);
     }
     /**
      * Role configured on ASE resource

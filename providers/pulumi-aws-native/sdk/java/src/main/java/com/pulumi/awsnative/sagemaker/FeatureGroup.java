@@ -15,6 +15,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -34,8 +35,8 @@ public class FeatureGroup extends com.pulumi.resources.CustomResource {
      * @return Description about the FeatureGroup.
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * The Event Time Feature Name.
@@ -82,14 +83,14 @@ public class FeatureGroup extends com.pulumi.resources.CustomResource {
     @Export(name="offlineStoreConfig", type=OfflineStoreConfigProperties.class, parameters={})
     private Output</* @Nullable */ OfflineStoreConfigProperties> offlineStoreConfig;
 
-    public Output</* @Nullable */ OfflineStoreConfigProperties> offlineStoreConfig() {
-        return this.offlineStoreConfig;
+    public Output<Optional<OfflineStoreConfigProperties>> offlineStoreConfig() {
+        return Codegen.optional(this.offlineStoreConfig);
     }
     @Export(name="onlineStoreConfig", type=OnlineStoreConfigProperties.class, parameters={})
     private Output</* @Nullable */ OnlineStoreConfigProperties> onlineStoreConfig;
 
-    public Output</* @Nullable */ OnlineStoreConfigProperties> onlineStoreConfig() {
-        return this.onlineStoreConfig;
+    public Output<Optional<OnlineStoreConfigProperties>> onlineStoreConfig() {
+        return Codegen.optional(this.onlineStoreConfig);
     }
     /**
      * The Record Identifier Feature Name.
@@ -116,8 +117,8 @@ public class FeatureGroup extends com.pulumi.resources.CustomResource {
      * @return Role Arn
      * 
      */
-    public Output</* @Nullable */ String> roleArn() {
-        return this.roleArn;
+    public Output<Optional<String>> roleArn() {
+        return Codegen.optional(this.roleArn);
     }
     /**
      * An array of key-value pair to apply to this resource.
@@ -130,8 +131,8 @@ public class FeatureGroup extends com.pulumi.resources.CustomResource {
      * @return An array of key-value pair to apply to this resource.
      * 
      */
-    public Output</* @Nullable */ List<FeatureGroupTag>> tags() {
-        return this.tags;
+    public Output<Optional<List<FeatureGroupTag>>> tags() {
+        return Codegen.optional(this.tags);
     }
 
     /**

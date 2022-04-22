@@ -18,6 +18,7 @@ import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -47,8 +48,8 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      * @return If true , major version upgrades can be applied during the maintenance window to the Amazon Redshift engine that is running on the cluster. Default is true
      * 
      */
-    public Output</* @Nullable */ Boolean> allowVersionUpgrade() {
-        return this.allowVersionUpgrade;
+    public Output<Optional<Boolean>> allowVersionUpgrade() {
+        return Codegen.optional(this.allowVersionUpgrade);
     }
     /**
      * Amazon Resource Name (ARN) of cluster
@@ -75,8 +76,8 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      * @return The number of days that automated snapshots are retained. If the value is 0, automated snapshots are disabled. Even if automated snapshots are disabled, you can still create manual snapshots when you want with create-cluster-snapshot. Default is 1.
      * 
      */
-    public Output</* @Nullable */ Integer> automatedSnapshotRetentionPeriod() {
-        return this.automatedSnapshotRetentionPeriod;
+    public Output<Optional<Integer>> automatedSnapshotRetentionPeriod() {
+        return Codegen.optional(this.automatedSnapshotRetentionPeriod);
     }
     /**
      * The EC2 Availability Zone (AZ) in which you want Amazon Redshift to provision the cluster. For example, if you have several EC2 instances running in a specific Availability Zone, then you might want the cluster to be provisioned in the same zone in order to decrease network latency.
@@ -219,8 +220,8 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      * The version selected runs on all the nodes in the cluster.
      * 
      */
-    public Output</* @Nullable */ String> clusterVersion() {
-        return this.clusterVersion;
+    public Output<Optional<String>> clusterVersion() {
+        return Codegen.optional(this.clusterVersion);
     }
     /**
      * The name of the first database to be created when the cluster is created.
@@ -263,8 +264,8 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      * @return The Elastic IP (EIP) address for the cluster.
      * 
      */
-    public Output</* @Nullable */ String> elasticIp() {
-        return this.elasticIp;
+    public Output<Optional<String>> elasticIp() {
+        return Codegen.optional(this.elasticIp);
     }
     /**
      * If true , the data in the cluster is encrypted at rest.
@@ -277,8 +278,8 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      * @return If true , the data in the cluster is encrypted at rest.
      * 
      */
-    public Output</* @Nullable */ Boolean> encrypted() {
-        return this.encrypted;
+    public Output<Optional<Boolean>> encrypted() {
+        return Codegen.optional(this.encrypted);
     }
     /**
      * The connection endpoint
@@ -319,8 +320,8 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      * @return The identifier of the final snapshot that is to be created immediately before deleting the cluster. If this parameter is provided, `skip_final_snapshot` must be false.
      * 
      */
-    public Output</* @Nullable */ String> finalSnapshotIdentifier() {
-        return this.finalSnapshotIdentifier;
+    public Output<Optional<String>> finalSnapshotIdentifier() {
+        return Codegen.optional(this.finalSnapshotIdentifier);
     }
     /**
      * A list of IAM Role ARNs to associate with the cluster. A Maximum of 10 can be associated to the cluster at any time.
@@ -361,8 +362,8 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      * @return Logging, documented below.
      * 
      */
-    public Output</* @Nullable */ ClusterLogging> logging() {
-        return this.logging;
+    public Output<Optional<ClusterLogging>> logging() {
+        return Codegen.optional(this.logging);
     }
     /**
      * Password for the master DB user.
@@ -379,8 +380,8 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      * contain at least one uppercase letter, one lowercase letter, and one number.
      * 
      */
-    public Output</* @Nullable */ String> masterPassword() {
-        return this.masterPassword;
+    public Output<Optional<String>> masterPassword() {
+        return Codegen.optional(this.masterPassword);
     }
     /**
      * Username for the master DB user.
@@ -393,8 +394,8 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      * @return Username for the master DB user.
      * 
      */
-    public Output</* @Nullable */ String> masterUsername() {
-        return this.masterUsername;
+    public Output<Optional<String>> masterUsername() {
+        return Codegen.optional(this.masterUsername);
     }
     /**
      * The node type to be provisioned for the cluster.
@@ -421,8 +422,8 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      * @return The number of compute nodes in the cluster. This parameter is required when the ClusterType parameter is specified as multi-node. Default is 1.
      * 
      */
-    public Output</* @Nullable */ Integer> numberOfNodes() {
-        return this.numberOfNodes;
+    public Output<Optional<Integer>> numberOfNodes() {
+        return Codegen.optional(this.numberOfNodes);
     }
     /**
      * The AWS customer account used to create or copy the snapshot. Required if you are restoring a snapshot you do not own, optional if you own the snapshot.
@@ -435,8 +436,8 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      * @return The AWS customer account used to create or copy the snapshot. Required if you are restoring a snapshot you do not own, optional if you own the snapshot.
      * 
      */
-    public Output</* @Nullable */ String> ownerAccount() {
-        return this.ownerAccount;
+    public Output<Optional<String>> ownerAccount() {
+        return Codegen.optional(this.ownerAccount);
     }
     /**
      * The port number on which the cluster accepts incoming connections.
@@ -451,8 +452,8 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      * The cluster is accessible only via the JDBC and ODBC connection strings. Part of the connection string requires the port on which the cluster will listen for incoming connections. Default port is 5439.
      * 
      */
-    public Output</* @Nullable */ Integer> port() {
-        return this.port;
+    public Output<Optional<Integer>> port() {
+        return Codegen.optional(this.port);
     }
     /**
      * The weekly time range (in UTC) during which automated cluster maintenance can occur.
@@ -481,8 +482,8 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      * @return If true, the cluster can be accessed from a public network. Default is `true`.
      * 
      */
-    public Output</* @Nullable */ Boolean> publiclyAccessible() {
-        return this.publiclyAccessible;
+    public Output<Optional<Boolean>> publiclyAccessible() {
+        return Codegen.optional(this.publiclyAccessible);
     }
     /**
      * Determines whether a final snapshot of the cluster is created before Amazon Redshift deletes the cluster. If true , a final cluster snapshot is not created. If false , a final cluster snapshot is created before the cluster is deleted. Default is false.
@@ -495,8 +496,8 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      * @return Determines whether a final snapshot of the cluster is created before Amazon Redshift deletes the cluster. If true , a final cluster snapshot is not created. If false , a final cluster snapshot is created before the cluster is deleted. Default is false.
      * 
      */
-    public Output</* @Nullable */ Boolean> skipFinalSnapshot() {
-        return this.skipFinalSnapshot;
+    public Output<Optional<Boolean>> skipFinalSnapshot() {
+        return Codegen.optional(this.skipFinalSnapshot);
     }
     /**
      * The name of the cluster the source snapshot was created from.
@@ -509,8 +510,8 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      * @return The name of the cluster the source snapshot was created from.
      * 
      */
-    public Output</* @Nullable */ String> snapshotClusterIdentifier() {
-        return this.snapshotClusterIdentifier;
+    public Output<Optional<String>> snapshotClusterIdentifier() {
+        return Codegen.optional(this.snapshotClusterIdentifier);
     }
     /**
      * Configuration of automatic copy of snapshots from one region to another. Documented below.
@@ -523,8 +524,8 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      * @return Configuration of automatic copy of snapshots from one region to another. Documented below.
      * 
      */
-    public Output</* @Nullable */ ClusterSnapshotCopy> snapshotCopy() {
-        return this.snapshotCopy;
+    public Output<Optional<ClusterSnapshotCopy>> snapshotCopy() {
+        return Codegen.optional(this.snapshotCopy);
     }
     /**
      * The name of the snapshot from which to create the new cluster.
@@ -537,8 +538,8 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      * @return The name of the snapshot from which to create the new cluster.
      * 
      */
-    public Output</* @Nullable */ String> snapshotIdentifier() {
-        return this.snapshotIdentifier;
+    public Output<Optional<String>> snapshotIdentifier() {
+        return Codegen.optional(this.snapshotIdentifier);
     }
     /**
      * A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
@@ -551,8 +552,8 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      * @return A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.

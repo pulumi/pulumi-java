@@ -12,6 +12,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -37,8 +38,8 @@ public class Graph extends com.pulumi.resources.CustomResource {
     @Export(name="tags", type=List.class, parameters={GraphTag.class})
     private Output</* @Nullable */ List<GraphTag>> tags;
 
-    public Output</* @Nullable */ List<GraphTag>> tags() {
-        return this.tags;
+    public Output<Optional<List<GraphTag>>> tags() {
+        return Codegen.optional(this.tags);
     }
 
     /**

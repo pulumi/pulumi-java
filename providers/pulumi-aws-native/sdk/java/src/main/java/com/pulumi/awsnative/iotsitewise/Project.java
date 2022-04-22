@@ -12,6 +12,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -31,8 +32,8 @@ public class Project extends com.pulumi.resources.CustomResource {
      * @return The IDs of the assets to be associated to the project.
      * 
      */
-    public Output</* @Nullable */ List<String>> assetIds() {
-        return this.assetIds;
+    public Output<Optional<List<String>>> assetIds() {
+        return Codegen.optional(this.assetIds);
     }
     /**
      * The ID of the portal in which to create the project.
@@ -73,8 +74,8 @@ public class Project extends com.pulumi.resources.CustomResource {
      * @return A description for the project.
      * 
      */
-    public Output</* @Nullable */ String> projectDescription() {
-        return this.projectDescription;
+    public Output<Optional<String>> projectDescription() {
+        return Codegen.optional(this.projectDescription);
     }
     /**
      * The ID of the project.
@@ -115,8 +116,8 @@ public class Project extends com.pulumi.resources.CustomResource {
      * @return A list of key-value pairs that contain metadata for the project.
      * 
      */
-    public Output</* @Nullable */ List<ProjectTag>> tags() {
-        return this.tags;
+    public Output<Optional<List<ProjectTag>>> tags() {
+        return Codegen.optional(this.tags);
     }
 
     /**

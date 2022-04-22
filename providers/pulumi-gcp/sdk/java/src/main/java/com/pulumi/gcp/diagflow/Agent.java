@@ -14,6 +14,7 @@ import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -82,8 +83,8 @@ public class Agent extends com.pulumi.resources.CustomResource {
      * from the API will be shown in the [avatarUriBackend] field.
      * 
      */
-    public Output</* @Nullable */ String> avatarUri() {
-        return this.avatarUri;
+    public Output<Optional<String>> avatarUri() {
+        return Codegen.optional(this.avatarUri);
     }
     /**
      * The URI of the agent&#39;s avatar as returned from the API. Output only. To provide an image URL for the agent avatar, the
@@ -120,8 +121,8 @@ public class Agent extends com.pulumi.resources.CustomResource {
      * default of 0.3 is used.
      * 
      */
-    public Output</* @Nullable */ Double> classificationThreshold() {
-        return this.classificationThreshold;
+    public Output<Optional<Double>> classificationThreshold() {
+        return Codegen.optional(this.classificationThreshold);
     }
     /**
      * The default language of the agent as a language tag. [See Language Support](https://cloud.google.com/dialogflow/docs/reference/language)
@@ -150,8 +151,8 @@ public class Agent extends com.pulumi.resources.CustomResource {
      * @return The description of this agent. The maximum length is 500 characters. If exceeded, the request is rejected.
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * The name of this agent.
@@ -178,8 +179,8 @@ public class Agent extends com.pulumi.resources.CustomResource {
      * @return Determines whether this agent should log conversation queries.
      * 
      */
-    public Output</* @Nullable */ Boolean> enableLogging() {
-        return this.enableLogging;
+    public Output<Optional<Boolean>> enableLogging() {
+        return Codegen.optional(this.enableLogging);
     }
     /**
      * Determines how intents are detected from user queries.
@@ -232,8 +233,8 @@ public class Agent extends com.pulumi.resources.CustomResource {
      * @return The list of all languages supported by this agent (except for the defaultLanguageCode).
      * 
      */
-    public Output</* @Nullable */ List<String>> supportedLanguageCodes() {
-        return this.supportedLanguageCodes;
+    public Output<Optional<List<String>>> supportedLanguageCodes() {
+        return Codegen.optional(this.supportedLanguageCodes);
     }
     /**
      * The agent tier. If not specified, TIER_STANDARD is assumed.
@@ -256,8 +257,8 @@ public class Agent extends com.pulumi.resources.CustomResource {
      *   the the provider state and Dialogflow if the agent tier is changed outside of the provider.
      * 
      */
-    public Output</* @Nullable */ String> tier() {
-        return this.tier;
+    public Output<Optional<String>> tier() {
+        return Codegen.optional(this.tier);
     }
     /**
      * The time zone of this agent from the [time zone database](https://www.iana.org/time-zones), e.g., America/New_York,

@@ -17,6 +17,7 @@ import java.lang.Object;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -44,8 +45,8 @@ public class Resource extends com.pulumi.resources.CustomResource {
      * @return The identity of the resource.
      * 
      */
-    public Output</* @Nullable */ IdentityResponse> identity() {
-        return this.identity;
+    public Output<Optional<IdentityResponse>> identity() {
+        return Codegen.optional(this.identity);
     }
     /**
      * The kind of the resource.
@@ -58,8 +59,8 @@ public class Resource extends com.pulumi.resources.CustomResource {
      * @return The kind of the resource.
      * 
      */
-    public Output</* @Nullable */ String> kind() {
-        return this.kind;
+    public Output<Optional<String>> kind() {
+        return Codegen.optional(this.kind);
     }
     /**
      * Resource location
@@ -72,8 +73,8 @@ public class Resource extends com.pulumi.resources.CustomResource {
      * @return Resource location
      * 
      */
-    public Output</* @Nullable */ String> location() {
-        return this.location;
+    public Output<Optional<String>> location() {
+        return Codegen.optional(this.location);
     }
     /**
      * ID of the resource that manages this resource.
@@ -86,8 +87,8 @@ public class Resource extends com.pulumi.resources.CustomResource {
      * @return ID of the resource that manages this resource.
      * 
      */
-    public Output</* @Nullable */ String> managedBy() {
-        return this.managedBy;
+    public Output<Optional<String>> managedBy() {
+        return Codegen.optional(this.managedBy);
     }
     /**
      * Resource name
@@ -114,8 +115,8 @@ public class Resource extends com.pulumi.resources.CustomResource {
      * @return The plan of the resource.
      * 
      */
-    public Output</* @Nullable */ PlanResponse> plan() {
-        return this.plan;
+    public Output<Optional<PlanResponse>> plan() {
+        return Codegen.optional(this.plan);
     }
     /**
      * The resource properties.
@@ -142,8 +143,8 @@ public class Resource extends com.pulumi.resources.CustomResource {
      * @return The SKU of the resource.
      * 
      */
-    public Output</* @Nullable */ SkuResponse> sku() {
-        return this.sku;
+    public Output<Optional<SkuResponse>> sku() {
+        return Codegen.optional(this.sku);
     }
     /**
      * Resource tags
@@ -156,8 +157,8 @@ public class Resource extends com.pulumi.resources.CustomResource {
      * @return Resource tags
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * Resource type

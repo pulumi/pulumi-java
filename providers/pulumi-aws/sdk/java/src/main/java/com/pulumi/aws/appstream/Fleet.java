@@ -17,6 +17,7 @@ import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -186,8 +187,8 @@ public class Fleet extends com.pulumi.resources.CustomResource {
      * @return Amount of time that users can be idle (inactive) before they are disconnected from their streaming session and the `disconnect_timeout_in_seconds` time interval begins.
      * 
      */
-    public Output</* @Nullable */ Integer> idleDisconnectTimeoutInSeconds() {
-        return this.idleDisconnectTimeoutInSeconds;
+    public Output<Optional<Integer>> idleDisconnectTimeoutInSeconds() {
+        return Codegen.optional(this.idleDisconnectTimeoutInSeconds);
     }
     /**
      * ARN of the public, private, or shared image to use.
@@ -298,8 +299,8 @@ public class Fleet extends com.pulumi.resources.CustomResource {
      * @return Map of tags to attach to AppStream instances.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     @Export(name="tagsAll", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> tagsAll;

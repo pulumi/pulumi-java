@@ -13,6 +13,7 @@ import com.pulumi.gcp.certificateauthority.inputs.CaPoolIamBindingState;
 import com.pulumi.gcp.certificateauthority.outputs.CaPoolIamBindingCondition;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -76,8 +77,8 @@ public class CaPoolIamBinding extends com.pulumi.resources.CustomResource {
     @Export(name="condition", type=CaPoolIamBindingCondition.class, parameters={})
     private Output</* @Nullable */ CaPoolIamBindingCondition> condition;
 
-    public Output</* @Nullable */ CaPoolIamBindingCondition> condition() {
-        return this.condition;
+    public Output<Optional<CaPoolIamBindingCondition>> condition() {
+        return Codegen.optional(this.condition);
     }
     /**
      * (Computed) The etag of the IAM policy.

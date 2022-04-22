@@ -14,6 +14,7 @@ import com.pulumi.gcp.projects.outputs.AccessApprovalSettingsEnrolledService;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -129,8 +130,8 @@ public class AccessApprovalSettings extends com.pulumi.resources.CustomResource 
      * Deprecated in favor of `project_id`
      * 
      */
-    public Output</* @Nullable */ String> project() {
-        return this.project;
+    public Output<Optional<String>> project() {
+        return Codegen.optional(this.project);
     }
     /**
      * ID of the project of the access approval settings.

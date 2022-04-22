@@ -12,6 +12,7 @@ import com.pulumi.gcp.containeranalysis.OccurenceArgs;
 import com.pulumi.gcp.containeranalysis.inputs.OccurenceState;
 import com.pulumi.gcp.containeranalysis.outputs.OccurenceAttestation;
 import java.lang.String;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -164,8 +165,8 @@ public class Occurence extends com.pulumi.resources.CustomResource {
      * @return A description of actions that can be taken to remedy the note.
      * 
      */
-    public Output</* @Nullable */ String> remediation() {
-        return this.remediation;
+    public Output<Optional<String>> remediation() {
+        return Codegen.optional(this.remediation);
     }
     /**
      * Required. Immutable. A URI that represents the resource for which

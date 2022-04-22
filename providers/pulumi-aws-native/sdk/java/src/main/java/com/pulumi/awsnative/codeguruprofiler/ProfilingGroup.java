@@ -15,6 +15,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -34,8 +35,8 @@ public class ProfilingGroup extends com.pulumi.resources.CustomResource {
      * @return The agent permissions attached to this profiling group.
      * 
      */
-    public Output</* @Nullable */ AgentPermissionsProperties> agentPermissions() {
-        return this.agentPermissions;
+    public Output<Optional<AgentPermissionsProperties>> agentPermissions() {
+        return Codegen.optional(this.agentPermissions);
     }
     /**
      * Configuration for Notification Channels for Anomaly Detection feature in CodeGuru Profiler which enables customers to detect anomalies in the application profile for those methods that represent the highest proportion of CPU time or latency
@@ -48,8 +49,8 @@ public class ProfilingGroup extends com.pulumi.resources.CustomResource {
      * @return Configuration for Notification Channels for Anomaly Detection feature in CodeGuru Profiler which enables customers to detect anomalies in the application profile for those methods that represent the highest proportion of CPU time or latency
      * 
      */
-    public Output</* @Nullable */ List<ProfilingGroupChannel>> anomalyDetectionNotificationConfiguration() {
-        return this.anomalyDetectionNotificationConfiguration;
+    public Output<Optional<List<ProfilingGroupChannel>>> anomalyDetectionNotificationConfiguration() {
+        return Codegen.optional(this.anomalyDetectionNotificationConfiguration);
     }
     /**
      * The Amazon Resource Name (ARN) of the specified profiling group.
@@ -76,8 +77,8 @@ public class ProfilingGroup extends com.pulumi.resources.CustomResource {
      * @return The compute platform of the profiling group.
      * 
      */
-    public Output</* @Nullable */ ProfilingGroupComputePlatform> computePlatform() {
-        return this.computePlatform;
+    public Output<Optional<ProfilingGroupComputePlatform>> computePlatform() {
+        return Codegen.optional(this.computePlatform);
     }
     /**
      * The name of the profiling group.
@@ -104,8 +105,8 @@ public class ProfilingGroup extends com.pulumi.resources.CustomResource {
      * @return The tags associated with a profiling group.
      * 
      */
-    public Output</* @Nullable */ List<ProfilingGroupTag>> tags() {
-        return this.tags;
+    public Output<Optional<List<ProfilingGroupTag>>> tags() {
+        return Codegen.optional(this.tags);
     }
 
     /**

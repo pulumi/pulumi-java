@@ -14,6 +14,7 @@ import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -64,8 +65,8 @@ public class ReplicaExternalKey extends com.pulumi.resources.CustomResource {
      * The default value is `false`.
      * 
      */
-    public Output</* @Nullable */ Boolean> bypassPolicyLockoutSafetyCheck() {
-        return this.bypassPolicyLockoutSafetyCheck;
+    public Output<Optional<Boolean>> bypassPolicyLockoutSafetyCheck() {
+        return Codegen.optional(this.bypassPolicyLockoutSafetyCheck);
     }
     /**
      * The waiting period, specified in number of days. After the waiting period ends, AWS KMS deletes the KMS key.
@@ -80,8 +81,8 @@ public class ReplicaExternalKey extends com.pulumi.resources.CustomResource {
      * If you specify a value, it must be between `7` and `30`, inclusive. If you do not specify a value, it defaults to `30`.
      * 
      */
-    public Output</* @Nullable */ Integer> deletionWindowInDays() {
-        return this.deletionWindowInDays;
+    public Output<Optional<Integer>> deletionWindowInDays() {
+        return Codegen.optional(this.deletionWindowInDays);
     }
     /**
      * A description of the KMS key.
@@ -94,8 +95,8 @@ public class ReplicaExternalKey extends com.pulumi.resources.CustomResource {
      * @return A description of the KMS key.
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * Specifies whether the replica key is enabled. Disabled KMS keys cannot be used in cryptographic operations. Keys pending import can only be `false`. Imported keys default to `true` unless expired.
@@ -150,8 +151,8 @@ public class ReplicaExternalKey extends com.pulumi.resources.CustomResource {
      * @return Base64 encoded 256-bit symmetric encryption key material to import. The KMS key is permanently associated with this key material. The same key material can be [reimported](https://docs.aws.amazon.com/kms/latest/developerguide/importing-keys.html#reimport-key-material), but you cannot import different key material.
      * 
      */
-    public Output</* @Nullable */ String> keyMaterialBase64() {
-        return this.keyMaterialBase64;
+    public Output<Optional<String>> keyMaterialBase64() {
+        return Codegen.optional(this.keyMaterialBase64);
     }
     /**
      * The state of the replica key.
@@ -212,8 +213,8 @@ public class ReplicaExternalKey extends com.pulumi.resources.CustomResource {
      * @return A map of tags to assign to the replica key. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
@@ -240,8 +241,8 @@ public class ReplicaExternalKey extends com.pulumi.resources.CustomResource {
      * @return Time at which the imported key material expires. When the key material expires, AWS KMS deletes the key material and the key becomes unusable. If not specified, key material does not expire. Valid values: [RFC3339 time string](https://tools.ietf.org/html/rfc3339#section-5.8) (`YYYY-MM-DDTHH:MM:SSZ`)
      * 
      */
-    public Output</* @Nullable */ String> validTo() {
-        return this.validTo;
+    public Output<Optional<String>> validTo() {
+        return Codegen.optional(this.validTo);
     }
 
     /**

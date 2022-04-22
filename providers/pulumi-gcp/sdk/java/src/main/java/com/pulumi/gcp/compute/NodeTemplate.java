@@ -14,6 +14,7 @@ import com.pulumi.gcp.compute.outputs.NodeTemplateNodeTypeFlexibility;
 import com.pulumi.gcp.compute.outputs.NodeTemplateServerBinding;
 import java.lang.String;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -67,8 +68,8 @@ public class NodeTemplate extends com.pulumi.resources.CustomResource {
      * Possible values are `ENABLED` and `NONE`.
      * 
      */
-    public Output</* @Nullable */ String> cpuOvercommitType() {
-        return this.cpuOvercommitType;
+    public Output<Optional<String>> cpuOvercommitType() {
+        return Codegen.optional(this.cpuOvercommitType);
     }
     /**
      * Creation timestamp in RFC3339 text format.
@@ -95,8 +96,8 @@ public class NodeTemplate extends com.pulumi.resources.CustomResource {
      * @return An optional textual description of the resource.
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * Name of the resource.
@@ -125,8 +126,8 @@ public class NodeTemplate extends com.pulumi.resources.CustomResource {
      * instance scheduling.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> nodeAffinityLabels() {
-        return this.nodeAffinityLabels;
+    public Output<Optional<Map<String,String>>> nodeAffinityLabels() {
+        return Codegen.optional(this.nodeAffinityLabels);
     }
     /**
      * Node type to use for nodes group that are created from this template.
@@ -141,8 +142,8 @@ public class NodeTemplate extends com.pulumi.resources.CustomResource {
      * Only one of nodeTypeFlexibility and nodeType can be specified.
      * 
      */
-    public Output</* @Nullable */ String> nodeType() {
-        return this.nodeType;
+    public Output<Optional<String>> nodeType() {
+        return Codegen.optional(this.nodeType);
     }
     /**
      * Flexible properties for the desired node type. Node groups that
@@ -163,8 +164,8 @@ public class NodeTemplate extends com.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ NodeTemplateNodeTypeFlexibility> nodeTypeFlexibility() {
-        return this.nodeTypeFlexibility;
+    public Output<Optional<NodeTemplateNodeTypeFlexibility>> nodeTypeFlexibility() {
+        return Codegen.optional(this.nodeTypeFlexibility);
     }
     /**
      * The ID of the project in which the resource belongs.

@@ -17,6 +17,7 @@ import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -54,8 +55,8 @@ public class MetricAlarm extends com.pulumi.resources.CustomResource {
      * @return Indicates whether or not actions should be executed during any changes to the alarm&#39;s state. Defaults to `true`.
      * 
      */
-    public Output</* @Nullable */ Boolean> actionsEnabled() {
-        return this.actionsEnabled;
+    public Output<Optional<Boolean>> actionsEnabled() {
+        return Codegen.optional(this.actionsEnabled);
     }
     /**
      * The list of actions to execute when this alarm transitions into an ALARM state from any other state. Each action is specified as an Amazon Resource Name (ARN).
@@ -68,8 +69,8 @@ public class MetricAlarm extends com.pulumi.resources.CustomResource {
      * @return The list of actions to execute when this alarm transitions into an ALARM state from any other state. Each action is specified as an Amazon Resource Name (ARN).
      * 
      */
-    public Output</* @Nullable */ List<String>> alarmActions() {
-        return this.alarmActions;
+    public Output<Optional<List<String>>> alarmActions() {
+        return Codegen.optional(this.alarmActions);
     }
     /**
      * The description for the alarm.
@@ -82,8 +83,8 @@ public class MetricAlarm extends com.pulumi.resources.CustomResource {
      * @return The description for the alarm.
      * 
      */
-    public Output</* @Nullable */ String> alarmDescription() {
-        return this.alarmDescription;
+    public Output<Optional<String>> alarmDescription() {
+        return Codegen.optional(this.alarmDescription);
     }
     /**
      * The ARN of the CloudWatch Metric Alarm.
@@ -124,8 +125,8 @@ public class MetricAlarm extends com.pulumi.resources.CustomResource {
      * @return The number of datapoints that must be breaching to trigger the alarm.
      * 
      */
-    public Output</* @Nullable */ Integer> datapointsToAlarm() {
-        return this.datapointsToAlarm;
+    public Output<Optional<Integer>> datapointsToAlarm() {
+        return Codegen.optional(this.datapointsToAlarm);
     }
     /**
      * The dimensions for this metric.  For the list of available dimensions see the AWS documentation [here](http://docs.aws.amazon.com/AmazonCloudWatch/latest/DeveloperGuide/CW_Support_For_AWS.html).
@@ -138,8 +139,8 @@ public class MetricAlarm extends com.pulumi.resources.CustomResource {
      * @return The dimensions for this metric.  For the list of available dimensions see the AWS documentation [here](http://docs.aws.amazon.com/AmazonCloudWatch/latest/DeveloperGuide/CW_Support_For_AWS.html).
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> dimensions() {
-        return this.dimensions;
+    public Output<Optional<Map<String,String>>> dimensions() {
+        return Codegen.optional(this.dimensions);
     }
     /**
      * Used only for alarms
@@ -190,8 +191,8 @@ public class MetricAlarm extends com.pulumi.resources.CustomResource {
      * @return The percentile statistic for the metric associated with the alarm. Specify a value between p0.0 and p100.
      * 
      */
-    public Output</* @Nullable */ String> extendedStatistic() {
-        return this.extendedStatistic;
+    public Output<Optional<String>> extendedStatistic() {
+        return Codegen.optional(this.extendedStatistic);
     }
     /**
      * The list of actions to execute when this alarm transitions into an INSUFFICIENT_DATA state from any other state. Each action is specified as an Amazon Resource Name (ARN).
@@ -204,8 +205,8 @@ public class MetricAlarm extends com.pulumi.resources.CustomResource {
      * @return The list of actions to execute when this alarm transitions into an INSUFFICIENT_DATA state from any other state. Each action is specified as an Amazon Resource Name (ARN).
      * 
      */
-    public Output</* @Nullable */ List<String>> insufficientDataActions() {
-        return this.insufficientDataActions;
+    public Output<Optional<List<String>>> insufficientDataActions() {
+        return Codegen.optional(this.insufficientDataActions);
     }
     /**
      * The name for this metric.
@@ -220,8 +221,8 @@ public class MetricAlarm extends com.pulumi.resources.CustomResource {
      * See docs for [supported metrics](https://docs.aws.amazon.com/AmazonCloudWatch/latest/DeveloperGuide/CW_Support_For_AWS.html).
      * 
      */
-    public Output</* @Nullable */ String> metricName() {
-        return this.metricName;
+    public Output<Optional<String>> metricName() {
+        return Codegen.optional(this.metricName);
     }
     /**
      * Enables you to create an alarm based on a metric math expression. You may specify at most 20.
@@ -234,8 +235,8 @@ public class MetricAlarm extends com.pulumi.resources.CustomResource {
      * @return Enables you to create an alarm based on a metric math expression. You may specify at most 20.
      * 
      */
-    public Output</* @Nullable */ List<MetricAlarmMetricQuery>> metricQueries() {
-        return this.metricQueries;
+    public Output<Optional<List<MetricAlarmMetricQuery>>> metricQueries() {
+        return Codegen.optional(this.metricQueries);
     }
     /**
      * The descriptive name for the alarm. This name must be unique within the user&#39;s AWS account
@@ -264,8 +265,8 @@ public class MetricAlarm extends com.pulumi.resources.CustomResource {
      * See docs for [supported metrics](https://docs.aws.amazon.com/AmazonCloudWatch/latest/DeveloperGuide/CW_Support_For_AWS.html).
      * 
      */
-    public Output</* @Nullable */ String> namespace() {
-        return this.namespace;
+    public Output<Optional<String>> namespace() {
+        return Codegen.optional(this.namespace);
     }
     /**
      * The list of actions to execute when this alarm transitions into an OK state from any other state. Each action is specified as an Amazon Resource Name (ARN).
@@ -278,8 +279,8 @@ public class MetricAlarm extends com.pulumi.resources.CustomResource {
      * @return The list of actions to execute when this alarm transitions into an OK state from any other state. Each action is specified as an Amazon Resource Name (ARN).
      * 
      */
-    public Output</* @Nullable */ List<String>> okActions() {
-        return this.okActions;
+    public Output<Optional<List<String>>> okActions() {
+        return Codegen.optional(this.okActions);
     }
     /**
      * The period in seconds over which the specified `stat` is applied.
@@ -292,8 +293,8 @@ public class MetricAlarm extends com.pulumi.resources.CustomResource {
      * @return The period in seconds over which the specified `stat` is applied.
      * 
      */
-    public Output</* @Nullable */ Integer> period() {
-        return this.period;
+    public Output<Optional<Integer>> period() {
+        return Codegen.optional(this.period);
     }
     /**
      * The statistic to apply to the alarm&#39;s associated metric.
@@ -308,8 +309,8 @@ public class MetricAlarm extends com.pulumi.resources.CustomResource {
      * Either of the following is supported: `SampleCount`, `Average`, `Sum`, `Minimum`, `Maximum`
      * 
      */
-    public Output</* @Nullable */ String> statistic() {
-        return this.statistic;
+    public Output<Optional<String>> statistic() {
+        return Codegen.optional(this.statistic);
     }
     /**
      * A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
@@ -322,8 +323,8 @@ public class MetricAlarm extends com.pulumi.resources.CustomResource {
      * @return A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * A map of tags assigned to the resource, including those inherited from the provider .
@@ -350,8 +351,8 @@ public class MetricAlarm extends com.pulumi.resources.CustomResource {
      * @return The value against which the specified statistic is compared. This parameter is required for alarms based on static thresholds, but should not be used for alarms based on anomaly detection models.
      * 
      */
-    public Output</* @Nullable */ Double> threshold() {
-        return this.threshold;
+    public Output<Optional<Double>> threshold() {
+        return Codegen.optional(this.threshold);
     }
     /**
      * If this is an alarm based on an anomaly detection model, make this value match the ID of the ANOMALY_DETECTION_BAND function.
@@ -364,8 +365,8 @@ public class MetricAlarm extends com.pulumi.resources.CustomResource {
      * @return If this is an alarm based on an anomaly detection model, make this value match the ID of the ANOMALY_DETECTION_BAND function.
      * 
      */
-    public Output</* @Nullable */ String> thresholdMetricId() {
-        return this.thresholdMetricId;
+    public Output<Optional<String>> thresholdMetricId() {
+        return Codegen.optional(this.thresholdMetricId);
     }
     /**
      * Sets how this alarm is to handle missing data points. The following values are supported: `missing`, `ignore`, `breaching` and `notBreaching`. Defaults to `missing`.
@@ -378,8 +379,8 @@ public class MetricAlarm extends com.pulumi.resources.CustomResource {
      * @return Sets how this alarm is to handle missing data points. The following values are supported: `missing`, `ignore`, `breaching` and `notBreaching`. Defaults to `missing`.
      * 
      */
-    public Output</* @Nullable */ String> treatMissingData() {
-        return this.treatMissingData;
+    public Output<Optional<String>> treatMissingData() {
+        return Codegen.optional(this.treatMissingData);
     }
     /**
      * The unit for this metric.
@@ -392,8 +393,8 @@ public class MetricAlarm extends com.pulumi.resources.CustomResource {
      * @return The unit for this metric.
      * 
      */
-    public Output</* @Nullable */ String> unit() {
-        return this.unit;
+    public Output<Optional<String>> unit() {
+        return Codegen.optional(this.unit);
     }
 
     /**

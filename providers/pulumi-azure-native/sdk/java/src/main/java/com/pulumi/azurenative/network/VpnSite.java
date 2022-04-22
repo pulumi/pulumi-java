@@ -20,6 +20,7 @@ import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -50,8 +51,8 @@ public class VpnSite extends com.pulumi.resources.CustomResource {
      * @return The AddressSpace that contains an array of IP address ranges.
      * 
      */
-    public Output</* @Nullable */ AddressSpaceResponse> addressSpace() {
-        return this.addressSpace;
+    public Output<Optional<AddressSpaceResponse>> addressSpace() {
+        return Codegen.optional(this.addressSpace);
     }
     /**
      * The set of bgp properties.
@@ -64,8 +65,8 @@ public class VpnSite extends com.pulumi.resources.CustomResource {
      * @return The set of bgp properties.
      * 
      */
-    public Output</* @Nullable */ BgpSettingsResponse> bgpProperties() {
-        return this.bgpProperties;
+    public Output<Optional<BgpSettingsResponse>> bgpProperties() {
+        return Codegen.optional(this.bgpProperties);
     }
     /**
      * The device properties.
@@ -78,8 +79,8 @@ public class VpnSite extends com.pulumi.resources.CustomResource {
      * @return The device properties.
      * 
      */
-    public Output</* @Nullable */ DevicePropertiesResponse> deviceProperties() {
-        return this.deviceProperties;
+    public Output<Optional<DevicePropertiesResponse>> deviceProperties() {
+        return Codegen.optional(this.deviceProperties);
     }
     /**
      * A unique read-only string that changes whenever the resource is updated.
@@ -106,8 +107,8 @@ public class VpnSite extends com.pulumi.resources.CustomResource {
      * @return The ip-address for the vpn-site.
      * 
      */
-    public Output</* @Nullable */ String> ipAddress() {
-        return this.ipAddress;
+    public Output<Optional<String>> ipAddress() {
+        return Codegen.optional(this.ipAddress);
     }
     /**
      * IsSecuritySite flag.
@@ -120,8 +121,8 @@ public class VpnSite extends com.pulumi.resources.CustomResource {
      * @return IsSecuritySite flag.
      * 
      */
-    public Output</* @Nullable */ Boolean> isSecuritySite() {
-        return this.isSecuritySite;
+    public Output<Optional<Boolean>> isSecuritySite() {
+        return Codegen.optional(this.isSecuritySite);
     }
     /**
      * Resource location.
@@ -162,8 +163,8 @@ public class VpnSite extends com.pulumi.resources.CustomResource {
      * @return Office365 Policy.
      * 
      */
-    public Output</* @Nullable */ O365PolicyPropertiesResponse> o365Policy() {
-        return this.o365Policy;
+    public Output<Optional<O365PolicyPropertiesResponse>> o365Policy() {
+        return Codegen.optional(this.o365Policy);
     }
     /**
      * The provisioning state of the VPN site resource.
@@ -190,8 +191,8 @@ public class VpnSite extends com.pulumi.resources.CustomResource {
      * @return The key for vpn-site that can be used for connections.
      * 
      */
-    public Output</* @Nullable */ String> siteKey() {
-        return this.siteKey;
+    public Output<Optional<String>> siteKey() {
+        return Codegen.optional(this.siteKey);
     }
     /**
      * Resource tags.
@@ -204,8 +205,8 @@ public class VpnSite extends com.pulumi.resources.CustomResource {
      * @return Resource tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * Resource type.
@@ -232,8 +233,8 @@ public class VpnSite extends com.pulumi.resources.CustomResource {
      * @return The VirtualWAN to which the vpnSite belongs.
      * 
      */
-    public Output</* @Nullable */ SubResourceResponse> virtualWan() {
-        return this.virtualWan;
+    public Output<Optional<SubResourceResponse>> virtualWan() {
+        return Codegen.optional(this.virtualWan);
     }
     /**
      * List of all vpn site links.
@@ -246,8 +247,8 @@ public class VpnSite extends com.pulumi.resources.CustomResource {
      * @return List of all vpn site links.
      * 
      */
-    public Output</* @Nullable */ List<VpnSiteLinkResponse>> vpnSiteLinks() {
-        return this.vpnSiteLinks;
+    public Output<Optional<List<VpnSiteLinkResponse>>> vpnSiteLinks() {
+        return Codegen.optional(this.vpnSiteLinks);
     }
 
     /**

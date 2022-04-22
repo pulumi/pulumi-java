@@ -18,6 +18,7 @@ import java.lang.Double;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -48,8 +49,8 @@ public class Volume extends com.pulumi.resources.CustomResource {
      * @return UUID v4 or resource identifier used to identify the Backup.
      * 
      */
-    public Output</* @Nullable */ String> backupId() {
-        return this.backupId;
+    public Output<Optional<String>> backupId() {
+        return Codegen.optional(this.backupId);
     }
     /**
      * Unique Baremetal Tenant Identifier.
@@ -90,8 +91,8 @@ public class Volume extends com.pulumi.resources.CustomResource {
      * @return DataProtection type volumes include an object containing details of the replication
      * 
      */
-    public Output</* @Nullable */ VolumePropertiesResponseDataProtection> dataProtection() {
-        return this.dataProtection;
+    public Output<Optional<VolumePropertiesResponseDataProtection>> dataProtection() {
+        return Codegen.optional(this.dataProtection);
     }
     /**
      * Encryption Key Source. Possible values are: &#39;Microsoft.NetApp&#39;
@@ -104,8 +105,8 @@ public class Volume extends com.pulumi.resources.CustomResource {
      * @return Encryption Key Source. Possible values are: &#39;Microsoft.NetApp&#39;
      * 
      */
-    public Output</* @Nullable */ String> encryptionKeySource() {
-        return this.encryptionKeySource;
+    public Output<Optional<String>> encryptionKeySource() {
+        return Codegen.optional(this.encryptionKeySource);
     }
     /**
      * Set of export policy rules
@@ -118,8 +119,8 @@ public class Volume extends com.pulumi.resources.CustomResource {
      * @return Set of export policy rules
      * 
      */
-    public Output</* @Nullable */ VolumePropertiesResponseExportPolicy> exportPolicy() {
-        return this.exportPolicy;
+    public Output<Optional<VolumePropertiesResponseExportPolicy>> exportPolicy() {
+        return Codegen.optional(this.exportPolicy);
     }
     /**
      * Unique FileSystem Identifier.
@@ -146,8 +147,8 @@ public class Volume extends com.pulumi.resources.CustomResource {
      * @return Restoring
      * 
      */
-    public Output</* @Nullable */ Boolean> isRestoring() {
-        return this.isRestoring;
+    public Output<Optional<Boolean>> isRestoring() {
+        return Codegen.optional(this.isRestoring);
     }
     /**
      * Describe if a volume is KerberosEnabled. To be use with swagger version 2020-05-01 or later
@@ -160,8 +161,8 @@ public class Volume extends com.pulumi.resources.CustomResource {
      * @return Describe if a volume is KerberosEnabled. To be use with swagger version 2020-05-01 or later
      * 
      */
-    public Output</* @Nullable */ Boolean> kerberosEnabled() {
-        return this.kerberosEnabled;
+    public Output<Optional<Boolean>> kerberosEnabled() {
+        return Codegen.optional(this.kerberosEnabled);
     }
     /**
      * Specifies whether LDAP is enabled or not for a given NFS volume.
@@ -174,8 +175,8 @@ public class Volume extends com.pulumi.resources.CustomResource {
      * @return Specifies whether LDAP is enabled or not for a given NFS volume.
      * 
      */
-    public Output</* @Nullable */ Boolean> ldapEnabled() {
-        return this.ldapEnabled;
+    public Output<Optional<Boolean>> ldapEnabled() {
+        return Codegen.optional(this.ldapEnabled);
     }
     /**
      * Resource location
@@ -230,8 +231,8 @@ public class Volume extends com.pulumi.resources.CustomResource {
      * @return Set of protocol types, default NFSv3, CIFS for SMB protocol
      * 
      */
-    public Output</* @Nullable */ List<String>> protocolTypes() {
-        return this.protocolTypes;
+    public Output<Optional<List<String>>> protocolTypes() {
+        return Codegen.optional(this.protocolTypes);
     }
     /**
      * Azure lifecycle management
@@ -258,8 +259,8 @@ public class Volume extends com.pulumi.resources.CustomResource {
      * @return The security style of volume, default unix, defaults to ntfs for dual protocol or CIFS protocol
      * 
      */
-    public Output</* @Nullable */ String> securityStyle() {
-        return this.securityStyle;
+    public Output<Optional<String>> securityStyle() {
+        return Codegen.optional(this.securityStyle);
     }
     /**
      * The service level of the file system
@@ -272,8 +273,8 @@ public class Volume extends com.pulumi.resources.CustomResource {
      * @return The service level of the file system
      * 
      */
-    public Output</* @Nullable */ String> serviceLevel() {
-        return this.serviceLevel;
+    public Output<Optional<String>> serviceLevel() {
+        return Codegen.optional(this.serviceLevel);
     }
     /**
      * Enables continuously available share property for smb volume. Only applicable for SMB volume
@@ -286,8 +287,8 @@ public class Volume extends com.pulumi.resources.CustomResource {
      * @return Enables continuously available share property for smb volume. Only applicable for SMB volume
      * 
      */
-    public Output</* @Nullable */ Boolean> smbContinuouslyAvailable() {
-        return this.smbContinuouslyAvailable;
+    public Output<Optional<Boolean>> smbContinuouslyAvailable() {
+        return Codegen.optional(this.smbContinuouslyAvailable);
     }
     /**
      * Enables encryption for in-flight smb3 data. Only applicable for SMB/DualProtocol volume. To be used with swagger version 2020-08-01 or later
@@ -300,8 +301,8 @@ public class Volume extends com.pulumi.resources.CustomResource {
      * @return Enables encryption for in-flight smb3 data. Only applicable for SMB/DualProtocol volume. To be used with swagger version 2020-08-01 or later
      * 
      */
-    public Output</* @Nullable */ Boolean> smbEncryption() {
-        return this.smbEncryption;
+    public Output<Optional<Boolean>> smbEncryption() {
+        return Codegen.optional(this.smbEncryption);
     }
     /**
      * If enabled (true) the volume will contain a read-only snapshot directory which provides access to each of the volume&#39;s snapshots (default to true).
@@ -314,8 +315,8 @@ public class Volume extends com.pulumi.resources.CustomResource {
      * @return If enabled (true) the volume will contain a read-only snapshot directory which provides access to each of the volume&#39;s snapshots (default to true).
      * 
      */
-    public Output</* @Nullable */ Boolean> snapshotDirectoryVisible() {
-        return this.snapshotDirectoryVisible;
+    public Output<Optional<Boolean>> snapshotDirectoryVisible() {
+        return Codegen.optional(this.snapshotDirectoryVisible);
     }
     /**
      * UUID v4 or resource identifier used to identify the Snapshot.
@@ -328,8 +329,8 @@ public class Volume extends com.pulumi.resources.CustomResource {
      * @return UUID v4 or resource identifier used to identify the Snapshot.
      * 
      */
-    public Output</* @Nullable */ String> snapshotId() {
-        return this.snapshotId;
+    public Output<Optional<String>> snapshotId() {
+        return Codegen.optional(this.snapshotId);
     }
     /**
      * The Azure Resource URI for a delegated subnet. Must have the delegation Microsoft.NetApp/volumes
@@ -356,14 +357,14 @@ public class Volume extends com.pulumi.resources.CustomResource {
      * @return Resource tags
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     @Export(name="throughputMibps", type=Double.class, parameters={})
     private Output</* @Nullable */ Double> throughputMibps;
 
-    public Output</* @Nullable */ Double> throughputMibps() {
-        return this.throughputMibps;
+    public Output<Optional<Double>> throughputMibps() {
+        return Codegen.optional(this.throughputMibps);
     }
     /**
      * Resource type
@@ -404,8 +405,8 @@ public class Volume extends com.pulumi.resources.CustomResource {
      * @return What type of volume is this
      * 
      */
-    public Output</* @Nullable */ String> volumeType() {
-        return this.volumeType;
+    public Output<Optional<String>> volumeType() {
+        return Codegen.optional(this.volumeType);
     }
 
     /**

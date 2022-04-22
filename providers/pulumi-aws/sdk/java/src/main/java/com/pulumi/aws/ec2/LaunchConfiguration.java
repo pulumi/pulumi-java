@@ -17,6 +17,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -141,8 +142,8 @@ public class LaunchConfiguration extends com.pulumi.resources.CustomResource {
      * @return Associate a public ip address with an instance in a VPC.
      * 
      */
-    public Output</* @Nullable */ Boolean> associatePublicIpAddress() {
-        return this.associatePublicIpAddress;
+    public Output<Optional<Boolean>> associatePublicIpAddress() {
+        return Codegen.optional(this.associatePublicIpAddress);
     }
     /**
      * Additional EBS block devices to attach to the
@@ -185,8 +186,8 @@ public class LaunchConfiguration extends com.pulumi.resources.CustomResource {
      * @return Enables/disables detailed monitoring. This is enabled by default.
      * 
      */
-    public Output</* @Nullable */ Boolean> enableMonitoring() {
-        return this.enableMonitoring;
+    public Output<Optional<Boolean>> enableMonitoring() {
+        return Codegen.optional(this.enableMonitoring);
     }
     /**
      * Customize Ephemeral (also known as
@@ -201,8 +202,8 @@ public class LaunchConfiguration extends com.pulumi.resources.CustomResource {
      * &#34;Instance Store&#34;) volumes on the instance. See Block Devices below for details.
      * 
      */
-    public Output</* @Nullable */ List<LaunchConfigurationEphemeralBlockDevice>> ephemeralBlockDevices() {
-        return this.ephemeralBlockDevices;
+    public Output<Optional<List<LaunchConfigurationEphemeralBlockDevice>>> ephemeralBlockDevices() {
+        return Codegen.optional(this.ephemeralBlockDevices);
     }
     /**
      * The name attribute of the IAM instance profile to associate
@@ -217,8 +218,8 @@ public class LaunchConfiguration extends com.pulumi.resources.CustomResource {
      * with launched instances.
      * 
      */
-    public Output</* @Nullable */ String> iamInstanceProfile() {
-        return this.iamInstanceProfile;
+    public Output<Optional<String>> iamInstanceProfile() {
+        return Codegen.optional(this.iamInstanceProfile);
     }
     /**
      * The EC2 image ID to launch.
@@ -323,8 +324,8 @@ public class LaunchConfiguration extends com.pulumi.resources.CustomResource {
      * for more details
      * 
      */
-    public Output</* @Nullable */ String> placementTenancy() {
-        return this.placementTenancy;
+    public Output<Optional<String>> placementTenancy() {
+        return Codegen.optional(this.placementTenancy);
     }
     /**
      * Customize details about the root block
@@ -353,8 +354,8 @@ public class LaunchConfiguration extends com.pulumi.resources.CustomResource {
      * @return A list of associated security group IDS.
      * 
      */
-    public Output</* @Nullable */ List<String>> securityGroups() {
-        return this.securityGroups;
+    public Output<Optional<List<String>>> securityGroups() {
+        return Codegen.optional(this.securityGroups);
     }
     /**
      * The maximum price to use for reserving spot instances.
@@ -367,8 +368,8 @@ public class LaunchConfiguration extends com.pulumi.resources.CustomResource {
      * @return The maximum price to use for reserving spot instances.
      * 
      */
-    public Output</* @Nullable */ String> spotPrice() {
-        return this.spotPrice;
+    public Output<Optional<String>> spotPrice() {
+        return Codegen.optional(this.spotPrice);
     }
     /**
      * The user data to provide when launching the instance. Do not pass gzip-compressed data via this argument; see `user_data_base64` instead.
@@ -381,8 +382,8 @@ public class LaunchConfiguration extends com.pulumi.resources.CustomResource {
      * @return The user data to provide when launching the instance. Do not pass gzip-compressed data via this argument; see `user_data_base64` instead.
      * 
      */
-    public Output</* @Nullable */ String> userData() {
-        return this.userData;
+    public Output<Optional<String>> userData() {
+        return Codegen.optional(this.userData);
     }
     /**
      * Can be used instead of `user_data` to pass base64-encoded binary data directly. Use this instead of `user_data` whenever the value is not a valid UTF-8 string. For example, gzip-encoded user data must be base64-encoded and passed via this argument to avoid corruption.
@@ -395,8 +396,8 @@ public class LaunchConfiguration extends com.pulumi.resources.CustomResource {
      * @return Can be used instead of `user_data` to pass base64-encoded binary data directly. Use this instead of `user_data` whenever the value is not a valid UTF-8 string. For example, gzip-encoded user data must be base64-encoded and passed via this argument to avoid corruption.
      * 
      */
-    public Output</* @Nullable */ String> userDataBase64() {
-        return this.userDataBase64;
+    public Output<Optional<String>> userDataBase64() {
+        return Codegen.optional(this.userDataBase64);
     }
     /**
      * The ID of a ClassicLink-enabled VPC. Only applies to EC2-Classic instances. (eg. `vpc-2730681a`)
@@ -409,8 +410,8 @@ public class LaunchConfiguration extends com.pulumi.resources.CustomResource {
      * @return The ID of a ClassicLink-enabled VPC. Only applies to EC2-Classic instances. (eg. `vpc-2730681a`)
      * 
      */
-    public Output</* @Nullable */ String> vpcClassicLinkId() {
-        return this.vpcClassicLinkId;
+    public Output<Optional<String>> vpcClassicLinkId() {
+        return Codegen.optional(this.vpcClassicLinkId);
     }
     /**
      * The IDs of one or more security groups for the specified ClassicLink-enabled VPC (eg. `sg-46ae3d11`).
@@ -423,8 +424,8 @@ public class LaunchConfiguration extends com.pulumi.resources.CustomResource {
      * @return The IDs of one or more security groups for the specified ClassicLink-enabled VPC (eg. `sg-46ae3d11`).
      * 
      */
-    public Output</* @Nullable */ List<String>> vpcClassicLinkSecurityGroups() {
-        return this.vpcClassicLinkSecurityGroups;
+    public Output<Optional<List<String>>> vpcClassicLinkSecurityGroups() {
+        return Codegen.optional(this.vpcClassicLinkSecurityGroups);
     }
 
     /**

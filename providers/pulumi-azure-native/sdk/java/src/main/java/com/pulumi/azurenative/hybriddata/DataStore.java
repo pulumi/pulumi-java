@@ -14,6 +14,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -44,8 +45,8 @@ public class DataStore extends com.pulumi.resources.CustomResource {
      * @return List of customer secrets containing a key identifier and key value. The key identifier is a way for the specific data source to understand the key. Value contains customer secret encrypted by the encryptionKeys.
      * 
      */
-    public Output</* @Nullable */ List<CustomerSecretResponse>> customerSecrets() {
-        return this.customerSecrets;
+    public Output<Optional<List<CustomerSecretResponse>>> customerSecrets() {
+        return Codegen.optional(this.customerSecrets);
     }
     /**
      * The arm id of the data store type.
@@ -72,8 +73,8 @@ public class DataStore extends com.pulumi.resources.CustomResource {
      * @return A generic json used differently by each data source type.
      * 
      */
-    public Output</* @Nullable */ Object> extendedProperties() {
-        return this.extendedProperties;
+    public Output<Optional<Object>> extendedProperties() {
+        return Codegen.optional(this.extendedProperties);
     }
     /**
      * Name of the object.
@@ -100,8 +101,8 @@ public class DataStore extends com.pulumi.resources.CustomResource {
      * @return Arm Id for the manager resource to which the data source is associated. This is optional.
      * 
      */
-    public Output</* @Nullable */ String> repositoryId() {
-        return this.repositoryId;
+    public Output<Optional<String>> repositoryId() {
+        return Codegen.optional(this.repositoryId);
     }
     /**
      * State of the data source.

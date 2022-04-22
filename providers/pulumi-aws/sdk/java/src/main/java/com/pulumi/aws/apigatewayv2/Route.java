@@ -15,6 +15,7 @@ import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -59,8 +60,8 @@ public class Route extends com.pulumi.resources.CustomResource {
      * @return Boolean whether an API key is required for the route. Defaults to `false`. Supported only for WebSocket APIs.
      * 
      */
-    public Output</* @Nullable */ Boolean> apiKeyRequired() {
-        return this.apiKeyRequired;
+    public Output<Optional<Boolean>> apiKeyRequired() {
+        return Codegen.optional(this.apiKeyRequired);
     }
     /**
      * The authorization scopes supported by this route. The scopes are used with a JWT authorizer to authorize the method invocation.
@@ -73,8 +74,8 @@ public class Route extends com.pulumi.resources.CustomResource {
      * @return The authorization scopes supported by this route. The scopes are used with a JWT authorizer to authorize the method invocation.
      * 
      */
-    public Output</* @Nullable */ List<String>> authorizationScopes() {
-        return this.authorizationScopes;
+    public Output<Optional<List<String>>> authorizationScopes() {
+        return Codegen.optional(this.authorizationScopes);
     }
     /**
      * The authorization type for the route.
@@ -93,8 +94,8 @@ public class Route extends com.pulumi.resources.CustomResource {
      * Defaults to `NONE`.
      * 
      */
-    public Output</* @Nullable */ String> authorizationType() {
-        return this.authorizationType;
+    public Output<Optional<String>> authorizationType() {
+        return Codegen.optional(this.authorizationType);
     }
     /**
      * The identifier of the `aws.apigatewayv2.Authorizer` resource to be associated with this route.
@@ -107,8 +108,8 @@ public class Route extends com.pulumi.resources.CustomResource {
      * @return The identifier of the `aws.apigatewayv2.Authorizer` resource to be associated with this route.
      * 
      */
-    public Output</* @Nullable */ String> authorizerId() {
-        return this.authorizerId;
+    public Output<Optional<String>> authorizerId() {
+        return Codegen.optional(this.authorizerId);
     }
     /**
      * The [model selection expression](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-websocket-api-selection-expressions.html#apigateway-websocket-api-model-selection-expressions) for the route. Supported only for WebSocket APIs.
@@ -121,8 +122,8 @@ public class Route extends com.pulumi.resources.CustomResource {
      * @return The [model selection expression](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-websocket-api-selection-expressions.html#apigateway-websocket-api-model-selection-expressions) for the route. Supported only for WebSocket APIs.
      * 
      */
-    public Output</* @Nullable */ String> modelSelectionExpression() {
-        return this.modelSelectionExpression;
+    public Output<Optional<String>> modelSelectionExpression() {
+        return Codegen.optional(this.modelSelectionExpression);
     }
     /**
      * The operation name for the route. Must be between 1 and 64 characters in length.
@@ -135,8 +136,8 @@ public class Route extends com.pulumi.resources.CustomResource {
      * @return The operation name for the route. Must be between 1 and 64 characters in length.
      * 
      */
-    public Output</* @Nullable */ String> operationName() {
-        return this.operationName;
+    public Output<Optional<String>> operationName() {
+        return Codegen.optional(this.operationName);
     }
     /**
      * The request models for the route. Supported only for WebSocket APIs.
@@ -149,8 +150,8 @@ public class Route extends com.pulumi.resources.CustomResource {
      * @return The request models for the route. Supported only for WebSocket APIs.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> requestModels() {
-        return this.requestModels;
+    public Output<Optional<Map<String,String>>> requestModels() {
+        return Codegen.optional(this.requestModels);
     }
     /**
      * The request parameters for the route. Supported only for WebSocket APIs.
@@ -163,8 +164,8 @@ public class Route extends com.pulumi.resources.CustomResource {
      * @return The request parameters for the route. Supported only for WebSocket APIs.
      * 
      */
-    public Output</* @Nullable */ List<RouteRequestParameter>> requestParameters() {
-        return this.requestParameters;
+    public Output<Optional<List<RouteRequestParameter>>> requestParameters() {
+        return Codegen.optional(this.requestParameters);
     }
     /**
      * The route key for the route. For HTTP APIs, the route key can be either `$default`, or a combination of an HTTP method and resource path, for example, `GET /pets`.
@@ -191,8 +192,8 @@ public class Route extends com.pulumi.resources.CustomResource {
      * @return The [route response selection expression](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-websocket-api-selection-expressions.html#apigateway-websocket-api-route-response-selection-expressions) for the route. Supported only for WebSocket APIs.
      * 
      */
-    public Output</* @Nullable */ String> routeResponseSelectionExpression() {
-        return this.routeResponseSelectionExpression;
+    public Output<Optional<String>> routeResponseSelectionExpression() {
+        return Codegen.optional(this.routeResponseSelectionExpression);
     }
     /**
      * The target for the route, of the form `integrations/`*`IntegrationID`*, where *`IntegrationID`* is the identifier of an `aws.apigatewayv2.Integration` resource.
@@ -205,8 +206,8 @@ public class Route extends com.pulumi.resources.CustomResource {
      * @return The target for the route, of the form `integrations/`*`IntegrationID`*, where *`IntegrationID`* is the identifier of an `aws.apigatewayv2.Integration` resource.
      * 
      */
-    public Output</* @Nullable */ String> target() {
-        return this.target;
+    public Output<Optional<String>> target() {
+        return Codegen.optional(this.target);
     }
 
     /**

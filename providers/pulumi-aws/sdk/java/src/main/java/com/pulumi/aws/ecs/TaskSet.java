@@ -19,6 +19,7 @@ import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -58,8 +59,8 @@ public class TaskSet extends com.pulumi.resources.CustomResource {
      * @return The capacity provider strategy to use for the service. Can be one or more.  Defined below.
      * 
      */
-    public Output</* @Nullable */ List<TaskSetCapacityProviderStrategy>> capacityProviderStrategies() {
-        return this.capacityProviderStrategies;
+    public Output<Optional<List<TaskSetCapacityProviderStrategy>>> capacityProviderStrategies() {
+        return Codegen.optional(this.capacityProviderStrategies);
     }
     /**
      * The short name or ARN of the cluster that hosts the service to create the task set in.
@@ -92,8 +93,8 @@ public class TaskSet extends com.pulumi.resources.CustomResource {
     @Export(name="forceDelete", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> forceDelete;
 
-    public Output</* @Nullable */ Boolean> forceDelete() {
-        return this.forceDelete;
+    public Output<Optional<Boolean>> forceDelete() {
+        return Codegen.optional(this.forceDelete);
     }
     /**
      * The launch type on which to run your service. The valid values are `EC2`, `FARGATE`, and `EXTERNAL`. Defaults to `EC2`.
@@ -120,8 +121,8 @@ public class TaskSet extends com.pulumi.resources.CustomResource {
      * @return Details on load balancers that are used with a task set. Detailed below.
      * 
      */
-    public Output</* @Nullable */ List<TaskSetLoadBalancer>> loadBalancers() {
-        return this.loadBalancers;
+    public Output<Optional<List<TaskSetLoadBalancer>>> loadBalancers() {
+        return Codegen.optional(this.loadBalancers);
     }
     /**
      * The network configuration for the service. This parameter is required for task definitions that use the `awsvpc` network mode to receive their own Elastic Network Interface, and it is not supported for other network modes. Detailed below.
@@ -134,8 +135,8 @@ public class TaskSet extends com.pulumi.resources.CustomResource {
      * @return The network configuration for the service. This parameter is required for task definitions that use the `awsvpc` network mode to receive their own Elastic Network Interface, and it is not supported for other network modes. Detailed below.
      * 
      */
-    public Output</* @Nullable */ TaskSetNetworkConfiguration> networkConfiguration() {
-        return this.networkConfiguration;
+    public Output<Optional<TaskSetNetworkConfiguration>> networkConfiguration() {
+        return Codegen.optional(this.networkConfiguration);
     }
     /**
      * The platform version on which to run your service. Only applicable for `launch_type` set to `FARGATE`. Defaults to `LATEST`. More information about Fargate platform versions can be found in the [AWS ECS User Guide](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/platform_versions.html).
@@ -190,8 +191,8 @@ public class TaskSet extends com.pulumi.resources.CustomResource {
      * @return The service discovery registries for the service. The maximum number of `service_registries` blocks is `1`. Detailed below.
      * 
      */
-    public Output</* @Nullable */ TaskSetServiceRegistries> serviceRegistries() {
-        return this.serviceRegistries;
+    public Output<Optional<TaskSetServiceRegistries>> serviceRegistries() {
+        return Codegen.optional(this.serviceRegistries);
     }
     /**
      * The stability status. This indicates whether the task set has reached a steady state.
@@ -232,8 +233,8 @@ public class TaskSet extends com.pulumi.resources.CustomResource {
      * @return A map of tags to assign to the file system. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level. If you have set `copy_tags_to_backups` to true, and you specify one or more tags, no existing file system tags are copied from the file system to the backup.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
@@ -280,8 +281,8 @@ public class TaskSet extends com.pulumi.resources.CustomResource {
     @Export(name="waitUntilStable", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> waitUntilStable;
 
-    public Output</* @Nullable */ Boolean> waitUntilStable() {
-        return this.waitUntilStable;
+    public Output<Optional<Boolean>> waitUntilStable() {
+        return Codegen.optional(this.waitUntilStable);
     }
     /**
      * Wait timeout for task set to reach `STEADY_STATE`. Valid time units include `ns`, `us` (or `µs`), `ms`, `s`, `m`, and `h`. Default `10m`.
@@ -294,8 +295,8 @@ public class TaskSet extends com.pulumi.resources.CustomResource {
      * @return Wait timeout for task set to reach `STEADY_STATE`. Valid time units include `ns`, `us` (or `µs`), `ms`, `s`, `m`, and `h`. Default `10m`.
      * 
      */
-    public Output</* @Nullable */ String> waitUntilStableTimeout() {
-        return this.waitUntilStableTimeout;
+    public Output<Optional<String>> waitUntilStableTimeout() {
+        return Codegen.optional(this.waitUntilStableTimeout);
     }
 
     /**

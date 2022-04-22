@@ -13,6 +13,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -71,8 +72,8 @@ public class Property extends com.pulumi.resources.CustomResource {
      * @return Determines whether the value is a secret and should be encrypted or not. Default value is false.
      * 
      */
-    public Output</* @Nullable */ Boolean> secret() {
-        return this.secret;
+    public Output<Optional<Boolean>> secret() {
+        return Codegen.optional(this.secret);
     }
     /**
      * Optional tags that when provided can be used to filter the property list.
@@ -85,8 +86,8 @@ public class Property extends com.pulumi.resources.CustomResource {
      * @return Optional tags that when provided can be used to filter the property list.
      * 
      */
-    public Output</* @Nullable */ List<String>> tags() {
-        return this.tags;
+    public Output<Optional<List<String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * Resource type for API Management resource.

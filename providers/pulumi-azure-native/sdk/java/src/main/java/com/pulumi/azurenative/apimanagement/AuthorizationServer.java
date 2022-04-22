@@ -14,6 +14,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -58,8 +59,8 @@ public class AuthorizationServer extends com.pulumi.resources.CustomResource {
      * @return HTTP verbs supported by the authorization endpoint. GET must be always present. POST is optional.
      * 
      */
-    public Output</* @Nullable */ List<String>> authorizationMethods() {
-        return this.authorizationMethods;
+    public Output<Optional<List<String>>> authorizationMethods() {
+        return Codegen.optional(this.authorizationMethods);
     }
     /**
      * Specifies the mechanism by which access token is passed to the API.
@@ -72,8 +73,8 @@ public class AuthorizationServer extends com.pulumi.resources.CustomResource {
      * @return Specifies the mechanism by which access token is passed to the API.
      * 
      */
-    public Output</* @Nullable */ List<String>> bearerTokenSendingMethods() {
-        return this.bearerTokenSendingMethods;
+    public Output<Optional<List<String>>> bearerTokenSendingMethods() {
+        return Codegen.optional(this.bearerTokenSendingMethods);
     }
     /**
      * Method of authentication supported by the token endpoint of this authorization server. Possible values are Basic and/or Body. When Body is specified, client credentials and other parameters are passed within the request body in the application/x-www-form-urlencoded format.
@@ -86,8 +87,8 @@ public class AuthorizationServer extends com.pulumi.resources.CustomResource {
      * @return Method of authentication supported by the token endpoint of this authorization server. Possible values are Basic and/or Body. When Body is specified, client credentials and other parameters are passed within the request body in the application/x-www-form-urlencoded format.
      * 
      */
-    public Output</* @Nullable */ List<String>> clientAuthenticationMethod() {
-        return this.clientAuthenticationMethod;
+    public Output<Optional<List<String>>> clientAuthenticationMethod() {
+        return Codegen.optional(this.clientAuthenticationMethod);
     }
     /**
      * Client or app id registered with this authorization server.
@@ -128,8 +129,8 @@ public class AuthorizationServer extends com.pulumi.resources.CustomResource {
      * @return Client or app secret registered with this authorization server. This property will not be filled on &#39;GET&#39; operations! Use &#39;/listSecrets&#39; POST request to get the value.
      * 
      */
-    public Output</* @Nullable */ String> clientSecret() {
-        return this.clientSecret;
+    public Output<Optional<String>> clientSecret() {
+        return Codegen.optional(this.clientSecret);
     }
     /**
      * Access token scope that is going to be requested by default. Can be overridden at the API level. Should be provided in the form of a string containing space-delimited values.
@@ -142,8 +143,8 @@ public class AuthorizationServer extends com.pulumi.resources.CustomResource {
      * @return Access token scope that is going to be requested by default. Can be overridden at the API level. Should be provided in the form of a string containing space-delimited values.
      * 
      */
-    public Output</* @Nullable */ String> defaultScope() {
-        return this.defaultScope;
+    public Output<Optional<String>> defaultScope() {
+        return Codegen.optional(this.defaultScope);
     }
     /**
      * Description of the authorization server. Can contain HTML formatting tags.
@@ -156,8 +157,8 @@ public class AuthorizationServer extends com.pulumi.resources.CustomResource {
      * @return Description of the authorization server. Can contain HTML formatting tags.
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * User-friendly authorization server name.
@@ -212,8 +213,8 @@ public class AuthorizationServer extends com.pulumi.resources.CustomResource {
      * @return Can be optionally specified when resource owner password grant type is supported by this authorization server. Default resource owner password.
      * 
      */
-    public Output</* @Nullable */ String> resourceOwnerPassword() {
-        return this.resourceOwnerPassword;
+    public Output<Optional<String>> resourceOwnerPassword() {
+        return Codegen.optional(this.resourceOwnerPassword);
     }
     /**
      * Can be optionally specified when resource owner password grant type is supported by this authorization server. Default resource owner username.
@@ -226,8 +227,8 @@ public class AuthorizationServer extends com.pulumi.resources.CustomResource {
      * @return Can be optionally specified when resource owner password grant type is supported by this authorization server. Default resource owner username.
      * 
      */
-    public Output</* @Nullable */ String> resourceOwnerUsername() {
-        return this.resourceOwnerUsername;
+    public Output<Optional<String>> resourceOwnerUsername() {
+        return Codegen.optional(this.resourceOwnerUsername);
     }
     /**
      * If true, authorization server will include state parameter from the authorization request to its response. Client may use state parameter to raise protocol security.
@@ -240,8 +241,8 @@ public class AuthorizationServer extends com.pulumi.resources.CustomResource {
      * @return If true, authorization server will include state parameter from the authorization request to its response. Client may use state parameter to raise protocol security.
      * 
      */
-    public Output</* @Nullable */ Boolean> supportState() {
-        return this.supportState;
+    public Output<Optional<Boolean>> supportState() {
+        return Codegen.optional(this.supportState);
     }
     /**
      * Additional parameters required by the token endpoint of this authorization server represented as an array of JSON objects with name and value string properties, i.e. {&#34;name&#34; : &#34;name value&#34;, &#34;value&#34;: &#34;a value&#34;}.
@@ -254,8 +255,8 @@ public class AuthorizationServer extends com.pulumi.resources.CustomResource {
      * @return Additional parameters required by the token endpoint of this authorization server represented as an array of JSON objects with name and value string properties, i.e. {&#34;name&#34; : &#34;name value&#34;, &#34;value&#34;: &#34;a value&#34;}.
      * 
      */
-    public Output</* @Nullable */ List<TokenBodyParameterContractResponse>> tokenBodyParameters() {
-        return this.tokenBodyParameters;
+    public Output<Optional<List<TokenBodyParameterContractResponse>>> tokenBodyParameters() {
+        return Codegen.optional(this.tokenBodyParameters);
     }
     /**
      * OAuth token endpoint. Contains absolute URI to entity being referenced.
@@ -268,8 +269,8 @@ public class AuthorizationServer extends com.pulumi.resources.CustomResource {
      * @return OAuth token endpoint. Contains absolute URI to entity being referenced.
      * 
      */
-    public Output</* @Nullable */ String> tokenEndpoint() {
-        return this.tokenEndpoint;
+    public Output<Optional<String>> tokenEndpoint() {
+        return Codegen.optional(this.tokenEndpoint);
     }
     /**
      * Resource type for API Management resource.

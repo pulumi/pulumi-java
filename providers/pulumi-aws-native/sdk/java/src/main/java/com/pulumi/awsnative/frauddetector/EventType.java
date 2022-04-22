@@ -15,6 +15,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -62,8 +63,8 @@ public class EventType extends com.pulumi.resources.CustomResource {
      * @return The description of the event type.
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     @Export(name="entityTypes", type=List.class, parameters={EventTypeEntityType.class})
     private Output<List<EventTypeEntityType>> entityTypes;
@@ -122,8 +123,8 @@ public class EventType extends com.pulumi.resources.CustomResource {
      * @return Tags associated with this event type.
      * 
      */
-    public Output</* @Nullable */ List<EventTypeTag>> tags() {
-        return this.tags;
+    public Output<Optional<List<EventTypeTag>>> tags() {
+        return Codegen.optional(this.tags);
     }
 
     /**

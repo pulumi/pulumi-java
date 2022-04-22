@@ -14,6 +14,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -39,8 +40,8 @@ public class Asset extends com.pulumi.resources.CustomResource {
     @Export(name="assetHierarchies", type=List.class, parameters={AssetHierarchy.class})
     private Output</* @Nullable */ List<AssetHierarchy>> assetHierarchies;
 
-    public Output</* @Nullable */ List<AssetHierarchy>> assetHierarchies() {
-        return this.assetHierarchies;
+    public Output<Optional<List<AssetHierarchy>>> assetHierarchies() {
+        return Codegen.optional(this.assetHierarchies);
     }
     /**
      * The ID of the asset
@@ -87,8 +88,8 @@ public class Asset extends com.pulumi.resources.CustomResource {
     @Export(name="assetProperties", type=List.class, parameters={AssetProperty.class})
     private Output</* @Nullable */ List<AssetProperty>> assetProperties;
 
-    public Output</* @Nullable */ List<AssetProperty>> assetProperties() {
-        return this.assetProperties;
+    public Output<Optional<List<AssetProperty>>> assetProperties() {
+        return Codegen.optional(this.assetProperties);
     }
     /**
      * A list of key-value pairs that contain metadata for the asset.
@@ -101,8 +102,8 @@ public class Asset extends com.pulumi.resources.CustomResource {
      * @return A list of key-value pairs that contain metadata for the asset.
      * 
      */
-    public Output</* @Nullable */ List<AssetTag>> tags() {
-        return this.tags;
+    public Output<Optional<List<AssetTag>>> tags() {
+        return Codegen.optional(this.tags);
     }
 
     /**

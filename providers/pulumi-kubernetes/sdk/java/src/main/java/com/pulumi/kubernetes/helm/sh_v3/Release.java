@@ -18,6 +18,7 @@ import java.lang.Object;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -52,8 +53,8 @@ public class Release extends com.pulumi.resources.CustomResource {
      * @return If set, installation process purges chart on fail. `skipAwait` will be disabled automatically if atomic is used.
      * 
      */
-    public Output</* @Nullable */ Boolean> atomic() {
-        return this.atomic;
+    public Output<Optional<Boolean>> atomic() {
+        return Codegen.optional(this.atomic);
     }
     /**
      * Chart name to be installed. A path may be used.
@@ -80,8 +81,8 @@ public class Release extends com.pulumi.resources.CustomResource {
      * @return Allow deletion of new resources created in this upgrade when upgrade fails.
      * 
      */
-    public Output</* @Nullable */ Boolean> cleanupOnFail() {
-        return this.cleanupOnFail;
+    public Output<Optional<Boolean>> cleanupOnFail() {
+        return Codegen.optional(this.cleanupOnFail);
     }
     /**
      * Create the namespace if it does not exist.
@@ -94,8 +95,8 @@ public class Release extends com.pulumi.resources.CustomResource {
      * @return Create the namespace if it does not exist.
      * 
      */
-    public Output</* @Nullable */ Boolean> createNamespace() {
-        return this.createNamespace;
+    public Output<Optional<Boolean>> createNamespace() {
+        return Codegen.optional(this.createNamespace);
     }
     /**
      * Run helm dependency update before installing the chart.
@@ -108,8 +109,8 @@ public class Release extends com.pulumi.resources.CustomResource {
      * @return Run helm dependency update before installing the chart.
      * 
      */
-    public Output</* @Nullable */ Boolean> dependencyUpdate() {
-        return this.dependencyUpdate;
+    public Output<Optional<Boolean>> dependencyUpdate() {
+        return Codegen.optional(this.dependencyUpdate);
     }
     /**
      * Add a custom description
@@ -122,8 +123,8 @@ public class Release extends com.pulumi.resources.CustomResource {
      * @return Add a custom description
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * Use chart development versions, too. Equivalent to version &#39;&gt;0.0.0-0&#39;. If `version` is set, this is ignored.
@@ -136,8 +137,8 @@ public class Release extends com.pulumi.resources.CustomResource {
      * @return Use chart development versions, too. Equivalent to version &#39;&gt;0.0.0-0&#39;. If `version` is set, this is ignored.
      * 
      */
-    public Output</* @Nullable */ Boolean> devel() {
-        return this.devel;
+    public Output<Optional<Boolean>> devel() {
+        return Codegen.optional(this.devel);
     }
     /**
      * Prevent CRD hooks from, running, but run other hooks.  See helm install --no-crd-hook
@@ -150,8 +151,8 @@ public class Release extends com.pulumi.resources.CustomResource {
      * @return Prevent CRD hooks from, running, but run other hooks.  See helm install --no-crd-hook
      * 
      */
-    public Output</* @Nullable */ Boolean> disableCRDHooks() {
-        return this.disableCRDHooks;
+    public Output<Optional<Boolean>> disableCRDHooks() {
+        return Codegen.optional(this.disableCRDHooks);
     }
     /**
      * If set, the installation process will not validate rendered templates against the Kubernetes OpenAPI Schema
@@ -164,8 +165,8 @@ public class Release extends com.pulumi.resources.CustomResource {
      * @return If set, the installation process will not validate rendered templates against the Kubernetes OpenAPI Schema
      * 
      */
-    public Output</* @Nullable */ Boolean> disableOpenapiValidation() {
-        return this.disableOpenapiValidation;
+    public Output<Optional<Boolean>> disableOpenapiValidation() {
+        return Codegen.optional(this.disableOpenapiValidation);
     }
     /**
      * Prevent hooks from running.
@@ -178,8 +179,8 @@ public class Release extends com.pulumi.resources.CustomResource {
      * @return Prevent hooks from running.
      * 
      */
-    public Output</* @Nullable */ Boolean> disableWebhooks() {
-        return this.disableWebhooks;
+    public Output<Optional<Boolean>> disableWebhooks() {
+        return Codegen.optional(this.disableWebhooks);
     }
     /**
      * Force resource update through delete/recreate if needed.
@@ -192,8 +193,8 @@ public class Release extends com.pulumi.resources.CustomResource {
      * @return Force resource update through delete/recreate if needed.
      * 
      */
-    public Output</* @Nullable */ Boolean> forceUpdate() {
-        return this.forceUpdate;
+    public Output<Optional<Boolean>> forceUpdate() {
+        return Codegen.optional(this.forceUpdate);
     }
     /**
      * Location of public keys used for verification. Used only if `verify` is true
@@ -206,8 +207,8 @@ public class Release extends com.pulumi.resources.CustomResource {
      * @return Location of public keys used for verification. Used only if `verify` is true
      * 
      */
-    public Output</* @Nullable */ String> keyring() {
-        return this.keyring;
+    public Output<Optional<String>> keyring() {
+        return Codegen.optional(this.keyring);
     }
     /**
      * Run helm lint when planning.
@@ -220,8 +221,8 @@ public class Release extends com.pulumi.resources.CustomResource {
      * @return Run helm lint when planning.
      * 
      */
-    public Output</* @Nullable */ Boolean> lint() {
-        return this.lint;
+    public Output<Optional<Boolean>> lint() {
+        return Codegen.optional(this.lint);
     }
     /**
      * The rendered manifests as JSON. Not yet supported.
@@ -234,8 +235,8 @@ public class Release extends com.pulumi.resources.CustomResource {
      * @return The rendered manifests as JSON. Not yet supported.
      * 
      */
-    public Output</* @Nullable */ Map<String,Object>> manifest() {
-        return this.manifest;
+    public Output<Optional<Map<String,Object>>> manifest() {
+        return Codegen.optional(this.manifest);
     }
     /**
      * Limit the maximum number of revisions saved per release. Use 0 for no limit.
@@ -248,8 +249,8 @@ public class Release extends com.pulumi.resources.CustomResource {
      * @return Limit the maximum number of revisions saved per release. Use 0 for no limit.
      * 
      */
-    public Output</* @Nullable */ Integer> maxHistory() {
-        return this.maxHistory;
+    public Output<Optional<Integer>> maxHistory() {
+        return Codegen.optional(this.maxHistory);
     }
     /**
      * Release name.
@@ -262,8 +263,8 @@ public class Release extends com.pulumi.resources.CustomResource {
      * @return Release name.
      * 
      */
-    public Output</* @Nullable */ String> name() {
-        return this.name;
+    public Output<Optional<String>> name() {
+        return Codegen.optional(this.name);
     }
     /**
      * Namespace to install the release into.
@@ -276,8 +277,8 @@ public class Release extends com.pulumi.resources.CustomResource {
      * @return Namespace to install the release into.
      * 
      */
-    public Output</* @Nullable */ String> namespace() {
-        return this.namespace;
+    public Output<Optional<String>> namespace() {
+        return Codegen.optional(this.namespace);
     }
     /**
      * Postrender command to run.
@@ -290,8 +291,8 @@ public class Release extends com.pulumi.resources.CustomResource {
      * @return Postrender command to run.
      * 
      */
-    public Output</* @Nullable */ String> postrender() {
-        return this.postrender;
+    public Output<Optional<String>> postrender() {
+        return Codegen.optional(this.postrender);
     }
     /**
      * Perform pods restart during upgrade/rollback.
@@ -304,8 +305,8 @@ public class Release extends com.pulumi.resources.CustomResource {
      * @return Perform pods restart during upgrade/rollback.
      * 
      */
-    public Output</* @Nullable */ Boolean> recreatePods() {
-        return this.recreatePods;
+    public Output<Optional<Boolean>> recreatePods() {
+        return Codegen.optional(this.recreatePods);
     }
     /**
      * If set, render subchart notes along with the parent.
@@ -318,8 +319,8 @@ public class Release extends com.pulumi.resources.CustomResource {
      * @return If set, render subchart notes along with the parent.
      * 
      */
-    public Output</* @Nullable */ Boolean> renderSubchartNotes() {
-        return this.renderSubchartNotes;
+    public Output<Optional<Boolean>> renderSubchartNotes() {
+        return Codegen.optional(this.renderSubchartNotes);
     }
     /**
      * Re-use the given name, even if that name is already used. This is unsafe in production
@@ -332,8 +333,8 @@ public class Release extends com.pulumi.resources.CustomResource {
      * @return Re-use the given name, even if that name is already used. This is unsafe in production
      * 
      */
-    public Output</* @Nullable */ Boolean> replace() {
-        return this.replace;
+    public Output<Optional<Boolean>> replace() {
+        return Codegen.optional(this.replace);
     }
     /**
      * Specification defining the Helm chart repository to use.
@@ -346,8 +347,8 @@ public class Release extends com.pulumi.resources.CustomResource {
      * @return Specification defining the Helm chart repository to use.
      * 
      */
-    public Output</* @Nullable */ RepositoryOpts> repositoryOpts() {
-        return this.repositoryOpts;
+    public Output<Optional<RepositoryOpts>> repositoryOpts() {
+        return Codegen.optional(this.repositoryOpts);
     }
     /**
      * When upgrading, reset the values to the ones built into the chart.
@@ -360,8 +361,8 @@ public class Release extends com.pulumi.resources.CustomResource {
      * @return When upgrading, reset the values to the ones built into the chart.
      * 
      */
-    public Output</* @Nullable */ Boolean> resetValues() {
-        return this.resetValues;
+    public Output<Optional<Boolean>> resetValues() {
+        return Codegen.optional(this.resetValues);
     }
     /**
      * Names of resources created by the release grouped by &#34;kind/version&#34;.
@@ -374,8 +375,8 @@ public class Release extends com.pulumi.resources.CustomResource {
      * @return Names of resources created by the release grouped by &#34;kind/version&#34;.
      * 
      */
-    public Output</* @Nullable */ Map<String,List<String>>> resourceNames() {
-        return this.resourceNames;
+    public Output<Optional<Map<String,List<String>>>> resourceNames() {
+        return Codegen.optional(this.resourceNames);
     }
     /**
      * When upgrading, reuse the last release&#39;s values and merge in any overrides. If &#39;resetValues&#39; is specified, this is ignored
@@ -388,8 +389,8 @@ public class Release extends com.pulumi.resources.CustomResource {
      * @return When upgrading, reuse the last release&#39;s values and merge in any overrides. If &#39;resetValues&#39; is specified, this is ignored
      * 
      */
-    public Output</* @Nullable */ Boolean> reuseValues() {
-        return this.reuseValues;
+    public Output<Optional<Boolean>> reuseValues() {
+        return Codegen.optional(this.reuseValues);
     }
     /**
      * By default, the provider waits until all resources are in a ready state before marking the release as successful. Setting this to true will skip such await logic.
@@ -402,8 +403,8 @@ public class Release extends com.pulumi.resources.CustomResource {
      * @return By default, the provider waits until all resources are in a ready state before marking the release as successful. Setting this to true will skip such await logic.
      * 
      */
-    public Output</* @Nullable */ Boolean> skipAwait() {
-        return this.skipAwait;
+    public Output<Optional<Boolean>> skipAwait() {
+        return Codegen.optional(this.skipAwait);
     }
     /**
      * If set, no CRDs will be installed. By default, CRDs are installed if not already present.
@@ -416,8 +417,8 @@ public class Release extends com.pulumi.resources.CustomResource {
      * @return If set, no CRDs will be installed. By default, CRDs are installed if not already present.
      * 
      */
-    public Output</* @Nullable */ Boolean> skipCrds() {
-        return this.skipCrds;
+    public Output<Optional<Boolean>> skipCrds() {
+        return Codegen.optional(this.skipCrds);
     }
     /**
      * Status of the deployed release.
@@ -444,8 +445,8 @@ public class Release extends com.pulumi.resources.CustomResource {
      * @return Time in seconds to wait for any individual kubernetes operation.
      * 
      */
-    public Output</* @Nullable */ Integer> timeout() {
-        return this.timeout;
+    public Output<Optional<Integer>> timeout() {
+        return Codegen.optional(this.timeout);
     }
     /**
      * List of assets (raw yaml files). Content is read and merged with values (with values taking precedence).
@@ -458,8 +459,8 @@ public class Release extends com.pulumi.resources.CustomResource {
      * @return List of assets (raw yaml files). Content is read and merged with values (with values taking precedence).
      * 
      */
-    public Output</* @Nullable */ List<AssetOrArchive>> valueYamlFiles() {
-        return this.valueYamlFiles;
+    public Output<Optional<List<AssetOrArchive>>> valueYamlFiles() {
+        return Codegen.optional(this.valueYamlFiles);
     }
     /**
      * Custom values set for the release.
@@ -472,8 +473,8 @@ public class Release extends com.pulumi.resources.CustomResource {
      * @return Custom values set for the release.
      * 
      */
-    public Output</* @Nullable */ Map<String,Object>> values() {
-        return this.values;
+    public Output<Optional<Map<String,Object>>> values() {
+        return Codegen.optional(this.values);
     }
     /**
      * Verify the package before installing it.
@@ -486,8 +487,8 @@ public class Release extends com.pulumi.resources.CustomResource {
      * @return Verify the package before installing it.
      * 
      */
-    public Output</* @Nullable */ Boolean> verify() {
-        return this.verify;
+    public Output<Optional<Boolean>> verify() {
+        return Codegen.optional(this.verify);
     }
     /**
      * Specify the exact chart version to install. If this is not specified, the latest version is installed.
@@ -500,8 +501,8 @@ public class Release extends com.pulumi.resources.CustomResource {
      * @return Specify the exact chart version to install. If this is not specified, the latest version is installed.
      * 
      */
-    public Output</* @Nullable */ String> version() {
-        return this.version;
+    public Output<Optional<String>> version() {
+        return Codegen.optional(this.version);
     }
     /**
      * Will wait until all Jobs have been completed before marking the release as successful. This is ignored if `skipAwait` is enabled.
@@ -514,8 +515,8 @@ public class Release extends com.pulumi.resources.CustomResource {
      * @return Will wait until all Jobs have been completed before marking the release as successful. This is ignored if `skipAwait` is enabled.
      * 
      */
-    public Output</* @Nullable */ Boolean> waitForJobs() {
-        return this.waitForJobs;
+    public Output<Optional<Boolean>> waitForJobs() {
+        return Codegen.optional(this.waitForJobs);
     }
 
     /**

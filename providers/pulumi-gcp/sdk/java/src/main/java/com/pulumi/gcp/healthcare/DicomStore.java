@@ -15,6 +15,7 @@ import com.pulumi.gcp.healthcare.outputs.DicomStoreStreamConfig;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -85,8 +86,8 @@ public class DicomStore extends com.pulumi.resources.CustomResource {
      * Example: { &#34;name&#34;: &#34;wrench&#34;, &#34;mass&#34;: &#34;1.3kg&#34;, &#34;count&#34;: &#34;3&#34; }.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> labels() {
-        return this.labels;
+    public Output<Optional<Map<String,String>>> labels() {
+        return Codegen.optional(this.labels);
     }
     /**
      * The resource name for the DicomStore.
@@ -117,8 +118,8 @@ public class DicomStore extends com.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ DicomStoreNotificationConfig> notificationConfig() {
-        return this.notificationConfig;
+    public Output<Optional<DicomStoreNotificationConfig>> notificationConfig() {
+        return Codegen.optional(this.notificationConfig);
     }
     /**
      * The fully qualified name of this dataset
@@ -149,8 +150,8 @@ public class DicomStore extends com.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ List<DicomStoreStreamConfig>> streamConfigs() {
-        return this.streamConfigs;
+    public Output<Optional<List<DicomStoreStreamConfig>>> streamConfigs() {
+        return Codegen.optional(this.streamConfigs);
     }
 
     /**

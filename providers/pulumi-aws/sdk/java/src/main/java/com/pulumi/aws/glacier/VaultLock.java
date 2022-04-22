@@ -12,6 +12,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -59,8 +60,8 @@ public class VaultLock extends com.pulumi.resources.CustomResource {
      * @return Allow this provider to ignore the error returned when attempting to delete the Glacier Lock Policy. This can be used to delete or recreate the Glacier Vault via this provider, for example, if the Glacier Vault Lock policy permits that action. This should only be used in conjunction with `complete_lock` being set to `true`.
      * 
      */
-    public Output</* @Nullable */ Boolean> ignoreDeletionError() {
-        return this.ignoreDeletionError;
+    public Output<Optional<Boolean>> ignoreDeletionError() {
+        return Codegen.optional(this.ignoreDeletionError);
     }
     /**
      * JSON string containing the IAM policy to apply as the Glacier Vault Lock policy.

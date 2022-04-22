@@ -14,6 +14,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -31,14 +32,14 @@ public class DevicePool extends com.pulumi.resources.CustomResource {
     @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     @Export(name="maxDevices", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> maxDevices;
 
-    public Output</* @Nullable */ Integer> maxDevices() {
-        return this.maxDevices;
+    public Output<Optional<Integer>> maxDevices() {
+        return Codegen.optional(this.maxDevices);
     }
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
@@ -61,8 +62,8 @@ public class DevicePool extends com.pulumi.resources.CustomResource {
     @Export(name="tags", type=List.class, parameters={DevicePoolTag.class})
     private Output</* @Nullable */ List<DevicePoolTag>> tags;
 
-    public Output</* @Nullable */ List<DevicePoolTag>> tags() {
-        return this.tags;
+    public Output<Optional<List<DevicePoolTag>>> tags() {
+        return Codegen.optional(this.tags);
     }
 
     /**

@@ -13,6 +13,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -57,8 +58,8 @@ public class NetworkInterfaceTapConfiguration extends com.pulumi.resources.Custo
      * @return The name of the resource that is unique within a resource group. This name can be used to access the resource.
      * 
      */
-    public Output</* @Nullable */ String> name() {
-        return this.name;
+    public Output<Optional<String>> name() {
+        return Codegen.optional(this.name);
     }
     /**
      * The provisioning state of the network interface tap configuration resource.
@@ -99,8 +100,8 @@ public class NetworkInterfaceTapConfiguration extends com.pulumi.resources.Custo
      * @return The reference to the Virtual Network Tap resource.
      * 
      */
-    public Output</* @Nullable */ VirtualNetworkTapResponse> virtualNetworkTap() {
-        return this.virtualNetworkTap;
+    public Output<Optional<VirtualNetworkTapResponse>> virtualNetworkTap() {
+        return Codegen.optional(this.virtualNetworkTap);
     }
 
     /**

@@ -12,6 +12,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -55,8 +56,8 @@ public class FindingAggregator extends com.pulumi.resources.CustomResource {
      * @return List of regions to include or exclude (required if `linking_mode` is set to `ALL_REGIONS_EXCEPT_SPECIFIED` or `SPECIFIED_REGIONS`)
      * 
      */
-    public Output</* @Nullable */ List<String>> specifiedRegions() {
-        return this.specifiedRegions;
+    public Output<Optional<List<String>>> specifiedRegions() {
+        return Codegen.optional(this.specifiedRegions);
     }
 
     /**

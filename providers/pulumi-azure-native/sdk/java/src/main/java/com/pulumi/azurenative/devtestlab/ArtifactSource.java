@@ -13,6 +13,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -43,8 +44,8 @@ public class ArtifactSource extends com.pulumi.resources.CustomResource {
      * @return The folder containing Azure Resource Manager templates.
      * 
      */
-    public Output</* @Nullable */ String> armTemplateFolderPath() {
-        return this.armTemplateFolderPath;
+    public Output<Optional<String>> armTemplateFolderPath() {
+        return Codegen.optional(this.armTemplateFolderPath);
     }
     /**
      * The artifact source&#39;s branch reference.
@@ -57,8 +58,8 @@ public class ArtifactSource extends com.pulumi.resources.CustomResource {
      * @return The artifact source&#39;s branch reference.
      * 
      */
-    public Output</* @Nullable */ String> branchRef() {
-        return this.branchRef;
+    public Output<Optional<String>> branchRef() {
+        return Codegen.optional(this.branchRef);
     }
     /**
      * The artifact source&#39;s creation date.
@@ -85,8 +86,8 @@ public class ArtifactSource extends com.pulumi.resources.CustomResource {
      * @return The artifact source&#39;s display name.
      * 
      */
-    public Output</* @Nullable */ String> displayName() {
-        return this.displayName;
+    public Output<Optional<String>> displayName() {
+        return Codegen.optional(this.displayName);
     }
     /**
      * The folder containing artifacts.
@@ -99,8 +100,8 @@ public class ArtifactSource extends com.pulumi.resources.CustomResource {
      * @return The folder containing artifacts.
      * 
      */
-    public Output</* @Nullable */ String> folderPath() {
-        return this.folderPath;
+    public Output<Optional<String>> folderPath() {
+        return Codegen.optional(this.folderPath);
     }
     /**
      * The location of the resource.
@@ -113,8 +114,8 @@ public class ArtifactSource extends com.pulumi.resources.CustomResource {
      * @return The location of the resource.
      * 
      */
-    public Output</* @Nullable */ String> location() {
-        return this.location;
+    public Output<Optional<String>> location() {
+        return Codegen.optional(this.location);
     }
     /**
      * The name of the resource.
@@ -155,8 +156,8 @@ public class ArtifactSource extends com.pulumi.resources.CustomResource {
      * @return The security token to authenticate to the artifact source.
      * 
      */
-    public Output</* @Nullable */ String> securityToken() {
-        return this.securityToken;
+    public Output<Optional<String>> securityToken() {
+        return Codegen.optional(this.securityToken);
     }
     /**
      * The artifact source&#39;s type.
@@ -169,8 +170,8 @@ public class ArtifactSource extends com.pulumi.resources.CustomResource {
      * @return The artifact source&#39;s type.
      * 
      */
-    public Output</* @Nullable */ String> sourceType() {
-        return this.sourceType;
+    public Output<Optional<String>> sourceType() {
+        return Codegen.optional(this.sourceType);
     }
     /**
      * Indicates if the artifact source is enabled (values: Enabled, Disabled).
@@ -183,8 +184,8 @@ public class ArtifactSource extends com.pulumi.resources.CustomResource {
      * @return Indicates if the artifact source is enabled (values: Enabled, Disabled).
      * 
      */
-    public Output</* @Nullable */ String> status() {
-        return this.status;
+    public Output<Optional<String>> status() {
+        return Codegen.optional(this.status);
     }
     /**
      * The tags of the resource.
@@ -197,8 +198,8 @@ public class ArtifactSource extends com.pulumi.resources.CustomResource {
      * @return The tags of the resource.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * The type of the resource.
@@ -239,8 +240,8 @@ public class ArtifactSource extends com.pulumi.resources.CustomResource {
      * @return The artifact source&#39;s URI.
      * 
      */
-    public Output</* @Nullable */ String> uri() {
-        return this.uri;
+    public Output<Optional<String>> uri() {
+        return Codegen.optional(this.uri);
     }
 
     /**

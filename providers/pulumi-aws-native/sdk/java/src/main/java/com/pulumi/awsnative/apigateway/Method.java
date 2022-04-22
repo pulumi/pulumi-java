@@ -16,6 +16,7 @@ import java.lang.Boolean;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -35,8 +36,8 @@ public class Method extends com.pulumi.resources.CustomResource {
      * @return Indicates whether the method requires clients to submit a valid API key.
      * 
      */
-    public Output</* @Nullable */ Boolean> apiKeyRequired() {
-        return this.apiKeyRequired;
+    public Output<Optional<Boolean>> apiKeyRequired() {
+        return Codegen.optional(this.apiKeyRequired);
     }
     /**
      * A list of authorization scopes configured on the method.
@@ -49,8 +50,8 @@ public class Method extends com.pulumi.resources.CustomResource {
      * @return A list of authorization scopes configured on the method.
      * 
      */
-    public Output</* @Nullable */ List<String>> authorizationScopes() {
-        return this.authorizationScopes;
+    public Output<Optional<List<String>>> authorizationScopes() {
+        return Codegen.optional(this.authorizationScopes);
     }
     /**
      * The method&#39;s authorization type.
@@ -63,8 +64,8 @@ public class Method extends com.pulumi.resources.CustomResource {
      * @return The method&#39;s authorization type.
      * 
      */
-    public Output</* @Nullable */ MethodAuthorizationType> authorizationType() {
-        return this.authorizationType;
+    public Output<Optional<MethodAuthorizationType>> authorizationType() {
+        return Codegen.optional(this.authorizationType);
     }
     /**
      * The identifier of the authorizer to use on this method.
@@ -77,8 +78,8 @@ public class Method extends com.pulumi.resources.CustomResource {
      * @return The identifier of the authorizer to use on this method.
      * 
      */
-    public Output</* @Nullable */ String> authorizerId() {
-        return this.authorizerId;
+    public Output<Optional<String>> authorizerId() {
+        return Codegen.optional(this.authorizerId);
     }
     /**
      * The backend system that the method calls when it receives a request.
@@ -105,8 +106,8 @@ public class Method extends com.pulumi.resources.CustomResource {
      * @return The backend system that the method calls when it receives a request.
      * 
      */
-    public Output</* @Nullable */ MethodIntegration> integration() {
-        return this.integration;
+    public Output<Optional<MethodIntegration>> integration() {
+        return Codegen.optional(this.integration);
     }
     /**
      * The responses that can be sent to the client who calls the method.
@@ -119,8 +120,8 @@ public class Method extends com.pulumi.resources.CustomResource {
      * @return The responses that can be sent to the client who calls the method.
      * 
      */
-    public Output</* @Nullable */ List<MethodResponse>> methodResponses() {
-        return this.methodResponses;
+    public Output<Optional<List<MethodResponse>>> methodResponses() {
+        return Codegen.optional(this.methodResponses);
     }
     /**
      * A friendly operation name for the method.
@@ -133,8 +134,8 @@ public class Method extends com.pulumi.resources.CustomResource {
      * @return A friendly operation name for the method.
      * 
      */
-    public Output</* @Nullable */ String> operationName() {
-        return this.operationName;
+    public Output<Optional<String>> operationName() {
+        return Codegen.optional(this.operationName);
     }
     /**
      * The resources that are used for the request&#39;s content type. Specify request models as key-value pairs (string-to-string mapping), with a content type as the key and a Model resource name as the value.
@@ -147,8 +148,8 @@ public class Method extends com.pulumi.resources.CustomResource {
      * @return The resources that are used for the request&#39;s content type. Specify request models as key-value pairs (string-to-string mapping), with a content type as the key and a Model resource name as the value.
      * 
      */
-    public Output</* @Nullable */ Object> requestModels() {
-        return this.requestModels;
+    public Output<Optional<Object>> requestModels() {
+        return Codegen.optional(this.requestModels);
     }
     /**
      * The request parameters that API Gateway accepts. Specify request parameters as key-value pairs (string-to-Boolean mapping), with a source as the key and a Boolean as the value.
@@ -161,8 +162,8 @@ public class Method extends com.pulumi.resources.CustomResource {
      * @return The request parameters that API Gateway accepts. Specify request parameters as key-value pairs (string-to-Boolean mapping), with a source as the key and a Boolean as the value.
      * 
      */
-    public Output</* @Nullable */ Object> requestParameters() {
-        return this.requestParameters;
+    public Output<Optional<Object>> requestParameters() {
+        return Codegen.optional(this.requestParameters);
     }
     /**
      * The ID of the associated request validator.
@@ -175,8 +176,8 @@ public class Method extends com.pulumi.resources.CustomResource {
      * @return The ID of the associated request validator.
      * 
      */
-    public Output</* @Nullable */ String> requestValidatorId() {
-        return this.requestValidatorId;
+    public Output<Optional<String>> requestValidatorId() {
+        return Codegen.optional(this.requestValidatorId);
     }
     /**
      * The ID of an API Gateway resource.

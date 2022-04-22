@@ -14,6 +14,7 @@ import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -57,8 +58,8 @@ public class EventSubscription extends com.pulumi.resources.CustomResource {
      * @return Whether the event subscription should be enabled.
      * 
      */
-    public Output</* @Nullable */ Boolean> enabled() {
-        return this.enabled;
+    public Output<Optional<Boolean>> enabled() {
+        return Codegen.optional(this.enabled);
     }
     /**
      * List of event categories to listen for, see `DescribeEventCategories` for a canonical list.
@@ -113,8 +114,8 @@ public class EventSubscription extends com.pulumi.resources.CustomResource {
      * @return Ids of sources to listen to.
      * 
      */
-    public Output</* @Nullable */ List<String>> sourceIds() {
-        return this.sourceIds;
+    public Output<Optional<List<String>>> sourceIds() {
+        return Codegen.optional(this.sourceIds);
     }
     /**
      * Type of source for events. Valid values: `replication-instance` or `replication-task`
@@ -127,8 +128,8 @@ public class EventSubscription extends com.pulumi.resources.CustomResource {
      * @return Type of source for events. Valid values: `replication-instance` or `replication-task`
      * 
      */
-    public Output</* @Nullable */ String> sourceType() {
-        return this.sourceType;
+    public Output<Optional<String>> sourceType() {
+        return Codegen.optional(this.sourceType);
     }
     /**
      * Map of resource tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
@@ -141,8 +142,8 @@ public class EventSubscription extends com.pulumi.resources.CustomResource {
      * @return Map of resource tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * A map of tags assigned to the resource, including those inherited from the provider .

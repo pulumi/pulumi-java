@@ -17,6 +17,7 @@ import java.lang.Integer;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -42,8 +43,8 @@ public class Key extends com.pulumi.resources.CustomResource {
      * @return A description of the CMK. Use a description that helps you to distinguish this CMK from others in the account, such as its intended use.
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * Enables automatic rotation of the key material for the specified customer master key (CMK). By default, automation key rotation is not enabled.
@@ -56,8 +57,8 @@ public class Key extends com.pulumi.resources.CustomResource {
      * @return Enables automatic rotation of the key material for the specified customer master key (CMK). By default, automation key rotation is not enabled.
      * 
      */
-    public Output</* @Nullable */ Boolean> enableKeyRotation() {
-        return this.enableKeyRotation;
+    public Output<Optional<Boolean>> enableKeyRotation() {
+        return Codegen.optional(this.enableKeyRotation);
     }
     /**
      * Specifies whether the customer master key (CMK) is enabled. Disabled CMKs cannot be used in cryptographic operations.
@@ -70,8 +71,8 @@ public class Key extends com.pulumi.resources.CustomResource {
      * @return Specifies whether the customer master key (CMK) is enabled. Disabled CMKs cannot be used in cryptographic operations.
      * 
      */
-    public Output</* @Nullable */ Boolean> enabled() {
-        return this.enabled;
+    public Output<Optional<Boolean>> enabled() {
+        return Codegen.optional(this.enabled);
     }
     @Export(name="keyId", type=String.class, parameters={})
     private Output<String> keyId;
@@ -104,8 +105,8 @@ public class Key extends com.pulumi.resources.CustomResource {
      * @return Specifies the type of CMK to create. The default value is SYMMETRIC_DEFAULT. This property is required only for asymmetric CMKs. You can&#39;t change the KeySpec value after the CMK is created.
      * 
      */
-    public Output</* @Nullable */ KeySpec> keySpec() {
-        return this.keySpec;
+    public Output<Optional<KeySpec>> keySpec() {
+        return Codegen.optional(this.keySpec);
     }
     /**
      * Determines the cryptographic operations for which you can use the CMK. The default value is ENCRYPT_DECRYPT. This property is required only for asymmetric CMKs. You can&#39;t change the KeyUsage value after the CMK is created.
@@ -118,8 +119,8 @@ public class Key extends com.pulumi.resources.CustomResource {
      * @return Determines the cryptographic operations for which you can use the CMK. The default value is ENCRYPT_DECRYPT. This property is required only for asymmetric CMKs. You can&#39;t change the KeyUsage value after the CMK is created.
      * 
      */
-    public Output</* @Nullable */ KeyUsage> keyUsage() {
-        return this.keyUsage;
+    public Output<Optional<KeyUsage>> keyUsage() {
+        return Codegen.optional(this.keyUsage);
     }
     /**
      * Specifies whether the CMK should be Multi-Region. You can&#39;t change the MultiRegion value after the CMK is created.
@@ -132,8 +133,8 @@ public class Key extends com.pulumi.resources.CustomResource {
      * @return Specifies whether the CMK should be Multi-Region. You can&#39;t change the MultiRegion value after the CMK is created.
      * 
      */
-    public Output</* @Nullable */ Boolean> multiRegion() {
-        return this.multiRegion;
+    public Output<Optional<Boolean>> multiRegion() {
+        return Codegen.optional(this.multiRegion);
     }
     /**
      * Specifies the number of days in the waiting period before AWS KMS deletes a CMK that has been removed from a CloudFormation stack. Enter a value between 7 and 30 days. The default value is 30 days.
@@ -146,8 +147,8 @@ public class Key extends com.pulumi.resources.CustomResource {
      * @return Specifies the number of days in the waiting period before AWS KMS deletes a CMK that has been removed from a CloudFormation stack. Enter a value between 7 and 30 days. The default value is 30 days.
      * 
      */
-    public Output</* @Nullable */ Integer> pendingWindowInDays() {
-        return this.pendingWindowInDays;
+    public Output<Optional<Integer>> pendingWindowInDays() {
+        return Codegen.optional(this.pendingWindowInDays);
     }
     /**
      * An array of key-value pairs to apply to this resource.
@@ -160,8 +161,8 @@ public class Key extends com.pulumi.resources.CustomResource {
      * @return An array of key-value pairs to apply to this resource.
      * 
      */
-    public Output</* @Nullable */ List<KeyTag>> tags() {
-        return this.tags;
+    public Output<Optional<List<KeyTag>>> tags() {
+        return Codegen.optional(this.tags);
     }
 
     /**

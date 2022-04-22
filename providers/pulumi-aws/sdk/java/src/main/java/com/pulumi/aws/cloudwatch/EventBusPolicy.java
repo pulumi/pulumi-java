@@ -11,6 +11,7 @@ import com.pulumi.core.annotations.Export;
 import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -44,8 +45,8 @@ public class EventBusPolicy extends com.pulumi.resources.CustomResource {
      * @return The event bus to set the permissions on. If you omit this, the permissions are set on the `default` event bus.
      * 
      */
-    public Output</* @Nullable */ String> eventBusName() {
-        return this.eventBusName;
+    public Output<Optional<String>> eventBusName() {
+        return Codegen.optional(this.eventBusName);
     }
     @Export(name="policy", type=String.class, parameters={})
     private Output<String> policy;

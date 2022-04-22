@@ -15,6 +15,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -87,8 +88,8 @@ public class Spacecraft extends com.pulumi.resources.CustomResource {
      * @return Links of the Spacecraft
      * 
      */
-    public Output</* @Nullable */ List<SpacecraftLinkResponse>> links() {
-        return this.links;
+    public Output<Optional<List<SpacecraftLinkResponse>>> links() {
+        return Codegen.optional(this.links);
     }
     /**
      * The geo-location where the resource lives
@@ -157,8 +158,8 @@ public class Spacecraft extends com.pulumi.resources.CustomResource {
      * @return Resource tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * Title line of Two Line Element (TLE).
@@ -171,8 +172,8 @@ public class Spacecraft extends com.pulumi.resources.CustomResource {
      * @return Title line of Two Line Element (TLE).
      * 
      */
-    public Output</* @Nullable */ String> titleLine() {
-        return this.titleLine;
+    public Output<Optional<String>> titleLine() {
+        return Codegen.optional(this.titleLine);
     }
     /**
      * Line 1 of Two Line Element (TLE).
@@ -185,8 +186,8 @@ public class Spacecraft extends com.pulumi.resources.CustomResource {
      * @return Line 1 of Two Line Element (TLE).
      * 
      */
-    public Output</* @Nullable */ String> tleLine1() {
-        return this.tleLine1;
+    public Output<Optional<String>> tleLine1() {
+        return Codegen.optional(this.tleLine1);
     }
     /**
      * Line 2 of Two Line Element (TLE).
@@ -199,8 +200,8 @@ public class Spacecraft extends com.pulumi.resources.CustomResource {
      * @return Line 2 of Two Line Element (TLE).
      * 
      */
-    public Output</* @Nullable */ String> tleLine2() {
-        return this.tleLine2;
+    public Output<Optional<String>> tleLine2() {
+        return Codegen.optional(this.tleLine2);
     }
     /**
      * The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;

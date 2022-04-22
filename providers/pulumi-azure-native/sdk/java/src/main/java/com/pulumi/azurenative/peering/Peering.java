@@ -16,6 +16,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -46,8 +47,8 @@ public class Peering extends com.pulumi.resources.CustomResource {
      * @return The properties that define a direct peering.
      * 
      */
-    public Output</* @Nullable */ PeeringPropertiesDirectResponse> direct() {
-        return this.direct;
+    public Output<Optional<PeeringPropertiesDirectResponse>> direct() {
+        return Codegen.optional(this.direct);
     }
     /**
      * The properties that define an exchange peering.
@@ -60,8 +61,8 @@ public class Peering extends com.pulumi.resources.CustomResource {
      * @return The properties that define an exchange peering.
      * 
      */
-    public Output</* @Nullable */ PeeringPropertiesExchangeResponse> exchange() {
-        return this.exchange;
+    public Output<Optional<PeeringPropertiesExchangeResponse>> exchange() {
+        return Codegen.optional(this.exchange);
     }
     /**
      * The kind of the peering.
@@ -116,8 +117,8 @@ public class Peering extends com.pulumi.resources.CustomResource {
      * @return The location of the peering.
      * 
      */
-    public Output</* @Nullable */ String> peeringLocation() {
-        return this.peeringLocation;
+    public Output<Optional<String>> peeringLocation() {
+        return Codegen.optional(this.peeringLocation);
     }
     /**
      * The provisioning state of the resource.
@@ -158,8 +159,8 @@ public class Peering extends com.pulumi.resources.CustomResource {
      * @return The resource tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * The type of the resource.

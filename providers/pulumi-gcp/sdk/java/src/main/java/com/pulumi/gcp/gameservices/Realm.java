@@ -12,6 +12,7 @@ import com.pulumi.gcp.gameservices.RealmArgs;
 import com.pulumi.gcp.gameservices.inputs.RealmState;
 import java.lang.String;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -55,8 +56,8 @@ public class Realm extends com.pulumi.resources.CustomResource {
      * @return Human readable description of the realm.
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * ETag of the resource.
@@ -83,8 +84,8 @@ public class Realm extends com.pulumi.resources.CustomResource {
      * @return The labels associated with this realm. Each label is a key-value pair.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> labels() {
-        return this.labels;
+    public Output<Optional<Map<String,String>>> labels() {
+        return Codegen.optional(this.labels);
     }
     /**
      * Location of the Realm.
@@ -97,8 +98,8 @@ public class Realm extends com.pulumi.resources.CustomResource {
      * @return Location of the Realm.
      * 
      */
-    public Output</* @Nullable */ String> location() {
-        return this.location;
+    public Output<Optional<String>> location() {
+        return Codegen.optional(this.location);
     }
     /**
      * The resource id of the realm, of the form: &#39;projects/{project_id}/locations/{location}/realms/{realm_id}&#39;. For example,

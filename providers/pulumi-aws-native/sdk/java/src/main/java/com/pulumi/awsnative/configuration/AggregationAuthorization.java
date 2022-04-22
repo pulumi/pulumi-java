@@ -12,6 +12,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -73,8 +74,8 @@ public class AggregationAuthorization extends com.pulumi.resources.CustomResourc
      * @return The tags for the AggregationAuthorization.
      * 
      */
-    public Output</* @Nullable */ List<AggregationAuthorizationTag>> tags() {
-        return this.tags;
+    public Output<Optional<List<AggregationAuthorizationTag>>> tags() {
+        return Codegen.optional(this.tags);
     }
 
     /**

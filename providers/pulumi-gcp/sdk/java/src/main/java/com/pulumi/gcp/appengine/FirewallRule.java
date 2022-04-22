@@ -12,6 +12,7 @@ import com.pulumi.gcp.appengine.FirewallRuleArgs;
 import com.pulumi.gcp.appengine.inputs.FirewallRuleState;
 import java.lang.Integer;
 import java.lang.String;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -72,8 +73,8 @@ public class FirewallRule extends com.pulumi.resources.CustomResource {
      * @return An optional string description of this rule.
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * A positive integer that defines the order of rule evaluation.
@@ -94,8 +95,8 @@ public class FirewallRule extends com.pulumi.resources.CustomResource {
      * this rule can be modified by the user.
      * 
      */
-    public Output</* @Nullable */ Integer> priority() {
-        return this.priority;
+    public Output<Optional<Integer>> priority() {
+        return Codegen.optional(this.priority);
     }
     /**
      * The ID of the project in which the resource belongs.

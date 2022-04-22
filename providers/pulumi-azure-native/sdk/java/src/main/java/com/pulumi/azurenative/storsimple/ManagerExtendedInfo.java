@@ -12,6 +12,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -56,8 +57,8 @@ public class ManagerExtendedInfo extends com.pulumi.resources.CustomResource {
      * @return Represents the CEK of the resource.
      * 
      */
-    public Output</* @Nullable */ String> encryptionKey() {
-        return this.encryptionKey;
+    public Output<Optional<String>> encryptionKey() {
+        return Codegen.optional(this.encryptionKey);
     }
     /**
      * Represents the Cert thumbprint that was used to encrypt the CEK.
@@ -70,8 +71,8 @@ public class ManagerExtendedInfo extends com.pulumi.resources.CustomResource {
      * @return Represents the Cert thumbprint that was used to encrypt the CEK.
      * 
      */
-    public Output</* @Nullable */ String> encryptionKeyThumbprint() {
-        return this.encryptionKeyThumbprint;
+    public Output<Optional<String>> encryptionKeyThumbprint() {
+        return Codegen.optional(this.encryptionKeyThumbprint);
     }
     /**
      * The etag of the resource.
@@ -84,8 +85,8 @@ public class ManagerExtendedInfo extends com.pulumi.resources.CustomResource {
      * @return The etag of the resource.
      * 
      */
-    public Output</* @Nullable */ String> etag() {
-        return this.etag;
+    public Output<Optional<String>> etag() {
+        return Codegen.optional(this.etag);
     }
     /**
      * Represents the CIK of the resource.
@@ -112,8 +113,8 @@ public class ManagerExtendedInfo extends com.pulumi.resources.CustomResource {
      * @return The Kind of the object. Currently only Series8000 is supported
      * 
      */
-    public Output</* @Nullable */ String> kind() {
-        return this.kind;
+    public Output<Optional<String>> kind() {
+        return Codegen.optional(this.kind);
     }
     /**
      * The name of the object.
@@ -140,8 +141,8 @@ public class ManagerExtendedInfo extends com.pulumi.resources.CustomResource {
      * @return Represents the portal thumbprint which can be used optionally to encrypt the entire data before storing it.
      * 
      */
-    public Output</* @Nullable */ String> portalCertificateThumbprint() {
-        return this.portalCertificateThumbprint;
+    public Output<Optional<String>> portalCertificateThumbprint() {
+        return Codegen.optional(this.portalCertificateThumbprint);
     }
     /**
      * The hierarchical type of the object.
@@ -168,8 +169,8 @@ public class ManagerExtendedInfo extends com.pulumi.resources.CustomResource {
      * @return The version of the extended info being persisted.
      * 
      */
-    public Output</* @Nullable */ String> version() {
-        return this.version;
+    public Output<Optional<String>> version() {
+        return Codegen.optional(this.version);
     }
 
     /**

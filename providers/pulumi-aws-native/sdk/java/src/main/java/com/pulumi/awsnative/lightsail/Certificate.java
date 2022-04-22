@@ -12,6 +12,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -79,8 +80,8 @@ public class Certificate extends com.pulumi.resources.CustomResource {
      * @return An array of strings that specify the alternate domains (e.g., example2.com) and subdomains (e.g., blog.example.com) for the certificate.
      * 
      */
-    public Output</* @Nullable */ List<String>> subjectAlternativeNames() {
-        return this.subjectAlternativeNames;
+    public Output<Optional<List<String>>> subjectAlternativeNames() {
+        return Codegen.optional(this.subjectAlternativeNames);
     }
     /**
      * An array of key-value pairs to apply to this resource.
@@ -93,8 +94,8 @@ public class Certificate extends com.pulumi.resources.CustomResource {
      * @return An array of key-value pairs to apply to this resource.
      * 
      */
-    public Output</* @Nullable */ List<CertificateTag>> tags() {
-        return this.tags;
+    public Output<Optional<List<CertificateTag>>> tags() {
+        return Codegen.optional(this.tags);
     }
 
     /**

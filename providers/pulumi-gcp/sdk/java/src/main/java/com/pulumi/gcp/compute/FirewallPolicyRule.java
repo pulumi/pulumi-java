@@ -15,6 +15,7 @@ import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -64,8 +65,8 @@ public class FirewallPolicyRule extends com.pulumi.resources.CustomResource {
      * @return An optional description for this resource.
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * The direction in which this rule applies. Possible values: INGRESS, EGRESS
@@ -92,8 +93,8 @@ public class FirewallPolicyRule extends com.pulumi.resources.CustomResource {
      * @return Denotes whether the firewall policy rule is disabled. When set to true, the firewall policy rule is not enforced and traffic behaves as if it did not exist. If this is unspecified, the firewall policy rule will be enabled.
      * 
      */
-    public Output</* @Nullable */ Boolean> disabled() {
-        return this.disabled;
+    public Output<Optional<Boolean>> disabled() {
+        return Codegen.optional(this.disabled);
     }
     /**
      * Denotes whether to enable logging for a particular rule. If logging is enabled, logs will be exported to the configured export destination in Stackdriver. Logs may be exported to BigQuery or Pub/Sub. Note: you cannot enable logging on &#34;goto_next&#34; rules.
@@ -106,8 +107,8 @@ public class FirewallPolicyRule extends com.pulumi.resources.CustomResource {
      * @return Denotes whether to enable logging for a particular rule. If logging is enabled, logs will be exported to the configured export destination in Stackdriver. Logs may be exported to BigQuery or Pub/Sub. Note: you cannot enable logging on &#34;goto_next&#34; rules.
      * 
      */
-    public Output</* @Nullable */ Boolean> enableLogging() {
-        return this.enableLogging;
+    public Output<Optional<Boolean>> enableLogging() {
+        return Codegen.optional(this.enableLogging);
     }
     /**
      * The firewall policy of the resource.
@@ -190,8 +191,8 @@ public class FirewallPolicyRule extends com.pulumi.resources.CustomResource {
      * @return A list of network resource URLs to which this rule applies. This field allows you to control which network&#39;s VMs get this rule. If this field is left blank, all VMs within the organization will receive the rule.
      * 
      */
-    public Output</* @Nullable */ List<String>> targetResources() {
-        return this.targetResources;
+    public Output<Optional<List<String>>> targetResources() {
+        return Codegen.optional(this.targetResources);
     }
     /**
      * A list of service accounts indicating the sets of instances that are applied with this rule.
@@ -204,8 +205,8 @@ public class FirewallPolicyRule extends com.pulumi.resources.CustomResource {
      * @return A list of service accounts indicating the sets of instances that are applied with this rule.
      * 
      */
-    public Output</* @Nullable */ List<String>> targetServiceAccounts() {
-        return this.targetServiceAccounts;
+    public Output<Optional<List<String>>> targetServiceAccounts() {
+        return Codegen.optional(this.targetServiceAccounts);
     }
 
     /**

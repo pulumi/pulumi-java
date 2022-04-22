@@ -14,6 +14,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -59,8 +60,8 @@ public class Rule extends com.pulumi.resources.CustomResource {
      * @return Description of the rule
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * A string in JSON format that is passed to the AWS Config rule Lambda function.
@@ -73,8 +74,8 @@ public class Rule extends com.pulumi.resources.CustomResource {
      * @return A string in JSON format that is passed to the AWS Config rule Lambda function.
      * 
      */
-    public Output</* @Nullable */ String> inputParameters() {
-        return this.inputParameters;
+    public Output<Optional<String>> inputParameters() {
+        return Codegen.optional(this.inputParameters);
     }
     /**
      * The frequency that you want AWS Config to run evaluations for a rule that is triggered periodically. If specified, requires `message_type` to be `ScheduledNotification`.
@@ -87,8 +88,8 @@ public class Rule extends com.pulumi.resources.CustomResource {
      * @return The frequency that you want AWS Config to run evaluations for a rule that is triggered periodically. If specified, requires `message_type` to be `ScheduledNotification`.
      * 
      */
-    public Output</* @Nullable */ String> maximumExecutionFrequency() {
-        return this.maximumExecutionFrequency;
+    public Output<Optional<String>> maximumExecutionFrequency() {
+        return Codegen.optional(this.maximumExecutionFrequency);
     }
     /**
      * The name of the rule
@@ -129,8 +130,8 @@ public class Rule extends com.pulumi.resources.CustomResource {
      * @return Scope defines which resources can trigger an evaluation for the rule as documented below.
      * 
      */
-    public Output</* @Nullable */ RuleScope> scope() {
-        return this.scope;
+    public Output<Optional<RuleScope>> scope() {
+        return Codegen.optional(this.scope);
     }
     /**
      * Source specifies the rule owner, the rule identifier, and the notifications that cause the function to evaluate your AWS resources as documented below.
@@ -157,8 +158,8 @@ public class Rule extends com.pulumi.resources.CustomResource {
      * @return A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * A map of tags assigned to the resource, including those inherited from the provider .

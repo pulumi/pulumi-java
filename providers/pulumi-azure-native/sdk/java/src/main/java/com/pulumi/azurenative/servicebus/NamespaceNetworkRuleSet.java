@@ -14,6 +14,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -44,8 +45,8 @@ public class NamespaceNetworkRuleSet extends com.pulumi.resources.CustomResource
      * @return Default Action for Network Rule Set
      * 
      */
-    public Output</* @Nullable */ String> defaultAction() {
-        return this.defaultAction;
+    public Output<Optional<String>> defaultAction() {
+        return Codegen.optional(this.defaultAction);
     }
     /**
      * List of IpRules
@@ -58,8 +59,8 @@ public class NamespaceNetworkRuleSet extends com.pulumi.resources.CustomResource
      * @return List of IpRules
      * 
      */
-    public Output</* @Nullable */ List<NWRuleSetIpRulesResponse>> ipRules() {
-        return this.ipRules;
+    public Output<Optional<List<NWRuleSetIpRulesResponse>>> ipRules() {
+        return Codegen.optional(this.ipRules);
     }
     /**
      * Resource name
@@ -100,8 +101,8 @@ public class NamespaceNetworkRuleSet extends com.pulumi.resources.CustomResource
      * @return List VirtualNetwork Rules
      * 
      */
-    public Output</* @Nullable */ List<NWRuleSetVirtualNetworkRulesResponse>> virtualNetworkRules() {
-        return this.virtualNetworkRules;
+    public Output<Optional<List<NWRuleSetVirtualNetworkRulesResponse>>> virtualNetworkRules() {
+        return Codegen.optional(this.virtualNetworkRules);
     }
 
     /**

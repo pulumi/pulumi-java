@@ -14,6 +14,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -33,8 +34,8 @@ public class Gateway extends com.pulumi.resources.CustomResource {
      * @return A list of gateway capability summaries that each contain a namespace and status.
      * 
      */
-    public Output</* @Nullable */ List<GatewayCapabilitySummary>> gatewayCapabilitySummaries() {
-        return this.gatewayCapabilitySummaries;
+    public Output<Optional<List<GatewayCapabilitySummary>>> gatewayCapabilitySummaries() {
+        return Codegen.optional(this.gatewayCapabilitySummaries);
     }
     /**
      * The ID of the gateway device.
@@ -89,8 +90,8 @@ public class Gateway extends com.pulumi.resources.CustomResource {
      * @return A list of key-value pairs that contain metadata for the gateway.
      * 
      */
-    public Output</* @Nullable */ List<GatewayTag>> tags() {
-        return this.tags;
+    public Output<Optional<List<GatewayTag>>> tags() {
+        return Codegen.optional(this.tags);
     }
 
     /**

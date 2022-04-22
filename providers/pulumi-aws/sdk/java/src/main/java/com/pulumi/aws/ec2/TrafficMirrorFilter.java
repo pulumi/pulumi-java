@@ -13,6 +13,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -57,8 +58,8 @@ public class TrafficMirrorFilter extends com.pulumi.resources.CustomResource {
      * @return A description of the filter.
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * List of amazon network services that should be mirrored. Valid values: `amazon-dns`.
@@ -71,8 +72,8 @@ public class TrafficMirrorFilter extends com.pulumi.resources.CustomResource {
      * @return List of amazon network services that should be mirrored. Valid values: `amazon-dns`.
      * 
      */
-    public Output</* @Nullable */ List<String>> networkServices() {
-        return this.networkServices;
+    public Output<Optional<List<String>>> networkServices() {
+        return Codegen.optional(this.networkServices);
     }
     /**
      * Key-value map of resource tags. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
@@ -85,8 +86,8 @@ public class TrafficMirrorFilter extends com.pulumi.resources.CustomResource {
      * @return Key-value map of resource tags. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.

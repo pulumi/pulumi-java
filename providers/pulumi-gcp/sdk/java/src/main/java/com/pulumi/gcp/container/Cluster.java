@@ -40,6 +40,7 @@ import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -255,8 +256,8 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      * @return Description of the cluster.
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * Configuration for [Using Cloud DNS for GKE](https://cloud.google.com/kubernetes-engine/docs/how-to/cloud-dns). Structure is documented below.
@@ -269,8 +270,8 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      * @return Configuration for [Using Cloud DNS for GKE](https://cloud.google.com/kubernetes-engine/docs/how-to/cloud-dns). Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ ClusterDnsConfig> dnsConfig() {
-        return this.dnsConfig;
+    public Output<Optional<ClusterDnsConfig>> dnsConfig() {
+        return Codegen.optional(this.dnsConfig);
     }
     /**
      * Enable Autopilot for this cluster. Defaults to `false`.
@@ -289,8 +290,8 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      * for available features.
      * 
      */
-    public Output</* @Nullable */ Boolean> enableAutopilot() {
-        return this.enableAutopilot;
+    public Output<Optional<Boolean>> enableAutopilot() {
+        return Codegen.optional(this.enableAutopilot);
     }
     /**
      * Enable Binary Authorization for this cluster.
@@ -305,8 +306,8 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      * If enabled, all container images will be validated by Google Binary Authorization.
      * 
      */
-    public Output</* @Nullable */ Boolean> enableBinaryAuthorization() {
-        return this.enableBinaryAuthorization;
+    public Output<Optional<Boolean>> enableBinaryAuthorization() {
+        return Codegen.optional(this.enableBinaryAuthorization);
     }
     /**
      * Whether Intra-node visibility is enabled for this cluster. This makes same node pod to pod traffic visible for VPC network.
@@ -337,8 +338,8 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      * and will be automatically deleted after 30 days.
      * 
      */
-    public Output</* @Nullable */ Boolean> enableKubernetesAlpha() {
-        return this.enableKubernetesAlpha;
+    public Output<Optional<Boolean>> enableKubernetesAlpha() {
+        return Codegen.optional(this.enableKubernetesAlpha);
     }
     /**
      * Whether L4ILB Subsetting is enabled for this cluster.
@@ -351,8 +352,8 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      * @return Whether L4ILB Subsetting is enabled for this cluster.
      * 
      */
-    public Output</* @Nullable */ Boolean> enableL4IlbSubsetting() {
-        return this.enableL4IlbSubsetting;
+    public Output<Optional<Boolean>> enableL4IlbSubsetting() {
+        return Codegen.optional(this.enableL4IlbSubsetting);
     }
     /**
      * Whether the ABAC authorizer is enabled for this cluster.
@@ -371,8 +372,8 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      * Defaults to `false`
      * 
      */
-    public Output</* @Nullable */ Boolean> enableLegacyAbac() {
-        return this.enableLegacyAbac;
+    public Output<Optional<Boolean>> enableLegacyAbac() {
+        return Codegen.optional(this.enableLegacyAbac);
     }
     /**
      * Enable Shielded Nodes features on all nodes in this cluster.  Defaults to `true`.
@@ -385,8 +386,8 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      * @return Enable Shielded Nodes features on all nodes in this cluster.  Defaults to `true`.
      * 
      */
-    public Output</* @Nullable */ Boolean> enableShieldedNodes() {
-        return this.enableShieldedNodes;
+    public Output<Optional<Boolean>> enableShieldedNodes() {
+        return Codegen.optional(this.enableShieldedNodes);
     }
     /**
      * Whether to enable Cloud TPU resources in this cluster.
@@ -401,8 +402,8 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      * See the [official documentation](https://cloud.google.com/tpu/docs/kubernetes-engine-setup).
      * 
      */
-    public Output</* @Nullable */ Boolean> enableTpu() {
-        return this.enableTpu;
+    public Output<Optional<Boolean>> enableTpu() {
+        return Codegen.optional(this.enableTpu);
     }
     /**
      * The IP address of this cluster&#39;s Kubernetes master.
@@ -453,8 +454,8 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      * `remove_default_node_pool` to `true`.
      * 
      */
-    public Output</* @Nullable */ Integer> initialNodeCount() {
-        return this.initialNodeCount;
+    public Output<Optional<Integer>> initialNodeCount() {
+        return Codegen.optional(this.initialNodeCount);
     }
     /**
      * Configuration of cluster IP allocation for
@@ -561,8 +562,8 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      * documented below.
      * 
      */
-    public Output</* @Nullable */ ClusterMaintenancePolicy> maintenancePolicy() {
-        return this.maintenancePolicy;
+    public Output<Optional<ClusterMaintenancePolicy>> maintenancePolicy() {
+        return Codegen.optional(this.maintenancePolicy);
     }
     /**
      * The authentication information for accessing the
@@ -607,8 +608,8 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ ClusterMasterAuthorizedNetworksConfig> masterAuthorizedNetworksConfig() {
-        return this.masterAuthorizedNetworksConfig;
+    public Output<Optional<ClusterMasterAuthorizedNetworksConfig>> masterAuthorizedNetworksConfig() {
+        return Codegen.optional(this.masterAuthorizedNetworksConfig);
     }
     /**
      * The current version of the master in the cluster. This may
@@ -655,8 +656,8 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      * describe the various acceptable formats for this field.
      * 
      */
-    public Output</* @Nullable */ String> minMasterVersion() {
-        return this.minMasterVersion;
+    public Output<Optional<String>> minMasterVersion() {
+        return Codegen.optional(this.minMasterVersion);
     }
     /**
      * Monitoring configuration for the cluster.
@@ -731,8 +732,8 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      * shared network.
      * 
      */
-    public Output</* @Nullable */ String> network() {
-        return this.network;
+    public Output<Optional<String>> network() {
+        return Codegen.optional(this.network);
     }
     /**
      * Configuration options for the
@@ -899,8 +900,8 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ ClusterPodSecurityPolicyConfig> podSecurityPolicyConfig() {
-        return this.podSecurityPolicyConfig;
+    public Output<Optional<ClusterPodSecurityPolicyConfig>> podSecurityPolicyConfig() {
+        return Codegen.optional(this.podSecurityPolicyConfig);
     }
     /**
      * Configuration for [private clusters](https://cloud.google.com/kubernetes-engine/docs/how-to/private-clusters),
@@ -995,8 +996,8 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      * setting `initial_node_count` to at least `1`.
      * 
      */
-    public Output</* @Nullable */ Boolean> removeDefaultNodePool() {
-        return this.removeDefaultNodePool;
+    public Output<Optional<Boolean>> removeDefaultNodePool() {
+        return Codegen.optional(this.removeDefaultNodePool);
     }
     /**
      * The GCE resource labels (a map of key/value pairs) to be applied to the cluster.
@@ -1009,8 +1010,8 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      * @return The GCE resource labels (a map of key/value pairs) to be applied to the cluster.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> resourceLabels() {
-        return this.resourceLabels;
+    public Output<Optional<Map<String,String>>> resourceLabels() {
+        return Codegen.optional(this.resourceLabels);
     }
     /**
      * Configuration for the
@@ -1027,8 +1028,8 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ ClusterResourceUsageExportConfig> resourceUsageExportConfig() {
-        return this.resourceUsageExportConfig;
+    public Output<Optional<ClusterResourceUsageExportConfig>> resourceUsageExportConfig() {
+        return Codegen.optional(this.resourceUsageExportConfig);
     }
     /**
      * The server-defined URL for the resource.
@@ -1111,8 +1112,8 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ ClusterVerticalPodAutoscaling> verticalPodAutoscaling() {
-        return this.verticalPodAutoscaling;
+    public Output<Optional<ClusterVerticalPodAutoscaling>> verticalPodAutoscaling() {
+        return Codegen.optional(this.verticalPodAutoscaling);
     }
     /**
      * Workload Identity allows Kubernetes service accounts to act as a user-managed

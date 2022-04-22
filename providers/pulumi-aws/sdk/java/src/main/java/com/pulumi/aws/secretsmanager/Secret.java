@@ -17,6 +17,7 @@ import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -60,8 +61,8 @@ public class Secret extends com.pulumi.resources.CustomResource {
      * @return Description of the secret.
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * Accepts boolean value to specify whether to overwrite a secret with the same name in the destination Region.
@@ -74,8 +75,8 @@ public class Secret extends com.pulumi.resources.CustomResource {
      * @return Accepts boolean value to specify whether to overwrite a secret with the same name in the destination Region.
      * 
      */
-    public Output</* @Nullable */ Boolean> forceOverwriteReplicaSecret() {
-        return this.forceOverwriteReplicaSecret;
+    public Output<Optional<Boolean>> forceOverwriteReplicaSecret() {
+        return Codegen.optional(this.forceOverwriteReplicaSecret);
     }
     /**
      * ARN, Key ID, or Alias of the AWS KMS key within the region secret is replicated to. If one is not specified, then Secrets Manager defaults to using the AWS account&#39;s default KMS key (`aws/secretsmanager`) in the region or creates one for use if non-existent.
@@ -88,8 +89,8 @@ public class Secret extends com.pulumi.resources.CustomResource {
      * @return ARN, Key ID, or Alias of the AWS KMS key within the region secret is replicated to. If one is not specified, then Secrets Manager defaults to using the AWS account&#39;s default KMS key (`aws/secretsmanager`) in the region or creates one for use if non-existent.
      * 
      */
-    public Output</* @Nullable */ String> kmsKeyId() {
-        return this.kmsKeyId;
+    public Output<Optional<String>> kmsKeyId() {
+        return Codegen.optional(this.kmsKeyId);
     }
     /**
      * Friendly name of the new secret. The secret name can consist of uppercase letters, lowercase letters, digits, and any of the following characters: `/_+=.@-` Conflicts with `name_prefix`.
@@ -144,8 +145,8 @@ public class Secret extends com.pulumi.resources.CustomResource {
      * @return Number of days that AWS Secrets Manager waits before it can delete the secret. This value can be `0` to force deletion without recovery or range from `7` to `30` days. The default value is `30`.
      * 
      */
-    public Output</* @Nullable */ Integer> recoveryWindowInDays() {
-        return this.recoveryWindowInDays;
+    public Output<Optional<Integer>> recoveryWindowInDays() {
+        return Codegen.optional(this.recoveryWindowInDays);
     }
     /**
      * Configuration block to support secret replication. See details below.
@@ -226,8 +227,8 @@ public class Secret extends com.pulumi.resources.CustomResource {
      * @return Key-value map of user-defined tags that are attached to the secret. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * Map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.

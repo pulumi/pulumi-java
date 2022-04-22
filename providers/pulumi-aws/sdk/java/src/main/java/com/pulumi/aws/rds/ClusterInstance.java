@@ -14,6 +14,7 @@ import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -86,8 +87,8 @@ public class ClusterInstance extends com.pulumi.resources.CustomResource {
      * @return Indicates that minor engine upgrades will be applied automatically to the DB instance during the maintenance window. Default `true`.
      * 
      */
-    public Output</* @Nullable */ Boolean> autoMinorVersionUpgrade() {
-        return this.autoMinorVersionUpgrade;
+    public Output<Optional<Boolean>> autoMinorVersionUpgrade() {
+        return Codegen.optional(this.autoMinorVersionUpgrade);
     }
     /**
      * The EC2 Availability Zone that the DB instance is created in. See [docs](https://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_CreateDBInstance.html) about the details.
@@ -142,8 +143,8 @@ public class ClusterInstance extends com.pulumi.resources.CustomResource {
      * @return Indicates whether to copy all of the user-defined tags from the DB instance to snapshots of the DB instance. Default `false`.
      * 
      */
-    public Output</* @Nullable */ Boolean> copyTagsToSnapshot() {
-        return this.copyTagsToSnapshot;
+    public Output<Optional<Boolean>> copyTagsToSnapshot() {
+        return Codegen.optional(this.copyTagsToSnapshot);
     }
     /**
      * The name of the DB parameter group to associate with this instance.
@@ -218,8 +219,8 @@ public class ClusterInstance extends com.pulumi.resources.CustomResource {
      * in the Amazon RDS User Guide.
      * 
      */
-    public Output</* @Nullable */ String> engine() {
-        return this.engine;
+    public Output<Optional<String>> engine() {
+        return Codegen.optional(this.engine);
     }
     /**
      * The database engine version.
@@ -318,8 +319,8 @@ public class ClusterInstance extends com.pulumi.resources.CustomResource {
      * @return The interval, in seconds, between points when Enhanced Monitoring metrics are collected for the DB instance. To disable collecting Enhanced Monitoring metrics, specify 0. The default is 0. Valid Values: 0, 1, 5, 10, 15, 30, 60.
      * 
      */
-    public Output</* @Nullable */ Integer> monitoringInterval() {
-        return this.monitoringInterval;
+    public Output<Optional<Integer>> monitoringInterval() {
+        return Codegen.optional(this.monitoringInterval);
     }
     /**
      * The ARN for the IAM role that permits RDS to send
@@ -438,8 +439,8 @@ public class ClusterInstance extends com.pulumi.resources.CustomResource {
      * @return Default 0. Failover Priority setting on instance level. The reader who has lower tier has higher priority to get promoted to writer.
      * 
      */
-    public Output</* @Nullable */ Integer> promotionTier() {
-        return this.promotionTier;
+    public Output<Optional<Integer>> promotionTier() {
+        return Codegen.optional(this.promotionTier);
     }
     /**
      * Bool to control if instance is publicly accessible.
@@ -456,8 +457,8 @@ public class ClusterInstance extends com.pulumi.resources.CustomResource {
      * details on controlling this property.
      * 
      */
-    public Output</* @Nullable */ Boolean> publiclyAccessible() {
-        return this.publiclyAccessible;
+    public Output<Optional<Boolean>> publiclyAccessible() {
+        return Codegen.optional(this.publiclyAccessible);
     }
     /**
      * Specifies whether the DB cluster is encrypted.
@@ -484,8 +485,8 @@ public class ClusterInstance extends com.pulumi.resources.CustomResource {
      * @return A map of tags to assign to the instance. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * A map of tags assigned to the resource, including those inherited from the provider .

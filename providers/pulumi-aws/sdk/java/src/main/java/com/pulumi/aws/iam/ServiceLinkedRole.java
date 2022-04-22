@@ -12,6 +12,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -83,8 +84,8 @@ public class ServiceLinkedRole extends com.pulumi.resources.CustomResource {
      * @return Additional string appended to the role name. Not all AWS services support custom suffixes.
      * 
      */
-    public Output</* @Nullable */ String> customSuffix() {
-        return this.customSuffix;
+    public Output<Optional<String>> customSuffix() {
+        return Codegen.optional(this.customSuffix);
     }
     /**
      * The description of the role.
@@ -97,8 +98,8 @@ public class ServiceLinkedRole extends com.pulumi.resources.CustomResource {
      * @return The description of the role.
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * The name of the role.
@@ -139,8 +140,8 @@ public class ServiceLinkedRole extends com.pulumi.resources.CustomResource {
      * @return Key-value mapping of tags for the IAM role. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.

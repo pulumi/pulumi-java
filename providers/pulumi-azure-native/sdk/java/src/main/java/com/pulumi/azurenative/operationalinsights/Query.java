@@ -16,6 +16,7 @@ import java.lang.Object;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -74,8 +75,8 @@ public class Query extends com.pulumi.resources.CustomResource {
      * @return Description of the query.
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * Unique display name for your query within the Query Pack.
@@ -130,8 +131,8 @@ public class Query extends com.pulumi.resources.CustomResource {
      * @return The related metadata items for the function.
      * 
      */
-    public Output</* @Nullable */ LogAnalyticsQueryPackQueryPropertiesResponseRelated> related() {
-        return this.related;
+    public Output<Optional<LogAnalyticsQueryPackQueryPropertiesResponseRelated>> related() {
+        return Codegen.optional(this.related);
     }
     /**
      * Read only system data
@@ -158,8 +159,8 @@ public class Query extends com.pulumi.resources.CustomResource {
      * @return Tags associated with the query.
      * 
      */
-    public Output</* @Nullable */ Map<String,List<String>>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,List<String>>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * Creation Date for the Log Analytics Query, in ISO 8601 format.

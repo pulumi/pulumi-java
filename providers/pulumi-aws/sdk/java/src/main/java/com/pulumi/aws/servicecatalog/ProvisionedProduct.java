@@ -16,6 +16,7 @@ import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -53,8 +54,8 @@ public class ProvisionedProduct extends com.pulumi.resources.CustomResource {
      * @return Language code. Valid values: `en` (English), `jp` (Japanese), `zh` (Chinese). Default value is `en`.
      * 
      */
-    public Output</* @Nullable */ String> acceptLanguage() {
-        return this.acceptLanguage;
+    public Output<Optional<String>> acceptLanguage() {
+        return Codegen.optional(this.acceptLanguage);
     }
     /**
      * ARN of the provisioned product.
@@ -109,8 +110,8 @@ public class ProvisionedProduct extends com.pulumi.resources.CustomResource {
      * @return _Only applies to deleting._ If set to `true`, AWS Service Catalog stops managing the specified provisioned product even if it cannot delete the underlying resources. The default value is `false`.
      * 
      */
-    public Output</* @Nullable */ Boolean> ignoreErrors() {
-        return this.ignoreErrors;
+    public Output<Optional<Boolean>> ignoreErrors() {
+        return Codegen.optional(this.ignoreErrors);
     }
     /**
      * Record identifier of the last request performed on this provisioned product of the following types: `ProvisionedProduct`, `UpdateProvisionedProduct`, `ExecuteProvisionedProductPlan`, `TerminateProvisionedProduct`.
@@ -193,8 +194,8 @@ public class ProvisionedProduct extends com.pulumi.resources.CustomResource {
      * @return Passed to CloudFormation. The SNS topic ARNs to which to publish stack-related events.
      * 
      */
-    public Output</* @Nullable */ List<String>> notificationArns() {
-        return this.notificationArns;
+    public Output<Optional<List<String>>> notificationArns() {
+        return Codegen.optional(this.notificationArns);
     }
     /**
      * Path identifier of the product. This value is optional if the product has a default path, and required if the product has more than one path. To list the paths for a product, use `aws.servicecatalog.getLaunchPaths`. When required, you must provide `path_id` or `path_name`, but not both.
@@ -221,8 +222,8 @@ public class ProvisionedProduct extends com.pulumi.resources.CustomResource {
      * @return Name of the path. You must provide `path_id` or `path_name`, but not both.
      * 
      */
-    public Output</* @Nullable */ String> pathName() {
-        return this.pathName;
+    public Output<Optional<String>> pathName() {
+        return Codegen.optional(this.pathName);
     }
     /**
      * Product identifier. For example, `prod-abcdzk7xy33qa`. You must provide `product_id` or `product_name`, but not both.
@@ -249,8 +250,8 @@ public class ProvisionedProduct extends com.pulumi.resources.CustomResource {
      * @return Name of the product. You must provide `product_id` or `product_name`, but not both.
      * 
      */
-    public Output</* @Nullable */ String> productName() {
-        return this.productName;
+    public Output<Optional<String>> productName() {
+        return Codegen.optional(this.productName);
     }
     /**
      * Identifier of the provisioning artifact. For example, `pa-4abcdjnxjj6ne`. You must provide the `provisioning_artifact_id` or `provisioning_artifact_name`, but not both.
@@ -277,8 +278,8 @@ public class ProvisionedProduct extends com.pulumi.resources.CustomResource {
      * @return Name of the provisioning artifact. You must provide the `provisioning_artifact_id` or `provisioning_artifact_name`, but not both.
      * 
      */
-    public Output</* @Nullable */ String> provisioningArtifactName() {
-        return this.provisioningArtifactName;
+    public Output<Optional<String>> provisioningArtifactName() {
+        return Codegen.optional(this.provisioningArtifactName);
     }
     /**
      * Configuration block with parameters specified by the administrator that are required for provisioning the product. See details below.
@@ -291,8 +292,8 @@ public class ProvisionedProduct extends com.pulumi.resources.CustomResource {
      * @return Configuration block with parameters specified by the administrator that are required for provisioning the product. See details below.
      * 
      */
-    public Output</* @Nullable */ List<ProvisionedProductProvisioningParameter>> provisioningParameters() {
-        return this.provisioningParameters;
+    public Output<Optional<List<ProvisionedProductProvisioningParameter>>> provisioningParameters() {
+        return Codegen.optional(this.provisioningParameters);
     }
     /**
      * _Only applies to deleting._ Whether to delete the Service Catalog provisioned product but leave the CloudFormation stack, stack set, or the underlying resources of the deleted provisioned product. The default value is `false`.
@@ -305,8 +306,8 @@ public class ProvisionedProduct extends com.pulumi.resources.CustomResource {
      * @return _Only applies to deleting._ Whether to delete the Service Catalog provisioned product but leave the CloudFormation stack, stack set, or the underlying resources of the deleted provisioned product. The default value is `false`.
      * 
      */
-    public Output</* @Nullable */ Boolean> retainPhysicalResources() {
-        return this.retainPhysicalResources;
+    public Output<Optional<Boolean>> retainPhysicalResources() {
+        return Codegen.optional(this.retainPhysicalResources);
     }
     /**
      * Configuration block with information about the provisioning preferences for a stack set. See details below.
@@ -319,8 +320,8 @@ public class ProvisionedProduct extends com.pulumi.resources.CustomResource {
      * @return Configuration block with information about the provisioning preferences for a stack set. See details below.
      * 
      */
-    public Output</* @Nullable */ ProvisionedProductStackSetProvisioningPreferences> stackSetProvisioningPreferences() {
-        return this.stackSetProvisioningPreferences;
+    public Output<Optional<ProvisionedProductStackSetProvisioningPreferences>> stackSetProvisioningPreferences() {
+        return Codegen.optional(this.stackSetProvisioningPreferences);
     }
     /**
      * Current status of the provisioned product. See meanings below.
@@ -361,8 +362,8 @@ public class ProvisionedProduct extends com.pulumi.resources.CustomResource {
      * @return Tags to apply to the provisioned product. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * Map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.

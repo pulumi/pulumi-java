@@ -19,6 +19,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -32,92 +33,92 @@ public class TaskDefinition extends com.pulumi.resources.CustomResource {
     @Export(name="containerDefinitions", type=List.class, parameters={TaskDefinitionContainerDefinition.class})
     private Output</* @Nullable */ List<TaskDefinitionContainerDefinition>> containerDefinitions;
 
-    public Output</* @Nullable */ List<TaskDefinitionContainerDefinition>> containerDefinitions() {
-        return this.containerDefinitions;
+    public Output<Optional<List<TaskDefinitionContainerDefinition>>> containerDefinitions() {
+        return Codegen.optional(this.containerDefinitions);
     }
     @Export(name="cpu", type=String.class, parameters={})
     private Output</* @Nullable */ String> cpu;
 
-    public Output</* @Nullable */ String> cpu() {
-        return this.cpu;
+    public Output<Optional<String>> cpu() {
+        return Codegen.optional(this.cpu);
     }
     @Export(name="ephemeralStorage", type=TaskDefinitionEphemeralStorage.class, parameters={})
     private Output</* @Nullable */ TaskDefinitionEphemeralStorage> ephemeralStorage;
 
-    public Output</* @Nullable */ TaskDefinitionEphemeralStorage> ephemeralStorage() {
-        return this.ephemeralStorage;
+    public Output<Optional<TaskDefinitionEphemeralStorage>> ephemeralStorage() {
+        return Codegen.optional(this.ephemeralStorage);
     }
     @Export(name="executionRoleArn", type=String.class, parameters={})
     private Output</* @Nullable */ String> executionRoleArn;
 
-    public Output</* @Nullable */ String> executionRoleArn() {
-        return this.executionRoleArn;
+    public Output<Optional<String>> executionRoleArn() {
+        return Codegen.optional(this.executionRoleArn);
     }
     @Export(name="family", type=String.class, parameters={})
     private Output</* @Nullable */ String> family;
 
-    public Output</* @Nullable */ String> family() {
-        return this.family;
+    public Output<Optional<String>> family() {
+        return Codegen.optional(this.family);
     }
     @Export(name="inferenceAccelerators", type=List.class, parameters={TaskDefinitionInferenceAccelerator.class})
     private Output</* @Nullable */ List<TaskDefinitionInferenceAccelerator>> inferenceAccelerators;
 
-    public Output</* @Nullable */ List<TaskDefinitionInferenceAccelerator>> inferenceAccelerators() {
-        return this.inferenceAccelerators;
+    public Output<Optional<List<TaskDefinitionInferenceAccelerator>>> inferenceAccelerators() {
+        return Codegen.optional(this.inferenceAccelerators);
     }
     @Export(name="ipcMode", type=String.class, parameters={})
     private Output</* @Nullable */ String> ipcMode;
 
-    public Output</* @Nullable */ String> ipcMode() {
-        return this.ipcMode;
+    public Output<Optional<String>> ipcMode() {
+        return Codegen.optional(this.ipcMode);
     }
     @Export(name="memory", type=String.class, parameters={})
     private Output</* @Nullable */ String> memory;
 
-    public Output</* @Nullable */ String> memory() {
-        return this.memory;
+    public Output<Optional<String>> memory() {
+        return Codegen.optional(this.memory);
     }
     @Export(name="networkMode", type=String.class, parameters={})
     private Output</* @Nullable */ String> networkMode;
 
-    public Output</* @Nullable */ String> networkMode() {
-        return this.networkMode;
+    public Output<Optional<String>> networkMode() {
+        return Codegen.optional(this.networkMode);
     }
     @Export(name="pidMode", type=String.class, parameters={})
     private Output</* @Nullable */ String> pidMode;
 
-    public Output</* @Nullable */ String> pidMode() {
-        return this.pidMode;
+    public Output<Optional<String>> pidMode() {
+        return Codegen.optional(this.pidMode);
     }
     @Export(name="placementConstraints", type=List.class, parameters={TaskDefinitionPlacementConstraint.class})
     private Output</* @Nullable */ List<TaskDefinitionPlacementConstraint>> placementConstraints;
 
-    public Output</* @Nullable */ List<TaskDefinitionPlacementConstraint>> placementConstraints() {
-        return this.placementConstraints;
+    public Output<Optional<List<TaskDefinitionPlacementConstraint>>> placementConstraints() {
+        return Codegen.optional(this.placementConstraints);
     }
     @Export(name="proxyConfiguration", type=TaskDefinitionProxyConfiguration.class, parameters={})
     private Output</* @Nullable */ TaskDefinitionProxyConfiguration> proxyConfiguration;
 
-    public Output</* @Nullable */ TaskDefinitionProxyConfiguration> proxyConfiguration() {
-        return this.proxyConfiguration;
+    public Output<Optional<TaskDefinitionProxyConfiguration>> proxyConfiguration() {
+        return Codegen.optional(this.proxyConfiguration);
     }
     @Export(name="requiresCompatibilities", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> requiresCompatibilities;
 
-    public Output</* @Nullable */ List<String>> requiresCompatibilities() {
-        return this.requiresCompatibilities;
+    public Output<Optional<List<String>>> requiresCompatibilities() {
+        return Codegen.optional(this.requiresCompatibilities);
     }
     @Export(name="runtimePlatform", type=TaskDefinitionRuntimePlatform.class, parameters={})
     private Output</* @Nullable */ TaskDefinitionRuntimePlatform> runtimePlatform;
 
-    public Output</* @Nullable */ TaskDefinitionRuntimePlatform> runtimePlatform() {
-        return this.runtimePlatform;
+    public Output<Optional<TaskDefinitionRuntimePlatform>> runtimePlatform() {
+        return Codegen.optional(this.runtimePlatform);
     }
     @Export(name="tags", type=List.class, parameters={TaskDefinitionTag.class})
     private Output</* @Nullable */ List<TaskDefinitionTag>> tags;
 
-    public Output</* @Nullable */ List<TaskDefinitionTag>> tags() {
-        return this.tags;
+    public Output<Optional<List<TaskDefinitionTag>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * The Amazon Resource Name (ARN) of the Amazon ECS task definition
@@ -136,14 +137,14 @@ public class TaskDefinition extends com.pulumi.resources.CustomResource {
     @Export(name="taskRoleArn", type=String.class, parameters={})
     private Output</* @Nullable */ String> taskRoleArn;
 
-    public Output</* @Nullable */ String> taskRoleArn() {
-        return this.taskRoleArn;
+    public Output<Optional<String>> taskRoleArn() {
+        return Codegen.optional(this.taskRoleArn);
     }
     @Export(name="volumes", type=List.class, parameters={TaskDefinitionVolume.class})
     private Output</* @Nullable */ List<TaskDefinitionVolume>> volumes;
 
-    public Output</* @Nullable */ List<TaskDefinitionVolume>> volumes() {
-        return this.volumes;
+    public Output<Optional<List<TaskDefinitionVolume>>> volumes() {
+        return Codegen.optional(this.volumes);
     }
 
     /**

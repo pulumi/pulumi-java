@@ -16,6 +16,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -46,8 +47,8 @@ public class VirtualNetwork extends com.pulumi.resources.CustomResource {
      * @return The allowed subnets of the virtual network.
      * 
      */
-    public Output</* @Nullable */ List<SubnetResponse>> allowedSubnets() {
-        return this.allowedSubnets;
+    public Output<Optional<List<SubnetResponse>>> allowedSubnets() {
+        return Codegen.optional(this.allowedSubnets);
     }
     /**
      * The creation date of the virtual network.
@@ -74,8 +75,8 @@ public class VirtualNetwork extends com.pulumi.resources.CustomResource {
      * @return The description of the virtual network.
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * The Microsoft.Network resource identifier of the virtual network.
@@ -88,8 +89,8 @@ public class VirtualNetwork extends com.pulumi.resources.CustomResource {
      * @return The Microsoft.Network resource identifier of the virtual network.
      * 
      */
-    public Output</* @Nullable */ String> externalProviderResourceId() {
-        return this.externalProviderResourceId;
+    public Output<Optional<String>> externalProviderResourceId() {
+        return Codegen.optional(this.externalProviderResourceId);
     }
     /**
      * The external subnet properties.
@@ -116,8 +117,8 @@ public class VirtualNetwork extends com.pulumi.resources.CustomResource {
      * @return The location of the resource.
      * 
      */
-    public Output</* @Nullable */ String> location() {
-        return this.location;
+    public Output<Optional<String>> location() {
+        return Codegen.optional(this.location);
     }
     /**
      * The name of the resource.
@@ -158,8 +159,8 @@ public class VirtualNetwork extends com.pulumi.resources.CustomResource {
      * @return The subnet overrides of the virtual network.
      * 
      */
-    public Output</* @Nullable */ List<SubnetOverrideResponse>> subnetOverrides() {
-        return this.subnetOverrides;
+    public Output<Optional<List<SubnetOverrideResponse>>> subnetOverrides() {
+        return Codegen.optional(this.subnetOverrides);
     }
     /**
      * The tags of the resource.
@@ -172,8 +173,8 @@ public class VirtualNetwork extends com.pulumi.resources.CustomResource {
      * @return The tags of the resource.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * The type of the resource.

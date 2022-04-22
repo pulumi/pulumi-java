@@ -9,6 +9,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import com.pulumi.example.RecArgs;
 import com.pulumi.example.Utilities;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 @ResourceType(type="example::Rec")
@@ -16,8 +17,8 @@ public class Rec extends com.pulumi.resources.CustomResource {
     @Export(name="rec", type=Rec.class, parameters={})
     private Output</* @Nullable */ Rec> rec;
 
-    public Output</* @Nullable */ Rec> rec() {
-        return this.rec;
+    public Output<Optional<Rec>> rec() {
+        return Codegen.optional(this.rec);
     }
 
     /**

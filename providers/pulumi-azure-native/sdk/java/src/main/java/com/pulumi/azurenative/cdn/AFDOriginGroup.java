@@ -17,6 +17,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -53,8 +54,8 @@ public class AFDOriginGroup extends com.pulumi.resources.CustomResource {
      * @return Health probe settings to the origin that is used to determine the health of the origin.
      * 
      */
-    public Output</* @Nullable */ HealthProbeParametersResponse> healthProbeSettings() {
-        return this.healthProbeSettings;
+    public Output<Optional<HealthProbeParametersResponse>> healthProbeSettings() {
+        return Codegen.optional(this.healthProbeSettings);
     }
     /**
      * Load balancing settings for a backend pool
@@ -67,8 +68,8 @@ public class AFDOriginGroup extends com.pulumi.resources.CustomResource {
      * @return Load balancing settings for a backend pool
      * 
      */
-    public Output</* @Nullable */ LoadBalancingSettingsParametersResponse> loadBalancingSettings() {
-        return this.loadBalancingSettings;
+    public Output<Optional<LoadBalancingSettingsParametersResponse>> loadBalancingSettings() {
+        return Codegen.optional(this.loadBalancingSettings);
     }
     /**
      * Resource name.
@@ -109,8 +110,8 @@ public class AFDOriginGroup extends com.pulumi.resources.CustomResource {
      * @return The JSON object that contains the properties to determine origin health using real requests/responses. This property is currently not supported.
      * 
      */
-    public Output</* @Nullable */ ResponseBasedOriginErrorDetectionParametersResponse> responseBasedAfdOriginErrorDetectionSettings() {
-        return this.responseBasedAfdOriginErrorDetectionSettings;
+    public Output<Optional<ResponseBasedOriginErrorDetectionParametersResponse>> responseBasedAfdOriginErrorDetectionSettings() {
+        return Codegen.optional(this.responseBasedAfdOriginErrorDetectionSettings);
     }
     /**
      * Whether to allow session affinity on this host. Valid options are &#39;Enabled&#39; or &#39;Disabled&#39;
@@ -123,8 +124,8 @@ public class AFDOriginGroup extends com.pulumi.resources.CustomResource {
      * @return Whether to allow session affinity on this host. Valid options are &#39;Enabled&#39; or &#39;Disabled&#39;
      * 
      */
-    public Output</* @Nullable */ String> sessionAffinityState() {
-        return this.sessionAffinityState;
+    public Output<Optional<String>> sessionAffinityState() {
+        return Codegen.optional(this.sessionAffinityState);
     }
     /**
      * Read only system data
@@ -151,8 +152,8 @@ public class AFDOriginGroup extends com.pulumi.resources.CustomResource {
      * @return Time in minutes to shift the traffic to the endpoint gradually when an unhealthy endpoint comes healthy or a new endpoint is added. Default is 10 mins. This property is currently not supported.
      * 
      */
-    public Output</* @Nullable */ Integer> trafficRestorationTimeToHealedOrNewEndpointsInMinutes() {
-        return this.trafficRestorationTimeToHealedOrNewEndpointsInMinutes;
+    public Output<Optional<Integer>> trafficRestorationTimeToHealedOrNewEndpointsInMinutes() {
+        return Codegen.optional(this.trafficRestorationTimeToHealedOrNewEndpointsInMinutes);
     }
     /**
      * Resource type.

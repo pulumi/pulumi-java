@@ -14,6 +14,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -44,8 +45,8 @@ public class BastionHost extends com.pulumi.resources.CustomResource {
      * @return FQDN for the endpoint on which bastion host is accessible.
      * 
      */
-    public Output</* @Nullable */ String> dnsName() {
-        return this.dnsName;
+    public Output<Optional<String>> dnsName() {
+        return Codegen.optional(this.dnsName);
     }
     /**
      * A unique read-only string that changes whenever the resource is updated.
@@ -72,8 +73,8 @@ public class BastionHost extends com.pulumi.resources.CustomResource {
      * @return IP configuration of the Bastion Host resource.
      * 
      */
-    public Output</* @Nullable */ List<BastionHostIPConfigurationResponse>> ipConfigurations() {
-        return this.ipConfigurations;
+    public Output<Optional<List<BastionHostIPConfigurationResponse>>> ipConfigurations() {
+        return Codegen.optional(this.ipConfigurations);
     }
     /**
      * Resource location.
@@ -86,8 +87,8 @@ public class BastionHost extends com.pulumi.resources.CustomResource {
      * @return Resource location.
      * 
      */
-    public Output</* @Nullable */ String> location() {
-        return this.location;
+    public Output<Optional<String>> location() {
+        return Codegen.optional(this.location);
     }
     /**
      * Resource name.
@@ -128,8 +129,8 @@ public class BastionHost extends com.pulumi.resources.CustomResource {
      * @return Resource tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * Resource type.

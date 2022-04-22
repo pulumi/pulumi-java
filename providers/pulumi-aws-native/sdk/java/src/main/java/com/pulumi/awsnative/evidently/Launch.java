@@ -15,6 +15,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -32,8 +33,8 @@ public class Launch extends com.pulumi.resources.CustomResource {
     @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     @Export(name="groups", type=List.class, parameters={LaunchGroupObject.class})
     private Output<List<LaunchGroupObject>> groups;
@@ -44,8 +45,8 @@ public class Launch extends com.pulumi.resources.CustomResource {
     @Export(name="metricMonitors", type=List.class, parameters={LaunchMetricDefinitionObject.class})
     private Output</* @Nullable */ List<LaunchMetricDefinitionObject>> metricMonitors;
 
-    public Output</* @Nullable */ List<LaunchMetricDefinitionObject>> metricMonitors() {
-        return this.metricMonitors;
+    public Output<Optional<List<LaunchMetricDefinitionObject>>> metricMonitors() {
+        return Codegen.optional(this.metricMonitors);
     }
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
@@ -62,8 +63,8 @@ public class Launch extends com.pulumi.resources.CustomResource {
     @Export(name="randomizationSalt", type=String.class, parameters={})
     private Output</* @Nullable */ String> randomizationSalt;
 
-    public Output</* @Nullable */ String> randomizationSalt() {
-        return this.randomizationSalt;
+    public Output<Optional<String>> randomizationSalt() {
+        return Codegen.optional(this.randomizationSalt);
     }
     @Export(name="scheduledSplitsConfig", type=List.class, parameters={LaunchStepConfig.class})
     private Output<List<LaunchStepConfig>> scheduledSplitsConfig;
@@ -82,8 +83,8 @@ public class Launch extends com.pulumi.resources.CustomResource {
      * @return An array of key-value pairs to apply to this resource.
      * 
      */
-    public Output</* @Nullable */ List<LaunchTag>> tags() {
-        return this.tags;
+    public Output<Optional<List<LaunchTag>>> tags() {
+        return Codegen.optional(this.tags);
     }
 
     /**

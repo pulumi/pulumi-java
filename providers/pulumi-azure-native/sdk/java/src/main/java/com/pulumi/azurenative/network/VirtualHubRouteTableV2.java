@@ -13,6 +13,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -43,8 +44,8 @@ public class VirtualHubRouteTableV2 extends com.pulumi.resources.CustomResource 
      * @return List of all connections attached to this route table v2.
      * 
      */
-    public Output</* @Nullable */ List<String>> attachedConnections() {
-        return this.attachedConnections;
+    public Output<Optional<List<String>>> attachedConnections() {
+        return Codegen.optional(this.attachedConnections);
     }
     /**
      * A unique read-only string that changes whenever the resource is updated.
@@ -71,8 +72,8 @@ public class VirtualHubRouteTableV2 extends com.pulumi.resources.CustomResource 
      * @return The name of the resource that is unique within a resource group. This name can be used to access the resource.
      * 
      */
-    public Output</* @Nullable */ String> name() {
-        return this.name;
+    public Output<Optional<String>> name() {
+        return Codegen.optional(this.name);
     }
     /**
      * The provisioning state of the virtual hub route table v2 resource.
@@ -99,8 +100,8 @@ public class VirtualHubRouteTableV2 extends com.pulumi.resources.CustomResource 
      * @return List of all routes.
      * 
      */
-    public Output</* @Nullable */ List<VirtualHubRouteV2Response>> routes() {
-        return this.routes;
+    public Output<Optional<List<VirtualHubRouteV2Response>>> routes() {
+        return Codegen.optional(this.routes);
     }
 
     /**

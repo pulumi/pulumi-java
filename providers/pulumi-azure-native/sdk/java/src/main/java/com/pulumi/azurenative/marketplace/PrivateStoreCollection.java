@@ -15,6 +15,7 @@ import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -45,8 +46,8 @@ public class PrivateStoreCollection extends com.pulumi.resources.CustomResource 
      * @return Indicating whether all subscriptions are selected (=true) or not (=false).
      * 
      */
-    public Output</* @Nullable */ Boolean> allSubscriptions() {
-        return this.allSubscriptions;
+    public Output<Optional<Boolean>> allSubscriptions() {
+        return Codegen.optional(this.allSubscriptions);
     }
     /**
      * Gets or sets the association with Commercial&#39;s Billing Account.
@@ -59,8 +60,8 @@ public class PrivateStoreCollection extends com.pulumi.resources.CustomResource 
      * @return Gets or sets the association with Commercial&#39;s Billing Account.
      * 
      */
-    public Output</* @Nullable */ String> claim() {
-        return this.claim;
+    public Output<Optional<String>> claim() {
+        return Codegen.optional(this.claim);
     }
     /**
      * Gets collection Id.
@@ -87,8 +88,8 @@ public class PrivateStoreCollection extends com.pulumi.resources.CustomResource 
      * @return Gets or sets collection name.
      * 
      */
-    public Output</* @Nullable */ String> collectionName() {
-        return this.collectionName;
+    public Output<Optional<String>> collectionName() {
+        return Codegen.optional(this.collectionName);
     }
     /**
      * Indicating whether the collection is enabled or disabled.
@@ -101,8 +102,8 @@ public class PrivateStoreCollection extends com.pulumi.resources.CustomResource 
      * @return Indicating whether the collection is enabled or disabled.
      * 
      */
-    public Output</* @Nullable */ Boolean> enabled() {
-        return this.enabled;
+    public Output<Optional<Boolean>> enabled() {
+        return Codegen.optional(this.enabled);
     }
     /**
      * The name of the resource.
@@ -143,8 +144,8 @@ public class PrivateStoreCollection extends com.pulumi.resources.CustomResource 
      * @return Gets or sets subscription ids list. Empty list indicates all subscriptions are selected, null indicates no update is done, explicit list indicates the explicit selected subscriptions. On insert, null is considered as bad request
      * 
      */
-    public Output</* @Nullable */ List<String>> subscriptionsList() {
-        return this.subscriptionsList;
+    public Output<Optional<List<String>>> subscriptionsList() {
+        return Codegen.optional(this.subscriptionsList);
     }
     /**
      * Metadata pertaining to creation and last modification of the resource

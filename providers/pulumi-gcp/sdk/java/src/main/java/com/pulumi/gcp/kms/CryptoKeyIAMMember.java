@@ -12,6 +12,7 @@ import com.pulumi.gcp.kms.CryptoKeyIAMMemberArgs;
 import com.pulumi.gcp.kms.inputs.CryptoKeyIAMMemberState;
 import com.pulumi.gcp.kms.outputs.CryptoKeyIAMMemberCondition;
 import java.lang.String;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -73,8 +74,8 @@ public class CryptoKeyIAMMember extends com.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ CryptoKeyIAMMemberCondition> condition() {
-        return this.condition;
+    public Output<Optional<CryptoKeyIAMMemberCondition>> condition() {
+        return Codegen.optional(this.condition);
     }
     /**
      * The crypto key ID, in the form

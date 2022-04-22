@@ -13,6 +13,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -71,8 +72,8 @@ public class HubRouteTable extends com.pulumi.resources.CustomResource {
      * @return List of labels associated with this route table.
      * 
      */
-    public Output</* @Nullable */ List<String>> labels() {
-        return this.labels;
+    public Output<Optional<List<String>>> labels() {
+        return Codegen.optional(this.labels);
     }
     /**
      * The name of the resource that is unique within a resource group. This name can be used to access the resource.
@@ -85,8 +86,8 @@ public class HubRouteTable extends com.pulumi.resources.CustomResource {
      * @return The name of the resource that is unique within a resource group. This name can be used to access the resource.
      * 
      */
-    public Output</* @Nullable */ String> name() {
-        return this.name;
+    public Output<Optional<String>> name() {
+        return Codegen.optional(this.name);
     }
     /**
      * List of all connections that advertise to this route table.
@@ -127,8 +128,8 @@ public class HubRouteTable extends com.pulumi.resources.CustomResource {
      * @return List of all routes.
      * 
      */
-    public Output</* @Nullable */ List<HubRouteResponse>> routes() {
-        return this.routes;
+    public Output<Optional<List<HubRouteResponse>>> routes() {
+        return Codegen.optional(this.routes);
     }
     /**
      * Resource type.

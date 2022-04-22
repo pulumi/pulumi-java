@@ -17,6 +17,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -52,8 +53,8 @@ public class FHIRDatastore extends com.pulumi.resources.CustomResource {
     @Export(name="datastoreName", type=String.class, parameters={})
     private Output</* @Nullable */ String> datastoreName;
 
-    public Output</* @Nullable */ String> datastoreName() {
-        return this.datastoreName;
+    public Output<Optional<String>> datastoreName() {
+        return Codegen.optional(this.datastoreName);
     }
     @Export(name="datastoreStatus", type=FHIRDatastoreDatastoreStatus.class, parameters={})
     private Output<FHIRDatastoreDatastoreStatus> datastoreStatus;
@@ -70,20 +71,20 @@ public class FHIRDatastore extends com.pulumi.resources.CustomResource {
     @Export(name="preloadDataConfig", type=FHIRDatastorePreloadDataConfig.class, parameters={})
     private Output</* @Nullable */ FHIRDatastorePreloadDataConfig> preloadDataConfig;
 
-    public Output</* @Nullable */ FHIRDatastorePreloadDataConfig> preloadDataConfig() {
-        return this.preloadDataConfig;
+    public Output<Optional<FHIRDatastorePreloadDataConfig>> preloadDataConfig() {
+        return Codegen.optional(this.preloadDataConfig);
     }
     @Export(name="sseConfiguration", type=FHIRDatastoreSseConfiguration.class, parameters={})
     private Output</* @Nullable */ FHIRDatastoreSseConfiguration> sseConfiguration;
 
-    public Output</* @Nullable */ FHIRDatastoreSseConfiguration> sseConfiguration() {
-        return this.sseConfiguration;
+    public Output<Optional<FHIRDatastoreSseConfiguration>> sseConfiguration() {
+        return Codegen.optional(this.sseConfiguration);
     }
     @Export(name="tags", type=List.class, parameters={FHIRDatastoreTag.class})
     private Output</* @Nullable */ List<FHIRDatastoreTag>> tags;
 
-    public Output</* @Nullable */ List<FHIRDatastoreTag>> tags() {
-        return this.tags;
+    public Output<Optional<List<FHIRDatastoreTag>>> tags() {
+        return Codegen.optional(this.tags);
     }
 
     /**

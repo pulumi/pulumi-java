@@ -14,6 +14,7 @@ import com.pulumi.gcp.compute.outputs.NodeGroupAutoscalingPolicy;
 import com.pulumi.gcp.compute.outputs.NodeGroupMaintenanceWindow;
 import java.lang.Integer;
 import java.lang.String;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -98,8 +99,8 @@ public class NodeGroup extends com.pulumi.resources.CustomResource {
      * @return An optional textual description of the resource.
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * The initial number of nodes in the node group. One of `initial_size` or `size` must be specified.
@@ -112,8 +113,8 @@ public class NodeGroup extends com.pulumi.resources.CustomResource {
      * @return The initial number of nodes in the node group. One of `initial_size` or `size` must be specified.
      * 
      */
-    public Output</* @Nullable */ Integer> initialSize() {
-        return this.initialSize;
+    public Output<Optional<Integer>> initialSize() {
+        return Codegen.optional(this.initialSize);
     }
     /**
      * Specifies how to handle instances when a node in the group undergoes maintenance. Set to one of: DEFAULT, RESTART_IN_PLACE, or MIGRATE_WITHIN_NODE_GROUP. The default value is DEFAULT.
@@ -126,8 +127,8 @@ public class NodeGroup extends com.pulumi.resources.CustomResource {
      * @return Specifies how to handle instances when a node in the group undergoes maintenance. Set to one of: DEFAULT, RESTART_IN_PLACE, or MIGRATE_WITHIN_NODE_GROUP. The default value is DEFAULT.
      * 
      */
-    public Output</* @Nullable */ String> maintenancePolicy() {
-        return this.maintenancePolicy;
+    public Output<Optional<String>> maintenancePolicy() {
+        return Codegen.optional(this.maintenancePolicy);
     }
     /**
      * contains properties for the timeframe of maintenance
@@ -142,8 +143,8 @@ public class NodeGroup extends com.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ NodeGroupMaintenanceWindow> maintenanceWindow() {
-        return this.maintenanceWindow;
+    public Output<Optional<NodeGroupMaintenanceWindow>> maintenanceWindow() {
+        return Codegen.optional(this.maintenanceWindow);
     }
     /**
      * Name of the resource.

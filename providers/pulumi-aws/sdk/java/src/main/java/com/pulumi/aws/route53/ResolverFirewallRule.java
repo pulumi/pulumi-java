@@ -12,6 +12,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -55,8 +56,8 @@ public class ResolverFirewallRule extends com.pulumi.resources.CustomResource {
      * @return The DNS record&#39;s type. This determines the format of the record value that you provided in BlockOverrideDomain. Value values: `CNAME`.
      * 
      */
-    public Output</* @Nullable */ String> blockOverrideDnsType() {
-        return this.blockOverrideDnsType;
+    public Output<Optional<String>> blockOverrideDnsType() {
+        return Codegen.optional(this.blockOverrideDnsType);
     }
     /**
      * The custom DNS record to send back in response to the query.
@@ -69,8 +70,8 @@ public class ResolverFirewallRule extends com.pulumi.resources.CustomResource {
      * @return The custom DNS record to send back in response to the query.
      * 
      */
-    public Output</* @Nullable */ String> blockOverrideDomain() {
-        return this.blockOverrideDomain;
+    public Output<Optional<String>> blockOverrideDomain() {
+        return Codegen.optional(this.blockOverrideDomain);
     }
     /**
      * The recommended amount of time, in seconds, for the DNS resolver or web browser to cache the provided override record. Minimum value of 0. Maximum value of 604800.
@@ -83,8 +84,8 @@ public class ResolverFirewallRule extends com.pulumi.resources.CustomResource {
      * @return The recommended amount of time, in seconds, for the DNS resolver or web browser to cache the provided override record. Minimum value of 0. Maximum value of 604800.
      * 
      */
-    public Output</* @Nullable */ Integer> blockOverrideTtl() {
-        return this.blockOverrideTtl;
+    public Output<Optional<Integer>> blockOverrideTtl() {
+        return Codegen.optional(this.blockOverrideTtl);
     }
     /**
      * The way that you want DNS Firewall to block the request. Valid values: `NODATA`, `NXDOMAIN`, `OVERRIDE`.
@@ -97,8 +98,8 @@ public class ResolverFirewallRule extends com.pulumi.resources.CustomResource {
      * @return The way that you want DNS Firewall to block the request. Valid values: `NODATA`, `NXDOMAIN`, `OVERRIDE`.
      * 
      */
-    public Output</* @Nullable */ String> blockResponse() {
-        return this.blockResponse;
+    public Output<Optional<String>> blockResponse() {
+        return Codegen.optional(this.blockResponse);
     }
     /**
      * The ID of the domain list that you want to use in the rule.

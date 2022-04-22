@@ -18,6 +18,7 @@ import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -62,8 +63,8 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      * @return Enable to allow major engine version upgrades when changing engine versions. Defaults to `false`.
      * 
      */
-    public Output</* @Nullable */ Boolean> allowMajorVersionUpgrade() {
-        return this.allowMajorVersionUpgrade;
+    public Output<Optional<Boolean>> allowMajorVersionUpgrade() {
+        return Codegen.optional(this.allowMajorVersionUpgrade);
     }
     /**
      * Specifies whether any cluster modifications are applied immediately, or during the next maintenance window. Default is `false`. See [Amazon RDS Documentation for more information.](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Overview.DBInstance.Modifying.html)
@@ -118,8 +119,8 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      * @return The target backtrack window, in seconds. Only available for `aurora` and `aurora-mysql` engines currently. To disable backtracking, set this value to `0`. Defaults to `0`. Must be between `0` and `259200` (72 hours)
      * 
      */
-    public Output</* @Nullable */ Integer> backtrackWindow() {
-        return this.backtrackWindow;
+    public Output<Optional<Integer>> backtrackWindow() {
+        return Codegen.optional(this.backtrackWindow);
     }
     /**
      * The days to retain backups for. Default `1`
@@ -132,8 +133,8 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      * @return The days to retain backups for. Default `1`
      * 
      */
-    public Output</* @Nullable */ Integer> backupRetentionPeriod() {
-        return this.backupRetentionPeriod;
+    public Output<Optional<Integer>> backupRetentionPeriod() {
+        return Codegen.optional(this.backupRetentionPeriod);
     }
     /**
      * The cluster identifier. If omitted, this provider will assign a random, unique identifier.
@@ -202,8 +203,8 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      * @return Copy all Cluster `tags` to snapshots. Default is `false`.
      * 
      */
-    public Output</* @Nullable */ Boolean> copyTagsToSnapshot() {
-        return this.copyTagsToSnapshot;
+    public Output<Optional<Boolean>> copyTagsToSnapshot() {
+        return Codegen.optional(this.copyTagsToSnapshot);
     }
     /**
      * Name for an automatically created database on cluster creation. There are different naming restrictions per database engine: [RDS Naming Constraints](http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_Limits.html#RDS_Limits.Constraints)
@@ -244,8 +245,8 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      * @return Instance parameter group to associate with all instances of the DB cluster. The `db_instance_parameter_group_name` parameter is only valid in combination with the `allow_major_version_upgrade` parameter.
      * 
      */
-    public Output</* @Nullable */ String> dbInstanceParameterGroupName() {
-        return this.dbInstanceParameterGroupName;
+    public Output<Optional<String>> dbInstanceParameterGroupName() {
+        return Codegen.optional(this.dbInstanceParameterGroupName);
     }
     /**
      * A DB subnet group to associate with this DB instance. **NOTE:** This must match the `db_subnet_group_name` specified on every `aws.rds.ClusterInstance` in the cluster.
@@ -272,8 +273,8 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      * @return If the DB instance should have deletion protection enabled. The database can&#39;t be deleted when this value is set to `true`. The default is `false`.
      * 
      */
-    public Output</* @Nullable */ Boolean> deletionProtection() {
-        return this.deletionProtection;
+    public Output<Optional<Boolean>> deletionProtection() {
+        return Codegen.optional(this.deletionProtection);
     }
     /**
      * Whether cluster should forward writes to an associated global cluster. Applied to secondary clusters to enable them to forward writes to an `aws.rds.GlobalCluster`&#39;s primary cluster. See the [Aurora Userguide documentation](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/aurora-global-database-write-forwarding.html) for more information.
@@ -286,8 +287,8 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      * @return Whether cluster should forward writes to an associated global cluster. Applied to secondary clusters to enable them to forward writes to an `aws.rds.GlobalCluster`&#39;s primary cluster. See the [Aurora Userguide documentation](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/aurora-global-database-write-forwarding.html) for more information.
      * 
      */
-    public Output</* @Nullable */ Boolean> enableGlobalWriteForwarding() {
-        return this.enableGlobalWriteForwarding;
+    public Output<Optional<Boolean>> enableGlobalWriteForwarding() {
+        return Codegen.optional(this.enableGlobalWriteForwarding);
     }
     /**
      * Enable HTTP endpoint (data API). Only valid when `engine_mode` is set to `serverless`.
@@ -300,8 +301,8 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      * @return Enable HTTP endpoint (data API). Only valid when `engine_mode` is set to `serverless`.
      * 
      */
-    public Output</* @Nullable */ Boolean> enableHttpEndpoint() {
-        return this.enableHttpEndpoint;
+    public Output<Optional<Boolean>> enableHttpEndpoint() {
+        return Codegen.optional(this.enableHttpEndpoint);
     }
     /**
      * Set of log types to export to cloudwatch. If omitted, no logs will be exported. The following log types are supported: `audit`, `error`, `general`, `slowquery`, `postgresql` (PostgreSQL).
@@ -314,8 +315,8 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      * @return Set of log types to export to cloudwatch. If omitted, no logs will be exported. The following log types are supported: `audit`, `error`, `general`, `slowquery`, `postgresql` (PostgreSQL).
      * 
      */
-    public Output</* @Nullable */ List<String>> enabledCloudwatchLogsExports() {
-        return this.enabledCloudwatchLogsExports;
+    public Output<Optional<List<String>>> enabledCloudwatchLogsExports() {
+        return Codegen.optional(this.enabledCloudwatchLogsExports);
     }
     /**
      * The DNS address of the RDS instance
@@ -342,8 +343,8 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      * @return The name of the database engine to be used for this DB cluster. Defaults to `aurora`. Valid Values: `aurora`, `aurora-mysql`, `aurora-postgresql`
      * 
      */
-    public Output</* @Nullable */ String> engine() {
-        return this.engine;
+    public Output<Optional<String>> engine() {
+        return Codegen.optional(this.engine);
     }
     /**
      * The database engine mode. Valid values: `global` (only valid for Aurora MySQL 1.21 and earlier), `multimaster`, `parallelquery`, `provisioned`, `serverless`. Defaults to: `provisioned`. See the [RDS User Guide](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/aurora-serverless.html) for limitations when using `serverless`.
@@ -356,8 +357,8 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      * @return The database engine mode. Valid values: `global` (only valid for Aurora MySQL 1.21 and earlier), `multimaster`, `parallelquery`, `provisioned`, `serverless`. Defaults to: `provisioned`. See the [RDS User Guide](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/aurora-serverless.html) for limitations when using `serverless`.
      * 
      */
-    public Output</* @Nullable */ String> engineMode() {
-        return this.engineMode;
+    public Output<Optional<String>> engineMode() {
+        return Codegen.optional(this.engineMode);
     }
     /**
      * The database engine version. Updating this argument results in an outage. See the [Aurora MySQL](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraMySQL.Updates.html) and [Aurora Postgres](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/AuroraPostgreSQL.Updates.html) documentation for your configured engine to determine this value. For example with Aurora MySQL 2, a potential value for this argument is `5.7.mysql_aurora.2.03.2`. The value can contain a partial version where supported by the API. The actual engine version used is returned in the attribute `engine_version_actual`, defined below.
@@ -398,8 +399,8 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      * @return The name of your final DB snapshot when this DB cluster is deleted. If omitted, no final snapshot will be made.
      * 
      */
-    public Output</* @Nullable */ String> finalSnapshotIdentifier() {
-        return this.finalSnapshotIdentifier;
+    public Output<Optional<String>> finalSnapshotIdentifier() {
+        return Codegen.optional(this.finalSnapshotIdentifier);
     }
     /**
      * The global cluster identifier specified on `aws.rds.GlobalCluster`.
@@ -412,8 +413,8 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      * @return The global cluster identifier specified on `aws.rds.GlobalCluster`.
      * 
      */
-    public Output</* @Nullable */ String> globalClusterIdentifier() {
-        return this.globalClusterIdentifier;
+    public Output<Optional<String>> globalClusterIdentifier() {
+        return Codegen.optional(this.globalClusterIdentifier);
     }
     /**
      * The Route53 Hosted Zone ID of the endpoint
@@ -440,8 +441,8 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      * @return Specifies whether or mappings of AWS Identity and Access Management (IAM) accounts to database accounts is enabled. Please see [AWS Documentation](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/UsingWithRDS.IAMDBAuth.html) for availability and limitations.
      * 
      */
-    public Output</* @Nullable */ Boolean> iamDatabaseAuthenticationEnabled() {
-        return this.iamDatabaseAuthenticationEnabled;
+    public Output<Optional<Boolean>> iamDatabaseAuthenticationEnabled() {
+        return Codegen.optional(this.iamDatabaseAuthenticationEnabled);
     }
     /**
      * A List of ARNs for the IAM roles to associate to the RDS Cluster.
@@ -482,8 +483,8 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      * @return Password for the master DB user. Note that this may show up in logs, and it will be stored in the state file. Please refer to the [RDS Naming Constraints](http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_Limits.html#RDS_Limits.Constraints)
      * 
      */
-    public Output</* @Nullable */ String> masterPassword() {
-        return this.masterPassword;
+    public Output<Optional<String>> masterPassword() {
+        return Codegen.optional(this.masterPassword);
     }
     /**
      * Username for the master DB user. Please refer to the [RDS Naming Constraints](http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_Limits.html#RDS_Limits.Constraints). This argument does not support in-place updates and cannot be changed during a restore from snapshot.
@@ -568,8 +569,8 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      * @return ARN of a source DB cluster or DB instance if this DB cluster is to be created as a Read Replica. If DB Cluster is part of a Global Cluster, use `ignore_changes`.
      * 
      */
-    public Output</* @Nullable */ String> replicationSourceIdentifier() {
-        return this.replicationSourceIdentifier;
+    public Output<Optional<String>> replicationSourceIdentifier() {
+        return Codegen.optional(this.replicationSourceIdentifier);
     }
     /**
      * Nested attribute for [point in time restore](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/USER_PIT.html). More details below.
@@ -582,14 +583,14 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      * @return Nested attribute for [point in time restore](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/USER_PIT.html). More details below.
      * 
      */
-    public Output</* @Nullable */ ClusterRestoreToPointInTime> restoreToPointInTime() {
-        return this.restoreToPointInTime;
+    public Output<Optional<ClusterRestoreToPointInTime>> restoreToPointInTime() {
+        return Codegen.optional(this.restoreToPointInTime);
     }
     @Export(name="s3Import", type=ClusterS3Import.class, parameters={})
     private Output</* @Nullable */ ClusterS3Import> s3Import;
 
-    public Output</* @Nullable */ ClusterS3Import> s3Import() {
-        return this.s3Import;
+    public Output<Optional<ClusterS3Import>> s3Import() {
+        return Codegen.optional(this.s3Import);
     }
     /**
      * Nested attribute with scaling properties. Only valid when `engine_mode` is set to `serverless`. More details below.
@@ -602,8 +603,8 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      * @return Nested attribute with scaling properties. Only valid when `engine_mode` is set to `serverless`. More details below.
      * 
      */
-    public Output</* @Nullable */ ClusterScalingConfiguration> scalingConfiguration() {
-        return this.scalingConfiguration;
+    public Output<Optional<ClusterScalingConfiguration>> scalingConfiguration() {
+        return Codegen.optional(this.scalingConfiguration);
     }
     /**
      * Determines whether a final DB snapshot is created before the DB cluster is deleted. If true is specified, no DB snapshot is created. If false is specified, a DB snapshot is created before the DB cluster is deleted, using the value from `final_snapshot_identifier`. Default is `false`.
@@ -616,8 +617,8 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      * @return Determines whether a final DB snapshot is created before the DB cluster is deleted. If true is specified, no DB snapshot is created. If false is specified, a DB snapshot is created before the DB cluster is deleted, using the value from `final_snapshot_identifier`. Default is `false`.
      * 
      */
-    public Output</* @Nullable */ Boolean> skipFinalSnapshot() {
-        return this.skipFinalSnapshot;
+    public Output<Optional<Boolean>> skipFinalSnapshot() {
+        return Codegen.optional(this.skipFinalSnapshot);
     }
     /**
      * Specifies whether or not to create this cluster from a snapshot. You can use either the name or ARN when specifying a DB cluster snapshot, or the ARN when specifying a DB snapshot.
@@ -630,8 +631,8 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      * @return Specifies whether or not to create this cluster from a snapshot. You can use either the name or ARN when specifying a DB cluster snapshot, or the ARN when specifying a DB snapshot.
      * 
      */
-    public Output</* @Nullable */ String> snapshotIdentifier() {
-        return this.snapshotIdentifier;
+    public Output<Optional<String>> snapshotIdentifier() {
+        return Codegen.optional(this.snapshotIdentifier);
     }
     /**
      * The source region for an encrypted replica DB cluster.
@@ -644,8 +645,8 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      * @return The source region for an encrypted replica DB cluster.
      * 
      */
-    public Output</* @Nullable */ String> sourceRegion() {
-        return this.sourceRegion;
+    public Output<Optional<String>> sourceRegion() {
+        return Codegen.optional(this.sourceRegion);
     }
     /**
      * Specifies whether the DB cluster is encrypted. The default is `false` for `provisioned` `engine_mode` and `true` for `serverless` `engine_mode`. When restoring an unencrypted `snapshot_identifier`, the `kms_key_id` argument must be provided to encrypt the restored cluster. The provider will only perform drift detection if a configuration value is provided.
@@ -672,8 +673,8 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      * @return A map of tags to assign to the DB cluster.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * A map of tags assigned to the resource, including those inherited from the provider .

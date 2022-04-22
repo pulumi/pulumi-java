@@ -13,6 +13,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -43,8 +44,8 @@ public class WorkloadNetworkVMGroup extends com.pulumi.resources.CustomResource 
      * @return Display name of the VM group.
      * 
      */
-    public Output</* @Nullable */ String> displayName() {
-        return this.displayName;
+    public Output<Optional<String>> displayName() {
+        return Codegen.optional(this.displayName);
     }
     /**
      * Virtual machine members of this group.
@@ -57,8 +58,8 @@ public class WorkloadNetworkVMGroup extends com.pulumi.resources.CustomResource 
      * @return Virtual machine members of this group.
      * 
      */
-    public Output</* @Nullable */ List<String>> members() {
-        return this.members;
+    public Output<Optional<List<String>>> members() {
+        return Codegen.optional(this.members);
     }
     /**
      * Resource name.
@@ -99,8 +100,8 @@ public class WorkloadNetworkVMGroup extends com.pulumi.resources.CustomResource 
      * @return NSX revision number.
      * 
      */
-    public Output</* @Nullable */ Double> revision() {
-        return this.revision;
+    public Output<Optional<Double>> revision() {
+        return Codegen.optional(this.revision);
     }
     /**
      * VM Group status.

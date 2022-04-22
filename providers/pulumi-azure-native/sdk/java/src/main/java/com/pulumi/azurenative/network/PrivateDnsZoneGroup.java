@@ -13,6 +13,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -57,8 +58,8 @@ public class PrivateDnsZoneGroup extends com.pulumi.resources.CustomResource {
      * @return Name of the resource that is unique within a resource group. This name can be used to access the resource.
      * 
      */
-    public Output</* @Nullable */ String> name() {
-        return this.name;
+    public Output<Optional<String>> name() {
+        return Codegen.optional(this.name);
     }
     /**
      * A collection of private dns zone configurations of the private dns zone group.
@@ -71,8 +72,8 @@ public class PrivateDnsZoneGroup extends com.pulumi.resources.CustomResource {
      * @return A collection of private dns zone configurations of the private dns zone group.
      * 
      */
-    public Output</* @Nullable */ List<PrivateDnsZoneConfigResponse>> privateDnsZoneConfigs() {
-        return this.privateDnsZoneConfigs;
+    public Output<Optional<List<PrivateDnsZoneConfigResponse>>> privateDnsZoneConfigs() {
+        return Codegen.optional(this.privateDnsZoneConfigs);
     }
     /**
      * The provisioning state of the private dns zone group resource.

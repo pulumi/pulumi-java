@@ -22,6 +22,7 @@ import java.lang.Object;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -66,8 +67,8 @@ public class Workspace extends com.pulumi.resources.CustomResource {
      * @return Connectivity endpoints
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> connectivityEndpoints() {
-        return this.connectivityEndpoints;
+    public Output<Optional<Map<String,String>>> connectivityEndpoints() {
+        return Codegen.optional(this.connectivityEndpoints);
     }
     /**
      * Workspace default data lake storage account details
@@ -80,8 +81,8 @@ public class Workspace extends com.pulumi.resources.CustomResource {
      * @return Workspace default data lake storage account details
      * 
      */
-    public Output</* @Nullable */ DataLakeStorageAccountDetailsResponse> defaultDataLakeStorage() {
-        return this.defaultDataLakeStorage;
+    public Output<Optional<DataLakeStorageAccountDetailsResponse>> defaultDataLakeStorage() {
+        return Codegen.optional(this.defaultDataLakeStorage);
     }
     /**
      * The encryption details of the workspace
@@ -94,8 +95,8 @@ public class Workspace extends com.pulumi.resources.CustomResource {
      * @return The encryption details of the workspace
      * 
      */
-    public Output</* @Nullable */ EncryptionDetailsResponse> encryption() {
-        return this.encryption;
+    public Output<Optional<EncryptionDetailsResponse>> encryption() {
+        return Codegen.optional(this.encryption);
     }
     /**
      * Workspace level configs and feature flags
@@ -122,8 +123,8 @@ public class Workspace extends com.pulumi.resources.CustomResource {
      * @return Identity of the workspace
      * 
      */
-    public Output</* @Nullable */ ManagedIdentityResponse> identity() {
-        return this.identity;
+    public Output<Optional<ManagedIdentityResponse>> identity() {
+        return Codegen.optional(this.identity);
     }
     /**
      * The geo-location where the resource lives
@@ -150,8 +151,8 @@ public class Workspace extends com.pulumi.resources.CustomResource {
      * @return Workspace managed resource group. The resource group name uniquely identifies the resource group within the user subscriptionId. The resource group name must be no longer than 90 characters long, and must be alphanumeric characters (Char.IsLetterOrDigit()) and &#39;-&#39;, &#39;_&#39;, &#39;(&#39;, &#39;)&#39; and&#39;.&#39;. Note that the name cannot end with &#39;.&#39;
      * 
      */
-    public Output</* @Nullable */ String> managedResourceGroupName() {
-        return this.managedResourceGroupName;
+    public Output<Optional<String>> managedResourceGroupName() {
+        return Codegen.optional(this.managedResourceGroupName);
     }
     /**
      * Setting this to &#39;default&#39; will ensure that all compute for this workspace is in a virtual network managed on behalf of the user.
@@ -164,8 +165,8 @@ public class Workspace extends com.pulumi.resources.CustomResource {
      * @return Setting this to &#39;default&#39; will ensure that all compute for this workspace is in a virtual network managed on behalf of the user.
      * 
      */
-    public Output</* @Nullable */ String> managedVirtualNetwork() {
-        return this.managedVirtualNetwork;
+    public Output<Optional<String>> managedVirtualNetwork() {
+        return Codegen.optional(this.managedVirtualNetwork);
     }
     /**
      * Managed Virtual Network Settings
@@ -178,8 +179,8 @@ public class Workspace extends com.pulumi.resources.CustomResource {
      * @return Managed Virtual Network Settings
      * 
      */
-    public Output</* @Nullable */ ManagedVirtualNetworkSettingsResponse> managedVirtualNetworkSettings() {
-        return this.managedVirtualNetworkSettings;
+    public Output<Optional<ManagedVirtualNetworkSettingsResponse>> managedVirtualNetworkSettings() {
+        return Codegen.optional(this.managedVirtualNetworkSettings);
     }
     /**
      * The name of the resource
@@ -206,8 +207,8 @@ public class Workspace extends com.pulumi.resources.CustomResource {
      * @return Private endpoint connections to the workspace
      * 
      */
-    public Output</* @Nullable */ List<PrivateEndpointConnectionResponse>> privateEndpointConnections() {
-        return this.privateEndpointConnections;
+    public Output<Optional<List<PrivateEndpointConnectionResponse>>> privateEndpointConnections() {
+        return Codegen.optional(this.privateEndpointConnections);
     }
     /**
      * Resource provisioning state
@@ -234,8 +235,8 @@ public class Workspace extends com.pulumi.resources.CustomResource {
      * @return Enable or Disable public network access to workspace
      * 
      */
-    public Output</* @Nullable */ String> publicNetworkAccess() {
-        return this.publicNetworkAccess;
+    public Output<Optional<String>> publicNetworkAccess() {
+        return Codegen.optional(this.publicNetworkAccess);
     }
     /**
      * Purview Configuration
@@ -248,8 +249,8 @@ public class Workspace extends com.pulumi.resources.CustomResource {
      * @return Purview Configuration
      * 
      */
-    public Output</* @Nullable */ PurviewConfigurationResponse> purviewConfiguration() {
-        return this.purviewConfiguration;
+    public Output<Optional<PurviewConfigurationResponse>> purviewConfiguration() {
+        return Codegen.optional(this.purviewConfiguration);
     }
     /**
      * Login for workspace SQL active directory administrator
@@ -262,8 +263,8 @@ public class Workspace extends com.pulumi.resources.CustomResource {
      * @return Login for workspace SQL active directory administrator
      * 
      */
-    public Output</* @Nullable */ String> sqlAdministratorLogin() {
-        return this.sqlAdministratorLogin;
+    public Output<Optional<String>> sqlAdministratorLogin() {
+        return Codegen.optional(this.sqlAdministratorLogin);
     }
     /**
      * SQL administrator login password
@@ -276,8 +277,8 @@ public class Workspace extends com.pulumi.resources.CustomResource {
      * @return SQL administrator login password
      * 
      */
-    public Output</* @Nullable */ String> sqlAdministratorLoginPassword() {
-        return this.sqlAdministratorLoginPassword;
+    public Output<Optional<String>> sqlAdministratorLoginPassword() {
+        return Codegen.optional(this.sqlAdministratorLoginPassword);
     }
     /**
      * Resource tags.
@@ -290,8 +291,8 @@ public class Workspace extends com.pulumi.resources.CustomResource {
      * @return Resource tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
@@ -318,8 +319,8 @@ public class Workspace extends com.pulumi.resources.CustomResource {
      * @return Virtual Network profile
      * 
      */
-    public Output</* @Nullable */ VirtualNetworkProfileResponse> virtualNetworkProfile() {
-        return this.virtualNetworkProfile;
+    public Output<Optional<VirtualNetworkProfileResponse>> virtualNetworkProfile() {
+        return Codegen.optional(this.virtualNetworkProfile);
     }
     /**
      * Git integration settings
@@ -332,8 +333,8 @@ public class Workspace extends com.pulumi.resources.CustomResource {
      * @return Git integration settings
      * 
      */
-    public Output</* @Nullable */ WorkspaceRepositoryConfigurationResponse> workspaceRepositoryConfiguration() {
-        return this.workspaceRepositoryConfiguration;
+    public Output<Optional<WorkspaceRepositoryConfigurationResponse>> workspaceRepositoryConfiguration() {
+        return Codegen.optional(this.workspaceRepositoryConfiguration);
     }
     /**
      * The workspace unique identifier

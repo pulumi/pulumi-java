@@ -14,6 +14,7 @@ import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -71,8 +72,8 @@ public class CapacityReservation extends com.pulumi.resources.CustomResource {
      * @return Indicates whether the Capacity Reservation supports EBS-optimized instances.
      * 
      */
-    public Output</* @Nullable */ Boolean> ebsOptimized() {
-        return this.ebsOptimized;
+    public Output<Optional<Boolean>> ebsOptimized() {
+        return Codegen.optional(this.ebsOptimized);
     }
     /**
      * The date and time at which the Capacity Reservation expires. When a Capacity Reservation expires, the reserved capacity is released and you can no longer launch instances into it. Valid values: [RFC3339 time string](https://tools.ietf.org/html/rfc3339#section-5.8) (`YYYY-MM-DDTHH:MM:SSZ`)
@@ -85,8 +86,8 @@ public class CapacityReservation extends com.pulumi.resources.CustomResource {
      * @return The date and time at which the Capacity Reservation expires. When a Capacity Reservation expires, the reserved capacity is released and you can no longer launch instances into it. Valid values: [RFC3339 time string](https://tools.ietf.org/html/rfc3339#section-5.8) (`YYYY-MM-DDTHH:MM:SSZ`)
      * 
      */
-    public Output</* @Nullable */ String> endDate() {
-        return this.endDate;
+    public Output<Optional<String>> endDate() {
+        return Codegen.optional(this.endDate);
     }
     /**
      * Indicates the way in which the Capacity Reservation ends. Specify either `unlimited` or `limited`.
@@ -99,8 +100,8 @@ public class CapacityReservation extends com.pulumi.resources.CustomResource {
      * @return Indicates the way in which the Capacity Reservation ends. Specify either `unlimited` or `limited`.
      * 
      */
-    public Output</* @Nullable */ String> endDateType() {
-        return this.endDateType;
+    public Output<Optional<String>> endDateType() {
+        return Codegen.optional(this.endDateType);
     }
     /**
      * Indicates whether the Capacity Reservation supports instances with temporary, block-level storage.
@@ -113,8 +114,8 @@ public class CapacityReservation extends com.pulumi.resources.CustomResource {
      * @return Indicates whether the Capacity Reservation supports instances with temporary, block-level storage.
      * 
      */
-    public Output</* @Nullable */ Boolean> ephemeralStorage() {
-        return this.ephemeralStorage;
+    public Output<Optional<Boolean>> ephemeralStorage() {
+        return Codegen.optional(this.ephemeralStorage);
     }
     /**
      * The number of instances for which to reserve capacity.
@@ -141,8 +142,8 @@ public class CapacityReservation extends com.pulumi.resources.CustomResource {
      * @return Indicates the type of instance launches that the Capacity Reservation accepts. Specify either `open` or `targeted`.
      * 
      */
-    public Output</* @Nullable */ String> instanceMatchCriteria() {
-        return this.instanceMatchCriteria;
+    public Output<Optional<String>> instanceMatchCriteria() {
+        return Codegen.optional(this.instanceMatchCriteria);
     }
     /**
      * The type of operating system for which to reserve capacity. Valid options are `Linux/UNIX`, `Red Hat Enterprise Linux`, `SUSE Linux`, `Windows`, `Windows with SQL Server`, `Windows with SQL Server Enterprise`, `Windows with SQL Server Standard` or `Windows with SQL Server Web`.
@@ -183,8 +184,8 @@ public class CapacityReservation extends com.pulumi.resources.CustomResource {
      * @return The Amazon Resource Name (ARN) of the Outpost on which to create the Capacity Reservation.
      * 
      */
-    public Output</* @Nullable */ String> outpostArn() {
-        return this.outpostArn;
+    public Output<Optional<String>> outpostArn() {
+        return Codegen.optional(this.outpostArn);
     }
     /**
      * The ID of the AWS account that owns the Capacity Reservation.
@@ -211,8 +212,8 @@ public class CapacityReservation extends com.pulumi.resources.CustomResource {
      * @return A map of tags to assign to the resource. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     @Export(name="tagsAll", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> tagsAll;
@@ -231,8 +232,8 @@ public class CapacityReservation extends com.pulumi.resources.CustomResource {
      * @return Indicates the tenancy of the Capacity Reservation. Specify either `default` or `dedicated`.
      * 
      */
-    public Output</* @Nullable */ String> tenancy() {
-        return this.tenancy;
+    public Output<Optional<String>> tenancy() {
+        return Codegen.optional(this.tenancy);
     }
 
     /**

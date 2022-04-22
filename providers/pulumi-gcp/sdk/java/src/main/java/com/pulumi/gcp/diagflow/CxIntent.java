@@ -17,6 +17,7 @@ import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -56,8 +57,8 @@ public class CxIntent extends com.pulumi.resources.CustomResource {
      * @return Human readable description for better understanding an intent like its scope, content, result etc. Maximum character limit: 140 characters.
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * The human-readable name of the intent, unique within the agent.
@@ -86,8 +87,8 @@ public class CxIntent extends com.pulumi.resources.CustomResource {
      * Adding training phrases to fallback intent is useful in the case of requests that are mistakenly matched, since training phrases assigned to fallback intents act as negative examples that triggers no-match event.
      * 
      */
-    public Output</* @Nullable */ Boolean> isFallback() {
-        return this.isFallback;
+    public Output<Optional<Boolean>> isFallback() {
+        return Codegen.optional(this.isFallback);
     }
     /**
      * The key/value metadata to label an intent. Labels can contain lowercase letters, digits and the symbols &#39;-&#39; and &#39;_&#39;. International characters are allowed, including letters from unicase alphabets. Keys must start with a letter. Keys and values can be no longer than 63 characters and no more than 128 bytes.
@@ -104,8 +105,8 @@ public class CxIntent extends com.pulumi.resources.CustomResource {
      * An object containing a list of &#34;key&#34;: value pairs. Example: { &#34;name&#34;: &#34;wrench&#34;, &#34;mass&#34;: &#34;1.3kg&#34;, &#34;count&#34;: &#34;3&#34; }.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> labels() {
-        return this.labels;
+    public Output<Optional<Map<String,String>>> labels() {
+        return Codegen.optional(this.labels);
     }
     /**
      * The language of the following fields in intent:
@@ -122,8 +123,8 @@ public class CxIntent extends com.pulumi.resources.CustomResource {
      * If not specified, the agent&#39;s default language is used. Many languages are supported. Note: languages must be enabled in the agent before they can be used.
      * 
      */
-    public Output</* @Nullable */ String> languageCode() {
-        return this.languageCode;
+    public Output<Optional<String>> languageCode() {
+        return Codegen.optional(this.languageCode);
     }
     /**
      * The unique identifier of the intent. Format: projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent
@@ -154,8 +155,8 @@ public class CxIntent extends com.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ List<CxIntentParameter>> parameters() {
-        return this.parameters;
+    public Output<Optional<List<CxIntentParameter>>> parameters() {
+        return Codegen.optional(this.parameters);
     }
     /**
      * The agent to create an intent for.
@@ -170,8 +171,8 @@ public class CxIntent extends com.pulumi.resources.CustomResource {
      * Format: projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent ID&gt;.
      * 
      */
-    public Output</* @Nullable */ String> parent() {
-        return this.parent;
+    public Output<Optional<String>> parent() {
+        return Codegen.optional(this.parent);
     }
     /**
      * The priority of this intent. Higher numbers represent higher priorities.
@@ -188,8 +189,8 @@ public class CxIntent extends com.pulumi.resources.CustomResource {
      * If the supplied value is negative, the intent is ignored in runtime detect intent requests.
      * 
      */
-    public Output</* @Nullable */ Integer> priority() {
-        return this.priority;
+    public Output<Optional<Integer>> priority() {
+        return Codegen.optional(this.priority);
     }
     /**
      * The collection of training phrases the agent is trained on to identify the intent.
@@ -204,8 +205,8 @@ public class CxIntent extends com.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ List<CxIntentTrainingPhrase>> trainingPhrases() {
-        return this.trainingPhrases;
+    public Output<Optional<List<CxIntentTrainingPhrase>>> trainingPhrases() {
+        return Codegen.optional(this.trainingPhrases);
     }
 
     /**

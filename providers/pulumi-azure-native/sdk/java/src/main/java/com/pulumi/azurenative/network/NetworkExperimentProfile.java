@@ -13,6 +13,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -43,8 +44,8 @@ public class NetworkExperimentProfile extends com.pulumi.resources.CustomResourc
      * @return The state of the Experiment
      * 
      */
-    public Output</* @Nullable */ String> enabledState() {
-        return this.enabledState;
+    public Output<Optional<String>> enabledState() {
+        return Codegen.optional(this.enabledState);
     }
     /**
      * Gets a unique read-only string that changes whenever the resource is updated.
@@ -57,8 +58,8 @@ public class NetworkExperimentProfile extends com.pulumi.resources.CustomResourc
      * @return Gets a unique read-only string that changes whenever the resource is updated.
      * 
      */
-    public Output</* @Nullable */ String> etag() {
-        return this.etag;
+    public Output<Optional<String>> etag() {
+        return Codegen.optional(this.etag);
     }
     /**
      * Resource location.
@@ -71,8 +72,8 @@ public class NetworkExperimentProfile extends com.pulumi.resources.CustomResourc
      * @return Resource location.
      * 
      */
-    public Output</* @Nullable */ String> location() {
-        return this.location;
+    public Output<Optional<String>> location() {
+        return Codegen.optional(this.location);
     }
     /**
      * Resource name.
@@ -113,8 +114,8 @@ public class NetworkExperimentProfile extends com.pulumi.resources.CustomResourc
      * @return Resource tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * Resource type.

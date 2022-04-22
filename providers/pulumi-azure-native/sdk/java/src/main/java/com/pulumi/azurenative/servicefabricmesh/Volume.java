@@ -14,6 +14,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -44,8 +45,8 @@ public class Volume extends com.pulumi.resources.CustomResource {
      * @return This type describes a volume provided by an Azure Files file share.
      * 
      */
-    public Output</* @Nullable */ VolumeProviderParametersAzureFileResponse> azureFileParameters() {
-        return this.azureFileParameters;
+    public Output<Optional<VolumeProviderParametersAzureFileResponse>> azureFileParameters() {
+        return Codegen.optional(this.azureFileParameters);
     }
     /**
      * User readable description of the volume.
@@ -58,8 +59,8 @@ public class Volume extends com.pulumi.resources.CustomResource {
      * @return User readable description of the volume.
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * The geo-location where the resource lives
@@ -156,8 +157,8 @@ public class Volume extends com.pulumi.resources.CustomResource {
      * @return Resource tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.

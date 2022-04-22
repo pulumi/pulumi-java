@@ -12,6 +12,7 @@ import com.pulumi.core.annotations.Export;
 import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -31,8 +32,8 @@ public class Deployment extends com.pulumi.resources.CustomResource {
      * @return Specifies settings for the canary deployment.
      * 
      */
-    public Output</* @Nullable */ DeploymentCanarySettings> deploymentCanarySettings() {
-        return this.deploymentCanarySettings;
+    public Output<Optional<DeploymentCanarySettings>> deploymentCanarySettings() {
+        return Codegen.optional(this.deploymentCanarySettings);
     }
     /**
      * Primary Id for this resource
@@ -59,8 +60,8 @@ public class Deployment extends com.pulumi.resources.CustomResource {
      * @return A description of the purpose of the API Gateway deployment.
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * The ID of the RestApi resource to deploy.
@@ -87,8 +88,8 @@ public class Deployment extends com.pulumi.resources.CustomResource {
      * @return Configures the stage that API Gateway creates with this deployment.
      * 
      */
-    public Output</* @Nullable */ DeploymentStageDescription> stageDescription() {
-        return this.stageDescription;
+    public Output<Optional<DeploymentStageDescription>> stageDescription() {
+        return Codegen.optional(this.stageDescription);
     }
     /**
      * A name for the stage that API Gateway creates with this deployment. Use only alphanumeric characters.
@@ -101,8 +102,8 @@ public class Deployment extends com.pulumi.resources.CustomResource {
      * @return A name for the stage that API Gateway creates with this deployment. Use only alphanumeric characters.
      * 
      */
-    public Output</* @Nullable */ String> stageName() {
-        return this.stageName;
+    public Output<Optional<String>> stageName() {
+        return Codegen.optional(this.stageName);
     }
 
     /**

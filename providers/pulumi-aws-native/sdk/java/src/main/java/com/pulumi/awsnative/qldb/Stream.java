@@ -13,6 +13,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -32,8 +33,8 @@ public class Stream extends com.pulumi.resources.CustomResource {
     @Export(name="exclusiveEndTime", type=String.class, parameters={})
     private Output</* @Nullable */ String> exclusiveEndTime;
 
-    public Output</* @Nullable */ String> exclusiveEndTime() {
-        return this.exclusiveEndTime;
+    public Output<Optional<String>> exclusiveEndTime() {
+        return Codegen.optional(this.exclusiveEndTime);
     }
     @Export(name="inclusiveStartTime", type=String.class, parameters={})
     private Output<String> inclusiveStartTime;
@@ -76,8 +77,8 @@ public class Stream extends com.pulumi.resources.CustomResource {
      * @return An array of key-value pairs to apply to this resource.
      * 
      */
-    public Output</* @Nullable */ List<StreamTag>> tags() {
-        return this.tags;
+    public Output<Optional<List<StreamTag>>> tags() {
+        return Codegen.optional(this.tags);
     }
 
     /**

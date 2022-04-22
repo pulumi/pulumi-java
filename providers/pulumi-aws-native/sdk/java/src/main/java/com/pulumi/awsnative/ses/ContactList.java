@@ -13,6 +13,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -32,8 +33,8 @@ public class ContactList extends com.pulumi.resources.CustomResource {
      * @return The name of the contact list.
      * 
      */
-    public Output</* @Nullable */ String> contactListName() {
-        return this.contactListName;
+    public Output<Optional<String>> contactListName() {
+        return Codegen.optional(this.contactListName);
     }
     /**
      * The description of the contact list.
@@ -46,8 +47,8 @@ public class ContactList extends com.pulumi.resources.CustomResource {
      * @return The description of the contact list.
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * The tags (keys and values) associated with the contact list.
@@ -60,8 +61,8 @@ public class ContactList extends com.pulumi.resources.CustomResource {
      * @return The tags (keys and values) associated with the contact list.
      * 
      */
-    public Output</* @Nullable */ List<ContactListTag>> tags() {
-        return this.tags;
+    public Output<Optional<List<ContactListTag>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * The topics associated with the contact list.
@@ -74,8 +75,8 @@ public class ContactList extends com.pulumi.resources.CustomResource {
      * @return The topics associated with the contact list.
      * 
      */
-    public Output</* @Nullable */ List<ContactListTopic>> topics() {
-        return this.topics;
+    public Output<Optional<List<ContactListTopic>>> topics() {
+        return Codegen.optional(this.topics);
     }
 
     /**

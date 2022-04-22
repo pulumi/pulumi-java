@@ -14,6 +14,7 @@ import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -85,8 +86,8 @@ public class Branch extends com.pulumi.resources.CustomResource {
      * @return The Amazon Resource Name (ARN) for a backend environment that is part of an Amplify app.
      * 
      */
-    public Output</* @Nullable */ String> backendEnvironmentArn() {
-        return this.backendEnvironmentArn;
+    public Output<Optional<String>> backendEnvironmentArn() {
+        return Codegen.optional(this.backendEnvironmentArn);
     }
     /**
      * The basic authorization credentials for the branch.
@@ -99,8 +100,8 @@ public class Branch extends com.pulumi.resources.CustomResource {
      * @return The basic authorization credentials for the branch.
      * 
      */
-    public Output</* @Nullable */ String> basicAuthCredentials() {
-        return this.basicAuthCredentials;
+    public Output<Optional<String>> basicAuthCredentials() {
+        return Codegen.optional(this.basicAuthCredentials);
     }
     /**
      * The name for the branch.
@@ -141,8 +142,8 @@ public class Branch extends com.pulumi.resources.CustomResource {
      * @return The description for the branch.
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * The destination branch if the branch is a pull request branch.
@@ -183,8 +184,8 @@ public class Branch extends com.pulumi.resources.CustomResource {
      * @return Enables auto building for the branch.
      * 
      */
-    public Output</* @Nullable */ Boolean> enableAutoBuild() {
-        return this.enableAutoBuild;
+    public Output<Optional<Boolean>> enableAutoBuild() {
+        return Codegen.optional(this.enableAutoBuild);
     }
     /**
      * Enables basic authorization for the branch.
@@ -197,8 +198,8 @@ public class Branch extends com.pulumi.resources.CustomResource {
      * @return Enables basic authorization for the branch.
      * 
      */
-    public Output</* @Nullable */ Boolean> enableBasicAuth() {
-        return this.enableBasicAuth;
+    public Output<Optional<Boolean>> enableBasicAuth() {
+        return Codegen.optional(this.enableBasicAuth);
     }
     /**
      * Enables notifications for the branch.
@@ -211,8 +212,8 @@ public class Branch extends com.pulumi.resources.CustomResource {
      * @return Enables notifications for the branch.
      * 
      */
-    public Output</* @Nullable */ Boolean> enableNotification() {
-        return this.enableNotification;
+    public Output<Optional<Boolean>> enableNotification() {
+        return Codegen.optional(this.enableNotification);
     }
     /**
      * Enables performance mode for the branch.
@@ -225,8 +226,8 @@ public class Branch extends com.pulumi.resources.CustomResource {
      * @return Enables performance mode for the branch.
      * 
      */
-    public Output</* @Nullable */ Boolean> enablePerformanceMode() {
-        return this.enablePerformanceMode;
+    public Output<Optional<Boolean>> enablePerformanceMode() {
+        return Codegen.optional(this.enablePerformanceMode);
     }
     /**
      * Enables pull request previews for this branch.
@@ -239,8 +240,8 @@ public class Branch extends com.pulumi.resources.CustomResource {
      * @return Enables pull request previews for this branch.
      * 
      */
-    public Output</* @Nullable */ Boolean> enablePullRequestPreview() {
-        return this.enablePullRequestPreview;
+    public Output<Optional<Boolean>> enablePullRequestPreview() {
+        return Codegen.optional(this.enablePullRequestPreview);
     }
     /**
      * The environment variables for the branch.
@@ -253,8 +254,8 @@ public class Branch extends com.pulumi.resources.CustomResource {
      * @return The environment variables for the branch.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> environmentVariables() {
-        return this.environmentVariables;
+    public Output<Optional<Map<String,String>>> environmentVariables() {
+        return Codegen.optional(this.environmentVariables);
     }
     /**
      * The framework for the branch.
@@ -267,8 +268,8 @@ public class Branch extends com.pulumi.resources.CustomResource {
      * @return The framework for the branch.
      * 
      */
-    public Output</* @Nullable */ String> framework() {
-        return this.framework;
+    public Output<Optional<String>> framework() {
+        return Codegen.optional(this.framework);
     }
     /**
      * The Amplify environment name for the pull request.
@@ -281,8 +282,8 @@ public class Branch extends com.pulumi.resources.CustomResource {
      * @return The Amplify environment name for the pull request.
      * 
      */
-    public Output</* @Nullable */ String> pullRequestEnvironmentName() {
-        return this.pullRequestEnvironmentName;
+    public Output<Optional<String>> pullRequestEnvironmentName() {
+        return Codegen.optional(this.pullRequestEnvironmentName);
     }
     /**
      * The source branch if the branch is a pull request branch.
@@ -309,8 +310,8 @@ public class Branch extends com.pulumi.resources.CustomResource {
      * @return Describes the current stage for the branch. Valid values: `PRODUCTION`, `BETA`, `DEVELOPMENT`, `EXPERIMENTAL`, `PULL_REQUEST`.
      * 
      */
-    public Output</* @Nullable */ String> stage() {
-        return this.stage;
+    public Output<Optional<String>> stage() {
+        return Codegen.optional(this.stage);
     }
     /**
      * Key-value mapping of resource tags. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
@@ -323,8 +324,8 @@ public class Branch extends com.pulumi.resources.CustomResource {
      * @return Key-value mapping of resource tags. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
@@ -351,8 +352,8 @@ public class Branch extends com.pulumi.resources.CustomResource {
      * @return The content Time To Live (TTL) for the website in seconds.
      * 
      */
-    public Output</* @Nullable */ String> ttl() {
-        return this.ttl;
+    public Output<Optional<String>> ttl() {
+        return Codegen.optional(this.ttl);
     }
 
     /**

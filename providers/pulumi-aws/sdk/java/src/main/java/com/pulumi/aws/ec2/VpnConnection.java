@@ -17,6 +17,7 @@ import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -190,8 +191,8 @@ public class VpnConnection extends com.pulumi.resources.CustomResource {
      * @return Tags to apply to the connection. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * A map of tags assigned to the resource, including those inherited from the provider.
@@ -232,8 +233,8 @@ public class VpnConnection extends com.pulumi.resources.CustomResource {
      * @return The ID of the EC2 Transit Gateway.
      * 
      */
-    public Output</* @Nullable */ String> transitGatewayId() {
-        return this.transitGatewayId;
+    public Output<Optional<String>> transitGatewayId() {
+        return Codegen.optional(this.transitGatewayId);
     }
     /**
      * The public IP address of the first VPN tunnel.
@@ -302,8 +303,8 @@ public class VpnConnection extends com.pulumi.resources.CustomResource {
      * @return The action to take after DPD timeout occurs for the first VPN tunnel. Specify restart to restart the IKE initiation. Specify clear to end the IKE session. Valid values are `clear | none | restart`.
      * 
      */
-    public Output</* @Nullable */ String> tunnel1DpdTimeoutAction() {
-        return this.tunnel1DpdTimeoutAction;
+    public Output<Optional<String>> tunnel1DpdTimeoutAction() {
+        return Codegen.optional(this.tunnel1DpdTimeoutAction);
     }
     /**
      * The number of seconds after which a DPD timeout occurs for the first VPN tunnel. Valid value is equal or higher than `30`.
@@ -316,8 +317,8 @@ public class VpnConnection extends com.pulumi.resources.CustomResource {
      * @return The number of seconds after which a DPD timeout occurs for the first VPN tunnel. Valid value is equal or higher than `30`.
      * 
      */
-    public Output</* @Nullable */ Integer> tunnel1DpdTimeoutSeconds() {
-        return this.tunnel1DpdTimeoutSeconds;
+    public Output<Optional<Integer>> tunnel1DpdTimeoutSeconds() {
+        return Codegen.optional(this.tunnel1DpdTimeoutSeconds);
     }
     /**
      * The IKE versions that are permitted for the first VPN tunnel. Valid values are `ikev1 | ikev2`.
@@ -330,8 +331,8 @@ public class VpnConnection extends com.pulumi.resources.CustomResource {
      * @return The IKE versions that are permitted for the first VPN tunnel. Valid values are `ikev1 | ikev2`.
      * 
      */
-    public Output</* @Nullable */ List<String>> tunnel1IkeVersions() {
-        return this.tunnel1IkeVersions;
+    public Output<Optional<List<String>>> tunnel1IkeVersions() {
+        return Codegen.optional(this.tunnel1IkeVersions);
     }
     /**
      * The CIDR block of the inside IP addresses for the first VPN tunnel. Valid value is a size /30 CIDR block from the 169.254.0.0/16 range.
@@ -372,8 +373,8 @@ public class VpnConnection extends com.pulumi.resources.CustomResource {
      * @return List of one or more Diffie-Hellman group numbers that are permitted for the first VPN tunnel for phase 1 IKE negotiations. Valid values are `  2 | 14 | 15 | 16 | 17 | 18 | 19 | 20 | 21 | 22 | 23 | 24 `.
      * 
      */
-    public Output</* @Nullable */ List<Integer>> tunnel1Phase1DhGroupNumbers() {
-        return this.tunnel1Phase1DhGroupNumbers;
+    public Output<Optional<List<Integer>>> tunnel1Phase1DhGroupNumbers() {
+        return Codegen.optional(this.tunnel1Phase1DhGroupNumbers);
     }
     /**
      * List of one or more encryption algorithms that are permitted for the first VPN tunnel for phase 1 IKE negotiations. Valid values are `AES128 | AES256 | AES128-GCM-16 | AES256-GCM-16`.
@@ -386,8 +387,8 @@ public class VpnConnection extends com.pulumi.resources.CustomResource {
      * @return List of one or more encryption algorithms that are permitted for the first VPN tunnel for phase 1 IKE negotiations. Valid values are `AES128 | AES256 | AES128-GCM-16 | AES256-GCM-16`.
      * 
      */
-    public Output</* @Nullable */ List<String>> tunnel1Phase1EncryptionAlgorithms() {
-        return this.tunnel1Phase1EncryptionAlgorithms;
+    public Output<Optional<List<String>>> tunnel1Phase1EncryptionAlgorithms() {
+        return Codegen.optional(this.tunnel1Phase1EncryptionAlgorithms);
     }
     /**
      * One or more integrity algorithms that are permitted for the first VPN tunnel for phase 1 IKE negotiations. Valid values are `SHA1 | SHA2-256 | SHA2-384 | SHA2-512`.
@@ -400,8 +401,8 @@ public class VpnConnection extends com.pulumi.resources.CustomResource {
      * @return One or more integrity algorithms that are permitted for the first VPN tunnel for phase 1 IKE negotiations. Valid values are `SHA1 | SHA2-256 | SHA2-384 | SHA2-512`.
      * 
      */
-    public Output</* @Nullable */ List<String>> tunnel1Phase1IntegrityAlgorithms() {
-        return this.tunnel1Phase1IntegrityAlgorithms;
+    public Output<Optional<List<String>>> tunnel1Phase1IntegrityAlgorithms() {
+        return Codegen.optional(this.tunnel1Phase1IntegrityAlgorithms);
     }
     /**
      * The lifetime for phase 1 of the IKE negotiation for the first VPN tunnel, in seconds. Valid value is between `900` and `28800`.
@@ -414,8 +415,8 @@ public class VpnConnection extends com.pulumi.resources.CustomResource {
      * @return The lifetime for phase 1 of the IKE negotiation for the first VPN tunnel, in seconds. Valid value is between `900` and `28800`.
      * 
      */
-    public Output</* @Nullable */ Integer> tunnel1Phase1LifetimeSeconds() {
-        return this.tunnel1Phase1LifetimeSeconds;
+    public Output<Optional<Integer>> tunnel1Phase1LifetimeSeconds() {
+        return Codegen.optional(this.tunnel1Phase1LifetimeSeconds);
     }
     /**
      * List of one or more Diffie-Hellman group numbers that are permitted for the first VPN tunnel for phase 2 IKE negotiations. Valid values are `2 | 5 | 14 | 15 | 16 | 17 | 18 | 19 | 20 | 21 | 22 | 23 | 24`.
@@ -428,8 +429,8 @@ public class VpnConnection extends com.pulumi.resources.CustomResource {
      * @return List of one or more Diffie-Hellman group numbers that are permitted for the first VPN tunnel for phase 2 IKE negotiations. Valid values are `2 | 5 | 14 | 15 | 16 | 17 | 18 | 19 | 20 | 21 | 22 | 23 | 24`.
      * 
      */
-    public Output</* @Nullable */ List<Integer>> tunnel1Phase2DhGroupNumbers() {
-        return this.tunnel1Phase2DhGroupNumbers;
+    public Output<Optional<List<Integer>>> tunnel1Phase2DhGroupNumbers() {
+        return Codegen.optional(this.tunnel1Phase2DhGroupNumbers);
     }
     /**
      * List of one or more encryption algorithms that are permitted for the first VPN tunnel for phase 2 IKE negotiations. Valid values are `AES128 | AES256 | AES128-GCM-16 | AES256-GCM-16`.
@@ -442,8 +443,8 @@ public class VpnConnection extends com.pulumi.resources.CustomResource {
      * @return List of one or more encryption algorithms that are permitted for the first VPN tunnel for phase 2 IKE negotiations. Valid values are `AES128 | AES256 | AES128-GCM-16 | AES256-GCM-16`.
      * 
      */
-    public Output</* @Nullable */ List<String>> tunnel1Phase2EncryptionAlgorithms() {
-        return this.tunnel1Phase2EncryptionAlgorithms;
+    public Output<Optional<List<String>>> tunnel1Phase2EncryptionAlgorithms() {
+        return Codegen.optional(this.tunnel1Phase2EncryptionAlgorithms);
     }
     /**
      * List of one or more integrity algorithms that are permitted for the first VPN tunnel for phase 2 IKE negotiations. Valid values are `SHA1 | SHA2-256 | SHA2-384 | SHA2-512`.
@@ -456,8 +457,8 @@ public class VpnConnection extends com.pulumi.resources.CustomResource {
      * @return List of one or more integrity algorithms that are permitted for the first VPN tunnel for phase 2 IKE negotiations. Valid values are `SHA1 | SHA2-256 | SHA2-384 | SHA2-512`.
      * 
      */
-    public Output</* @Nullable */ List<String>> tunnel1Phase2IntegrityAlgorithms() {
-        return this.tunnel1Phase2IntegrityAlgorithms;
+    public Output<Optional<List<String>>> tunnel1Phase2IntegrityAlgorithms() {
+        return Codegen.optional(this.tunnel1Phase2IntegrityAlgorithms);
     }
     /**
      * The lifetime for phase 2 of the IKE negotiation for the first VPN tunnel, in seconds. Valid value is between `900` and `3600`.
@@ -470,8 +471,8 @@ public class VpnConnection extends com.pulumi.resources.CustomResource {
      * @return The lifetime for phase 2 of the IKE negotiation for the first VPN tunnel, in seconds. Valid value is between `900` and `3600`.
      * 
      */
-    public Output</* @Nullable */ Integer> tunnel1Phase2LifetimeSeconds() {
-        return this.tunnel1Phase2LifetimeSeconds;
+    public Output<Optional<Integer>> tunnel1Phase2LifetimeSeconds() {
+        return Codegen.optional(this.tunnel1Phase2LifetimeSeconds);
     }
     /**
      * The preshared key of the first VPN tunnel. The preshared key must be between 8 and 64 characters in length and cannot start with zero(0). Allowed characters are alphanumeric characters, periods(.) and underscores(_).
@@ -498,8 +499,8 @@ public class VpnConnection extends com.pulumi.resources.CustomResource {
      * @return The percentage of the rekey window for the first VPN tunnel (determined by `tunnel1_rekey_margin_time_seconds`) during which the rekey time is randomly selected. Valid value is between `0` and `100`.
      * 
      */
-    public Output</* @Nullable */ Integer> tunnel1RekeyFuzzPercentage() {
-        return this.tunnel1RekeyFuzzPercentage;
+    public Output<Optional<Integer>> tunnel1RekeyFuzzPercentage() {
+        return Codegen.optional(this.tunnel1RekeyFuzzPercentage);
     }
     /**
      * The margin time, in seconds, before the phase 2 lifetime expires, during which the AWS side of the first VPN connection performs an IKE rekey. The exact time of the rekey is randomly selected based on the value for `tunnel1_rekey_fuzz_percentage`. Valid value is between `60` and half of `tunnel1_phase2_lifetime_seconds`.
@@ -512,8 +513,8 @@ public class VpnConnection extends com.pulumi.resources.CustomResource {
      * @return The margin time, in seconds, before the phase 2 lifetime expires, during which the AWS side of the first VPN connection performs an IKE rekey. The exact time of the rekey is randomly selected based on the value for `tunnel1_rekey_fuzz_percentage`. Valid value is between `60` and half of `tunnel1_phase2_lifetime_seconds`.
      * 
      */
-    public Output</* @Nullable */ Integer> tunnel1RekeyMarginTimeSeconds() {
-        return this.tunnel1RekeyMarginTimeSeconds;
+    public Output<Optional<Integer>> tunnel1RekeyMarginTimeSeconds() {
+        return Codegen.optional(this.tunnel1RekeyMarginTimeSeconds);
     }
     /**
      * The number of packets in an IKE replay window for the first VPN tunnel. Valid value is between `64` and `2048`.
@@ -526,8 +527,8 @@ public class VpnConnection extends com.pulumi.resources.CustomResource {
      * @return The number of packets in an IKE replay window for the first VPN tunnel. Valid value is between `64` and `2048`.
      * 
      */
-    public Output</* @Nullable */ Integer> tunnel1ReplayWindowSize() {
-        return this.tunnel1ReplayWindowSize;
+    public Output<Optional<Integer>> tunnel1ReplayWindowSize() {
+        return Codegen.optional(this.tunnel1ReplayWindowSize);
     }
     /**
      * The action to take when the establishing the tunnel for the first VPN connection. By default, your customer gateway device must initiate the IKE negotiation and bring up the tunnel. Specify start for AWS to initiate the IKE negotiation. Valid values are `add | start`.
@@ -540,8 +541,8 @@ public class VpnConnection extends com.pulumi.resources.CustomResource {
      * @return The action to take when the establishing the tunnel for the first VPN connection. By default, your customer gateway device must initiate the IKE negotiation and bring up the tunnel. Specify start for AWS to initiate the IKE negotiation. Valid values are `add | start`.
      * 
      */
-    public Output</* @Nullable */ String> tunnel1StartupAction() {
-        return this.tunnel1StartupAction;
+    public Output<Optional<String>> tunnel1StartupAction() {
+        return Codegen.optional(this.tunnel1StartupAction);
     }
     /**
      * The RFC 6890 link-local address of the first VPN tunnel (VPN Gateway Side).
@@ -624,8 +625,8 @@ public class VpnConnection extends com.pulumi.resources.CustomResource {
      * @return The action to take after DPD timeout occurs for the second VPN tunnel. Specify restart to restart the IKE initiation. Specify clear to end the IKE session. Valid values are `clear | none | restart`.
      * 
      */
-    public Output</* @Nullable */ String> tunnel2DpdTimeoutAction() {
-        return this.tunnel2DpdTimeoutAction;
+    public Output<Optional<String>> tunnel2DpdTimeoutAction() {
+        return Codegen.optional(this.tunnel2DpdTimeoutAction);
     }
     /**
      * The number of seconds after which a DPD timeout occurs for the second VPN tunnel. Valid value is equal or higher than `30`.
@@ -638,8 +639,8 @@ public class VpnConnection extends com.pulumi.resources.CustomResource {
      * @return The number of seconds after which a DPD timeout occurs for the second VPN tunnel. Valid value is equal or higher than `30`.
      * 
      */
-    public Output</* @Nullable */ Integer> tunnel2DpdTimeoutSeconds() {
-        return this.tunnel2DpdTimeoutSeconds;
+    public Output<Optional<Integer>> tunnel2DpdTimeoutSeconds() {
+        return Codegen.optional(this.tunnel2DpdTimeoutSeconds);
     }
     /**
      * The IKE versions that are permitted for the second VPN tunnel. Valid values are `ikev1 | ikev2`.
@@ -652,8 +653,8 @@ public class VpnConnection extends com.pulumi.resources.CustomResource {
      * @return The IKE versions that are permitted for the second VPN tunnel. Valid values are `ikev1 | ikev2`.
      * 
      */
-    public Output</* @Nullable */ List<String>> tunnel2IkeVersions() {
-        return this.tunnel2IkeVersions;
+    public Output<Optional<List<String>>> tunnel2IkeVersions() {
+        return Codegen.optional(this.tunnel2IkeVersions);
     }
     /**
      * The CIDR block of the inside IP addresses for the second VPN tunnel. Valid value is a size /30 CIDR block from the 169.254.0.0/16 range.
@@ -694,8 +695,8 @@ public class VpnConnection extends com.pulumi.resources.CustomResource {
      * @return List of one or more Diffie-Hellman group numbers that are permitted for the second VPN tunnel for phase 1 IKE negotiations. Valid values are `  2 | 14 | 15 | 16 | 17 | 18 | 19 | 20 | 21 | 22 | 23 | 24 `.
      * 
      */
-    public Output</* @Nullable */ List<Integer>> tunnel2Phase1DhGroupNumbers() {
-        return this.tunnel2Phase1DhGroupNumbers;
+    public Output<Optional<List<Integer>>> tunnel2Phase1DhGroupNumbers() {
+        return Codegen.optional(this.tunnel2Phase1DhGroupNumbers);
     }
     /**
      * List of one or more encryption algorithms that are permitted for the second VPN tunnel for phase 1 IKE negotiations. Valid values are `AES128 | AES256 | AES128-GCM-16 | AES256-GCM-16`.
@@ -708,8 +709,8 @@ public class VpnConnection extends com.pulumi.resources.CustomResource {
      * @return List of one or more encryption algorithms that are permitted for the second VPN tunnel for phase 1 IKE negotiations. Valid values are `AES128 | AES256 | AES128-GCM-16 | AES256-GCM-16`.
      * 
      */
-    public Output</* @Nullable */ List<String>> tunnel2Phase1EncryptionAlgorithms() {
-        return this.tunnel2Phase1EncryptionAlgorithms;
+    public Output<Optional<List<String>>> tunnel2Phase1EncryptionAlgorithms() {
+        return Codegen.optional(this.tunnel2Phase1EncryptionAlgorithms);
     }
     /**
      * One or more integrity algorithms that are permitted for the second VPN tunnel for phase 1 IKE negotiations. Valid values are `SHA1 | SHA2-256 | SHA2-384 | SHA2-512`.
@@ -722,8 +723,8 @@ public class VpnConnection extends com.pulumi.resources.CustomResource {
      * @return One or more integrity algorithms that are permitted for the second VPN tunnel for phase 1 IKE negotiations. Valid values are `SHA1 | SHA2-256 | SHA2-384 | SHA2-512`.
      * 
      */
-    public Output</* @Nullable */ List<String>> tunnel2Phase1IntegrityAlgorithms() {
-        return this.tunnel2Phase1IntegrityAlgorithms;
+    public Output<Optional<List<String>>> tunnel2Phase1IntegrityAlgorithms() {
+        return Codegen.optional(this.tunnel2Phase1IntegrityAlgorithms);
     }
     /**
      * The lifetime for phase 1 of the IKE negotiation for the second VPN tunnel, in seconds. Valid value is between `900` and `28800`.
@@ -736,8 +737,8 @@ public class VpnConnection extends com.pulumi.resources.CustomResource {
      * @return The lifetime for phase 1 of the IKE negotiation for the second VPN tunnel, in seconds. Valid value is between `900` and `28800`.
      * 
      */
-    public Output</* @Nullable */ Integer> tunnel2Phase1LifetimeSeconds() {
-        return this.tunnel2Phase1LifetimeSeconds;
+    public Output<Optional<Integer>> tunnel2Phase1LifetimeSeconds() {
+        return Codegen.optional(this.tunnel2Phase1LifetimeSeconds);
     }
     /**
      * List of one or more Diffie-Hellman group numbers that are permitted for the second VPN tunnel for phase 2 IKE negotiations. Valid values are `2 | 5 | 14 | 15 | 16 | 17 | 18 | 19 | 20 | 21 | 22 | 23 | 24`.
@@ -750,8 +751,8 @@ public class VpnConnection extends com.pulumi.resources.CustomResource {
      * @return List of one or more Diffie-Hellman group numbers that are permitted for the second VPN tunnel for phase 2 IKE negotiations. Valid values are `2 | 5 | 14 | 15 | 16 | 17 | 18 | 19 | 20 | 21 | 22 | 23 | 24`.
      * 
      */
-    public Output</* @Nullable */ List<Integer>> tunnel2Phase2DhGroupNumbers() {
-        return this.tunnel2Phase2DhGroupNumbers;
+    public Output<Optional<List<Integer>>> tunnel2Phase2DhGroupNumbers() {
+        return Codegen.optional(this.tunnel2Phase2DhGroupNumbers);
     }
     /**
      * List of one or more encryption algorithms that are permitted for the second VPN tunnel for phase 2 IKE negotiations. Valid values are `AES128 | AES256 | AES128-GCM-16 | AES256-GCM-16`.
@@ -764,8 +765,8 @@ public class VpnConnection extends com.pulumi.resources.CustomResource {
      * @return List of one or more encryption algorithms that are permitted for the second VPN tunnel for phase 2 IKE negotiations. Valid values are `AES128 | AES256 | AES128-GCM-16 | AES256-GCM-16`.
      * 
      */
-    public Output</* @Nullable */ List<String>> tunnel2Phase2EncryptionAlgorithms() {
-        return this.tunnel2Phase2EncryptionAlgorithms;
+    public Output<Optional<List<String>>> tunnel2Phase2EncryptionAlgorithms() {
+        return Codegen.optional(this.tunnel2Phase2EncryptionAlgorithms);
     }
     /**
      * List of one or more integrity algorithms that are permitted for the second VPN tunnel for phase 2 IKE negotiations. Valid values are `SHA1 | SHA2-256 | SHA2-384 | SHA2-512`.
@@ -778,8 +779,8 @@ public class VpnConnection extends com.pulumi.resources.CustomResource {
      * @return List of one or more integrity algorithms that are permitted for the second VPN tunnel for phase 2 IKE negotiations. Valid values are `SHA1 | SHA2-256 | SHA2-384 | SHA2-512`.
      * 
      */
-    public Output</* @Nullable */ List<String>> tunnel2Phase2IntegrityAlgorithms() {
-        return this.tunnel2Phase2IntegrityAlgorithms;
+    public Output<Optional<List<String>>> tunnel2Phase2IntegrityAlgorithms() {
+        return Codegen.optional(this.tunnel2Phase2IntegrityAlgorithms);
     }
     /**
      * The lifetime for phase 2 of the IKE negotiation for the second VPN tunnel, in seconds. Valid value is between `900` and `3600`.
@@ -792,8 +793,8 @@ public class VpnConnection extends com.pulumi.resources.CustomResource {
      * @return The lifetime for phase 2 of the IKE negotiation for the second VPN tunnel, in seconds. Valid value is between `900` and `3600`.
      * 
      */
-    public Output</* @Nullable */ Integer> tunnel2Phase2LifetimeSeconds() {
-        return this.tunnel2Phase2LifetimeSeconds;
+    public Output<Optional<Integer>> tunnel2Phase2LifetimeSeconds() {
+        return Codegen.optional(this.tunnel2Phase2LifetimeSeconds);
     }
     /**
      * The preshared key of the second VPN tunnel. The preshared key must be between 8 and 64 characters in length and cannot start with zero(0). Allowed characters are alphanumeric characters, periods(.) and underscores(_).
@@ -820,8 +821,8 @@ public class VpnConnection extends com.pulumi.resources.CustomResource {
      * @return The percentage of the rekey window for the second VPN tunnel (determined by `tunnel2_rekey_margin_time_seconds`) during which the rekey time is randomly selected. Valid value is between `0` and `100`.
      * 
      */
-    public Output</* @Nullable */ Integer> tunnel2RekeyFuzzPercentage() {
-        return this.tunnel2RekeyFuzzPercentage;
+    public Output<Optional<Integer>> tunnel2RekeyFuzzPercentage() {
+        return Codegen.optional(this.tunnel2RekeyFuzzPercentage);
     }
     /**
      * The margin time, in seconds, before the phase 2 lifetime expires, during which the AWS side of the second VPN connection performs an IKE rekey. The exact time of the rekey is randomly selected based on the value for `tunnel2_rekey_fuzz_percentage`. Valid value is between `60` and half of `tunnel2_phase2_lifetime_seconds`.
@@ -834,8 +835,8 @@ public class VpnConnection extends com.pulumi.resources.CustomResource {
      * @return The margin time, in seconds, before the phase 2 lifetime expires, during which the AWS side of the second VPN connection performs an IKE rekey. The exact time of the rekey is randomly selected based on the value for `tunnel2_rekey_fuzz_percentage`. Valid value is between `60` and half of `tunnel2_phase2_lifetime_seconds`.
      * 
      */
-    public Output</* @Nullable */ Integer> tunnel2RekeyMarginTimeSeconds() {
-        return this.tunnel2RekeyMarginTimeSeconds;
+    public Output<Optional<Integer>> tunnel2RekeyMarginTimeSeconds() {
+        return Codegen.optional(this.tunnel2RekeyMarginTimeSeconds);
     }
     /**
      * The number of packets in an IKE replay window for the second VPN tunnel. Valid value is between `64` and `2048`.
@@ -848,8 +849,8 @@ public class VpnConnection extends com.pulumi.resources.CustomResource {
      * @return The number of packets in an IKE replay window for the second VPN tunnel. Valid value is between `64` and `2048`.
      * 
      */
-    public Output</* @Nullable */ Integer> tunnel2ReplayWindowSize() {
-        return this.tunnel2ReplayWindowSize;
+    public Output<Optional<Integer>> tunnel2ReplayWindowSize() {
+        return Codegen.optional(this.tunnel2ReplayWindowSize);
     }
     /**
      * The action to take when the establishing the tunnel for the second VPN connection. By default, your customer gateway device must initiate the IKE negotiation and bring up the tunnel. Specify start for AWS to initiate the IKE negotiation. Valid values are `add | start`.
@@ -862,8 +863,8 @@ public class VpnConnection extends com.pulumi.resources.CustomResource {
      * @return The action to take when the establishing the tunnel for the second VPN connection. By default, your customer gateway device must initiate the IKE negotiation and bring up the tunnel. Specify start for AWS to initiate the IKE negotiation. Valid values are `add | start`.
      * 
      */
-    public Output</* @Nullable */ String> tunnel2StartupAction() {
-        return this.tunnel2StartupAction;
+    public Output<Optional<String>> tunnel2StartupAction() {
+        return Codegen.optional(this.tunnel2StartupAction);
     }
     /**
      * The RFC 6890 link-local address of the second VPN tunnel (VPN Gateway Side).
@@ -932,8 +933,8 @@ public class VpnConnection extends com.pulumi.resources.CustomResource {
      * @return The ID of the Virtual Private Gateway.
      * 
      */
-    public Output</* @Nullable */ String> vpnGatewayId() {
-        return this.vpnGatewayId;
+    public Output<Optional<String>> vpnGatewayId() {
+        return Codegen.optional(this.vpnGatewayId);
     }
 
     /**

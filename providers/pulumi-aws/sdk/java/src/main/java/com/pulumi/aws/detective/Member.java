@@ -12,6 +12,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -69,8 +70,8 @@ public class Member extends com.pulumi.resources.CustomResource {
      * @return If set to true, then the root user of the invited account will _not_ receive an email notification. This notification is in addition to an alert that the root user receives in AWS Personal Health Dashboard. By default, this is set to `false`.
      * 
      */
-    public Output</* @Nullable */ Boolean> disableEmailNotification() {
-        return this.disableEmailNotification;
+    public Output<Optional<Boolean>> disableEmailNotification() {
+        return Codegen.optional(this.disableEmailNotification);
     }
     @Export(name="disabledReason", type=String.class, parameters={})
     private Output<String> disabledReason;
@@ -131,8 +132,8 @@ public class Member extends com.pulumi.resources.CustomResource {
      * @return A custom message to include in the invitation. Amazon Detective adds this message to the standard content that it sends for an invitation.
      * 
      */
-    public Output</* @Nullable */ String> message() {
-        return this.message;
+    public Output<Optional<String>> message() {
+        return Codegen.optional(this.message);
     }
     /**
      * Current membership status of the member account.

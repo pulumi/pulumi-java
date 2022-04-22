@@ -13,6 +13,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -43,8 +44,8 @@ public class Variable extends com.pulumi.resources.CustomResource {
      * @return Gets or sets the creation time.
      * 
      */
-    public Output</* @Nullable */ String> creationTime() {
-        return this.creationTime;
+    public Output<Optional<String>> creationTime() {
+        return Codegen.optional(this.creationTime);
     }
     /**
      * Gets or sets the description.
@@ -57,8 +58,8 @@ public class Variable extends com.pulumi.resources.CustomResource {
      * @return Gets or sets the description.
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * Gets or sets the encrypted flag of the variable.
@@ -71,8 +72,8 @@ public class Variable extends com.pulumi.resources.CustomResource {
      * @return Gets or sets the encrypted flag of the variable.
      * 
      */
-    public Output</* @Nullable */ Boolean> isEncrypted() {
-        return this.isEncrypted;
+    public Output<Optional<Boolean>> isEncrypted() {
+        return Codegen.optional(this.isEncrypted);
     }
     /**
      * Gets or sets the last modified time.
@@ -85,8 +86,8 @@ public class Variable extends com.pulumi.resources.CustomResource {
      * @return Gets or sets the last modified time.
      * 
      */
-    public Output</* @Nullable */ String> lastModifiedTime() {
-        return this.lastModifiedTime;
+    public Output<Optional<String>> lastModifiedTime() {
+        return Codegen.optional(this.lastModifiedTime);
     }
     /**
      * The name of the resource
@@ -127,8 +128,8 @@ public class Variable extends com.pulumi.resources.CustomResource {
      * @return Gets or sets the value of the variable.
      * 
      */
-    public Output</* @Nullable */ String> value() {
-        return this.value;
+    public Output<Optional<String>> value() {
+        return Codegen.optional(this.value);
     }
 
     /**

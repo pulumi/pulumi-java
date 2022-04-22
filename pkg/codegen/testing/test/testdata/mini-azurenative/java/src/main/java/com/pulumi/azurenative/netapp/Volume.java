@@ -10,6 +10,7 @@ import com.pulumi.core.annotations.Export;
 import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.Double;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 @ResourceType(type="azure-native:netapp:Volume")
@@ -17,8 +18,8 @@ public class Volume extends com.pulumi.resources.CustomResource {
     @Export(name="throughputMibps", type=Double.class, parameters={})
     private Output</* @Nullable */ Double> throughputMibps;
 
-    public Output</* @Nullable */ Double> throughputMibps() {
-        return this.throughputMibps;
+    public Output<Optional<Double>> throughputMibps() {
+        return Codegen.optional(this.throughputMibps);
     }
     /**
      * Maximum storage quota allowed for a file system in bytes. This is a soft quota used for alerting only. Minimum size is 100 GiB. Upper limit is 100TiB. Specified in bytes.

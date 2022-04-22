@@ -12,6 +12,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.Object;
 import java.lang.String;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -35,20 +36,20 @@ public class Archive extends com.pulumi.resources.CustomResource {
     @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     @Export(name="eventPattern", type=Object.class, parameters={})
     private Output</* @Nullable */ Object> eventPattern;
 
-    public Output</* @Nullable */ Object> eventPattern() {
-        return this.eventPattern;
+    public Output<Optional<Object>> eventPattern() {
+        return Codegen.optional(this.eventPattern);
     }
     @Export(name="retentionDays", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> retentionDays;
 
-    public Output</* @Nullable */ Integer> retentionDays() {
-        return this.retentionDays;
+    public Output<Optional<Integer>> retentionDays() {
+        return Codegen.optional(this.retentionDays);
     }
     @Export(name="sourceArn", type=String.class, parameters={})
     private Output<String> sourceArn;

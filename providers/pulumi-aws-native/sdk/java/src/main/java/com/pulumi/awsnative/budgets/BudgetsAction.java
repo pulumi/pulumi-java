@@ -17,6 +17,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -46,8 +47,8 @@ public class BudgetsAction extends com.pulumi.resources.CustomResource {
     @Export(name="approvalModel", type=BudgetsActionApprovalModel.class, parameters={})
     private Output</* @Nullable */ BudgetsActionApprovalModel> approvalModel;
 
-    public Output</* @Nullable */ BudgetsActionApprovalModel> approvalModel() {
-        return this.approvalModel;
+    public Output<Optional<BudgetsActionApprovalModel>> approvalModel() {
+        return Codegen.optional(this.approvalModel);
     }
     @Export(name="budgetName", type=String.class, parameters={})
     private Output<String> budgetName;

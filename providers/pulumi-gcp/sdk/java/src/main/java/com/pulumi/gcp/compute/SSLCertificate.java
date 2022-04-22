@@ -12,6 +12,7 @@ import com.pulumi.gcp.compute.SSLCertificateArgs;
 import com.pulumi.gcp.compute.inputs.SSLCertificateState;
 import java.lang.Integer;
 import java.lang.String;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -108,8 +109,8 @@ public class SSLCertificate extends com.pulumi.resources.CustomResource {
      * @return An optional description of this resource.
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * Name of the resource. Provided by the client when the resource is

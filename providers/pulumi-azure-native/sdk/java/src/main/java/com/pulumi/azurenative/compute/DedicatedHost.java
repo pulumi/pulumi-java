@@ -18,6 +18,7 @@ import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -48,8 +49,8 @@ public class DedicatedHost extends com.pulumi.resources.CustomResource {
      * @return Specifies whether the dedicated host should be replaced automatically in case of a failure. The value is defaulted to &#39;true&#39; when not provided.
      * 
      */
-    public Output</* @Nullable */ Boolean> autoReplaceOnFailure() {
-        return this.autoReplaceOnFailure;
+    public Output<Optional<Boolean>> autoReplaceOnFailure() {
+        return Codegen.optional(this.autoReplaceOnFailure);
     }
     /**
      * A unique id generated and assigned to the dedicated host by the platform. &lt;br&gt;&lt;br&gt; Does not change throughout the lifetime of the host.
@@ -90,8 +91,8 @@ public class DedicatedHost extends com.pulumi.resources.CustomResource {
      * @return Specifies the software license type that will be applied to the VMs deployed on the dedicated host. &lt;br&gt;&lt;br&gt; Possible values are: &lt;br&gt;&lt;br&gt; **None** &lt;br&gt;&lt;br&gt; **Windows_Server_Hybrid** &lt;br&gt;&lt;br&gt; **Windows_Server_Perpetual** &lt;br&gt;&lt;br&gt; Default: **None**
      * 
      */
-    public Output</* @Nullable */ String> licenseType() {
-        return this.licenseType;
+    public Output<Optional<String>> licenseType() {
+        return Codegen.optional(this.licenseType);
     }
     /**
      * Resource location
@@ -132,8 +133,8 @@ public class DedicatedHost extends com.pulumi.resources.CustomResource {
      * @return Fault domain of the dedicated host within a dedicated host group.
      * 
      */
-    public Output</* @Nullable */ Integer> platformFaultDomain() {
-        return this.platformFaultDomain;
+    public Output<Optional<Integer>> platformFaultDomain() {
+        return Codegen.optional(this.platformFaultDomain);
     }
     /**
      * The provisioning state, which only appears in the response.
@@ -188,8 +189,8 @@ public class DedicatedHost extends com.pulumi.resources.CustomResource {
      * @return Resource tags
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * Resource type

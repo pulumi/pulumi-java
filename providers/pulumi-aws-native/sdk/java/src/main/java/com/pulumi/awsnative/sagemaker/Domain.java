@@ -15,6 +15,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -34,8 +35,8 @@ public class Domain extends com.pulumi.resources.CustomResource {
      * @return Specifies the VPC used for non-EFS traffic. The default value is PublicInternetOnly.
      * 
      */
-    public Output</* @Nullable */ DomainAppNetworkAccessType> appNetworkAccessType() {
-        return this.appNetworkAccessType;
+    public Output<Optional<DomainAppNetworkAccessType>> appNetworkAccessType() {
+        return Codegen.optional(this.appNetworkAccessType);
     }
     /**
      * The mode of authentication that members use to access the domain.
@@ -132,8 +133,8 @@ public class Domain extends com.pulumi.resources.CustomResource {
      * @return SageMaker uses AWS KMS to encrypt the EFS volume attached to the domain with an AWS managed customer master key (CMK) by default.
      * 
      */
-    public Output</* @Nullable */ String> kmsKeyId() {
-        return this.kmsKeyId;
+    public Output<Optional<String>> kmsKeyId() {
+        return Codegen.optional(this.kmsKeyId);
     }
     /**
      * The SSO managed application instance ID.
@@ -174,8 +175,8 @@ public class Domain extends com.pulumi.resources.CustomResource {
      * @return A list of tags to apply to the user profile.
      * 
      */
-    public Output</* @Nullable */ List<DomainTag>> tags() {
-        return this.tags;
+    public Output<Optional<List<DomainTag>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * The URL to the created domain.

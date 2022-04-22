@@ -15,6 +15,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -115,8 +116,8 @@ public class RestorePointCollection extends com.pulumi.resources.CustomResource 
      * @return The properties of the source resource that this restore point collection is created from.
      * 
      */
-    public Output</* @Nullable */ RestorePointCollectionSourcePropertiesResponse> source() {
-        return this.source;
+    public Output<Optional<RestorePointCollectionSourcePropertiesResponse>> source() {
+        return Codegen.optional(this.source);
     }
     /**
      * Resource tags
@@ -129,8 +130,8 @@ public class RestorePointCollection extends com.pulumi.resources.CustomResource 
      * @return Resource tags
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * Resource type

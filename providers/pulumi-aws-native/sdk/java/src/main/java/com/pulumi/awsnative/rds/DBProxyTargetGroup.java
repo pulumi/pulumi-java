@@ -13,6 +13,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -24,20 +25,20 @@ public class DBProxyTargetGroup extends com.pulumi.resources.CustomResource {
     @Export(name="connectionPoolConfigurationInfo", type=DBProxyTargetGroupConnectionPoolConfigurationInfoFormat.class, parameters={})
     private Output</* @Nullable */ DBProxyTargetGroupConnectionPoolConfigurationInfoFormat> connectionPoolConfigurationInfo;
 
-    public Output</* @Nullable */ DBProxyTargetGroupConnectionPoolConfigurationInfoFormat> connectionPoolConfigurationInfo() {
-        return this.connectionPoolConfigurationInfo;
+    public Output<Optional<DBProxyTargetGroupConnectionPoolConfigurationInfoFormat>> connectionPoolConfigurationInfo() {
+        return Codegen.optional(this.connectionPoolConfigurationInfo);
     }
     @Export(name="dBClusterIdentifiers", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> dBClusterIdentifiers;
 
-    public Output</* @Nullable */ List<String>> dBClusterIdentifiers() {
-        return this.dBClusterIdentifiers;
+    public Output<Optional<List<String>>> dBClusterIdentifiers() {
+        return Codegen.optional(this.dBClusterIdentifiers);
     }
     @Export(name="dBInstanceIdentifiers", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> dBInstanceIdentifiers;
 
-    public Output</* @Nullable */ List<String>> dBInstanceIdentifiers() {
-        return this.dBInstanceIdentifiers;
+    public Output<Optional<List<String>>> dBInstanceIdentifiers() {
+        return Codegen.optional(this.dBInstanceIdentifiers);
     }
     /**
      * The identifier for the proxy.

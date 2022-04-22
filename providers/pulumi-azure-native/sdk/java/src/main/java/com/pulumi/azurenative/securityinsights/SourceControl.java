@@ -14,6 +14,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -58,8 +59,8 @@ public class SourceControl extends com.pulumi.resources.CustomResource {
      * @return The timestamp of resource creation (UTC).
      * 
      */
-    public Output</* @Nullable */ String> createdAt() {
-        return this.createdAt;
+    public Output<Optional<String>> createdAt() {
+        return Codegen.optional(this.createdAt);
     }
     /**
      * The identity that created the resource.
@@ -72,8 +73,8 @@ public class SourceControl extends com.pulumi.resources.CustomResource {
      * @return The identity that created the resource.
      * 
      */
-    public Output</* @Nullable */ String> createdBy() {
-        return this.createdBy;
+    public Output<Optional<String>> createdBy() {
+        return Codegen.optional(this.createdBy);
     }
     /**
      * The type of identity that created the resource.
@@ -86,8 +87,8 @@ public class SourceControl extends com.pulumi.resources.CustomResource {
      * @return The type of identity that created the resource.
      * 
      */
-    public Output</* @Nullable */ String> createdByType() {
-        return this.createdByType;
+    public Output<Optional<String>> createdByType() {
+        return Codegen.optional(this.createdByType);
     }
     /**
      * A description of the source control
@@ -100,8 +101,8 @@ public class SourceControl extends com.pulumi.resources.CustomResource {
      * @return A description of the source control
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * The display name of the source control
@@ -128,8 +129,8 @@ public class SourceControl extends com.pulumi.resources.CustomResource {
      * @return Etag of the azure resource
      * 
      */
-    public Output</* @Nullable */ String> etag() {
-        return this.etag;
+    public Output<Optional<String>> etag() {
+        return Codegen.optional(this.etag);
     }
     /**
      * The timestamp of resource last modification (UTC)
@@ -142,8 +143,8 @@ public class SourceControl extends com.pulumi.resources.CustomResource {
      * @return The timestamp of resource last modification (UTC)
      * 
      */
-    public Output</* @Nullable */ String> lastModifiedAt() {
-        return this.lastModifiedAt;
+    public Output<Optional<String>> lastModifiedAt() {
+        return Codegen.optional(this.lastModifiedAt);
     }
     /**
      * The identity that last modified the resource.
@@ -156,8 +157,8 @@ public class SourceControl extends com.pulumi.resources.CustomResource {
      * @return The identity that last modified the resource.
      * 
      */
-    public Output</* @Nullable */ String> lastModifiedBy() {
-        return this.lastModifiedBy;
+    public Output<Optional<String>> lastModifiedBy() {
+        return Codegen.optional(this.lastModifiedBy);
     }
     /**
      * The type of identity that last modified the resource.
@@ -170,8 +171,8 @@ public class SourceControl extends com.pulumi.resources.CustomResource {
      * @return The type of identity that last modified the resource.
      * 
      */
-    public Output</* @Nullable */ String> lastModifiedByType() {
-        return this.lastModifiedByType;
+    public Output<Optional<String>> lastModifiedByType() {
+        return Codegen.optional(this.lastModifiedByType);
     }
     /**
      * Azure resource name

@@ -12,6 +12,7 @@ import com.pulumi.gcp.billing.AccountIamMemberArgs;
 import com.pulumi.gcp.billing.inputs.AccountIamMemberState;
 import com.pulumi.gcp.billing.outputs.AccountIamMemberCondition;
 import java.lang.String;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 @ResourceType(type="gcp:billing/accountIamMember:AccountIamMember")
@@ -25,8 +26,8 @@ public class AccountIamMember extends com.pulumi.resources.CustomResource {
     @Export(name="condition", type=AccountIamMemberCondition.class, parameters={})
     private Output</* @Nullable */ AccountIamMemberCondition> condition;
 
-    public Output</* @Nullable */ AccountIamMemberCondition> condition() {
-        return this.condition;
+    public Output<Optional<AccountIamMemberCondition>> condition() {
+        return Codegen.optional(this.condition);
     }
     @Export(name="etag", type=String.class, parameters={})
     private Output<String> etag;

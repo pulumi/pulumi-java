@@ -15,6 +15,7 @@ import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -45,8 +46,8 @@ public class DscNodeConfiguration extends com.pulumi.resources.CustomResource {
      * @return Gets or sets the configuration of the node.
      * 
      */
-    public Output</* @Nullable */ DscConfigurationAssociationPropertyResponse> configuration() {
-        return this.configuration;
+    public Output<Optional<DscConfigurationAssociationPropertyResponse>> configuration() {
+        return Codegen.optional(this.configuration);
     }
     /**
      * Gets or sets creation time.
@@ -59,8 +60,8 @@ public class DscNodeConfiguration extends com.pulumi.resources.CustomResource {
      * @return Gets or sets creation time.
      * 
      */
-    public Output</* @Nullable */ String> creationTime() {
-        return this.creationTime;
+    public Output<Optional<String>> creationTime() {
+        return Codegen.optional(this.creationTime);
     }
     /**
      * If a new build version of NodeConfiguration is required.
@@ -73,8 +74,8 @@ public class DscNodeConfiguration extends com.pulumi.resources.CustomResource {
      * @return If a new build version of NodeConfiguration is required.
      * 
      */
-    public Output</* @Nullable */ Boolean> incrementNodeConfigurationBuild() {
-        return this.incrementNodeConfigurationBuild;
+    public Output<Optional<Boolean>> incrementNodeConfigurationBuild() {
+        return Codegen.optional(this.incrementNodeConfigurationBuild);
     }
     /**
      * Gets or sets the last modified time.
@@ -87,8 +88,8 @@ public class DscNodeConfiguration extends com.pulumi.resources.CustomResource {
      * @return Gets or sets the last modified time.
      * 
      */
-    public Output</* @Nullable */ String> lastModifiedTime() {
-        return this.lastModifiedTime;
+    public Output<Optional<String>> lastModifiedTime() {
+        return Codegen.optional(this.lastModifiedTime);
     }
     /**
      * The name of the resource
@@ -115,8 +116,8 @@ public class DscNodeConfiguration extends com.pulumi.resources.CustomResource {
      * @return Number of nodes with this node configuration assigned
      * 
      */
-    public Output</* @Nullable */ Double> nodeCount() {
-        return this.nodeCount;
+    public Output<Optional<Double>> nodeCount() {
+        return Codegen.optional(this.nodeCount);
     }
     /**
      * Source of node configuration.
@@ -129,8 +130,8 @@ public class DscNodeConfiguration extends com.pulumi.resources.CustomResource {
      * @return Source of node configuration.
      * 
      */
-    public Output</* @Nullable */ String> source() {
-        return this.source;
+    public Output<Optional<String>> source() {
+        return Codegen.optional(this.source);
     }
     /**
      * The type of the resource.

@@ -15,6 +15,7 @@ import com.pulumi.gcp.deploymentmanager.outputs.DeploymentTarget;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -76,8 +77,8 @@ public class Deployment extends com.pulumi.resources.CustomResource {
      * Possible values are `ACQUIRE` and `CREATE_OR_ACQUIRE`.
      * 
      */
-    public Output</* @Nullable */ String> createPolicy() {
-        return this.createPolicy;
+    public Output<Optional<String>> createPolicy() {
+        return Codegen.optional(this.createPolicy);
     }
     /**
      * Set the policy to use for deleting new resources on update/delete.
@@ -104,8 +105,8 @@ public class Deployment extends com.pulumi.resources.CustomResource {
      * Possible values are `ABANDON` and `DELETE`.
      * 
      */
-    public Output</* @Nullable */ String> deletePolicy() {
-        return this.deletePolicy;
+    public Output<Optional<String>> deletePolicy() {
+        return Codegen.optional(this.deletePolicy);
     }
     /**
      * Unique identifier for deployment. Output only.
@@ -132,8 +133,8 @@ public class Deployment extends com.pulumi.resources.CustomResource {
      * @return Optional user-provided description of deployment.
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * Key-value pairs to apply to this labels.
@@ -148,8 +149,8 @@ public class Deployment extends com.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ List<DeploymentLabel>> labels() {
-        return this.labels;
+    public Output<Optional<List<DeploymentLabel>>> labels() {
+        return Codegen.optional(this.labels);
     }
     /**
      * Output only. URL of the manifest representing the last manifest that was successfully deployed.
@@ -206,8 +207,8 @@ public class Deployment extends com.pulumi.resources.CustomResource {
      * to true or if other fields are updated while preview is true.
      * 
      */
-    public Output</* @Nullable */ Boolean> preview() {
-        return this.preview;
+    public Output<Optional<Boolean>> preview() {
+        return Codegen.optional(this.preview);
     }
     /**
      * The ID of the project in which the resource belongs.

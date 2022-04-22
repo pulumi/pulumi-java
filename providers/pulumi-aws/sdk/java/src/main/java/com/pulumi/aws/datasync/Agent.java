@@ -13,6 +13,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -100,8 +101,8 @@ public class Agent extends com.pulumi.resources.CustomResource {
      * @return The IP address of the VPC endpoint the agent should connect to when retrieving an activation key during resource creation. Conflicts with `activation_key`.
      * 
      */
-    public Output</* @Nullable */ String> privateLinkEndpoint() {
-        return this.privateLinkEndpoint;
+    public Output<Optional<String>> privateLinkEndpoint() {
+        return Codegen.optional(this.privateLinkEndpoint);
     }
     /**
      * The ARNs of the security groups used to protect your data transfer task subnets.
@@ -114,8 +115,8 @@ public class Agent extends com.pulumi.resources.CustomResource {
      * @return The ARNs of the security groups used to protect your data transfer task subnets.
      * 
      */
-    public Output</* @Nullable */ List<String>> securityGroupArns() {
-        return this.securityGroupArns;
+    public Output<Optional<List<String>>> securityGroupArns() {
+        return Codegen.optional(this.securityGroupArns);
     }
     /**
      * The Amazon Resource Names (ARNs) of the subnets in which DataSync will create elastic network interfaces for each data transfer task.
@@ -128,8 +129,8 @@ public class Agent extends com.pulumi.resources.CustomResource {
      * @return The Amazon Resource Names (ARNs) of the subnets in which DataSync will create elastic network interfaces for each data transfer task.
      * 
      */
-    public Output</* @Nullable */ List<String>> subnetArns() {
-        return this.subnetArns;
+    public Output<Optional<List<String>>> subnetArns() {
+        return Codegen.optional(this.subnetArns);
     }
     /**
      * Key-value pairs of resource tags to assign to the DataSync Agent. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
@@ -142,8 +143,8 @@ public class Agent extends com.pulumi.resources.CustomResource {
      * @return Key-value pairs of resource tags to assign to the DataSync Agent. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * A map of tags assigned to the resource, including those inherited from the provider .
@@ -170,8 +171,8 @@ public class Agent extends com.pulumi.resources.CustomResource {
      * @return The ID of the VPC (virtual private cloud) endpoint that the agent has access to.
      * 
      */
-    public Output</* @Nullable */ String> vpcEndpointId() {
-        return this.vpcEndpointId;
+    public Output<Optional<String>> vpcEndpointId() {
+        return Codegen.optional(this.vpcEndpointId);
     }
 
     /**

@@ -14,6 +14,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -45,8 +46,8 @@ public class ModelPackageGroup extends com.pulumi.resources.CustomResource {
     @Export(name="modelPackageGroupDescription", type=String.class, parameters={})
     private Output</* @Nullable */ String> modelPackageGroupDescription;
 
-    public Output</* @Nullable */ String> modelPackageGroupDescription() {
-        return this.modelPackageGroupDescription;
+    public Output<Optional<String>> modelPackageGroupDescription() {
+        return Codegen.optional(this.modelPackageGroupDescription);
     }
     @Export(name="modelPackageGroupName", type=String.class, parameters={})
     private Output<String> modelPackageGroupName;
@@ -57,8 +58,8 @@ public class ModelPackageGroup extends com.pulumi.resources.CustomResource {
     @Export(name="modelPackageGroupPolicy", type=Object.class, parameters={})
     private Output</* @Nullable */ Object> modelPackageGroupPolicy;
 
-    public Output</* @Nullable */ Object> modelPackageGroupPolicy() {
-        return this.modelPackageGroupPolicy;
+    public Output<Optional<Object>> modelPackageGroupPolicy() {
+        return Codegen.optional(this.modelPackageGroupPolicy);
     }
     /**
      * The status of a modelpackage group job.
@@ -85,8 +86,8 @@ public class ModelPackageGroup extends com.pulumi.resources.CustomResource {
      * @return An array of key-value pairs to apply to this resource.
      * 
      */
-    public Output</* @Nullable */ List<ModelPackageGroupTag>> tags() {
-        return this.tags;
+    public Output<Optional<List<ModelPackageGroupTag>>> tags() {
+        return Codegen.optional(this.tags);
     }
 
     /**

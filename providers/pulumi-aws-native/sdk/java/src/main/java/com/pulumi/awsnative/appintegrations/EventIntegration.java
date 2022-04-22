@@ -14,6 +14,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -47,8 +48,8 @@ public class EventIntegration extends com.pulumi.resources.CustomResource {
      * @return The event integration description.
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * The Amazon Eventbridge bus for the event integration.
@@ -117,8 +118,8 @@ public class EventIntegration extends com.pulumi.resources.CustomResource {
      * @return The tags (keys and values) associated with the event integration.
      * 
      */
-    public Output</* @Nullable */ List<EventIntegrationTag>> tags() {
-        return this.tags;
+    public Output<Optional<List<EventIntegrationTag>>> tags() {
+        return Codegen.optional(this.tags);
     }
 
     /**

@@ -20,6 +20,7 @@ import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -50,8 +51,8 @@ public class AgentPool extends com.pulumi.resources.CustomResource {
      * @return Availability zones for nodes. Must use VirtualMachineScaleSets AgentPoolType.
      * 
      */
-    public Output</* @Nullable */ List<String>> availabilityZones() {
-        return this.availabilityZones;
+    public Output<Optional<List<String>>> availabilityZones() {
+        return Codegen.optional(this.availabilityZones);
     }
     /**
      * Number of agents (VMs) to host docker containers. Allowed values must be in the range of 0 to 100 (inclusive) for user pools and in the range of 1 to 100 (inclusive) for system pools. The default value is 1.
@@ -64,8 +65,8 @@ public class AgentPool extends com.pulumi.resources.CustomResource {
      * @return Number of agents (VMs) to host docker containers. Allowed values must be in the range of 0 to 100 (inclusive) for user pools and in the range of 1 to 100 (inclusive) for system pools. The default value is 1.
      * 
      */
-    public Output</* @Nullable */ Integer> count() {
-        return this.count;
+    public Output<Optional<Integer>> count() {
+        return Codegen.optional(this.count);
     }
     /**
      * Whether to enable auto-scaler
@@ -78,8 +79,8 @@ public class AgentPool extends com.pulumi.resources.CustomResource {
      * @return Whether to enable auto-scaler
      * 
      */
-    public Output</* @Nullable */ Boolean> enableAutoScaling() {
-        return this.enableAutoScaling;
+    public Output<Optional<Boolean>> enableAutoScaling() {
+        return Codegen.optional(this.enableAutoScaling);
     }
     /**
      * Whether to enable EncryptionAtHost
@@ -92,8 +93,8 @@ public class AgentPool extends com.pulumi.resources.CustomResource {
      * @return Whether to enable EncryptionAtHost
      * 
      */
-    public Output</* @Nullable */ Boolean> enableEncryptionAtHost() {
-        return this.enableEncryptionAtHost;
+    public Output<Optional<Boolean>> enableEncryptionAtHost() {
+        return Codegen.optional(this.enableEncryptionAtHost);
     }
     /**
      * Whether to use FIPS enabled OS
@@ -106,8 +107,8 @@ public class AgentPool extends com.pulumi.resources.CustomResource {
      * @return Whether to use FIPS enabled OS
      * 
      */
-    public Output</* @Nullable */ Boolean> enableFIPS() {
-        return this.enableFIPS;
+    public Output<Optional<Boolean>> enableFIPS() {
+        return Codegen.optional(this.enableFIPS);
     }
     /**
      * Enable public IP for nodes
@@ -120,8 +121,8 @@ public class AgentPool extends com.pulumi.resources.CustomResource {
      * @return Enable public IP for nodes
      * 
      */
-    public Output</* @Nullable */ Boolean> enableNodePublicIP() {
-        return this.enableNodePublicIP;
+    public Output<Optional<Boolean>> enableNodePublicIP() {
+        return Codegen.optional(this.enableNodePublicIP);
     }
     /**
      * GPUInstanceProfile to be used to specify GPU MIG instance profile for supported GPU VM SKU. Supported values are MIG1g, MIG2g, MIG3g, MIG4g and MIG7g.
@@ -134,8 +135,8 @@ public class AgentPool extends com.pulumi.resources.CustomResource {
      * @return GPUInstanceProfile to be used to specify GPU MIG instance profile for supported GPU VM SKU. Supported values are MIG1g, MIG2g, MIG3g, MIG4g and MIG7g.
      * 
      */
-    public Output</* @Nullable */ String> gpuInstanceProfile() {
-        return this.gpuInstanceProfile;
+    public Output<Optional<String>> gpuInstanceProfile() {
+        return Codegen.optional(this.gpuInstanceProfile);
     }
     /**
      * KubeletConfig specifies the configuration of kubelet on agent nodes.
@@ -148,8 +149,8 @@ public class AgentPool extends com.pulumi.resources.CustomResource {
      * @return KubeletConfig specifies the configuration of kubelet on agent nodes.
      * 
      */
-    public Output</* @Nullable */ KubeletConfigResponse> kubeletConfig() {
-        return this.kubeletConfig;
+    public Output<Optional<KubeletConfigResponse>> kubeletConfig() {
+        return Codegen.optional(this.kubeletConfig);
     }
     /**
      * KubeletDiskType determines the placement of emptyDir volumes, container runtime data root, and Kubelet ephemeral storage. Currently allows one value, OS, resulting in Kubelet using the OS disk for data.
@@ -162,8 +163,8 @@ public class AgentPool extends com.pulumi.resources.CustomResource {
      * @return KubeletDiskType determines the placement of emptyDir volumes, container runtime data root, and Kubelet ephemeral storage. Currently allows one value, OS, resulting in Kubelet using the OS disk for data.
      * 
      */
-    public Output</* @Nullable */ String> kubeletDiskType() {
-        return this.kubeletDiskType;
+    public Output<Optional<String>> kubeletDiskType() {
+        return Codegen.optional(this.kubeletDiskType);
     }
     /**
      * LinuxOSConfig specifies the OS configuration of linux agent nodes.
@@ -176,8 +177,8 @@ public class AgentPool extends com.pulumi.resources.CustomResource {
      * @return LinuxOSConfig specifies the OS configuration of linux agent nodes.
      * 
      */
-    public Output</* @Nullable */ LinuxOSConfigResponse> linuxOSConfig() {
-        return this.linuxOSConfig;
+    public Output<Optional<LinuxOSConfigResponse>> linuxOSConfig() {
+        return Codegen.optional(this.linuxOSConfig);
     }
     /**
      * Maximum number of nodes for auto-scaling
@@ -190,8 +191,8 @@ public class AgentPool extends com.pulumi.resources.CustomResource {
      * @return Maximum number of nodes for auto-scaling
      * 
      */
-    public Output</* @Nullable */ Integer> maxCount() {
-        return this.maxCount;
+    public Output<Optional<Integer>> maxCount() {
+        return Codegen.optional(this.maxCount);
     }
     /**
      * Maximum number of pods that can run on a node.
@@ -204,8 +205,8 @@ public class AgentPool extends com.pulumi.resources.CustomResource {
      * @return Maximum number of pods that can run on a node.
      * 
      */
-    public Output</* @Nullable */ Integer> maxPods() {
-        return this.maxPods;
+    public Output<Optional<Integer>> maxPods() {
+        return Codegen.optional(this.maxPods);
     }
     /**
      * Minimum number of nodes for auto-scaling
@@ -218,8 +219,8 @@ public class AgentPool extends com.pulumi.resources.CustomResource {
      * @return Minimum number of nodes for auto-scaling
      * 
      */
-    public Output</* @Nullable */ Integer> minCount() {
-        return this.minCount;
+    public Output<Optional<Integer>> minCount() {
+        return Codegen.optional(this.minCount);
     }
     /**
      * AgentPoolMode represents mode of an agent pool
@@ -232,8 +233,8 @@ public class AgentPool extends com.pulumi.resources.CustomResource {
      * @return AgentPoolMode represents mode of an agent pool
      * 
      */
-    public Output</* @Nullable */ String> mode() {
-        return this.mode;
+    public Output<Optional<String>> mode() {
+        return Codegen.optional(this.mode);
     }
     /**
      * The name of the resource that is unique within a resource group. This name can be used to access the resource.
@@ -274,8 +275,8 @@ public class AgentPool extends com.pulumi.resources.CustomResource {
      * @return Agent pool node labels to be persisted across all nodes in agent pool.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> nodeLabels() {
-        return this.nodeLabels;
+    public Output<Optional<Map<String,String>>> nodeLabels() {
+        return Codegen.optional(this.nodeLabels);
     }
     /**
      * Public IP Prefix ID. VM nodes use IPs assigned from this Public IP Prefix.
@@ -288,8 +289,8 @@ public class AgentPool extends com.pulumi.resources.CustomResource {
      * @return Public IP Prefix ID. VM nodes use IPs assigned from this Public IP Prefix.
      * 
      */
-    public Output</* @Nullable */ String> nodePublicIPPrefixID() {
-        return this.nodePublicIPPrefixID;
+    public Output<Optional<String>> nodePublicIPPrefixID() {
+        return Codegen.optional(this.nodePublicIPPrefixID);
     }
     /**
      * Taints added to new nodes during node pool create and scale. For example, key=value:NoSchedule.
@@ -302,8 +303,8 @@ public class AgentPool extends com.pulumi.resources.CustomResource {
      * @return Taints added to new nodes during node pool create and scale. For example, key=value:NoSchedule.
      * 
      */
-    public Output</* @Nullable */ List<String>> nodeTaints() {
-        return this.nodeTaints;
+    public Output<Optional<List<String>>> nodeTaints() {
+        return Codegen.optional(this.nodeTaints);
     }
     /**
      * Version of orchestrator specified when creating the managed cluster.
@@ -316,8 +317,8 @@ public class AgentPool extends com.pulumi.resources.CustomResource {
      * @return Version of orchestrator specified when creating the managed cluster.
      * 
      */
-    public Output</* @Nullable */ String> orchestratorVersion() {
-        return this.orchestratorVersion;
+    public Output<Optional<String>> orchestratorVersion() {
+        return Codegen.optional(this.orchestratorVersion);
     }
     /**
      * OS Disk Size in GB to be used to specify the disk size for every machine in this master/agent pool. If you specify 0, it will apply the default osDisk size according to the vmSize specified.
@@ -330,8 +331,8 @@ public class AgentPool extends com.pulumi.resources.CustomResource {
      * @return OS Disk Size in GB to be used to specify the disk size for every machine in this master/agent pool. If you specify 0, it will apply the default osDisk size according to the vmSize specified.
      * 
      */
-    public Output</* @Nullable */ Integer> osDiskSizeGB() {
-        return this.osDiskSizeGB;
+    public Output<Optional<Integer>> osDiskSizeGB() {
+        return Codegen.optional(this.osDiskSizeGB);
     }
     /**
      * OS disk type to be used for machines in a given agent pool. Allowed values are &#39;Ephemeral&#39; and &#39;Managed&#39;. If unspecified, defaults to &#39;Ephemeral&#39; when the VM supports ephemeral OS and has a cache disk larger than the requested OSDiskSizeGB. Otherwise, defaults to &#39;Managed&#39;. May not be changed after creation.
@@ -344,8 +345,8 @@ public class AgentPool extends com.pulumi.resources.CustomResource {
      * @return OS disk type to be used for machines in a given agent pool. Allowed values are &#39;Ephemeral&#39; and &#39;Managed&#39;. If unspecified, defaults to &#39;Ephemeral&#39; when the VM supports ephemeral OS and has a cache disk larger than the requested OSDiskSizeGB. Otherwise, defaults to &#39;Managed&#39;. May not be changed after creation.
      * 
      */
-    public Output</* @Nullable */ String> osDiskType() {
-        return this.osDiskType;
+    public Output<Optional<String>> osDiskType() {
+        return Codegen.optional(this.osDiskType);
     }
     /**
      * OsSKU to be used to specify os sku. Choose from Ubuntu(default) and CBLMariner for Linux OSType. Not applicable to Windows OSType.
@@ -358,8 +359,8 @@ public class AgentPool extends com.pulumi.resources.CustomResource {
      * @return OsSKU to be used to specify os sku. Choose from Ubuntu(default) and CBLMariner for Linux OSType. Not applicable to Windows OSType.
      * 
      */
-    public Output</* @Nullable */ String> osSKU() {
-        return this.osSKU;
+    public Output<Optional<String>> osSKU() {
+        return Codegen.optional(this.osSKU);
     }
     /**
      * OsType to be used to specify os type. Choose from Linux and Windows. Default to Linux.
@@ -372,8 +373,8 @@ public class AgentPool extends com.pulumi.resources.CustomResource {
      * @return OsType to be used to specify os type. Choose from Linux and Windows. Default to Linux.
      * 
      */
-    public Output</* @Nullable */ String> osType() {
-        return this.osType;
+    public Output<Optional<String>> osType() {
+        return Codegen.optional(this.osType);
     }
     /**
      * Pod SubnetID specifies the VNet&#39;s subnet identifier for pods.
@@ -386,8 +387,8 @@ public class AgentPool extends com.pulumi.resources.CustomResource {
      * @return Pod SubnetID specifies the VNet&#39;s subnet identifier for pods.
      * 
      */
-    public Output</* @Nullable */ String> podSubnetID() {
-        return this.podSubnetID;
+    public Output<Optional<String>> podSubnetID() {
+        return Codegen.optional(this.podSubnetID);
     }
     /**
      * Describes whether the Agent Pool is Running or Stopped
@@ -428,8 +429,8 @@ public class AgentPool extends com.pulumi.resources.CustomResource {
      * @return The ID for Proximity Placement Group.
      * 
      */
-    public Output</* @Nullable */ String> proximityPlacementGroupID() {
-        return this.proximityPlacementGroupID;
+    public Output<Optional<String>> proximityPlacementGroupID() {
+        return Codegen.optional(this.proximityPlacementGroupID);
     }
     /**
      * ScaleSetEvictionPolicy to be used to specify eviction policy for Spot virtual machine scale set. Default to Delete.
@@ -442,8 +443,8 @@ public class AgentPool extends com.pulumi.resources.CustomResource {
      * @return ScaleSetEvictionPolicy to be used to specify eviction policy for Spot virtual machine scale set. Default to Delete.
      * 
      */
-    public Output</* @Nullable */ String> scaleSetEvictionPolicy() {
-        return this.scaleSetEvictionPolicy;
+    public Output<Optional<String>> scaleSetEvictionPolicy() {
+        return Codegen.optional(this.scaleSetEvictionPolicy);
     }
     /**
      * ScaleSetPriority to be used to specify virtual machine scale set priority. Default to regular.
@@ -456,8 +457,8 @@ public class AgentPool extends com.pulumi.resources.CustomResource {
      * @return ScaleSetPriority to be used to specify virtual machine scale set priority. Default to regular.
      * 
      */
-    public Output</* @Nullable */ String> scaleSetPriority() {
-        return this.scaleSetPriority;
+    public Output<Optional<String>> scaleSetPriority() {
+        return Codegen.optional(this.scaleSetPriority);
     }
     /**
      * SpotMaxPrice to be used to specify the maximum price you are willing to pay in US Dollars. Possible values are any decimal value greater than zero or -1 which indicates default price to be up-to on-demand.
@@ -470,8 +471,8 @@ public class AgentPool extends com.pulumi.resources.CustomResource {
      * @return SpotMaxPrice to be used to specify the maximum price you are willing to pay in US Dollars. Possible values are any decimal value greater than zero or -1 which indicates default price to be up-to on-demand.
      * 
      */
-    public Output</* @Nullable */ Double> spotMaxPrice() {
-        return this.spotMaxPrice;
+    public Output<Optional<Double>> spotMaxPrice() {
+        return Codegen.optional(this.spotMaxPrice);
     }
     /**
      * Agent pool tags to be persisted on the agent pool virtual machine scale set.
@@ -484,8 +485,8 @@ public class AgentPool extends com.pulumi.resources.CustomResource {
      * @return Agent pool tags to be persisted on the agent pool virtual machine scale set.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * AgentPoolType represents types of an agent pool
@@ -512,8 +513,8 @@ public class AgentPool extends com.pulumi.resources.CustomResource {
      * @return Settings for upgrading the agentpool
      * 
      */
-    public Output</* @Nullable */ AgentPoolUpgradeSettingsResponse> upgradeSettings() {
-        return this.upgradeSettings;
+    public Output<Optional<AgentPoolUpgradeSettingsResponse>> upgradeSettings() {
+        return Codegen.optional(this.upgradeSettings);
     }
     /**
      * Size of agent VMs.
@@ -526,8 +527,8 @@ public class AgentPool extends com.pulumi.resources.CustomResource {
      * @return Size of agent VMs.
      * 
      */
-    public Output</* @Nullable */ String> vmSize() {
-        return this.vmSize;
+    public Output<Optional<String>> vmSize() {
+        return Codegen.optional(this.vmSize);
     }
     /**
      * VNet SubnetID specifies the VNet&#39;s subnet identifier for nodes and maybe pods
@@ -540,8 +541,8 @@ public class AgentPool extends com.pulumi.resources.CustomResource {
      * @return VNet SubnetID specifies the VNet&#39;s subnet identifier for nodes and maybe pods
      * 
      */
-    public Output</* @Nullable */ String> vnetSubnetID() {
-        return this.vnetSubnetID;
+    public Output<Optional<String>> vnetSubnetID() {
+        return Codegen.optional(this.vnetSubnetID);
     }
 
     /**

@@ -12,6 +12,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -56,8 +57,8 @@ public class TrafficMirrorTarget extends com.pulumi.resources.CustomResource {
      * @return A description of the traffic mirror session.
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * The network interface ID that is associated with the target.
@@ -70,8 +71,8 @@ public class TrafficMirrorTarget extends com.pulumi.resources.CustomResource {
      * @return The network interface ID that is associated with the target.
      * 
      */
-    public Output</* @Nullable */ String> networkInterfaceId() {
-        return this.networkInterfaceId;
+    public Output<Optional<String>> networkInterfaceId() {
+        return Codegen.optional(this.networkInterfaceId);
     }
     /**
      * The Amazon Resource Name (ARN) of the Network Load Balancer that is associated with the target.
@@ -84,8 +85,8 @@ public class TrafficMirrorTarget extends com.pulumi.resources.CustomResource {
      * @return The Amazon Resource Name (ARN) of the Network Load Balancer that is associated with the target.
      * 
      */
-    public Output</* @Nullable */ String> networkLoadBalancerArn() {
-        return this.networkLoadBalancerArn;
+    public Output<Optional<String>> networkLoadBalancerArn() {
+        return Codegen.optional(this.networkLoadBalancerArn);
     }
     /**
      * The ID of the AWS account that owns the traffic mirror target.
@@ -112,8 +113,8 @@ public class TrafficMirrorTarget extends com.pulumi.resources.CustomResource {
      * @return Key-value map of resource tags. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.

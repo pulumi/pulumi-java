@@ -16,6 +16,7 @@ import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -75,8 +76,8 @@ public class LocationHdfs extends com.pulumi.resources.CustomResource {
      * @return The type of authentication used to determine the identity of the user. Valid values are `SIMPLE` and `KERBEROS`.
      * 
      */
-    public Output</* @Nullable */ String> authenticationType() {
-        return this.authenticationType;
+    public Output<Optional<String>> authenticationType() {
+        return Codegen.optional(this.authenticationType);
     }
     /**
      * The size of data blocks to write into the HDFS cluster. The block size must be a multiple of 512 bytes. The default block size is 128 mebibytes (MiB).
@@ -89,8 +90,8 @@ public class LocationHdfs extends com.pulumi.resources.CustomResource {
      * @return The size of data blocks to write into the HDFS cluster. The block size must be a multiple of 512 bytes. The default block size is 128 mebibytes (MiB).
      * 
      */
-    public Output</* @Nullable */ Integer> blockSize() {
-        return this.blockSize;
+    public Output<Optional<Integer>> blockSize() {
+        return Codegen.optional(this.blockSize);
     }
     /**
      * The Kerberos key table (keytab) that contains mappings between the defined Kerberos principal and the encrypted keys. If `KERBEROS` is specified for `authentication_type`, this parameter is required.
@@ -103,8 +104,8 @@ public class LocationHdfs extends com.pulumi.resources.CustomResource {
      * @return The Kerberos key table (keytab) that contains mappings between the defined Kerberos principal and the encrypted keys. If `KERBEROS` is specified for `authentication_type`, this parameter is required.
      * 
      */
-    public Output</* @Nullable */ String> kerberosKeytab() {
-        return this.kerberosKeytab;
+    public Output<Optional<String>> kerberosKeytab() {
+        return Codegen.optional(this.kerberosKeytab);
     }
     /**
      * The krb5.conf file that contains the Kerberos configuration information. If `KERBEROS` is specified for `authentication_type`, this parameter is required.
@@ -117,8 +118,8 @@ public class LocationHdfs extends com.pulumi.resources.CustomResource {
      * @return The krb5.conf file that contains the Kerberos configuration information. If `KERBEROS` is specified for `authentication_type`, this parameter is required.
      * 
      */
-    public Output</* @Nullable */ String> kerberosKrb5Conf() {
-        return this.kerberosKrb5Conf;
+    public Output<Optional<String>> kerberosKrb5Conf() {
+        return Codegen.optional(this.kerberosKrb5Conf);
     }
     /**
      * The Kerberos principal with access to the files and folders on the HDFS cluster. If `KERBEROS` is specified for `authentication_type`, this parameter is required.
@@ -131,8 +132,8 @@ public class LocationHdfs extends com.pulumi.resources.CustomResource {
      * @return The Kerberos principal with access to the files and folders on the HDFS cluster. If `KERBEROS` is specified for `authentication_type`, this parameter is required.
      * 
      */
-    public Output</* @Nullable */ String> kerberosPrincipal() {
-        return this.kerberosPrincipal;
+    public Output<Optional<String>> kerberosPrincipal() {
+        return Codegen.optional(this.kerberosPrincipal);
     }
     /**
      * The URI of the HDFS cluster&#39;s Key Management Server (KMS).
@@ -145,8 +146,8 @@ public class LocationHdfs extends com.pulumi.resources.CustomResource {
      * @return The URI of the HDFS cluster&#39;s Key Management Server (KMS).
      * 
      */
-    public Output</* @Nullable */ String> kmsKeyProviderUri() {
-        return this.kmsKeyProviderUri;
+    public Output<Optional<String>> kmsKeyProviderUri() {
+        return Codegen.optional(this.kmsKeyProviderUri);
     }
     /**
      * The NameNode that manages the HDFS namespace. The NameNode performs operations such as opening, closing, and renaming files and directories. The NameNode contains the information to map blocks of data to the DataNodes. You can use only one NameNode. See configuration below.
@@ -173,8 +174,8 @@ public class LocationHdfs extends com.pulumi.resources.CustomResource {
      * @return The Quality of Protection (QOP) configuration specifies the Remote Procedure Call (RPC) and data transfer protection settings configured on the Hadoop Distributed File System (HDFS) cluster. If QopConfiguration isn&#39;t specified, RpcProtection and DataTransferProtection default to `PRIVACY`. If you set RpcProtection or DataTransferProtection, the other parameter assumes the same value.  See configuration below.
      * 
      */
-    public Output</* @Nullable */ LocationHdfsQopConfiguration> qopConfiguration() {
-        return this.qopConfiguration;
+    public Output<Optional<LocationHdfsQopConfiguration>> qopConfiguration() {
+        return Codegen.optional(this.qopConfiguration);
     }
     /**
      * The number of DataNodes to replicate the data to when writing to the HDFS cluster. By default, data is replicated to three DataNodes.
@@ -187,8 +188,8 @@ public class LocationHdfs extends com.pulumi.resources.CustomResource {
      * @return The number of DataNodes to replicate the data to when writing to the HDFS cluster. By default, data is replicated to three DataNodes.
      * 
      */
-    public Output</* @Nullable */ Integer> replicationFactor() {
-        return this.replicationFactor;
+    public Output<Optional<Integer>> replicationFactor() {
+        return Codegen.optional(this.replicationFactor);
     }
     /**
      * The user name used to identify the client on the host operating system. If `SIMPLE` is specified for `authentication_type`, this parameter is required.
@@ -201,8 +202,8 @@ public class LocationHdfs extends com.pulumi.resources.CustomResource {
      * @return The user name used to identify the client on the host operating system. If `SIMPLE` is specified for `authentication_type`, this parameter is required.
      * 
      */
-    public Output</* @Nullable */ String> simpleUser() {
-        return this.simpleUser;
+    public Output<Optional<String>> simpleUser() {
+        return Codegen.optional(this.simpleUser);
     }
     /**
      * A subdirectory in the HDFS cluster. This subdirectory is used to read data from or write data to the HDFS cluster. If the subdirectory isn&#39;t specified, it will default to /.
@@ -215,8 +216,8 @@ public class LocationHdfs extends com.pulumi.resources.CustomResource {
      * @return A subdirectory in the HDFS cluster. This subdirectory is used to read data from or write data to the HDFS cluster. If the subdirectory isn&#39;t specified, it will default to /.
      * 
      */
-    public Output</* @Nullable */ String> subdirectory() {
-        return this.subdirectory;
+    public Output<Optional<String>> subdirectory() {
+        return Codegen.optional(this.subdirectory);
     }
     /**
      * Key-value pairs of resource tags to assign to the DataSync Location. If configured with a provider [`default_tags` configuration block](https://www.terraform.io/docs/providers/aws/index.html#default_tags-configuration-block) present, tags with matching keys will overwrite those defined at the provider-level.
@@ -229,8 +230,8 @@ public class LocationHdfs extends com.pulumi.resources.CustomResource {
      * @return Key-value pairs of resource tags to assign to the DataSync Location. If configured with a provider [`default_tags` configuration block](https://www.terraform.io/docs/providers/aws/index.html#default_tags-configuration-block) present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * A map of tags assigned to the resource, including those inherited from the provider [`default_tags` configuration block](https://www.terraform.io/docs/providers/aws/index.html#default_tags-configuration-block).

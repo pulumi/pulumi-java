@@ -17,6 +17,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -47,8 +48,8 @@ public class DataCollectionEndpoint extends com.pulumi.resources.CustomResource 
      * @return The endpoint used by agents to access their configuration.
      * 
      */
-    public Output</* @Nullable */ DataCollectionEndpointResponseConfigurationAccess> configurationAccess() {
-        return this.configurationAccess;
+    public Output<Optional<DataCollectionEndpointResponseConfigurationAccess>> configurationAccess() {
+        return Codegen.optional(this.configurationAccess);
     }
     /**
      * Description of the data collection endpoint.
@@ -61,8 +62,8 @@ public class DataCollectionEndpoint extends com.pulumi.resources.CustomResource 
      * @return Description of the data collection endpoint.
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * Resource entity tag (ETag).
@@ -89,8 +90,8 @@ public class DataCollectionEndpoint extends com.pulumi.resources.CustomResource 
      * @return The immutable ID of this data collection endpoint resource. This property is READ-ONLY.
      * 
      */
-    public Output</* @Nullable */ String> immutableId() {
-        return this.immutableId;
+    public Output<Optional<String>> immutableId() {
+        return Codegen.optional(this.immutableId);
     }
     /**
      * The kind of the resource.
@@ -103,8 +104,8 @@ public class DataCollectionEndpoint extends com.pulumi.resources.CustomResource 
      * @return The kind of the resource.
      * 
      */
-    public Output</* @Nullable */ String> kind() {
-        return this.kind;
+    public Output<Optional<String>> kind() {
+        return Codegen.optional(this.kind);
     }
     /**
      * The geo-location where the resource lives.
@@ -131,8 +132,8 @@ public class DataCollectionEndpoint extends com.pulumi.resources.CustomResource 
      * @return The endpoint used by clients to ingest logs.
      * 
      */
-    public Output</* @Nullable */ DataCollectionEndpointResponseLogsIngestion> logsIngestion() {
-        return this.logsIngestion;
+    public Output<Optional<DataCollectionEndpointResponseLogsIngestion>> logsIngestion() {
+        return Codegen.optional(this.logsIngestion);
     }
     /**
      * The name of the resource.
@@ -159,8 +160,8 @@ public class DataCollectionEndpoint extends com.pulumi.resources.CustomResource 
      * @return Network access control rules for the endpoints.
      * 
      */
-    public Output</* @Nullable */ DataCollectionEndpointResponseNetworkAcls> networkAcls() {
-        return this.networkAcls;
+    public Output<Optional<DataCollectionEndpointResponseNetworkAcls>> networkAcls() {
+        return Codegen.optional(this.networkAcls);
     }
     /**
      * The resource provisioning state. This property is READ-ONLY.
@@ -201,8 +202,8 @@ public class DataCollectionEndpoint extends com.pulumi.resources.CustomResource 
      * @return Resource tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * The type of the resource.

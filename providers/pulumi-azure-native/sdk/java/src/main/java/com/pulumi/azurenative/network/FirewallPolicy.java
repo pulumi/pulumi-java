@@ -22,6 +22,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -52,8 +53,8 @@ public class FirewallPolicy extends com.pulumi.resources.CustomResource {
      * @return The parent firewall policy from which rules are inherited.
      * 
      */
-    public Output</* @Nullable */ SubResourceResponse> basePolicy() {
-        return this.basePolicy;
+    public Output<Optional<SubResourceResponse>> basePolicy() {
+        return Codegen.optional(this.basePolicy);
     }
     /**
      * List of references to Child Firewall Policies.
@@ -80,8 +81,8 @@ public class FirewallPolicy extends com.pulumi.resources.CustomResource {
      * @return DNS Proxy Settings definition.
      * 
      */
-    public Output</* @Nullable */ DnsSettingsResponse> dnsSettings() {
-        return this.dnsSettings;
+    public Output<Optional<DnsSettingsResponse>> dnsSettings() {
+        return Codegen.optional(this.dnsSettings);
     }
     /**
      * A unique read-only string that changes whenever the resource is updated.
@@ -122,8 +123,8 @@ public class FirewallPolicy extends com.pulumi.resources.CustomResource {
      * @return The identity of the firewall policy.
      * 
      */
-    public Output</* @Nullable */ ManagedServiceIdentityResponse> identity() {
-        return this.identity;
+    public Output<Optional<ManagedServiceIdentityResponse>> identity() {
+        return Codegen.optional(this.identity);
     }
     /**
      * Insights on Firewall Policy.
@@ -136,8 +137,8 @@ public class FirewallPolicy extends com.pulumi.resources.CustomResource {
      * @return Insights on Firewall Policy.
      * 
      */
-    public Output</* @Nullable */ FirewallPolicyInsightsResponse> insights() {
-        return this.insights;
+    public Output<Optional<FirewallPolicyInsightsResponse>> insights() {
+        return Codegen.optional(this.insights);
     }
     /**
      * The configuration for Intrusion detection.
@@ -150,8 +151,8 @@ public class FirewallPolicy extends com.pulumi.resources.CustomResource {
      * @return The configuration for Intrusion detection.
      * 
      */
-    public Output</* @Nullable */ FirewallPolicyIntrusionDetectionResponse> intrusionDetection() {
-        return this.intrusionDetection;
+    public Output<Optional<FirewallPolicyIntrusionDetectionResponse>> intrusionDetection() {
+        return Codegen.optional(this.intrusionDetection);
     }
     /**
      * Resource location.
@@ -164,8 +165,8 @@ public class FirewallPolicy extends com.pulumi.resources.CustomResource {
      * @return Resource location.
      * 
      */
-    public Output</* @Nullable */ String> location() {
-        return this.location;
+    public Output<Optional<String>> location() {
+        return Codegen.optional(this.location);
     }
     /**
      * Resource name.
@@ -220,8 +221,8 @@ public class FirewallPolicy extends com.pulumi.resources.CustomResource {
      * @return The Firewall Policy SKU.
      * 
      */
-    public Output</* @Nullable */ FirewallPolicySkuResponse> sku() {
-        return this.sku;
+    public Output<Optional<FirewallPolicySkuResponse>> sku() {
+        return Codegen.optional(this.sku);
     }
     /**
      * The private IP addresses/IP ranges to which traffic will not be SNAT.
@@ -234,8 +235,8 @@ public class FirewallPolicy extends com.pulumi.resources.CustomResource {
      * @return The private IP addresses/IP ranges to which traffic will not be SNAT.
      * 
      */
-    public Output</* @Nullable */ FirewallPolicySNATResponse> snat() {
-        return this.snat;
+    public Output<Optional<FirewallPolicySNATResponse>> snat() {
+        return Codegen.optional(this.snat);
     }
     /**
      * Resource tags.
@@ -248,8 +249,8 @@ public class FirewallPolicy extends com.pulumi.resources.CustomResource {
      * @return Resource tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * The operation mode for Threat Intelligence.
@@ -262,8 +263,8 @@ public class FirewallPolicy extends com.pulumi.resources.CustomResource {
      * @return The operation mode for Threat Intelligence.
      * 
      */
-    public Output</* @Nullable */ String> threatIntelMode() {
-        return this.threatIntelMode;
+    public Output<Optional<String>> threatIntelMode() {
+        return Codegen.optional(this.threatIntelMode);
     }
     /**
      * ThreatIntel Whitelist for Firewall Policy.
@@ -276,8 +277,8 @@ public class FirewallPolicy extends com.pulumi.resources.CustomResource {
      * @return ThreatIntel Whitelist for Firewall Policy.
      * 
      */
-    public Output</* @Nullable */ FirewallPolicyThreatIntelWhitelistResponse> threatIntelWhitelist() {
-        return this.threatIntelWhitelist;
+    public Output<Optional<FirewallPolicyThreatIntelWhitelistResponse>> threatIntelWhitelist() {
+        return Codegen.optional(this.threatIntelWhitelist);
     }
     /**
      * TLS Configuration definition.
@@ -290,8 +291,8 @@ public class FirewallPolicy extends com.pulumi.resources.CustomResource {
      * @return TLS Configuration definition.
      * 
      */
-    public Output</* @Nullable */ FirewallPolicyTransportSecurityResponse> transportSecurity() {
-        return this.transportSecurity;
+    public Output<Optional<FirewallPolicyTransportSecurityResponse>> transportSecurity() {
+        return Codegen.optional(this.transportSecurity);
     }
     /**
      * Resource type.

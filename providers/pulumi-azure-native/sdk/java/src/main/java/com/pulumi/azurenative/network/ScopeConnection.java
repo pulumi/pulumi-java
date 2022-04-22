@@ -13,6 +13,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -43,8 +44,8 @@ public class ScopeConnection extends com.pulumi.resources.CustomResource {
      * @return A description of the scope connection.
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * A unique read-only string that changes whenever the resource is updated.
@@ -85,8 +86,8 @@ public class ScopeConnection extends com.pulumi.resources.CustomResource {
      * @return Resource ID.
      * 
      */
-    public Output</* @Nullable */ String> resourceId() {
-        return this.resourceId;
+    public Output<Optional<String>> resourceId() {
+        return Codegen.optional(this.resourceId);
     }
     /**
      * The system metadata related to this resource.
@@ -113,8 +114,8 @@ public class ScopeConnection extends com.pulumi.resources.CustomResource {
      * @return Tenant ID.
      * 
      */
-    public Output</* @Nullable */ String> tenantId() {
-        return this.tenantId;
+    public Output<Optional<String>> tenantId() {
+        return Codegen.optional(this.tenantId);
     }
     /**
      * Resource type.

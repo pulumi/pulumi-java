@@ -13,6 +13,7 @@ import com.pulumi.gcp.serviceusage.inputs.ConsumerQuotaOverrideState;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -58,8 +59,8 @@ public class ConsumerQuotaOverride extends com.pulumi.resources.CustomResource {
      * @return If this map is nonempty, then this override applies only to specific values for dimensions defined in the limit unit.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> dimensions() {
-        return this.dimensions;
+    public Output<Optional<Map<String,String>>> dimensions() {
+        return Codegen.optional(this.dimensions);
     }
     /**
      * If the new quota would decrease the existing quota by more than 10%, the request is rejected.
@@ -74,8 +75,8 @@ public class ConsumerQuotaOverride extends com.pulumi.resources.CustomResource {
      * If `force` is `true`, that safety check is ignored.
      * 
      */
-    public Output</* @Nullable */ Boolean> force() {
-        return this.force;
+    public Output<Optional<Boolean>> force() {
+        return Codegen.optional(this.force);
     }
     /**
      * The limit on the metric, e.g. `/project/region`.

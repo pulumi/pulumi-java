@@ -12,6 +12,7 @@ import com.pulumi.gcp.apigateway.GatewayArgs;
 import com.pulumi.gcp.apigateway.inputs.GatewayState;
 import java.lang.String;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -117,8 +118,8 @@ public class Gateway extends com.pulumi.resources.CustomResource {
      * @return Resource labels to represent user-provided metadata.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> labels() {
-        return this.labels;
+    public Output<Optional<Map<String,String>>> labels() {
+        return Codegen.optional(this.labels);
     }
     /**
      * Resource name of the Gateway. Format: projects/{project}/locations/{region}/gateways/{gateway}

@@ -15,6 +15,7 @@ import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -101,8 +102,8 @@ public class NotificationHubAuthorizationRule extends com.pulumi.resources.Custo
      * @return Resource location
      * 
      */
-    public Output</* @Nullable */ String> location() {
-        return this.location;
+    public Output<Optional<String>> location() {
+        return Codegen.optional(this.location);
     }
     /**
      * The last modified time for this rule
@@ -171,8 +172,8 @@ public class NotificationHubAuthorizationRule extends com.pulumi.resources.Custo
      * @return The rights associated with the rule.
      * 
      */
-    public Output</* @Nullable */ List<String>> rights() {
-        return this.rights;
+    public Output<Optional<List<String>>> rights() {
+        return Codegen.optional(this.rights);
     }
     /**
      * A base64-encoded 256-bit primary key for signing and validating the SAS token.
@@ -199,8 +200,8 @@ public class NotificationHubAuthorizationRule extends com.pulumi.resources.Custo
      * @return The sku of the created namespace
      * 
      */
-    public Output</* @Nullable */ SkuResponse> sku() {
-        return this.sku;
+    public Output<Optional<SkuResponse>> sku() {
+        return Codegen.optional(this.sku);
     }
     /**
      * Resource tags
@@ -213,8 +214,8 @@ public class NotificationHubAuthorizationRule extends com.pulumi.resources.Custo
      * @return Resource tags
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * Resource type

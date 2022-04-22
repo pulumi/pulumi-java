@@ -13,6 +13,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -108,8 +109,8 @@ public class CloudFormationType extends com.pulumi.resources.CustomResource {
      * @return Amazon Resource Name (ARN) of the IAM Role for CloudFormation to assume when invoking the extension. If your extension calls AWS APIs in any of its handlers, you must create an IAM execution role that includes the necessary permissions to call those AWS APIs, and provision that execution role in your account. When CloudFormation needs to invoke the extension handler, CloudFormation assumes this execution role to create a temporary session token, which it then passes to the extension handler, thereby supplying your extension with the appropriate credentials.
      * 
      */
-    public Output</* @Nullable */ String> executionRoleArn() {
-        return this.executionRoleArn;
+    public Output<Optional<String>> executionRoleArn() {
+        return Codegen.optional(this.executionRoleArn);
     }
     /**
      * Whether the CloudFormation Type version is the default version.
@@ -136,8 +137,8 @@ public class CloudFormationType extends com.pulumi.resources.CustomResource {
      * @return Configuration block containing logging configuration.
      * 
      */
-    public Output</* @Nullable */ CloudFormationTypeLoggingConfig> loggingConfig() {
-        return this.loggingConfig;
+    public Output<Optional<CloudFormationTypeLoggingConfig>> loggingConfig() {
+        return Codegen.optional(this.loggingConfig);
     }
     /**
      * Provisioning behavior of the CloudFormation Type.

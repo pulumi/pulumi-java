@@ -16,6 +16,7 @@ import java.lang.Object;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -43,8 +44,8 @@ public class VirtualMachineExtension extends com.pulumi.resources.CustomResource
      * @return Indicates whether the extension should use a newer minor version if one is available at deployment time. Once deployed, however, the extension will not upgrade minor versions unless redeployed, even with this property set to true.
      * 
      */
-    public Output</* @Nullable */ Boolean> autoUpgradeMinorVersion() {
-        return this.autoUpgradeMinorVersion;
+    public Output<Optional<Boolean>> autoUpgradeMinorVersion() {
+        return Codegen.optional(this.autoUpgradeMinorVersion);
     }
     /**
      * Indicates whether the extension should be automatically upgraded by the platform if there is a newer version of the extension available.
@@ -57,8 +58,8 @@ public class VirtualMachineExtension extends com.pulumi.resources.CustomResource
      * @return Indicates whether the extension should be automatically upgraded by the platform if there is a newer version of the extension available.
      * 
      */
-    public Output</* @Nullable */ Boolean> enableAutomaticUpgrade() {
-        return this.enableAutomaticUpgrade;
+    public Output<Optional<Boolean>> enableAutomaticUpgrade() {
+        return Codegen.optional(this.enableAutomaticUpgrade);
     }
     /**
      * How the extension handler should be forced to update even if the extension configuration has not changed.
@@ -71,8 +72,8 @@ public class VirtualMachineExtension extends com.pulumi.resources.CustomResource
      * @return How the extension handler should be forced to update even if the extension configuration has not changed.
      * 
      */
-    public Output</* @Nullable */ String> forceUpdateTag() {
-        return this.forceUpdateTag;
+    public Output<Optional<String>> forceUpdateTag() {
+        return Codegen.optional(this.forceUpdateTag);
     }
     /**
      * The virtual machine extension instance view.
@@ -85,8 +86,8 @@ public class VirtualMachineExtension extends com.pulumi.resources.CustomResource
      * @return The virtual machine extension instance view.
      * 
      */
-    public Output</* @Nullable */ VirtualMachineExtensionInstanceViewResponse> instanceView() {
-        return this.instanceView;
+    public Output<Optional<VirtualMachineExtensionInstanceViewResponse>> instanceView() {
+        return Codegen.optional(this.instanceView);
     }
     /**
      * Resource location
@@ -127,8 +128,8 @@ public class VirtualMachineExtension extends com.pulumi.resources.CustomResource
      * @return The extension can contain either protectedSettings or protectedSettingsFromKeyVault or no protected settings at all.
      * 
      */
-    public Output</* @Nullable */ Object> protectedSettings() {
-        return this.protectedSettings;
+    public Output<Optional<Object>> protectedSettings() {
+        return Codegen.optional(this.protectedSettings);
     }
     /**
      * The provisioning state, which only appears in the response.
@@ -155,8 +156,8 @@ public class VirtualMachineExtension extends com.pulumi.resources.CustomResource
      * @return The name of the extension handler publisher.
      * 
      */
-    public Output</* @Nullable */ String> publisher() {
-        return this.publisher;
+    public Output<Optional<String>> publisher() {
+        return Codegen.optional(this.publisher);
     }
     /**
      * Json formatted public settings for the extension.
@@ -169,8 +170,8 @@ public class VirtualMachineExtension extends com.pulumi.resources.CustomResource
      * @return Json formatted public settings for the extension.
      * 
      */
-    public Output</* @Nullable */ Object> settings() {
-        return this.settings;
+    public Output<Optional<Object>> settings() {
+        return Codegen.optional(this.settings);
     }
     /**
      * Resource tags
@@ -183,8 +184,8 @@ public class VirtualMachineExtension extends com.pulumi.resources.CustomResource
      * @return Resource tags
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * Resource type
@@ -211,8 +212,8 @@ public class VirtualMachineExtension extends com.pulumi.resources.CustomResource
      * @return Specifies the version of the script handler.
      * 
      */
-    public Output</* @Nullable */ String> typeHandlerVersion() {
-        return this.typeHandlerVersion;
+    public Output<Optional<String>> typeHandlerVersion() {
+        return Codegen.optional(this.typeHandlerVersion);
     }
 
     /**

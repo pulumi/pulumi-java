@@ -17,6 +17,7 @@ import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -47,8 +48,8 @@ public class BlobContainer extends com.pulumi.resources.CustomResource {
      * @return Default the container to use specified encryption scope for all writes.
      * 
      */
-    public Output</* @Nullable */ String> defaultEncryptionScope() {
-        return this.defaultEncryptionScope;
+    public Output<Optional<String>> defaultEncryptionScope() {
+        return Codegen.optional(this.defaultEncryptionScope);
     }
     /**
      * Indicates whether the blob container was deleted.
@@ -89,8 +90,8 @@ public class BlobContainer extends com.pulumi.resources.CustomResource {
      * @return Block override of encryption scope from the container default.
      * 
      */
-    public Output</* @Nullable */ Boolean> denyEncryptionScopeOverride() {
-        return this.denyEncryptionScopeOverride;
+    public Output<Optional<Boolean>> denyEncryptionScopeOverride() {
+        return Codegen.optional(this.denyEncryptionScopeOverride);
     }
     /**
      * Resource Etag.
@@ -229,8 +230,8 @@ public class BlobContainer extends com.pulumi.resources.CustomResource {
      * @return A name-value pair to associate with the container as metadata.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> metadata() {
-        return this.metadata;
+    public Output<Optional<Map<String,String>>> metadata() {
+        return Codegen.optional(this.metadata);
     }
     /**
      * The name of the resource
@@ -257,8 +258,8 @@ public class BlobContainer extends com.pulumi.resources.CustomResource {
      * @return Specifies whether data in the container may be accessed publicly and the level of access.
      * 
      */
-    public Output</* @Nullable */ String> publicAccess() {
-        return this.publicAccess;
+    public Output<Optional<String>> publicAccess() {
+        return Codegen.optional(this.publicAccess);
     }
     /**
      * Remaining retention days for soft deleted blob container.

@@ -14,6 +14,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -63,8 +64,8 @@ public class ContactFlow extends com.pulumi.resources.CustomResource {
      * @return The description of the contact flow.
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * The identifier of the Amazon Connect instance (ARN).
@@ -105,8 +106,8 @@ public class ContactFlow extends com.pulumi.resources.CustomResource {
      * @return The state of the contact flow.
      * 
      */
-    public Output</* @Nullable */ ContactFlowState> state() {
-        return this.state;
+    public Output<Optional<ContactFlowState>> state() {
+        return Codegen.optional(this.state);
     }
     /**
      * One or more tags.
@@ -119,8 +120,8 @@ public class ContactFlow extends com.pulumi.resources.CustomResource {
      * @return One or more tags.
      * 
      */
-    public Output</* @Nullable */ List<ContactFlowTag>> tags() {
-        return this.tags;
+    public Output<Optional<List<ContactFlowTag>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * The type of the contact flow.
@@ -133,8 +134,8 @@ public class ContactFlow extends com.pulumi.resources.CustomResource {
      * @return The type of the contact flow.
      * 
      */
-    public Output</* @Nullable */ ContactFlowType> type() {
-        return this.type;
+    public Output<Optional<ContactFlowType>> type() {
+        return Codegen.optional(this.type);
     }
 
     /**

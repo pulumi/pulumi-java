@@ -12,6 +12,7 @@ import com.pulumi.gcp.datacatalog.TaxonomyIamMemberArgs;
 import com.pulumi.gcp.datacatalog.inputs.TaxonomyIamMemberState;
 import com.pulumi.gcp.datacatalog.outputs.TaxonomyIamMemberCondition;
 import java.lang.String;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -61,8 +62,8 @@ public class TaxonomyIamMember extends com.pulumi.resources.CustomResource {
     @Export(name="condition", type=TaxonomyIamMemberCondition.class, parameters={})
     private Output</* @Nullable */ TaxonomyIamMemberCondition> condition;
 
-    public Output</* @Nullable */ TaxonomyIamMemberCondition> condition() {
-        return this.condition;
+    public Output<Optional<TaxonomyIamMemberCondition>> condition() {
+        return Codegen.optional(this.condition);
     }
     /**
      * (Computed) The etag of the IAM policy.

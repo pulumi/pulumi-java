@@ -12,6 +12,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -47,8 +48,8 @@ public class ProxyTarget extends com.pulumi.resources.CustomResource {
      * @return DB cluster identifier.
      * 
      */
-    public Output</* @Nullable */ String> dbClusterIdentifier() {
-        return this.dbClusterIdentifier;
+    public Output<Optional<String>> dbClusterIdentifier() {
+        return Codegen.optional(this.dbClusterIdentifier);
     }
     /**
      * DB instance identifier.
@@ -61,8 +62,8 @@ public class ProxyTarget extends com.pulumi.resources.CustomResource {
      * @return DB instance identifier.
      * 
      */
-    public Output</* @Nullable */ String> dbInstanceIdentifier() {
-        return this.dbInstanceIdentifier;
+    public Output<Optional<String>> dbInstanceIdentifier() {
+        return Codegen.optional(this.dbInstanceIdentifier);
     }
     /**
      * The name of the DB proxy.

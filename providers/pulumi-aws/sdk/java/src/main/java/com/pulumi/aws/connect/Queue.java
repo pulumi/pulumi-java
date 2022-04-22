@@ -15,6 +15,7 @@ import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -61,8 +62,8 @@ public class Queue extends com.pulumi.resources.CustomResource {
      * @return Specifies the description of the Queue.
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * Specifies the identifier of the Hours of Operation.
@@ -103,8 +104,8 @@ public class Queue extends com.pulumi.resources.CustomResource {
      * @return Specifies the maximum number of contacts that can be in the queue before it is considered full. Minimum value of 0.
      * 
      */
-    public Output</* @Nullable */ Integer> maxContacts() {
-        return this.maxContacts;
+    public Output<Optional<Integer>> maxContacts() {
+        return Codegen.optional(this.maxContacts);
     }
     /**
      * Specifies the name of the Queue.
@@ -131,8 +132,8 @@ public class Queue extends com.pulumi.resources.CustomResource {
      * @return A block that defines the outbound caller ID name, number, and outbound whisper flow. The Outbound Caller Config block is documented below.
      * 
      */
-    public Output</* @Nullable */ QueueOutboundCallerConfig> outboundCallerConfig() {
-        return this.outboundCallerConfig;
+    public Output<Optional<QueueOutboundCallerConfig>> outboundCallerConfig() {
+        return Codegen.optional(this.outboundCallerConfig);
     }
     /**
      * The identifier for the Queue.
@@ -159,8 +160,8 @@ public class Queue extends com.pulumi.resources.CustomResource {
      * @return Specifies a list of quick connects ids that determine the quick connects available to agents who are working the queue.
      * 
      */
-    public Output</* @Nullable */ List<String>> quickConnectIds() {
-        return this.quickConnectIds;
+    public Output<Optional<List<String>>> quickConnectIds() {
+        return Codegen.optional(this.quickConnectIds);
     }
     /**
      * Specifies the description of the Queue. Valid values are `ENABLED`, `DISABLED`.
@@ -187,8 +188,8 @@ public class Queue extends com.pulumi.resources.CustomResource {
      * @return Tags to apply to the Queue. If configured with a provider [`default_tags` configuration block](https://www.terraform.io/docs/providers/aws/index.html#default_tags-configuration-block) present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * A map of tags assigned to the resource, including those inherited from the provider [`default_tags` configuration block](https://www.terraform.io/docs/providers/aws/index.html#default_tags-configuration-block).

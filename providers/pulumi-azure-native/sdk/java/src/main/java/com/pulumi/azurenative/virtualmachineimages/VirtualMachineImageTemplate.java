@@ -30,6 +30,7 @@ import java.lang.Object;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -60,8 +61,8 @@ public class VirtualMachineImageTemplate extends com.pulumi.resources.CustomReso
      * @return Maximum duration to wait while building the image template. Omit or specify 0 to use the default (4 hours).
      * 
      */
-    public Output</* @Nullable */ Integer> buildTimeoutInMinutes() {
-        return this.buildTimeoutInMinutes;
+    public Output<Optional<Integer>> buildTimeoutInMinutes() {
+        return Codegen.optional(this.buildTimeoutInMinutes);
     }
     /**
      * Specifies the properties used to describe the customization steps of the image, like Image source etc
@@ -74,8 +75,8 @@ public class VirtualMachineImageTemplate extends com.pulumi.resources.CustomReso
      * @return Specifies the properties used to describe the customization steps of the image, like Image source etc
      * 
      */
-    public Output</* @Nullable */ List<Object>> customize() {
-        return this.customize;
+    public Output<Optional<List<Object>>> customize() {
+        return Codegen.optional(this.customize);
     }
     /**
      * The distribution targets where the image output needs to go to.
@@ -200,8 +201,8 @@ public class VirtualMachineImageTemplate extends com.pulumi.resources.CustomReso
      * @return Resource tags
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * Resource type
@@ -228,8 +229,8 @@ public class VirtualMachineImageTemplate extends com.pulumi.resources.CustomReso
      * @return Describes how virtual machine is set up to build images
      * 
      */
-    public Output</* @Nullable */ ImageTemplateVmProfileResponse> vmProfile() {
-        return this.vmProfile;
+    public Output<Optional<ImageTemplateVmProfileResponse>> vmProfile() {
+        return Codegen.optional(this.vmProfile);
     }
 
     /**

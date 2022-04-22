@@ -13,6 +13,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -40,8 +41,8 @@ public class WebAppPremierAddOn extends com.pulumi.resources.CustomResource {
      * @return Kind of resource.
      * 
      */
-    public Output</* @Nullable */ String> kind() {
-        return this.kind;
+    public Output<Optional<String>> kind() {
+        return Codegen.optional(this.kind);
     }
     /**
      * Resource Location.
@@ -68,8 +69,8 @@ public class WebAppPremierAddOn extends com.pulumi.resources.CustomResource {
      * @return Premier add on Marketplace offer.
      * 
      */
-    public Output</* @Nullable */ String> marketplaceOffer() {
-        return this.marketplaceOffer;
+    public Output<Optional<String>> marketplaceOffer() {
+        return Codegen.optional(this.marketplaceOffer);
     }
     /**
      * Premier add on Marketplace publisher.
@@ -82,8 +83,8 @@ public class WebAppPremierAddOn extends com.pulumi.resources.CustomResource {
      * @return Premier add on Marketplace publisher.
      * 
      */
-    public Output</* @Nullable */ String> marketplacePublisher() {
-        return this.marketplacePublisher;
+    public Output<Optional<String>> marketplacePublisher() {
+        return Codegen.optional(this.marketplacePublisher);
     }
     /**
      * Resource Name.
@@ -110,8 +111,8 @@ public class WebAppPremierAddOn extends com.pulumi.resources.CustomResource {
      * @return Premier add on Product.
      * 
      */
-    public Output</* @Nullable */ String> product() {
-        return this.product;
+    public Output<Optional<String>> product() {
+        return Codegen.optional(this.product);
     }
     /**
      * Premier add on SKU.
@@ -124,8 +125,8 @@ public class WebAppPremierAddOn extends com.pulumi.resources.CustomResource {
      * @return Premier add on SKU.
      * 
      */
-    public Output</* @Nullable */ String> sku() {
-        return this.sku;
+    public Output<Optional<String>> sku() {
+        return Codegen.optional(this.sku);
     }
     /**
      * Resource tags.
@@ -138,8 +139,8 @@ public class WebAppPremierAddOn extends com.pulumi.resources.CustomResource {
      * @return Resource tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * Resource type.
@@ -166,8 +167,8 @@ public class WebAppPremierAddOn extends com.pulumi.resources.CustomResource {
      * @return Premier add on Vendor.
      * 
      */
-    public Output</* @Nullable */ String> vendor() {
-        return this.vendor;
+    public Output<Optional<String>> vendor() {
+        return Codegen.optional(this.vendor);
     }
 
     /**

@@ -12,6 +12,7 @@ import com.pulumi.core.annotations.Export;
 import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -60,8 +61,8 @@ public class VpcIpamPoolCidr extends com.pulumi.resources.CustomResource {
      * @return A signed document that proves that you are authorized to bring the specified IP address range to Amazon using BYOIP. This is not stored in the state file. See cidr_authorization_context for more information.
      * 
      */
-    public Output</* @Nullable */ VpcIpamPoolCidrCidrAuthorizationContext> cidrAuthorizationContext() {
-        return this.cidrAuthorizationContext;
+    public Output<Optional<VpcIpamPoolCidrCidrAuthorizationContext>> cidrAuthorizationContext() {
+        return Codegen.optional(this.cidrAuthorizationContext);
     }
     /**
      * The ID of the pool to which you want to assign a CIDR.

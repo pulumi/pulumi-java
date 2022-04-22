@@ -15,6 +15,7 @@ import com.pulumi.gcp.iam.outputs.WorkloadIdentityPoolProviderOidc;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -80,8 +81,8 @@ public class WorkloadIdentityPoolProvider extends com.pulumi.resources.CustomRes
      *   value of `admins`:
      * 
      */
-    public Output</* @Nullable */ String> attributeCondition() {
-        return this.attributeCondition;
+    public Output<Optional<String>> attributeCondition() {
+        return Codegen.optional(this.attributeCondition);
     }
     /**
      * Maps attributes from authentication credentials issued by an external identity provider
@@ -166,8 +167,8 @@ public class WorkloadIdentityPoolProvider extends com.pulumi.resources.CustomRes
      *   incoming credential to the `subject` attribute on a Google token.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> attributeMapping() {
-        return this.attributeMapping;
+    public Output<Optional<Map<String,String>>> attributeMapping() {
+        return Codegen.optional(this.attributeMapping);
     }
     /**
      * An Amazon Web Services identity provider. Not compatible with the property oidc.
@@ -182,8 +183,8 @@ public class WorkloadIdentityPoolProvider extends com.pulumi.resources.CustomRes
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ WorkloadIdentityPoolProviderAws> aws() {
-        return this.aws;
+    public Output<Optional<WorkloadIdentityPoolProviderAws>> aws() {
+        return Codegen.optional(this.aws);
     }
     /**
      * A description for the provider. Cannot exceed 256 characters.
@@ -196,8 +197,8 @@ public class WorkloadIdentityPoolProvider extends com.pulumi.resources.CustomRes
      * @return A description for the provider. Cannot exceed 256 characters.
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * Whether the provider is disabled. You cannot use a disabled provider to exchange tokens.
@@ -212,8 +213,8 @@ public class WorkloadIdentityPoolProvider extends com.pulumi.resources.CustomRes
      * However, existing tokens still grant access.
      * 
      */
-    public Output</* @Nullable */ Boolean> disabled() {
-        return this.disabled;
+    public Output<Optional<Boolean>> disabled() {
+        return Codegen.optional(this.disabled);
     }
     /**
      * A display name for the provider. Cannot exceed 32 characters.
@@ -226,8 +227,8 @@ public class WorkloadIdentityPoolProvider extends com.pulumi.resources.CustomRes
      * @return A display name for the provider. Cannot exceed 32 characters.
      * 
      */
-    public Output</* @Nullable */ String> displayName() {
-        return this.displayName;
+    public Output<Optional<String>> displayName() {
+        return Codegen.optional(this.displayName);
     }
     /**
      * The resource name of the provider as
@@ -258,8 +259,8 @@ public class WorkloadIdentityPoolProvider extends com.pulumi.resources.CustomRes
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ WorkloadIdentityPoolProviderOidc> oidc() {
-        return this.oidc;
+    public Output<Optional<WorkloadIdentityPoolProviderOidc>> oidc() {
+        return Codegen.optional(this.oidc);
     }
     /**
      * The ID of the project in which the resource belongs.

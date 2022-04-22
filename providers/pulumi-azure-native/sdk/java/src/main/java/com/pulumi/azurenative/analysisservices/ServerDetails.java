@@ -18,6 +18,7 @@ import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -48,8 +49,8 @@ public class ServerDetails extends com.pulumi.resources.CustomResource {
      * @return A collection of AS server administrators
      * 
      */
-    public Output</* @Nullable */ ServerAdministratorsResponse> asAdministrators() {
-        return this.asAdministrators;
+    public Output<Optional<ServerAdministratorsResponse>> asAdministrators() {
+        return Codegen.optional(this.asAdministrators);
     }
     /**
      * The SAS container URI to the backup container.
@@ -62,8 +63,8 @@ public class ServerDetails extends com.pulumi.resources.CustomResource {
      * @return The SAS container URI to the backup container.
      * 
      */
-    public Output</* @Nullable */ String> backupBlobContainerUri() {
-        return this.backupBlobContainerUri;
+    public Output<Optional<String>> backupBlobContainerUri() {
+        return Codegen.optional(this.backupBlobContainerUri);
     }
     /**
      * The gateway details configured for the AS server.
@@ -76,8 +77,8 @@ public class ServerDetails extends com.pulumi.resources.CustomResource {
      * @return The gateway details configured for the AS server.
      * 
      */
-    public Output</* @Nullable */ GatewayDetailsResponse> gatewayDetails() {
-        return this.gatewayDetails;
+    public Output<Optional<GatewayDetailsResponse>> gatewayDetails() {
+        return Codegen.optional(this.gatewayDetails);
     }
     /**
      * The firewall settings for the AS server.
@@ -90,8 +91,8 @@ public class ServerDetails extends com.pulumi.resources.CustomResource {
      * @return The firewall settings for the AS server.
      * 
      */
-    public Output</* @Nullable */ IPv4FirewallSettingsResponse> ipV4FirewallSettings() {
-        return this.ipV4FirewallSettings;
+    public Output<Optional<IPv4FirewallSettingsResponse>> ipV4FirewallSettings() {
+        return Codegen.optional(this.ipV4FirewallSettings);
     }
     /**
      * Location of the Analysis Services resource.
@@ -118,8 +119,8 @@ public class ServerDetails extends com.pulumi.resources.CustomResource {
      * @return The managed mode of the server (0 = not managed, 1 = managed).
      * 
      */
-    public Output</* @Nullable */ Integer> managedMode() {
-        return this.managedMode;
+    public Output<Optional<Integer>> managedMode() {
+        return Codegen.optional(this.managedMode);
     }
     /**
      * The name of the Analysis Services resource.
@@ -160,8 +161,8 @@ public class ServerDetails extends com.pulumi.resources.CustomResource {
      * @return How the read-write server&#39;s participation in the query pool is controlled.&lt;br/&gt;It can have the following values: &lt;ul&gt;&lt;li&gt;readOnly - indicates that the read-write server is intended not to participate in query operations&lt;/li&gt;&lt;li&gt;all - indicates that the read-write server can participate in query operations&lt;/li&gt;&lt;/ul&gt;Specifying readOnly when capacity is 1 results in error.
      * 
      */
-    public Output</* @Nullable */ String> querypoolConnectionMode() {
-        return this.querypoolConnectionMode;
+    public Output<Optional<String>> querypoolConnectionMode() {
+        return Codegen.optional(this.querypoolConnectionMode);
     }
     /**
      * The full name of the Analysis Services resource.
@@ -188,8 +189,8 @@ public class ServerDetails extends com.pulumi.resources.CustomResource {
      * @return The server monitor mode for AS server
      * 
      */
-    public Output</* @Nullable */ Integer> serverMonitorMode() {
-        return this.serverMonitorMode;
+    public Output<Optional<Integer>> serverMonitorMode() {
+        return Codegen.optional(this.serverMonitorMode);
     }
     /**
      * The SKU of the Analysis Services resource.
@@ -230,8 +231,8 @@ public class ServerDetails extends com.pulumi.resources.CustomResource {
      * @return Key-value pairs of additional resource provisioning properties.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * The type of the Analysis Services resource.

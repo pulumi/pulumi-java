@@ -12,6 +12,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -42,8 +43,8 @@ public class Action extends com.pulumi.resources.CustomResource {
      * @return Etag of the action.
      * 
      */
-    public Output</* @Nullable */ String> etag() {
-        return this.etag;
+    public Output<Optional<String>> etag() {
+        return Codegen.optional(this.etag);
     }
     /**
      * Logic App Resource Id, /subscriptions/{my-subscription}/resourceGroups/{my-resource-group}/providers/Microsoft.Logic/workflows/{my-workflow-id}.
@@ -98,8 +99,8 @@ public class Action extends com.pulumi.resources.CustomResource {
      * @return The name of the logic app&#39;s workflow.
      * 
      */
-    public Output</* @Nullable */ String> workflowId() {
-        return this.workflowId;
+    public Output<Optional<String>> workflowId() {
+        return Codegen.optional(this.workflowId);
     }
 
     /**

@@ -11,6 +11,7 @@ import com.pulumi.core.annotations.Export;
 import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -30,8 +31,8 @@ public class HookTypeConfig extends com.pulumi.resources.CustomResource {
      * @return The configuration data for the extension, in this account and region.
      * 
      */
-    public Output</* @Nullable */ String> configuration() {
-        return this.configuration;
+    public Output<Optional<String>> configuration() {
+        return Codegen.optional(this.configuration);
     }
     /**
      * An alias by which to refer to this extension configuration data.
@@ -44,8 +45,8 @@ public class HookTypeConfig extends com.pulumi.resources.CustomResource {
      * @return An alias by which to refer to this extension configuration data.
      * 
      */
-    public Output</* @Nullable */ HookTypeConfigConfigurationAlias> configurationAlias() {
-        return this.configurationAlias;
+    public Output<Optional<HookTypeConfigConfigurationAlias>> configurationAlias() {
+        return Codegen.optional(this.configurationAlias);
     }
     /**
      * The Amazon Resource Name (ARN) for the configuration data, in this account and region.
@@ -72,8 +73,8 @@ public class HookTypeConfig extends com.pulumi.resources.CustomResource {
      * @return The Amazon Resource Name (ARN) of the type version.
      * 
      */
-    public Output</* @Nullable */ String> typeArn() {
-        return this.typeArn;
+    public Output<Optional<String>> typeArn() {
+        return Codegen.optional(this.typeArn);
     }
     /**
      * The name of the type being registered.
@@ -90,8 +91,8 @@ public class HookTypeConfig extends com.pulumi.resources.CustomResource {
      * We recommend that type names adhere to the following pattern: company_or_organization::service::type.
      * 
      */
-    public Output</* @Nullable */ String> typeName() {
-        return this.typeName;
+    public Output<Optional<String>> typeName() {
+        return Codegen.optional(this.typeName);
     }
 
     /**

@@ -12,6 +12,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -58,8 +59,8 @@ public class EventArchive extends com.pulumi.resources.CustomResource {
      * @return The description of the new event archive.
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * Instructs the new event archive to only capture events matched by this pattern. By default, it attempts to archive every event received in the `event_source_arn`.
@@ -72,8 +73,8 @@ public class EventArchive extends com.pulumi.resources.CustomResource {
      * @return Instructs the new event archive to only capture events matched by this pattern. By default, it attempts to archive every event received in the `event_source_arn`.
      * 
      */
-    public Output</* @Nullable */ String> eventPattern() {
-        return this.eventPattern;
+    public Output<Optional<String>> eventPattern() {
+        return Codegen.optional(this.eventPattern);
     }
     /**
      * Event bus source ARN from where these events should be archived.
@@ -114,8 +115,8 @@ public class EventArchive extends com.pulumi.resources.CustomResource {
      * @return The maximum number of days to retain events in the new event archive. By default, it archives indefinitely.
      * 
      */
-    public Output</* @Nullable */ Integer> retentionDays() {
-        return this.retentionDays;
+    public Output<Optional<Integer>> retentionDays() {
+        return Codegen.optional(this.retentionDays);
     }
 
     /**

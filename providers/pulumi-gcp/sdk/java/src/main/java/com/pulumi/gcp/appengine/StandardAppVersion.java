@@ -22,6 +22,7 @@ import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -70,8 +71,8 @@ public class StandardAppVersion extends com.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ StandardAppVersionAutomaticScaling> automaticScaling() {
-        return this.automaticScaling;
+    public Output<Optional<StandardAppVersionAutomaticScaling>> automaticScaling() {
+        return Codegen.optional(this.automaticScaling);
     }
     /**
      * Basic scaling creates instances when your application receives requests. Each instance will be shut down when the application becomes idle. Basic scaling is ideal for work that is intermittent or driven by user activity.
@@ -86,8 +87,8 @@ public class StandardAppVersion extends com.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ StandardAppVersionBasicScaling> basicScaling() {
-        return this.basicScaling;
+    public Output<Optional<StandardAppVersionBasicScaling>> basicScaling() {
+        return Codegen.optional(this.basicScaling);
     }
     /**
      * If set to `true`, the service will be deleted if it is the last version.
@@ -100,8 +101,8 @@ public class StandardAppVersion extends com.pulumi.resources.CustomResource {
      * @return If set to `true`, the service will be deleted if it is the last version.
      * 
      */
-    public Output</* @Nullable */ Boolean> deleteServiceOnDestroy() {
-        return this.deleteServiceOnDestroy;
+    public Output<Optional<Boolean>> deleteServiceOnDestroy() {
+        return Codegen.optional(this.deleteServiceOnDestroy);
     }
     /**
      * Code and application artifacts that make up this version.
@@ -146,8 +147,8 @@ public class StandardAppVersion extends com.pulumi.resources.CustomResource {
      * @return Environment variables available to the application.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> envVariables() {
-        return this.envVariables;
+    public Output<Optional<Map<String,String>>> envVariables() {
+        return Codegen.optional(this.envVariables);
     }
     /**
      * An ordered list of URL-matching patterns that should be applied to incoming requests.
@@ -180,8 +181,8 @@ public class StandardAppVersion extends com.pulumi.resources.CustomResource {
      * Each value may be one of `INBOUND_SERVICE_MAIL`, `INBOUND_SERVICE_MAIL_BOUNCE`, `INBOUND_SERVICE_XMPP_ERROR`, `INBOUND_SERVICE_XMPP_MESSAGE`, `INBOUND_SERVICE_XMPP_SUBSCRIBE`, `INBOUND_SERVICE_XMPP_PRESENCE`, `INBOUND_SERVICE_CHANNEL_PRESENCE`, and `INBOUND_SERVICE_WARMUP`.
      * 
      */
-    public Output</* @Nullable */ List<String>> inboundServices() {
-        return this.inboundServices;
+    public Output<Optional<List<String>>> inboundServices() {
+        return Codegen.optional(this.inboundServices);
     }
     /**
      * Instance class that is used to run this version. Valid values are
@@ -216,8 +217,8 @@ public class StandardAppVersion extends com.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ List<StandardAppVersionLibrary>> libraries() {
-        return this.libraries;
+    public Output<Optional<List<StandardAppVersionLibrary>>> libraries() {
+        return Codegen.optional(this.libraries);
     }
     /**
      * A service with manual scaling runs continuously, allowing you to perform complex initialization and rely on the state of its memory over time.
@@ -232,8 +233,8 @@ public class StandardAppVersion extends com.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ StandardAppVersionManualScaling> manualScaling() {
-        return this.manualScaling;
+    public Output<Optional<StandardAppVersionManualScaling>> manualScaling() {
+        return Codegen.optional(this.manualScaling);
     }
     /**
      * Full Serverless VPC Access Connector name e.g. /projects/my-project/locations/us-central1/connectors/c1.
@@ -260,8 +261,8 @@ public class StandardAppVersion extends com.pulumi.resources.CustomResource {
      * @return If set to `true`, the application version will not be deleted.
      * 
      */
-    public Output</* @Nullable */ Boolean> noopOnDestroy() {
-        return this.noopOnDestroy;
+    public Output<Optional<Boolean>> noopOnDestroy() {
+        return Codegen.optional(this.noopOnDestroy);
     }
     /**
      * The ID of the project in which the resource belongs.
@@ -308,8 +309,8 @@ public class StandardAppVersion extends com.pulumi.resources.CustomResource {
      * Substitute `&lt;language&gt;` with `python`, `java`, `php`, `ruby`, `go` or `nodejs`.
      * 
      */
-    public Output</* @Nullable */ String> runtimeApiVersion() {
-        return this.runtimeApiVersion;
+    public Output<Optional<String>> runtimeApiVersion() {
+        return Codegen.optional(this.runtimeApiVersion);
     }
     /**
      * AppEngine service resource
@@ -336,8 +337,8 @@ public class StandardAppVersion extends com.pulumi.resources.CustomResource {
      * @return Whether multiple requests can be dispatched to this version at once.
      * 
      */
-    public Output</* @Nullable */ Boolean> threadsafe() {
-        return this.threadsafe;
+    public Output<Optional<Boolean>> threadsafe() {
+        return Codegen.optional(this.threadsafe);
     }
     /**
      * Relative name of the version within the service. For example, `v1`. Version names can contain only lowercase letters, numbers, or hyphens. Reserved names,&#34;default&#34;, &#34;latest&#34;, and any name with the prefix &#34;ah-&#34;.
@@ -350,8 +351,8 @@ public class StandardAppVersion extends com.pulumi.resources.CustomResource {
      * @return Relative name of the version within the service. For example, `v1`. Version names can contain only lowercase letters, numbers, or hyphens. Reserved names,&#34;default&#34;, &#34;latest&#34;, and any name with the prefix &#34;ah-&#34;.
      * 
      */
-    public Output</* @Nullable */ String> versionId() {
-        return this.versionId;
+    public Output<Optional<String>> versionId() {
+        return Codegen.optional(this.versionId);
     }
     /**
      * Enables VPC connectivity for standard apps.
@@ -366,8 +367,8 @@ public class StandardAppVersion extends com.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ StandardAppVersionVpcAccessConnector> vpcAccessConnector() {
-        return this.vpcAccessConnector;
+    public Output<Optional<StandardAppVersionVpcAccessConnector>> vpcAccessConnector() {
+        return Codegen.optional(this.vpcAccessConnector);
     }
 
     /**

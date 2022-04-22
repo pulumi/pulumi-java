@@ -15,6 +15,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -45,8 +46,8 @@ public class ContainerApp extends com.pulumi.resources.CustomResource {
      * @return Non versioned Container App configuration properties.
      * 
      */
-    public Output</* @Nullable */ ConfigurationResponse> configuration() {
-        return this.configuration;
+    public Output<Optional<ConfigurationResponse>> configuration() {
+        return Codegen.optional(this.configuration);
     }
     /**
      * Kind of resource.
@@ -59,8 +60,8 @@ public class ContainerApp extends com.pulumi.resources.CustomResource {
      * @return Kind of resource.
      * 
      */
-    public Output</* @Nullable */ String> kind() {
-        return this.kind;
+    public Output<Optional<String>> kind() {
+        return Codegen.optional(this.kind);
     }
     /**
      * Resource ID of the Container App&#39;s KubeEnvironment.
@@ -73,8 +74,8 @@ public class ContainerApp extends com.pulumi.resources.CustomResource {
      * @return Resource ID of the Container App&#39;s KubeEnvironment.
      * 
      */
-    public Output</* @Nullable */ String> kubeEnvironmentId() {
-        return this.kubeEnvironmentId;
+    public Output<Optional<String>> kubeEnvironmentId() {
+        return Codegen.optional(this.kubeEnvironmentId);
     }
     /**
      * Fully Qualified Domain Name of the latest revision of the Container App.
@@ -157,8 +158,8 @@ public class ContainerApp extends com.pulumi.resources.CustomResource {
      * @return Resource tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * Container App versioned application definition.
@@ -171,8 +172,8 @@ public class ContainerApp extends com.pulumi.resources.CustomResource {
      * @return Container App versioned application definition.
      * 
      */
-    public Output</* @Nullable */ TemplateResponse> template() {
-        return this.template;
+    public Output<Optional<TemplateResponse>> template() {
+        return Codegen.optional(this.template);
     }
     /**
      * Resource type.

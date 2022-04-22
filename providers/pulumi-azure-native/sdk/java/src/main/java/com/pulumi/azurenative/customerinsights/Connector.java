@@ -16,6 +16,7 @@ import java.lang.Object;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -60,8 +61,8 @@ public class Connector extends com.pulumi.resources.CustomResource {
      * @return Name of the connector.
      * 
      */
-    public Output</* @Nullable */ String> connectorName() {
-        return this.connectorName;
+    public Output<Optional<String>> connectorName() {
+        return Codegen.optional(this.connectorName);
     }
     /**
      * The connector properties.
@@ -116,8 +117,8 @@ public class Connector extends com.pulumi.resources.CustomResource {
      * @return Description of the connector.
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * Display name of the connector.
@@ -130,8 +131,8 @@ public class Connector extends com.pulumi.resources.CustomResource {
      * @return Display name of the connector.
      * 
      */
-    public Output</* @Nullable */ String> displayName() {
-        return this.displayName;
+    public Output<Optional<String>> displayName() {
+        return Codegen.optional(this.displayName);
     }
     /**
      * If this is an internal connector.
@@ -144,8 +145,8 @@ public class Connector extends com.pulumi.resources.CustomResource {
      * @return If this is an internal connector.
      * 
      */
-    public Output</* @Nullable */ Boolean> isInternal() {
-        return this.isInternal;
+    public Output<Optional<Boolean>> isInternal() {
+        return Codegen.optional(this.isInternal);
     }
     /**
      * The last modified time.

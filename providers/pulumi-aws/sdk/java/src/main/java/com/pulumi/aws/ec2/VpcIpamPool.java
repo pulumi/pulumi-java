@@ -14,6 +14,7 @@ import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -57,8 +58,8 @@ public class VpcIpamPool extends com.pulumi.resources.CustomResource {
      * @return A default netmask length for allocations added to this pool. If, for example, the CIDR assigned to this pool is 10.0.0.0/8 and you enter 16 here, new allocations will default to 10.0.0.0/16 (unless you provide a different netmask value when you create the new allocation).
      * 
      */
-    public Output</* @Nullable */ Integer> allocationDefaultNetmaskLength() {
-        return this.allocationDefaultNetmaskLength;
+    public Output<Optional<Integer>> allocationDefaultNetmaskLength() {
+        return Codegen.optional(this.allocationDefaultNetmaskLength);
     }
     /**
      * The maximum netmask length that will be required for CIDR allocations in this pool.
@@ -71,8 +72,8 @@ public class VpcIpamPool extends com.pulumi.resources.CustomResource {
      * @return The maximum netmask length that will be required for CIDR allocations in this pool.
      * 
      */
-    public Output</* @Nullable */ Integer> allocationMaxNetmaskLength() {
-        return this.allocationMaxNetmaskLength;
+    public Output<Optional<Integer>> allocationMaxNetmaskLength() {
+        return Codegen.optional(this.allocationMaxNetmaskLength);
     }
     /**
      * The minimum netmask length that will be required for CIDR allocations in this pool.
@@ -85,8 +86,8 @@ public class VpcIpamPool extends com.pulumi.resources.CustomResource {
      * @return The minimum netmask length that will be required for CIDR allocations in this pool.
      * 
      */
-    public Output</* @Nullable */ Integer> allocationMinNetmaskLength() {
-        return this.allocationMinNetmaskLength;
+    public Output<Optional<Integer>> allocationMinNetmaskLength() {
+        return Codegen.optional(this.allocationMinNetmaskLength);
     }
     /**
      * Tags that are required for resources that use CIDRs from this IPAM pool. Resources that do not have these tags will not be allowed to allocate space from the pool. If the resources have their tags changed after they have allocated space or if the allocation tagging requirements are changed on the pool, the resource may be marked as noncompliant.
@@ -99,8 +100,8 @@ public class VpcIpamPool extends com.pulumi.resources.CustomResource {
      * @return Tags that are required for resources that use CIDRs from this IPAM pool. Resources that do not have these tags will not be allowed to allocate space from the pool. If the resources have their tags changed after they have allocated space or if the allocation tagging requirements are changed on the pool, the resource may be marked as noncompliant.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> allocationResourceTags() {
-        return this.allocationResourceTags;
+    public Output<Optional<Map<String,String>>> allocationResourceTags() {
+        return Codegen.optional(this.allocationResourceTags);
     }
     /**
      * Amazon Resource Name (ARN) of IPAM
@@ -129,8 +130,8 @@ public class VpcIpamPool extends com.pulumi.resources.CustomResource {
      * within the CIDR range in the pool.
      * 
      */
-    public Output</* @Nullable */ Boolean> autoImport() {
-        return this.autoImport;
+    public Output<Optional<Boolean>> autoImport() {
+        return Codegen.optional(this.autoImport);
     }
     /**
      * Limits which AWS service the pool can be used in. Only useable on public scopes. Valid Values: `ec2`.
@@ -143,8 +144,8 @@ public class VpcIpamPool extends com.pulumi.resources.CustomResource {
      * @return Limits which AWS service the pool can be used in. Only useable on public scopes. Valid Values: `ec2`.
      * 
      */
-    public Output</* @Nullable */ String> awsService() {
-        return this.awsService;
+    public Output<Optional<String>> awsService() {
+        return Codegen.optional(this.awsService);
     }
     /**
      * A description for the IPAM pool.
@@ -157,8 +158,8 @@ public class VpcIpamPool extends com.pulumi.resources.CustomResource {
      * @return A description for the IPAM pool.
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * The ID of the scope in which you would like to create the IPAM pool.
@@ -191,8 +192,8 @@ public class VpcIpamPool extends com.pulumi.resources.CustomResource {
      * @return The locale in which you would like to create the IPAM pool. Locale is the Region where you want to make an IPAM pool available for allocations. You can only create pools with locales that match the operating Regions of the IPAM. You can only create VPCs from a pool whose locale matches the VPC&#39;s Region. Possible values: Any AWS region, such as `us-east-1`.
      * 
      */
-    public Output</* @Nullable */ String> locale() {
-        return this.locale;
+    public Output<Optional<String>> locale() {
+        return Codegen.optional(this.locale);
     }
     @Export(name="poolDepth", type=Integer.class, parameters={})
     private Output<Integer> poolDepth;
@@ -211,8 +212,8 @@ public class VpcIpamPool extends com.pulumi.resources.CustomResource {
      * @return Defines whether or not IPv6 pool space is publicly advertisable over the internet. This option is not available for IPv4 pool space.
      * 
      */
-    public Output</* @Nullable */ Boolean> publiclyAdvertisable() {
-        return this.publiclyAdvertisable;
+    public Output<Optional<Boolean>> publiclyAdvertisable() {
+        return Codegen.optional(this.publiclyAdvertisable);
     }
     /**
      * The ID of the source IPAM pool. Use this argument to create a child pool within an existing pool.
@@ -225,8 +226,8 @@ public class VpcIpamPool extends com.pulumi.resources.CustomResource {
      * @return The ID of the source IPAM pool. Use this argument to create a child pool within an existing pool.
      * 
      */
-    public Output</* @Nullable */ String> sourceIpamPoolId() {
-        return this.sourceIpamPoolId;
+    public Output<Optional<String>> sourceIpamPoolId() {
+        return Codegen.optional(this.sourceIpamPoolId);
     }
     /**
      * The ID of the IPAM
@@ -253,8 +254,8 @@ public class VpcIpamPool extends com.pulumi.resources.CustomResource {
      * @return A map of tags to assign to the resource. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.

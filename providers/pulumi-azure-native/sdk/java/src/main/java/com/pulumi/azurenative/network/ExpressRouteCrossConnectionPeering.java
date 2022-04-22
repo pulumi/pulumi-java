@@ -16,6 +16,7 @@ import java.lang.Double;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -74,8 +75,8 @@ public class ExpressRouteCrossConnectionPeering extends com.pulumi.resources.Cus
      * @return The GatewayManager Etag.
      * 
      */
-    public Output</* @Nullable */ String> gatewayManagerEtag() {
-        return this.gatewayManagerEtag;
+    public Output<Optional<String>> gatewayManagerEtag() {
+        return Codegen.optional(this.gatewayManagerEtag);
     }
     /**
      * The IPv6 peering configuration.
@@ -88,8 +89,8 @@ public class ExpressRouteCrossConnectionPeering extends com.pulumi.resources.Cus
      * @return The IPv6 peering configuration.
      * 
      */
-    public Output</* @Nullable */ Ipv6ExpressRouteCircuitPeeringConfigResponse> ipv6PeeringConfig() {
-        return this.ipv6PeeringConfig;
+    public Output<Optional<Ipv6ExpressRouteCircuitPeeringConfigResponse>> ipv6PeeringConfig() {
+        return Codegen.optional(this.ipv6PeeringConfig);
     }
     /**
      * Who was the last to modify the peering.
@@ -116,8 +117,8 @@ public class ExpressRouteCrossConnectionPeering extends com.pulumi.resources.Cus
      * @return The Microsoft peering configuration.
      * 
      */
-    public Output</* @Nullable */ ExpressRouteCircuitPeeringConfigResponse> microsoftPeeringConfig() {
-        return this.microsoftPeeringConfig;
+    public Output<Optional<ExpressRouteCircuitPeeringConfigResponse>> microsoftPeeringConfig() {
+        return Codegen.optional(this.microsoftPeeringConfig);
     }
     /**
      * The name of the resource that is unique within a resource group. This name can be used to access the resource.
@@ -130,8 +131,8 @@ public class ExpressRouteCrossConnectionPeering extends com.pulumi.resources.Cus
      * @return The name of the resource that is unique within a resource group. This name can be used to access the resource.
      * 
      */
-    public Output</* @Nullable */ String> name() {
-        return this.name;
+    public Output<Optional<String>> name() {
+        return Codegen.optional(this.name);
     }
     /**
      * The peer ASN.
@@ -144,8 +145,8 @@ public class ExpressRouteCrossConnectionPeering extends com.pulumi.resources.Cus
      * @return The peer ASN.
      * 
      */
-    public Output</* @Nullable */ Double> peerASN() {
-        return this.peerASN;
+    public Output<Optional<Double>> peerASN() {
+        return Codegen.optional(this.peerASN);
     }
     /**
      * The peering type.
@@ -158,8 +159,8 @@ public class ExpressRouteCrossConnectionPeering extends com.pulumi.resources.Cus
      * @return The peering type.
      * 
      */
-    public Output</* @Nullable */ String> peeringType() {
-        return this.peeringType;
+    public Output<Optional<String>> peeringType() {
+        return Codegen.optional(this.peeringType);
     }
     /**
      * The primary port.
@@ -186,8 +187,8 @@ public class ExpressRouteCrossConnectionPeering extends com.pulumi.resources.Cus
      * @return The primary address prefix.
      * 
      */
-    public Output</* @Nullable */ String> primaryPeerAddressPrefix() {
-        return this.primaryPeerAddressPrefix;
+    public Output<Optional<String>> primaryPeerAddressPrefix() {
+        return Codegen.optional(this.primaryPeerAddressPrefix);
     }
     /**
      * The provisioning state of the express route cross connection peering resource.
@@ -228,8 +229,8 @@ public class ExpressRouteCrossConnectionPeering extends com.pulumi.resources.Cus
      * @return The secondary address prefix.
      * 
      */
-    public Output</* @Nullable */ String> secondaryPeerAddressPrefix() {
-        return this.secondaryPeerAddressPrefix;
+    public Output<Optional<String>> secondaryPeerAddressPrefix() {
+        return Codegen.optional(this.secondaryPeerAddressPrefix);
     }
     /**
      * The shared key.
@@ -242,8 +243,8 @@ public class ExpressRouteCrossConnectionPeering extends com.pulumi.resources.Cus
      * @return The shared key.
      * 
      */
-    public Output</* @Nullable */ String> sharedKey() {
-        return this.sharedKey;
+    public Output<Optional<String>> sharedKey() {
+        return Codegen.optional(this.sharedKey);
     }
     /**
      * The peering state.
@@ -256,8 +257,8 @@ public class ExpressRouteCrossConnectionPeering extends com.pulumi.resources.Cus
      * @return The peering state.
      * 
      */
-    public Output</* @Nullable */ String> state() {
-        return this.state;
+    public Output<Optional<String>> state() {
+        return Codegen.optional(this.state);
     }
     /**
      * The VLAN ID.
@@ -270,8 +271,8 @@ public class ExpressRouteCrossConnectionPeering extends com.pulumi.resources.Cus
      * @return The VLAN ID.
      * 
      */
-    public Output</* @Nullable */ Integer> vlanId() {
-        return this.vlanId;
+    public Output<Optional<Integer>> vlanId() {
+        return Codegen.optional(this.vlanId);
     }
 
     /**

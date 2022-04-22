@@ -13,6 +13,7 @@ import com.pulumi.gcp.vertex.outputs.AiMetadataStoreEncryptionSpec;
 import com.pulumi.gcp.vertex.outputs.AiMetadataStoreState;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -66,8 +67,8 @@ public class AiMetadataStore extends com.pulumi.resources.CustomResource {
      * @return Description of the MetadataStore.
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * Customer-managed encryption key spec for a MetadataStore. If set, this MetadataStore and all sub-resources of this MetadataStore will be secured by this key.
@@ -82,8 +83,8 @@ public class AiMetadataStore extends com.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ AiMetadataStoreEncryptionSpec> encryptionSpec() {
-        return this.encryptionSpec;
+    public Output<Optional<AiMetadataStoreEncryptionSpec>> encryptionSpec() {
+        return Codegen.optional(this.encryptionSpec);
     }
     /**
      * The name of the MetadataStore. This value may be up to 60 characters, and valid characters are [a-z0-9_]. The first character cannot be a number.

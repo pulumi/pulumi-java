@@ -13,6 +13,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -43,8 +44,8 @@ public class Ueba extends com.pulumi.resources.CustomResource {
      * @return The relevant data sources that enriched by ueba
      * 
      */
-    public Output</* @Nullable */ List<String>> dataSources() {
-        return this.dataSources;
+    public Output<Optional<List<String>>> dataSources() {
+        return Codegen.optional(this.dataSources);
     }
     /**
      * Etag of the azure resource
@@ -57,8 +58,8 @@ public class Ueba extends com.pulumi.resources.CustomResource {
      * @return Etag of the azure resource
      * 
      */
-    public Output</* @Nullable */ String> etag() {
-        return this.etag;
+    public Output<Optional<String>> etag() {
+        return Codegen.optional(this.etag);
     }
     /**
      * The kind of the setting

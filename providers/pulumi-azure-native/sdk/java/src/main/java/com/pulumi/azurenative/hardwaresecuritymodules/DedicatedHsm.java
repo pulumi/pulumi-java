@@ -15,6 +15,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -73,8 +74,8 @@ public class DedicatedHsm extends com.pulumi.resources.CustomResource {
      * @return Specifies the network interfaces of the dedicated hsm.
      * 
      */
-    public Output</* @Nullable */ NetworkProfileResponse> networkProfile() {
-        return this.networkProfile;
+    public Output<Optional<NetworkProfileResponse>> networkProfile() {
+        return Codegen.optional(this.networkProfile);
     }
     /**
      * Provisioning state.
@@ -115,8 +116,8 @@ public class DedicatedHsm extends com.pulumi.resources.CustomResource {
      * @return This field will be used when RP does not support Availability zones.
      * 
      */
-    public Output</* @Nullable */ String> stampId() {
-        return this.stampId;
+    public Output<Optional<String>> stampId() {
+        return Codegen.optional(this.stampId);
     }
     /**
      * Resource Status Message.
@@ -143,8 +144,8 @@ public class DedicatedHsm extends com.pulumi.resources.CustomResource {
      * @return Resource tags
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * The resource type of the dedicated HSM.
@@ -171,8 +172,8 @@ public class DedicatedHsm extends com.pulumi.resources.CustomResource {
      * @return The Dedicated Hsm zones.
      * 
      */
-    public Output</* @Nullable */ List<String>> zones() {
-        return this.zones;
+    public Output<Optional<List<String>>> zones() {
+        return Codegen.optional(this.zones);
     }
 
     /**

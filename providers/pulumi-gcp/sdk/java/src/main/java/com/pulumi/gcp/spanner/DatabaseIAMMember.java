@@ -12,6 +12,7 @@ import com.pulumi.gcp.spanner.DatabaseIAMMemberArgs;
 import com.pulumi.gcp.spanner.inputs.DatabaseIAMMemberState;
 import com.pulumi.gcp.spanner.outputs.DatabaseIAMMemberCondition;
 import java.lang.String;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -64,8 +65,8 @@ public class DatabaseIAMMember extends com.pulumi.resources.CustomResource {
     @Export(name="condition", type=DatabaseIAMMemberCondition.class, parameters={})
     private Output</* @Nullable */ DatabaseIAMMemberCondition> condition;
 
-    public Output</* @Nullable */ DatabaseIAMMemberCondition> condition() {
-        return this.condition;
+    public Output<Optional<DatabaseIAMMemberCondition>> condition() {
+        return Codegen.optional(this.condition);
     }
     /**
      * The name of the Spanner database.

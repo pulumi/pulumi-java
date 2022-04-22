@@ -13,6 +13,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -53,8 +54,8 @@ public class Blob extends com.pulumi.resources.CustomResource {
      * @return The MD5 sum of the blob contents.
      * 
      */
-    public Output</* @Nullable */ String> contentMd5() {
-        return this.contentMd5;
+    public Output<Optional<String>> contentMd5() {
+        return Codegen.optional(this.contentMd5);
     }
     /**
      * The content type of the storage blob.
@@ -67,8 +68,8 @@ public class Blob extends com.pulumi.resources.CustomResource {
      * @return The content type of the storage blob.
      * 
      */
-    public Output</* @Nullable */ String> contentType() {
-        return this.contentType;
+    public Output<Optional<String>> contentType() {
+        return Codegen.optional(this.contentType);
     }
     /**
      * A map of custom blob metadata.

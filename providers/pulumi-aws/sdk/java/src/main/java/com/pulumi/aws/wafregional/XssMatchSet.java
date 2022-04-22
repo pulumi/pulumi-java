@@ -13,6 +13,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -56,8 +57,8 @@ public class XssMatchSet extends com.pulumi.resources.CustomResource {
      * @return The parts of web requests that you want to inspect for cross-site scripting attacks.
      * 
      */
-    public Output</* @Nullable */ List<XssMatchSetXssMatchTuple>> xssMatchTuples() {
-        return this.xssMatchTuples;
+    public Output<Optional<List<XssMatchSetXssMatchTuple>>> xssMatchTuples() {
+        return Codegen.optional(this.xssMatchTuples);
     }
 
     /**

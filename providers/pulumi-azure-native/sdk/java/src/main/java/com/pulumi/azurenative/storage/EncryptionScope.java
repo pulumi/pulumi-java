@@ -14,6 +14,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -58,8 +59,8 @@ public class EncryptionScope extends com.pulumi.resources.CustomResource {
      * @return The key vault properties for the encryption scope. This is a required field if encryption scope &#39;source&#39; attribute is set to &#39;Microsoft.KeyVault&#39;.
      * 
      */
-    public Output</* @Nullable */ EncryptionScopeKeyVaultPropertiesResponse> keyVaultProperties() {
-        return this.keyVaultProperties;
+    public Output<Optional<EncryptionScopeKeyVaultPropertiesResponse>> keyVaultProperties() {
+        return Codegen.optional(this.keyVaultProperties);
     }
     /**
      * Gets the last modification date and time of the encryption scope in UTC.
@@ -100,8 +101,8 @@ public class EncryptionScope extends com.pulumi.resources.CustomResource {
      * @return A boolean indicating whether or not the service applies a secondary layer of encryption with platform managed keys for data at rest.
      * 
      */
-    public Output</* @Nullable */ Boolean> requireInfrastructureEncryption() {
-        return this.requireInfrastructureEncryption;
+    public Output<Optional<Boolean>> requireInfrastructureEncryption() {
+        return Codegen.optional(this.requireInfrastructureEncryption);
     }
     /**
      * The provider for the encryption scope. Possible values (case-insensitive):  Microsoft.Storage, Microsoft.KeyVault.
@@ -114,8 +115,8 @@ public class EncryptionScope extends com.pulumi.resources.CustomResource {
      * @return The provider for the encryption scope. Possible values (case-insensitive):  Microsoft.Storage, Microsoft.KeyVault.
      * 
      */
-    public Output</* @Nullable */ String> source() {
-        return this.source;
+    public Output<Optional<String>> source() {
+        return Codegen.optional(this.source);
     }
     /**
      * The state of the encryption scope. Possible values (case-insensitive):  Enabled, Disabled.
@@ -128,8 +129,8 @@ public class EncryptionScope extends com.pulumi.resources.CustomResource {
      * @return The state of the encryption scope. Possible values (case-insensitive):  Enabled, Disabled.
      * 
      */
-    public Output</* @Nullable */ String> state() {
-        return this.state;
+    public Output<Optional<String>> state() {
+        return Codegen.optional(this.state);
     }
     /**
      * The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;

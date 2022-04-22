@@ -13,6 +13,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -70,8 +71,8 @@ public class MethodResponse extends com.pulumi.resources.CustomResource {
      * @return A map of the API models used for the response&#39;s content type
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> responseModels() {
-        return this.responseModels;
+    public Output<Optional<Map<String,String>>> responseModels() {
+        return Codegen.optional(this.responseModels);
     }
     /**
      * A map of response parameters that can be sent to the caller.
@@ -88,8 +89,8 @@ public class MethodResponse extends com.pulumi.resources.CustomResource {
      * would define that the header `X-Some-Header` can be provided on the response.
      * 
      */
-    public Output</* @Nullable */ Map<String,Boolean>> responseParameters() {
-        return this.responseParameters;
+    public Output<Optional<Map<String,Boolean>>> responseParameters() {
+        return Codegen.optional(this.responseParameters);
     }
     /**
      * The ID of the associated REST API

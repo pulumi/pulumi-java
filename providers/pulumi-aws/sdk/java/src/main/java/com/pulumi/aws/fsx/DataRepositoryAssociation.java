@@ -15,6 +15,7 @@ import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -66,8 +67,8 @@ public class DataRepositoryAssociation extends com.pulumi.resources.CustomResour
      * @return Set to true to run an import data repository task to import metadata from the data repository to the file system after the data repository association is created. Defaults to `false`.
      * 
      */
-    public Output</* @Nullable */ Boolean> batchImportMetaDataOnCreate() {
-        return this.batchImportMetaDataOnCreate;
+    public Output<Optional<Boolean>> batchImportMetaDataOnCreate() {
+        return Codegen.optional(this.batchImportMetaDataOnCreate);
     }
     /**
      * The path to the Amazon S3 data repository that will be linked to the file system. The path must be an S3 bucket s3://myBucket/myPrefix/. This path specifies where in the S3 data repository files will be imported from or exported to. The same S3 bucket cannot be linked more than once to the same file system.
@@ -94,8 +95,8 @@ public class DataRepositoryAssociation extends com.pulumi.resources.CustomResour
      * @return Set to true to delete files from the file system upon deleting this data repository association. Defaults to `false`.
      * 
      */
-    public Output</* @Nullable */ Boolean> deleteDataInFilesystem() {
-        return this.deleteDataInFilesystem;
+    public Output<Optional<Boolean>> deleteDataInFilesystem() {
+        return Codegen.optional(this.deleteDataInFilesystem);
     }
     /**
      * The ID of the Amazon FSx file system to on which to create a data repository association.
@@ -166,8 +167,8 @@ public class DataRepositoryAssociation extends com.pulumi.resources.CustomResour
      * @return A map of tags to assign to the data repository association. If configured with a provider [`default_tags` configuration block](https://www.terraform.io/docs/providers/aws/index.html#default_tags-configuration-block) present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * A map of tags assigned to the resource, including those inherited from the provider [`default_tags` configuration block](https://www.terraform.io/docs/providers/aws/index.html#default_tags-configuration-block).

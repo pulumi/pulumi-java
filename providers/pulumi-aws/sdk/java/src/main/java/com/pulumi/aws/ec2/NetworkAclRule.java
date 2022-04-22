@@ -13,6 +13,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -54,8 +55,8 @@ public class NetworkAclRule extends com.pulumi.resources.CustomResource {
      * @return The network range to allow or deny, in CIDR notation (for example 172.16.0.0/24 ).
      * 
      */
-    public Output</* @Nullable */ String> cidrBlock() {
-        return this.cidrBlock;
+    public Output<Optional<String>> cidrBlock() {
+        return Codegen.optional(this.cidrBlock);
     }
     /**
      * Indicates whether this is an egress rule (rule is applied to traffic leaving the subnet). Default `false`.
@@ -68,8 +69,8 @@ public class NetworkAclRule extends com.pulumi.resources.CustomResource {
      * @return Indicates whether this is an egress rule (rule is applied to traffic leaving the subnet). Default `false`.
      * 
      */
-    public Output</* @Nullable */ Boolean> egress() {
-        return this.egress;
+    public Output<Optional<Boolean>> egress() {
+        return Codegen.optional(this.egress);
     }
     /**
      * The from port to match.
@@ -82,8 +83,8 @@ public class NetworkAclRule extends com.pulumi.resources.CustomResource {
      * @return The from port to match.
      * 
      */
-    public Output</* @Nullable */ Integer> fromPort() {
-        return this.fromPort;
+    public Output<Optional<Integer>> fromPort() {
+        return Codegen.optional(this.fromPort);
     }
     /**
      * ICMP protocol: The ICMP code. Required if specifying ICMP for the protocolE.g., -1
@@ -96,8 +97,8 @@ public class NetworkAclRule extends com.pulumi.resources.CustomResource {
      * @return ICMP protocol: The ICMP code. Required if specifying ICMP for the protocolE.g., -1
      * 
      */
-    public Output</* @Nullable */ String> icmpCode() {
-        return this.icmpCode;
+    public Output<Optional<String>> icmpCode() {
+        return Codegen.optional(this.icmpCode);
     }
     /**
      * ICMP protocol: The ICMP type. Required if specifying ICMP for the protocolE.g., -1
@@ -110,8 +111,8 @@ public class NetworkAclRule extends com.pulumi.resources.CustomResource {
      * @return ICMP protocol: The ICMP type. Required if specifying ICMP for the protocolE.g., -1
      * 
      */
-    public Output</* @Nullable */ String> icmpType() {
-        return this.icmpType;
+    public Output<Optional<String>> icmpType() {
+        return Codegen.optional(this.icmpType);
     }
     /**
      * The IPv6 CIDR block to allow or deny.
@@ -124,8 +125,8 @@ public class NetworkAclRule extends com.pulumi.resources.CustomResource {
      * @return The IPv6 CIDR block to allow or deny.
      * 
      */
-    public Output</* @Nullable */ String> ipv6CidrBlock() {
-        return this.ipv6CidrBlock;
+    public Output<Optional<String>> ipv6CidrBlock() {
+        return Codegen.optional(this.ipv6CidrBlock);
     }
     /**
      * The ID of the network ACL.
@@ -194,8 +195,8 @@ public class NetworkAclRule extends com.pulumi.resources.CustomResource {
      * @return The to port to match.
      * 
      */
-    public Output</* @Nullable */ Integer> toPort() {
-        return this.toPort;
+    public Output<Optional<Integer>> toPort() {
+        return Codegen.optional(this.toPort);
     }
 
     /**

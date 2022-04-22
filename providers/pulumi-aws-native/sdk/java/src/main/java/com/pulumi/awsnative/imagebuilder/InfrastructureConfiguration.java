@@ -15,6 +15,7 @@ import java.lang.Boolean;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -48,8 +49,8 @@ public class InfrastructureConfiguration extends com.pulumi.resources.CustomReso
      * @return The description of the infrastructure configuration.
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * The instance metadata option settings for the infrastructure configuration.
@@ -62,8 +63,8 @@ public class InfrastructureConfiguration extends com.pulumi.resources.CustomReso
      * @return The instance metadata option settings for the infrastructure configuration.
      * 
      */
-    public Output</* @Nullable */ InfrastructureConfigurationInstanceMetadataOptions> instanceMetadataOptions() {
-        return this.instanceMetadataOptions;
+    public Output<Optional<InfrastructureConfigurationInstanceMetadataOptions>> instanceMetadataOptions() {
+        return Codegen.optional(this.instanceMetadataOptions);
     }
     /**
      * The instance profile of the infrastructure configuration.
@@ -90,8 +91,8 @@ public class InfrastructureConfiguration extends com.pulumi.resources.CustomReso
      * @return The instance types of the infrastructure configuration.
      * 
      */
-    public Output</* @Nullable */ List<String>> instanceTypes() {
-        return this.instanceTypes;
+    public Output<Optional<List<String>>> instanceTypes() {
+        return Codegen.optional(this.instanceTypes);
     }
     /**
      * The EC2 key pair of the infrastructure configuration..
@@ -104,8 +105,8 @@ public class InfrastructureConfiguration extends com.pulumi.resources.CustomReso
      * @return The EC2 key pair of the infrastructure configuration..
      * 
      */
-    public Output</* @Nullable */ String> keyPair() {
-        return this.keyPair;
+    public Output<Optional<String>> keyPair() {
+        return Codegen.optional(this.keyPair);
     }
     /**
      * The logging configuration of the infrastructure configuration.
@@ -118,8 +119,8 @@ public class InfrastructureConfiguration extends com.pulumi.resources.CustomReso
      * @return The logging configuration of the infrastructure configuration.
      * 
      */
-    public Output</* @Nullable */ InfrastructureConfigurationLogging> logging() {
-        return this.logging;
+    public Output<Optional<InfrastructureConfigurationLogging>> logging() {
+        return Codegen.optional(this.logging);
     }
     /**
      * The name of the infrastructure configuration.
@@ -146,8 +147,8 @@ public class InfrastructureConfiguration extends com.pulumi.resources.CustomReso
      * @return The tags attached to the resource created by Image Builder.
      * 
      */
-    public Output</* @Nullable */ Object> resourceTags() {
-        return this.resourceTags;
+    public Output<Optional<Object>> resourceTags() {
+        return Codegen.optional(this.resourceTags);
     }
     /**
      * The security group IDs of the infrastructure configuration.
@@ -160,8 +161,8 @@ public class InfrastructureConfiguration extends com.pulumi.resources.CustomReso
      * @return The security group IDs of the infrastructure configuration.
      * 
      */
-    public Output</* @Nullable */ List<String>> securityGroupIds() {
-        return this.securityGroupIds;
+    public Output<Optional<List<String>>> securityGroupIds() {
+        return Codegen.optional(this.securityGroupIds);
     }
     /**
      * The SNS Topic Amazon Resource Name (ARN) of the infrastructure configuration.
@@ -174,8 +175,8 @@ public class InfrastructureConfiguration extends com.pulumi.resources.CustomReso
      * @return The SNS Topic Amazon Resource Name (ARN) of the infrastructure configuration.
      * 
      */
-    public Output</* @Nullable */ String> snsTopicArn() {
-        return this.snsTopicArn;
+    public Output<Optional<String>> snsTopicArn() {
+        return Codegen.optional(this.snsTopicArn);
     }
     /**
      * The subnet ID of the infrastructure configuration.
@@ -188,8 +189,8 @@ public class InfrastructureConfiguration extends com.pulumi.resources.CustomReso
      * @return The subnet ID of the infrastructure configuration.
      * 
      */
-    public Output</* @Nullable */ String> subnetId() {
-        return this.subnetId;
+    public Output<Optional<String>> subnetId() {
+        return Codegen.optional(this.subnetId);
     }
     /**
      * The tags associated with the component.
@@ -202,8 +203,8 @@ public class InfrastructureConfiguration extends com.pulumi.resources.CustomReso
      * @return The tags associated with the component.
      * 
      */
-    public Output</* @Nullable */ Object> tags() {
-        return this.tags;
+    public Output<Optional<Object>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * The terminate instance on failure configuration of the infrastructure configuration.
@@ -216,8 +217,8 @@ public class InfrastructureConfiguration extends com.pulumi.resources.CustomReso
      * @return The terminate instance on failure configuration of the infrastructure configuration.
      * 
      */
-    public Output</* @Nullable */ Boolean> terminateInstanceOnFailure() {
-        return this.terminateInstanceOnFailure;
+    public Output<Optional<Boolean>> terminateInstanceOnFailure() {
+        return Codegen.optional(this.terminateInstanceOnFailure);
     }
 
     /**

@@ -15,6 +15,7 @@ import com.pulumi.gcp.gameservices.outputs.GameServerConfigScalingConfig;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -86,8 +87,8 @@ public class GameServerConfig extends com.pulumi.resources.CustomResource {
      * @return The description of the game server config.
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * The fleet config contains list of fleet specs. In the Single Cloud, there
@@ -118,8 +119,8 @@ public class GameServerConfig extends com.pulumi.resources.CustomResource {
      * @return Set of labels to group by.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> labels() {
-        return this.labels;
+    public Output<Optional<Map<String,String>>> labels() {
+        return Codegen.optional(this.labels);
     }
     /**
      * Location of the Deployment.
@@ -132,8 +133,8 @@ public class GameServerConfig extends com.pulumi.resources.CustomResource {
      * @return Location of the Deployment.
      * 
      */
-    public Output</* @Nullable */ String> location() {
-        return this.location;
+    public Output<Optional<String>> location() {
+        return Codegen.optional(this.location);
     }
     /**
      * The name of the ScalingConfig
@@ -178,8 +179,8 @@ public class GameServerConfig extends com.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ List<GameServerConfigScalingConfig>> scalingConfigs() {
-        return this.scalingConfigs;
+    public Output<Optional<List<GameServerConfigScalingConfig>>> scalingConfigs() {
+        return Codegen.optional(this.scalingConfigs);
     }
 
     /**

@@ -42,7 +42,8 @@ public class App {
                             .build())
                     .build());
 
-            var name = deployment.metadata().applyValue(m -> m.name().orElse(""));
+            var name = deployment.metadata()
+                .applyValue(m -> m.orElseThrow().name().orElse(""));
 
             ctx.export("name", name);
             return ctx.exports();

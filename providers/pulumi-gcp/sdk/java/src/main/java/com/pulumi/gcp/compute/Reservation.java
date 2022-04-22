@@ -14,6 +14,7 @@ import com.pulumi.gcp.compute.outputs.ReservationShareSettings;
 import com.pulumi.gcp.compute.outputs.ReservationSpecificReservation;
 import java.lang.Boolean;
 import java.lang.String;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -96,8 +97,8 @@ public class Reservation extends com.pulumi.resources.CustomResource {
      * @return An optional description of this resource.
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * Name of the resource. Provided by the client when the resource is
@@ -202,8 +203,8 @@ public class Reservation extends com.pulumi.resources.CustomResource {
      * affinity for any reservation. Defaults to false.
      * 
      */
-    public Output</* @Nullable */ Boolean> specificReservationRequired() {
-        return this.specificReservationRequired;
+    public Output<Optional<Boolean>> specificReservationRequired() {
+        return Codegen.optional(this.specificReservationRequired);
     }
     /**
      * The status of the reservation.

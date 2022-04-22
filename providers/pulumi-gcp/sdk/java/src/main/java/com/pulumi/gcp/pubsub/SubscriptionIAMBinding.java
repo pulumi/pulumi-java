@@ -13,6 +13,7 @@ import com.pulumi.gcp.pubsub.inputs.SubscriptionIAMBindingState;
 import com.pulumi.gcp.pubsub.outputs.SubscriptionIAMBindingCondition;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -58,8 +59,8 @@ public class SubscriptionIAMBinding extends com.pulumi.resources.CustomResource 
     @Export(name="condition", type=SubscriptionIAMBindingCondition.class, parameters={})
     private Output</* @Nullable */ SubscriptionIAMBindingCondition> condition;
 
-    public Output</* @Nullable */ SubscriptionIAMBindingCondition> condition() {
-        return this.condition;
+    public Output<Optional<SubscriptionIAMBindingCondition>> condition() {
+        return Codegen.optional(this.condition);
     }
     /**
      * (Computed) The etag of the subscription&#39;s IAM policy.

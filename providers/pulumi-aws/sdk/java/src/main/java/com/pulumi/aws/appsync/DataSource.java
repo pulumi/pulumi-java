@@ -16,6 +16,7 @@ import com.pulumi.core.annotations.Export;
 import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -73,8 +74,8 @@ public class DataSource extends com.pulumi.resources.CustomResource {
      * @return A description of the DataSource.
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * DynamoDB settings. See below
@@ -87,8 +88,8 @@ public class DataSource extends com.pulumi.resources.CustomResource {
      * @return DynamoDB settings. See below
      * 
      */
-    public Output</* @Nullable */ DataSourceDynamodbConfig> dynamodbConfig() {
-        return this.dynamodbConfig;
+    public Output<Optional<DataSourceDynamodbConfig>> dynamodbConfig() {
+        return Codegen.optional(this.dynamodbConfig);
     }
     /**
      * Amazon Elasticsearch settings. See below
@@ -101,8 +102,8 @@ public class DataSource extends com.pulumi.resources.CustomResource {
      * @return Amazon Elasticsearch settings. See below
      * 
      */
-    public Output</* @Nullable */ DataSourceElasticsearchConfig> elasticsearchConfig() {
-        return this.elasticsearchConfig;
+    public Output<Optional<DataSourceElasticsearchConfig>> elasticsearchConfig() {
+        return Codegen.optional(this.elasticsearchConfig);
     }
     /**
      * HTTP settings. See below
@@ -115,8 +116,8 @@ public class DataSource extends com.pulumi.resources.CustomResource {
      * @return HTTP settings. See below
      * 
      */
-    public Output</* @Nullable */ DataSourceHttpConfig> httpConfig() {
-        return this.httpConfig;
+    public Output<Optional<DataSourceHttpConfig>> httpConfig() {
+        return Codegen.optional(this.httpConfig);
     }
     /**
      * AWS Lambda settings. See below
@@ -129,8 +130,8 @@ public class DataSource extends com.pulumi.resources.CustomResource {
      * @return AWS Lambda settings. See below
      * 
      */
-    public Output</* @Nullable */ DataSourceLambdaConfig> lambdaConfig() {
-        return this.lambdaConfig;
+    public Output<Optional<DataSourceLambdaConfig>> lambdaConfig() {
+        return Codegen.optional(this.lambdaConfig);
     }
     /**
      * A user-supplied name for the DataSource.
@@ -157,8 +158,8 @@ public class DataSource extends com.pulumi.resources.CustomResource {
      * @return AWS RDS settings. See Relational Database Config
      * 
      */
-    public Output</* @Nullable */ DataSourceRelationalDatabaseConfig> relationalDatabaseConfig() {
-        return this.relationalDatabaseConfig;
+    public Output<Optional<DataSourceRelationalDatabaseConfig>> relationalDatabaseConfig() {
+        return Codegen.optional(this.relationalDatabaseConfig);
     }
     /**
      * The IAM service role ARN for the data source.
@@ -171,8 +172,8 @@ public class DataSource extends com.pulumi.resources.CustomResource {
      * @return The IAM service role ARN for the data source.
      * 
      */
-    public Output</* @Nullable */ String> serviceRoleArn() {
-        return this.serviceRoleArn;
+    public Output<Optional<String>> serviceRoleArn() {
+        return Codegen.optional(this.serviceRoleArn);
     }
     /**
      * The type of the DataSource. Valid values: `AWS_LAMBDA`, `AMAZON_DYNAMODB`, `AMAZON_ELASTICSEARCH`, `HTTP`, `NONE`, `RELATIONAL_DATABASE`.

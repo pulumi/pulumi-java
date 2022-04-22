@@ -11,6 +11,7 @@ import com.pulumi.gcp.Utilities;
 import com.pulumi.gcp.compute.AttachedDiskArgs;
 import com.pulumi.gcp.compute.inputs.AttachedDiskState;
 import java.lang.String;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -116,8 +117,8 @@ public class AttachedDisk extends com.pulumi.resources.CustomResource {
      * READ_WRITE mode.
      * 
      */
-    public Output</* @Nullable */ String> mode() {
-        return this.mode;
+    public Output<Optional<String>> mode() {
+        return Codegen.optional(this.mode);
     }
     /**
      * The project that the referenced compute instance is a part of. If `instance` is referenced by its

@@ -17,6 +17,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -68,8 +69,8 @@ public class Dashboard extends com.pulumi.resources.CustomResource {
     @Export(name="dashboardPublishOptions", type=DashboardPublishOptions.class, parameters={})
     private Output</* @Nullable */ DashboardPublishOptions> dashboardPublishOptions;
 
-    public Output</* @Nullable */ DashboardPublishOptions> dashboardPublishOptions() {
-        return this.dashboardPublishOptions;
+    public Output<Optional<DashboardPublishOptions>> dashboardPublishOptions() {
+        return Codegen.optional(this.dashboardPublishOptions);
     }
     /**
      * &lt;p&gt;The last time that this dataset was published.&lt;/p&gt;
@@ -110,14 +111,14 @@ public class Dashboard extends com.pulumi.resources.CustomResource {
      * @return &lt;p&gt;The display name of the dashboard.&lt;/p&gt;
      * 
      */
-    public Output</* @Nullable */ String> name() {
-        return this.name;
+    public Output<Optional<String>> name() {
+        return Codegen.optional(this.name);
     }
     @Export(name="parameters", type=DashboardParameters.class, parameters={})
     private Output</* @Nullable */ DashboardParameters> parameters;
 
-    public Output</* @Nullable */ DashboardParameters> parameters() {
-        return this.parameters;
+    public Output<Optional<DashboardParameters>> parameters() {
+        return Codegen.optional(this.parameters);
     }
     /**
      * &lt;p&gt;A structure that contains the permissions of the dashboard. You can use this structure
@@ -138,8 +139,8 @@ public class Dashboard extends com.pulumi.resources.CustomResource {
      *         &lt;p&gt;To specify no permissions, omit the permissions list.&lt;/p&gt;
      * 
      */
-    public Output</* @Nullable */ List<DashboardResourcePermission>> permissions() {
-        return this.permissions;
+    public Output<Optional<List<DashboardResourcePermission>>> permissions() {
+        return Codegen.optional(this.permissions);
     }
     @Export(name="sourceEntity", type=DashboardSourceEntity.class, parameters={})
     private Output<DashboardSourceEntity> sourceEntity;
@@ -160,8 +161,8 @@ public class Dashboard extends com.pulumi.resources.CustomResource {
      *             dashboard.&lt;/p&gt;
      * 
      */
-    public Output</* @Nullable */ List<DashboardTag>> tags() {
-        return this.tags;
+    public Output<Optional<List<DashboardTag>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * &lt;p&gt;The Amazon Resource Name (ARN) of the theme that is being used for this dashboard. If
@@ -180,8 +181,8 @@ public class Dashboard extends com.pulumi.resources.CustomResource {
      *             dashboard.&lt;/p&gt;
      * 
      */
-    public Output</* @Nullable */ String> themeArn() {
-        return this.themeArn;
+    public Output<Optional<String>> themeArn() {
+        return Codegen.optional(this.themeArn);
     }
     @Export(name="version", type=DashboardVersion.class, parameters={})
     private Output<DashboardVersion> version;
@@ -200,8 +201,8 @@ public class Dashboard extends com.pulumi.resources.CustomResource {
      * @return &lt;p&gt;A description for the first version of the dashboard being created.&lt;/p&gt;
      * 
      */
-    public Output</* @Nullable */ String> versionDescription() {
-        return this.versionDescription;
+    public Output<Optional<String>> versionDescription() {
+        return Codegen.optional(this.versionDescription);
     }
 
     /**

@@ -17,6 +17,7 @@ import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -78,8 +79,8 @@ public class Gateway extends com.pulumi.resources.CustomResource {
      * @return The average download bandwidth rate limit in bits per second. This is supported for the `CACHED`, `STORED`, and `VTL` gateway types.
      * 
      */
-    public Output</* @Nullable */ Integer> averageDownloadRateLimitInBitsPerSec() {
-        return this.averageDownloadRateLimitInBitsPerSec;
+    public Output<Optional<Integer>> averageDownloadRateLimitInBitsPerSec() {
+        return Codegen.optional(this.averageDownloadRateLimitInBitsPerSec);
     }
     /**
      * The average upload bandwidth rate limit in bits per second. This is supported for the `CACHED`, `STORED`, and `VTL` gateway types.
@@ -92,8 +93,8 @@ public class Gateway extends com.pulumi.resources.CustomResource {
      * @return The average upload bandwidth rate limit in bits per second. This is supported for the `CACHED`, `STORED`, and `VTL` gateway types.
      * 
      */
-    public Output</* @Nullable */ Integer> averageUploadRateLimitInBitsPerSec() {
-        return this.averageUploadRateLimitInBitsPerSec;
+    public Output<Optional<Integer>> averageUploadRateLimitInBitsPerSec() {
+        return Codegen.optional(this.averageUploadRateLimitInBitsPerSec);
     }
     /**
      * The Amazon Resource Name (ARN) of the Amazon CloudWatch log group to use to monitor and log events in the gateway.
@@ -106,8 +107,8 @@ public class Gateway extends com.pulumi.resources.CustomResource {
      * @return The Amazon Resource Name (ARN) of the Amazon CloudWatch log group to use to monitor and log events in the gateway.
      * 
      */
-    public Output</* @Nullable */ String> cloudwatchLogGroupArn() {
-        return this.cloudwatchLogGroupArn;
+    public Output<Optional<String>> cloudwatchLogGroupArn() {
+        return Codegen.optional(this.cloudwatchLogGroupArn);
     }
     /**
      * The ID of the Amazon EC2 instance that was used to launch the gateway.
@@ -218,8 +219,8 @@ public class Gateway extends com.pulumi.resources.CustomResource {
      * @return Type of the gateway. The default value is `STORED`. Valid values: `CACHED`, `FILE_FSX_SMB`, `FILE_S3`, `STORED`, `VTL`.
      * 
      */
-    public Output</* @Nullable */ String> gatewayType() {
-        return this.gatewayType;
+    public Output<Optional<String>> gatewayType() {
+        return Codegen.optional(this.gatewayType);
     }
     /**
      * VPC endpoint address to be used when activating your gateway. This should be used when your instance is in a private subnet. Requires HTTP access from client computer running this provider. More info on what ports are required by your VPC Endpoint Security group in [Activating a Gateway in a Virtual Private Cloud](https://docs.aws.amazon.com/storagegateway/latest/userguide/gateway-private-link.html).
@@ -232,8 +233,8 @@ public class Gateway extends com.pulumi.resources.CustomResource {
      * @return VPC endpoint address to be used when activating your gateway. This should be used when your instance is in a private subnet. Requires HTTP access from client computer running this provider. More info on what ports are required by your VPC Endpoint Security group in [Activating a Gateway in a Virtual Private Cloud](https://docs.aws.amazon.com/storagegateway/latest/userguide/gateway-private-link.html).
      * 
      */
-    public Output</* @Nullable */ String> gatewayVpcEndpoint() {
-        return this.gatewayVpcEndpoint;
+    public Output<Optional<String>> gatewayVpcEndpoint() {
+        return Codegen.optional(this.gatewayVpcEndpoint);
     }
     /**
      * The type of hypervisor environment used by the host.
@@ -260,8 +261,8 @@ public class Gateway extends com.pulumi.resources.CustomResource {
      * @return Type of medium changer to use for tape gateway. This provider cannot detect drift of this argument. Valid values: `STK-L700`, `AWS-Gateway-VTL`, `IBM-03584L32-0402`.
      * 
      */
-    public Output</* @Nullable */ String> mediumChangerType() {
-        return this.mediumChangerType;
+    public Output<Optional<String>> mediumChangerType() {
+        return Codegen.optional(this.mediumChangerType);
     }
     /**
      * Nested argument with Active Directory domain join information for Server Message Block (SMB) file shares. Only valid for `FILE_S3` and `FILE_FSX_SMB` gateway types. Must be set before creating `ActiveDirectory` authentication SMB file shares. More details below.
@@ -274,8 +275,8 @@ public class Gateway extends com.pulumi.resources.CustomResource {
      * @return Nested argument with Active Directory domain join information for Server Message Block (SMB) file shares. Only valid for `FILE_S3` and `FILE_FSX_SMB` gateway types. Must be set before creating `ActiveDirectory` authentication SMB file shares. More details below.
      * 
      */
-    public Output</* @Nullable */ GatewaySmbActiveDirectorySettings> smbActiveDirectorySettings() {
-        return this.smbActiveDirectorySettings;
+    public Output<Optional<GatewaySmbActiveDirectorySettings>> smbActiveDirectorySettings() {
+        return Codegen.optional(this.smbActiveDirectorySettings);
     }
     /**
      * Specifies whether the shares on this gateway appear when listing shares.
@@ -288,8 +289,8 @@ public class Gateway extends com.pulumi.resources.CustomResource {
      * @return Specifies whether the shares on this gateway appear when listing shares.
      * 
      */
-    public Output</* @Nullable */ Boolean> smbFileShareVisibility() {
-        return this.smbFileShareVisibility;
+    public Output<Optional<Boolean>> smbFileShareVisibility() {
+        return Codegen.optional(this.smbFileShareVisibility);
     }
     /**
      * Guest password for Server Message Block (SMB) file shares. Only valid for `FILE_S3` and `FILE_FSX_SMB` gateway types. Must be set before creating `GuestAccess` authentication SMB file shares. This provider can only detect drift of the existence of a guest password, not its actual value from the gateway. This provider can however update the password with changing the argument.
@@ -302,8 +303,8 @@ public class Gateway extends com.pulumi.resources.CustomResource {
      * @return Guest password for Server Message Block (SMB) file shares. Only valid for `FILE_S3` and `FILE_FSX_SMB` gateway types. Must be set before creating `GuestAccess` authentication SMB file shares. This provider can only detect drift of the existence of a guest password, not its actual value from the gateway. This provider can however update the password with changing the argument.
      * 
      */
-    public Output</* @Nullable */ String> smbGuestPassword() {
-        return this.smbGuestPassword;
+    public Output<Optional<String>> smbGuestPassword() {
+        return Codegen.optional(this.smbGuestPassword);
     }
     /**
      * Specifies the type of security strategy. Valid values are: `ClientSpecified`, `MandatorySigning`, and `MandatoryEncryption`. See [Setting a Security Level for Your Gateway](https://docs.aws.amazon.com/storagegateway/latest/userguide/managing-gateway-file.html#security-strategy) for more information.
@@ -330,8 +331,8 @@ public class Gateway extends com.pulumi.resources.CustomResource {
      * @return Key-value map of resource tags
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * A map of tags assigned to the resource, including those inherited from the provider .
@@ -358,8 +359,8 @@ public class Gateway extends com.pulumi.resources.CustomResource {
      * @return Type of tape drive to use for tape gateway. This provider cannot detect drift of this argument. Valid values: `IBM-ULT3580-TD5`.
      * 
      */
-    public Output</* @Nullable */ String> tapeDriveType() {
-        return this.tapeDriveType;
+    public Output<Optional<String>> tapeDriveType() {
+        return Codegen.optional(this.tapeDriveType);
     }
 
     /**

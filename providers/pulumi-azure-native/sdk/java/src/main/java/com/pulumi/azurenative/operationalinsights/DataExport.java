@@ -13,6 +13,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -43,8 +44,8 @@ public class DataExport extends com.pulumi.resources.CustomResource {
      * @return The latest data export rule modification time.
      * 
      */
-    public Output</* @Nullable */ String> createdDate() {
-        return this.createdDate;
+    public Output<Optional<String>> createdDate() {
+        return Codegen.optional(this.createdDate);
     }
     /**
      * The data export rule ID.
@@ -57,8 +58,8 @@ public class DataExport extends com.pulumi.resources.CustomResource {
      * @return The data export rule ID.
      * 
      */
-    public Output</* @Nullable */ String> dataExportId() {
-        return this.dataExportId;
+    public Output<Optional<String>> dataExportId() {
+        return Codegen.optional(this.dataExportId);
     }
     /**
      * Active when enabled.
@@ -71,8 +72,8 @@ public class DataExport extends com.pulumi.resources.CustomResource {
      * @return Active when enabled.
      * 
      */
-    public Output</* @Nullable */ Boolean> enable() {
-        return this.enable;
+    public Output<Optional<Boolean>> enable() {
+        return Codegen.optional(this.enable);
     }
     /**
      * Optional. Allows to define an Event Hub name. Not applicable when destination is Storage Account.
@@ -85,8 +86,8 @@ public class DataExport extends com.pulumi.resources.CustomResource {
      * @return Optional. Allows to define an Event Hub name. Not applicable when destination is Storage Account.
      * 
      */
-    public Output</* @Nullable */ String> eventHubName() {
-        return this.eventHubName;
+    public Output<Optional<String>> eventHubName() {
+        return Codegen.optional(this.eventHubName);
     }
     /**
      * Date and time when the export was last modified.
@@ -99,8 +100,8 @@ public class DataExport extends com.pulumi.resources.CustomResource {
      * @return Date and time when the export was last modified.
      * 
      */
-    public Output</* @Nullable */ String> lastModifiedDate() {
-        return this.lastModifiedDate;
+    public Output<Optional<String>> lastModifiedDate() {
+        return Codegen.optional(this.lastModifiedDate);
     }
     /**
      * The name of the resource

@@ -24,6 +24,7 @@ import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -151,8 +152,8 @@ public class Instance extends com.pulumi.resources.CustomResource {
      * @return Configuration block for customizing the credit specification of the instance. See Credit Specification below for more details. the provider will only perform drift detection of its value when present in a configuration. Removing this configuration on existing instances will only stop managing it. It will not change the configuration back to the default for the instance type.
      * 
      */
-    public Output</* @Nullable */ InstanceCreditSpecification> creditSpecification() {
-        return this.creditSpecification;
+    public Output<Optional<InstanceCreditSpecification>> creditSpecification() {
+        return Codegen.optional(this.creditSpecification);
     }
     /**
      * If true, enables [EC2 Instance Termination Protection](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/terminating-instances.html#Using_ChangingDisableAPITermination).
@@ -235,8 +236,8 @@ public class Instance extends com.pulumi.resources.CustomResource {
      * @return If true, wait for password data to become available and retrieve it. Useful for getting the administrator password for instances running Microsoft Windows. The password data is exported to the `password_data` attribute. See [GetPasswordData](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_GetPasswordData.html) for more information.
      * 
      */
-    public Output</* @Nullable */ Boolean> getPasswordData() {
-        return this.getPasswordData;
+    public Output<Optional<Boolean>> getPasswordData() {
+        return Codegen.optional(this.getPasswordData);
     }
     /**
      * If true, the launched EC2 instance will support hibernation.
@@ -249,8 +250,8 @@ public class Instance extends com.pulumi.resources.CustomResource {
      * @return If true, the launched EC2 instance will support hibernation.
      * 
      */
-    public Output</* @Nullable */ Boolean> hibernation() {
-        return this.hibernation;
+    public Output<Optional<Boolean>> hibernation() {
+        return Codegen.optional(this.hibernation);
     }
     /**
      * ID of a dedicated host that the instance will be assigned to. Use when an instance is to be launched on a specific dedicated host.
@@ -277,8 +278,8 @@ public class Instance extends com.pulumi.resources.CustomResource {
      * @return IAM Instance Profile to launch the instance with. Specified as the name of the Instance Profile. Ensure your credentials have the correct permission to assign the instance profile according to the [EC2 documentation](http://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_use_switch-role-ec2.html#roles-usingrole-ec2instance-permissions), notably `iam:PassRole`.
      * 
      */
-    public Output</* @Nullable */ String> iamInstanceProfile() {
-        return this.iamInstanceProfile;
+    public Output<Optional<String>> iamInstanceProfile() {
+        return Codegen.optional(this.iamInstanceProfile);
     }
     /**
      * Shutdown behavior for the instance. Amazon defaults this to `stop` for EBS-backed instances and `terminate` for instance-store instances. Cannot be set on instance-store instances. See [Shutdown Behavior](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/terminating-instances.html#Using_ChangingInstanceInitiatedShutdownBehavior) for more information.
@@ -377,8 +378,8 @@ public class Instance extends com.pulumi.resources.CustomResource {
      * See Launch Template Specification below for more details.
      * 
      */
-    public Output</* @Nullable */ InstanceLaunchTemplate> launchTemplate() {
-        return this.launchTemplate;
+    public Output<Optional<InstanceLaunchTemplate>> launchTemplate() {
+        return Codegen.optional(this.launchTemplate);
     }
     /**
      * Customize the metadata options of the instance. See Metadata Options below for more details.
@@ -605,8 +606,8 @@ public class Instance extends com.pulumi.resources.CustomResource {
      * @return Controls if traffic is routed to the instance when the destination address does not match the instance. Used for NAT or VPNs. Defaults true.
      * 
      */
-    public Output</* @Nullable */ Boolean> sourceDestCheck() {
-        return this.sourceDestCheck;
+    public Output<Optional<Boolean>> sourceDestCheck() {
+        return Codegen.optional(this.sourceDestCheck);
     }
     /**
      * VPC Subnet ID to launch in.
@@ -633,8 +634,8 @@ public class Instance extends com.pulumi.resources.CustomResource {
      * @return A map of tags to assign to the resource. Note that these tags apply to the instance and not block storage devices. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * A map of tags assigned to the resource, including those inherited from the provider.
@@ -703,8 +704,8 @@ public class Instance extends com.pulumi.resources.CustomResource {
      * @return A map of tags to assign, at instance-creation time, to root and EBS volumes.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> volumeTags() {
-        return this.volumeTags;
+    public Output<Optional<Map<String,String>>> volumeTags() {
+        return Codegen.optional(this.volumeTags);
     }
     /**
      * A list of security group IDs to associate with.

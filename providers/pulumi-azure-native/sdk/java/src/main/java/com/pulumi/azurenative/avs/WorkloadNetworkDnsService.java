@@ -13,6 +13,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -43,8 +44,8 @@ public class WorkloadNetworkDnsService extends com.pulumi.resources.CustomResour
      * @return Default DNS zone of the DNS Service.
      * 
      */
-    public Output</* @Nullable */ String> defaultDnsZone() {
-        return this.defaultDnsZone;
+    public Output<Optional<String>> defaultDnsZone() {
+        return Codegen.optional(this.defaultDnsZone);
     }
     /**
      * Display name of the DNS Service.
@@ -57,8 +58,8 @@ public class WorkloadNetworkDnsService extends com.pulumi.resources.CustomResour
      * @return Display name of the DNS Service.
      * 
      */
-    public Output</* @Nullable */ String> displayName() {
-        return this.displayName;
+    public Output<Optional<String>> displayName() {
+        return Codegen.optional(this.displayName);
     }
     /**
      * DNS service IP of the DNS Service.
@@ -71,8 +72,8 @@ public class WorkloadNetworkDnsService extends com.pulumi.resources.CustomResour
      * @return DNS service IP of the DNS Service.
      * 
      */
-    public Output</* @Nullable */ String> dnsServiceIp() {
-        return this.dnsServiceIp;
+    public Output<Optional<String>> dnsServiceIp() {
+        return Codegen.optional(this.dnsServiceIp);
     }
     /**
      * FQDN zones of the DNS Service.
@@ -85,8 +86,8 @@ public class WorkloadNetworkDnsService extends com.pulumi.resources.CustomResour
      * @return FQDN zones of the DNS Service.
      * 
      */
-    public Output</* @Nullable */ List<String>> fqdnZones() {
-        return this.fqdnZones;
+    public Output<Optional<List<String>>> fqdnZones() {
+        return Codegen.optional(this.fqdnZones);
     }
     /**
      * DNS Service log level.
@@ -99,8 +100,8 @@ public class WorkloadNetworkDnsService extends com.pulumi.resources.CustomResour
      * @return DNS Service log level.
      * 
      */
-    public Output</* @Nullable */ String> logLevel() {
-        return this.logLevel;
+    public Output<Optional<String>> logLevel() {
+        return Codegen.optional(this.logLevel);
     }
     /**
      * Resource name.
@@ -141,8 +142,8 @@ public class WorkloadNetworkDnsService extends com.pulumi.resources.CustomResour
      * @return NSX revision number.
      * 
      */
-    public Output</* @Nullable */ Double> revision() {
-        return this.revision;
+    public Output<Optional<Double>> revision() {
+        return Codegen.optional(this.revision);
     }
     /**
      * DNS Service status.

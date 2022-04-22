@@ -18,6 +18,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -62,8 +63,8 @@ public class Share extends com.pulumi.resources.CustomResource {
      * @return Azure container mapping for the share.
      * 
      */
-    public Output</* @Nullable */ AzureContainerInfoResponse> azureContainerInfo() {
-        return this.azureContainerInfo;
+    public Output<Optional<AzureContainerInfoResponse>> azureContainerInfo() {
+        return Codegen.optional(this.azureContainerInfo);
     }
     /**
      * List of IP addresses and corresponding access rights on the share(required for NFS protocol).
@@ -76,8 +77,8 @@ public class Share extends com.pulumi.resources.CustomResource {
      * @return List of IP addresses and corresponding access rights on the share(required for NFS protocol).
      * 
      */
-    public Output</* @Nullable */ List<ClientAccessRightResponse>> clientAccessRights() {
-        return this.clientAccessRights;
+    public Output<Optional<List<ClientAccessRightResponse>>> clientAccessRights() {
+        return Codegen.optional(this.clientAccessRights);
     }
     /**
      * Data policy of the share.
@@ -90,8 +91,8 @@ public class Share extends com.pulumi.resources.CustomResource {
      * @return Data policy of the share.
      * 
      */
-    public Output</* @Nullable */ String> dataPolicy() {
-        return this.dataPolicy;
+    public Output<Optional<String>> dataPolicy() {
+        return Codegen.optional(this.dataPolicy);
     }
     /**
      * Description for the share.
@@ -104,8 +105,8 @@ public class Share extends com.pulumi.resources.CustomResource {
      * @return Description for the share.
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * Current monitoring status of the share.
@@ -146,8 +147,8 @@ public class Share extends com.pulumi.resources.CustomResource {
      * @return Details of the refresh job on this share.
      * 
      */
-    public Output</* @Nullable */ RefreshDetailsResponse> refreshDetails() {
-        return this.refreshDetails;
+    public Output<Optional<RefreshDetailsResponse>> refreshDetails() {
+        return Codegen.optional(this.refreshDetails);
     }
     /**
      * Share mount point to the role.
@@ -216,8 +217,8 @@ public class Share extends com.pulumi.resources.CustomResource {
      * @return Mapping of users and corresponding access rights on the share (required for SMB protocol).
      * 
      */
-    public Output</* @Nullable */ List<UserAccessRightResponse>> userAccessRights() {
-        return this.userAccessRights;
+    public Output<Optional<List<UserAccessRightResponse>>> userAccessRights() {
+        return Codegen.optional(this.userAccessRights);
     }
 
     /**

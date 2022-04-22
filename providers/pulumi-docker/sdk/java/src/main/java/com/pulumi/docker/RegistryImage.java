@@ -13,6 +13,7 @@ import com.pulumi.docker.inputs.RegistryImageState;
 import com.pulumi.docker.outputs.RegistryImageBuild;
 import java.lang.Boolean;
 import java.lang.String;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -118,8 +119,8 @@ public class RegistryImage extends com.pulumi.resources.CustomResource {
      * @return Definition for building the image
      * 
      */
-    public Output</* @Nullable */ RegistryImageBuild> build() {
-        return this.build;
+    public Output<Optional<RegistryImageBuild>> build() {
+        return Codegen.optional(this.build);
     }
     /**
      * If `true`, the verification of TLS certificates of the server/registry is disabled. Defaults to `false`
@@ -132,8 +133,8 @@ public class RegistryImage extends com.pulumi.resources.CustomResource {
      * @return If `true`, the verification of TLS certificates of the server/registry is disabled. Defaults to `false`
      * 
      */
-    public Output</* @Nullable */ Boolean> insecureSkipVerify() {
-        return this.insecureSkipVerify;
+    public Output<Optional<Boolean>> insecureSkipVerify() {
+        return Codegen.optional(this.insecureSkipVerify);
     }
     /**
      * If true, then the Docker image won&#39;t be deleted on destroy operation. If this is false, it will delete the image from
@@ -148,8 +149,8 @@ public class RegistryImage extends com.pulumi.resources.CustomResource {
      * the docker registry on destroy operation. Defaults to `false`
      * 
      */
-    public Output</* @Nullable */ Boolean> keepRemotely() {
-        return this.keepRemotely;
+    public Output<Optional<Boolean>> keepRemotely() {
+        return Codegen.optional(this.keepRemotely);
     }
     /**
      * The name of the Docker image.

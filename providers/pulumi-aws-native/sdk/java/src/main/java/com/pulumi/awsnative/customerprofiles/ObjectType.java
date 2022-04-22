@@ -16,6 +16,7 @@ import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -37,8 +38,8 @@ public class ObjectType extends com.pulumi.resources.CustomResource {
      * @return Indicates whether a profile should be created when data is received.
      * 
      */
-    public Output</* @Nullable */ Boolean> allowProfileCreation() {
-        return this.allowProfileCreation;
+    public Output<Optional<Boolean>> allowProfileCreation() {
+        return Codegen.optional(this.allowProfileCreation);
     }
     /**
      * The time of this integration got created.
@@ -65,8 +66,8 @@ public class ObjectType extends com.pulumi.resources.CustomResource {
      * @return Description of the profile object type.
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * The unique name of the domain.
@@ -93,8 +94,8 @@ public class ObjectType extends com.pulumi.resources.CustomResource {
      * @return The default encryption key
      * 
      */
-    public Output</* @Nullable */ String> encryptionKey() {
-        return this.encryptionKey;
+    public Output<Optional<String>> encryptionKey() {
+        return Codegen.optional(this.encryptionKey);
     }
     /**
      * The default number of days until the data within the domain expires.
@@ -107,8 +108,8 @@ public class ObjectType extends com.pulumi.resources.CustomResource {
      * @return The default number of days until the data within the domain expires.
      * 
      */
-    public Output</* @Nullable */ Integer> expirationDays() {
-        return this.expirationDays;
+    public Output<Optional<Integer>> expirationDays() {
+        return Codegen.optional(this.expirationDays);
     }
     /**
      * A list of the name and ObjectType field.
@@ -121,8 +122,8 @@ public class ObjectType extends com.pulumi.resources.CustomResource {
      * @return A list of the name and ObjectType field.
      * 
      */
-    public Output</* @Nullable */ List<ObjectTypeFieldMap>> fields() {
-        return this.fields;
+    public Output<Optional<List<ObjectTypeFieldMap>>> fields() {
+        return Codegen.optional(this.fields);
     }
     /**
      * A list of unique keys that can be used to map data to the profile.
@@ -135,8 +136,8 @@ public class ObjectType extends com.pulumi.resources.CustomResource {
      * @return A list of unique keys that can be used to map data to the profile.
      * 
      */
-    public Output</* @Nullable */ List<ObjectTypeKeyMap>> keys() {
-        return this.keys;
+    public Output<Optional<List<ObjectTypeKeyMap>>> keys() {
+        return Codegen.optional(this.keys);
     }
     /**
      * The time of this integration got last updated at.
@@ -163,8 +164,8 @@ public class ObjectType extends com.pulumi.resources.CustomResource {
      * @return The name of the profile object type.
      * 
      */
-    public Output</* @Nullable */ String> objectTypeName() {
-        return this.objectTypeName;
+    public Output<Optional<String>> objectTypeName() {
+        return Codegen.optional(this.objectTypeName);
     }
     /**
      * The tags (keys and values) associated with the integration.
@@ -177,8 +178,8 @@ public class ObjectType extends com.pulumi.resources.CustomResource {
      * @return The tags (keys and values) associated with the integration.
      * 
      */
-    public Output</* @Nullable */ List<ObjectTypeTag>> tags() {
-        return this.tags;
+    public Output<Optional<List<ObjectTypeTag>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * A unique identifier for the object template.
@@ -191,8 +192,8 @@ public class ObjectType extends com.pulumi.resources.CustomResource {
      * @return A unique identifier for the object template.
      * 
      */
-    public Output</* @Nullable */ String> templateId() {
-        return this.templateId;
+    public Output<Optional<String>> templateId() {
+        return Codegen.optional(this.templateId);
     }
 
     /**

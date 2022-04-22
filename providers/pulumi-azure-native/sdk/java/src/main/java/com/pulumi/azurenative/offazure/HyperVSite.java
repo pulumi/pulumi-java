@@ -14,6 +14,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -44,8 +45,8 @@ public class HyperVSite extends com.pulumi.resources.CustomResource {
      * @return eTag for concurrency control.
      * 
      */
-    public Output</* @Nullable */ String> eTag() {
-        return this.eTag;
+    public Output<Optional<String>> eTag() {
+        return Codegen.optional(this.eTag);
     }
     /**
      * Azure location in which Sites is created.
@@ -58,8 +59,8 @@ public class HyperVSite extends com.pulumi.resources.CustomResource {
      * @return Azure location in which Sites is created.
      * 
      */
-    public Output</* @Nullable */ String> location() {
-        return this.location;
+    public Output<Optional<String>> location() {
+        return Codegen.optional(this.location);
     }
     /**
      * Name of the Hyper-V site.
@@ -72,8 +73,8 @@ public class HyperVSite extends com.pulumi.resources.CustomResource {
      * @return Name of the Hyper-V site.
      * 
      */
-    public Output</* @Nullable */ String> name() {
-        return this.name;
+    public Output<Optional<String>> name() {
+        return Codegen.optional(this.name);
     }
     /**
      * Nested properties of Hyper-V site.
@@ -92,8 +93,8 @@ public class HyperVSite extends com.pulumi.resources.CustomResource {
     @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * Type of resource. Type = Microsoft.OffAzure/HyperVSites.

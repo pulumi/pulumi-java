@@ -20,6 +20,7 @@ import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -73,8 +74,8 @@ public class Instance extends com.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ InstanceAcceleratorConfig> acceleratorConfig() {
-        return this.acceleratorConfig;
+    public Output<Optional<InstanceAcceleratorConfig>> acceleratorConfig() {
+        return Codegen.optional(this.acceleratorConfig);
     }
     /**
      * The size of the boot disk in GB attached to this instance,
@@ -91,8 +92,8 @@ public class Instance extends com.pulumi.resources.CustomResource {
      * If not specified, this defaults to 100.
      * 
      */
-    public Output</* @Nullable */ Integer> bootDiskSizeGb() {
-        return this.bootDiskSizeGb;
+    public Output<Optional<Integer>> bootDiskSizeGb() {
+        return Codegen.optional(this.bootDiskSizeGb);
     }
     /**
      * Possible disk types for notebook instances.
@@ -107,8 +108,8 @@ public class Instance extends com.pulumi.resources.CustomResource {
      * Possible values are `DISK_TYPE_UNSPECIFIED`, `PD_STANDARD`, `PD_SSD`, and `PD_BALANCED`.
      * 
      */
-    public Output</* @Nullable */ String> bootDiskType() {
-        return this.bootDiskType;
+    public Output<Optional<String>> bootDiskType() {
+        return Codegen.optional(this.bootDiskType);
     }
     /**
      * Use a container image to start the notebook instance.
@@ -123,8 +124,8 @@ public class Instance extends com.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ InstanceContainerImage> containerImage() {
-        return this.containerImage;
+    public Output<Optional<InstanceContainerImage>> containerImage() {
+        return Codegen.optional(this.containerImage);
     }
     /**
      * Instance creation time
@@ -153,8 +154,8 @@ public class Instance extends com.pulumi.resources.CustomResource {
      * If not specified, we&#39;ll automatically choose from official GPU drivers.
      * 
      */
-    public Output</* @Nullable */ String> customGpuDriverPath() {
-        return this.customGpuDriverPath;
+    public Output<Optional<String>> customGpuDriverPath() {
+        return Codegen.optional(this.customGpuDriverPath);
     }
     /**
      * The size of the data disk in GB attached to this instance,
@@ -173,8 +174,8 @@ public class Instance extends com.pulumi.resources.CustomResource {
      * If not specified, this defaults to 100.
      * 
      */
-    public Output</* @Nullable */ Integer> dataDiskSizeGb() {
-        return this.dataDiskSizeGb;
+    public Output<Optional<Integer>> dataDiskSizeGb() {
+        return Codegen.optional(this.dataDiskSizeGb);
     }
     /**
      * Possible disk types for notebook instances.
@@ -189,8 +190,8 @@ public class Instance extends com.pulumi.resources.CustomResource {
      * Possible values are `DISK_TYPE_UNSPECIFIED`, `PD_STANDARD`, `PD_SSD`, and `PD_BALANCED`.
      * 
      */
-    public Output</* @Nullable */ String> dataDiskType() {
-        return this.dataDiskType;
+    public Output<Optional<String>> dataDiskType() {
+        return Codegen.optional(this.dataDiskType);
     }
     /**
      * Disk encryption method used on the boot and data disks, defaults to GMEK.
@@ -205,8 +206,8 @@ public class Instance extends com.pulumi.resources.CustomResource {
      * Possible values are `DISK_ENCRYPTION_UNSPECIFIED`, `GMEK`, and `CMEK`.
      * 
      */
-    public Output</* @Nullable */ String> diskEncryption() {
-        return this.diskEncryption;
+    public Output<Optional<String>> diskEncryption() {
+        return Codegen.optional(this.diskEncryption);
     }
     /**
      * Whether the end user authorizes Google Cloud to install GPU driver
@@ -223,8 +224,8 @@ public class Instance extends com.pulumi.resources.CustomResource {
      * won&#39;t be installed. Only applicable to instances with GPUs.
      * 
      */
-    public Output</* @Nullable */ Boolean> installGpuDriver() {
-        return this.installGpuDriver;
+    public Output<Optional<Boolean>> installGpuDriver() {
+        return Codegen.optional(this.installGpuDriver);
     }
     /**
      * The list of owners of this instance after creation.
@@ -245,8 +246,8 @@ public class Instance extends com.pulumi.resources.CustomResource {
      * your VM instance&#39;s service account can use the instance.
      * 
      */
-    public Output</* @Nullable */ List<String>> instanceOwners() {
-        return this.instanceOwners;
+    public Output<Optional<List<String>>> instanceOwners() {
+        return Codegen.optional(this.instanceOwners);
     }
     /**
      * The KMS key used to encrypt the disks, only applicable if diskEncryption is CMEK.
@@ -261,8 +262,8 @@ public class Instance extends com.pulumi.resources.CustomResource {
      * Format: projects/{project_id}/locations/{location}/keyRings/{key_ring_id}/cryptoKeys/{key_id}
      * 
      */
-    public Output</* @Nullable */ String> kmsKey() {
-        return this.kmsKey;
+    public Output<Optional<String>> kmsKey() {
+        return Codegen.optional(this.kmsKey);
     }
     /**
      * Labels to apply to this instance. These can be later modified by the setLabels method.
@@ -321,8 +322,8 @@ public class Instance extends com.pulumi.resources.CustomResource {
      * An object containing a list of &#34;key&#34;: value pairs. Example: { &#34;name&#34;: &#34;wrench&#34;, &#34;mass&#34;: &#34;1.3kg&#34;, &#34;count&#34;: &#34;3&#34; }.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> metadata() {
-        return this.metadata;
+    public Output<Optional<Map<String,String>>> metadata() {
+        return Codegen.optional(this.metadata);
     }
     /**
      * The name specified for the Notebook instance.
@@ -367,8 +368,8 @@ public class Instance extends com.pulumi.resources.CustomResource {
      * Possible values are `UNSPECIFIED_NIC_TYPE`, `VIRTIO_NET`, and `GVNIC`.
      * 
      */
-    public Output</* @Nullable */ String> nicType() {
-        return this.nicType;
+    public Output<Optional<String>> nicType() {
+        return Codegen.optional(this.nicType);
     }
     /**
      * The notebook instance will not register with the proxy..
@@ -381,8 +382,8 @@ public class Instance extends com.pulumi.resources.CustomResource {
      * @return The notebook instance will not register with the proxy..
      * 
      */
-    public Output</* @Nullable */ Boolean> noProxyAccess() {
-        return this.noProxyAccess;
+    public Output<Optional<Boolean>> noProxyAccess() {
+        return Codegen.optional(this.noProxyAccess);
     }
     /**
      * No public IP will be assigned to this instance.
@@ -395,8 +396,8 @@ public class Instance extends com.pulumi.resources.CustomResource {
      * @return No public IP will be assigned to this instance.
      * 
      */
-    public Output</* @Nullable */ Boolean> noPublicIp() {
-        return this.noPublicIp;
+    public Output<Optional<Boolean>> noPublicIp() {
+        return Codegen.optional(this.noPublicIp);
     }
     /**
      * If true, the data disk will not be auto deleted when deleting the instance.
@@ -409,8 +410,8 @@ public class Instance extends com.pulumi.resources.CustomResource {
      * @return If true, the data disk will not be auto deleted when deleting the instance.
      * 
      */
-    public Output</* @Nullable */ Boolean> noRemoveDataDisk() {
-        return this.noRemoveDataDisk;
+    public Output<Optional<Boolean>> noRemoveDataDisk() {
+        return Codegen.optional(this.noRemoveDataDisk);
     }
     /**
      * Path to a Bash script that automatically runs after a
@@ -427,8 +428,8 @@ public class Instance extends com.pulumi.resources.CustomResource {
      * or Cloud Storage path (gs://path-to-file/file-name).
      * 
      */
-    public Output</* @Nullable */ String> postStartupScript() {
-        return this.postStartupScript;
+    public Output<Optional<String>> postStartupScript() {
+        return Codegen.optional(this.postStartupScript);
     }
     /**
      * The name of the Google Cloud project that this VM image belongs to.
@@ -473,8 +474,8 @@ public class Instance extends com.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ InstanceReservationAffinity> reservationAffinity() {
-        return this.reservationAffinity;
+    public Output<Optional<InstanceReservationAffinity>> reservationAffinity() {
+        return Codegen.optional(this.reservationAffinity);
     }
     /**
      * The service account on this instance, giving access to other
@@ -515,8 +516,8 @@ public class Instance extends com.pulumi.resources.CustomResource {
      * - https://www.googleapis.com/auth/userinfo.email
      * 
      */
-    public Output</* @Nullable */ List<String>> serviceAccountScopes() {
-        return this.serviceAccountScopes;
+    public Output<Optional<List<String>>> serviceAccountScopes() {
+        return Codegen.optional(this.serviceAccountScopes);
     }
     /**
      * A set of Shielded Instance options. Check [Images using supported Shielded VM features]
@@ -577,8 +578,8 @@ public class Instance extends com.pulumi.resources.CustomResource {
      * @return The Compute Engine tags to add to instance.
      * 
      */
-    public Output</* @Nullable */ List<String>> tags() {
-        return this.tags;
+    public Output<Optional<List<String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * Instance update time.
@@ -607,8 +608,8 @@ public class Instance extends com.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ InstanceVmImage> vmImage() {
-        return this.vmImage;
+    public Output<Optional<InstanceVmImage>> vmImage() {
+        return Codegen.optional(this.vmImage);
     }
 
     /**

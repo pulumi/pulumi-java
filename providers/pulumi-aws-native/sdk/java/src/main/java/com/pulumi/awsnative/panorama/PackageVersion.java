@@ -13,6 +13,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -30,14 +31,14 @@ public class PackageVersion extends com.pulumi.resources.CustomResource {
     @Export(name="markLatest", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> markLatest;
 
-    public Output</* @Nullable */ Boolean> markLatest() {
-        return this.markLatest;
+    public Output<Optional<Boolean>> markLatest() {
+        return Codegen.optional(this.markLatest);
     }
     @Export(name="ownerAccount", type=String.class, parameters={})
     private Output</* @Nullable */ String> ownerAccount;
 
-    public Output</* @Nullable */ String> ownerAccount() {
-        return this.ownerAccount;
+    public Output<Optional<String>> ownerAccount() {
+        return Codegen.optional(this.ownerAccount);
     }
     @Export(name="packageArn", type=String.class, parameters={})
     private Output<String> packageArn;
@@ -90,8 +91,8 @@ public class PackageVersion extends com.pulumi.resources.CustomResource {
     @Export(name="updatedLatestPatchVersion", type=String.class, parameters={})
     private Output</* @Nullable */ String> updatedLatestPatchVersion;
 
-    public Output</* @Nullable */ String> updatedLatestPatchVersion() {
-        return this.updatedLatestPatchVersion;
+    public Output<Optional<String>> updatedLatestPatchVersion() {
+        return Codegen.optional(this.updatedLatestPatchVersion);
     }
 
     /**

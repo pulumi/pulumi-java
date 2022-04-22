@@ -10,6 +10,7 @@ import com.pulumi.core.internal.Codegen;
 import com.pulumi.example.FooResourceArgs;
 import com.pulumi.example.Resource;
 import com.pulumi.example.Utilities;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 @ResourceType(type="foo::FooResource")
@@ -17,8 +18,8 @@ public class FooResource extends com.pulumi.resources.ComponentResource {
     @Export(name="foo", type=Resource.class, parameters={})
     private Output</* @Nullable */ Resource> foo;
 
-    public Output</* @Nullable */ Resource> foo() {
-        return this.foo;
+    public Output<Optional<Resource>> foo() {
+        return Codegen.optional(this.foo);
     }
 
     /**

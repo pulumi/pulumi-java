@@ -13,6 +13,7 @@ import com.pulumi.gcp.projects.inputs.IAMBindingState;
 import com.pulumi.gcp.projects.outputs.IAMBindingCondition;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -104,8 +105,8 @@ public class IAMBinding extends com.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ IAMBindingCondition> condition() {
-        return this.condition;
+    public Output<Optional<IAMBindingCondition>> condition() {
+        return Codegen.optional(this.condition);
     }
     /**
      * (Computed) The etag of the project&#39;s IAM policy.

@@ -10,6 +10,7 @@ import com.pulumi.core.internal.Codegen;
 import com.pulumi.example.Dog;
 import com.pulumi.example.GodArgs;
 import com.pulumi.example.Utilities;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 @ResourceType(type="example::God")
@@ -17,8 +18,8 @@ public class God extends com.pulumi.resources.CustomResource {
     @Export(name="backwards", type=Dog.class, parameters={})
     private Output</* @Nullable */ Dog> backwards;
 
-    public Output</* @Nullable */ Dog> backwards() {
-        return this.backwards;
+    public Output<Optional<Dog>> backwards() {
+        return Codegen.optional(this.backwards);
     }
 
     /**

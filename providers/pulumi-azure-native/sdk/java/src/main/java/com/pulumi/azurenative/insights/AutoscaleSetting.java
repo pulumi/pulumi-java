@@ -16,6 +16,7 @@ import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -46,8 +47,8 @@ public class AutoscaleSetting extends com.pulumi.resources.CustomResource {
      * @return the enabled flag. Specifies whether automatic scaling is enabled for the resource. The default value is &#39;true&#39;.
      * 
      */
-    public Output</* @Nullable */ Boolean> enabled() {
-        return this.enabled;
+    public Output<Optional<Boolean>> enabled() {
+        return Codegen.optional(this.enabled);
     }
     /**
      * Resource location
@@ -88,8 +89,8 @@ public class AutoscaleSetting extends com.pulumi.resources.CustomResource {
      * @return the collection of notifications.
      * 
      */
-    public Output</* @Nullable */ List<AutoscaleNotificationResponse>> notifications() {
-        return this.notifications;
+    public Output<Optional<List<AutoscaleNotificationResponse>>> notifications() {
+        return Codegen.optional(this.notifications);
     }
     /**
      * the collection of automatic scaling profiles that specify different scaling parameters for different time periods. A maximum of 20 profiles can be specified.
@@ -116,8 +117,8 @@ public class AutoscaleSetting extends com.pulumi.resources.CustomResource {
      * @return Resource tags
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * the location of the resource that the autoscale setting should be added to.
@@ -130,8 +131,8 @@ public class AutoscaleSetting extends com.pulumi.resources.CustomResource {
      * @return the location of the resource that the autoscale setting should be added to.
      * 
      */
-    public Output</* @Nullable */ String> targetResourceLocation() {
-        return this.targetResourceLocation;
+    public Output<Optional<String>> targetResourceLocation() {
+        return Codegen.optional(this.targetResourceLocation);
     }
     /**
      * the resource identifier of the resource that the autoscale setting should be added to.
@@ -144,8 +145,8 @@ public class AutoscaleSetting extends com.pulumi.resources.CustomResource {
      * @return the resource identifier of the resource that the autoscale setting should be added to.
      * 
      */
-    public Output</* @Nullable */ String> targetResourceUri() {
-        return this.targetResourceUri;
+    public Output<Optional<String>> targetResourceUri() {
+        return Codegen.optional(this.targetResourceUri);
     }
     /**
      * Azure resource type

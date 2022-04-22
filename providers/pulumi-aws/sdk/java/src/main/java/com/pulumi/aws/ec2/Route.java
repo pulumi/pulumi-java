@@ -11,6 +11,7 @@ import com.pulumi.core.annotations.Export;
 import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -48,8 +49,8 @@ public class Route extends com.pulumi.resources.CustomResource {
      * @return Identifier of a carrier gateway. This attribute can only be used when the VPC contains a subnet which is associated with a Wavelength Zone.
      * 
      */
-    public Output</* @Nullable */ String> carrierGatewayId() {
-        return this.carrierGatewayId;
+    public Output<Optional<String>> carrierGatewayId() {
+        return Codegen.optional(this.carrierGatewayId);
     }
     /**
      * The destination CIDR block.
@@ -62,8 +63,8 @@ public class Route extends com.pulumi.resources.CustomResource {
      * @return The destination CIDR block.
      * 
      */
-    public Output</* @Nullable */ String> destinationCidrBlock() {
-        return this.destinationCidrBlock;
+    public Output<Optional<String>> destinationCidrBlock() {
+        return Codegen.optional(this.destinationCidrBlock);
     }
     /**
      * The destination IPv6 CIDR block.
@@ -76,8 +77,8 @@ public class Route extends com.pulumi.resources.CustomResource {
      * @return The destination IPv6 CIDR block.
      * 
      */
-    public Output</* @Nullable */ String> destinationIpv6CidrBlock() {
-        return this.destinationIpv6CidrBlock;
+    public Output<Optional<String>> destinationIpv6CidrBlock() {
+        return Codegen.optional(this.destinationIpv6CidrBlock);
     }
     /**
      * The ID of a managed prefix list destination.
@@ -90,8 +91,8 @@ public class Route extends com.pulumi.resources.CustomResource {
      * @return The ID of a managed prefix list destination.
      * 
      */
-    public Output</* @Nullable */ String> destinationPrefixListId() {
-        return this.destinationPrefixListId;
+    public Output<Optional<String>> destinationPrefixListId() {
+        return Codegen.optional(this.destinationPrefixListId);
     }
     /**
      * Identifier of a VPC Egress Only Internet Gateway.
@@ -104,8 +105,8 @@ public class Route extends com.pulumi.resources.CustomResource {
      * @return Identifier of a VPC Egress Only Internet Gateway.
      * 
      */
-    public Output</* @Nullable */ String> egressOnlyGatewayId() {
-        return this.egressOnlyGatewayId;
+    public Output<Optional<String>> egressOnlyGatewayId() {
+        return Codegen.optional(this.egressOnlyGatewayId);
     }
     /**
      * Identifier of a VPC internet gateway or a virtual private gateway.
@@ -118,8 +119,8 @@ public class Route extends com.pulumi.resources.CustomResource {
      * @return Identifier of a VPC internet gateway or a virtual private gateway.
      * 
      */
-    public Output</* @Nullable */ String> gatewayId() {
-        return this.gatewayId;
+    public Output<Optional<String>> gatewayId() {
+        return Codegen.optional(this.gatewayId);
     }
     /**
      * Identifier of an EC2 instance.
@@ -160,8 +161,8 @@ public class Route extends com.pulumi.resources.CustomResource {
      * @return Identifier of a Outpost local gateway.
      * 
      */
-    public Output</* @Nullable */ String> localGatewayId() {
-        return this.localGatewayId;
+    public Output<Optional<String>> localGatewayId() {
+        return Codegen.optional(this.localGatewayId);
     }
     /**
      * Identifier of a VPC NAT gateway.
@@ -174,8 +175,8 @@ public class Route extends com.pulumi.resources.CustomResource {
      * @return Identifier of a VPC NAT gateway.
      * 
      */
-    public Output</* @Nullable */ String> natGatewayId() {
-        return this.natGatewayId;
+    public Output<Optional<String>> natGatewayId() {
+        return Codegen.optional(this.natGatewayId);
     }
     /**
      * Identifier of an EC2 network interface.
@@ -244,8 +245,8 @@ public class Route extends com.pulumi.resources.CustomResource {
      * @return Identifier of an EC2 Transit Gateway.
      * 
      */
-    public Output</* @Nullable */ String> transitGatewayId() {
-        return this.transitGatewayId;
+    public Output<Optional<String>> transitGatewayId() {
+        return Codegen.optional(this.transitGatewayId);
     }
     /**
      * Identifier of a VPC Endpoint.
@@ -258,8 +259,8 @@ public class Route extends com.pulumi.resources.CustomResource {
      * @return Identifier of a VPC Endpoint.
      * 
      */
-    public Output</* @Nullable */ String> vpcEndpointId() {
-        return this.vpcEndpointId;
+    public Output<Optional<String>> vpcEndpointId() {
+        return Codegen.optional(this.vpcEndpointId);
     }
     /**
      * Identifier of a VPC peering connection.
@@ -272,8 +273,8 @@ public class Route extends com.pulumi.resources.CustomResource {
      * @return Identifier of a VPC peering connection.
      * 
      */
-    public Output</* @Nullable */ String> vpcPeeringConnectionId() {
-        return this.vpcPeeringConnectionId;
+    public Output<Optional<String>> vpcPeeringConnectionId() {
+        return Codegen.optional(this.vpcPeeringConnectionId);
     }
 
     /**

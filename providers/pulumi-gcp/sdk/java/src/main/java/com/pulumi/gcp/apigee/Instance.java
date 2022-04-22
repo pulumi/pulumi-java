@@ -11,6 +11,7 @@ import com.pulumi.gcp.Utilities;
 import com.pulumi.gcp.apigee.InstanceArgs;
 import com.pulumi.gcp.apigee.inputs.InstanceState;
 import java.lang.String;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -50,8 +51,8 @@ public class Instance extends com.pulumi.resources.CustomResource {
      * @return Description of the instance.
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * Customer Managed Encryption Key (CMEK) used for disk and volume encryption. Required for Apigee paid subscriptions only.
@@ -66,8 +67,8 @@ public class Instance extends com.pulumi.resources.CustomResource {
      * Use the following format: `projects/([^/]+)/locations/([^/]+)/keyRings/([^/]+)/cryptoKeys/([^/]+)`
      * 
      */
-    public Output</* @Nullable */ String> diskEncryptionKeyName() {
-        return this.diskEncryptionKeyName;
+    public Output<Optional<String>> diskEncryptionKeyName() {
+        return Codegen.optional(this.diskEncryptionKeyName);
     }
     /**
      * Display name of the instance.
@@ -80,8 +81,8 @@ public class Instance extends com.pulumi.resources.CustomResource {
      * @return Display name of the instance.
      * 
      */
-    public Output</* @Nullable */ String> displayName() {
-        return this.displayName;
+    public Output<Optional<String>> displayName() {
+        return Codegen.optional(this.displayName);
     }
     /**
      * Output only. Hostname or IP address of the exposed Apigee endpoint used by clients to connect to the service.
@@ -120,8 +121,8 @@ public class Instance extends com.pulumi.resources.CustomResource {
      * Input format: &#34;a.b.c.d/22&#34;
      * 
      */
-    public Output</* @Nullable */ String> ipRange() {
-        return this.ipRange;
+    public Output<Optional<String>> ipRange() {
+        return Codegen.optional(this.ipRange);
     }
     /**
      * Compute Engine location where the instance resides. For trial organization

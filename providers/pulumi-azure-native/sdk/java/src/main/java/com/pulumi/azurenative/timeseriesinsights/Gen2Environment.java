@@ -18,6 +18,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -190,8 +191,8 @@ public class Gen2Environment extends com.pulumi.resources.CustomResource {
      * @return Resource tags
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * The list of event properties which will be used to define the environment&#39;s time series id.
@@ -232,8 +233,8 @@ public class Gen2Environment extends com.pulumi.resources.CustomResource {
      * @return The warm store configuration provides the details to create a warm store cache that will retain a copy of the environment&#39;s data available for faster query.
      * 
      */
-    public Output</* @Nullable */ WarmStoreConfigurationPropertiesResponse> warmStoreConfiguration() {
-        return this.warmStoreConfiguration;
+    public Output<Optional<WarmStoreConfigurationPropertiesResponse>> warmStoreConfiguration() {
+        return Codegen.optional(this.warmStoreConfiguration);
     }
 
     /**

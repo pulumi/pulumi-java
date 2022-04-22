@@ -16,6 +16,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -33,8 +34,8 @@ public class Experiment extends com.pulumi.resources.CustomResource {
     @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     @Export(name="metricGoals", type=List.class, parameters={ExperimentMetricGoalObject.class})
     private Output<List<ExperimentMetricGoalObject>> metricGoals;
@@ -63,14 +64,14 @@ public class Experiment extends com.pulumi.resources.CustomResource {
     @Export(name="randomizationSalt", type=String.class, parameters={})
     private Output</* @Nullable */ String> randomizationSalt;
 
-    public Output</* @Nullable */ String> randomizationSalt() {
-        return this.randomizationSalt;
+    public Output<Optional<String>> randomizationSalt() {
+        return Codegen.optional(this.randomizationSalt);
     }
     @Export(name="samplingRate", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> samplingRate;
 
-    public Output</* @Nullable */ Integer> samplingRate() {
-        return this.samplingRate;
+    public Output<Optional<Integer>> samplingRate() {
+        return Codegen.optional(this.samplingRate);
     }
     /**
      * An array of key-value pairs to apply to this resource.
@@ -83,8 +84,8 @@ public class Experiment extends com.pulumi.resources.CustomResource {
      * @return An array of key-value pairs to apply to this resource.
      * 
      */
-    public Output</* @Nullable */ List<ExperimentTag>> tags() {
-        return this.tags;
+    public Output<Optional<List<ExperimentTag>>> tags() {
+        return Codegen.optional(this.tags);
     }
     @Export(name="treatments", type=List.class, parameters={ExperimentTreatmentObject.class})
     private Output<List<ExperimentTreatmentObject>> treatments;

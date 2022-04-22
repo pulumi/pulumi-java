@@ -15,6 +15,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -45,8 +46,8 @@ public class OuContainer extends com.pulumi.resources.CustomResource {
      * @return The list of container accounts
      * 
      */
-    public Output</* @Nullable */ List<ContainerAccountResponse>> accounts() {
-        return this.accounts;
+    public Output<Optional<List<ContainerAccountResponse>>> accounts() {
+        return Codegen.optional(this.accounts);
     }
     /**
      * The OuContainer name
@@ -115,8 +116,8 @@ public class OuContainer extends com.pulumi.resources.CustomResource {
      * @return Resource etag
      * 
      */
-    public Output</* @Nullable */ String> etag() {
-        return this.etag;
+    public Output<Optional<String>> etag() {
+        return Codegen.optional(this.etag);
     }
     /**
      * Resource location
@@ -129,8 +130,8 @@ public class OuContainer extends com.pulumi.resources.CustomResource {
      * @return Resource location
      * 
      */
-    public Output</* @Nullable */ String> location() {
-        return this.location;
+    public Output<Optional<String>> location() {
+        return Codegen.optional(this.location);
     }
     /**
      * Resource name
@@ -199,8 +200,8 @@ public class OuContainer extends com.pulumi.resources.CustomResource {
      * @return Resource tags
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * Azure Active Directory tenant id

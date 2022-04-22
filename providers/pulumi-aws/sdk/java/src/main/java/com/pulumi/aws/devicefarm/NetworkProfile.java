@@ -13,6 +13,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -58,8 +59,8 @@ public class NetworkProfile extends com.pulumi.resources.CustomResource {
      * @return The description of the network profile.
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * The data throughput rate in bits per second, as an integer from `0` to `104857600`. Default value is `104857600`.
@@ -72,8 +73,8 @@ public class NetworkProfile extends com.pulumi.resources.CustomResource {
      * @return The data throughput rate in bits per second, as an integer from `0` to `104857600`. Default value is `104857600`.
      * 
      */
-    public Output</* @Nullable */ Integer> downlinkBandwidthBits() {
-        return this.downlinkBandwidthBits;
+    public Output<Optional<Integer>> downlinkBandwidthBits() {
+        return Codegen.optional(this.downlinkBandwidthBits);
     }
     /**
      * Delay time for all packets to destination in milliseconds as an integer from `0` to `2000`.
@@ -86,8 +87,8 @@ public class NetworkProfile extends com.pulumi.resources.CustomResource {
      * @return Delay time for all packets to destination in milliseconds as an integer from `0` to `2000`.
      * 
      */
-    public Output</* @Nullable */ Integer> downlinkDelayMs() {
-        return this.downlinkDelayMs;
+    public Output<Optional<Integer>> downlinkDelayMs() {
+        return Codegen.optional(this.downlinkDelayMs);
     }
     /**
      * Time variation in the delay of received packets in milliseconds as an integer from `0` to `2000`.
@@ -100,8 +101,8 @@ public class NetworkProfile extends com.pulumi.resources.CustomResource {
      * @return Time variation in the delay of received packets in milliseconds as an integer from `0` to `2000`.
      * 
      */
-    public Output</* @Nullable */ Integer> downlinkJitterMs() {
-        return this.downlinkJitterMs;
+    public Output<Optional<Integer>> downlinkJitterMs() {
+        return Codegen.optional(this.downlinkJitterMs);
     }
     /**
      * Proportion of received packets that fail to arrive from `0` to `100` percent.
@@ -114,8 +115,8 @@ public class NetworkProfile extends com.pulumi.resources.CustomResource {
      * @return Proportion of received packets that fail to arrive from `0` to `100` percent.
      * 
      */
-    public Output</* @Nullable */ Integer> downlinkLossPercent() {
-        return this.downlinkLossPercent;
+    public Output<Optional<Integer>> downlinkLossPercent() {
+        return Codegen.optional(this.downlinkLossPercent);
     }
     /**
      * The name for the network profile.
@@ -156,8 +157,8 @@ public class NetworkProfile extends com.pulumi.resources.CustomResource {
      * @return A map of tags to assign to the resource. If configured with a provider [`default_tags` configuration block](https://www.terraform.io/docs/providers/aws/index.html#default_tags-configuration-block) present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * A map of tags assigned to the resource, including those inherited from the provider [`default_tags` configuration block](https://www.terraform.io/docs/providers/aws/index.html#default_tags-configuration-block).
@@ -184,8 +185,8 @@ public class NetworkProfile extends com.pulumi.resources.CustomResource {
      * @return The type of network profile to create. Valid values are listed are `PRIVATE` and `CURATED`.
      * 
      */
-    public Output</* @Nullable */ String> type() {
-        return this.type;
+    public Output<Optional<String>> type() {
+        return Codegen.optional(this.type);
     }
     /**
      * The data throughput rate in bits per second, as an integer from `0` to `104857600`. Default value is `104857600`.
@@ -198,8 +199,8 @@ public class NetworkProfile extends com.pulumi.resources.CustomResource {
      * @return The data throughput rate in bits per second, as an integer from `0` to `104857600`. Default value is `104857600`.
      * 
      */
-    public Output</* @Nullable */ Integer> uplinkBandwidthBits() {
-        return this.uplinkBandwidthBits;
+    public Output<Optional<Integer>> uplinkBandwidthBits() {
+        return Codegen.optional(this.uplinkBandwidthBits);
     }
     /**
      * Delay time for all packets to destination in milliseconds as an integer from `0` to `2000`.
@@ -212,8 +213,8 @@ public class NetworkProfile extends com.pulumi.resources.CustomResource {
      * @return Delay time for all packets to destination in milliseconds as an integer from `0` to `2000`.
      * 
      */
-    public Output</* @Nullable */ Integer> uplinkDelayMs() {
-        return this.uplinkDelayMs;
+    public Output<Optional<Integer>> uplinkDelayMs() {
+        return Codegen.optional(this.uplinkDelayMs);
     }
     /**
      * Time variation in the delay of received packets in milliseconds as an integer from `0` to `2000`.
@@ -226,8 +227,8 @@ public class NetworkProfile extends com.pulumi.resources.CustomResource {
      * @return Time variation in the delay of received packets in milliseconds as an integer from `0` to `2000`.
      * 
      */
-    public Output</* @Nullable */ Integer> uplinkJitterMs() {
-        return this.uplinkJitterMs;
+    public Output<Optional<Integer>> uplinkJitterMs() {
+        return Codegen.optional(this.uplinkJitterMs);
     }
     /**
      * Proportion of received packets that fail to arrive from `0` to `100` percent.
@@ -240,8 +241,8 @@ public class NetworkProfile extends com.pulumi.resources.CustomResource {
      * @return Proportion of received packets that fail to arrive from `0` to `100` percent.
      * 
      */
-    public Output</* @Nullable */ Integer> uplinkLossPercent() {
-        return this.uplinkLossPercent;
+    public Output<Optional<Integer>> uplinkLossPercent() {
+        return Codegen.optional(this.uplinkLossPercent);
     }
 
     /**

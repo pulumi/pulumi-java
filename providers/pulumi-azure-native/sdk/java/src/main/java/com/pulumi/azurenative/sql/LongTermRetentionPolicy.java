@@ -13,6 +13,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -43,8 +44,8 @@ public class LongTermRetentionPolicy extends com.pulumi.resources.CustomResource
      * @return The monthly retention policy for an LTR backup in an ISO 8601 format.
      * 
      */
-    public Output</* @Nullable */ String> monthlyRetention() {
-        return this.monthlyRetention;
+    public Output<Optional<String>> monthlyRetention() {
+        return Codegen.optional(this.monthlyRetention);
     }
     /**
      * Resource name.
@@ -85,8 +86,8 @@ public class LongTermRetentionPolicy extends com.pulumi.resources.CustomResource
      * @return The week of year to take the yearly backup in an ISO 8601 format.
      * 
      */
-    public Output</* @Nullable */ Integer> weekOfYear() {
-        return this.weekOfYear;
+    public Output<Optional<Integer>> weekOfYear() {
+        return Codegen.optional(this.weekOfYear);
     }
     /**
      * The weekly retention policy for an LTR backup in an ISO 8601 format.
@@ -99,8 +100,8 @@ public class LongTermRetentionPolicy extends com.pulumi.resources.CustomResource
      * @return The weekly retention policy for an LTR backup in an ISO 8601 format.
      * 
      */
-    public Output</* @Nullable */ String> weeklyRetention() {
-        return this.weeklyRetention;
+    public Output<Optional<String>> weeklyRetention() {
+        return Codegen.optional(this.weeklyRetention);
     }
     /**
      * The yearly retention policy for an LTR backup in an ISO 8601 format.
@@ -113,8 +114,8 @@ public class LongTermRetentionPolicy extends com.pulumi.resources.CustomResource
      * @return The yearly retention policy for an LTR backup in an ISO 8601 format.
      * 
      */
-    public Output</* @Nullable */ String> yearlyRetention() {
-        return this.yearlyRetention;
+    public Output<Optional<String>> yearlyRetention() {
+        return Codegen.optional(this.yearlyRetention);
     }
 
     /**

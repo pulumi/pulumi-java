@@ -13,6 +13,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -99,8 +100,8 @@ public class AttachedDatabaseConfiguration extends com.pulumi.resources.CustomRe
      * @return Resource location.
      * 
      */
-    public Output</* @Nullable */ String> location() {
-        return this.location;
+    public Output<Optional<String>> location() {
+        return Codegen.optional(this.location);
     }
     /**
      * The name of the resource
@@ -141,8 +142,8 @@ public class AttachedDatabaseConfiguration extends com.pulumi.resources.CustomRe
      * @return Table level sharing specifications
      * 
      */
-    public Output</* @Nullable */ TableLevelSharingPropertiesResponse> tableLevelSharingProperties() {
-        return this.tableLevelSharingProperties;
+    public Output<Optional<TableLevelSharingPropertiesResponse>> tableLevelSharingProperties() {
+        return Codegen.optional(this.tableLevelSharingProperties);
     }
     /**
      * The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;

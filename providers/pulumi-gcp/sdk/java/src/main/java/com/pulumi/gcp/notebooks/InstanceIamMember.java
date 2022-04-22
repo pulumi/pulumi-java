@@ -12,6 +12,7 @@ import com.pulumi.gcp.notebooks.InstanceIamMemberArgs;
 import com.pulumi.gcp.notebooks.inputs.InstanceIamMemberState;
 import com.pulumi.gcp.notebooks.outputs.InstanceIamMemberCondition;
 import java.lang.String;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -61,8 +62,8 @@ public class InstanceIamMember extends com.pulumi.resources.CustomResource {
     @Export(name="condition", type=InstanceIamMemberCondition.class, parameters={})
     private Output</* @Nullable */ InstanceIamMemberCondition> condition;
 
-    public Output</* @Nullable */ InstanceIamMemberCondition> condition() {
-        return this.condition;
+    public Output<Optional<InstanceIamMemberCondition>> condition() {
+        return Codegen.optional(this.condition);
     }
     /**
      * (Computed) The etag of the IAM policy.

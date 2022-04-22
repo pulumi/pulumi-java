@@ -15,6 +15,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -45,8 +46,8 @@ public class Snapshot extends com.pulumi.resources.CustomResource {
      * @return CreationData to be used to specify the source agent pool resource ID to create this snapshot.
      * 
      */
-    public Output</* @Nullable */ CreationDataResponse> creationData() {
-        return this.creationData;
+    public Output<Optional<CreationDataResponse>> creationData() {
+        return Codegen.optional(this.creationData);
     }
     /**
      * Resource location
@@ -87,8 +88,8 @@ public class Snapshot extends com.pulumi.resources.CustomResource {
      * @return The type of a snapshot. The default is NodePool.
      * 
      */
-    public Output</* @Nullable */ String> snapshotType() {
-        return this.snapshotType;
+    public Output<Optional<String>> snapshotType() {
+        return Codegen.optional(this.snapshotType);
     }
     /**
      * The system metadata relating to this snapshot.
@@ -115,8 +116,8 @@ public class Snapshot extends com.pulumi.resources.CustomResource {
      * @return Resource tags
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * Resource type

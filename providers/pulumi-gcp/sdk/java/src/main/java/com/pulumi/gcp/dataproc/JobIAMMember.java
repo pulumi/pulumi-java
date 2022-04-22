@@ -12,6 +12,7 @@ import com.pulumi.gcp.dataproc.JobIAMMemberArgs;
 import com.pulumi.gcp.dataproc.inputs.JobIAMMemberState;
 import com.pulumi.gcp.dataproc.outputs.JobIAMMemberCondition;
 import java.lang.String;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -57,8 +58,8 @@ public class JobIAMMember extends com.pulumi.resources.CustomResource {
     @Export(name="condition", type=JobIAMMemberCondition.class, parameters={})
     private Output</* @Nullable */ JobIAMMemberCondition> condition;
 
-    public Output</* @Nullable */ JobIAMMemberCondition> condition() {
-        return this.condition;
+    public Output<Optional<JobIAMMemberCondition>> condition() {
+        return Codegen.optional(this.condition);
     }
     /**
      * (Computed) The etag of the jobs&#39;s IAM policy.

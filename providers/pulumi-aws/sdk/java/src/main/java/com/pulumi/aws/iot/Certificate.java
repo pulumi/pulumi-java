@@ -12,6 +12,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -83,8 +84,8 @@ public class Certificate extends com.pulumi.resources.CustomResource {
      * for more information on generating keys and a certificate.
      * 
      */
-    public Output</* @Nullable */ String> csr() {
-        return this.csr;
+    public Output<Optional<String>> csr() {
+        return Codegen.optional(this.csr);
     }
     /**
      * When no CSR is provided, the private key.

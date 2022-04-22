@@ -16,6 +16,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -49,8 +50,8 @@ public class Application extends com.pulumi.resources.CustomResource {
      * @return If set to true, application will be configured with recommended monitoring configuration.
      * 
      */
-    public Output</* @Nullable */ Boolean> autoConfigurationEnabled() {
-        return this.autoConfigurationEnabled;
+    public Output<Optional<Boolean>> autoConfigurationEnabled() {
+        return Codegen.optional(this.autoConfigurationEnabled);
     }
     /**
      * Indicates whether Application Insights can listen to CloudWatch events for the application resources.
@@ -63,8 +64,8 @@ public class Application extends com.pulumi.resources.CustomResource {
      * @return Indicates whether Application Insights can listen to CloudWatch events for the application resources.
      * 
      */
-    public Output</* @Nullable */ Boolean> cWEMonitorEnabled() {
-        return this.cWEMonitorEnabled;
+    public Output<Optional<Boolean>> cWEMonitorEnabled() {
+        return Codegen.optional(this.cWEMonitorEnabled);
     }
     /**
      * The monitoring settings of the components.
@@ -77,8 +78,8 @@ public class Application extends com.pulumi.resources.CustomResource {
      * @return The monitoring settings of the components.
      * 
      */
-    public Output</* @Nullable */ List<ApplicationComponentMonitoringSetting>> componentMonitoringSettings() {
-        return this.componentMonitoringSettings;
+    public Output<Optional<List<ApplicationComponentMonitoringSetting>>> componentMonitoringSettings() {
+        return Codegen.optional(this.componentMonitoringSettings);
     }
     /**
      * The custom grouped components.
@@ -91,8 +92,8 @@ public class Application extends com.pulumi.resources.CustomResource {
      * @return The custom grouped components.
      * 
      */
-    public Output</* @Nullable */ List<ApplicationCustomComponent>> customComponents() {
-        return this.customComponents;
+    public Output<Optional<List<ApplicationCustomComponent>>> customComponents() {
+        return Codegen.optional(this.customComponents);
     }
     /**
      * The log pattern sets.
@@ -105,8 +106,8 @@ public class Application extends com.pulumi.resources.CustomResource {
      * @return The log pattern sets.
      * 
      */
-    public Output</* @Nullable */ List<ApplicationLogPatternSet>> logPatternSets() {
-        return this.logPatternSets;
+    public Output<Optional<List<ApplicationLogPatternSet>>> logPatternSets() {
+        return Codegen.optional(this.logPatternSets);
     }
     /**
      * When set to true, creates opsItems for any problems detected on an application.
@@ -119,8 +120,8 @@ public class Application extends com.pulumi.resources.CustomResource {
      * @return When set to true, creates opsItems for any problems detected on an application.
      * 
      */
-    public Output</* @Nullable */ Boolean> opsCenterEnabled() {
-        return this.opsCenterEnabled;
+    public Output<Optional<Boolean>> opsCenterEnabled() {
+        return Codegen.optional(this.opsCenterEnabled);
     }
     /**
      * The SNS topic provided to Application Insights that is associated to the created opsItem.
@@ -133,8 +134,8 @@ public class Application extends com.pulumi.resources.CustomResource {
      * @return The SNS topic provided to Application Insights that is associated to the created opsItem.
      * 
      */
-    public Output</* @Nullable */ String> opsItemSNSTopicArn() {
-        return this.opsItemSNSTopicArn;
+    public Output<Optional<String>> opsItemSNSTopicArn() {
+        return Codegen.optional(this.opsItemSNSTopicArn);
     }
     /**
      * The name of the resource group.
@@ -161,8 +162,8 @@ public class Application extends com.pulumi.resources.CustomResource {
      * @return The tags of Application Insights application.
      * 
      */
-    public Output</* @Nullable */ List<ApplicationTag>> tags() {
-        return this.tags;
+    public Output<Optional<List<ApplicationTag>>> tags() {
+        return Codegen.optional(this.tags);
     }
 
     /**

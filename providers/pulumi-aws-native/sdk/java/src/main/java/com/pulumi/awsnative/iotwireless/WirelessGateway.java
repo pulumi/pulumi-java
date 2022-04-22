@@ -13,6 +13,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -46,8 +47,8 @@ public class WirelessGateway extends com.pulumi.resources.CustomResource {
      * @return Description of Wireless Gateway.
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * The date and time when the most recent uplink was received.
@@ -60,8 +61,8 @@ public class WirelessGateway extends com.pulumi.resources.CustomResource {
      * @return The date and time when the most recent uplink was received.
      * 
      */
-    public Output</* @Nullable */ String> lastUplinkReceivedAt() {
-        return this.lastUplinkReceivedAt;
+    public Output<Optional<String>> lastUplinkReceivedAt() {
+        return Codegen.optional(this.lastUplinkReceivedAt);
     }
     /**
      * The combination of Package, Station and Model which represents the version of the LoRaWAN Wireless Gateway.
@@ -88,8 +89,8 @@ public class WirelessGateway extends com.pulumi.resources.CustomResource {
      * @return Name of Wireless Gateway.
      * 
      */
-    public Output</* @Nullable */ String> name() {
-        return this.name;
+    public Output<Optional<String>> name() {
+        return Codegen.optional(this.name);
     }
     /**
      * A list of key-value pairs that contain metadata for the gateway.
@@ -102,8 +103,8 @@ public class WirelessGateway extends com.pulumi.resources.CustomResource {
      * @return A list of key-value pairs that contain metadata for the gateway.
      * 
      */
-    public Output</* @Nullable */ List<WirelessGatewayTag>> tags() {
-        return this.tags;
+    public Output<Optional<List<WirelessGatewayTag>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * Thing Arn. Passed into Update to associate a Thing with the Wireless Gateway.
@@ -116,8 +117,8 @@ public class WirelessGateway extends com.pulumi.resources.CustomResource {
      * @return Thing Arn. Passed into Update to associate a Thing with the Wireless Gateway.
      * 
      */
-    public Output</* @Nullable */ String> thingArn() {
-        return this.thingArn;
+    public Output<Optional<String>> thingArn() {
+        return Codegen.optional(this.thingArn);
     }
     /**
      * Thing Arn. If there is a Thing created, this can be returned with a Get call.

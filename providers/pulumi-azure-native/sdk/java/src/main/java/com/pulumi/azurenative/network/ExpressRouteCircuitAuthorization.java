@@ -12,6 +12,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -42,8 +43,8 @@ public class ExpressRouteCircuitAuthorization extends com.pulumi.resources.Custo
      * @return The authorization key.
      * 
      */
-    public Output</* @Nullable */ String> authorizationKey() {
-        return this.authorizationKey;
+    public Output<Optional<String>> authorizationKey() {
+        return Codegen.optional(this.authorizationKey);
     }
     /**
      * The authorization use status.
@@ -56,8 +57,8 @@ public class ExpressRouteCircuitAuthorization extends com.pulumi.resources.Custo
      * @return The authorization use status.
      * 
      */
-    public Output</* @Nullable */ String> authorizationUseStatus() {
-        return this.authorizationUseStatus;
+    public Output<Optional<String>> authorizationUseStatus() {
+        return Codegen.optional(this.authorizationUseStatus);
     }
     /**
      * A unique read-only string that changes whenever the resource is updated.
@@ -84,8 +85,8 @@ public class ExpressRouteCircuitAuthorization extends com.pulumi.resources.Custo
      * @return The name of the resource that is unique within a resource group. This name can be used to access the resource.
      * 
      */
-    public Output</* @Nullable */ String> name() {
-        return this.name;
+    public Output<Optional<String>> name() {
+        return Codegen.optional(this.name);
     }
     /**
      * The provisioning state of the authorization resource.

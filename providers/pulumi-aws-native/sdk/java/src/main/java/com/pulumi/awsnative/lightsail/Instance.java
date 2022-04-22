@@ -18,6 +18,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -37,8 +38,8 @@ public class Instance extends com.pulumi.resources.CustomResource {
      * @return An array of objects representing the add-ons to enable for the new instance.
      * 
      */
-    public Output</* @Nullable */ List<InstanceAddOn>> addOns() {
-        return this.addOns;
+    public Output<Optional<List<InstanceAddOn>>> addOns() {
+        return Codegen.optional(this.addOns);
     }
     /**
      * The Availability Zone in which to create your instance. Use the following format: us-east-2a (case sensitive). Be sure to add the include Availability Zones parameter to your request.
@@ -51,8 +52,8 @@ public class Instance extends com.pulumi.resources.CustomResource {
      * @return The Availability Zone in which to create your instance. Use the following format: us-east-2a (case sensitive). Be sure to add the include Availability Zones parameter to your request.
      * 
      */
-    public Output</* @Nullable */ String> availabilityZone() {
-        return this.availabilityZone;
+    public Output<Optional<String>> availabilityZone() {
+        return Codegen.optional(this.availabilityZone);
     }
     /**
      * The ID for a virtual private server image (e.g., app_wordpress_4_4 or app_lamp_7_0 ). Use the get blueprints operation to return a list of available images (or blueprints ).
@@ -85,8 +86,8 @@ public class Instance extends com.pulumi.resources.CustomResource {
     @Export(name="hardware", type=InstanceHardware.class, parameters={})
     private Output</* @Nullable */ InstanceHardware> hardware;
 
-    public Output</* @Nullable */ InstanceHardware> hardware() {
-        return this.hardware;
+    public Output<Optional<InstanceHardware>> hardware() {
+        return Codegen.optional(this.hardware);
     }
     @Export(name="instanceArn", type=String.class, parameters={})
     private Output<String> instanceArn;
@@ -133,20 +134,20 @@ public class Instance extends com.pulumi.resources.CustomResource {
      * @return The name of your key pair.
      * 
      */
-    public Output</* @Nullable */ String> keyPairName() {
-        return this.keyPairName;
+    public Output<Optional<String>> keyPairName() {
+        return Codegen.optional(this.keyPairName);
     }
     @Export(name="location", type=InstanceLocation.class, parameters={})
     private Output</* @Nullable */ InstanceLocation> location;
 
-    public Output</* @Nullable */ InstanceLocation> location() {
-        return this.location;
+    public Output<Optional<InstanceLocation>> location() {
+        return Codegen.optional(this.location);
     }
     @Export(name="networking", type=InstanceNetworking.class, parameters={})
     private Output</* @Nullable */ InstanceNetworking> networking;
 
-    public Output</* @Nullable */ InstanceNetworking> networking() {
-        return this.networking;
+    public Output<Optional<InstanceNetworking>> networking() {
+        return Codegen.optional(this.networking);
     }
     /**
      * Private IP Address of the Instance
@@ -207,8 +208,8 @@ public class Instance extends com.pulumi.resources.CustomResource {
     @Export(name="state", type=InstanceState.class, parameters={})
     private Output</* @Nullable */ InstanceState> state;
 
-    public Output</* @Nullable */ InstanceState> state() {
-        return this.state;
+    public Output<Optional<InstanceState>> state() {
+        return Codegen.optional(this.state);
     }
     /**
      * Support code to help identify any issues
@@ -235,8 +236,8 @@ public class Instance extends com.pulumi.resources.CustomResource {
      * @return An array of key-value pairs to apply to this resource.
      * 
      */
-    public Output</* @Nullable */ List<InstanceTag>> tags() {
-        return this.tags;
+    public Output<Optional<List<InstanceTag>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * A launch script you can create that configures a server with additional user data. For example, you might want to run apt-get -y update.
@@ -249,8 +250,8 @@ public class Instance extends com.pulumi.resources.CustomResource {
      * @return A launch script you can create that configures a server with additional user data. For example, you might want to run apt-get -y update.
      * 
      */
-    public Output</* @Nullable */ String> userData() {
-        return this.userData;
+    public Output<Optional<String>> userData() {
+        return Codegen.optional(this.userData);
     }
     /**
      * Username of the  Lightsail instance.

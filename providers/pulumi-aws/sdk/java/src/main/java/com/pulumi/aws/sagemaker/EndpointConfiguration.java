@@ -16,6 +16,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -59,8 +60,8 @@ public class EndpointConfiguration extends com.pulumi.resources.CustomResource {
      * @return Specifies configuration for how an endpoint performs asynchronous inference.
      * 
      */
-    public Output</* @Nullable */ EndpointConfigurationAsyncInferenceConfig> asyncInferenceConfig() {
-        return this.asyncInferenceConfig;
+    public Output<Optional<EndpointConfigurationAsyncInferenceConfig>> asyncInferenceConfig() {
+        return Codegen.optional(this.asyncInferenceConfig);
     }
     /**
      * Specifies the parameters to capture input/output of Sagemaker models endpoints. Fields are documented below.
@@ -73,8 +74,8 @@ public class EndpointConfiguration extends com.pulumi.resources.CustomResource {
      * @return Specifies the parameters to capture input/output of Sagemaker models endpoints. Fields are documented below.
      * 
      */
-    public Output</* @Nullable */ EndpointConfigurationDataCaptureConfig> dataCaptureConfig() {
-        return this.dataCaptureConfig;
+    public Output<Optional<EndpointConfigurationDataCaptureConfig>> dataCaptureConfig() {
+        return Codegen.optional(this.dataCaptureConfig);
     }
     /**
      * Amazon Resource Name (ARN) of a AWS Key Management Service key that Amazon SageMaker uses to encrypt data on the storage volume attached to the ML compute instance that hosts the endpoint.
@@ -87,8 +88,8 @@ public class EndpointConfiguration extends com.pulumi.resources.CustomResource {
      * @return Amazon Resource Name (ARN) of a AWS Key Management Service key that Amazon SageMaker uses to encrypt data on the storage volume attached to the ML compute instance that hosts the endpoint.
      * 
      */
-    public Output</* @Nullable */ String> kmsKeyArn() {
-        return this.kmsKeyArn;
+    public Output<Optional<String>> kmsKeyArn() {
+        return Codegen.optional(this.kmsKeyArn);
     }
     /**
      * The name of the endpoint configuration. If omitted, this provider will assign a random, unique name.
@@ -129,8 +130,8 @@ public class EndpointConfiguration extends com.pulumi.resources.CustomResource {
      * @return A mapping of tags to assign to the resource.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * A map of tags assigned to the resource, including those inherited from the provider .

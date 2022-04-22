@@ -13,6 +13,7 @@ import com.pulumi.gcp.servicedirectory.inputs.NamespaceIamBindingState;
 import com.pulumi.gcp.servicedirectory.outputs.NamespaceIamBindingCondition;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -62,8 +63,8 @@ public class NamespaceIamBinding extends com.pulumi.resources.CustomResource {
     @Export(name="condition", type=NamespaceIamBindingCondition.class, parameters={})
     private Output</* @Nullable */ NamespaceIamBindingCondition> condition;
 
-    public Output</* @Nullable */ NamespaceIamBindingCondition> condition() {
-        return this.condition;
+    public Output<Optional<NamespaceIamBindingCondition>> condition() {
+        return Codegen.optional(this.condition);
     }
     /**
      * (Computed) The etag of the IAM policy.

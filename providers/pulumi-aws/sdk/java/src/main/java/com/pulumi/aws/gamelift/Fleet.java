@@ -16,6 +16,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -69,8 +70,8 @@ public class Fleet extends com.pulumi.resources.CustomResource {
      * @return Human-readable description of the fleet.
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * Range of IP addresses and port settings that permit inbound traffic to access server processes running on the fleet. See below.
@@ -83,8 +84,8 @@ public class Fleet extends com.pulumi.resources.CustomResource {
      * @return Range of IP addresses and port settings that permit inbound traffic to access server processes running on the fleet. See below.
      * 
      */
-    public Output</* @Nullable */ List<FleetEc2InboundPermission>> ec2InboundPermissions() {
-        return this.ec2InboundPermissions;
+    public Output<Optional<List<FleetEc2InboundPermission>>> ec2InboundPermissions() {
+        return Codegen.optional(this.ec2InboundPermissions);
     }
     /**
      * Name of an EC2 instance typeE.g., `t2.micro`
@@ -111,8 +112,8 @@ public class Fleet extends com.pulumi.resources.CustomResource {
      * @return Type of fleet. This value must be `ON_DEMAND` or `SPOT`. Defaults to `ON_DEMAND`.
      * 
      */
-    public Output</* @Nullable */ String> fleetType() {
-        return this.fleetType;
+    public Output<Optional<String>> fleetType() {
+        return Codegen.optional(this.fleetType);
     }
     /**
      * ARN of an IAM role that instances in the fleet can assume.
@@ -125,8 +126,8 @@ public class Fleet extends com.pulumi.resources.CustomResource {
      * @return ARN of an IAM role that instances in the fleet can assume.
      * 
      */
-    public Output</* @Nullable */ String> instanceRoleArn() {
-        return this.instanceRoleArn;
+    public Output<Optional<String>> instanceRoleArn() {
+        return Codegen.optional(this.instanceRoleArn);
     }
     @Export(name="logPaths", type=List.class, parameters={String.class})
     private Output<List<String>> logPaths;
@@ -173,8 +174,8 @@ public class Fleet extends com.pulumi.resources.CustomResource {
      * @return Game session protection policy to apply to all instances in this fleetE.g., `FullProtection`. Defaults to `NoProtection`.
      * 
      */
-    public Output</* @Nullable */ String> newGameSessionProtectionPolicy() {
-        return this.newGameSessionProtectionPolicy;
+    public Output<Optional<String>> newGameSessionProtectionPolicy() {
+        return Codegen.optional(this.newGameSessionProtectionPolicy);
     }
     /**
      * Operating system of the fleet&#39;s computing resources.
@@ -201,8 +202,8 @@ public class Fleet extends com.pulumi.resources.CustomResource {
      * @return Policy that limits the number of game sessions an individual player can create over a span of time for this fleet. See below.
      * 
      */
-    public Output</* @Nullable */ FleetResourceCreationLimitPolicy> resourceCreationLimitPolicy() {
-        return this.resourceCreationLimitPolicy;
+    public Output<Optional<FleetResourceCreationLimitPolicy>> resourceCreationLimitPolicy() {
+        return Codegen.optional(this.resourceCreationLimitPolicy);
     }
     /**
      * Instructions for launching server processes on each instance in the fleet. See below.
@@ -215,8 +216,8 @@ public class Fleet extends com.pulumi.resources.CustomResource {
      * @return Instructions for launching server processes on each instance in the fleet. See below.
      * 
      */
-    public Output</* @Nullable */ FleetRuntimeConfiguration> runtimeConfiguration() {
-        return this.runtimeConfiguration;
+    public Output<Optional<FleetRuntimeConfiguration>> runtimeConfiguration() {
+        return Codegen.optional(this.runtimeConfiguration);
     }
     /**
      * Key-value map of resource tags. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
@@ -229,8 +230,8 @@ public class Fleet extends com.pulumi.resources.CustomResource {
      * @return Key-value map of resource tags. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * A map of tags assigned to the resource, including those inherited from the provider .

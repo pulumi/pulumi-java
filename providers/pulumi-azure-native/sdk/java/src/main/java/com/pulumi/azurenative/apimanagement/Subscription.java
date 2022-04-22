@@ -13,6 +13,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -43,8 +44,8 @@ public class Subscription extends com.pulumi.resources.CustomResource {
      * @return Determines whether tracing is enabled
      * 
      */
-    public Output</* @Nullable */ Boolean> allowTracing() {
-        return this.allowTracing;
+    public Output<Optional<Boolean>> allowTracing() {
+        return Codegen.optional(this.allowTracing);
     }
     /**
      * Subscription creation date. The date conforms to the following format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard.
@@ -71,8 +72,8 @@ public class Subscription extends com.pulumi.resources.CustomResource {
      * @return The name of the subscription, or null if the subscription has no name.
      * 
      */
-    public Output</* @Nullable */ String> displayName() {
-        return this.displayName;
+    public Output<Optional<String>> displayName() {
+        return Codegen.optional(this.displayName);
     }
     /**
      * Date when subscription was cancelled or expired. The setting is for audit purposes only and the subscription is not automatically cancelled. The subscription lifecycle can be managed by using the `state` property. The date conforms to the following format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard.
@@ -85,8 +86,8 @@ public class Subscription extends com.pulumi.resources.CustomResource {
      * @return Date when subscription was cancelled or expired. The setting is for audit purposes only and the subscription is not automatically cancelled. The subscription lifecycle can be managed by using the `state` property. The date conforms to the following format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard.
      * 
      */
-    public Output</* @Nullable */ String> endDate() {
-        return this.endDate;
+    public Output<Optional<String>> endDate() {
+        return Codegen.optional(this.endDate);
     }
     /**
      * Subscription expiration date. The setting is for audit purposes only and the subscription is not automatically expired. The subscription lifecycle can be managed by using the `state` property. The date conforms to the following format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard.
@@ -99,8 +100,8 @@ public class Subscription extends com.pulumi.resources.CustomResource {
      * @return Subscription expiration date. The setting is for audit purposes only and the subscription is not automatically expired. The subscription lifecycle can be managed by using the `state` property. The date conforms to the following format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard.
      * 
      */
-    public Output</* @Nullable */ String> expirationDate() {
-        return this.expirationDate;
+    public Output<Optional<String>> expirationDate() {
+        return Codegen.optional(this.expirationDate);
     }
     /**
      * Resource name.
@@ -127,8 +128,8 @@ public class Subscription extends com.pulumi.resources.CustomResource {
      * @return Upcoming subscription expiration notification date. The date conforms to the following format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard.
      * 
      */
-    public Output</* @Nullable */ String> notificationDate() {
-        return this.notificationDate;
+    public Output<Optional<String>> notificationDate() {
+        return Codegen.optional(this.notificationDate);
     }
     /**
      * The user resource identifier of the subscription owner. The value is a valid relative URL in the format of /users/{userId} where {userId} is a user identifier.
@@ -141,8 +142,8 @@ public class Subscription extends com.pulumi.resources.CustomResource {
      * @return The user resource identifier of the subscription owner. The value is a valid relative URL in the format of /users/{userId} where {userId} is a user identifier.
      * 
      */
-    public Output</* @Nullable */ String> ownerId() {
-        return this.ownerId;
+    public Output<Optional<String>> ownerId() {
+        return Codegen.optional(this.ownerId);
     }
     /**
      * Subscription primary key. This property will not be filled on &#39;GET&#39; operations! Use &#39;/listSecrets&#39; POST request to get the value.
@@ -155,8 +156,8 @@ public class Subscription extends com.pulumi.resources.CustomResource {
      * @return Subscription primary key. This property will not be filled on &#39;GET&#39; operations! Use &#39;/listSecrets&#39; POST request to get the value.
      * 
      */
-    public Output</* @Nullable */ String> primaryKey() {
-        return this.primaryKey;
+    public Output<Optional<String>> primaryKey() {
+        return Codegen.optional(this.primaryKey);
     }
     /**
      * Scope like /products/{productId} or /apis or /apis/{apiId}.
@@ -183,8 +184,8 @@ public class Subscription extends com.pulumi.resources.CustomResource {
      * @return Subscription secondary key. This property will not be filled on &#39;GET&#39; operations! Use &#39;/listSecrets&#39; POST request to get the value.
      * 
      */
-    public Output</* @Nullable */ String> secondaryKey() {
-        return this.secondaryKey;
+    public Output<Optional<String>> secondaryKey() {
+        return Codegen.optional(this.secondaryKey);
     }
     /**
      * Subscription activation date. The setting is for audit purposes only and the subscription is not automatically activated. The subscription lifecycle can be managed by using the `state` property. The date conforms to the following format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard.
@@ -197,8 +198,8 @@ public class Subscription extends com.pulumi.resources.CustomResource {
      * @return Subscription activation date. The setting is for audit purposes only and the subscription is not automatically activated. The subscription lifecycle can be managed by using the `state` property. The date conforms to the following format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard.
      * 
      */
-    public Output</* @Nullable */ String> startDate() {
-        return this.startDate;
+    public Output<Optional<String>> startDate() {
+        return Codegen.optional(this.startDate);
     }
     /**
      * Subscription state. Possible states are * active – the subscription is active, * suspended – the subscription is blocked, and the subscriber cannot call any APIs of the product, * submitted – the subscription request has been made by the developer, but has not yet been approved or rejected, * rejected – the subscription request has been denied by an administrator, * cancelled – the subscription has been cancelled by the developer or administrator, * expired – the subscription reached its expiration date and was deactivated.
@@ -225,8 +226,8 @@ public class Subscription extends com.pulumi.resources.CustomResource {
      * @return Optional subscription comment added by an administrator when the state is changed to the &#39;rejected&#39;.
      * 
      */
-    public Output</* @Nullable */ String> stateComment() {
-        return this.stateComment;
+    public Output<Optional<String>> stateComment() {
+        return Codegen.optional(this.stateComment);
     }
     /**
      * Resource type for API Management resource.

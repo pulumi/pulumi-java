@@ -15,6 +15,7 @@ import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -45,8 +46,8 @@ public class VirtualNetworkLink extends com.pulumi.resources.CustomResource {
      * @return The ETag of the virtual network link.
      * 
      */
-    public Output</* @Nullable */ String> etag() {
-        return this.etag;
+    public Output<Optional<String>> etag() {
+        return Codegen.optional(this.etag);
     }
     /**
      * The Azure Region where the resource lives
@@ -59,8 +60,8 @@ public class VirtualNetworkLink extends com.pulumi.resources.CustomResource {
      * @return The Azure Region where the resource lives
      * 
      */
-    public Output</* @Nullable */ String> location() {
-        return this.location;
+    public Output<Optional<String>> location() {
+        return Codegen.optional(this.location);
     }
     /**
      * The name of the resource
@@ -101,8 +102,8 @@ public class VirtualNetworkLink extends com.pulumi.resources.CustomResource {
      * @return Is auto-registration of virtual machine records in the virtual network in the Private DNS zone enabled?
      * 
      */
-    public Output</* @Nullable */ Boolean> registrationEnabled() {
-        return this.registrationEnabled;
+    public Output<Optional<Boolean>> registrationEnabled() {
+        return Codegen.optional(this.registrationEnabled);
     }
     /**
      * Resource tags.
@@ -115,8 +116,8 @@ public class VirtualNetworkLink extends com.pulumi.resources.CustomResource {
      * @return Resource tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * The type of the resource. Example - &#39;Microsoft.Network/privateDnsZones&#39;.
@@ -143,8 +144,8 @@ public class VirtualNetworkLink extends com.pulumi.resources.CustomResource {
      * @return The reference of the virtual network.
      * 
      */
-    public Output</* @Nullable */ SubResourceResponse> virtualNetwork() {
-        return this.virtualNetwork;
+    public Output<Optional<SubResourceResponse>> virtualNetwork() {
+        return Codegen.optional(this.virtualNetwork);
     }
     /**
      * The status of the virtual network link to the Private DNS zone. Possible values are &#39;InProgress&#39; and &#39;Done&#39;. This is a read-only property and any attempt to set this value will be ignored.

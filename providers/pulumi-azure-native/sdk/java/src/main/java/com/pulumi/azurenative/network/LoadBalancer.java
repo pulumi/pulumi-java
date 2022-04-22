@@ -22,6 +22,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -52,8 +53,8 @@ public class LoadBalancer extends com.pulumi.resources.CustomResource {
      * @return Collection of backend address pools used by a load balancer.
      * 
      */
-    public Output</* @Nullable */ List<BackendAddressPoolResponse>> backendAddressPools() {
-        return this.backendAddressPools;
+    public Output<Optional<List<BackendAddressPoolResponse>>> backendAddressPools() {
+        return Codegen.optional(this.backendAddressPools);
     }
     /**
      * A unique read-only string that changes whenever the resource is updated.
@@ -80,8 +81,8 @@ public class LoadBalancer extends com.pulumi.resources.CustomResource {
      * @return The extended location of the load balancer.
      * 
      */
-    public Output</* @Nullable */ ExtendedLocationResponse> extendedLocation() {
-        return this.extendedLocation;
+    public Output<Optional<ExtendedLocationResponse>> extendedLocation() {
+        return Codegen.optional(this.extendedLocation);
     }
     /**
      * Object representing the frontend IPs to be used for the load balancer.
@@ -94,8 +95,8 @@ public class LoadBalancer extends com.pulumi.resources.CustomResource {
      * @return Object representing the frontend IPs to be used for the load balancer.
      * 
      */
-    public Output</* @Nullable */ List<FrontendIPConfigurationResponse>> frontendIPConfigurations() {
-        return this.frontendIPConfigurations;
+    public Output<Optional<List<FrontendIPConfigurationResponse>>> frontendIPConfigurations() {
+        return Codegen.optional(this.frontendIPConfigurations);
     }
     /**
      * Defines an external port range for inbound NAT to a single backend port on NICs associated with a load balancer. Inbound NAT rules are created automatically for each NIC associated with the Load Balancer using an external port from this range. Defining an Inbound NAT pool on your Load Balancer is mutually exclusive with defining inbound Nat rules. Inbound NAT pools are referenced from virtual machine scale sets. NICs that are associated with individual virtual machines cannot reference an inbound NAT pool. They have to reference individual inbound NAT rules.
@@ -108,8 +109,8 @@ public class LoadBalancer extends com.pulumi.resources.CustomResource {
      * @return Defines an external port range for inbound NAT to a single backend port on NICs associated with a load balancer. Inbound NAT rules are created automatically for each NIC associated with the Load Balancer using an external port from this range. Defining an Inbound NAT pool on your Load Balancer is mutually exclusive with defining inbound Nat rules. Inbound NAT pools are referenced from virtual machine scale sets. NICs that are associated with individual virtual machines cannot reference an inbound NAT pool. They have to reference individual inbound NAT rules.
      * 
      */
-    public Output</* @Nullable */ List<InboundNatPoolResponse>> inboundNatPools() {
-        return this.inboundNatPools;
+    public Output<Optional<List<InboundNatPoolResponse>>> inboundNatPools() {
+        return Codegen.optional(this.inboundNatPools);
     }
     /**
      * Collection of inbound NAT Rules used by a load balancer. Defining inbound NAT rules on your load balancer is mutually exclusive with defining an inbound NAT pool. Inbound NAT pools are referenced from virtual machine scale sets. NICs that are associated with individual virtual machines cannot reference an Inbound NAT pool. They have to reference individual inbound NAT rules.
@@ -122,8 +123,8 @@ public class LoadBalancer extends com.pulumi.resources.CustomResource {
      * @return Collection of inbound NAT Rules used by a load balancer. Defining inbound NAT rules on your load balancer is mutually exclusive with defining an inbound NAT pool. Inbound NAT pools are referenced from virtual machine scale sets. NICs that are associated with individual virtual machines cannot reference an Inbound NAT pool. They have to reference individual inbound NAT rules.
      * 
      */
-    public Output</* @Nullable */ List<InboundNatRuleResponse>> inboundNatRules() {
-        return this.inboundNatRules;
+    public Output<Optional<List<InboundNatRuleResponse>>> inboundNatRules() {
+        return Codegen.optional(this.inboundNatRules);
     }
     /**
      * Object collection representing the load balancing rules Gets the provisioning.
@@ -136,8 +137,8 @@ public class LoadBalancer extends com.pulumi.resources.CustomResource {
      * @return Object collection representing the load balancing rules Gets the provisioning.
      * 
      */
-    public Output</* @Nullable */ List<LoadBalancingRuleResponse>> loadBalancingRules() {
-        return this.loadBalancingRules;
+    public Output<Optional<List<LoadBalancingRuleResponse>>> loadBalancingRules() {
+        return Codegen.optional(this.loadBalancingRules);
     }
     /**
      * Resource location.
@@ -150,8 +151,8 @@ public class LoadBalancer extends com.pulumi.resources.CustomResource {
      * @return Resource location.
      * 
      */
-    public Output</* @Nullable */ String> location() {
-        return this.location;
+    public Output<Optional<String>> location() {
+        return Codegen.optional(this.location);
     }
     /**
      * Resource name.
@@ -178,8 +179,8 @@ public class LoadBalancer extends com.pulumi.resources.CustomResource {
      * @return The outbound rules.
      * 
      */
-    public Output</* @Nullable */ List<OutboundRuleResponse>> outboundRules() {
-        return this.outboundRules;
+    public Output<Optional<List<OutboundRuleResponse>>> outboundRules() {
+        return Codegen.optional(this.outboundRules);
     }
     /**
      * Collection of probe objects used in the load balancer.
@@ -192,8 +193,8 @@ public class LoadBalancer extends com.pulumi.resources.CustomResource {
      * @return Collection of probe objects used in the load balancer.
      * 
      */
-    public Output</* @Nullable */ List<ProbeResponse>> probes() {
-        return this.probes;
+    public Output<Optional<List<ProbeResponse>>> probes() {
+        return Codegen.optional(this.probes);
     }
     /**
      * The provisioning state of the load balancer resource.
@@ -234,8 +235,8 @@ public class LoadBalancer extends com.pulumi.resources.CustomResource {
      * @return The load balancer SKU.
      * 
      */
-    public Output</* @Nullable */ LoadBalancerSkuResponse> sku() {
-        return this.sku;
+    public Output<Optional<LoadBalancerSkuResponse>> sku() {
+        return Codegen.optional(this.sku);
     }
     /**
      * Resource tags.
@@ -248,8 +249,8 @@ public class LoadBalancer extends com.pulumi.resources.CustomResource {
      * @return Resource tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * Resource type.

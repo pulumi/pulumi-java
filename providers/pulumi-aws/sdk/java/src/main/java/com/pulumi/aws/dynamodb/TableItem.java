@@ -11,6 +11,7 @@ import com.pulumi.core.annotations.Export;
 import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -69,8 +70,8 @@ public class TableItem extends com.pulumi.resources.CustomResource {
      * @return Range key to use for lookups and identification of the item. Required if there is range key defined in the table.
      * 
      */
-    public Output</* @Nullable */ String> rangeKey() {
-        return this.rangeKey;
+    public Output<Optional<String>> rangeKey() {
+        return Codegen.optional(this.rangeKey);
     }
     /**
      * The name of the table to contain the item.

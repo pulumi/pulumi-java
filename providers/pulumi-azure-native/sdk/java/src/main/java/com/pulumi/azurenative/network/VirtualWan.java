@@ -15,6 +15,7 @@ import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -45,8 +46,8 @@ public class VirtualWan extends com.pulumi.resources.CustomResource {
      * @return True if branch to branch traffic is allowed.
      * 
      */
-    public Output</* @Nullable */ Boolean> allowBranchToBranchTraffic() {
-        return this.allowBranchToBranchTraffic;
+    public Output<Optional<Boolean>> allowBranchToBranchTraffic() {
+        return Codegen.optional(this.allowBranchToBranchTraffic);
     }
     /**
      * True if Vnet to Vnet traffic is allowed.
@@ -59,8 +60,8 @@ public class VirtualWan extends com.pulumi.resources.CustomResource {
      * @return True if Vnet to Vnet traffic is allowed.
      * 
      */
-    public Output</* @Nullable */ Boolean> allowVnetToVnetTraffic() {
-        return this.allowVnetToVnetTraffic;
+    public Output<Optional<Boolean>> allowVnetToVnetTraffic() {
+        return Codegen.optional(this.allowVnetToVnetTraffic);
     }
     /**
      * Vpn encryption to be disabled or not.
@@ -73,8 +74,8 @@ public class VirtualWan extends com.pulumi.resources.CustomResource {
      * @return Vpn encryption to be disabled or not.
      * 
      */
-    public Output</* @Nullable */ Boolean> disableVpnEncryption() {
-        return this.disableVpnEncryption;
+    public Output<Optional<Boolean>> disableVpnEncryption() {
+        return Codegen.optional(this.disableVpnEncryption);
     }
     /**
      * A unique read-only string that changes whenever the resource is updated.
@@ -157,8 +158,8 @@ public class VirtualWan extends com.pulumi.resources.CustomResource {
      * @return Resource tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * Resource type.

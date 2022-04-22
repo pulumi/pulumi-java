@@ -14,6 +14,7 @@ import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -100,8 +101,8 @@ public class WCFRelay extends com.pulumi.resources.CustomResource {
      * @return WCF relay type.
      * 
      */
-    public Output</* @Nullable */ String> relayType() {
-        return this.relayType;
+    public Output<Optional<String>> relayType() {
+        return Codegen.optional(this.relayType);
     }
     /**
      * Returns true if client authorization is needed for this relay; otherwise, false.
@@ -114,8 +115,8 @@ public class WCFRelay extends com.pulumi.resources.CustomResource {
      * @return Returns true if client authorization is needed for this relay; otherwise, false.
      * 
      */
-    public Output</* @Nullable */ Boolean> requiresClientAuthorization() {
-        return this.requiresClientAuthorization;
+    public Output<Optional<Boolean>> requiresClientAuthorization() {
+        return Codegen.optional(this.requiresClientAuthorization);
     }
     /**
      * Returns true if transport security is needed for this relay; otherwise, false.
@@ -128,8 +129,8 @@ public class WCFRelay extends com.pulumi.resources.CustomResource {
      * @return Returns true if transport security is needed for this relay; otherwise, false.
      * 
      */
-    public Output</* @Nullable */ Boolean> requiresTransportSecurity() {
-        return this.requiresTransportSecurity;
+    public Output<Optional<Boolean>> requiresTransportSecurity() {
+        return Codegen.optional(this.requiresTransportSecurity);
     }
     /**
      * Resource type.
@@ -170,8 +171,8 @@ public class WCFRelay extends com.pulumi.resources.CustomResource {
      * @return The usermetadata is a placeholder to store user-defined string data for the WCF Relay endpoint. For example, it can be used to store descriptive data, such as list of teams and their contact information. Also, user-defined configuration settings can be stored.
      * 
      */
-    public Output</* @Nullable */ String> userMetadata() {
-        return this.userMetadata;
+    public Output<Optional<String>> userMetadata() {
+        return Codegen.optional(this.userMetadata);
     }
 
     /**

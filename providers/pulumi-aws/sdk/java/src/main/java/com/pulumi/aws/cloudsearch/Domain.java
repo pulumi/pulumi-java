@@ -16,6 +16,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -97,8 +98,8 @@ public class Domain extends com.pulumi.resources.CustomResource {
      * @return The index fields for documents added to the domain. Documented below.
      * 
      */
-    public Output</* @Nullable */ List<DomainIndexField>> indexFields() {
-        return this.indexFields;
+    public Output<Optional<List<DomainIndexField>>> indexFields() {
+        return Codegen.optional(this.indexFields);
     }
     /**
      * Whether or not to maintain extra instances for the domain in a second Availability Zone to ensure high availability.

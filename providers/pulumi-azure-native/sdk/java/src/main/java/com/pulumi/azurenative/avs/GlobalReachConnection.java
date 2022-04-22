@@ -12,6 +12,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -56,8 +57,8 @@ public class GlobalReachConnection extends com.pulumi.resources.CustomResource {
      * @return Authorization key from the peer express route used for the global reach connection
      * 
      */
-    public Output</* @Nullable */ String> authorizationKey() {
-        return this.authorizationKey;
+    public Output<Optional<String>> authorizationKey() {
+        return Codegen.optional(this.authorizationKey);
     }
     /**
      * The connection status of the global reach connection
@@ -98,8 +99,8 @@ public class GlobalReachConnection extends com.pulumi.resources.CustomResource {
      * @return Identifier of the ExpressRoute Circuit to peer with in the global reach connection
      * 
      */
-    public Output</* @Nullable */ String> peerExpressRouteCircuit() {
-        return this.peerExpressRouteCircuit;
+    public Output<Optional<String>> peerExpressRouteCircuit() {
+        return Codegen.optional(this.peerExpressRouteCircuit);
     }
     /**
      * The state of the  ExpressRoute Circuit Authorization provisioning

@@ -14,6 +14,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -44,8 +45,8 @@ public class DataManager extends com.pulumi.resources.CustomResource {
      * @return Etag of the Resource.
      * 
      */
-    public Output</* @Nullable */ String> etag() {
-        return this.etag;
+    public Output<Optional<String>> etag() {
+        return Codegen.optional(this.etag);
     }
     /**
      * The location of the resource. This will be one of the supported and registered Azure Geo Regions (e.g. West US, East
@@ -90,8 +91,8 @@ public class DataManager extends com.pulumi.resources.CustomResource {
      * @return The sku type.
      * 
      */
-    public Output</* @Nullable */ SkuResponse> sku() {
-        return this.sku;
+    public Output<Optional<SkuResponse>> sku() {
+        return Codegen.optional(this.sku);
     }
     /**
      * The list of key value pairs that describe the resource. These tags can be used in viewing and grouping this resource
@@ -106,8 +107,8 @@ public class DataManager extends com.pulumi.resources.CustomResource {
      * (across resource groups).
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * The Resource type.

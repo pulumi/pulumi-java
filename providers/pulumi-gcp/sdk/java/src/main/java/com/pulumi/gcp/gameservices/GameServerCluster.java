@@ -13,6 +13,7 @@ import com.pulumi.gcp.gameservices.inputs.GameServerClusterState;
 import com.pulumi.gcp.gameservices.outputs.GameServerClusterConnectionInfo;
 import java.lang.String;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -88,8 +89,8 @@ public class GameServerCluster extends com.pulumi.resources.CustomResource {
      * @return Human readable description of the cluster.
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * The labels associated with this game server cluster. Each label is a
@@ -104,8 +105,8 @@ public class GameServerCluster extends com.pulumi.resources.CustomResource {
      * key-value pair.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> labels() {
-        return this.labels;
+    public Output<Optional<Map<String,String>>> labels() {
+        return Codegen.optional(this.labels);
     }
     /**
      * Location of the Cluster.
@@ -118,8 +119,8 @@ public class GameServerCluster extends com.pulumi.resources.CustomResource {
      * @return Location of the Cluster.
      * 
      */
-    public Output</* @Nullable */ String> location() {
-        return this.location;
+    public Output<Optional<String>> location() {
+        return Codegen.optional(this.location);
     }
     /**
      * The resource id of the game server cluster, eg:

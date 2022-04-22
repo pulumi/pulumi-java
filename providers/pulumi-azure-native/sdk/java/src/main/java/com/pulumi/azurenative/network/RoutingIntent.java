@@ -13,6 +13,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -57,8 +58,8 @@ public class RoutingIntent extends com.pulumi.resources.CustomResource {
      * @return The name of the resource that is unique within a resource group. This name can be used to access the resource.
      * 
      */
-    public Output</* @Nullable */ String> name() {
-        return this.name;
+    public Output<Optional<String>> name() {
+        return Codegen.optional(this.name);
     }
     /**
      * The provisioning state of the RoutingIntent resource.
@@ -85,8 +86,8 @@ public class RoutingIntent extends com.pulumi.resources.CustomResource {
      * @return List of routing policies.
      * 
      */
-    public Output</* @Nullable */ List<RoutingPolicyResponse>> routingPolicies() {
-        return this.routingPolicies;
+    public Output<Optional<List<RoutingPolicyResponse>>> routingPolicies() {
+        return Codegen.optional(this.routingPolicies);
     }
     /**
      * Resource type.

@@ -13,6 +13,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -84,8 +85,8 @@ public class Function extends com.pulumi.resources.CustomResource {
      * @return The Function description.
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * A unique ID representing the Function object.
@@ -112,8 +113,8 @@ public class Function extends com.pulumi.resources.CustomResource {
      * @return The version of the request mapping template. Currently the supported value is `2018-05-29`.
      * 
      */
-    public Output</* @Nullable */ String> functionVersion() {
-        return this.functionVersion;
+    public Output<Optional<String>> functionVersion() {
+        return Codegen.optional(this.functionVersion);
     }
     /**
      * The maximum batching size for a resolver. Valid values are between `0` and `2000`.
@@ -126,8 +127,8 @@ public class Function extends com.pulumi.resources.CustomResource {
      * @return The maximum batching size for a resolver. Valid values are between `0` and `2000`.
      * 
      */
-    public Output</* @Nullable */ Integer> maxBatchSize() {
-        return this.maxBatchSize;
+    public Output<Optional<Integer>> maxBatchSize() {
+        return Codegen.optional(this.maxBatchSize);
     }
     /**
      * The Function name. The function name does not have to be unique.
@@ -182,8 +183,8 @@ public class Function extends com.pulumi.resources.CustomResource {
      * @return Describes a Sync configuration for a resolver. See Sync Config.
      * 
      */
-    public Output</* @Nullable */ FunctionSyncConfig> syncConfig() {
-        return this.syncConfig;
+    public Output<Optional<FunctionSyncConfig>> syncConfig() {
+        return Codegen.optional(this.syncConfig);
     }
 
     /**

@@ -10,6 +10,7 @@ import com.pulumi.core.annotations.Export;
 import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -45,8 +46,8 @@ public class NamedQuery extends com.pulumi.resources.CustomResource {
      * @return The query description.
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * The query name.
@@ -59,8 +60,8 @@ public class NamedQuery extends com.pulumi.resources.CustomResource {
      * @return The query name.
      * 
      */
-    public Output</* @Nullable */ String> name() {
-        return this.name;
+    public Output<Optional<String>> name() {
+        return Codegen.optional(this.name);
     }
     /**
      * The unique ID of the query.
@@ -101,8 +102,8 @@ public class NamedQuery extends com.pulumi.resources.CustomResource {
      * @return The name of the workgroup that contains the named query.
      * 
      */
-    public Output</* @Nullable */ String> workGroup() {
-        return this.workGroup;
+    public Output<Optional<String>> workGroup() {
+        return Codegen.optional(this.workGroup);
     }
 
     /**

@@ -15,6 +15,7 @@ import com.pulumi.gcp.diagflow.outputs.CxEntityTypeExcludedPhrase;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -61,8 +62,8 @@ public class CxEntityType extends com.pulumi.resources.CustomResource {
      *   Possible values are `AUTO_EXPANSION_MODE_DEFAULT` and `AUTO_EXPANSION_MODE_UNSPECIFIED`.
      * 
      */
-    public Output</* @Nullable */ String> autoExpansionMode() {
-        return this.autoExpansionMode;
+    public Output<Optional<String>> autoExpansionMode() {
+        return Codegen.optional(this.autoExpansionMode);
     }
     /**
      * The human-readable name of the entity type, unique within the agent.
@@ -89,8 +90,8 @@ public class CxEntityType extends com.pulumi.resources.CustomResource {
      * @return Enables fuzzy entity extraction during classification.
      * 
      */
-    public Output</* @Nullable */ Boolean> enableFuzzyExtraction() {
-        return this.enableFuzzyExtraction;
+    public Output<Optional<Boolean>> enableFuzzyExtraction() {
+        return Codegen.optional(this.enableFuzzyExtraction);
     }
     /**
      * The collection of entity entries associated with the entity type.
@@ -123,8 +124,8 @@ public class CxEntityType extends com.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ List<CxEntityTypeExcludedPhrase>> excludedPhrases() {
-        return this.excludedPhrases;
+    public Output<Optional<List<CxEntityTypeExcludedPhrase>>> excludedPhrases() {
+        return Codegen.optional(this.excludedPhrases);
     }
     /**
      * Indicates whether the entity type can be automatically expanded.
@@ -167,8 +168,8 @@ public class CxEntityType extends com.pulumi.resources.CustomResource {
      * If not specified, the agent&#39;s default language is used. Many languages are supported. Note: languages must be enabled in the agent before they can be used.
      * 
      */
-    public Output</* @Nullable */ String> languageCode() {
-        return this.languageCode;
+    public Output<Optional<String>> languageCode() {
+        return Codegen.optional(this.languageCode);
     }
     /**
      * The unique identifier of the entity type. Format: projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent
@@ -199,8 +200,8 @@ public class CxEntityType extends com.pulumi.resources.CustomResource {
      * Format: projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent ID&gt;.
      * 
      */
-    public Output</* @Nullable */ String> parent() {
-        return this.parent;
+    public Output<Optional<String>> parent() {
+        return Codegen.optional(this.parent);
     }
     /**
      * Indicates whether parameters of the entity type should be redacted in log. If redaction is enabled, page parameters and intent parameters referring to the entity type will be replaced by parameter name when logging.
@@ -213,8 +214,8 @@ public class CxEntityType extends com.pulumi.resources.CustomResource {
      * @return Indicates whether parameters of the entity type should be redacted in log. If redaction is enabled, page parameters and intent parameters referring to the entity type will be replaced by parameter name when logging.
      * 
      */
-    public Output</* @Nullable */ Boolean> redact() {
-        return this.redact;
+    public Output<Optional<Boolean>> redact() {
+        return Codegen.optional(this.redact);
     }
 
     /**

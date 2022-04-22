@@ -17,6 +17,7 @@ import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -47,8 +48,8 @@ public class WebTest extends com.pulumi.resources.CustomResource {
      * @return An XML configuration specification for a WebTest.
      * 
      */
-    public Output</* @Nullable */ WebTestPropertiesResponseConfiguration> configuration() {
-        return this.configuration;
+    public Output<Optional<WebTestPropertiesResponseConfiguration>> configuration() {
+        return Codegen.optional(this.configuration);
     }
     /**
      * Purpose/user defined descriptive test for this WebTest.
@@ -61,8 +62,8 @@ public class WebTest extends com.pulumi.resources.CustomResource {
      * @return Purpose/user defined descriptive test for this WebTest.
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * Is the test actively being monitored.
@@ -75,8 +76,8 @@ public class WebTest extends com.pulumi.resources.CustomResource {
      * @return Is the test actively being monitored.
      * 
      */
-    public Output</* @Nullable */ Boolean> enabled() {
-        return this.enabled;
+    public Output<Optional<Boolean>> enabled() {
+        return Codegen.optional(this.enabled);
     }
     /**
      * Interval in seconds between test runs for this WebTest. Default value is 300.
@@ -89,8 +90,8 @@ public class WebTest extends com.pulumi.resources.CustomResource {
      * @return Interval in seconds between test runs for this WebTest. Default value is 300.
      * 
      */
-    public Output</* @Nullable */ Integer> frequency() {
-        return this.frequency;
+    public Output<Optional<Integer>> frequency() {
+        return Codegen.optional(this.frequency);
     }
     /**
      * The kind of web test that this web test watches. Choices are ping and multistep.
@@ -103,8 +104,8 @@ public class WebTest extends com.pulumi.resources.CustomResource {
      * @return The kind of web test that this web test watches. Choices are ping and multistep.
      * 
      */
-    public Output</* @Nullable */ String> kind() {
-        return this.kind;
+    public Output<Optional<String>> kind() {
+        return Codegen.optional(this.kind);
     }
     /**
      * Resource location
@@ -173,8 +174,8 @@ public class WebTest extends com.pulumi.resources.CustomResource {
      * @return Allow for retries should this WebTest fail.
      * 
      */
-    public Output</* @Nullable */ Boolean> retryEnabled() {
-        return this.retryEnabled;
+    public Output<Optional<Boolean>> retryEnabled() {
+        return Codegen.optional(this.retryEnabled);
     }
     /**
      * Unique ID of this WebTest. This is typically the same value as the Name field.
@@ -201,8 +202,8 @@ public class WebTest extends com.pulumi.resources.CustomResource {
      * @return Resource tags
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * Seconds until this WebTest will timeout and fail. Default value is 30.
@@ -215,8 +216,8 @@ public class WebTest extends com.pulumi.resources.CustomResource {
      * @return Seconds until this WebTest will timeout and fail. Default value is 30.
      * 
      */
-    public Output</* @Nullable */ Integer> timeout() {
-        return this.timeout;
+    public Output<Optional<Integer>> timeout() {
+        return Codegen.optional(this.timeout);
     }
     /**
      * Azure resource type

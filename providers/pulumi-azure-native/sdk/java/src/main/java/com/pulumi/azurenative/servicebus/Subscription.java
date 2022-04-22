@@ -16,6 +16,7 @@ import java.lang.Double;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -60,8 +61,8 @@ public class Subscription extends com.pulumi.resources.CustomResource {
      * @return ISO 8061 timeSpan idle interval after which the topic is automatically deleted. The minimum duration is 5 minutes.
      * 
      */
-    public Output</* @Nullable */ String> autoDeleteOnIdle() {
-        return this.autoDeleteOnIdle;
+    public Output<Optional<String>> autoDeleteOnIdle() {
+        return Codegen.optional(this.autoDeleteOnIdle);
     }
     /**
      * Message count details
@@ -102,8 +103,8 @@ public class Subscription extends com.pulumi.resources.CustomResource {
      * @return Value that indicates whether a subscription has dead letter support on filter evaluation exceptions.
      * 
      */
-    public Output</* @Nullable */ Boolean> deadLetteringOnFilterEvaluationExceptions() {
-        return this.deadLetteringOnFilterEvaluationExceptions;
+    public Output<Optional<Boolean>> deadLetteringOnFilterEvaluationExceptions() {
+        return Codegen.optional(this.deadLetteringOnFilterEvaluationExceptions);
     }
     /**
      * Value that indicates whether a subscription has dead letter support when a message expires.
@@ -116,8 +117,8 @@ public class Subscription extends com.pulumi.resources.CustomResource {
      * @return Value that indicates whether a subscription has dead letter support when a message expires.
      * 
      */
-    public Output</* @Nullable */ Boolean> deadLetteringOnMessageExpiration() {
-        return this.deadLetteringOnMessageExpiration;
+    public Output<Optional<Boolean>> deadLetteringOnMessageExpiration() {
+        return Codegen.optional(this.deadLetteringOnMessageExpiration);
     }
     /**
      * ISO 8061 Default message timespan to live value. This is the duration after which the message expires, starting from when the message is sent to Service Bus. This is the default value used when TimeToLive is not set on a message itself.
@@ -130,8 +131,8 @@ public class Subscription extends com.pulumi.resources.CustomResource {
      * @return ISO 8061 Default message timespan to live value. This is the duration after which the message expires, starting from when the message is sent to Service Bus. This is the default value used when TimeToLive is not set on a message itself.
      * 
      */
-    public Output</* @Nullable */ String> defaultMessageTimeToLive() {
-        return this.defaultMessageTimeToLive;
+    public Output<Optional<String>> defaultMessageTimeToLive() {
+        return Codegen.optional(this.defaultMessageTimeToLive);
     }
     /**
      * ISO 8601 timeSpan structure that defines the duration of the duplicate detection history. The default value is 10 minutes.
@@ -144,8 +145,8 @@ public class Subscription extends com.pulumi.resources.CustomResource {
      * @return ISO 8601 timeSpan structure that defines the duration of the duplicate detection history. The default value is 10 minutes.
      * 
      */
-    public Output</* @Nullable */ String> duplicateDetectionHistoryTimeWindow() {
-        return this.duplicateDetectionHistoryTimeWindow;
+    public Output<Optional<String>> duplicateDetectionHistoryTimeWindow() {
+        return Codegen.optional(this.duplicateDetectionHistoryTimeWindow);
     }
     /**
      * Value that indicates whether server-side batched operations are enabled.
@@ -158,8 +159,8 @@ public class Subscription extends com.pulumi.resources.CustomResource {
      * @return Value that indicates whether server-side batched operations are enabled.
      * 
      */
-    public Output</* @Nullable */ Boolean> enableBatchedOperations() {
-        return this.enableBatchedOperations;
+    public Output<Optional<Boolean>> enableBatchedOperations() {
+        return Codegen.optional(this.enableBatchedOperations);
     }
     /**
      * Queue/Topic name to forward the Dead Letter message
@@ -172,8 +173,8 @@ public class Subscription extends com.pulumi.resources.CustomResource {
      * @return Queue/Topic name to forward the Dead Letter message
      * 
      */
-    public Output</* @Nullable */ String> forwardDeadLetteredMessagesTo() {
-        return this.forwardDeadLetteredMessagesTo;
+    public Output<Optional<String>> forwardDeadLetteredMessagesTo() {
+        return Codegen.optional(this.forwardDeadLetteredMessagesTo);
     }
     /**
      * Queue/Topic name to forward the messages
@@ -186,8 +187,8 @@ public class Subscription extends com.pulumi.resources.CustomResource {
      * @return Queue/Topic name to forward the messages
      * 
      */
-    public Output</* @Nullable */ String> forwardTo() {
-        return this.forwardTo;
+    public Output<Optional<String>> forwardTo() {
+        return Codegen.optional(this.forwardTo);
     }
     /**
      * ISO 8061 lock duration timespan for the subscription. The default value is 1 minute.
@@ -200,8 +201,8 @@ public class Subscription extends com.pulumi.resources.CustomResource {
      * @return ISO 8061 lock duration timespan for the subscription. The default value is 1 minute.
      * 
      */
-    public Output</* @Nullable */ String> lockDuration() {
-        return this.lockDuration;
+    public Output<Optional<String>> lockDuration() {
+        return Codegen.optional(this.lockDuration);
     }
     /**
      * Number of maximum deliveries.
@@ -214,8 +215,8 @@ public class Subscription extends com.pulumi.resources.CustomResource {
      * @return Number of maximum deliveries.
      * 
      */
-    public Output</* @Nullable */ Integer> maxDeliveryCount() {
-        return this.maxDeliveryCount;
+    public Output<Optional<Integer>> maxDeliveryCount() {
+        return Codegen.optional(this.maxDeliveryCount);
     }
     /**
      * Number of messages.
@@ -256,8 +257,8 @@ public class Subscription extends com.pulumi.resources.CustomResource {
      * @return Value indicating if a subscription supports the concept of sessions.
      * 
      */
-    public Output</* @Nullable */ Boolean> requiresSession() {
-        return this.requiresSession;
+    public Output<Optional<Boolean>> requiresSession() {
+        return Codegen.optional(this.requiresSession);
     }
     /**
      * Enumerates the possible values for the status of a messaging entity.
@@ -270,8 +271,8 @@ public class Subscription extends com.pulumi.resources.CustomResource {
      * @return Enumerates the possible values for the status of a messaging entity.
      * 
      */
-    public Output</* @Nullable */ String> status() {
-        return this.status;
+    public Output<Optional<String>> status() {
+        return Codegen.optional(this.status);
     }
     /**
      * Resource type

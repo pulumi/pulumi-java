@@ -15,6 +15,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -170,8 +171,8 @@ public class Budget extends com.pulumi.resources.CustomResource {
      * @return Object containing Budget Notifications. Can be used multiple times to define more than one budget notification
      * 
      */
-    public Output</* @Nullable */ List<BudgetNotification>> notifications() {
-        return this.notifications;
+    public Output<Optional<List<BudgetNotification>>> notifications() {
+        return Codegen.optional(this.notifications);
     }
     /**
      * The end of the time period covered by the budget. There are no restrictions on the end date. Format: `2017-01-01_12:00`.
@@ -184,8 +185,8 @@ public class Budget extends com.pulumi.resources.CustomResource {
      * @return The end of the time period covered by the budget. There are no restrictions on the end date. Format: `2017-01-01_12:00`.
      * 
      */
-    public Output</* @Nullable */ String> timePeriodEnd() {
-        return this.timePeriodEnd;
+    public Output<Optional<String>> timePeriodEnd() {
+        return Codegen.optional(this.timePeriodEnd);
     }
     /**
      * The start of the time period covered by the budget. If you don&#39;t specify a start date, AWS defaults to the start of your chosen time period. The start date must come before the end date. Format: `2017-01-01_12:00`.

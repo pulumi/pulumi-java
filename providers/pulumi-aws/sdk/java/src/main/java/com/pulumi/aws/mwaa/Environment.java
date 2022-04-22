@@ -17,6 +17,7 @@ import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -48,8 +49,8 @@ public class Environment extends com.pulumi.resources.CustomResource {
      * @return The `airflow_configuration_options` parameter specifies airflow override options. Check the [Official documentation](https://docs.aws.amazon.com/mwaa/latest/userguide/configuring-env-variables.html#configuring-env-variables-reference) for all possible configuration options.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> airflowConfigurationOptions() {
-        return this.airflowConfigurationOptions;
+    public Output<Optional<Map<String,String>>> airflowConfigurationOptions() {
+        return Codegen.optional(this.airflowConfigurationOptions);
     }
     /**
      * Airflow version of your environment, will be set by default to the latest version that MWAA supports.
@@ -148,8 +149,8 @@ public class Environment extends com.pulumi.resources.CustomResource {
      * @return The Amazon Resource Name (ARN) of your KMS key that you want to use for encryption. Will be set to the ARN of the managed KMS key `aws/airflow` by default. Please check the [Official Documentation](https://docs.aws.amazon.com/mwaa/latest/userguide/custom-keys-certs.html) for more information.
      * 
      */
-    public Output</* @Nullable */ String> kmsKey() {
-        return this.kmsKey;
+    public Output<Optional<String>> kmsKey() {
+        return Codegen.optional(this.kmsKey);
     }
     @Export(name="lastUpdateds", type=List.class, parameters={EnvironmentLastUpdated.class})
     private Output<List<EnvironmentLastUpdated>> lastUpdateds;
@@ -252,8 +253,8 @@ public class Environment extends com.pulumi.resources.CustomResource {
      * @return The relative path to the plugins.zip file on your Amazon S3 storage bucket. For example, plugins.zip. If a relative path is provided in the request, then plugins_s3_object_version is required. For more information, see [Importing DAGs on Amazon MWAA](https://docs.aws.amazon.com/mwaa/latest/userguide/configuring-dag-import.html).
      * 
      */
-    public Output</* @Nullable */ String> pluginsS3Path() {
-        return this.pluginsS3Path;
+    public Output<Optional<String>> pluginsS3Path() {
+        return Codegen.optional(this.pluginsS3Path);
     }
     /**
      * The requirements.txt file version you want to use.
@@ -280,8 +281,8 @@ public class Environment extends com.pulumi.resources.CustomResource {
      * @return The relative path to the requirements.txt file on your Amazon S3 storage bucket. For example, requirements.txt. If a relative path is provided in the request, then requirements_s3_object_version is required. For more information, see [Importing DAGs on Amazon MWAA](https://docs.aws.amazon.com/mwaa/latest/userguide/configuring-dag-import.html).
      * 
      */
-    public Output</* @Nullable */ String> requirementsS3Path() {
-        return this.requirementsS3Path;
+    public Output<Optional<String>> requirementsS3Path() {
+        return Codegen.optional(this.requirementsS3Path);
     }
     /**
      * The Service Role ARN of the Amazon MWAA Environment
@@ -336,8 +337,8 @@ public class Environment extends com.pulumi.resources.CustomResource {
      * @return A map of resource tags to associate with the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * A map of tags assigned to the resource, including those inherited from the provider .

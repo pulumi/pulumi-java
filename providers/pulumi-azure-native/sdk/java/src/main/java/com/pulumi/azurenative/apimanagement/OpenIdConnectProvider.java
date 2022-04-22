@@ -12,6 +12,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -56,8 +57,8 @@ public class OpenIdConnectProvider extends com.pulumi.resources.CustomResource {
      * @return Client Secret of developer console which is the client application.
      * 
      */
-    public Output</* @Nullable */ String> clientSecret() {
-        return this.clientSecret;
+    public Output<Optional<String>> clientSecret() {
+        return Codegen.optional(this.clientSecret);
     }
     /**
      * User-friendly description of OpenID Connect Provider.
@@ -70,8 +71,8 @@ public class OpenIdConnectProvider extends com.pulumi.resources.CustomResource {
      * @return User-friendly description of OpenID Connect Provider.
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * User-friendly OpenID Connect Provider name.

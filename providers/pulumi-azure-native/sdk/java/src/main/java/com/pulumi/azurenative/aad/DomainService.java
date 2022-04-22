@@ -21,6 +21,7 @@ import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -65,8 +66,8 @@ public class DomainService extends com.pulumi.resources.CustomResource {
      * @return Domain Configuration Type
      * 
      */
-    public Output</* @Nullable */ String> domainConfigurationType() {
-        return this.domainConfigurationType;
+    public Output<Optional<String>> domainConfigurationType() {
+        return Codegen.optional(this.domainConfigurationType);
     }
     /**
      * The name of the Azure domain that the user would like to deploy Domain Services to.
@@ -79,8 +80,8 @@ public class DomainService extends com.pulumi.resources.CustomResource {
      * @return The name of the Azure domain that the user would like to deploy Domain Services to.
      * 
      */
-    public Output</* @Nullable */ String> domainName() {
-        return this.domainName;
+    public Output<Optional<String>> domainName() {
+        return Codegen.optional(this.domainName);
     }
     /**
      * DomainSecurity Settings
@@ -93,8 +94,8 @@ public class DomainService extends com.pulumi.resources.CustomResource {
      * @return DomainSecurity Settings
      * 
      */
-    public Output</* @Nullable */ DomainSecuritySettingsResponse> domainSecuritySettings() {
-        return this.domainSecuritySettings;
+    public Output<Optional<DomainSecuritySettingsResponse>> domainSecuritySettings() {
+        return Codegen.optional(this.domainSecuritySettings);
     }
     /**
      * Resource etag
@@ -107,8 +108,8 @@ public class DomainService extends com.pulumi.resources.CustomResource {
      * @return Resource etag
      * 
      */
-    public Output</* @Nullable */ String> etag() {
-        return this.etag;
+    public Output<Optional<String>> etag() {
+        return Codegen.optional(this.etag);
     }
     /**
      * Enabled or Disabled flag to turn on Group-based filtered sync
@@ -121,8 +122,8 @@ public class DomainService extends com.pulumi.resources.CustomResource {
      * @return Enabled or Disabled flag to turn on Group-based filtered sync
      * 
      */
-    public Output</* @Nullable */ String> filteredSync() {
-        return this.filteredSync;
+    public Output<Optional<String>> filteredSync() {
+        return Codegen.optional(this.filteredSync);
     }
     /**
      * Secure LDAP Settings
@@ -135,8 +136,8 @@ public class DomainService extends com.pulumi.resources.CustomResource {
      * @return Secure LDAP Settings
      * 
      */
-    public Output</* @Nullable */ LdapsSettingsResponse> ldapsSettings() {
-        return this.ldapsSettings;
+    public Output<Optional<LdapsSettingsResponse>> ldapsSettings() {
+        return Codegen.optional(this.ldapsSettings);
     }
     /**
      * Resource location
@@ -149,8 +150,8 @@ public class DomainService extends com.pulumi.resources.CustomResource {
      * @return Resource location
      * 
      */
-    public Output</* @Nullable */ String> location() {
-        return this.location;
+    public Output<Optional<String>> location() {
+        return Codegen.optional(this.location);
     }
     /**
      * Migration Properties
@@ -191,8 +192,8 @@ public class DomainService extends com.pulumi.resources.CustomResource {
      * @return Notification Settings
      * 
      */
-    public Output</* @Nullable */ NotificationSettingsResponse> notificationSettings() {
-        return this.notificationSettings;
+    public Output<Optional<NotificationSettingsResponse>> notificationSettings() {
+        return Codegen.optional(this.notificationSettings);
     }
     /**
      * the current deployment or provisioning state, which only appears in the response.
@@ -219,8 +220,8 @@ public class DomainService extends com.pulumi.resources.CustomResource {
      * @return List of ReplicaSets
      * 
      */
-    public Output</* @Nullable */ List<ReplicaSetResponse>> replicaSets() {
-        return this.replicaSets;
+    public Output<Optional<List<ReplicaSetResponse>>> replicaSets() {
+        return Codegen.optional(this.replicaSets);
     }
     /**
      * Resource Forest Settings
@@ -233,8 +234,8 @@ public class DomainService extends com.pulumi.resources.CustomResource {
      * @return Resource Forest Settings
      * 
      */
-    public Output</* @Nullable */ ResourceForestSettingsResponse> resourceForestSettings() {
-        return this.resourceForestSettings;
+    public Output<Optional<ResourceForestSettingsResponse>> resourceForestSettings() {
+        return Codegen.optional(this.resourceForestSettings);
     }
     /**
      * Sku Type
@@ -247,8 +248,8 @@ public class DomainService extends com.pulumi.resources.CustomResource {
      * @return Sku Type
      * 
      */
-    public Output</* @Nullable */ String> sku() {
-        return this.sku;
+    public Output<Optional<String>> sku() {
+        return Codegen.optional(this.sku);
     }
     /**
      * SyncOwner ReplicaSet Id
@@ -289,8 +290,8 @@ public class DomainService extends com.pulumi.resources.CustomResource {
      * @return Resource tags
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * Azure Active Directory Tenant Id

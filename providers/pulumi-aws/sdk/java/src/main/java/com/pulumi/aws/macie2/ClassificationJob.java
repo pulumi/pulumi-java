@@ -18,6 +18,7 @@ import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -89,8 +90,8 @@ public class ClassificationJob extends com.pulumi.resources.CustomResource {
      * @return Specifies whether to analyze all existing, eligible objects immediately after the job is created.
      * 
      */
-    public Output</* @Nullable */ Boolean> initialRun() {
-        return this.initialRun;
+    public Output<Optional<Boolean>> initialRun() {
+        return Codegen.optional(this.initialRun);
     }
     @Export(name="jobArn", type=String.class, parameters={})
     private Output<String> jobArn;
@@ -205,8 +206,8 @@ public class ClassificationJob extends com.pulumi.resources.CustomResource {
      * @return A map of key-value pairs that specifies the tags to associate with the job. A job can have a maximum of 50 tags. Each tag consists of a tag key and an associated tag value. The maximum length of a tag key is 128 characters. The maximum length of a tag value is 256 characters.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     @Export(name="tagsAll", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> tagsAll;

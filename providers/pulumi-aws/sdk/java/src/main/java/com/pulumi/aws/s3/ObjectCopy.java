@@ -15,6 +15,7 @@ import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -36,8 +37,8 @@ public class ObjectCopy extends com.pulumi.resources.CustomResource {
      * @return [Canned ACL](https://docs.aws.amazon.com/AmazonS3/latest/dev/acl-overview.html#canned-acl) to apply. Defaults to `private`. Valid values are `private`, `public-read`, `public-read-write`, `authenticated-read`, `aws-exec-read`, `bucket-owner-read`, and `bucket-owner-full-control`. Conflicts with `grant`.
      * 
      */
-    public Output</* @Nullable */ String> acl() {
-        return this.acl;
+    public Output<Optional<String>> acl() {
+        return Codegen.optional(this.acl);
     }
     /**
      * Name of the bucket to put the file in.
@@ -140,8 +141,8 @@ public class ObjectCopy extends com.pulumi.resources.CustomResource {
      * @return Copies the object if its entity tag (ETag) matches the specified tag.
      * 
      */
-    public Output</* @Nullable */ String> copyIfMatch() {
-        return this.copyIfMatch;
+    public Output<Optional<String>> copyIfMatch() {
+        return Codegen.optional(this.copyIfMatch);
     }
     /**
      * Copies the object if it has been modified since the specified time, in [RFC3339 format](https://tools.ietf.org/html/rfc3339#section-5.8).
@@ -154,8 +155,8 @@ public class ObjectCopy extends com.pulumi.resources.CustomResource {
      * @return Copies the object if it has been modified since the specified time, in [RFC3339 format](https://tools.ietf.org/html/rfc3339#section-5.8).
      * 
      */
-    public Output</* @Nullable */ String> copyIfModifiedSince() {
-        return this.copyIfModifiedSince;
+    public Output<Optional<String>> copyIfModifiedSince() {
+        return Codegen.optional(this.copyIfModifiedSince);
     }
     /**
      * Copies the object if its entity tag (ETag) is different than the specified ETag.
@@ -168,8 +169,8 @@ public class ObjectCopy extends com.pulumi.resources.CustomResource {
      * @return Copies the object if its entity tag (ETag) is different than the specified ETag.
      * 
      */
-    public Output</* @Nullable */ String> copyIfNoneMatch() {
-        return this.copyIfNoneMatch;
+    public Output<Optional<String>> copyIfNoneMatch() {
+        return Codegen.optional(this.copyIfNoneMatch);
     }
     /**
      * Copies the object if it hasn&#39;t been modified since the specified time, in [RFC3339 format](https://tools.ietf.org/html/rfc3339#section-5.8).
@@ -182,8 +183,8 @@ public class ObjectCopy extends com.pulumi.resources.CustomResource {
      * @return Copies the object if it hasn&#39;t been modified since the specified time, in [RFC3339 format](https://tools.ietf.org/html/rfc3339#section-5.8).
      * 
      */
-    public Output</* @Nullable */ String> copyIfUnmodifiedSince() {
-        return this.copyIfUnmodifiedSince;
+    public Output<Optional<String>> copyIfUnmodifiedSince() {
+        return Codegen.optional(this.copyIfUnmodifiedSince);
     }
     /**
      * Specifies the algorithm to use to when encrypting the object (for example, AES256).
@@ -210,8 +211,8 @@ public class ObjectCopy extends com.pulumi.resources.CustomResource {
      * @return Specifies the customer-provided encryption key for Amazon S3 to use in encrypting data. This value is used to store the object and then it is discarded; Amazon S3 does not store the encryption key. The key must be appropriate for use with the algorithm specified in the x-amz-server-side-encryption-customer-algorithm header.
      * 
      */
-    public Output</* @Nullable */ String> customerKey() {
-        return this.customerKey;
+    public Output<Optional<String>> customerKey() {
+        return Codegen.optional(this.customerKey);
     }
     /**
      * Specifies the 128-bit MD5 digest of the encryption key according to RFC 1321. Amazon S3 uses this header for a message integrity check to ensure that the encryption key was transmitted without error.
@@ -252,8 +253,8 @@ public class ObjectCopy extends com.pulumi.resources.CustomResource {
      * @return Account id of the expected destination bucket owner. If the destination bucket is owned by a different account, the request will fail with an HTTP 403 (Access Denied) error.
      * 
      */
-    public Output</* @Nullable */ String> expectedBucketOwner() {
-        return this.expectedBucketOwner;
+    public Output<Optional<String>> expectedBucketOwner() {
+        return Codegen.optional(this.expectedBucketOwner);
     }
     /**
      * Account id of the expected source bucket owner. If the source bucket is owned by a different account, the request will fail with an HTTP 403 (Access Denied) error.
@@ -266,8 +267,8 @@ public class ObjectCopy extends com.pulumi.resources.CustomResource {
      * @return Account id of the expected source bucket owner. If the source bucket is owned by a different account, the request will fail with an HTTP 403 (Access Denied) error.
      * 
      */
-    public Output</* @Nullable */ String> expectedSourceBucketOwner() {
-        return this.expectedSourceBucketOwner;
+    public Output<Optional<String>> expectedSourceBucketOwner() {
+        return Codegen.optional(this.expectedSourceBucketOwner);
     }
     /**
      * If the object expiration is configured, this attribute will be set.
@@ -294,8 +295,8 @@ public class ObjectCopy extends com.pulumi.resources.CustomResource {
      * @return Date and time at which the object is no longer cacheable, in [RFC3339 format](https://tools.ietf.org/html/rfc3339#section-5.8).
      * 
      */
-    public Output</* @Nullable */ String> expires() {
-        return this.expires;
+    public Output<Optional<String>> expires() {
+        return Codegen.optional(this.expires);
     }
     /**
      * Allow the object to be deleted by removing any legal hold on any object version. Default is `false`. This value should be set to `true` only if the bucket has S3 object lock enabled.
@@ -308,8 +309,8 @@ public class ObjectCopy extends com.pulumi.resources.CustomResource {
      * @return Allow the object to be deleted by removing any legal hold on any object version. Default is `false`. This value should be set to `true` only if the bucket has S3 object lock enabled.
      * 
      */
-    public Output</* @Nullable */ Boolean> forceDestroy() {
-        return this.forceDestroy;
+    public Output<Optional<Boolean>> forceDestroy() {
+        return Codegen.optional(this.forceDestroy);
     }
     /**
      * Configuration block for header grants. Documented below. Conflicts with `acl`.
@@ -322,8 +323,8 @@ public class ObjectCopy extends com.pulumi.resources.CustomResource {
      * @return Configuration block for header grants. Documented below. Conflicts with `acl`.
      * 
      */
-    public Output</* @Nullable */ List<ObjectCopyGrant>> grants() {
-        return this.grants;
+    public Output<Optional<List<ObjectCopyGrant>>> grants() {
+        return Codegen.optional(this.grants);
     }
     /**
      * Name of the object once it is in the bucket.
@@ -406,8 +407,8 @@ public class ObjectCopy extends com.pulumi.resources.CustomResource {
      * @return Specifies whether the metadata is copied from the source object or replaced with metadata provided in the request. Valid values are `COPY` and `REPLACE`.
      * 
      */
-    public Output</* @Nullable */ String> metadataDirective() {
-        return this.metadataDirective;
+    public Output<Optional<String>> metadataDirective() {
+        return Codegen.optional(this.metadataDirective);
     }
     /**
      * The [legal hold](https://docs.aws.amazon.com/AmazonS3/latest/dev/object-lock-overview.html#object-lock-legal-holds) status that you want to apply to the specified object. Valid values are `ON` and `OFF`.
@@ -476,8 +477,8 @@ public class ObjectCopy extends com.pulumi.resources.CustomResource {
      * @return Confirms that the requester knows that they will be charged for the request. Bucket owners need not specify this parameter in their requests. For information about downloading objects from requester pays buckets, see Downloading Objects in Requestor Pays Buckets (https://docs.aws.amazon.com/AmazonS3/latest/dev/ObjectsinRequesterPaysBuckets.html) in the Amazon S3 Developer Guide. If included, the only valid value is `requester`.
      * 
      */
-    public Output</* @Nullable */ String> requestPayer() {
-        return this.requestPayer;
+    public Output<Optional<String>> requestPayer() {
+        return Codegen.optional(this.requestPayer);
     }
     /**
      * Specifies server-side encryption of the object in S3. Valid values are `AES256` and `aws:kms`.
@@ -518,8 +519,8 @@ public class ObjectCopy extends com.pulumi.resources.CustomResource {
      * @return Specifies the algorithm to use when decrypting the source object (for example, AES256).
      * 
      */
-    public Output</* @Nullable */ String> sourceCustomerAlgorithm() {
-        return this.sourceCustomerAlgorithm;
+    public Output<Optional<String>> sourceCustomerAlgorithm() {
+        return Codegen.optional(this.sourceCustomerAlgorithm);
     }
     /**
      * Specifies the customer-provided encryption key for Amazon S3 to use to decrypt the source object. The encryption key provided in this header must be one that was used when the source object was created.
@@ -532,8 +533,8 @@ public class ObjectCopy extends com.pulumi.resources.CustomResource {
      * @return Specifies the customer-provided encryption key for Amazon S3 to use to decrypt the source object. The encryption key provided in this header must be one that was used when the source object was created.
      * 
      */
-    public Output</* @Nullable */ String> sourceCustomerKey() {
-        return this.sourceCustomerKey;
+    public Output<Optional<String>> sourceCustomerKey() {
+        return Codegen.optional(this.sourceCustomerKey);
     }
     /**
      * Specifies the 128-bit MD5 digest of the encryption key according to RFC 1321. Amazon S3 uses this header for a message integrity check to ensure that the encryption key was transmitted without error.
@@ -546,8 +547,8 @@ public class ObjectCopy extends com.pulumi.resources.CustomResource {
      * @return Specifies the 128-bit MD5 digest of the encryption key according to RFC 1321. Amazon S3 uses this header for a message integrity check to ensure that the encryption key was transmitted without error.
      * 
      */
-    public Output</* @Nullable */ String> sourceCustomerKeyMd5() {
-        return this.sourceCustomerKeyMd5;
+    public Output<Optional<String>> sourceCustomerKeyMd5() {
+        return Codegen.optional(this.sourceCustomerKeyMd5);
     }
     /**
      * Version of the copied object in the source bucket.
@@ -588,8 +589,8 @@ public class ObjectCopy extends com.pulumi.resources.CustomResource {
      * @return Specifies whether the object tag-set are copied from the source object or replaced with tag-set provided in the request. Valid values are `COPY` and `REPLACE`.
      * 
      */
-    public Output</* @Nullable */ String> taggingDirective() {
-        return this.taggingDirective;
+    public Output<Optional<String>> taggingDirective() {
+        return Codegen.optional(this.taggingDirective);
     }
     /**
      * A map of tags to assign to the object. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
@@ -602,8 +603,8 @@ public class ObjectCopy extends com.pulumi.resources.CustomResource {
      * @return A map of tags to assign to the object. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * A map of tags assigned to the resource, including those inherited from the provider .

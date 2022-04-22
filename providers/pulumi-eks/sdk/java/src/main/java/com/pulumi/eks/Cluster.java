@@ -17,6 +17,7 @@ import com.pulumi.eks.outputs.CoreData;
 import com.pulumi.eks.outputs.NodeGroupData;
 import java.lang.Object;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -78,8 +79,8 @@ public class Cluster extends com.pulumi.resources.ComponentResource {
      * @return The default Node Group configuration, or undefined if `skipDefaultNodeGroup` was specified.
      * 
      */
-    public Output</* @Nullable */ NodeGroupData> defaultNodeGroup() {
-        return this.defaultNodeGroup;
+    public Output<Optional<NodeGroupData>> defaultNodeGroup() {
+        return Codegen.optional(this.defaultNodeGroup);
     }
     /**
      * The EKS cluster.

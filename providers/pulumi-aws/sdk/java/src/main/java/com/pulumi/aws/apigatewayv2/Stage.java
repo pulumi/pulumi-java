@@ -17,6 +17,7 @@ import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -49,8 +50,8 @@ public class Stage extends com.pulumi.resources.CustomResource {
      * Use the `aws.apigateway.Account` resource to configure [permissions for CloudWatch Logging](https://docs.aws.amazon.com/apigateway/latest/developerguide/set-up-logging.html#set-up-access-logging-permissions).
      * 
      */
-    public Output</* @Nullable */ StageAccessLogSettings> accessLogSettings() {
-        return this.accessLogSettings;
+    public Output<Optional<StageAccessLogSettings>> accessLogSettings() {
+        return Codegen.optional(this.accessLogSettings);
     }
     /**
      * The API identifier.
@@ -91,8 +92,8 @@ public class Stage extends com.pulumi.resources.CustomResource {
      * @return Whether updates to an API automatically trigger a new deployment. Defaults to `false`.
      * 
      */
-    public Output</* @Nullable */ Boolean> autoDeploy() {
-        return this.autoDeploy;
+    public Output<Optional<Boolean>> autoDeploy() {
+        return Codegen.optional(this.autoDeploy);
     }
     /**
      * The identifier of a client certificate for the stage. Use the `aws.apigateway.ClientCertificate` resource to configure a client certificate.
@@ -107,8 +108,8 @@ public class Stage extends com.pulumi.resources.CustomResource {
      * Supported only for WebSocket APIs.
      * 
      */
-    public Output</* @Nullable */ String> clientCertificateId() {
-        return this.clientCertificateId;
+    public Output<Optional<String>> clientCertificateId() {
+        return Codegen.optional(this.clientCertificateId);
     }
     /**
      * The default route settings for the stage.
@@ -121,8 +122,8 @@ public class Stage extends com.pulumi.resources.CustomResource {
      * @return The default route settings for the stage.
      * 
      */
-    public Output</* @Nullable */ StageDefaultRouteSettings> defaultRouteSettings() {
-        return this.defaultRouteSettings;
+    public Output<Optional<StageDefaultRouteSettings>> defaultRouteSettings() {
+        return Codegen.optional(this.defaultRouteSettings);
     }
     /**
      * The deployment identifier of the stage. Use the `aws.apigatewayv2.Deployment` resource to configure a deployment.
@@ -149,8 +150,8 @@ public class Stage extends com.pulumi.resources.CustomResource {
      * @return The description for the stage. Must be less than or equal to 1024 characters in length.
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * The ARN prefix to be used in an `aws.lambda.Permission` `source_arn` attribute.
@@ -211,8 +212,8 @@ public class Stage extends com.pulumi.resources.CustomResource {
      * @return Route settings for the stage.
      * 
      */
-    public Output</* @Nullable */ List<StageRouteSetting>> routeSettings() {
-        return this.routeSettings;
+    public Output<Optional<List<StageRouteSetting>>> routeSettings() {
+        return Codegen.optional(this.routeSettings);
     }
     /**
      * A map that defines the stage variables for the stage.
@@ -225,8 +226,8 @@ public class Stage extends com.pulumi.resources.CustomResource {
      * @return A map that defines the stage variables for the stage.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> stageVariables() {
-        return this.stageVariables;
+    public Output<Optional<Map<String,String>>> stageVariables() {
+        return Codegen.optional(this.stageVariables);
     }
     /**
      * A map of tags to assign to the stage. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
@@ -239,8 +240,8 @@ public class Stage extends com.pulumi.resources.CustomResource {
      * @return A map of tags to assign to the stage. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.

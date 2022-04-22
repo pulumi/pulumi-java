@@ -14,6 +14,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -103,8 +104,8 @@ public class DBProxyEndpoint extends com.pulumi.resources.CustomResource {
      * @return An optional set of key-value pairs to associate arbitrary data of your choosing with the DB proxy endpoint.
      * 
      */
-    public Output</* @Nullable */ List<DBProxyEndpointTagFormat>> tags() {
-        return this.tags;
+    public Output<Optional<List<DBProxyEndpointTagFormat>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * A value that indicates whether the DB proxy endpoint can be used for read/write or read-only operations.
@@ -117,8 +118,8 @@ public class DBProxyEndpoint extends com.pulumi.resources.CustomResource {
      * @return A value that indicates whether the DB proxy endpoint can be used for read/write or read-only operations.
      * 
      */
-    public Output</* @Nullable */ DBProxyEndpointTargetRole> targetRole() {
-        return this.targetRole;
+    public Output<Optional<DBProxyEndpointTargetRole>> targetRole() {
+        return Codegen.optional(this.targetRole);
     }
     /**
      * VPC ID to associate with the new DB proxy endpoint.
@@ -145,8 +146,8 @@ public class DBProxyEndpoint extends com.pulumi.resources.CustomResource {
      * @return VPC security group IDs to associate with the new DB proxy endpoint.
      * 
      */
-    public Output</* @Nullable */ List<String>> vpcSecurityGroupIds() {
-        return this.vpcSecurityGroupIds;
+    public Output<Optional<List<String>>> vpcSecurityGroupIds() {
+        return Codegen.optional(this.vpcSecurityGroupIds);
     }
     /**
      * VPC subnet IDs to associate with the new DB proxy endpoint.

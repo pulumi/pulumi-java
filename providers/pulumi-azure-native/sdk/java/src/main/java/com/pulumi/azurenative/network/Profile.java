@@ -17,6 +17,7 @@ import java.lang.Double;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -47,8 +48,8 @@ public class Profile extends com.pulumi.resources.CustomResource {
      * @return The list of allowed endpoint record types.
      * 
      */
-    public Output</* @Nullable */ List<String>> allowedEndpointRecordTypes() {
-        return this.allowedEndpointRecordTypes;
+    public Output<Optional<List<String>>> allowedEndpointRecordTypes() {
+        return Codegen.optional(this.allowedEndpointRecordTypes);
     }
     /**
      * The DNS settings of the Traffic Manager profile.
@@ -61,8 +62,8 @@ public class Profile extends com.pulumi.resources.CustomResource {
      * @return The DNS settings of the Traffic Manager profile.
      * 
      */
-    public Output</* @Nullable */ DnsConfigResponse> dnsConfig() {
-        return this.dnsConfig;
+    public Output<Optional<DnsConfigResponse>> dnsConfig() {
+        return Codegen.optional(this.dnsConfig);
     }
     /**
      * The list of endpoints in the Traffic Manager profile.
@@ -75,8 +76,8 @@ public class Profile extends com.pulumi.resources.CustomResource {
      * @return The list of endpoints in the Traffic Manager profile.
      * 
      */
-    public Output</* @Nullable */ List<EndpointResponse>> endpoints() {
-        return this.endpoints;
+    public Output<Optional<List<EndpointResponse>>> endpoints() {
+        return Codegen.optional(this.endpoints);
     }
     /**
      * The Azure Region where the resource lives
@@ -89,8 +90,8 @@ public class Profile extends com.pulumi.resources.CustomResource {
      * @return The Azure Region where the resource lives
      * 
      */
-    public Output</* @Nullable */ String> location() {
-        return this.location;
+    public Output<Optional<String>> location() {
+        return Codegen.optional(this.location);
     }
     /**
      * Maximum number of endpoints to be returned for MultiValue routing type.
@@ -103,8 +104,8 @@ public class Profile extends com.pulumi.resources.CustomResource {
      * @return Maximum number of endpoints to be returned for MultiValue routing type.
      * 
      */
-    public Output</* @Nullable */ Double> maxReturn() {
-        return this.maxReturn;
+    public Output<Optional<Double>> maxReturn() {
+        return Codegen.optional(this.maxReturn);
     }
     /**
      * The endpoint monitoring settings of the Traffic Manager profile.
@@ -117,8 +118,8 @@ public class Profile extends com.pulumi.resources.CustomResource {
      * @return The endpoint monitoring settings of the Traffic Manager profile.
      * 
      */
-    public Output</* @Nullable */ MonitorConfigResponse> monitorConfig() {
-        return this.monitorConfig;
+    public Output<Optional<MonitorConfigResponse>> monitorConfig() {
+        return Codegen.optional(this.monitorConfig);
     }
     /**
      * The name of the resource
@@ -131,8 +132,8 @@ public class Profile extends com.pulumi.resources.CustomResource {
      * @return The name of the resource
      * 
      */
-    public Output</* @Nullable */ String> name() {
-        return this.name;
+    public Output<Optional<String>> name() {
+        return Codegen.optional(this.name);
     }
     /**
      * The status of the Traffic Manager profile.
@@ -145,8 +146,8 @@ public class Profile extends com.pulumi.resources.CustomResource {
      * @return The status of the Traffic Manager profile.
      * 
      */
-    public Output</* @Nullable */ String> profileStatus() {
-        return this.profileStatus;
+    public Output<Optional<String>> profileStatus() {
+        return Codegen.optional(this.profileStatus);
     }
     /**
      * Resource tags.
@@ -159,8 +160,8 @@ public class Profile extends com.pulumi.resources.CustomResource {
      * @return Resource tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * The traffic routing method of the Traffic Manager profile.
@@ -173,8 +174,8 @@ public class Profile extends com.pulumi.resources.CustomResource {
      * @return The traffic routing method of the Traffic Manager profile.
      * 
      */
-    public Output</* @Nullable */ String> trafficRoutingMethod() {
-        return this.trafficRoutingMethod;
+    public Output<Optional<String>> trafficRoutingMethod() {
+        return Codegen.optional(this.trafficRoutingMethod);
     }
     /**
      * Indicates whether Traffic View is &#39;Enabled&#39; or &#39;Disabled&#39; for the Traffic Manager profile. Null, indicates &#39;Disabled&#39;. Enabling this feature will increase the cost of the Traffic Manage profile.
@@ -187,8 +188,8 @@ public class Profile extends com.pulumi.resources.CustomResource {
      * @return Indicates whether Traffic View is &#39;Enabled&#39; or &#39;Disabled&#39; for the Traffic Manager profile. Null, indicates &#39;Disabled&#39;. Enabling this feature will increase the cost of the Traffic Manage profile.
      * 
      */
-    public Output</* @Nullable */ String> trafficViewEnrollmentStatus() {
-        return this.trafficViewEnrollmentStatus;
+    public Output<Optional<String>> trafficViewEnrollmentStatus() {
+        return Codegen.optional(this.trafficViewEnrollmentStatus);
     }
     /**
      * The type of the resource. Ex- Microsoft.Network/trafficManagerProfiles.
@@ -201,8 +202,8 @@ public class Profile extends com.pulumi.resources.CustomResource {
      * @return The type of the resource. Ex- Microsoft.Network/trafficManagerProfiles.
      * 
      */
-    public Output</* @Nullable */ String> type() {
-        return this.type;
+    public Output<Optional<String>> type() {
+        return Codegen.optional(this.type);
     }
 
     /**

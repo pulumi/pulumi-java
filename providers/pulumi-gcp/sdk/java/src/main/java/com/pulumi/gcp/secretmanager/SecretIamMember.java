@@ -12,6 +12,7 @@ import com.pulumi.gcp.secretmanager.SecretIamMemberArgs;
 import com.pulumi.gcp.secretmanager.inputs.SecretIamMemberState;
 import com.pulumi.gcp.secretmanager.outputs.SecretIamMemberCondition;
 import java.lang.String;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -61,8 +62,8 @@ public class SecretIamMember extends com.pulumi.resources.CustomResource {
     @Export(name="condition", type=SecretIamMemberCondition.class, parameters={})
     private Output</* @Nullable */ SecretIamMemberCondition> condition;
 
-    public Output</* @Nullable */ SecretIamMemberCondition> condition() {
-        return this.condition;
+    public Output<Optional<SecretIamMemberCondition>> condition() {
+        return Codegen.optional(this.condition);
     }
     /**
      * (Computed) The etag of the IAM policy.

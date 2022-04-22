@@ -11,6 +11,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -22,14 +23,14 @@ public class IPAMAllocation extends com.pulumi.resources.CustomResource {
     @Export(name="cidr", type=String.class, parameters={})
     private Output</* @Nullable */ String> cidr;
 
-    public Output</* @Nullable */ String> cidr() {
-        return this.cidr;
+    public Output<Optional<String>> cidr() {
+        return Codegen.optional(this.cidr);
     }
     @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * Id of the allocation.
@@ -70,8 +71,8 @@ public class IPAMAllocation extends com.pulumi.resources.CustomResource {
      * @return The desired netmask length of the allocation. If set, IPAM will choose a block of free space with this size and return the CIDR representing it.
      * 
      */
-    public Output</* @Nullable */ Integer> netmaskLength() {
-        return this.netmaskLength;
+    public Output<Optional<Integer>> netmaskLength() {
+        return Codegen.optional(this.netmaskLength);
     }
 
     /**

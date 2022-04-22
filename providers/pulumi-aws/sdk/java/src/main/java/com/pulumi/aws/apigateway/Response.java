@@ -12,6 +12,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -41,8 +42,8 @@ public class Response extends com.pulumi.resources.CustomResource {
      * @return A map specifying the parameters (paths, query strings and headers) of the Gateway Response.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> responseParameters() {
-        return this.responseParameters;
+    public Output<Optional<Map<String,String>>> responseParameters() {
+        return Codegen.optional(this.responseParameters);
     }
     /**
      * A map specifying the templates used to transform the response body.
@@ -55,8 +56,8 @@ public class Response extends com.pulumi.resources.CustomResource {
      * @return A map specifying the templates used to transform the response body.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> responseTemplates() {
-        return this.responseTemplates;
+    public Output<Optional<Map<String,String>>> responseTemplates() {
+        return Codegen.optional(this.responseTemplates);
     }
     /**
      * The response type of the associated GatewayResponse.
@@ -97,8 +98,8 @@ public class Response extends com.pulumi.resources.CustomResource {
      * @return The HTTP status code of the Gateway Response.
      * 
      */
-    public Output</* @Nullable */ String> statusCode() {
-        return this.statusCode;
+    public Output<Optional<String>> statusCode() {
+        return Codegen.optional(this.statusCode);
     }
 
     /**

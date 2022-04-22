@@ -16,6 +16,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -46,8 +47,8 @@ public class VirtualNetworkPeering extends com.pulumi.resources.CustomResource {
      * @return Whether the forwarded traffic from the VMs in the local virtual network will be allowed/disallowed in remote virtual network.
      * 
      */
-    public Output</* @Nullable */ Boolean> allowForwardedTraffic() {
-        return this.allowForwardedTraffic;
+    public Output<Optional<Boolean>> allowForwardedTraffic() {
+        return Codegen.optional(this.allowForwardedTraffic);
     }
     /**
      * If gateway links can be used in remote virtual networking to link to this virtual network.
@@ -60,8 +61,8 @@ public class VirtualNetworkPeering extends com.pulumi.resources.CustomResource {
      * @return If gateway links can be used in remote virtual networking to link to this virtual network.
      * 
      */
-    public Output</* @Nullable */ Boolean> allowGatewayTransit() {
-        return this.allowGatewayTransit;
+    public Output<Optional<Boolean>> allowGatewayTransit() {
+        return Codegen.optional(this.allowGatewayTransit);
     }
     /**
      * Whether the VMs in the local virtual network space would be able to access the VMs in remote virtual network space.
@@ -74,8 +75,8 @@ public class VirtualNetworkPeering extends com.pulumi.resources.CustomResource {
      * @return Whether the VMs in the local virtual network space would be able to access the VMs in remote virtual network space.
      * 
      */
-    public Output</* @Nullable */ Boolean> allowVirtualNetworkAccess() {
-        return this.allowVirtualNetworkAccess;
+    public Output<Optional<Boolean>> allowVirtualNetworkAccess() {
+        return Codegen.optional(this.allowVirtualNetworkAccess);
     }
     /**
      * If we need to verify the provisioning state of the remote gateway.
@@ -88,8 +89,8 @@ public class VirtualNetworkPeering extends com.pulumi.resources.CustomResource {
      * @return If we need to verify the provisioning state of the remote gateway.
      * 
      */
-    public Output</* @Nullable */ Boolean> doNotVerifyRemoteGateways() {
-        return this.doNotVerifyRemoteGateways;
+    public Output<Optional<Boolean>> doNotVerifyRemoteGateways() {
+        return Codegen.optional(this.doNotVerifyRemoteGateways);
     }
     /**
      * A unique read-only string that changes whenever the resource is updated.
@@ -116,8 +117,8 @@ public class VirtualNetworkPeering extends com.pulumi.resources.CustomResource {
      * @return The name of the resource that is unique within a resource group. This name can be used to access the resource.
      * 
      */
-    public Output</* @Nullable */ String> name() {
-        return this.name;
+    public Output<Optional<String>> name() {
+        return Codegen.optional(this.name);
     }
     /**
      * The status of the virtual network peering.
@@ -130,8 +131,8 @@ public class VirtualNetworkPeering extends com.pulumi.resources.CustomResource {
      * @return The status of the virtual network peering.
      * 
      */
-    public Output</* @Nullable */ String> peeringState() {
-        return this.peeringState;
+    public Output<Optional<String>> peeringState() {
+        return Codegen.optional(this.peeringState);
     }
     /**
      * The provisioning state of the virtual network peering resource.
@@ -158,8 +159,8 @@ public class VirtualNetworkPeering extends com.pulumi.resources.CustomResource {
      * @return The reference to the remote virtual network address space.
      * 
      */
-    public Output</* @Nullable */ AddressSpaceResponse> remoteAddressSpace() {
-        return this.remoteAddressSpace;
+    public Output<Optional<AddressSpaceResponse>> remoteAddressSpace() {
+        return Codegen.optional(this.remoteAddressSpace);
     }
     /**
      * The reference to the remote virtual network&#39;s Bgp Communities.
@@ -172,8 +173,8 @@ public class VirtualNetworkPeering extends com.pulumi.resources.CustomResource {
      * @return The reference to the remote virtual network&#39;s Bgp Communities.
      * 
      */
-    public Output</* @Nullable */ VirtualNetworkBgpCommunitiesResponse> remoteBgpCommunities() {
-        return this.remoteBgpCommunities;
+    public Output<Optional<VirtualNetworkBgpCommunitiesResponse>> remoteBgpCommunities() {
+        return Codegen.optional(this.remoteBgpCommunities);
     }
     /**
      * The reference to the remote virtual network. The remote virtual network can be in the same or different region (preview). See here to register for the preview and learn more (https://docs.microsoft.com/en-us/azure/virtual-network/virtual-network-create-peering).
@@ -186,8 +187,8 @@ public class VirtualNetworkPeering extends com.pulumi.resources.CustomResource {
      * @return The reference to the remote virtual network. The remote virtual network can be in the same or different region (preview). See here to register for the preview and learn more (https://docs.microsoft.com/en-us/azure/virtual-network/virtual-network-create-peering).
      * 
      */
-    public Output</* @Nullable */ SubResourceResponse> remoteVirtualNetwork() {
-        return this.remoteVirtualNetwork;
+    public Output<Optional<SubResourceResponse>> remoteVirtualNetwork() {
+        return Codegen.optional(this.remoteVirtualNetwork);
     }
     /**
      * The resourceGuid property of the Virtual Network peering resource.
@@ -214,8 +215,8 @@ public class VirtualNetworkPeering extends com.pulumi.resources.CustomResource {
      * @return Resource type.
      * 
      */
-    public Output</* @Nullable */ String> type() {
-        return this.type;
+    public Output<Optional<String>> type() {
+        return Codegen.optional(this.type);
     }
     /**
      * If remote gateways can be used on this virtual network. If the flag is set to true, and allowGatewayTransit on remote peering is also true, virtual network will use gateways of remote virtual network for transit. Only one peering can have this flag set to true. This flag cannot be set if virtual network already has a gateway.
@@ -228,8 +229,8 @@ public class VirtualNetworkPeering extends com.pulumi.resources.CustomResource {
      * @return If remote gateways can be used on this virtual network. If the flag is set to true, and allowGatewayTransit on remote peering is also true, virtual network will use gateways of remote virtual network for transit. Only one peering can have this flag set to true. This flag cannot be set if virtual network already has a gateway.
      * 
      */
-    public Output</* @Nullable */ Boolean> useRemoteGateways() {
-        return this.useRemoteGateways;
+    public Output<Optional<Boolean>> useRemoteGateways() {
+        return Codegen.optional(this.useRemoteGateways);
     }
 
     /**

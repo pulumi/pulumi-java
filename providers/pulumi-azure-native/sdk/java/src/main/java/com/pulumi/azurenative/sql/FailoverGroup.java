@@ -16,6 +16,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -46,8 +47,8 @@ public class FailoverGroup extends com.pulumi.resources.CustomResource {
      * @return List of databases in the failover group.
      * 
      */
-    public Output</* @Nullable */ List<String>> databases() {
-        return this.databases;
+    public Output<Optional<List<String>>> databases() {
+        return Codegen.optional(this.databases);
     }
     /**
      * Resource location.
@@ -102,8 +103,8 @@ public class FailoverGroup extends com.pulumi.resources.CustomResource {
      * @return Read-only endpoint of the failover group instance.
      * 
      */
-    public Output</* @Nullable */ FailoverGroupReadOnlyEndpointResponse> readOnlyEndpoint() {
-        return this.readOnlyEndpoint;
+    public Output<Optional<FailoverGroupReadOnlyEndpointResponse>> readOnlyEndpoint() {
+        return Codegen.optional(this.readOnlyEndpoint);
     }
     /**
      * Read-write endpoint of the failover group instance.
@@ -158,8 +159,8 @@ public class FailoverGroup extends com.pulumi.resources.CustomResource {
      * @return Resource tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * Resource type.

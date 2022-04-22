@@ -14,6 +14,7 @@ import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -63,8 +64,8 @@ public class SnapshotCopy extends com.pulumi.resources.CustomResource {
      * @return A description of what the snapshot is.
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * Whether the snapshot is encrypted.
@@ -77,8 +78,8 @@ public class SnapshotCopy extends com.pulumi.resources.CustomResource {
      * @return Whether the snapshot is encrypted.
      * 
      */
-    public Output</* @Nullable */ Boolean> encrypted() {
-        return this.encrypted;
+    public Output<Optional<Boolean>> encrypted() {
+        return Codegen.optional(this.encrypted);
     }
     /**
      * The ARN for the KMS encryption key.
@@ -91,8 +92,8 @@ public class SnapshotCopy extends com.pulumi.resources.CustomResource {
      * @return The ARN for the KMS encryption key.
      * 
      */
-    public Output</* @Nullable */ String> kmsKeyId() {
-        return this.kmsKeyId;
+    public Output<Optional<String>> kmsKeyId() {
+        return Codegen.optional(this.kmsKeyId);
     }
     @Export(name="outpostArn", type=String.class, parameters={})
     private Output<String> outpostArn;
@@ -139,8 +140,8 @@ public class SnapshotCopy extends com.pulumi.resources.CustomResource {
      * @return Indicates whether to permanently restore an archived snapshot.
      * 
      */
-    public Output</* @Nullable */ Boolean> permanentRestore() {
-        return this.permanentRestore;
+    public Output<Optional<Boolean>> permanentRestore() {
+        return Codegen.optional(this.permanentRestore);
     }
     /**
      * The region of the source snapshot.
@@ -187,8 +188,8 @@ public class SnapshotCopy extends com.pulumi.resources.CustomResource {
     @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
@@ -215,8 +216,8 @@ public class SnapshotCopy extends com.pulumi.resources.CustomResource {
      * @return Specifies the number of days for which to temporarily restore an archived snapshot. Required for temporary restores only. The snapshot will be automatically re-archived after this period.
      * 
      */
-    public Output</* @Nullable */ Integer> temporaryRestoreDays() {
-        return this.temporaryRestoreDays;
+    public Output<Optional<Integer>> temporaryRestoreDays() {
+        return Codegen.optional(this.temporaryRestoreDays);
     }
     @Export(name="volumeId", type=String.class, parameters={})
     private Output<String> volumeId;

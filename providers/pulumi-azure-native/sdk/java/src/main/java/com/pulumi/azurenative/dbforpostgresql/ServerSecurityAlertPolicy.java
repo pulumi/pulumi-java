@@ -14,6 +14,7 @@ import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -44,8 +45,8 @@ public class ServerSecurityAlertPolicy extends com.pulumi.resources.CustomResour
      * @return Specifies an array of alerts that are disabled. Allowed values are: Sql_Injection, Sql_Injection_Vulnerability, Access_Anomaly
      * 
      */
-    public Output</* @Nullable */ List<String>> disabledAlerts() {
-        return this.disabledAlerts;
+    public Output<Optional<List<String>>> disabledAlerts() {
+        return Codegen.optional(this.disabledAlerts);
     }
     /**
      * Specifies that the alert is sent to the account administrators.
@@ -58,8 +59,8 @@ public class ServerSecurityAlertPolicy extends com.pulumi.resources.CustomResour
      * @return Specifies that the alert is sent to the account administrators.
      * 
      */
-    public Output</* @Nullable */ Boolean> emailAccountAdmins() {
-        return this.emailAccountAdmins;
+    public Output<Optional<Boolean>> emailAccountAdmins() {
+        return Codegen.optional(this.emailAccountAdmins);
     }
     /**
      * Specifies an array of e-mail addresses to which the alert is sent.
@@ -72,8 +73,8 @@ public class ServerSecurityAlertPolicy extends com.pulumi.resources.CustomResour
      * @return Specifies an array of e-mail addresses to which the alert is sent.
      * 
      */
-    public Output</* @Nullable */ List<String>> emailAddresses() {
-        return this.emailAddresses;
+    public Output<Optional<List<String>>> emailAddresses() {
+        return Codegen.optional(this.emailAddresses);
     }
     /**
      * The name of the resource
@@ -100,8 +101,8 @@ public class ServerSecurityAlertPolicy extends com.pulumi.resources.CustomResour
      * @return Specifies the number of days to keep in the Threat Detection audit logs.
      * 
      */
-    public Output</* @Nullable */ Integer> retentionDays() {
-        return this.retentionDays;
+    public Output<Optional<Integer>> retentionDays() {
+        return Codegen.optional(this.retentionDays);
     }
     /**
      * Specifies the state of the policy, whether it is enabled or disabled.
@@ -128,8 +129,8 @@ public class ServerSecurityAlertPolicy extends com.pulumi.resources.CustomResour
      * @return Specifies the identifier key of the Threat Detection audit storage account.
      * 
      */
-    public Output</* @Nullable */ String> storageAccountAccessKey() {
-        return this.storageAccountAccessKey;
+    public Output<Optional<String>> storageAccountAccessKey() {
+        return Codegen.optional(this.storageAccountAccessKey);
     }
     /**
      * Specifies the blob storage endpoint (e.g. https://MyAccount.blob.core.windows.net). This blob storage will hold all Threat Detection audit logs.
@@ -142,8 +143,8 @@ public class ServerSecurityAlertPolicy extends com.pulumi.resources.CustomResour
      * @return Specifies the blob storage endpoint (e.g. https://MyAccount.blob.core.windows.net). This blob storage will hold all Threat Detection audit logs.
      * 
      */
-    public Output</* @Nullable */ String> storageEndpoint() {
-        return this.storageEndpoint;
+    public Output<Optional<String>> storageEndpoint() {
+        return Codegen.optional(this.storageEndpoint);
     }
     /**
      * The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;

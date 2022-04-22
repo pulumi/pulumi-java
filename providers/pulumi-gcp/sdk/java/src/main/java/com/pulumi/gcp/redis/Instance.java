@@ -19,6 +19,7 @@ import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -90,8 +91,8 @@ public class Instance extends com.pulumi.resources.CustomResource {
      * Default value is &#34;false&#34; meaning AUTH is disabled.
      * 
      */
-    public Output</* @Nullable */ Boolean> authEnabled() {
-        return this.authEnabled;
+    public Output<Optional<Boolean>> authEnabled() {
+        return Codegen.optional(this.authEnabled);
     }
     /**
      * AUTH String set on the instance. This field will only be populated if auth_enabled is true.
@@ -140,8 +141,8 @@ public class Instance extends com.pulumi.resources.CustomResource {
      * Possible values are `DIRECT_PEERING` and `PRIVATE_SERVICE_ACCESS`.
      * 
      */
-    public Output</* @Nullable */ String> connectMode() {
-        return this.connectMode;
+    public Output<Optional<String>> connectMode() {
+        return Codegen.optional(this.connectMode);
     }
     /**
      * - 
@@ -192,8 +193,8 @@ public class Instance extends com.pulumi.resources.CustomResource {
      * @return An arbitrary and optional user-provided name for the instance.
      * 
      */
-    public Output</* @Nullable */ String> displayName() {
-        return this.displayName;
+    public Output<Optional<String>> displayName() {
+        return Codegen.optional(this.displayName);
     }
     /**
      * Hostname or IP address of the exposed Redis endpoint used by clients to connect to the service.
@@ -220,8 +221,8 @@ public class Instance extends com.pulumi.resources.CustomResource {
      * @return Resource labels to represent user provided metadata.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> labels() {
-        return this.labels;
+    public Output<Optional<Map<String,String>>> labels() {
+        return Codegen.optional(this.labels);
     }
     /**
      * The zone where the instance will be provisioned. If not provided,
@@ -258,8 +259,8 @@ public class Instance extends com.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ InstanceMaintenancePolicy> maintenancePolicy() {
-        return this.maintenancePolicy;
+    public Output<Optional<InstanceMaintenancePolicy>> maintenancePolicy() {
+        return Codegen.optional(this.maintenancePolicy);
     }
     /**
      * Upcoming maintenance schedule.
@@ -274,8 +275,8 @@ public class Instance extends com.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    public Output</* @Nullable */ InstanceMaintenanceSchedule> maintenanceSchedule() {
-        return this.maintenanceSchedule;
+    public Output<Optional<InstanceMaintenanceSchedule>> maintenanceSchedule() {
+        return Codegen.optional(this.maintenanceSchedule);
     }
     /**
      * Redis memory size in GiB.
@@ -420,8 +421,8 @@ public class Instance extends com.pulumi.resources.CustomResource {
      * &#34;READ_REPLICAS_DISABLED&#34; Possible values: [&#34;READ_REPLICAS_DISABLED&#34;, &#34;READ_REPLICAS_ENABLED&#34;]
      * 
      */
-    public Output</* @Nullable */ String> readReplicasMode() {
-        return this.readReplicasMode;
+    public Output<Optional<String>> readReplicasMode() {
+        return Codegen.optional(this.readReplicasMode);
     }
     /**
      * Redis configuration parameters, according to http://redis.io/topics/config.
@@ -438,8 +439,8 @@ public class Instance extends com.pulumi.resources.CustomResource {
      * https://cloud.google.com/memorystore/docs/redis/reference/rest/v1/projects.locations.instances#Instance.FIELDS.redis_configs
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> redisConfigs() {
-        return this.redisConfigs;
+    public Output<Optional<Map<String,String>>> redisConfigs() {
+        return Codegen.optional(this.redisConfigs);
     }
     /**
      * The version of Redis software. If not provided, latest supported
@@ -546,8 +547,8 @@ public class Instance extends com.pulumi.resources.CustomResource {
      *   Possible values are `BASIC` and `STANDARD_HA`.
      * 
      */
-    public Output</* @Nullable */ String> tier() {
-        return this.tier;
+    public Output<Optional<String>> tier() {
+        return Codegen.optional(this.tier);
     }
     /**
      * The TLS mode of the Redis instance, If not provided, TLS is disabled for the instance.
@@ -566,8 +567,8 @@ public class Instance extends com.pulumi.resources.CustomResource {
      *   Possible values are `SERVER_AUTHENTICATION` and `DISABLED`.
      * 
      */
-    public Output</* @Nullable */ String> transitEncryptionMode() {
-        return this.transitEncryptionMode;
+    public Output<Optional<String>> transitEncryptionMode() {
+        return Codegen.optional(this.transitEncryptionMode);
     }
 
     /**

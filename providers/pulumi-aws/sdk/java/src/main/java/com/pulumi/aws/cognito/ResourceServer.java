@@ -13,6 +13,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -84,8 +85,8 @@ public class ResourceServer extends com.pulumi.resources.CustomResource {
      * @return A list of Authorization Scope.
      * 
      */
-    public Output</* @Nullable */ List<ResourceServerScope>> scopes() {
-        return this.scopes;
+    public Output<Optional<List<ResourceServerScope>>> scopes() {
+        return Codegen.optional(this.scopes);
     }
     @Export(name="userPoolId", type=String.class, parameters={})
     private Output<String> userPoolId;

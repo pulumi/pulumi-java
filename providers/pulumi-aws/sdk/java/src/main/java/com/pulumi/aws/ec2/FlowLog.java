@@ -14,6 +14,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -58,8 +59,8 @@ public class FlowLog extends com.pulumi.resources.CustomResource {
      * @return Describes the destination options for a flow log. More details below.
      * 
      */
-    public Output</* @Nullable */ FlowLogDestinationOptions> destinationOptions() {
-        return this.destinationOptions;
+    public Output<Optional<FlowLogDestinationOptions>> destinationOptions() {
+        return Codegen.optional(this.destinationOptions);
     }
     /**
      * Elastic Network Interface ID to attach to
@@ -72,8 +73,8 @@ public class FlowLog extends com.pulumi.resources.CustomResource {
      * @return Elastic Network Interface ID to attach to
      * 
      */
-    public Output</* @Nullable */ String> eniId() {
-        return this.eniId;
+    public Output<Optional<String>> eniId() {
+        return Codegen.optional(this.eniId);
     }
     /**
      * The ARN for the IAM role that&#39;s used to post flow logs to a CloudWatch Logs log group
@@ -86,8 +87,8 @@ public class FlowLog extends com.pulumi.resources.CustomResource {
      * @return The ARN for the IAM role that&#39;s used to post flow logs to a CloudWatch Logs log group
      * 
      */
-    public Output</* @Nullable */ String> iamRoleArn() {
-        return this.iamRoleArn;
+    public Output<Optional<String>> iamRoleArn() {
+        return Codegen.optional(this.iamRoleArn);
     }
     /**
      * The ARN of the logging destination.
@@ -114,8 +115,8 @@ public class FlowLog extends com.pulumi.resources.CustomResource {
      * @return The type of the logging destination. Valid values: `cloud-watch-logs`, `s3`. Default: `cloud-watch-logs`.
      * 
      */
-    public Output</* @Nullable */ String> logDestinationType() {
-        return this.logDestinationType;
+    public Output<Optional<String>> logDestinationType() {
+        return Codegen.optional(this.logDestinationType);
     }
     /**
      * The fields to include in the flow log record, in the order in which they should appear.
@@ -166,8 +167,8 @@ public class FlowLog extends com.pulumi.resources.CustomResource {
      * minutes). Default: `600`.
      * 
      */
-    public Output</* @Nullable */ Integer> maxAggregationInterval() {
-        return this.maxAggregationInterval;
+    public Output<Optional<Integer>> maxAggregationInterval() {
+        return Codegen.optional(this.maxAggregationInterval);
     }
     /**
      * Subnet ID to attach to
@@ -180,8 +181,8 @@ public class FlowLog extends com.pulumi.resources.CustomResource {
      * @return Subnet ID to attach to
      * 
      */
-    public Output</* @Nullable */ String> subnetId() {
-        return this.subnetId;
+    public Output<Optional<String>> subnetId() {
+        return Codegen.optional(this.subnetId);
     }
     /**
      * Key-value map of resource tags. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
@@ -194,8 +195,8 @@ public class FlowLog extends com.pulumi.resources.CustomResource {
      * @return Key-value map of resource tags. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * A map of tags assigned to the resource, including those inherited from the provider .
@@ -236,8 +237,8 @@ public class FlowLog extends com.pulumi.resources.CustomResource {
      * @return VPC ID to attach to
      * 
      */
-    public Output</* @Nullable */ String> vpcId() {
-        return this.vpcId;
+    public Output<Optional<String>> vpcId() {
+        return Codegen.optional(this.vpcId);
     }
 
     /**

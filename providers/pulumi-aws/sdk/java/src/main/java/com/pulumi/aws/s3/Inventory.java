@@ -16,6 +16,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -73,8 +74,8 @@ public class Inventory extends com.pulumi.resources.CustomResource {
      * @return Specifies whether the inventory is enabled or disabled.
      * 
      */
-    public Output</* @Nullable */ Boolean> enabled() {
-        return this.enabled;
+    public Output<Optional<Boolean>> enabled() {
+        return Codegen.optional(this.enabled);
     }
     /**
      * Specifies an inventory filter. The inventory only includes objects that meet the filter&#39;s criteria (documented below).
@@ -87,8 +88,8 @@ public class Inventory extends com.pulumi.resources.CustomResource {
      * @return Specifies an inventory filter. The inventory only includes objects that meet the filter&#39;s criteria (documented below).
      * 
      */
-    public Output</* @Nullable */ InventoryFilter> filter() {
-        return this.filter;
+    public Output<Optional<InventoryFilter>> filter() {
+        return Codegen.optional(this.filter);
     }
     /**
      * Object versions to include in the inventory list. Valid values: `All`, `Current`.
@@ -129,8 +130,8 @@ public class Inventory extends com.pulumi.resources.CustomResource {
      * @return List of optional fields that are included in the inventory results. Please refer to the S3 [documentation](https://docs.aws.amazon.com/AmazonS3/latest/API/API_InventoryConfiguration.html#AmazonS3-Type-InventoryConfiguration-OptionalFields) for more details.
      * 
      */
-    public Output</* @Nullable */ List<String>> optionalFields() {
-        return this.optionalFields;
+    public Output<Optional<List<String>>> optionalFields() {
+        return Codegen.optional(this.optionalFields);
     }
     /**
      * Specifies the schedule for generating inventory results (documented below).

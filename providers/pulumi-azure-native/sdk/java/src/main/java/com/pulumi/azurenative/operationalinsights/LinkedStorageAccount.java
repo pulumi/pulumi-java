@@ -12,6 +12,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -70,8 +71,8 @@ public class LinkedStorageAccount extends com.pulumi.resources.CustomResource {
      * @return Linked storage accounts resources ids.
      * 
      */
-    public Output</* @Nullable */ List<String>> storageAccountIds() {
-        return this.storageAccountIds;
+    public Output<Optional<List<String>>> storageAccountIds() {
+        return Codegen.optional(this.storageAccountIds);
     }
     /**
      * The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;

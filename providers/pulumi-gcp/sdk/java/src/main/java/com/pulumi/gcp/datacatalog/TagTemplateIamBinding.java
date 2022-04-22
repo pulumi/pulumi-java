@@ -13,6 +13,7 @@ import com.pulumi.gcp.datacatalog.inputs.TagTemplateIamBindingState;
 import com.pulumi.gcp.datacatalog.outputs.TagTemplateIamBindingCondition;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 @ResourceType(type="gcp:datacatalog/tagTemplateIamBinding:TagTemplateIamBinding")
@@ -20,8 +21,8 @@ public class TagTemplateIamBinding extends com.pulumi.resources.CustomResource {
     @Export(name="condition", type=TagTemplateIamBindingCondition.class, parameters={})
     private Output</* @Nullable */ TagTemplateIamBindingCondition> condition;
 
-    public Output</* @Nullable */ TagTemplateIamBindingCondition> condition() {
-        return this.condition;
+    public Output<Optional<TagTemplateIamBindingCondition>> condition() {
+        return Codegen.optional(this.condition);
     }
     @Export(name="etag", type=String.class, parameters={})
     private Output<String> etag;

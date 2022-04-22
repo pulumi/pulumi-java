@@ -15,6 +15,7 @@ import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -86,8 +87,8 @@ public class InfrastructureConfiguration extends com.pulumi.resources.CustomReso
      * @return Description for the configuration.
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * Name of IAM Instance Profile.
@@ -114,8 +115,8 @@ public class InfrastructureConfiguration extends com.pulumi.resources.CustomReso
      * @return Set of EC2 Instance Types.
      * 
      */
-    public Output</* @Nullable */ List<String>> instanceTypes() {
-        return this.instanceTypes;
+    public Output<Optional<List<String>>> instanceTypes() {
+        return Codegen.optional(this.instanceTypes);
     }
     /**
      * Name of EC2 Key Pair.
@@ -128,8 +129,8 @@ public class InfrastructureConfiguration extends com.pulumi.resources.CustomReso
      * @return Name of EC2 Key Pair.
      * 
      */
-    public Output</* @Nullable */ String> keyPair() {
-        return this.keyPair;
+    public Output<Optional<String>> keyPair() {
+        return Codegen.optional(this.keyPair);
     }
     /**
      * Configuration block with logging settings. Detailed below.
@@ -142,8 +143,8 @@ public class InfrastructureConfiguration extends com.pulumi.resources.CustomReso
      * @return Configuration block with logging settings. Detailed below.
      * 
      */
-    public Output</* @Nullable */ InfrastructureConfigurationLogging> logging() {
-        return this.logging;
+    public Output<Optional<InfrastructureConfigurationLogging>> logging() {
+        return Codegen.optional(this.logging);
     }
     /**
      * Name for the configuration.
@@ -170,8 +171,8 @@ public class InfrastructureConfiguration extends com.pulumi.resources.CustomReso
      * @return Key-value map of resource tags to assign to infrastructure created by the configuration.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> resourceTags() {
-        return this.resourceTags;
+    public Output<Optional<Map<String,String>>> resourceTags() {
+        return Codegen.optional(this.resourceTags);
     }
     /**
      * Set of EC2 Security Group identifiers.
@@ -184,8 +185,8 @@ public class InfrastructureConfiguration extends com.pulumi.resources.CustomReso
      * @return Set of EC2 Security Group identifiers.
      * 
      */
-    public Output</* @Nullable */ List<String>> securityGroupIds() {
-        return this.securityGroupIds;
+    public Output<Optional<List<String>>> securityGroupIds() {
+        return Codegen.optional(this.securityGroupIds);
     }
     /**
      * Amazon Resource Name (ARN) of SNS Topic.
@@ -198,8 +199,8 @@ public class InfrastructureConfiguration extends com.pulumi.resources.CustomReso
      * @return Amazon Resource Name (ARN) of SNS Topic.
      * 
      */
-    public Output</* @Nullable */ String> snsTopicArn() {
-        return this.snsTopicArn;
+    public Output<Optional<String>> snsTopicArn() {
+        return Codegen.optional(this.snsTopicArn);
     }
     /**
      * EC2 Subnet identifier. Also requires `security_group_ids` argument.
@@ -212,8 +213,8 @@ public class InfrastructureConfiguration extends com.pulumi.resources.CustomReso
      * @return EC2 Subnet identifier. Also requires `security_group_ids` argument.
      * 
      */
-    public Output</* @Nullable */ String> subnetId() {
-        return this.subnetId;
+    public Output<Optional<String>> subnetId() {
+        return Codegen.optional(this.subnetId);
     }
     /**
      * Key-value map of resource tags to assign to the configuration. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
@@ -226,8 +227,8 @@ public class InfrastructureConfiguration extends com.pulumi.resources.CustomReso
      * @return Key-value map of resource tags to assign to the configuration. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * A map of tags assigned to the resource, including those inherited from the provider .
@@ -254,8 +255,8 @@ public class InfrastructureConfiguration extends com.pulumi.resources.CustomReso
      * @return Enable if the instance should be terminated when the pipeline fails. Defaults to `false`.
      * 
      */
-    public Output</* @Nullable */ Boolean> terminateInstanceOnFailure() {
-        return this.terminateInstanceOnFailure;
+    public Output<Optional<Boolean>> terminateInstanceOnFailure() {
+        return Codegen.optional(this.terminateInstanceOnFailure);
     }
 
     /**

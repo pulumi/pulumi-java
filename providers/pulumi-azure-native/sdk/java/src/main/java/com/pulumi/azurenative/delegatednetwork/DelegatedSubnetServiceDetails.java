@@ -15,6 +15,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -45,8 +46,8 @@ public class DelegatedSubnetServiceDetails extends com.pulumi.resources.CustomRe
      * @return Properties of the controller.
      * 
      */
-    public Output</* @Nullable */ ControllerDetailsResponse> controllerDetails() {
-        return this.controllerDetails;
+    public Output<Optional<ControllerDetailsResponse>> controllerDetails() {
+        return Codegen.optional(this.controllerDetails);
     }
     /**
      * Location of the resource.
@@ -59,8 +60,8 @@ public class DelegatedSubnetServiceDetails extends com.pulumi.resources.CustomRe
      * @return Location of the resource.
      * 
      */
-    public Output</* @Nullable */ String> location() {
-        return this.location;
+    public Output<Optional<String>> location() {
+        return Codegen.optional(this.location);
     }
     /**
      * The name of the resource.
@@ -115,8 +116,8 @@ public class DelegatedSubnetServiceDetails extends com.pulumi.resources.CustomRe
      * @return subnet details
      * 
      */
-    public Output</* @Nullable */ SubnetDetailsResponse> subnetDetails() {
-        return this.subnetDetails;
+    public Output<Optional<SubnetDetailsResponse>> subnetDetails() {
+        return Codegen.optional(this.subnetDetails);
     }
     /**
      * The resource tags.
@@ -129,8 +130,8 @@ public class DelegatedSubnetServiceDetails extends com.pulumi.resources.CustomRe
      * @return The resource tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * The type of resource.

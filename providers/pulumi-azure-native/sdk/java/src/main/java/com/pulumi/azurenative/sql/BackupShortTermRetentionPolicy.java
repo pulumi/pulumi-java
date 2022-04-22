@@ -13,6 +13,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -57,8 +58,8 @@ public class BackupShortTermRetentionPolicy extends com.pulumi.resources.CustomR
      * @return The backup retention period in days. This is how many days Point-in-Time Restore will be supported.
      * 
      */
-    public Output</* @Nullable */ Integer> retentionDays() {
-        return this.retentionDays;
+    public Output<Optional<Integer>> retentionDays() {
+        return Codegen.optional(this.retentionDays);
     }
     /**
      * Resource type.

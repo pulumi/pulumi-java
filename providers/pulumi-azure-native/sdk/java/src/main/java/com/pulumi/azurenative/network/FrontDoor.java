@@ -20,6 +20,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -50,8 +51,8 @@ public class FrontDoor extends com.pulumi.resources.CustomResource {
      * @return Backend pools available to routing rules.
      * 
      */
-    public Output</* @Nullable */ List<BackendPoolResponse>> backendPools() {
-        return this.backendPools;
+    public Output<Optional<List<BackendPoolResponse>>> backendPools() {
+        return Codegen.optional(this.backendPools);
     }
     /**
      * Settings for all backendPools
@@ -64,8 +65,8 @@ public class FrontDoor extends com.pulumi.resources.CustomResource {
      * @return Settings for all backendPools
      * 
      */
-    public Output</* @Nullable */ BackendPoolsSettingsResponse> backendPoolsSettings() {
-        return this.backendPoolsSettings;
+    public Output<Optional<BackendPoolsSettingsResponse>> backendPoolsSettings() {
+        return Codegen.optional(this.backendPoolsSettings);
     }
     /**
      * The host that each frontendEndpoint must CNAME to.
@@ -92,8 +93,8 @@ public class FrontDoor extends com.pulumi.resources.CustomResource {
      * @return Operational status of the Front Door load balancer. Permitted values are &#39;Enabled&#39; or &#39;Disabled&#39;
      * 
      */
-    public Output</* @Nullable */ String> enabledState() {
-        return this.enabledState;
+    public Output<Optional<String>> enabledState() {
+        return Codegen.optional(this.enabledState);
     }
     /**
      * A friendly name for the frontDoor
@@ -106,8 +107,8 @@ public class FrontDoor extends com.pulumi.resources.CustomResource {
      * @return A friendly name for the frontDoor
      * 
      */
-    public Output</* @Nullable */ String> friendlyName() {
-        return this.friendlyName;
+    public Output<Optional<String>> friendlyName() {
+        return Codegen.optional(this.friendlyName);
     }
     /**
      * The Id of the frontdoor.
@@ -134,8 +135,8 @@ public class FrontDoor extends com.pulumi.resources.CustomResource {
      * @return Frontend endpoints available to routing rules.
      * 
      */
-    public Output</* @Nullable */ List<FrontendEndpointResponse>> frontendEndpoints() {
-        return this.frontendEndpoints;
+    public Output<Optional<List<FrontendEndpointResponse>>> frontendEndpoints() {
+        return Codegen.optional(this.frontendEndpoints);
     }
     /**
      * Health probe settings associated with this Front Door instance.
@@ -148,8 +149,8 @@ public class FrontDoor extends com.pulumi.resources.CustomResource {
      * @return Health probe settings associated with this Front Door instance.
      * 
      */
-    public Output</* @Nullable */ List<HealthProbeSettingsModelResponse>> healthProbeSettings() {
-        return this.healthProbeSettings;
+    public Output<Optional<List<HealthProbeSettingsModelResponse>>> healthProbeSettings() {
+        return Codegen.optional(this.healthProbeSettings);
     }
     /**
      * Load balancing settings associated with this Front Door instance.
@@ -162,8 +163,8 @@ public class FrontDoor extends com.pulumi.resources.CustomResource {
      * @return Load balancing settings associated with this Front Door instance.
      * 
      */
-    public Output</* @Nullable */ List<LoadBalancingSettingsModelResponse>> loadBalancingSettings() {
-        return this.loadBalancingSettings;
+    public Output<Optional<List<LoadBalancingSettingsModelResponse>>> loadBalancingSettings() {
+        return Codegen.optional(this.loadBalancingSettings);
     }
     /**
      * Resource location.
@@ -176,8 +177,8 @@ public class FrontDoor extends com.pulumi.resources.CustomResource {
      * @return Resource location.
      * 
      */
-    public Output</* @Nullable */ String> location() {
-        return this.location;
+    public Output<Optional<String>> location() {
+        return Codegen.optional(this.location);
     }
     /**
      * Resource name.
@@ -232,8 +233,8 @@ public class FrontDoor extends com.pulumi.resources.CustomResource {
      * @return Routing rules associated with this Front Door.
      * 
      */
-    public Output</* @Nullable */ List<RoutingRuleResponse>> routingRules() {
-        return this.routingRules;
+    public Output<Optional<List<RoutingRuleResponse>>> routingRules() {
+        return Codegen.optional(this.routingRules);
     }
     /**
      * Rules Engine Configurations available to routing rules.
@@ -260,8 +261,8 @@ public class FrontDoor extends com.pulumi.resources.CustomResource {
      * @return Resource tags.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * Resource type.

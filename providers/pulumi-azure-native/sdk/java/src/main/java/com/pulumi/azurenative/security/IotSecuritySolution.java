@@ -17,6 +17,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -47,8 +48,8 @@ public class IotSecuritySolution extends com.pulumi.resources.CustomResource {
      * @return List of additional workspaces
      * 
      */
-    public Output</* @Nullable */ List<AdditionalWorkspacesPropertiesResponse>> additionalWorkspaces() {
-        return this.additionalWorkspaces;
+    public Output<Optional<List<AdditionalWorkspacesPropertiesResponse>>> additionalWorkspaces() {
+        return Codegen.optional(this.additionalWorkspaces);
     }
     /**
      * List of resources that were automatically discovered as relevant to the security solution.
@@ -75,8 +76,8 @@ public class IotSecuritySolution extends com.pulumi.resources.CustomResource {
      * @return Disabled data sources. Disabling these data sources compromises the system.
      * 
      */
-    public Output</* @Nullable */ List<String>> disabledDataSources() {
-        return this.disabledDataSources;
+    public Output<Optional<List<String>>> disabledDataSources() {
+        return Codegen.optional(this.disabledDataSources);
     }
     /**
      * Resource display name.
@@ -103,8 +104,8 @@ public class IotSecuritySolution extends com.pulumi.resources.CustomResource {
      * @return List of additional options for exporting to workspace data.
      * 
      */
-    public Output</* @Nullable */ List<String>> export() {
-        return this.export;
+    public Output<Optional<List<String>>> export() {
+        return Codegen.optional(this.export);
     }
     /**
      * IoT Hub resource IDs
@@ -131,8 +132,8 @@ public class IotSecuritySolution extends com.pulumi.resources.CustomResource {
      * @return The resource location.
      * 
      */
-    public Output</* @Nullable */ String> location() {
-        return this.location;
+    public Output<Optional<String>> location() {
+        return Codegen.optional(this.location);
     }
     /**
      * Resource name
@@ -159,8 +160,8 @@ public class IotSecuritySolution extends com.pulumi.resources.CustomResource {
      * @return List of the configuration status for each recommendation type.
      * 
      */
-    public Output</* @Nullable */ List<RecommendationConfigurationPropertiesResponse>> recommendationsConfiguration() {
-        return this.recommendationsConfiguration;
+    public Output<Optional<List<RecommendationConfigurationPropertiesResponse>>> recommendationsConfiguration() {
+        return Codegen.optional(this.recommendationsConfiguration);
     }
     /**
      * Status of the IoT Security solution.
@@ -173,8 +174,8 @@ public class IotSecuritySolution extends com.pulumi.resources.CustomResource {
      * @return Status of the IoT Security solution.
      * 
      */
-    public Output</* @Nullable */ String> status() {
-        return this.status;
+    public Output<Optional<String>> status() {
+        return Codegen.optional(this.status);
     }
     /**
      * Azure Resource Manager metadata containing createdBy and modifiedBy information.
@@ -201,8 +202,8 @@ public class IotSecuritySolution extends com.pulumi.resources.CustomResource {
      * @return Resource tags
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * Resource type
@@ -229,8 +230,8 @@ public class IotSecuritySolution extends com.pulumi.resources.CustomResource {
      * @return Unmasked IP address logging status
      * 
      */
-    public Output</* @Nullable */ String> unmaskedIpLoggingStatus() {
-        return this.unmaskedIpLoggingStatus;
+    public Output<Optional<String>> unmaskedIpLoggingStatus() {
+        return Codegen.optional(this.unmaskedIpLoggingStatus);
     }
     /**
      * Properties of the IoT Security solution&#39;s user defined resources.
@@ -243,8 +244,8 @@ public class IotSecuritySolution extends com.pulumi.resources.CustomResource {
      * @return Properties of the IoT Security solution&#39;s user defined resources.
      * 
      */
-    public Output</* @Nullable */ UserDefinedResourcesPropertiesResponse> userDefinedResources() {
-        return this.userDefinedResources;
+    public Output<Optional<UserDefinedResourcesPropertiesResponse>> userDefinedResources() {
+        return Codegen.optional(this.userDefinedResources);
     }
     /**
      * Workspace resource ID
@@ -257,8 +258,8 @@ public class IotSecuritySolution extends com.pulumi.resources.CustomResource {
      * @return Workspace resource ID
      * 
      */
-    public Output</* @Nullable */ String> workspace() {
-        return this.workspace;
+    public Output<Optional<String>> workspace() {
+        return Codegen.optional(this.workspace);
     }
 
     /**

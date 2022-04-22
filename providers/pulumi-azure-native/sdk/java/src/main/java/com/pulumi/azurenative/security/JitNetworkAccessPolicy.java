@@ -14,6 +14,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -43,8 +44,8 @@ public class JitNetworkAccessPolicy extends com.pulumi.resources.CustomResource 
      * @return Kind of the resource
      * 
      */
-    public Output</* @Nullable */ String> kind() {
-        return this.kind;
+    public Output<Optional<String>> kind() {
+        return Codegen.optional(this.kind);
     }
     /**
      * Location where the resource is stored
@@ -91,8 +92,8 @@ public class JitNetworkAccessPolicy extends com.pulumi.resources.CustomResource 
     @Export(name="requests", type=List.class, parameters={JitNetworkAccessRequestResponse.class})
     private Output</* @Nullable */ List<JitNetworkAccessRequestResponse>> requests;
 
-    public Output</* @Nullable */ List<JitNetworkAccessRequestResponse>> requests() {
-        return this.requests;
+    public Output<Optional<List<JitNetworkAccessRequestResponse>>> requests() {
+        return Codegen.optional(this.requests);
     }
     /**
      * Resource type

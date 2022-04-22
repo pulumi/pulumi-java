@@ -15,6 +15,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -34,8 +35,8 @@ public class FindingsFilter extends com.pulumi.resources.CustomResource {
      * @return Findings filter action.
      * 
      */
-    public Output</* @Nullable */ FindingsFilterFindingFilterAction> action() {
-        return this.action;
+    public Output<Optional<FindingsFilterFindingFilterAction>> action() {
+        return Codegen.optional(this.action);
     }
     /**
      * Findings filter ARN.
@@ -62,8 +63,8 @@ public class FindingsFilter extends com.pulumi.resources.CustomResource {
      * @return Findings filter description
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * Findings filter criteria.
@@ -118,8 +119,8 @@ public class FindingsFilter extends com.pulumi.resources.CustomResource {
      * @return Findings filter position.
      * 
      */
-    public Output</* @Nullable */ Integer> position() {
-        return this.position;
+    public Output<Optional<Integer>> position() {
+        return Codegen.optional(this.position);
     }
 
     /**

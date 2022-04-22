@@ -12,6 +12,7 @@ import com.pulumi.gcp.dataproc.ClusterIAMMemberArgs;
 import com.pulumi.gcp.dataproc.inputs.ClusterIAMMemberState;
 import com.pulumi.gcp.dataproc.outputs.ClusterIAMMemberCondition;
 import java.lang.String;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -71,8 +72,8 @@ public class ClusterIAMMember extends com.pulumi.resources.CustomResource {
     @Export(name="condition", type=ClusterIAMMemberCondition.class, parameters={})
     private Output</* @Nullable */ ClusterIAMMemberCondition> condition;
 
-    public Output</* @Nullable */ ClusterIAMMemberCondition> condition() {
-        return this.condition;
+    public Output<Optional<ClusterIAMMemberCondition>> condition() {
+        return Codegen.optional(this.condition);
     }
     /**
      * (Computed) The etag of the clusters&#39;s IAM policy.

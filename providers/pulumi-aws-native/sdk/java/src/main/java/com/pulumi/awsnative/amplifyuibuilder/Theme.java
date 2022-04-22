@@ -13,6 +13,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -54,14 +55,14 @@ public class Theme extends com.pulumi.resources.CustomResource {
     @Export(name="overrides", type=List.class, parameters={ThemeValues.class})
     private Output</* @Nullable */ List<ThemeValues>> overrides;
 
-    public Output</* @Nullable */ List<ThemeValues>> overrides() {
-        return this.overrides;
+    public Output<Optional<List<ThemeValues>>> overrides() {
+        return Codegen.optional(this.overrides);
     }
     @Export(name="tags", type=ThemeTags.class, parameters={})
     private Output</* @Nullable */ ThemeTags> tags;
 
-    public Output</* @Nullable */ ThemeTags> tags() {
-        return this.tags;
+    public Output<Optional<ThemeTags>> tags() {
+        return Codegen.optional(this.tags);
     }
     @Export(name="values", type=List.class, parameters={ThemeValues.class})
     private Output<List<ThemeValues>> values;

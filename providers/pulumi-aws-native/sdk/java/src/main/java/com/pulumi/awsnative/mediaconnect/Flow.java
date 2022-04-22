@@ -12,6 +12,7 @@ import com.pulumi.core.annotations.Export;
 import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -31,8 +32,8 @@ public class Flow extends com.pulumi.resources.CustomResource {
      * @return The Availability Zone that you want to create the flow in. These options are limited to the Availability Zones within the current AWS.
      * 
      */
-    public Output</* @Nullable */ String> availabilityZone() {
-        return this.availabilityZone;
+    public Output<Optional<String>> availabilityZone() {
+        return Codegen.optional(this.availabilityZone);
     }
     /**
      * The Amazon Resource Name (ARN), a unique identifier for any AWS resource, of the flow.
@@ -101,8 +102,8 @@ public class Flow extends com.pulumi.resources.CustomResource {
      * @return The source failover config of the flow.
      * 
      */
-    public Output</* @Nullable */ FlowFailoverConfig> sourceFailoverConfig() {
-        return this.sourceFailoverConfig;
+    public Output<Optional<FlowFailoverConfig>> sourceFailoverConfig() {
+        return Codegen.optional(this.sourceFailoverConfig);
     }
 
     /**

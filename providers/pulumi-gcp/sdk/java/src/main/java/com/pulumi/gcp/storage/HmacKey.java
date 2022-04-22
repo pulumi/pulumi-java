@@ -11,6 +11,7 @@ import com.pulumi.gcp.Utilities;
 import com.pulumi.gcp.storage.HmacKeyArgs;
 import com.pulumi.gcp.storage.inputs.HmacKeyState;
 import java.lang.String;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -125,8 +126,8 @@ public class HmacKey extends com.pulumi.resources.CustomResource {
      * Possible values are `ACTIVE` and `INACTIVE`.
      * 
      */
-    public Output</* @Nullable */ String> state() {
-        return this.state;
+    public Output<Optional<String>> state() {
+        return Codegen.optional(this.state);
     }
     /**
      * &#39;The creation time of the HMAC key in RFC 3339 format. &#39;

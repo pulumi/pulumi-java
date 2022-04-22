@@ -17,6 +17,7 @@ import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -50,8 +51,8 @@ public class PatchBaseline extends com.pulumi.resources.CustomResource {
      * @return A set of rules used to include patches in the baseline. up to 10 approval rules can be specified. Each approval_rule block requires the fields documented below.
      * 
      */
-    public Output</* @Nullable */ List<PatchBaselineApprovalRule>> approvalRules() {
-        return this.approvalRules;
+    public Output<Optional<List<PatchBaselineApprovalRule>>> approvalRules() {
+        return Codegen.optional(this.approvalRules);
     }
     /**
      * A list of explicitly approved patches for the baseline.
@@ -64,8 +65,8 @@ public class PatchBaseline extends com.pulumi.resources.CustomResource {
      * @return A list of explicitly approved patches for the baseline.
      * 
      */
-    public Output</* @Nullable */ List<String>> approvedPatches() {
-        return this.approvedPatches;
+    public Output<Optional<List<String>>> approvedPatches() {
+        return Codegen.optional(this.approvedPatches);
     }
     /**
      * Defines the compliance level for approved patches. This means that if an approved patch is reported as missing, this is the severity of the compliance violation. Valid compliance levels include the following: `CRITICAL`, `HIGH`, `MEDIUM`, `LOW`, `INFORMATIONAL`, `UNSPECIFIED`. The default value is `UNSPECIFIED`.
@@ -78,8 +79,8 @@ public class PatchBaseline extends com.pulumi.resources.CustomResource {
      * @return Defines the compliance level for approved patches. This means that if an approved patch is reported as missing, this is the severity of the compliance violation. Valid compliance levels include the following: `CRITICAL`, `HIGH`, `MEDIUM`, `LOW`, `INFORMATIONAL`, `UNSPECIFIED`. The default value is `UNSPECIFIED`.
      * 
      */
-    public Output</* @Nullable */ String> approvedPatchesComplianceLevel() {
-        return this.approvedPatchesComplianceLevel;
+    public Output<Optional<String>> approvedPatchesComplianceLevel() {
+        return Codegen.optional(this.approvedPatchesComplianceLevel);
     }
     /**
      * Indicates whether the list of approved patches includes non-security updates that should be applied to the instances. Applies to Linux instances only.
@@ -92,8 +93,8 @@ public class PatchBaseline extends com.pulumi.resources.CustomResource {
      * @return Indicates whether the list of approved patches includes non-security updates that should be applied to the instances. Applies to Linux instances only.
      * 
      */
-    public Output</* @Nullable */ Boolean> approvedPatchesEnableNonSecurity() {
-        return this.approvedPatchesEnableNonSecurity;
+    public Output<Optional<Boolean>> approvedPatchesEnableNonSecurity() {
+        return Codegen.optional(this.approvedPatchesEnableNonSecurity);
     }
     /**
      * The ARN of the patch baseline.
@@ -120,8 +121,8 @@ public class PatchBaseline extends com.pulumi.resources.CustomResource {
      * @return The description of the patch baseline.
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * A set of global filters used to exclude patches from the baseline. Up to 4 global filters can be specified using Key/Value pairs. Valid Keys are `PRODUCT | CLASSIFICATION | MSRC_SEVERITY | PATCH_ID`.
@@ -134,8 +135,8 @@ public class PatchBaseline extends com.pulumi.resources.CustomResource {
      * @return A set of global filters used to exclude patches from the baseline. Up to 4 global filters can be specified using Key/Value pairs. Valid Keys are `PRODUCT | CLASSIFICATION | MSRC_SEVERITY | PATCH_ID`.
      * 
      */
-    public Output</* @Nullable */ List<PatchBaselineGlobalFilter>> globalFilters() {
-        return this.globalFilters;
+    public Output<Optional<List<PatchBaselineGlobalFilter>>> globalFilters() {
+        return Codegen.optional(this.globalFilters);
     }
     /**
      * The name specified to identify the patch source.
@@ -162,8 +163,8 @@ public class PatchBaseline extends com.pulumi.resources.CustomResource {
      * @return Defines the operating system the patch baseline applies to. Supported operating systems include `WINDOWS`, `AMAZON_LINUX`, `AMAZON_LINUX_2`, `SUSE`, `UBUNTU`, `CENTOS`, and `REDHAT_ENTERPRISE_LINUX`. The Default value is `WINDOWS`.
      * 
      */
-    public Output</* @Nullable */ String> operatingSystem() {
-        return this.operatingSystem;
+    public Output<Optional<String>> operatingSystem() {
+        return Codegen.optional(this.operatingSystem);
     }
     /**
      * A list of rejected patches.
@@ -176,8 +177,8 @@ public class PatchBaseline extends com.pulumi.resources.CustomResource {
      * @return A list of rejected patches.
      * 
      */
-    public Output</* @Nullable */ List<String>> rejectedPatches() {
-        return this.rejectedPatches;
+    public Output<Optional<List<String>>> rejectedPatches() {
+        return Codegen.optional(this.rejectedPatches);
     }
     /**
      * The action for Patch Manager to take on patches included in the `rejected_patches` list. Allow values are `ALLOW_AS_DEPENDENCY` and `BLOCK`.
@@ -204,8 +205,8 @@ public class PatchBaseline extends com.pulumi.resources.CustomResource {
      * @return Configuration block(s) with alternate sources for patches. Applies to Linux instances only. Documented below.
      * 
      */
-    public Output</* @Nullable */ List<PatchBaselineSource>> sources() {
-        return this.sources;
+    public Output<Optional<List<PatchBaselineSource>>> sources() {
+        return Codegen.optional(this.sources);
     }
     /**
      * A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
@@ -218,8 +219,8 @@ public class PatchBaseline extends com.pulumi.resources.CustomResource {
      * @return A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    public Output</* @Nullable */ Map<String,String>> tags() {
-        return this.tags;
+    public Output<Optional<Map<String,String>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * A map of tags assigned to the resource, including those inherited from the provider .

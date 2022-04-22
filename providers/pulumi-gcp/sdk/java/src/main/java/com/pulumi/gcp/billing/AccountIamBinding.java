@@ -13,6 +13,7 @@ import com.pulumi.gcp.billing.inputs.AccountIamBindingState;
 import com.pulumi.gcp.billing.outputs.AccountIamBindingCondition;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 @ResourceType(type="gcp:billing/accountIamBinding:AccountIamBinding")
@@ -26,8 +27,8 @@ public class AccountIamBinding extends com.pulumi.resources.CustomResource {
     @Export(name="condition", type=AccountIamBindingCondition.class, parameters={})
     private Output</* @Nullable */ AccountIamBindingCondition> condition;
 
-    public Output</* @Nullable */ AccountIamBindingCondition> condition() {
-        return this.condition;
+    public Output<Optional<AccountIamBindingCondition>> condition() {
+        return Codegen.optional(this.condition);
     }
     @Export(name="etag", type=String.class, parameters={})
     private Output<String> etag;
