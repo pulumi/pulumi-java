@@ -18,6 +18,7 @@ import java.lang.Integer;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -31,8 +32,8 @@ public class Association extends com.pulumi.resources.CustomResource {
     @Export(name="applyOnlyAtCronInterval", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> applyOnlyAtCronInterval;
 
-    public Output</* @Nullable */ Boolean> applyOnlyAtCronInterval() {
-        return this.applyOnlyAtCronInterval;
+    public Output<Optional<Boolean>> applyOnlyAtCronInterval() {
+        return Codegen.optional(this.applyOnlyAtCronInterval);
     }
     /**
      * Unique identifier of the association.
@@ -59,26 +60,26 @@ public class Association extends com.pulumi.resources.CustomResource {
      * @return The name of the association.
      * 
      */
-    public Output</* @Nullable */ String> associationName() {
-        return this.associationName;
+    public Output<Optional<String>> associationName() {
+        return Codegen.optional(this.associationName);
     }
     @Export(name="automationTargetParameterName", type=String.class, parameters={})
     private Output</* @Nullable */ String> automationTargetParameterName;
 
-    public Output</* @Nullable */ String> automationTargetParameterName() {
-        return this.automationTargetParameterName;
+    public Output<Optional<String>> automationTargetParameterName() {
+        return Codegen.optional(this.automationTargetParameterName);
     }
     @Export(name="calendarNames", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> calendarNames;
 
-    public Output</* @Nullable */ List<String>> calendarNames() {
-        return this.calendarNames;
+    public Output<Optional<List<String>>> calendarNames() {
+        return Codegen.optional(this.calendarNames);
     }
     @Export(name="complianceSeverity", type=AssociationComplianceSeverity.class, parameters={})
     private Output</* @Nullable */ AssociationComplianceSeverity> complianceSeverity;
 
-    public Output</* @Nullable */ AssociationComplianceSeverity> complianceSeverity() {
-        return this.complianceSeverity;
+    public Output<Optional<AssociationComplianceSeverity>> complianceSeverity() {
+        return Codegen.optional(this.complianceSeverity);
     }
     /**
      * The version of the SSM document to associate with the target.
@@ -91,8 +92,8 @@ public class Association extends com.pulumi.resources.CustomResource {
      * @return The version of the SSM document to associate with the target.
      * 
      */
-    public Output</* @Nullable */ String> documentVersion() {
-        return this.documentVersion;
+    public Output<Optional<String>> documentVersion() {
+        return Codegen.optional(this.documentVersion);
     }
     /**
      * The ID of the instance that the SSM document is associated with.
@@ -105,20 +106,20 @@ public class Association extends com.pulumi.resources.CustomResource {
      * @return The ID of the instance that the SSM document is associated with.
      * 
      */
-    public Output</* @Nullable */ String> instanceId() {
-        return this.instanceId;
+    public Output<Optional<String>> instanceId() {
+        return Codegen.optional(this.instanceId);
     }
     @Export(name="maxConcurrency", type=String.class, parameters={})
     private Output</* @Nullable */ String> maxConcurrency;
 
-    public Output</* @Nullable */ String> maxConcurrency() {
-        return this.maxConcurrency;
+    public Output<Optional<String>> maxConcurrency() {
+        return Codegen.optional(this.maxConcurrency);
     }
     @Export(name="maxErrors", type=String.class, parameters={})
     private Output</* @Nullable */ String> maxErrors;
 
-    public Output</* @Nullable */ String> maxErrors() {
-        return this.maxErrors;
+    public Output<Optional<String>> maxErrors() {
+        return Codegen.optional(this.maxErrors);
     }
     /**
      * The name of the SSM document.
@@ -137,8 +138,8 @@ public class Association extends com.pulumi.resources.CustomResource {
     @Export(name="outputLocation", type=AssociationInstanceAssociationOutputLocation.class, parameters={})
     private Output</* @Nullable */ AssociationInstanceAssociationOutputLocation> outputLocation;
 
-    public Output</* @Nullable */ AssociationInstanceAssociationOutputLocation> outputLocation() {
-        return this.outputLocation;
+    public Output<Optional<AssociationInstanceAssociationOutputLocation>> outputLocation() {
+        return Codegen.optional(this.outputLocation);
     }
     /**
      * Parameter values that the SSM document uses at runtime.
@@ -151,8 +152,8 @@ public class Association extends com.pulumi.resources.CustomResource {
      * @return Parameter values that the SSM document uses at runtime.
      * 
      */
-    public Output</* @Nullable */ Object> parameters() {
-        return this.parameters;
+    public Output<Optional<Object>> parameters() {
+        return Codegen.optional(this.parameters);
     }
     /**
      * A Cron or Rate expression that specifies when the association is applied to the target.
@@ -165,14 +166,14 @@ public class Association extends com.pulumi.resources.CustomResource {
      * @return A Cron or Rate expression that specifies when the association is applied to the target.
      * 
      */
-    public Output</* @Nullable */ String> scheduleExpression() {
-        return this.scheduleExpression;
+    public Output<Optional<String>> scheduleExpression() {
+        return Codegen.optional(this.scheduleExpression);
     }
     @Export(name="syncCompliance", type=AssociationSyncCompliance.class, parameters={})
     private Output</* @Nullable */ AssociationSyncCompliance> syncCompliance;
 
-    public Output</* @Nullable */ AssociationSyncCompliance> syncCompliance() {
-        return this.syncCompliance;
+    public Output<Optional<AssociationSyncCompliance>> syncCompliance() {
+        return Codegen.optional(this.syncCompliance);
     }
     /**
      * The targets that the SSM document sends commands to.
@@ -185,14 +186,14 @@ public class Association extends com.pulumi.resources.CustomResource {
      * @return The targets that the SSM document sends commands to.
      * 
      */
-    public Output</* @Nullable */ List<AssociationTarget>> targets() {
-        return this.targets;
+    public Output<Optional<List<AssociationTarget>>> targets() {
+        return Codegen.optional(this.targets);
     }
     @Export(name="waitForSuccessTimeoutSeconds", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> waitForSuccessTimeoutSeconds;
 
-    public Output</* @Nullable */ Integer> waitForSuccessTimeoutSeconds() {
-        return this.waitForSuccessTimeoutSeconds;
+    public Output<Optional<Integer>> waitForSuccessTimeoutSeconds() {
+        return Codegen.optional(this.waitForSuccessTimeoutSeconds);
     }
 
     /**

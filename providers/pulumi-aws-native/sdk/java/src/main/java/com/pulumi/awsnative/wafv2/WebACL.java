@@ -19,6 +19,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -42,14 +43,14 @@ public class WebACL extends com.pulumi.resources.CustomResource {
     @Export(name="captchaConfig", type=WebACLCaptchaConfig.class, parameters={})
     private Output</* @Nullable */ WebACLCaptchaConfig> captchaConfig;
 
-    public Output</* @Nullable */ WebACLCaptchaConfig> captchaConfig() {
-        return this.captchaConfig;
+    public Output<Optional<WebACLCaptchaConfig>> captchaConfig() {
+        return Codegen.optional(this.captchaConfig);
     }
     @Export(name="customResponseBodies", type=WebACLCustomResponseBodies.class, parameters={})
     private Output</* @Nullable */ WebACLCustomResponseBodies> customResponseBodies;
 
-    public Output</* @Nullable */ WebACLCustomResponseBodies> customResponseBodies() {
-        return this.customResponseBodies;
+    public Output<Optional<WebACLCustomResponseBodies>> customResponseBodies() {
+        return Codegen.optional(this.customResponseBodies);
     }
     @Export(name="defaultAction", type=WebACLDefaultAction.class, parameters={})
     private Output<WebACLDefaultAction> defaultAction;
@@ -60,8 +61,8 @@ public class WebACL extends com.pulumi.resources.CustomResource {
     @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     @Export(name="labelNamespace", type=String.class, parameters={})
     private Output<String> labelNamespace;
@@ -72,8 +73,8 @@ public class WebACL extends com.pulumi.resources.CustomResource {
     @Export(name="name", type=String.class, parameters={})
     private Output</* @Nullable */ String> name;
 
-    public Output</* @Nullable */ String> name() {
-        return this.name;
+    public Output<Optional<String>> name() {
+        return Codegen.optional(this.name);
     }
     /**
      * Collection of Rules.
@@ -86,8 +87,8 @@ public class WebACL extends com.pulumi.resources.CustomResource {
      * @return Collection of Rules.
      * 
      */
-    public Output</* @Nullable */ List<WebACLRule>> rules() {
-        return this.rules;
+    public Output<Optional<List<WebACLRule>>> rules() {
+        return Codegen.optional(this.rules);
     }
     @Export(name="scope", type=WebACLScope.class, parameters={})
     private Output<WebACLScope> scope;
@@ -98,8 +99,8 @@ public class WebACL extends com.pulumi.resources.CustomResource {
     @Export(name="tags", type=List.class, parameters={WebACLTag.class})
     private Output</* @Nullable */ List<WebACLTag>> tags;
 
-    public Output</* @Nullable */ List<WebACLTag>> tags() {
-        return this.tags;
+    public Output<Optional<List<WebACLTag>>> tags() {
+        return Codegen.optional(this.tags);
     }
     @Export(name="visibilityConfig", type=WebACLVisibilityConfig.class, parameters={})
     private Output<WebACLVisibilityConfig> visibilityConfig;

@@ -11,6 +11,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -30,8 +31,8 @@ public class RequestValidator extends com.pulumi.resources.CustomResource {
      * @return Name of the request validator.
      * 
      */
-    public Output</* @Nullable */ String> name() {
-        return this.name;
+    public Output<Optional<String>> name() {
+        return Codegen.optional(this.name);
     }
     /**
      * ID of the request validator.
@@ -72,8 +73,8 @@ public class RequestValidator extends com.pulumi.resources.CustomResource {
      * @return Indicates whether to validate the request body according to the configured schema for the targeted API and method.
      * 
      */
-    public Output</* @Nullable */ Boolean> validateRequestBody() {
-        return this.validateRequestBody;
+    public Output<Optional<Boolean>> validateRequestBody() {
+        return Codegen.optional(this.validateRequestBody);
     }
     /**
      * Indicates whether to validate request parameters.
@@ -86,8 +87,8 @@ public class RequestValidator extends com.pulumi.resources.CustomResource {
      * @return Indicates whether to validate request parameters.
      * 
      */
-    public Output</* @Nullable */ Boolean> validateRequestParameters() {
-        return this.validateRequestParameters;
+    public Output<Optional<Boolean>> validateRequestParameters() {
+        return Codegen.optional(this.validateRequestParameters);
     }
 
     /**

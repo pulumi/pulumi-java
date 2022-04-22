@@ -15,6 +15,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -26,8 +27,8 @@ public class ExperimentTemplate extends com.pulumi.resources.CustomResource {
     @Export(name="actions", type=ExperimentTemplateActionMap.class, parameters={})
     private Output</* @Nullable */ ExperimentTemplateActionMap> actions;
 
-    public Output</* @Nullable */ ExperimentTemplateActionMap> actions() {
-        return this.actions;
+    public Output<Optional<ExperimentTemplateActionMap>> actions() {
+        return Codegen.optional(this.actions);
     }
     @Export(name="description", type=String.class, parameters={})
     private Output<String> description;

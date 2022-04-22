@@ -12,6 +12,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -31,8 +32,8 @@ public class RecoveryGroup extends com.pulumi.resources.CustomResource {
      * @return A list of the cell Amazon Resource Names (ARNs) in the recovery group.
      * 
      */
-    public Output</* @Nullable */ List<String>> cells() {
-        return this.cells;
+    public Output<Optional<List<String>>> cells() {
+        return Codegen.optional(this.cells);
     }
     /**
      * A collection of tags associated with a resource.
@@ -73,8 +74,8 @@ public class RecoveryGroup extends com.pulumi.resources.CustomResource {
      * @return A collection of tags associated with a resource.
      * 
      */
-    public Output</* @Nullable */ List<RecoveryGroupTag>> tags() {
-        return this.tags;
+    public Output<Optional<List<RecoveryGroupTag>>> tags() {
+        return Codegen.optional(this.tags);
     }
 
     /**

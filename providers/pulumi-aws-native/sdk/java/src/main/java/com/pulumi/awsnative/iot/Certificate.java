@@ -12,6 +12,7 @@ import com.pulumi.core.annotations.Export;
 import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -29,26 +30,26 @@ public class Certificate extends com.pulumi.resources.CustomResource {
     @Export(name="cACertificatePem", type=String.class, parameters={})
     private Output</* @Nullable */ String> cACertificatePem;
 
-    public Output</* @Nullable */ String> cACertificatePem() {
-        return this.cACertificatePem;
+    public Output<Optional<String>> cACertificatePem() {
+        return Codegen.optional(this.cACertificatePem);
     }
     @Export(name="certificateMode", type=CertificateMode.class, parameters={})
     private Output</* @Nullable */ CertificateMode> certificateMode;
 
-    public Output</* @Nullable */ CertificateMode> certificateMode() {
-        return this.certificateMode;
+    public Output<Optional<CertificateMode>> certificateMode() {
+        return Codegen.optional(this.certificateMode);
     }
     @Export(name="certificatePem", type=String.class, parameters={})
     private Output</* @Nullable */ String> certificatePem;
 
-    public Output</* @Nullable */ String> certificatePem() {
-        return this.certificatePem;
+    public Output<Optional<String>> certificatePem() {
+        return Codegen.optional(this.certificatePem);
     }
     @Export(name="certificateSigningRequest", type=String.class, parameters={})
     private Output</* @Nullable */ String> certificateSigningRequest;
 
-    public Output</* @Nullable */ String> certificateSigningRequest() {
-        return this.certificateSigningRequest;
+    public Output<Optional<String>> certificateSigningRequest() {
+        return Codegen.optional(this.certificateSigningRequest);
     }
     @Export(name="status", type=CertificateStatus.class, parameters={})
     private Output<CertificateStatus> status;

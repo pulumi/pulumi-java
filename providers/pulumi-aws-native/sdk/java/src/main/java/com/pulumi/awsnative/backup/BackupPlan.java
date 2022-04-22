@@ -12,6 +12,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -41,8 +42,8 @@ public class BackupPlan extends com.pulumi.resources.CustomResource {
     @Export(name="backupPlanTags", type=Object.class, parameters={})
     private Output</* @Nullable */ Object> backupPlanTags;
 
-    public Output</* @Nullable */ Object> backupPlanTags() {
-        return this.backupPlanTags;
+    public Output<Optional<Object>> backupPlanTags() {
+        return Codegen.optional(this.backupPlanTags);
     }
     @Export(name="versionId", type=String.class, parameters={})
     private Output<String> versionId;

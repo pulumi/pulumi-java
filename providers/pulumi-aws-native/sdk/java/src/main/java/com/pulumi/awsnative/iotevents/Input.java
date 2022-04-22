@@ -13,6 +13,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -40,8 +41,8 @@ public class Input extends com.pulumi.resources.CustomResource {
      * @return A brief description of the input.
      * 
      */
-    public Output</* @Nullable */ String> inputDescription() {
-        return this.inputDescription;
+    public Output<Optional<String>> inputDescription() {
+        return Codegen.optional(this.inputDescription);
     }
     /**
      * The name of the input.
@@ -54,8 +55,8 @@ public class Input extends com.pulumi.resources.CustomResource {
      * @return The name of the input.
      * 
      */
-    public Output</* @Nullable */ String> inputName() {
-        return this.inputName;
+    public Output<Optional<String>> inputName() {
+        return Codegen.optional(this.inputName);
     }
     /**
      * An array of key-value pairs to apply to this resource.
@@ -72,8 +73,8 @@ public class Input extends com.pulumi.resources.CustomResource {
      * For more information, see [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html).
      * 
      */
-    public Output</* @Nullable */ List<InputTag>> tags() {
-        return this.tags;
+    public Output<Optional<List<InputTag>>> tags() {
+        return Codegen.optional(this.tags);
     }
 
     /**

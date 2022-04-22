@@ -13,6 +13,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -46,8 +47,8 @@ public class AnomalyDetector extends com.pulumi.resources.CustomResource {
      * @return A description for the AnomalyDetector.
      * 
      */
-    public Output</* @Nullable */ String> anomalyDetectorDescription() {
-        return this.anomalyDetectorDescription;
+    public Output<Optional<String>> anomalyDetectorDescription() {
+        return Codegen.optional(this.anomalyDetectorDescription);
     }
     /**
      * Name for the Amazon Lookout for Metrics Anomaly Detector
@@ -60,8 +61,8 @@ public class AnomalyDetector extends com.pulumi.resources.CustomResource {
      * @return Name for the Amazon Lookout for Metrics Anomaly Detector
      * 
      */
-    public Output</* @Nullable */ String> anomalyDetectorName() {
-        return this.anomalyDetectorName;
+    public Output<Optional<String>> anomalyDetectorName() {
+        return Codegen.optional(this.anomalyDetectorName);
     }
     @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
@@ -80,8 +81,8 @@ public class AnomalyDetector extends com.pulumi.resources.CustomResource {
      * @return KMS key used to encrypt the AnomalyDetector data
      * 
      */
-    public Output</* @Nullable */ String> kmsKeyArn() {
-        return this.kmsKeyArn;
+    public Output<Optional<String>> kmsKeyArn() {
+        return Codegen.optional(this.kmsKeyArn);
     }
     /**
      * List of metric sets for anomaly detection

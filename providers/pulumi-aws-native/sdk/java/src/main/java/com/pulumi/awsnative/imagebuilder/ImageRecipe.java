@@ -15,6 +15,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -34,8 +35,8 @@ public class ImageRecipe extends com.pulumi.resources.CustomResource {
      * @return Specify additional settings and launch scripts for your build instances.
      * 
      */
-    public Output</* @Nullable */ ImageRecipeAdditionalInstanceConfiguration> additionalInstanceConfiguration() {
-        return this.additionalInstanceConfiguration;
+    public Output<Optional<ImageRecipeAdditionalInstanceConfiguration>> additionalInstanceConfiguration() {
+        return Codegen.optional(this.additionalInstanceConfiguration);
     }
     /**
      * The Amazon Resource Name (ARN) of the image recipe.
@@ -62,8 +63,8 @@ public class ImageRecipe extends com.pulumi.resources.CustomResource {
      * @return The block device mappings to apply when creating images from this recipe.
      * 
      */
-    public Output</* @Nullable */ List<ImageRecipeInstanceBlockDeviceMapping>> blockDeviceMappings() {
-        return this.blockDeviceMappings;
+    public Output<Optional<List<ImageRecipeInstanceBlockDeviceMapping>>> blockDeviceMappings() {
+        return Codegen.optional(this.blockDeviceMappings);
     }
     /**
      * The components of the image recipe.
@@ -90,8 +91,8 @@ public class ImageRecipe extends com.pulumi.resources.CustomResource {
      * @return The description of the image recipe.
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * The name of the image recipe.
@@ -132,8 +133,8 @@ public class ImageRecipe extends com.pulumi.resources.CustomResource {
      * @return The tags of the image recipe.
      * 
      */
-    public Output</* @Nullable */ Object> tags() {
-        return this.tags;
+    public Output<Optional<Object>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * The version of the image recipe.
@@ -160,8 +161,8 @@ public class ImageRecipe extends com.pulumi.resources.CustomResource {
      * @return The working directory to be used during build and test workflows.
      * 
      */
-    public Output</* @Nullable */ String> workingDirectory() {
-        return this.workingDirectory;
+    public Output<Optional<String>> workingDirectory() {
+        return Codegen.optional(this.workingDirectory);
     }
 
     /**

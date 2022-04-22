@@ -12,6 +12,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -33,8 +34,8 @@ public class ConformancePack extends com.pulumi.resources.CustomResource {
      * @return A list of ConformancePackInputParameter objects.
      * 
      */
-    public Output</* @Nullable */ List<ConformancePackInputParameter>> conformancePackInputParameters() {
-        return this.conformancePackInputParameters;
+    public Output<Optional<List<ConformancePackInputParameter>>> conformancePackInputParameters() {
+        return Codegen.optional(this.conformancePackInputParameters);
     }
     /**
      * Name of the conformance pack which will be assigned as the unique identifier.
@@ -61,8 +62,8 @@ public class ConformancePack extends com.pulumi.resources.CustomResource {
      * @return AWS Config stores intermediate files while processing conformance pack template.
      * 
      */
-    public Output</* @Nullable */ String> deliveryS3Bucket() {
-        return this.deliveryS3Bucket;
+    public Output<Optional<String>> deliveryS3Bucket() {
+        return Codegen.optional(this.deliveryS3Bucket);
     }
     /**
      * The prefix for delivery S3 bucket.
@@ -75,8 +76,8 @@ public class ConformancePack extends com.pulumi.resources.CustomResource {
      * @return The prefix for delivery S3 bucket.
      * 
      */
-    public Output</* @Nullable */ String> deliveryS3KeyPrefix() {
-        return this.deliveryS3KeyPrefix;
+    public Output<Optional<String>> deliveryS3KeyPrefix() {
+        return Codegen.optional(this.deliveryS3KeyPrefix);
     }
     /**
      * A string containing full conformance pack template body. You can only specify one of the template body or template S3Uri fields.
@@ -89,8 +90,8 @@ public class ConformancePack extends com.pulumi.resources.CustomResource {
      * @return A string containing full conformance pack template body. You can only specify one of the template body or template S3Uri fields.
      * 
      */
-    public Output</* @Nullable */ String> templateBody() {
-        return this.templateBody;
+    public Output<Optional<String>> templateBody() {
+        return Codegen.optional(this.templateBody);
     }
     /**
      * Location of file containing the template body which points to the conformance pack template that is located in an Amazon S3 bucket. You can only specify one of the template body or template S3Uri fields.
@@ -103,8 +104,8 @@ public class ConformancePack extends com.pulumi.resources.CustomResource {
      * @return Location of file containing the template body which points to the conformance pack template that is located in an Amazon S3 bucket. You can only specify one of the template body or template S3Uri fields.
      * 
      */
-    public Output</* @Nullable */ String> templateS3Uri() {
-        return this.templateS3Uri;
+    public Output<Optional<String>> templateS3Uri() {
+        return Codegen.optional(this.templateS3Uri);
     }
 
     /**

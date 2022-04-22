@@ -12,6 +12,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -51,8 +52,8 @@ public class ApiDestination extends com.pulumi.resources.CustomResource {
     @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     @Export(name="httpMethod", type=ApiDestinationHttpMethod.class, parameters={})
     private Output<ApiDestinationHttpMethod> httpMethod;
@@ -77,8 +78,8 @@ public class ApiDestination extends com.pulumi.resources.CustomResource {
     @Export(name="invocationRateLimitPerSecond", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> invocationRateLimitPerSecond;
 
-    public Output</* @Nullable */ Integer> invocationRateLimitPerSecond() {
-        return this.invocationRateLimitPerSecond;
+    public Output<Optional<Integer>> invocationRateLimitPerSecond() {
+        return Codegen.optional(this.invocationRateLimitPerSecond);
     }
     /**
      * Name of the apiDestination.
@@ -91,8 +92,8 @@ public class ApiDestination extends com.pulumi.resources.CustomResource {
      * @return Name of the apiDestination.
      * 
      */
-    public Output</* @Nullable */ String> name() {
-        return this.name;
+    public Output<Optional<String>> name() {
+        return Codegen.optional(this.name);
     }
 
     /**

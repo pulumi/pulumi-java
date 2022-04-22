@@ -11,6 +11,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -30,8 +31,8 @@ public class Model extends com.pulumi.resources.CustomResource {
      * @return The content type for the model.
      * 
      */
-    public Output</* @Nullable */ String> contentType() {
-        return this.contentType;
+    public Output<Optional<String>> contentType() {
+        return Codegen.optional(this.contentType);
     }
     /**
      * A description that identifies this model.
@@ -44,8 +45,8 @@ public class Model extends com.pulumi.resources.CustomResource {
      * @return A description that identifies this model.
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * A name for the model. If you don&#39;t specify a name, AWS CloudFormation generates a unique physical ID and uses that ID for the model name.
@@ -58,8 +59,8 @@ public class Model extends com.pulumi.resources.CustomResource {
      * @return A name for the model. If you don&#39;t specify a name, AWS CloudFormation generates a unique physical ID and uses that ID for the model name.
      * 
      */
-    public Output</* @Nullable */ String> name() {
-        return this.name;
+    public Output<Optional<String>> name() {
+        return Codegen.optional(this.name);
     }
     /**
      * The ID of a REST API with which to associate this model.
@@ -86,8 +87,8 @@ public class Model extends com.pulumi.resources.CustomResource {
      * @return The schema to use to transform data to one or more output formats. Specify null ({}) if you don&#39;t want to specify a schema.
      * 
      */
-    public Output</* @Nullable */ Object> schema() {
-        return this.schema;
+    public Output<Optional<Object>> schema() {
+        return Codegen.optional(this.schema);
     }
 
     /**

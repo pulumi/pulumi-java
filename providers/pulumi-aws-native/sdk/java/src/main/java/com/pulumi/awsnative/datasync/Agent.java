@@ -13,6 +13,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -62,8 +63,8 @@ public class Agent extends com.pulumi.resources.CustomResource {
      * @return The name configured for the agent. Text reference used to identify the agent in the console.
      * 
      */
-    public Output</* @Nullable */ String> agentName() {
-        return this.agentName;
+    public Output<Optional<String>> agentName() {
+        return Codegen.optional(this.agentName);
     }
     /**
      * The service endpoints that the agent will connect to.
@@ -90,8 +91,8 @@ public class Agent extends com.pulumi.resources.CustomResource {
      * @return The ARNs of the security group used to protect your data transfer task subnets.
      * 
      */
-    public Output</* @Nullable */ List<String>> securityGroupArns() {
-        return this.securityGroupArns;
+    public Output<Optional<List<String>>> securityGroupArns() {
+        return Codegen.optional(this.securityGroupArns);
     }
     /**
      * The ARNs of the subnets in which DataSync will create elastic network interfaces for each data transfer task.
@@ -104,8 +105,8 @@ public class Agent extends com.pulumi.resources.CustomResource {
      * @return The ARNs of the subnets in which DataSync will create elastic network interfaces for each data transfer task.
      * 
      */
-    public Output</* @Nullable */ List<String>> subnetArns() {
-        return this.subnetArns;
+    public Output<Optional<List<String>>> subnetArns() {
+        return Codegen.optional(this.subnetArns);
     }
     /**
      * An array of key-value pairs to apply to this resource.
@@ -118,8 +119,8 @@ public class Agent extends com.pulumi.resources.CustomResource {
      * @return An array of key-value pairs to apply to this resource.
      * 
      */
-    public Output</* @Nullable */ List<AgentTag>> tags() {
-        return this.tags;
+    public Output<Optional<List<AgentTag>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * The ID of the VPC endpoint that the agent has access to.
@@ -132,8 +133,8 @@ public class Agent extends com.pulumi.resources.CustomResource {
      * @return The ID of the VPC endpoint that the agent has access to.
      * 
      */
-    public Output</* @Nullable */ String> vpcEndpointId() {
-        return this.vpcEndpointId;
+    public Output<Optional<String>> vpcEndpointId() {
+        return Codegen.optional(this.vpcEndpointId);
     }
 
     /**

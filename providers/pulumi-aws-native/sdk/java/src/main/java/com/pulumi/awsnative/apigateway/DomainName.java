@@ -14,6 +14,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -27,8 +28,8 @@ public class DomainName extends com.pulumi.resources.CustomResource {
     @Export(name="certificateArn", type=String.class, parameters={})
     private Output</* @Nullable */ String> certificateArn;
 
-    public Output</* @Nullable */ String> certificateArn() {
-        return this.certificateArn;
+    public Output<Optional<String>> certificateArn() {
+        return Codegen.optional(this.certificateArn);
     }
     @Export(name="distributionDomainName", type=String.class, parameters={})
     private Output<String> distributionDomainName;
@@ -45,32 +46,32 @@ public class DomainName extends com.pulumi.resources.CustomResource {
     @Export(name="domainName", type=String.class, parameters={})
     private Output</* @Nullable */ String> domainName;
 
-    public Output</* @Nullable */ String> domainName() {
-        return this.domainName;
+    public Output<Optional<String>> domainName() {
+        return Codegen.optional(this.domainName);
     }
     @Export(name="endpointConfiguration", type=DomainNameEndpointConfiguration.class, parameters={})
     private Output</* @Nullable */ DomainNameEndpointConfiguration> endpointConfiguration;
 
-    public Output</* @Nullable */ DomainNameEndpointConfiguration> endpointConfiguration() {
-        return this.endpointConfiguration;
+    public Output<Optional<DomainNameEndpointConfiguration>> endpointConfiguration() {
+        return Codegen.optional(this.endpointConfiguration);
     }
     @Export(name="mutualTlsAuthentication", type=DomainNameMutualTlsAuthentication.class, parameters={})
     private Output</* @Nullable */ DomainNameMutualTlsAuthentication> mutualTlsAuthentication;
 
-    public Output</* @Nullable */ DomainNameMutualTlsAuthentication> mutualTlsAuthentication() {
-        return this.mutualTlsAuthentication;
+    public Output<Optional<DomainNameMutualTlsAuthentication>> mutualTlsAuthentication() {
+        return Codegen.optional(this.mutualTlsAuthentication);
     }
     @Export(name="ownershipVerificationCertificateArn", type=String.class, parameters={})
     private Output</* @Nullable */ String> ownershipVerificationCertificateArn;
 
-    public Output</* @Nullable */ String> ownershipVerificationCertificateArn() {
-        return this.ownershipVerificationCertificateArn;
+    public Output<Optional<String>> ownershipVerificationCertificateArn() {
+        return Codegen.optional(this.ownershipVerificationCertificateArn);
     }
     @Export(name="regionalCertificateArn", type=String.class, parameters={})
     private Output</* @Nullable */ String> regionalCertificateArn;
 
-    public Output</* @Nullable */ String> regionalCertificateArn() {
-        return this.regionalCertificateArn;
+    public Output<Optional<String>> regionalCertificateArn() {
+        return Codegen.optional(this.regionalCertificateArn);
     }
     @Export(name="regionalDomainName", type=String.class, parameters={})
     private Output<String> regionalDomainName;
@@ -87,14 +88,14 @@ public class DomainName extends com.pulumi.resources.CustomResource {
     @Export(name="securityPolicy", type=String.class, parameters={})
     private Output</* @Nullable */ String> securityPolicy;
 
-    public Output</* @Nullable */ String> securityPolicy() {
-        return this.securityPolicy;
+    public Output<Optional<String>> securityPolicy() {
+        return Codegen.optional(this.securityPolicy);
     }
     @Export(name="tags", type=List.class, parameters={DomainNameTag.class})
     private Output</* @Nullable */ List<DomainNameTag>> tags;
 
-    public Output</* @Nullable */ List<DomainNameTag>> tags() {
-        return this.tags;
+    public Output<Optional<List<DomainNameTag>>> tags() {
+        return Codegen.optional(this.tags);
     }
 
     /**

@@ -14,6 +14,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -89,8 +90,8 @@ public class App extends com.pulumi.resources.CustomResource {
      * @return The instance type and the Amazon Resource Name (ARN) of the SageMaker image created on the instance.
      * 
      */
-    public Output</* @Nullable */ AppResourceSpec> resourceSpec() {
-        return this.resourceSpec;
+    public Output<Optional<AppResourceSpec>> resourceSpec() {
+        return Codegen.optional(this.resourceSpec);
     }
     /**
      * A list of tags to apply to the app.
@@ -103,8 +104,8 @@ public class App extends com.pulumi.resources.CustomResource {
      * @return A list of tags to apply to the app.
      * 
      */
-    public Output</* @Nullable */ List<AppTag>> tags() {
-        return this.tags;
+    public Output<Optional<List<AppTag>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * The user profile name.

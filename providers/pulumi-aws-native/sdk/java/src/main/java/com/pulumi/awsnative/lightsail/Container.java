@@ -16,6 +16,7 @@ import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -41,8 +42,8 @@ public class Container extends com.pulumi.resources.CustomResource {
      * @return Describes a container deployment configuration of an Amazon Lightsail container service.
      * 
      */
-    public Output</* @Nullable */ ContainerServiceDeployment> containerServiceDeployment() {
-        return this.containerServiceDeployment;
+    public Output<Optional<ContainerServiceDeployment>> containerServiceDeployment() {
+        return Codegen.optional(this.containerServiceDeployment);
     }
     /**
      * A Boolean value to indicate whether the container service is disabled.
@@ -55,8 +56,8 @@ public class Container extends com.pulumi.resources.CustomResource {
      * @return A Boolean value to indicate whether the container service is disabled.
      * 
      */
-    public Output</* @Nullable */ Boolean> isDisabled() {
-        return this.isDisabled;
+    public Output<Optional<Boolean>> isDisabled() {
+        return Codegen.optional(this.isDisabled);
     }
     /**
      * The power specification for the container service.
@@ -83,8 +84,8 @@ public class Container extends com.pulumi.resources.CustomResource {
      * @return The public domain names to use with the container service, such as example.com and www.example.com.
      * 
      */
-    public Output</* @Nullable */ List<ContainerPublicDomainName>> publicDomainNames() {
-        return this.publicDomainNames;
+    public Output<Optional<List<ContainerPublicDomainName>>> publicDomainNames() {
+        return Codegen.optional(this.publicDomainNames);
     }
     /**
      * The scale specification for the container service.
@@ -125,8 +126,8 @@ public class Container extends com.pulumi.resources.CustomResource {
      * @return An array of key-value pairs to apply to this resource.
      * 
      */
-    public Output</* @Nullable */ List<ContainerTag>> tags() {
-        return this.tags;
+    public Output<Optional<List<ContainerTag>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * The publicly accessible URL of the container service.

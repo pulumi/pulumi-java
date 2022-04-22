@@ -14,6 +14,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -47,8 +48,8 @@ public class Channel extends com.pulumi.resources.CustomResource {
      * @return A short text description of the Channel.
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * The configuration parameters for egress access logging.
@@ -61,8 +62,8 @@ public class Channel extends com.pulumi.resources.CustomResource {
      * @return The configuration parameters for egress access logging.
      * 
      */
-    public Output</* @Nullable */ ChannelLogConfiguration> egressAccessLogs() {
-        return this.egressAccessLogs;
+    public Output<Optional<ChannelLogConfiguration>> egressAccessLogs() {
+        return Codegen.optional(this.egressAccessLogs);
     }
     /**
      * A short text description of the Channel.
@@ -89,8 +90,8 @@ public class Channel extends com.pulumi.resources.CustomResource {
      * @return The configuration parameters for egress access logging.
      * 
      */
-    public Output</* @Nullable */ ChannelLogConfiguration> ingressAccessLogs() {
-        return this.ingressAccessLogs;
+    public Output<Optional<ChannelLogConfiguration>> ingressAccessLogs() {
+        return Codegen.optional(this.ingressAccessLogs);
     }
     /**
      * A collection of tags associated with a resource
@@ -103,8 +104,8 @@ public class Channel extends com.pulumi.resources.CustomResource {
      * @return A collection of tags associated with a resource
      * 
      */
-    public Output</* @Nullable */ List<ChannelTag>> tags() {
-        return this.tags;
+    public Output<Optional<List<ChannelTag>>> tags() {
+        return Codegen.optional(this.tags);
     }
 
     /**

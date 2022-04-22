@@ -13,6 +13,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -74,8 +75,8 @@ public class TransitGatewayConnect extends com.pulumi.resources.CustomResource {
      * @return The tags for the attachment.
      * 
      */
-    public Output</* @Nullable */ List<TransitGatewayConnectTag>> tags() {
-        return this.tags;
+    public Output<Optional<List<TransitGatewayConnectTag>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * The ID of the Connect attachment.

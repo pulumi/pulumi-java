@@ -17,6 +17,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -50,8 +51,8 @@ public class ContainerRecipe extends com.pulumi.resources.CustomResource {
      * @return Components for build and test that are included in the container recipe.
      * 
      */
-    public Output</* @Nullable */ List<ContainerRecipeComponentConfiguration>> components() {
-        return this.components;
+    public Output<Optional<List<ContainerRecipeComponentConfiguration>>> components() {
+        return Codegen.optional(this.components);
     }
     /**
      * Specifies the type of container, such as Docker.
@@ -64,8 +65,8 @@ public class ContainerRecipe extends com.pulumi.resources.CustomResource {
      * @return Specifies the type of container, such as Docker.
      * 
      */
-    public Output</* @Nullable */ ContainerRecipeContainerType> containerType() {
-        return this.containerType;
+    public Output<Optional<ContainerRecipeContainerType>> containerType() {
+        return Codegen.optional(this.containerType);
     }
     /**
      * The description of the container recipe.
@@ -78,8 +79,8 @@ public class ContainerRecipe extends com.pulumi.resources.CustomResource {
      * @return The description of the container recipe.
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * Dockerfiles are text documents that are used to build Docker containers, and ensure that they contain all of the elements required by the application running inside. The template data consists of contextual variables where Image Builder places build information or scripts, based on your container image recipe.
@@ -92,8 +93,8 @@ public class ContainerRecipe extends com.pulumi.resources.CustomResource {
      * @return Dockerfiles are text documents that are used to build Docker containers, and ensure that they contain all of the elements required by the application running inside. The template data consists of contextual variables where Image Builder places build information or scripts, based on your container image recipe.
      * 
      */
-    public Output</* @Nullable */ String> dockerfileTemplateData() {
-        return this.dockerfileTemplateData;
+    public Output<Optional<String>> dockerfileTemplateData() {
+        return Codegen.optional(this.dockerfileTemplateData);
     }
     /**
      * The S3 URI for the Dockerfile that will be used to build your container image.
@@ -106,8 +107,8 @@ public class ContainerRecipe extends com.pulumi.resources.CustomResource {
      * @return The S3 URI for the Dockerfile that will be used to build your container image.
      * 
      */
-    public Output</* @Nullable */ String> dockerfileTemplateUri() {
-        return this.dockerfileTemplateUri;
+    public Output<Optional<String>> dockerfileTemplateUri() {
+        return Codegen.optional(this.dockerfileTemplateUri);
     }
     /**
      * Specifies the operating system version for the source image.
@@ -120,8 +121,8 @@ public class ContainerRecipe extends com.pulumi.resources.CustomResource {
      * @return Specifies the operating system version for the source image.
      * 
      */
-    public Output</* @Nullable */ String> imageOsVersionOverride() {
-        return this.imageOsVersionOverride;
+    public Output<Optional<String>> imageOsVersionOverride() {
+        return Codegen.optional(this.imageOsVersionOverride);
     }
     /**
      * A group of options that can be used to configure an instance for building and testing container images.
@@ -134,8 +135,8 @@ public class ContainerRecipe extends com.pulumi.resources.CustomResource {
      * @return A group of options that can be used to configure an instance for building and testing container images.
      * 
      */
-    public Output</* @Nullable */ ContainerRecipeInstanceConfiguration> instanceConfiguration() {
-        return this.instanceConfiguration;
+    public Output<Optional<ContainerRecipeInstanceConfiguration>> instanceConfiguration() {
+        return Codegen.optional(this.instanceConfiguration);
     }
     /**
      * Identifies which KMS key is used to encrypt the container image.
@@ -148,8 +149,8 @@ public class ContainerRecipe extends com.pulumi.resources.CustomResource {
      * @return Identifies which KMS key is used to encrypt the container image.
      * 
      */
-    public Output</* @Nullable */ String> kmsKeyId() {
-        return this.kmsKeyId;
+    public Output<Optional<String>> kmsKeyId() {
+        return Codegen.optional(this.kmsKeyId);
     }
     /**
      * The name of the container recipe.
@@ -162,8 +163,8 @@ public class ContainerRecipe extends com.pulumi.resources.CustomResource {
      * @return The name of the container recipe.
      * 
      */
-    public Output</* @Nullable */ String> name() {
-        return this.name;
+    public Output<Optional<String>> name() {
+        return Codegen.optional(this.name);
     }
     /**
      * The source image for the container recipe.
@@ -176,8 +177,8 @@ public class ContainerRecipe extends com.pulumi.resources.CustomResource {
      * @return The source image for the container recipe.
      * 
      */
-    public Output</* @Nullable */ String> parentImage() {
-        return this.parentImage;
+    public Output<Optional<String>> parentImage() {
+        return Codegen.optional(this.parentImage);
     }
     /**
      * Specifies the operating system platform when you use a custom source image.
@@ -190,8 +191,8 @@ public class ContainerRecipe extends com.pulumi.resources.CustomResource {
      * @return Specifies the operating system platform when you use a custom source image.
      * 
      */
-    public Output</* @Nullable */ ContainerRecipePlatformOverride> platformOverride() {
-        return this.platformOverride;
+    public Output<Optional<ContainerRecipePlatformOverride>> platformOverride() {
+        return Codegen.optional(this.platformOverride);
     }
     /**
      * Tags that are attached to the container recipe.
@@ -204,8 +205,8 @@ public class ContainerRecipe extends com.pulumi.resources.CustomResource {
      * @return Tags that are attached to the container recipe.
      * 
      */
-    public Output</* @Nullable */ Object> tags() {
-        return this.tags;
+    public Output<Optional<Object>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * The destination repository for the container image.
@@ -218,8 +219,8 @@ public class ContainerRecipe extends com.pulumi.resources.CustomResource {
      * @return The destination repository for the container image.
      * 
      */
-    public Output</* @Nullable */ ContainerRecipeTargetContainerRepository> targetRepository() {
-        return this.targetRepository;
+    public Output<Optional<ContainerRecipeTargetContainerRepository>> targetRepository() {
+        return Codegen.optional(this.targetRepository);
     }
     /**
      * The semantic version of the container recipe (&lt;major&gt;.&lt;minor&gt;.&lt;patch&gt;).
@@ -232,8 +233,8 @@ public class ContainerRecipe extends com.pulumi.resources.CustomResource {
      * @return The semantic version of the container recipe (&lt;major&gt;.&lt;minor&gt;.&lt;patch&gt;).
      * 
      */
-    public Output</* @Nullable */ String> version() {
-        return this.version;
+    public Output<Optional<String>> version() {
+        return Codegen.optional(this.version);
     }
     /**
      * The working directory to be used during build and test workflows.
@@ -246,8 +247,8 @@ public class ContainerRecipe extends com.pulumi.resources.CustomResource {
      * @return The working directory to be used during build and test workflows.
      * 
      */
-    public Output</* @Nullable */ String> workingDirectory() {
-        return this.workingDirectory;
+    public Output<Optional<String>> workingDirectory() {
+        return Codegen.optional(this.workingDirectory);
     }
 
     /**

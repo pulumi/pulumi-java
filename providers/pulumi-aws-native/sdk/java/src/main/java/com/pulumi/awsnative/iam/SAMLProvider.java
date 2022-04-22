@@ -12,6 +12,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -37,8 +38,8 @@ public class SAMLProvider extends com.pulumi.resources.CustomResource {
     @Export(name="name", type=String.class, parameters={})
     private Output</* @Nullable */ String> name;
 
-    public Output</* @Nullable */ String> name() {
-        return this.name;
+    public Output<Optional<String>> name() {
+        return Codegen.optional(this.name);
     }
     @Export(name="samlMetadataDocument", type=String.class, parameters={})
     private Output<String> samlMetadataDocument;
@@ -49,8 +50,8 @@ public class SAMLProvider extends com.pulumi.resources.CustomResource {
     @Export(name="tags", type=List.class, parameters={SAMLProviderTag.class})
     private Output</* @Nullable */ List<SAMLProviderTag>> tags;
 
-    public Output</* @Nullable */ List<SAMLProviderTag>> tags() {
-        return this.tags;
+    public Output<Optional<List<SAMLProviderTag>>> tags() {
+        return Codegen.optional(this.tags);
     }
 
     /**

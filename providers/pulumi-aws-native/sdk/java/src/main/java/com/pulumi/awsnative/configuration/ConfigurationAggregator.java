@@ -14,6 +14,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -25,8 +26,8 @@ public class ConfigurationAggregator extends com.pulumi.resources.CustomResource
     @Export(name="accountAggregationSources", type=List.class, parameters={ConfigurationAggregatorAccountAggregationSource.class})
     private Output</* @Nullable */ List<ConfigurationAggregatorAccountAggregationSource>> accountAggregationSources;
 
-    public Output</* @Nullable */ List<ConfigurationAggregatorAccountAggregationSource>> accountAggregationSources() {
-        return this.accountAggregationSources;
+    public Output<Optional<List<ConfigurationAggregatorAccountAggregationSource>>> accountAggregationSources() {
+        return Codegen.optional(this.accountAggregationSources);
     }
     /**
      * The Amazon Resource Name (ARN) of the aggregator.
@@ -53,14 +54,14 @@ public class ConfigurationAggregator extends com.pulumi.resources.CustomResource
      * @return The name of the aggregator.
      * 
      */
-    public Output</* @Nullable */ String> configurationAggregatorName() {
-        return this.configurationAggregatorName;
+    public Output<Optional<String>> configurationAggregatorName() {
+        return Codegen.optional(this.configurationAggregatorName);
     }
     @Export(name="organizationAggregationSource", type=ConfigurationAggregatorOrganizationAggregationSource.class, parameters={})
     private Output</* @Nullable */ ConfigurationAggregatorOrganizationAggregationSource> organizationAggregationSource;
 
-    public Output</* @Nullable */ ConfigurationAggregatorOrganizationAggregationSource> organizationAggregationSource() {
-        return this.organizationAggregationSource;
+    public Output<Optional<ConfigurationAggregatorOrganizationAggregationSource>> organizationAggregationSource() {
+        return Codegen.optional(this.organizationAggregationSource);
     }
     /**
      * The tags for the configuration aggregator.
@@ -73,8 +74,8 @@ public class ConfigurationAggregator extends com.pulumi.resources.CustomResource
      * @return The tags for the configuration aggregator.
      * 
      */
-    public Output</* @Nullable */ List<ConfigurationAggregatorTag>> tags() {
-        return this.tags;
+    public Output<Optional<List<ConfigurationAggregatorTag>>> tags() {
+        return Codegen.optional(this.tags);
     }
 
     /**

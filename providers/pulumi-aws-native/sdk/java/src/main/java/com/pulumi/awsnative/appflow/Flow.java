@@ -16,6 +16,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -37,8 +38,8 @@ public class Flow extends com.pulumi.resources.CustomResource {
      * @return Description of the flow.
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * List of Destination connectors of the flow.
@@ -93,8 +94,8 @@ public class Flow extends com.pulumi.resources.CustomResource {
      * @return The ARN of the AWS Key Management Service (AWS KMS) key that&#39;s used to encrypt your function&#39;s environment variables. If it&#39;s not provided, AWS Lambda uses a default service key.
      * 
      */
-    public Output</* @Nullable */ String> kMSArn() {
-        return this.kMSArn;
+    public Output<Optional<String>> kMSArn() {
+        return Codegen.optional(this.kMSArn);
     }
     /**
      * Configurations of Source connector of the flow.
@@ -121,8 +122,8 @@ public class Flow extends com.pulumi.resources.CustomResource {
      * @return List of Tags.
      * 
      */
-    public Output</* @Nullable */ List<FlowTag>> tags() {
-        return this.tags;
+    public Output<Optional<List<FlowTag>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * List of tasks for the flow.

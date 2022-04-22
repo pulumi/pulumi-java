@@ -13,6 +13,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Object;
 import java.lang.String;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -46,8 +47,8 @@ public class Image extends com.pulumi.resources.CustomResource {
      * @return The Amazon Resource Name (ARN) of the container recipe that defines how images are configured and tested.
      * 
      */
-    public Output</* @Nullable */ String> containerRecipeArn() {
-        return this.containerRecipeArn;
+    public Output<Optional<String>> containerRecipeArn() {
+        return Codegen.optional(this.containerRecipeArn);
     }
     /**
      * The Amazon Resource Name (ARN) of the distribution configuration.
@@ -60,8 +61,8 @@ public class Image extends com.pulumi.resources.CustomResource {
      * @return The Amazon Resource Name (ARN) of the distribution configuration.
      * 
      */
-    public Output</* @Nullable */ String> distributionConfigurationArn() {
-        return this.distributionConfigurationArn;
+    public Output<Optional<String>> distributionConfigurationArn() {
+        return Codegen.optional(this.distributionConfigurationArn);
     }
     /**
      * Collects additional information about the image being created, including the operating system (OS) version and package list.
@@ -74,8 +75,8 @@ public class Image extends com.pulumi.resources.CustomResource {
      * @return Collects additional information about the image being created, including the operating system (OS) version and package list.
      * 
      */
-    public Output</* @Nullable */ Boolean> enhancedImageMetadataEnabled() {
-        return this.enhancedImageMetadataEnabled;
+    public Output<Optional<Boolean>> enhancedImageMetadataEnabled() {
+        return Codegen.optional(this.enhancedImageMetadataEnabled);
     }
     /**
      * The AMI ID of the EC2 AMI in current region.
@@ -102,8 +103,8 @@ public class Image extends com.pulumi.resources.CustomResource {
      * @return The Amazon Resource Name (ARN) of the image recipe that defines how images are configured, tested, and assessed.
      * 
      */
-    public Output</* @Nullable */ String> imageRecipeArn() {
-        return this.imageRecipeArn;
+    public Output<Optional<String>> imageRecipeArn() {
+        return Codegen.optional(this.imageRecipeArn);
     }
     /**
      * The image tests configuration used when creating this image.
@@ -116,8 +117,8 @@ public class Image extends com.pulumi.resources.CustomResource {
      * @return The image tests configuration used when creating this image.
      * 
      */
-    public Output</* @Nullable */ ImageTestsConfiguration> imageTestsConfiguration() {
-        return this.imageTestsConfiguration;
+    public Output<Optional<ImageTestsConfiguration>> imageTestsConfiguration() {
+        return Codegen.optional(this.imageTestsConfiguration);
     }
     /**
      * The Amazon Resource Name (ARN) of the infrastructure configuration.
@@ -130,8 +131,8 @@ public class Image extends com.pulumi.resources.CustomResource {
      * @return The Amazon Resource Name (ARN) of the infrastructure configuration.
      * 
      */
-    public Output</* @Nullable */ String> infrastructureConfigurationArn() {
-        return this.infrastructureConfigurationArn;
+    public Output<Optional<String>> infrastructureConfigurationArn() {
+        return Codegen.optional(this.infrastructureConfigurationArn);
     }
     /**
      * The name of the image.
@@ -158,8 +159,8 @@ public class Image extends com.pulumi.resources.CustomResource {
      * @return The tags associated with the image.
      * 
      */
-    public Output</* @Nullable */ Object> tags() {
-        return this.tags;
+    public Output<Optional<Object>> tags() {
+        return Codegen.optional(this.tags);
     }
 
     /**

@@ -14,6 +14,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -31,8 +32,8 @@ public class Application extends com.pulumi.resources.CustomResource {
     @Export(name="apiGatewayProxy", type=ApplicationApiGatewayProxyInput.class, parameters={})
     private Output</* @Nullable */ ApplicationApiGatewayProxyInput> apiGatewayProxy;
 
-    public Output</* @Nullable */ ApplicationApiGatewayProxyInput> apiGatewayProxy() {
-        return this.apiGatewayProxy;
+    public Output<Optional<ApplicationApiGatewayProxyInput>> apiGatewayProxy() {
+        return Codegen.optional(this.apiGatewayProxy);
     }
     @Export(name="applicationIdentifier", type=String.class, parameters={})
     private Output<String> applicationIdentifier;
@@ -49,14 +50,14 @@ public class Application extends com.pulumi.resources.CustomResource {
     @Export(name="environmentIdentifier", type=String.class, parameters={})
     private Output</* @Nullable */ String> environmentIdentifier;
 
-    public Output</* @Nullable */ String> environmentIdentifier() {
-        return this.environmentIdentifier;
+    public Output<Optional<String>> environmentIdentifier() {
+        return Codegen.optional(this.environmentIdentifier);
     }
     @Export(name="name", type=String.class, parameters={})
     private Output</* @Nullable */ String> name;
 
-    public Output</* @Nullable */ String> name() {
-        return this.name;
+    public Output<Optional<String>> name() {
+        return Codegen.optional(this.name);
     }
     @Export(name="nlbArn", type=String.class, parameters={})
     private Output<String> nlbArn;
@@ -73,8 +74,8 @@ public class Application extends com.pulumi.resources.CustomResource {
     @Export(name="proxyType", type=ApplicationProxyType.class, parameters={})
     private Output</* @Nullable */ ApplicationProxyType> proxyType;
 
-    public Output</* @Nullable */ ApplicationProxyType> proxyType() {
-        return this.proxyType;
+    public Output<Optional<ApplicationProxyType>> proxyType() {
+        return Codegen.optional(this.proxyType);
     }
     @Export(name="proxyUrl", type=String.class, parameters={})
     private Output<String> proxyUrl;
@@ -99,14 +100,14 @@ public class Application extends com.pulumi.resources.CustomResource {
      * @return Metadata that you can assign to help organize the frameworks that you create. Each tag is a key-value pair.
      * 
      */
-    public Output</* @Nullable */ List<ApplicationTag>> tags() {
-        return this.tags;
+    public Output<Optional<List<ApplicationTag>>> tags() {
+        return Codegen.optional(this.tags);
     }
     @Export(name="vpcId", type=String.class, parameters={})
     private Output</* @Nullable */ String> vpcId;
 
-    public Output</* @Nullable */ String> vpcId() {
-        return this.vpcId;
+    public Output<Optional<String>> vpcId() {
+        return Codegen.optional(this.vpcId);
     }
     @Export(name="vpcLinkId", type=String.class, parameters={})
     private Output<String> vpcLinkId;

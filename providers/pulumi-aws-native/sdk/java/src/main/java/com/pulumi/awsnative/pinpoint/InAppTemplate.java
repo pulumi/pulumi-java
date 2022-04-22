@@ -14,6 +14,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -31,32 +32,32 @@ public class InAppTemplate extends com.pulumi.resources.CustomResource {
     @Export(name="content", type=List.class, parameters={InAppTemplateInAppMessageContent.class})
     private Output</* @Nullable */ List<InAppTemplateInAppMessageContent>> content;
 
-    public Output</* @Nullable */ List<InAppTemplateInAppMessageContent>> content() {
-        return this.content;
+    public Output<Optional<List<InAppTemplateInAppMessageContent>>> content() {
+        return Codegen.optional(this.content);
     }
     @Export(name="customConfig", type=Object.class, parameters={})
     private Output</* @Nullable */ Object> customConfig;
 
-    public Output</* @Nullable */ Object> customConfig() {
-        return this.customConfig;
+    public Output<Optional<Object>> customConfig() {
+        return Codegen.optional(this.customConfig);
     }
     @Export(name="layout", type=InAppTemplateLayout.class, parameters={})
     private Output</* @Nullable */ InAppTemplateLayout> layout;
 
-    public Output</* @Nullable */ InAppTemplateLayout> layout() {
-        return this.layout;
+    public Output<Optional<InAppTemplateLayout>> layout() {
+        return Codegen.optional(this.layout);
     }
     @Export(name="tags", type=Object.class, parameters={})
     private Output</* @Nullable */ Object> tags;
 
-    public Output</* @Nullable */ Object> tags() {
-        return this.tags;
+    public Output<Optional<Object>> tags() {
+        return Codegen.optional(this.tags);
     }
     @Export(name="templateDescription", type=String.class, parameters={})
     private Output</* @Nullable */ String> templateDescription;
 
-    public Output</* @Nullable */ String> templateDescription() {
-        return this.templateDescription;
+    public Output<Optional<String>> templateDescription() {
+        return Codegen.optional(this.templateDescription);
     }
     @Export(name="templateName", type=String.class, parameters={})
     private Output<String> templateName;

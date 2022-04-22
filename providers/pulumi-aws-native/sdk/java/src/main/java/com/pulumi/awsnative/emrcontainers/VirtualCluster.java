@@ -13,6 +13,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -68,8 +69,8 @@ public class VirtualCluster extends com.pulumi.resources.CustomResource {
      * @return An array of key-value pairs to apply to this virtual cluster.
      * 
      */
-    public Output</* @Nullable */ List<VirtualClusterTag>> tags() {
-        return this.tags;
+    public Output<Optional<List<VirtualClusterTag>>> tags() {
+        return Codegen.optional(this.tags);
     }
 
     /**

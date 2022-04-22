@@ -12,6 +12,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -73,8 +74,8 @@ public class CarrierGateway extends com.pulumi.resources.CustomResource {
      * @return The tags for the carrier gateway.
      * 
      */
-    public Output</* @Nullable */ List<CarrierGatewayTag>> tags() {
-        return this.tags;
+    public Output<Optional<List<CarrierGatewayTag>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * The ID of the VPC.

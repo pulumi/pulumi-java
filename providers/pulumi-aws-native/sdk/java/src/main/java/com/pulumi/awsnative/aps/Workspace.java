@@ -12,6 +12,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -33,8 +34,8 @@ public class Workspace extends com.pulumi.resources.CustomResource {
      * @return The AMP Workspace alert manager definition data
      * 
      */
-    public Output</* @Nullable */ String> alertManagerDefinition() {
-        return this.alertManagerDefinition;
+    public Output<Optional<String>> alertManagerDefinition() {
+        return Codegen.optional(this.alertManagerDefinition);
     }
     /**
      * AMP Workspace alias.
@@ -47,8 +48,8 @@ public class Workspace extends com.pulumi.resources.CustomResource {
      * @return AMP Workspace alias.
      * 
      */
-    public Output</* @Nullable */ String> alias() {
-        return this.alias;
+    public Output<Optional<String>> alias() {
+        return Codegen.optional(this.alias);
     }
     /**
      * Workspace arn.
@@ -89,8 +90,8 @@ public class Workspace extends com.pulumi.resources.CustomResource {
      * @return An array of key-value pairs to apply to this resource.
      * 
      */
-    public Output</* @Nullable */ List<WorkspaceTag>> tags() {
-        return this.tags;
+    public Output<Optional<List<WorkspaceTag>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * Required to identify a specific APS Workspace.

@@ -13,6 +13,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -46,8 +47,8 @@ public class Addon extends com.pulumi.resources.CustomResource {
      * @return Version of Addon
      * 
      */
-    public Output</* @Nullable */ String> addonVersion() {
-        return this.addonVersion;
+    public Output<Optional<String>> addonVersion() {
+        return Codegen.optional(this.addonVersion);
     }
     /**
      * Amazon Resource Name (ARN) of the add-on
@@ -88,8 +89,8 @@ public class Addon extends com.pulumi.resources.CustomResource {
      * @return Resolve parameter value conflicts
      * 
      */
-    public Output</* @Nullable */ AddonResolveConflicts> resolveConflicts() {
-        return this.resolveConflicts;
+    public Output<Optional<AddonResolveConflicts>> resolveConflicts() {
+        return Codegen.optional(this.resolveConflicts);
     }
     /**
      * IAM role to bind to the add-on&#39;s service account
@@ -102,8 +103,8 @@ public class Addon extends com.pulumi.resources.CustomResource {
      * @return IAM role to bind to the add-on&#39;s service account
      * 
      */
-    public Output</* @Nullable */ String> serviceAccountRoleArn() {
-        return this.serviceAccountRoleArn;
+    public Output<Optional<String>> serviceAccountRoleArn() {
+        return Codegen.optional(this.serviceAccountRoleArn);
     }
     /**
      * An array of key-value pairs to apply to this resource.
@@ -116,8 +117,8 @@ public class Addon extends com.pulumi.resources.CustomResource {
      * @return An array of key-value pairs to apply to this resource.
      * 
      */
-    public Output</* @Nullable */ List<AddonTag>> tags() {
-        return this.tags;
+    public Output<Optional<List<AddonTag>>> tags() {
+        return Codegen.optional(this.tags);
     }
 
     /**

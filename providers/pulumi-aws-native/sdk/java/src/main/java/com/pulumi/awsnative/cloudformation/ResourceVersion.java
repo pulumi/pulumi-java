@@ -14,6 +14,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -49,8 +50,8 @@ public class ResourceVersion extends com.pulumi.resources.CustomResource {
      * @return The Amazon Resource Name (ARN) of the IAM execution role to use to register the type. If your resource type calls AWS APIs in any of its handlers, you must create an IAM execution role that includes the necessary permissions to call those AWS APIs, and provision that execution role in your account. CloudFormation then assumes that execution role to provide your resource type with the appropriate credentials.
      * 
      */
-    public Output</* @Nullable */ String> executionRoleArn() {
-        return this.executionRoleArn;
+    public Output<Optional<String>> executionRoleArn() {
+        return Codegen.optional(this.executionRoleArn);
     }
     /**
      * Indicates if this type version is the current default version
@@ -77,8 +78,8 @@ public class ResourceVersion extends com.pulumi.resources.CustomResource {
      * @return Specifies logging configuration information for a type.
      * 
      */
-    public Output</* @Nullable */ ResourceVersionLoggingConfig> loggingConfig() {
-        return this.loggingConfig;
+    public Output<Optional<ResourceVersionLoggingConfig>> loggingConfig() {
+        return Codegen.optional(this.loggingConfig);
     }
     /**
      * The provisioning behavior of the type. AWS CloudFormation determines the provisioning type during registration, based on the types of handlers in the schema handler package submitted.

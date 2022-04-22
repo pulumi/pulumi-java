@@ -15,6 +15,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -82,8 +83,8 @@ public class Template extends com.pulumi.resources.CustomResource {
      * @return &lt;p&gt;A display name for the template.&lt;/p&gt;
      * 
      */
-    public Output</* @Nullable */ String> name() {
-        return this.name;
+    public Output<Optional<String>> name() {
+        return Codegen.optional(this.name);
     }
     /**
      * &lt;p&gt;A list of resource permissions to be set on the template. &lt;/p&gt;
@@ -96,8 +97,8 @@ public class Template extends com.pulumi.resources.CustomResource {
      * @return &lt;p&gt;A list of resource permissions to be set on the template. &lt;/p&gt;
      * 
      */
-    public Output</* @Nullable */ List<TemplateResourcePermission>> permissions() {
-        return this.permissions;
+    public Output<Optional<List<TemplateResourcePermission>>> permissions() {
+        return Codegen.optional(this.permissions);
     }
     @Export(name="sourceEntity", type=TemplateSourceEntity.class, parameters={})
     private Output<TemplateSourceEntity> sourceEntity;
@@ -116,8 +117,8 @@ public class Template extends com.pulumi.resources.CustomResource {
      * @return &lt;p&gt;Contains a map of the key-value pairs for the resource tag or tags assigned to the resource.&lt;/p&gt;
      * 
      */
-    public Output</* @Nullable */ List<TemplateTag>> tags() {
-        return this.tags;
+    public Output<Optional<List<TemplateTag>>> tags() {
+        return Codegen.optional(this.tags);
     }
     @Export(name="templateId", type=String.class, parameters={})
     private Output<String> templateId;
@@ -148,8 +149,8 @@ public class Template extends com.pulumi.resources.CustomResource {
      * 			in the &lt;code&gt;VersionDescription&lt;/code&gt; field.&lt;/p&gt;
      * 
      */
-    public Output</* @Nullable */ String> versionDescription() {
-        return this.versionDescription;
+    public Output<Optional<String>> versionDescription() {
+        return Codegen.optional(this.versionDescription);
     }
 
     /**

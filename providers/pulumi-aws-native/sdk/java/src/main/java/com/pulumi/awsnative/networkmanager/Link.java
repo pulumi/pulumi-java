@@ -13,6 +13,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -46,8 +47,8 @@ public class Link extends com.pulumi.resources.CustomResource {
      * @return The description of the link.
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * The ID of the global network.
@@ -102,8 +103,8 @@ public class Link extends com.pulumi.resources.CustomResource {
      * @return The provider of the link.
      * 
      */
-    public Output</* @Nullable */ String> provider() {
-        return this.provider;
+    public Output<Optional<String>> provider() {
+        return Codegen.optional(this.provider);
     }
     /**
      * The ID of the site
@@ -130,8 +131,8 @@ public class Link extends com.pulumi.resources.CustomResource {
      * @return The tags for the link.
      * 
      */
-    public Output</* @Nullable */ List<LinkTag>> tags() {
-        return this.tags;
+    public Output<Optional<List<LinkTag>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * The type of the link.
@@ -144,8 +145,8 @@ public class Link extends com.pulumi.resources.CustomResource {
      * @return The type of the link.
      * 
      */
-    public Output</* @Nullable */ String> type() {
-        return this.type;
+    public Output<Optional<String>> type() {
+        return Codegen.optional(this.type);
     }
 
     /**

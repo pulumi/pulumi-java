@@ -13,6 +13,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -32,8 +33,8 @@ public class VpcConnector extends com.pulumi.resources.CustomResource {
      * @return A list of IDs of security groups that App Runner should use for access to AWS resources under the specified subnets. If not specified, App Runner uses the default security group of the Amazon VPC. The default security group allows all outbound traffic.
      * 
      */
-    public Output</* @Nullable */ List<String>> securityGroups() {
-        return this.securityGroups;
+    public Output<Optional<List<String>>> securityGroups() {
+        return Codegen.optional(this.securityGroups);
     }
     /**
      * A list of IDs of subnets that App Runner should use when it associates your service with a custom Amazon VPC. Specify IDs of subnets of a single Amazon VPC. App Runner determines the Amazon VPC from the subnets you specify.
@@ -60,8 +61,8 @@ public class VpcConnector extends com.pulumi.resources.CustomResource {
      * @return A list of metadata items that you can associate with your VPC connector resource. A tag is a key-value pair.
      * 
      */
-    public Output</* @Nullable */ List<VpcConnectorTag>> tags() {
-        return this.tags;
+    public Output<Optional<List<VpcConnectorTag>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * The Amazon Resource Name (ARN) of this VPC connector.
@@ -88,8 +89,8 @@ public class VpcConnector extends com.pulumi.resources.CustomResource {
      * @return A name for the VPC connector. If you don&#39;t specify a name, AWS CloudFormation generates a name for your VPC connector.
      * 
      */
-    public Output</* @Nullable */ String> vpcConnectorName() {
-        return this.vpcConnectorName;
+    public Output<Optional<String>> vpcConnectorName() {
+        return Codegen.optional(this.vpcConnectorName);
     }
     /**
      * The revision of this VPC connector. It&#39;s unique among all the active connectors (&#34;Status&#34;: &#34;ACTIVE&#34;) that share the same Name.

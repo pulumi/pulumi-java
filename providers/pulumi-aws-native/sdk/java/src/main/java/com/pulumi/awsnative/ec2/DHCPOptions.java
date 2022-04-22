@@ -13,6 +13,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -38,8 +39,8 @@ public class DHCPOptions extends com.pulumi.resources.CustomResource {
      * @return This value is used to complete unqualified DNS hostnames.
      * 
      */
-    public Output</* @Nullable */ String> domainName() {
-        return this.domainName;
+    public Output<Optional<String>> domainName() {
+        return Codegen.optional(this.domainName);
     }
     /**
      * The IPv4 addresses of up to four domain name servers, or AmazonProvidedDNS.
@@ -52,8 +53,8 @@ public class DHCPOptions extends com.pulumi.resources.CustomResource {
      * @return The IPv4 addresses of up to four domain name servers, or AmazonProvidedDNS.
      * 
      */
-    public Output</* @Nullable */ List<String>> domainNameServers() {
-        return this.domainNameServers;
+    public Output<Optional<List<String>>> domainNameServers() {
+        return Codegen.optional(this.domainNameServers);
     }
     /**
      * The IPv4 addresses of up to four NetBIOS name servers.
@@ -66,8 +67,8 @@ public class DHCPOptions extends com.pulumi.resources.CustomResource {
      * @return The IPv4 addresses of up to four NetBIOS name servers.
      * 
      */
-    public Output</* @Nullable */ List<String>> netbiosNameServers() {
-        return this.netbiosNameServers;
+    public Output<Optional<List<String>>> netbiosNameServers() {
+        return Codegen.optional(this.netbiosNameServers);
     }
     /**
      * The NetBIOS node type (1, 2, 4, or 8).
@@ -80,8 +81,8 @@ public class DHCPOptions extends com.pulumi.resources.CustomResource {
      * @return The NetBIOS node type (1, 2, 4, or 8).
      * 
      */
-    public Output</* @Nullable */ Integer> netbiosNodeType() {
-        return this.netbiosNodeType;
+    public Output<Optional<Integer>> netbiosNodeType() {
+        return Codegen.optional(this.netbiosNodeType);
     }
     /**
      * The IPv4 addresses of up to four Network Time Protocol (NTP) servers.
@@ -94,8 +95,8 @@ public class DHCPOptions extends com.pulumi.resources.CustomResource {
      * @return The IPv4 addresses of up to four Network Time Protocol (NTP) servers.
      * 
      */
-    public Output</* @Nullable */ List<String>> ntpServers() {
-        return this.ntpServers;
+    public Output<Optional<List<String>>> ntpServers() {
+        return Codegen.optional(this.ntpServers);
     }
     /**
      * Any tags assigned to the DHCP options set.
@@ -108,8 +109,8 @@ public class DHCPOptions extends com.pulumi.resources.CustomResource {
      * @return Any tags assigned to the DHCP options set.
      * 
      */
-    public Output</* @Nullable */ List<DHCPOptionsTag>> tags() {
-        return this.tags;
+    public Output<Optional<List<DHCPOptionsTag>>> tags() {
+        return Codegen.optional(this.tags);
     }
 
     /**

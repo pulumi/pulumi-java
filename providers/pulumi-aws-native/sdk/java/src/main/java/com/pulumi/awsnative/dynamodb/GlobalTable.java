@@ -20,6 +20,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -43,14 +44,14 @@ public class GlobalTable extends com.pulumi.resources.CustomResource {
     @Export(name="billingMode", type=String.class, parameters={})
     private Output</* @Nullable */ String> billingMode;
 
-    public Output</* @Nullable */ String> billingMode() {
-        return this.billingMode;
+    public Output<Optional<String>> billingMode() {
+        return Codegen.optional(this.billingMode);
     }
     @Export(name="globalSecondaryIndexes", type=List.class, parameters={GlobalTableGlobalSecondaryIndex.class})
     private Output</* @Nullable */ List<GlobalTableGlobalSecondaryIndex>> globalSecondaryIndexes;
 
-    public Output</* @Nullable */ List<GlobalTableGlobalSecondaryIndex>> globalSecondaryIndexes() {
-        return this.globalSecondaryIndexes;
+    public Output<Optional<List<GlobalTableGlobalSecondaryIndex>>> globalSecondaryIndexes() {
+        return Codegen.optional(this.globalSecondaryIndexes);
     }
     @Export(name="keySchema", type=List.class, parameters={GlobalTableKeySchema.class})
     private Output<List<GlobalTableKeySchema>> keySchema;
@@ -61,8 +62,8 @@ public class GlobalTable extends com.pulumi.resources.CustomResource {
     @Export(name="localSecondaryIndexes", type=List.class, parameters={GlobalTableLocalSecondaryIndex.class})
     private Output</* @Nullable */ List<GlobalTableLocalSecondaryIndex>> localSecondaryIndexes;
 
-    public Output</* @Nullable */ List<GlobalTableLocalSecondaryIndex>> localSecondaryIndexes() {
-        return this.localSecondaryIndexes;
+    public Output<Optional<List<GlobalTableLocalSecondaryIndex>>> localSecondaryIndexes() {
+        return Codegen.optional(this.localSecondaryIndexes);
     }
     @Export(name="replicas", type=List.class, parameters={GlobalTableReplicaSpecification.class})
     private Output<List<GlobalTableReplicaSpecification>> replicas;
@@ -73,8 +74,8 @@ public class GlobalTable extends com.pulumi.resources.CustomResource {
     @Export(name="sSESpecification", type=GlobalTableSSESpecification.class, parameters={})
     private Output</* @Nullable */ GlobalTableSSESpecification> sSESpecification;
 
-    public Output</* @Nullable */ GlobalTableSSESpecification> sSESpecification() {
-        return this.sSESpecification;
+    public Output<Optional<GlobalTableSSESpecification>> sSESpecification() {
+        return Codegen.optional(this.sSESpecification);
     }
     @Export(name="streamArn", type=String.class, parameters={})
     private Output<String> streamArn;
@@ -85,8 +86,8 @@ public class GlobalTable extends com.pulumi.resources.CustomResource {
     @Export(name="streamSpecification", type=GlobalTableStreamSpecification.class, parameters={})
     private Output</* @Nullable */ GlobalTableStreamSpecification> streamSpecification;
 
-    public Output</* @Nullable */ GlobalTableStreamSpecification> streamSpecification() {
-        return this.streamSpecification;
+    public Output<Optional<GlobalTableStreamSpecification>> streamSpecification() {
+        return Codegen.optional(this.streamSpecification);
     }
     @Export(name="tableId", type=String.class, parameters={})
     private Output<String> tableId;
@@ -97,20 +98,20 @@ public class GlobalTable extends com.pulumi.resources.CustomResource {
     @Export(name="tableName", type=String.class, parameters={})
     private Output</* @Nullable */ String> tableName;
 
-    public Output</* @Nullable */ String> tableName() {
-        return this.tableName;
+    public Output<Optional<String>> tableName() {
+        return Codegen.optional(this.tableName);
     }
     @Export(name="timeToLiveSpecification", type=GlobalTableTimeToLiveSpecification.class, parameters={})
     private Output</* @Nullable */ GlobalTableTimeToLiveSpecification> timeToLiveSpecification;
 
-    public Output</* @Nullable */ GlobalTableTimeToLiveSpecification> timeToLiveSpecification() {
-        return this.timeToLiveSpecification;
+    public Output<Optional<GlobalTableTimeToLiveSpecification>> timeToLiveSpecification() {
+        return Codegen.optional(this.timeToLiveSpecification);
     }
     @Export(name="writeProvisionedThroughputSettings", type=GlobalTableWriteProvisionedThroughputSettings.class, parameters={})
     private Output</* @Nullable */ GlobalTableWriteProvisionedThroughputSettings> writeProvisionedThroughputSettings;
 
-    public Output</* @Nullable */ GlobalTableWriteProvisionedThroughputSettings> writeProvisionedThroughputSettings() {
-        return this.writeProvisionedThroughputSettings;
+    public Output<Optional<GlobalTableWriteProvisionedThroughputSettings>> writeProvisionedThroughputSettings() {
+        return Codegen.optional(this.writeProvisionedThroughputSettings);
     }
 
     /**

@@ -15,6 +15,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -48,8 +49,8 @@ public class Project extends com.pulumi.resources.CustomResource {
     @Export(name="projectDescription", type=String.class, parameters={})
     private Output</* @Nullable */ String> projectDescription;
 
-    public Output</* @Nullable */ String> projectDescription() {
-        return this.projectDescription;
+    public Output<Optional<String>> projectDescription() {
+        return Codegen.optional(this.projectDescription);
     }
     @Export(name="projectId", type=String.class, parameters={})
     private Output<String> projectId;
@@ -116,8 +117,8 @@ public class Project extends com.pulumi.resources.CustomResource {
      * @return An array of key-value pairs to apply to this resource.
      * 
      */
-    public Output</* @Nullable */ List<ProjectTag>> tags() {
-        return this.tags;
+    public Output<Optional<List<ProjectTag>>> tags() {
+        return Codegen.optional(this.tags);
     }
 
     /**

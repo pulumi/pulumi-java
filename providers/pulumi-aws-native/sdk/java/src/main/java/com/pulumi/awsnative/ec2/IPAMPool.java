@@ -17,6 +17,7 @@ import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -50,8 +51,8 @@ public class IPAMPool extends com.pulumi.resources.CustomResource {
      * @return The default netmask length for allocations made from this pool. This value is used when the netmask length of an allocation isn&#39;t specified.
      * 
      */
-    public Output</* @Nullable */ Integer> allocationDefaultNetmaskLength() {
-        return this.allocationDefaultNetmaskLength;
+    public Output<Optional<Integer>> allocationDefaultNetmaskLength() {
+        return Codegen.optional(this.allocationDefaultNetmaskLength);
     }
     /**
      * The maximum allowed netmask length for allocations made from this pool.
@@ -64,8 +65,8 @@ public class IPAMPool extends com.pulumi.resources.CustomResource {
      * @return The maximum allowed netmask length for allocations made from this pool.
      * 
      */
-    public Output</* @Nullable */ Integer> allocationMaxNetmaskLength() {
-        return this.allocationMaxNetmaskLength;
+    public Output<Optional<Integer>> allocationMaxNetmaskLength() {
+        return Codegen.optional(this.allocationMaxNetmaskLength);
     }
     /**
      * The minimum allowed netmask length for allocations made from this pool.
@@ -78,8 +79,8 @@ public class IPAMPool extends com.pulumi.resources.CustomResource {
      * @return The minimum allowed netmask length for allocations made from this pool.
      * 
      */
-    public Output</* @Nullable */ Integer> allocationMinNetmaskLength() {
-        return this.allocationMinNetmaskLength;
+    public Output<Optional<Integer>> allocationMinNetmaskLength() {
+        return Codegen.optional(this.allocationMinNetmaskLength);
     }
     /**
      * When specified, an allocation will not be allowed unless a resource has a matching set of tags.
@@ -92,8 +93,8 @@ public class IPAMPool extends com.pulumi.resources.CustomResource {
      * @return When specified, an allocation will not be allowed unless a resource has a matching set of tags.
      * 
      */
-    public Output</* @Nullable */ List<IPAMPoolTag>> allocationResourceTags() {
-        return this.allocationResourceTags;
+    public Output<Optional<List<IPAMPoolTag>>> allocationResourceTags() {
+        return Codegen.optional(this.allocationResourceTags);
     }
     /**
      * The Amazon Resource Name (ARN) of the IPAM Pool.
@@ -120,14 +121,14 @@ public class IPAMPool extends com.pulumi.resources.CustomResource {
      * @return Determines what to do if IPAM discovers resources that haven&#39;t been assigned an allocation. If set to true, an allocation will be made automatically.
      * 
      */
-    public Output</* @Nullable */ Boolean> autoImport() {
-        return this.autoImport;
+    public Output<Optional<Boolean>> autoImport() {
+        return Codegen.optional(this.autoImport);
     }
     @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * The Amazon Resource Name (ARN) of the IPAM this pool is a part of.
@@ -210,8 +211,8 @@ public class IPAMPool extends com.pulumi.resources.CustomResource {
      * @return The region of this pool. If not set, this will default to &#34;None&#34; which will disable non-custom allocations. If the locale has been specified for the source pool, this value must match.
      * 
      */
-    public Output</* @Nullable */ String> locale() {
-        return this.locale;
+    public Output<Optional<String>> locale() {
+        return Codegen.optional(this.locale);
     }
     /**
      * The depth of this pool in the source pool hierarchy.
@@ -238,8 +239,8 @@ public class IPAMPool extends com.pulumi.resources.CustomResource {
      * @return A list of cidrs representing the address space available for allocation in this pool.
      * 
      */
-    public Output</* @Nullable */ List<IPAMPoolProvisionedCidr>> provisionedCidrs() {
-        return this.provisionedCidrs;
+    public Output<Optional<List<IPAMPoolProvisionedCidr>>> provisionedCidrs() {
+        return Codegen.optional(this.provisionedCidrs);
     }
     /**
      * Determines whether or not address space from this pool is publicly advertised. Must be set if and only if the pool is IPv6.
@@ -252,8 +253,8 @@ public class IPAMPool extends com.pulumi.resources.CustomResource {
      * @return Determines whether or not address space from this pool is publicly advertised. Must be set if and only if the pool is IPv6.
      * 
      */
-    public Output</* @Nullable */ Boolean> publiclyAdvertisable() {
-        return this.publiclyAdvertisable;
+    public Output<Optional<Boolean>> publiclyAdvertisable() {
+        return Codegen.optional(this.publiclyAdvertisable);
     }
     /**
      * The Id of this pool&#39;s source. If set, all space provisioned in this pool must be free space provisioned in the parent pool.
@@ -266,8 +267,8 @@ public class IPAMPool extends com.pulumi.resources.CustomResource {
      * @return The Id of this pool&#39;s source. If set, all space provisioned in this pool must be free space provisioned in the parent pool.
      * 
      */
-    public Output</* @Nullable */ String> sourceIpamPoolId() {
-        return this.sourceIpamPoolId;
+    public Output<Optional<String>> sourceIpamPoolId() {
+        return Codegen.optional(this.sourceIpamPoolId);
     }
     /**
      * The state of this pool. This can be one of the following values: &#34;create-in-progress&#34;, &#34;create-complete&#34;, &#34;modify-in-progress&#34;, &#34;modify-complete&#34;, &#34;delete-in-progress&#34;, or &#34;delete-complete&#34;
@@ -308,8 +309,8 @@ public class IPAMPool extends com.pulumi.resources.CustomResource {
      * @return An array of key-value pairs to apply to this resource.
      * 
      */
-    public Output</* @Nullable */ List<IPAMPoolTag>> tags() {
-        return this.tags;
+    public Output<Optional<List<IPAMPoolTag>>> tags() {
+        return Codegen.optional(this.tags);
     }
 
     /**

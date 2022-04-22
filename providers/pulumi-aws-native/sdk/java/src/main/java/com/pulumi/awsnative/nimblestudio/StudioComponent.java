@@ -17,6 +17,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -28,8 +29,8 @@ public class StudioComponent extends com.pulumi.resources.CustomResource {
     @Export(name="configuration", type=StudioComponentConfiguration.class, parameters={})
     private Output</* @Nullable */ StudioComponentConfiguration> configuration;
 
-    public Output</* @Nullable */ StudioComponentConfiguration> configuration() {
-        return this.configuration;
+    public Output<Optional<StudioComponentConfiguration>> configuration() {
+        return Codegen.optional(this.configuration);
     }
     /**
      * &lt;p&gt;The description.&lt;/p&gt;
@@ -42,8 +43,8 @@ public class StudioComponent extends com.pulumi.resources.CustomResource {
      * @return &lt;p&gt;The description.&lt;/p&gt;
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * &lt;p&gt;The EC2 security groups that control access to the studio component.&lt;/p&gt;
@@ -56,8 +57,8 @@ public class StudioComponent extends com.pulumi.resources.CustomResource {
      * @return &lt;p&gt;The EC2 security groups that control access to the studio component.&lt;/p&gt;
      * 
      */
-    public Output</* @Nullable */ List<String>> ec2SecurityGroupIds() {
-        return this.ec2SecurityGroupIds;
+    public Output<Optional<List<String>>> ec2SecurityGroupIds() {
+        return Codegen.optional(this.ec2SecurityGroupIds);
     }
     /**
      * &lt;p&gt;Initialization scripts for studio components.&lt;/p&gt;
@@ -70,8 +71,8 @@ public class StudioComponent extends com.pulumi.resources.CustomResource {
      * @return &lt;p&gt;Initialization scripts for studio components.&lt;/p&gt;
      * 
      */
-    public Output</* @Nullable */ List<StudioComponentInitializationScript>> initializationScripts() {
-        return this.initializationScripts;
+    public Output<Optional<List<StudioComponentInitializationScript>>> initializationScripts() {
+        return Codegen.optional(this.initializationScripts);
     }
     /**
      * &lt;p&gt;The name for the studio component.&lt;/p&gt;
@@ -98,8 +99,8 @@ public class StudioComponent extends com.pulumi.resources.CustomResource {
      * @return &lt;p&gt;Parameters for the studio component scripts.&lt;/p&gt;
      * 
      */
-    public Output</* @Nullable */ List<StudioComponentScriptParameterKeyValue>> scriptParameters() {
-        return this.scriptParameters;
+    public Output<Optional<List<StudioComponentScriptParameterKeyValue>>> scriptParameters() {
+        return Codegen.optional(this.scriptParameters);
     }
     @Export(name="studioComponentId", type=String.class, parameters={})
     private Output<String> studioComponentId;
@@ -124,14 +125,14 @@ public class StudioComponent extends com.pulumi.resources.CustomResource {
     @Export(name="subtype", type=StudioComponentSubtype.class, parameters={})
     private Output</* @Nullable */ StudioComponentSubtype> subtype;
 
-    public Output</* @Nullable */ StudioComponentSubtype> subtype() {
-        return this.subtype;
+    public Output<Optional<StudioComponentSubtype>> subtype() {
+        return Codegen.optional(this.subtype);
     }
     @Export(name="tags", type=StudioComponentTags.class, parameters={})
     private Output</* @Nullable */ StudioComponentTags> tags;
 
-    public Output</* @Nullable */ StudioComponentTags> tags() {
-        return this.tags;
+    public Output<Optional<StudioComponentTags>> tags() {
+        return Codegen.optional(this.tags);
     }
     @Export(name="type", type=StudioComponentType.class, parameters={})
     private Output<StudioComponentType> type;

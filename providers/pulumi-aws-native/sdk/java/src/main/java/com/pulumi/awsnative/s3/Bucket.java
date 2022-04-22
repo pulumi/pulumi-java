@@ -30,6 +30,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -51,8 +52,8 @@ public class Bucket extends com.pulumi.resources.CustomResource {
      * @return Configuration for the transfer acceleration state.
      * 
      */
-    public Output</* @Nullable */ BucketAccelerateConfiguration> accelerateConfiguration() {
-        return this.accelerateConfiguration;
+    public Output<Optional<BucketAccelerateConfiguration>> accelerateConfiguration() {
+        return Codegen.optional(this.accelerateConfiguration);
     }
     /**
      * A canned access control list (ACL) that grants predefined permissions to the bucket.
@@ -65,8 +66,8 @@ public class Bucket extends com.pulumi.resources.CustomResource {
      * @return A canned access control list (ACL) that grants predefined permissions to the bucket.
      * 
      */
-    public Output</* @Nullable */ BucketAccessControl> accessControl() {
-        return this.accessControl;
+    public Output<Optional<BucketAccessControl>> accessControl() {
+        return Codegen.optional(this.accessControl);
     }
     /**
      * The configuration and any analyses for the analytics filter of an Amazon S3 bucket.
@@ -79,8 +80,8 @@ public class Bucket extends com.pulumi.resources.CustomResource {
      * @return The configuration and any analyses for the analytics filter of an Amazon S3 bucket.
      * 
      */
-    public Output</* @Nullable */ List<BucketAnalyticsConfiguration>> analyticsConfigurations() {
-        return this.analyticsConfigurations;
+    public Output<Optional<List<BucketAnalyticsConfiguration>>> analyticsConfigurations() {
+        return Codegen.optional(this.analyticsConfigurations);
     }
     /**
      * The Amazon Resource Name (ARN) of the specified bucket.
@@ -99,8 +100,8 @@ public class Bucket extends com.pulumi.resources.CustomResource {
     @Export(name="bucketEncryption", type=BucketEncryption.class, parameters={})
     private Output</* @Nullable */ BucketEncryption> bucketEncryption;
 
-    public Output</* @Nullable */ BucketEncryption> bucketEncryption() {
-        return this.bucketEncryption;
+    public Output<Optional<BucketEncryption>> bucketEncryption() {
+        return Codegen.optional(this.bucketEncryption);
     }
     /**
      * A name for the bucket. If you don&#39;t specify a name, AWS CloudFormation generates a unique physical ID and uses that ID for the bucket name.
@@ -113,8 +114,8 @@ public class Bucket extends com.pulumi.resources.CustomResource {
      * @return A name for the bucket. If you don&#39;t specify a name, AWS CloudFormation generates a unique physical ID and uses that ID for the bucket name.
      * 
      */
-    public Output</* @Nullable */ String> bucketName() {
-        return this.bucketName;
+    public Output<Optional<String>> bucketName() {
+        return Codegen.optional(this.bucketName);
     }
     /**
      * Rules that define cross-origin resource sharing of objects in this bucket.
@@ -127,8 +128,8 @@ public class Bucket extends com.pulumi.resources.CustomResource {
      * @return Rules that define cross-origin resource sharing of objects in this bucket.
      * 
      */
-    public Output</* @Nullable */ BucketCorsConfiguration> corsConfiguration() {
-        return this.corsConfiguration;
+    public Output<Optional<BucketCorsConfiguration>> corsConfiguration() {
+        return Codegen.optional(this.corsConfiguration);
     }
     /**
      * The IPv4 DNS name of the specified bucket.
@@ -169,8 +170,8 @@ public class Bucket extends com.pulumi.resources.CustomResource {
      * @return Specifies the S3 Intelligent-Tiering configuration for an Amazon S3 bucket.
      * 
      */
-    public Output</* @Nullable */ List<BucketIntelligentTieringConfiguration>> intelligentTieringConfigurations() {
-        return this.intelligentTieringConfigurations;
+    public Output<Optional<List<BucketIntelligentTieringConfiguration>>> intelligentTieringConfigurations() {
+        return Codegen.optional(this.intelligentTieringConfigurations);
     }
     /**
      * The inventory configuration for an Amazon S3 bucket.
@@ -183,8 +184,8 @@ public class Bucket extends com.pulumi.resources.CustomResource {
      * @return The inventory configuration for an Amazon S3 bucket.
      * 
      */
-    public Output</* @Nullable */ List<BucketInventoryConfiguration>> inventoryConfigurations() {
-        return this.inventoryConfigurations;
+    public Output<Optional<List<BucketInventoryConfiguration>>> inventoryConfigurations() {
+        return Codegen.optional(this.inventoryConfigurations);
     }
     /**
      * Rules that define how Amazon S3 manages objects during their lifetime.
@@ -197,8 +198,8 @@ public class Bucket extends com.pulumi.resources.CustomResource {
      * @return Rules that define how Amazon S3 manages objects during their lifetime.
      * 
      */
-    public Output</* @Nullable */ BucketLifecycleConfiguration> lifecycleConfiguration() {
-        return this.lifecycleConfiguration;
+    public Output<Optional<BucketLifecycleConfiguration>> lifecycleConfiguration() {
+        return Codegen.optional(this.lifecycleConfiguration);
     }
     /**
      * Settings that define where logs are stored.
@@ -211,8 +212,8 @@ public class Bucket extends com.pulumi.resources.CustomResource {
      * @return Settings that define where logs are stored.
      * 
      */
-    public Output</* @Nullable */ BucketLoggingConfiguration> loggingConfiguration() {
-        return this.loggingConfiguration;
+    public Output<Optional<BucketLoggingConfiguration>> loggingConfiguration() {
+        return Codegen.optional(this.loggingConfiguration);
     }
     /**
      * Settings that define a metrics configuration for the CloudWatch request metrics from the bucket.
@@ -225,8 +226,8 @@ public class Bucket extends com.pulumi.resources.CustomResource {
      * @return Settings that define a metrics configuration for the CloudWatch request metrics from the bucket.
      * 
      */
-    public Output</* @Nullable */ List<BucketMetricsConfiguration>> metricsConfigurations() {
-        return this.metricsConfigurations;
+    public Output<Optional<List<BucketMetricsConfiguration>>> metricsConfigurations() {
+        return Codegen.optional(this.metricsConfigurations);
     }
     /**
      * Configuration that defines how Amazon S3 handles bucket notifications.
@@ -239,8 +240,8 @@ public class Bucket extends com.pulumi.resources.CustomResource {
      * @return Configuration that defines how Amazon S3 handles bucket notifications.
      * 
      */
-    public Output</* @Nullable */ BucketNotificationConfiguration> notificationConfiguration() {
-        return this.notificationConfiguration;
+    public Output<Optional<BucketNotificationConfiguration>> notificationConfiguration() {
+        return Codegen.optional(this.notificationConfiguration);
     }
     /**
      * Places an Object Lock configuration on the specified bucket.
@@ -253,8 +254,8 @@ public class Bucket extends com.pulumi.resources.CustomResource {
      * @return Places an Object Lock configuration on the specified bucket.
      * 
      */
-    public Output</* @Nullable */ BucketObjectLockConfiguration> objectLockConfiguration() {
-        return this.objectLockConfiguration;
+    public Output<Optional<BucketObjectLockConfiguration>> objectLockConfiguration() {
+        return Codegen.optional(this.objectLockConfiguration);
     }
     /**
      * Indicates whether this bucket has an Object Lock configuration enabled.
@@ -267,8 +268,8 @@ public class Bucket extends com.pulumi.resources.CustomResource {
      * @return Indicates whether this bucket has an Object Lock configuration enabled.
      * 
      */
-    public Output</* @Nullable */ Boolean> objectLockEnabled() {
-        return this.objectLockEnabled;
+    public Output<Optional<Boolean>> objectLockEnabled() {
+        return Codegen.optional(this.objectLockEnabled);
     }
     /**
      * Specifies the container element for object ownership rules.
@@ -281,14 +282,14 @@ public class Bucket extends com.pulumi.resources.CustomResource {
      * @return Specifies the container element for object ownership rules.
      * 
      */
-    public Output</* @Nullable */ BucketOwnershipControls> ownershipControls() {
-        return this.ownershipControls;
+    public Output<Optional<BucketOwnershipControls>> ownershipControls() {
+        return Codegen.optional(this.ownershipControls);
     }
     @Export(name="publicAccessBlockConfiguration", type=BucketPublicAccessBlockConfiguration.class, parameters={})
     private Output</* @Nullable */ BucketPublicAccessBlockConfiguration> publicAccessBlockConfiguration;
 
-    public Output</* @Nullable */ BucketPublicAccessBlockConfiguration> publicAccessBlockConfiguration() {
-        return this.publicAccessBlockConfiguration;
+    public Output<Optional<BucketPublicAccessBlockConfiguration>> publicAccessBlockConfiguration() {
+        return Codegen.optional(this.publicAccessBlockConfiguration);
     }
     /**
      * Returns the regional domain name of the specified bucket.
@@ -315,8 +316,8 @@ public class Bucket extends com.pulumi.resources.CustomResource {
      * @return Configuration for replicating objects in an S3 bucket.
      * 
      */
-    public Output</* @Nullable */ BucketReplicationConfiguration> replicationConfiguration() {
-        return this.replicationConfiguration;
+    public Output<Optional<BucketReplicationConfiguration>> replicationConfiguration() {
+        return Codegen.optional(this.replicationConfiguration);
     }
     /**
      * An arbitrary set of tags (key-value pairs) for this S3 bucket.
@@ -329,20 +330,20 @@ public class Bucket extends com.pulumi.resources.CustomResource {
      * @return An arbitrary set of tags (key-value pairs) for this S3 bucket.
      * 
      */
-    public Output</* @Nullable */ List<BucketTag>> tags() {
-        return this.tags;
+    public Output<Optional<List<BucketTag>>> tags() {
+        return Codegen.optional(this.tags);
     }
     @Export(name="versioningConfiguration", type=BucketVersioningConfiguration.class, parameters={})
     private Output</* @Nullable */ BucketVersioningConfiguration> versioningConfiguration;
 
-    public Output</* @Nullable */ BucketVersioningConfiguration> versioningConfiguration() {
-        return this.versioningConfiguration;
+    public Output<Optional<BucketVersioningConfiguration>> versioningConfiguration() {
+        return Codegen.optional(this.versioningConfiguration);
     }
     @Export(name="websiteConfiguration", type=BucketWebsiteConfiguration.class, parameters={})
     private Output</* @Nullable */ BucketWebsiteConfiguration> websiteConfiguration;
 
-    public Output</* @Nullable */ BucketWebsiteConfiguration> websiteConfiguration() {
-        return this.websiteConfiguration;
+    public Output<Optional<BucketWebsiteConfiguration>> websiteConfiguration() {
+        return Codegen.optional(this.websiteConfiguration);
     }
     /**
      * The Amazon S3 website endpoint for the specified bucket.

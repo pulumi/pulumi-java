@@ -19,6 +19,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -52,8 +53,8 @@ public class GameServerGroup extends com.pulumi.resources.CustomResource {
      * @return Configuration settings to define a scaling policy for the Auto Scaling group that is optimized for game hosting
      * 
      */
-    public Output</* @Nullable */ GameServerGroupAutoScalingPolicy> autoScalingPolicy() {
-        return this.autoScalingPolicy;
+    public Output<Optional<GameServerGroupAutoScalingPolicy>> autoScalingPolicy() {
+        return Codegen.optional(this.autoScalingPolicy);
     }
     /**
      * The fallback balancing method to use for the game server group when Spot Instances in a Region become unavailable or are not viable for game hosting.
@@ -66,8 +67,8 @@ public class GameServerGroup extends com.pulumi.resources.CustomResource {
      * @return The fallback balancing method to use for the game server group when Spot Instances in a Region become unavailable or are not viable for game hosting.
      * 
      */
-    public Output</* @Nullable */ GameServerGroupBalancingStrategy> balancingStrategy() {
-        return this.balancingStrategy;
+    public Output<Optional<GameServerGroupBalancingStrategy>> balancingStrategy() {
+        return Codegen.optional(this.balancingStrategy);
     }
     /**
      * The type of delete to perform.
@@ -80,8 +81,8 @@ public class GameServerGroup extends com.pulumi.resources.CustomResource {
      * @return The type of delete to perform.
      * 
      */
-    public Output</* @Nullable */ GameServerGroupDeleteOption> deleteOption() {
-        return this.deleteOption;
+    public Output<Optional<GameServerGroupDeleteOption>> deleteOption() {
+        return Codegen.optional(this.deleteOption);
     }
     /**
      * A generated unique ID for the game server group.
@@ -122,8 +123,8 @@ public class GameServerGroup extends com.pulumi.resources.CustomResource {
      * @return A flag that indicates whether instances in the game server group are protected from early termination.
      * 
      */
-    public Output</* @Nullable */ GameServerGroupGameServerProtectionPolicy> gameServerProtectionPolicy() {
-        return this.gameServerProtectionPolicy;
+    public Output<Optional<GameServerGroupGameServerProtectionPolicy>> gameServerProtectionPolicy() {
+        return Codegen.optional(this.gameServerProtectionPolicy);
     }
     /**
      * A set of EC2 instance types to use when creating instances in the group.
@@ -164,8 +165,8 @@ public class GameServerGroup extends com.pulumi.resources.CustomResource {
      * @return The maximum number of instances allowed in the EC2 Auto Scaling group.
      * 
      */
-    public Output</* @Nullable */ Double> maxSize() {
-        return this.maxSize;
+    public Output<Optional<Double>> maxSize() {
+        return Codegen.optional(this.maxSize);
     }
     /**
      * The minimum number of instances allowed in the EC2 Auto Scaling group.
@@ -178,8 +179,8 @@ public class GameServerGroup extends com.pulumi.resources.CustomResource {
      * @return The minimum number of instances allowed in the EC2 Auto Scaling group.
      * 
      */
-    public Output</* @Nullable */ Double> minSize() {
-        return this.minSize;
+    public Output<Optional<Double>> minSize() {
+        return Codegen.optional(this.minSize);
     }
     /**
      * The Amazon Resource Name (ARN) for an IAM role that allows Amazon GameLift to access your EC2 Auto Scaling groups.
@@ -206,8 +207,8 @@ public class GameServerGroup extends com.pulumi.resources.CustomResource {
      * @return A list of labels to assign to the new game server group resource.
      * 
      */
-    public Output</* @Nullable */ List<GameServerGroupTag>> tags() {
-        return this.tags;
+    public Output<Optional<List<GameServerGroupTag>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * A list of virtual private cloud (VPC) subnets to use with instances in the game server group.
@@ -220,8 +221,8 @@ public class GameServerGroup extends com.pulumi.resources.CustomResource {
      * @return A list of virtual private cloud (VPC) subnets to use with instances in the game server group.
      * 
      */
-    public Output</* @Nullable */ List<String>> vpcSubnets() {
-        return this.vpcSubnets;
+    public Output<Optional<List<String>>> vpcSubnets() {
+        return Codegen.optional(this.vpcSubnets);
     }
 
     /**

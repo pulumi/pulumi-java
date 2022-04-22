@@ -12,6 +12,7 @@ import com.pulumi.core.annotations.Export;
 import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -73,8 +74,8 @@ public class ResolverQueryLoggingConfigAssociation extends com.pulumi.resources.
      * @return ResolverQueryLogConfigId
      * 
      */
-    public Output</* @Nullable */ String> resolverQueryLogConfigId() {
-        return this.resolverQueryLogConfigId;
+    public Output<Optional<String>> resolverQueryLogConfigId() {
+        return Codegen.optional(this.resolverQueryLogConfigId);
     }
     /**
      * ResourceId
@@ -87,8 +88,8 @@ public class ResolverQueryLoggingConfigAssociation extends com.pulumi.resources.
      * @return ResourceId
      * 
      */
-    public Output</* @Nullable */ String> resourceId() {
-        return this.resourceId;
+    public Output<Optional<String>> resourceId() {
+        return Codegen.optional(this.resourceId);
     }
     /**
      * ResolverQueryLogConfigAssociationStatus

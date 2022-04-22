@@ -12,6 +12,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -73,8 +74,8 @@ public class AccessPoint extends com.pulumi.resources.CustomResource {
      * @return The access point policy associated with this access point.
      * 
      */
-    public Output</* @Nullable */ Object> policy() {
-        return this.policy;
+    public Output<Optional<Object>> policy() {
+        return Codegen.optional(this.policy);
     }
     /**
      * Virtual Private Cloud (VPC) from which requests can be made to the AccessPoint.

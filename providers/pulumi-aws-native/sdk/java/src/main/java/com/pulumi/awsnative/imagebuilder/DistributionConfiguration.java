@@ -13,6 +13,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -46,8 +47,8 @@ public class DistributionConfiguration extends com.pulumi.resources.CustomResour
      * @return The description of the distribution configuration.
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * The distributions of the distribution configuration.
@@ -88,8 +89,8 @@ public class DistributionConfiguration extends com.pulumi.resources.CustomResour
      * @return The tags associated with the component.
      * 
      */
-    public Output</* @Nullable */ Object> tags() {
-        return this.tags;
+    public Output<Optional<Object>> tags() {
+        return Codegen.optional(this.tags);
     }
 
     /**

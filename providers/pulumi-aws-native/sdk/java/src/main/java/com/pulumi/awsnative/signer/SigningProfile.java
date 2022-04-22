@@ -14,6 +14,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -103,8 +104,8 @@ public class SigningProfile extends com.pulumi.resources.CustomResource {
      * @return Signature validity period of the profile.
      * 
      */
-    public Output</* @Nullable */ SigningProfileSignatureValidityPeriod> signatureValidityPeriod() {
-        return this.signatureValidityPeriod;
+    public Output<Optional<SigningProfileSignatureValidityPeriod>> signatureValidityPeriod() {
+        return Codegen.optional(this.signatureValidityPeriod);
     }
     /**
      * A list of tags associated with the signing profile.
@@ -117,8 +118,8 @@ public class SigningProfile extends com.pulumi.resources.CustomResource {
      * @return A list of tags associated with the signing profile.
      * 
      */
-    public Output</* @Nullable */ List<SigningProfileTag>> tags() {
-        return this.tags;
+    public Output<Optional<List<SigningProfileTag>>> tags() {
+        return Codegen.optional(this.tags);
     }
 
     /**

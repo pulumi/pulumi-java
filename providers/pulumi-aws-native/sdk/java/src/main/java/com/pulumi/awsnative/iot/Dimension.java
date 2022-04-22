@@ -13,6 +13,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -48,8 +49,8 @@ public class Dimension extends com.pulumi.resources.CustomResource {
      * @return A unique identifier for the dimension.
      * 
      */
-    public Output</* @Nullable */ String> name() {
-        return this.name;
+    public Output<Optional<String>> name() {
+        return Codegen.optional(this.name);
     }
     /**
      * Specifies the value or list of values for the dimension.
@@ -76,8 +77,8 @@ public class Dimension extends com.pulumi.resources.CustomResource {
      * @return Metadata that can be used to manage the dimension.
      * 
      */
-    public Output</* @Nullable */ List<DimensionTag>> tags() {
-        return this.tags;
+    public Output<Optional<List<DimensionTag>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * Specifies the type of the dimension.

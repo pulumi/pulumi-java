@@ -15,6 +15,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -50,8 +51,8 @@ public class Channel extends com.pulumi.resources.CustomResource {
      * @return Whether the channel is authorized.
      * 
      */
-    public Output</* @Nullable */ Boolean> authorized() {
-        return this.authorized;
+    public Output<Optional<Boolean>> authorized() {
+        return Codegen.optional(this.authorized);
     }
     /**
      * Channel ingest endpoint, part of the definition of an ingest server, used when you set up streaming software.
@@ -78,8 +79,8 @@ public class Channel extends com.pulumi.resources.CustomResource {
      * @return Channel latency mode.
      * 
      */
-    public Output</* @Nullable */ ChannelLatencyMode> latencyMode() {
-        return this.latencyMode;
+    public Output<Optional<ChannelLatencyMode>> latencyMode() {
+        return Codegen.optional(this.latencyMode);
     }
     /**
      * Channel
@@ -92,8 +93,8 @@ public class Channel extends com.pulumi.resources.CustomResource {
      * @return Channel
      * 
      */
-    public Output</* @Nullable */ String> name() {
-        return this.name;
+    public Output<Optional<String>> name() {
+        return Codegen.optional(this.name);
     }
     /**
      * Channel Playback URL.
@@ -120,8 +121,8 @@ public class Channel extends com.pulumi.resources.CustomResource {
      * @return Recording Configuration ARN. A value other than an empty string indicates that recording is enabled. Default: “” (recording is disabled).
      * 
      */
-    public Output</* @Nullable */ String> recordingConfigurationArn() {
-        return this.recordingConfigurationArn;
+    public Output<Optional<String>> recordingConfigurationArn() {
+        return Codegen.optional(this.recordingConfigurationArn);
     }
     /**
      * A list of key-value pairs that contain metadata for the asset model.
@@ -134,8 +135,8 @@ public class Channel extends com.pulumi.resources.CustomResource {
      * @return A list of key-value pairs that contain metadata for the asset model.
      * 
      */
-    public Output</* @Nullable */ List<ChannelTag>> tags() {
-        return this.tags;
+    public Output<Optional<List<ChannelTag>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * Channel type, which determines the allowable resolution and bitrate. If you exceed the allowable resolution or bitrate, the stream probably will disconnect immediately.
@@ -148,8 +149,8 @@ public class Channel extends com.pulumi.resources.CustomResource {
      * @return Channel type, which determines the allowable resolution and bitrate. If you exceed the allowable resolution or bitrate, the stream probably will disconnect immediately.
      * 
      */
-    public Output</* @Nullable */ ChannelType> type() {
-        return this.type;
+    public Output<Optional<ChannelType>> type() {
+        return Codegen.optional(this.type);
     }
 
     /**

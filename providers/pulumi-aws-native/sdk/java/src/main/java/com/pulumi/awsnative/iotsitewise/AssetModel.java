@@ -15,6 +15,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -48,8 +49,8 @@ public class AssetModel extends com.pulumi.resources.CustomResource {
      * @return The composite asset models that are part of this asset model. Composite asset models are asset models that contain specific properties.
      * 
      */
-    public Output</* @Nullable */ List<AssetModelCompositeModel>> assetModelCompositeModels() {
-        return this.assetModelCompositeModels;
+    public Output<Optional<List<AssetModelCompositeModel>>> assetModelCompositeModels() {
+        return Codegen.optional(this.assetModelCompositeModels);
     }
     /**
      * A description for the asset model.
@@ -62,8 +63,8 @@ public class AssetModel extends com.pulumi.resources.CustomResource {
      * @return A description for the asset model.
      * 
      */
-    public Output</* @Nullable */ String> assetModelDescription() {
-        return this.assetModelDescription;
+    public Output<Optional<String>> assetModelDescription() {
+        return Codegen.optional(this.assetModelDescription);
     }
     /**
      * The hierarchy definitions of the asset model. Each hierarchy specifies an asset model whose assets can be children of any other assets created from this asset model. You can specify up to 10 hierarchies per asset model.
@@ -76,8 +77,8 @@ public class AssetModel extends com.pulumi.resources.CustomResource {
      * @return The hierarchy definitions of the asset model. Each hierarchy specifies an asset model whose assets can be children of any other assets created from this asset model. You can specify up to 10 hierarchies per asset model.
      * 
      */
-    public Output</* @Nullable */ List<AssetModelHierarchy>> assetModelHierarchies() {
-        return this.assetModelHierarchies;
+    public Output<Optional<List<AssetModelHierarchy>>> assetModelHierarchies() {
+        return Codegen.optional(this.assetModelHierarchies);
     }
     /**
      * The ID of the asset model.
@@ -118,8 +119,8 @@ public class AssetModel extends com.pulumi.resources.CustomResource {
      * @return The property definitions of the asset model. You can specify up to 200 properties per asset model.
      * 
      */
-    public Output</* @Nullable */ List<AssetModelProperty>> assetModelProperties() {
-        return this.assetModelProperties;
+    public Output<Optional<List<AssetModelProperty>>> assetModelProperties() {
+        return Codegen.optional(this.assetModelProperties);
     }
     /**
      * A list of key-value pairs that contain metadata for the asset model.
@@ -132,8 +133,8 @@ public class AssetModel extends com.pulumi.resources.CustomResource {
      * @return A list of key-value pairs that contain metadata for the asset model.
      * 
      */
-    public Output</* @Nullable */ List<AssetModelTag>> tags() {
-        return this.tags;
+    public Output<Optional<List<AssetModelTag>>> tags() {
+        return Codegen.optional(this.tags);
     }
 
     /**

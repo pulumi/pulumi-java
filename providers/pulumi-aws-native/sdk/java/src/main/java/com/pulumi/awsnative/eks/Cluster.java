@@ -16,6 +16,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -69,8 +70,8 @@ public class Cluster extends com.pulumi.resources.CustomResource {
     @Export(name="encryptionConfig", type=List.class, parameters={ClusterEncryptionConfig.class})
     private Output</* @Nullable */ List<ClusterEncryptionConfig>> encryptionConfig;
 
-    public Output</* @Nullable */ List<ClusterEncryptionConfig>> encryptionConfig() {
-        return this.encryptionConfig;
+    public Output<Optional<List<ClusterEncryptionConfig>>> encryptionConfig() {
+        return Codegen.optional(this.encryptionConfig);
     }
     /**
      * Amazon Resource Name (ARN) or alias of the customer master key (CMK).
@@ -103,14 +104,14 @@ public class Cluster extends com.pulumi.resources.CustomResource {
     @Export(name="kubernetesNetworkConfig", type=ClusterKubernetesNetworkConfig.class, parameters={})
     private Output</* @Nullable */ ClusterKubernetesNetworkConfig> kubernetesNetworkConfig;
 
-    public Output</* @Nullable */ ClusterKubernetesNetworkConfig> kubernetesNetworkConfig() {
-        return this.kubernetesNetworkConfig;
+    public Output<Optional<ClusterKubernetesNetworkConfig>> kubernetesNetworkConfig() {
+        return Codegen.optional(this.kubernetesNetworkConfig);
     }
     @Export(name="logging", type=ClusterLogging.class, parameters={})
     private Output</* @Nullable */ ClusterLogging> logging;
 
-    public Output</* @Nullable */ ClusterLogging> logging() {
-        return this.logging;
+    public Output<Optional<ClusterLogging>> logging() {
+        return Codegen.optional(this.logging);
     }
     /**
      * The unique name to give to your cluster.
@@ -123,8 +124,8 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      * @return The unique name to give to your cluster.
      * 
      */
-    public Output</* @Nullable */ String> name() {
-        return this.name;
+    public Output<Optional<String>> name() {
+        return Codegen.optional(this.name);
     }
     /**
      * The issuer URL for the cluster&#39;s OIDC identity provider, such as https://oidc.eks.us-west-2.amazonaws.com/id/EXAMPLED539D4633E53DE1B716D3041E. If you need to remove https:// from this output value, you can include the following code in your template.
@@ -171,8 +172,8 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      * @return An array of key-value pairs to apply to this resource.
      * 
      */
-    public Output</* @Nullable */ List<ClusterTag>> tags() {
-        return this.tags;
+    public Output<Optional<List<ClusterTag>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * The desired Kubernetes version for your cluster. If you don&#39;t specify a value here, the latest version available in Amazon EKS is used.
@@ -185,8 +186,8 @@ public class Cluster extends com.pulumi.resources.CustomResource {
      * @return The desired Kubernetes version for your cluster. If you don&#39;t specify a value here, the latest version available in Amazon EKS is used.
      * 
      */
-    public Output</* @Nullable */ String> version() {
-        return this.version;
+    public Output<Optional<String>> version() {
+        return Codegen.optional(this.version);
     }
 
     /**

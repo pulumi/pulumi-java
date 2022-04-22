@@ -14,6 +14,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -47,8 +48,8 @@ public class SignalingChannel extends com.pulumi.resources.CustomResource {
      * @return The period of time a signaling channel retains undelivered messages before they are discarded.
      * 
      */
-    public Output</* @Nullable */ Integer> messageTtlSeconds() {
-        return this.messageTtlSeconds;
+    public Output<Optional<Integer>> messageTtlSeconds() {
+        return Codegen.optional(this.messageTtlSeconds);
     }
     /**
      * The name of the Kinesis Video Signaling Channel.
@@ -61,8 +62,8 @@ public class SignalingChannel extends com.pulumi.resources.CustomResource {
      * @return The name of the Kinesis Video Signaling Channel.
      * 
      */
-    public Output</* @Nullable */ String> name() {
-        return this.name;
+    public Output<Optional<String>> name() {
+        return Codegen.optional(this.name);
     }
     /**
      * An array of key-value pairs to apply to this resource.
@@ -75,8 +76,8 @@ public class SignalingChannel extends com.pulumi.resources.CustomResource {
      * @return An array of key-value pairs to apply to this resource.
      * 
      */
-    public Output</* @Nullable */ List<SignalingChannelTag>> tags() {
-        return this.tags;
+    public Output<Optional<List<SignalingChannelTag>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * The type of the Kinesis Video Signaling Channel to create. Currently, SINGLE_MASTER is the only supported channel type.
@@ -89,8 +90,8 @@ public class SignalingChannel extends com.pulumi.resources.CustomResource {
      * @return The type of the Kinesis Video Signaling Channel to create. Currently, SINGLE_MASTER is the only supported channel type.
      * 
      */
-    public Output</* @Nullable */ SignalingChannelType> type() {
-        return this.type;
+    public Output<Optional<SignalingChannelType>> type() {
+        return Codegen.optional(this.type);
     }
 
     /**

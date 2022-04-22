@@ -12,6 +12,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -41,20 +42,20 @@ public class ComponentVersion extends com.pulumi.resources.CustomResource {
     @Export(name="inlineRecipe", type=String.class, parameters={})
     private Output</* @Nullable */ String> inlineRecipe;
 
-    public Output</* @Nullable */ String> inlineRecipe() {
-        return this.inlineRecipe;
+    public Output<Optional<String>> inlineRecipe() {
+        return Codegen.optional(this.inlineRecipe);
     }
     @Export(name="lambdaFunction", type=ComponentVersionLambdaFunctionRecipeSource.class, parameters={})
     private Output</* @Nullable */ ComponentVersionLambdaFunctionRecipeSource> lambdaFunction;
 
-    public Output</* @Nullable */ ComponentVersionLambdaFunctionRecipeSource> lambdaFunction() {
-        return this.lambdaFunction;
+    public Output<Optional<ComponentVersionLambdaFunctionRecipeSource>> lambdaFunction() {
+        return Codegen.optional(this.lambdaFunction);
     }
     @Export(name="tags", type=Object.class, parameters={})
     private Output</* @Nullable */ Object> tags;
 
-    public Output</* @Nullable */ Object> tags() {
-        return this.tags;
+    public Output<Optional<Object>> tags() {
+        return Codegen.optional(this.tags);
     }
 
     /**

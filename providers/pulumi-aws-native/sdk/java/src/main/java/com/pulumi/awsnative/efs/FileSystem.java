@@ -17,6 +17,7 @@ import java.lang.Double;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -34,14 +35,14 @@ public class FileSystem extends com.pulumi.resources.CustomResource {
     @Export(name="availabilityZoneName", type=String.class, parameters={})
     private Output</* @Nullable */ String> availabilityZoneName;
 
-    public Output</* @Nullable */ String> availabilityZoneName() {
-        return this.availabilityZoneName;
+    public Output<Optional<String>> availabilityZoneName() {
+        return Codegen.optional(this.availabilityZoneName);
     }
     @Export(name="backupPolicy", type=FileSystemBackupPolicy.class, parameters={})
     private Output</* @Nullable */ FileSystemBackupPolicy> backupPolicy;
 
-    public Output</* @Nullable */ FileSystemBackupPolicy> backupPolicy() {
-        return this.backupPolicy;
+    public Output<Optional<FileSystemBackupPolicy>> backupPolicy() {
+        return Codegen.optional(this.backupPolicy);
     }
     /**
      * Whether to bypass the FileSystemPolicy lockout safety check. The policy lockout safety check determines whether the policy in the request will prevent the principal making the request to be locked out from making future PutFileSystemPolicy requests on the file system. Set BypassPolicyLockoutSafetyCheck to True only when you intend to prevent the principal that is making the request from making a subsequent PutFileSystemPolicy request on the file system. Defaults to false
@@ -54,14 +55,14 @@ public class FileSystem extends com.pulumi.resources.CustomResource {
      * @return Whether to bypass the FileSystemPolicy lockout safety check. The policy lockout safety check determines whether the policy in the request will prevent the principal making the request to be locked out from making future PutFileSystemPolicy requests on the file system. Set BypassPolicyLockoutSafetyCheck to True only when you intend to prevent the principal that is making the request from making a subsequent PutFileSystemPolicy request on the file system. Defaults to false
      * 
      */
-    public Output</* @Nullable */ Boolean> bypassPolicyLockoutSafetyCheck() {
-        return this.bypassPolicyLockoutSafetyCheck;
+    public Output<Optional<Boolean>> bypassPolicyLockoutSafetyCheck() {
+        return Codegen.optional(this.bypassPolicyLockoutSafetyCheck);
     }
     @Export(name="encrypted", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> encrypted;
 
-    public Output</* @Nullable */ Boolean> encrypted() {
-        return this.encrypted;
+    public Output<Optional<Boolean>> encrypted() {
+        return Codegen.optional(this.encrypted);
     }
     @Export(name="fileSystemId", type=String.class, parameters={})
     private Output<String> fileSystemId;
@@ -72,44 +73,44 @@ public class FileSystem extends com.pulumi.resources.CustomResource {
     @Export(name="fileSystemPolicy", type=Object.class, parameters={})
     private Output</* @Nullable */ Object> fileSystemPolicy;
 
-    public Output</* @Nullable */ Object> fileSystemPolicy() {
-        return this.fileSystemPolicy;
+    public Output<Optional<Object>> fileSystemPolicy() {
+        return Codegen.optional(this.fileSystemPolicy);
     }
     @Export(name="fileSystemTags", type=List.class, parameters={FileSystemElasticFileSystemTag.class})
     private Output</* @Nullable */ List<FileSystemElasticFileSystemTag>> fileSystemTags;
 
-    public Output</* @Nullable */ List<FileSystemElasticFileSystemTag>> fileSystemTags() {
-        return this.fileSystemTags;
+    public Output<Optional<List<FileSystemElasticFileSystemTag>>> fileSystemTags() {
+        return Codegen.optional(this.fileSystemTags);
     }
     @Export(name="kmsKeyId", type=String.class, parameters={})
     private Output</* @Nullable */ String> kmsKeyId;
 
-    public Output</* @Nullable */ String> kmsKeyId() {
-        return this.kmsKeyId;
+    public Output<Optional<String>> kmsKeyId() {
+        return Codegen.optional(this.kmsKeyId);
     }
     @Export(name="lifecyclePolicies", type=List.class, parameters={FileSystemLifecyclePolicy.class})
     private Output</* @Nullable */ List<FileSystemLifecyclePolicy>> lifecyclePolicies;
 
-    public Output</* @Nullable */ List<FileSystemLifecyclePolicy>> lifecyclePolicies() {
-        return this.lifecyclePolicies;
+    public Output<Optional<List<FileSystemLifecyclePolicy>>> lifecyclePolicies() {
+        return Codegen.optional(this.lifecyclePolicies);
     }
     @Export(name="performanceMode", type=String.class, parameters={})
     private Output</* @Nullable */ String> performanceMode;
 
-    public Output</* @Nullable */ String> performanceMode() {
-        return this.performanceMode;
+    public Output<Optional<String>> performanceMode() {
+        return Codegen.optional(this.performanceMode);
     }
     @Export(name="provisionedThroughputInMibps", type=Double.class, parameters={})
     private Output</* @Nullable */ Double> provisionedThroughputInMibps;
 
-    public Output</* @Nullable */ Double> provisionedThroughputInMibps() {
-        return this.provisionedThroughputInMibps;
+    public Output<Optional<Double>> provisionedThroughputInMibps() {
+        return Codegen.optional(this.provisionedThroughputInMibps);
     }
     @Export(name="throughputMode", type=String.class, parameters={})
     private Output</* @Nullable */ String> throughputMode;
 
-    public Output</* @Nullable */ String> throughputMode() {
-        return this.throughputMode;
+    public Output<Optional<String>> throughputMode() {
+        return Codegen.optional(this.throughputMode);
     }
 
     /**

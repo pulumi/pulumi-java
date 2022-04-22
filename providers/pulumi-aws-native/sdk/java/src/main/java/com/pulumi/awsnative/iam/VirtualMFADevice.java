@@ -12,6 +12,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -23,8 +24,8 @@ public class VirtualMFADevice extends com.pulumi.resources.CustomResource {
     @Export(name="path", type=String.class, parameters={})
     private Output</* @Nullable */ String> path;
 
-    public Output</* @Nullable */ String> path() {
-        return this.path;
+    public Output<Optional<String>> path() {
+        return Codegen.optional(this.path);
     }
     @Export(name="serialNumber", type=String.class, parameters={})
     private Output<String> serialNumber;
@@ -35,8 +36,8 @@ public class VirtualMFADevice extends com.pulumi.resources.CustomResource {
     @Export(name="tags", type=List.class, parameters={VirtualMFADeviceTag.class})
     private Output</* @Nullable */ List<VirtualMFADeviceTag>> tags;
 
-    public Output</* @Nullable */ List<VirtualMFADeviceTag>> tags() {
-        return this.tags;
+    public Output<Optional<List<VirtualMFADeviceTag>>> tags() {
+        return Codegen.optional(this.tags);
     }
     @Export(name="users", type=List.class, parameters={String.class})
     private Output<List<String>> users;
@@ -47,8 +48,8 @@ public class VirtualMFADevice extends com.pulumi.resources.CustomResource {
     @Export(name="virtualMfaDeviceName", type=String.class, parameters={})
     private Output</* @Nullable */ String> virtualMfaDeviceName;
 
-    public Output</* @Nullable */ String> virtualMfaDeviceName() {
-        return this.virtualMfaDeviceName;
+    public Output<Optional<String>> virtualMfaDeviceName() {
+        return Codegen.optional(this.virtualMfaDeviceName);
     }
 
     /**

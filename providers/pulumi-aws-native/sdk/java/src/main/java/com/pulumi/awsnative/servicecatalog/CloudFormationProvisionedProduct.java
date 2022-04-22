@@ -16,6 +16,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -27,8 +28,8 @@ public class CloudFormationProvisionedProduct extends com.pulumi.resources.Custo
     @Export(name="acceptLanguage", type=CloudFormationProvisionedProductAcceptLanguage.class, parameters={})
     private Output</* @Nullable */ CloudFormationProvisionedProductAcceptLanguage> acceptLanguage;
 
-    public Output</* @Nullable */ CloudFormationProvisionedProductAcceptLanguage> acceptLanguage() {
-        return this.acceptLanguage;
+    public Output<Optional<CloudFormationProvisionedProductAcceptLanguage>> acceptLanguage() {
+        return Codegen.optional(this.acceptLanguage);
     }
     @Export(name="cloudformationStackArn", type=String.class, parameters={})
     private Output<String> cloudformationStackArn;
@@ -39,8 +40,8 @@ public class CloudFormationProvisionedProduct extends com.pulumi.resources.Custo
     @Export(name="notificationArns", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> notificationArns;
 
-    public Output</* @Nullable */ List<String>> notificationArns() {
-        return this.notificationArns;
+    public Output<Optional<List<String>>> notificationArns() {
+        return Codegen.optional(this.notificationArns);
     }
     /**
      * List of key-value pair outputs.
@@ -59,26 +60,26 @@ public class CloudFormationProvisionedProduct extends com.pulumi.resources.Custo
     @Export(name="pathId", type=String.class, parameters={})
     private Output</* @Nullable */ String> pathId;
 
-    public Output</* @Nullable */ String> pathId() {
-        return this.pathId;
+    public Output<Optional<String>> pathId() {
+        return Codegen.optional(this.pathId);
     }
     @Export(name="pathName", type=String.class, parameters={})
     private Output</* @Nullable */ String> pathName;
 
-    public Output</* @Nullable */ String> pathName() {
-        return this.pathName;
+    public Output<Optional<String>> pathName() {
+        return Codegen.optional(this.pathName);
     }
     @Export(name="productId", type=String.class, parameters={})
     private Output</* @Nullable */ String> productId;
 
-    public Output</* @Nullable */ String> productId() {
-        return this.productId;
+    public Output<Optional<String>> productId() {
+        return Codegen.optional(this.productId);
     }
     @Export(name="productName", type=String.class, parameters={})
     private Output</* @Nullable */ String> productName;
 
-    public Output</* @Nullable */ String> productName() {
-        return this.productName;
+    public Output<Optional<String>> productName() {
+        return Codegen.optional(this.productName);
     }
     @Export(name="provisionedProductId", type=String.class, parameters={})
     private Output<String> provisionedProductId;
@@ -89,32 +90,32 @@ public class CloudFormationProvisionedProduct extends com.pulumi.resources.Custo
     @Export(name="provisionedProductName", type=String.class, parameters={})
     private Output</* @Nullable */ String> provisionedProductName;
 
-    public Output</* @Nullable */ String> provisionedProductName() {
-        return this.provisionedProductName;
+    public Output<Optional<String>> provisionedProductName() {
+        return Codegen.optional(this.provisionedProductName);
     }
     @Export(name="provisioningArtifactId", type=String.class, parameters={})
     private Output</* @Nullable */ String> provisioningArtifactId;
 
-    public Output</* @Nullable */ String> provisioningArtifactId() {
-        return this.provisioningArtifactId;
+    public Output<Optional<String>> provisioningArtifactId() {
+        return Codegen.optional(this.provisioningArtifactId);
     }
     @Export(name="provisioningArtifactName", type=String.class, parameters={})
     private Output</* @Nullable */ String> provisioningArtifactName;
 
-    public Output</* @Nullable */ String> provisioningArtifactName() {
-        return this.provisioningArtifactName;
+    public Output<Optional<String>> provisioningArtifactName() {
+        return Codegen.optional(this.provisioningArtifactName);
     }
     @Export(name="provisioningParameters", type=List.class, parameters={CloudFormationProvisionedProductProvisioningParameter.class})
     private Output</* @Nullable */ List<CloudFormationProvisionedProductProvisioningParameter>> provisioningParameters;
 
-    public Output</* @Nullable */ List<CloudFormationProvisionedProductProvisioningParameter>> provisioningParameters() {
-        return this.provisioningParameters;
+    public Output<Optional<List<CloudFormationProvisionedProductProvisioningParameter>>> provisioningParameters() {
+        return Codegen.optional(this.provisioningParameters);
     }
     @Export(name="provisioningPreferences", type=CloudFormationProvisionedProductProvisioningPreferences.class, parameters={})
     private Output</* @Nullable */ CloudFormationProvisionedProductProvisioningPreferences> provisioningPreferences;
 
-    public Output</* @Nullable */ CloudFormationProvisionedProductProvisioningPreferences> provisioningPreferences() {
-        return this.provisioningPreferences;
+    public Output<Optional<CloudFormationProvisionedProductProvisioningPreferences>> provisioningPreferences() {
+        return Codegen.optional(this.provisioningPreferences);
     }
     @Export(name="recordId", type=String.class, parameters={})
     private Output<String> recordId;
@@ -125,8 +126,8 @@ public class CloudFormationProvisionedProduct extends com.pulumi.resources.Custo
     @Export(name="tags", type=List.class, parameters={CloudFormationProvisionedProductTag.class})
     private Output</* @Nullable */ List<CloudFormationProvisionedProductTag>> tags;
 
-    public Output</* @Nullable */ List<CloudFormationProvisionedProductTag>> tags() {
-        return this.tags;
+    public Output<Optional<List<CloudFormationProvisionedProductTag>>> tags() {
+        return Codegen.optional(this.tags);
     }
 
     /**

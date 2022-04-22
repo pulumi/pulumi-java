@@ -14,6 +14,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -39,8 +40,8 @@ public class Group extends com.pulumi.resources.CustomResource {
     @Export(name="configuration", type=List.class, parameters={GroupConfigurationItem.class})
     private Output</* @Nullable */ List<GroupConfigurationItem>> configuration;
 
-    public Output</* @Nullable */ List<GroupConfigurationItem>> configuration() {
-        return this.configuration;
+    public Output<Optional<List<GroupConfigurationItem>>> configuration() {
+        return Codegen.optional(this.configuration);
     }
     /**
      * The description of the resource group
@@ -53,8 +54,8 @@ public class Group extends com.pulumi.resources.CustomResource {
      * @return The description of the resource group
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * The name of the resource group
@@ -73,20 +74,20 @@ public class Group extends com.pulumi.resources.CustomResource {
     @Export(name="resourceQuery", type=GroupResourceQuery.class, parameters={})
     private Output</* @Nullable */ GroupResourceQuery> resourceQuery;
 
-    public Output</* @Nullable */ GroupResourceQuery> resourceQuery() {
-        return this.resourceQuery;
+    public Output<Optional<GroupResourceQuery>> resourceQuery() {
+        return Codegen.optional(this.resourceQuery);
     }
     @Export(name="resources", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> resources;
 
-    public Output</* @Nullable */ List<String>> resources() {
-        return this.resources;
+    public Output<Optional<List<String>>> resources() {
+        return Codegen.optional(this.resources);
     }
     @Export(name="tags", type=List.class, parameters={GroupTag.class})
     private Output</* @Nullable */ List<GroupTag>> tags;
 
-    public Output</* @Nullable */ List<GroupTag>> tags() {
-        return this.tags;
+    public Output<Optional<List<GroupTag>>> tags() {
+        return Codegen.optional(this.tags);
     }
 
     /**

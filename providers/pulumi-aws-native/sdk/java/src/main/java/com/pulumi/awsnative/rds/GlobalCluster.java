@@ -12,6 +12,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -31,8 +32,8 @@ public class GlobalCluster extends com.pulumi.resources.CustomResource {
      * @return The deletion protection setting for the new global database. The global database can&#39;t be deleted when deletion protection is enabled.
      * 
      */
-    public Output</* @Nullable */ Boolean> deletionProtection() {
-        return this.deletionProtection;
+    public Output<Optional<Boolean>> deletionProtection() {
+        return Codegen.optional(this.deletionProtection);
     }
     /**
      * The name of the database engine to be used for this DB cluster. Valid Values: aurora (for MySQL 5.6-compatible Aurora), aurora-mysql (for MySQL 5.7-compatible Aurora).
@@ -47,8 +48,8 @@ public class GlobalCluster extends com.pulumi.resources.CustomResource {
      * If you specify the SourceDBClusterIdentifier property, don&#39;t specify this property. The value is inherited from the cluster.
      * 
      */
-    public Output</* @Nullable */ GlobalClusterEngine> engine() {
-        return this.engine;
+    public Output<Optional<GlobalClusterEngine>> engine() {
+        return Codegen.optional(this.engine);
     }
     /**
      * The version number of the database engine to use. If you specify the SourceDBClusterIdentifier property, don&#39;t specify this property. The value is inherited from the cluster.
@@ -61,8 +62,8 @@ public class GlobalCluster extends com.pulumi.resources.CustomResource {
      * @return The version number of the database engine to use. If you specify the SourceDBClusterIdentifier property, don&#39;t specify this property. The value is inherited from the cluster.
      * 
      */
-    public Output</* @Nullable */ String> engineVersion() {
-        return this.engineVersion;
+    public Output<Optional<String>> engineVersion() {
+        return Codegen.optional(this.engineVersion);
     }
     /**
      * The cluster identifier of the new global database cluster. This parameter is stored as a lowercase string.
@@ -75,8 +76,8 @@ public class GlobalCluster extends com.pulumi.resources.CustomResource {
      * @return The cluster identifier of the new global database cluster. This parameter is stored as a lowercase string.
      * 
      */
-    public Output</* @Nullable */ String> globalClusterIdentifier() {
-        return this.globalClusterIdentifier;
+    public Output<Optional<String>> globalClusterIdentifier() {
+        return Codegen.optional(this.globalClusterIdentifier);
     }
     /**
      * The Amazon Resource Name (ARN) to use as the primary cluster of the global database. This parameter is optional. This parameter is stored as a lowercase string.
@@ -89,8 +90,8 @@ public class GlobalCluster extends com.pulumi.resources.CustomResource {
      * @return The Amazon Resource Name (ARN) to use as the primary cluster of the global database. This parameter is optional. This parameter is stored as a lowercase string.
      * 
      */
-    public Output</* @Nullable */ String> sourceDBClusterIdentifier() {
-        return this.sourceDBClusterIdentifier;
+    public Output<Optional<String>> sourceDBClusterIdentifier() {
+        return Codegen.optional(this.sourceDBClusterIdentifier);
     }
     /**
      *  The storage encryption setting for the new global database cluster.
@@ -105,8 +106,8 @@ public class GlobalCluster extends com.pulumi.resources.CustomResource {
      * If you specify the SourceDBClusterIdentifier property, don&#39;t specify this property. The value is inherited from the cluster.
      * 
      */
-    public Output</* @Nullable */ Boolean> storageEncrypted() {
-        return this.storageEncrypted;
+    public Output<Optional<Boolean>> storageEncrypted() {
+        return Codegen.optional(this.storageEncrypted);
     }
 
     /**

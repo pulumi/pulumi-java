@@ -16,6 +16,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -37,8 +38,8 @@ public class Dataset extends com.pulumi.resources.CustomResource {
      * @return Dataset format
      * 
      */
-    public Output</* @Nullable */ DatasetFormat> format() {
-        return this.format;
+    public Output<Optional<DatasetFormat>> format() {
+        return Codegen.optional(this.format);
     }
     /**
      * Format options for dataset
@@ -51,8 +52,8 @@ public class Dataset extends com.pulumi.resources.CustomResource {
      * @return Format options for dataset
      * 
      */
-    public Output</* @Nullable */ DatasetFormatOptions> formatOptions() {
-        return this.formatOptions;
+    public Output<Optional<DatasetFormatOptions>> formatOptions() {
+        return Codegen.optional(this.formatOptions);
     }
     /**
      * Input
@@ -93,14 +94,14 @@ public class Dataset extends com.pulumi.resources.CustomResource {
      * @return PathOptions
      * 
      */
-    public Output</* @Nullable */ DatasetPathOptions> pathOptions() {
-        return this.pathOptions;
+    public Output<Optional<DatasetPathOptions>> pathOptions() {
+        return Codegen.optional(this.pathOptions);
     }
     @Export(name="tags", type=List.class, parameters={DatasetTag.class})
     private Output</* @Nullable */ List<DatasetTag>> tags;
 
-    public Output</* @Nullable */ List<DatasetTag>> tags() {
-        return this.tags;
+    public Output<Optional<List<DatasetTag>>> tags() {
+        return Codegen.optional(this.tags);
     }
 
     /**

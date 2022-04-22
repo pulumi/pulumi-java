@@ -13,6 +13,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -34,8 +35,8 @@ public class Recipe extends com.pulumi.resources.CustomResource {
      * @return Description of the recipe
      * 
      */
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * Recipe name
@@ -60,8 +61,8 @@ public class Recipe extends com.pulumi.resources.CustomResource {
     @Export(name="tags", type=List.class, parameters={RecipeTag.class})
     private Output</* @Nullable */ List<RecipeTag>> tags;
 
-    public Output</* @Nullable */ List<RecipeTag>> tags() {
-        return this.tags;
+    public Output<Optional<List<RecipeTag>>> tags() {
+        return Codegen.optional(this.tags);
     }
 
     /**

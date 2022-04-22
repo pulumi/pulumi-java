@@ -14,6 +14,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -45,8 +46,8 @@ public class IPSet extends com.pulumi.resources.CustomResource {
     @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     @Export(name="iPAddressVersion", type=IPSetIPAddressVersion.class, parameters={})
     private Output<IPSetIPAddressVersion> iPAddressVersion;
@@ -57,8 +58,8 @@ public class IPSet extends com.pulumi.resources.CustomResource {
     @Export(name="name", type=String.class, parameters={})
     private Output</* @Nullable */ String> name;
 
-    public Output</* @Nullable */ String> name() {
-        return this.name;
+    public Output<Optional<String>> name() {
+        return Codegen.optional(this.name);
     }
     @Export(name="scope", type=IPSetScope.class, parameters={})
     private Output<IPSetScope> scope;
@@ -69,8 +70,8 @@ public class IPSet extends com.pulumi.resources.CustomResource {
     @Export(name="tags", type=List.class, parameters={IPSetTag.class})
     private Output</* @Nullable */ List<IPSetTag>> tags;
 
-    public Output</* @Nullable */ List<IPSetTag>> tags() {
-        return this.tags;
+    public Output<Optional<List<IPSetTag>>> tags() {
+        return Codegen.optional(this.tags);
     }
 
     /**

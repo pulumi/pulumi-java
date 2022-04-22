@@ -11,6 +11,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -72,8 +73,8 @@ public class Permission extends com.pulumi.resources.CustomResource {
      * @return The ID of the calling account.
      * 
      */
-    public Output</* @Nullable */ String> sourceAccount() {
-        return this.sourceAccount;
+    public Output<Optional<String>> sourceAccount() {
+        return Codegen.optional(this.sourceAccount);
     }
 
     /**

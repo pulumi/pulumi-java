@@ -20,6 +20,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -55,8 +56,8 @@ public class DataSource extends com.pulumi.resources.CustomResource {
      *             are automatically allowed.&lt;/p&gt;
      * 
      */
-    public Output</* @Nullable */ List<DataSourceParameters>> alternateDataSourceParameters() {
-        return this.alternateDataSourceParameters;
+    public Output<Optional<List<DataSourceParameters>>> alternateDataSourceParameters() {
+        return Codegen.optional(this.alternateDataSourceParameters);
     }
     /**
      * &lt;p&gt;The Amazon Resource Name (ARN) of the data source.&lt;/p&gt;
@@ -75,8 +76,8 @@ public class DataSource extends com.pulumi.resources.CustomResource {
     @Export(name="awsAccountId", type=String.class, parameters={})
     private Output</* @Nullable */ String> awsAccountId;
 
-    public Output</* @Nullable */ String> awsAccountId() {
-        return this.awsAccountId;
+    public Output<Optional<String>> awsAccountId() {
+        return Codegen.optional(this.awsAccountId);
     }
     /**
      * &lt;p&gt;The time that this data source was created.&lt;/p&gt;
@@ -95,26 +96,26 @@ public class DataSource extends com.pulumi.resources.CustomResource {
     @Export(name="credentials", type=DataSourceCredentials.class, parameters={})
     private Output</* @Nullable */ DataSourceCredentials> credentials;
 
-    public Output</* @Nullable */ DataSourceCredentials> credentials() {
-        return this.credentials;
+    public Output<Optional<DataSourceCredentials>> credentials() {
+        return Codegen.optional(this.credentials);
     }
     @Export(name="dataSourceId", type=String.class, parameters={})
     private Output</* @Nullable */ String> dataSourceId;
 
-    public Output</* @Nullable */ String> dataSourceId() {
-        return this.dataSourceId;
+    public Output<Optional<String>> dataSourceId() {
+        return Codegen.optional(this.dataSourceId);
     }
     @Export(name="dataSourceParameters", type=DataSourceParameters.class, parameters={})
     private Output</* @Nullable */ DataSourceParameters> dataSourceParameters;
 
-    public Output</* @Nullable */ DataSourceParameters> dataSourceParameters() {
-        return this.dataSourceParameters;
+    public Output<Optional<DataSourceParameters>> dataSourceParameters() {
+        return Codegen.optional(this.dataSourceParameters);
     }
     @Export(name="errorInfo", type=DataSourceErrorInfo.class, parameters={})
     private Output</* @Nullable */ DataSourceErrorInfo> errorInfo;
 
-    public Output</* @Nullable */ DataSourceErrorInfo> errorInfo() {
-        return this.errorInfo;
+    public Output<Optional<DataSourceErrorInfo>> errorInfo() {
+        return Codegen.optional(this.errorInfo);
     }
     /**
      * &lt;p&gt;The last time that this data source was updated.&lt;/p&gt;
@@ -141,8 +142,8 @@ public class DataSource extends com.pulumi.resources.CustomResource {
      * @return &lt;p&gt;A display name for the data source.&lt;/p&gt;
      * 
      */
-    public Output</* @Nullable */ String> name() {
-        return this.name;
+    public Output<Optional<String>> name() {
+        return Codegen.optional(this.name);
     }
     /**
      * &lt;p&gt;A list of resource permissions on the data source.&lt;/p&gt;
@@ -155,14 +156,14 @@ public class DataSource extends com.pulumi.resources.CustomResource {
      * @return &lt;p&gt;A list of resource permissions on the data source.&lt;/p&gt;
      * 
      */
-    public Output</* @Nullable */ List<DataSourceResourcePermission>> permissions() {
-        return this.permissions;
+    public Output<Optional<List<DataSourceResourcePermission>>> permissions() {
+        return Codegen.optional(this.permissions);
     }
     @Export(name="sslProperties", type=DataSourceSslProperties.class, parameters={})
     private Output</* @Nullable */ DataSourceSslProperties> sslProperties;
 
-    public Output</* @Nullable */ DataSourceSslProperties> sslProperties() {
-        return this.sslProperties;
+    public Output<Optional<DataSourceSslProperties>> sslProperties() {
+        return Codegen.optional(this.sslProperties);
     }
     @Export(name="status", type=DataSourceResourceStatus.class, parameters={})
     private Output<DataSourceResourceStatus> status;
@@ -181,20 +182,20 @@ public class DataSource extends com.pulumi.resources.CustomResource {
      * @return &lt;p&gt;Contains a map of the key-value pairs for the resource tag or tags assigned to the data source.&lt;/p&gt;
      * 
      */
-    public Output</* @Nullable */ List<DataSourceTag>> tags() {
-        return this.tags;
+    public Output<Optional<List<DataSourceTag>>> tags() {
+        return Codegen.optional(this.tags);
     }
     @Export(name="type", type=DataSourceType.class, parameters={})
     private Output</* @Nullable */ DataSourceType> type;
 
-    public Output</* @Nullable */ DataSourceType> type() {
-        return this.type;
+    public Output<Optional<DataSourceType>> type() {
+        return Codegen.optional(this.type);
     }
     @Export(name="vpcConnectionProperties", type=DataSourceVpcConnectionProperties.class, parameters={})
     private Output</* @Nullable */ DataSourceVpcConnectionProperties> vpcConnectionProperties;
 
-    public Output</* @Nullable */ DataSourceVpcConnectionProperties> vpcConnectionProperties() {
-        return this.vpcConnectionProperties;
+    public Output<Optional<DataSourceVpcConnectionProperties>> vpcConnectionProperties() {
+        return Codegen.optional(this.vpcConnectionProperties);
     }
 
     /**

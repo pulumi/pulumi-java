@@ -16,6 +16,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -39,8 +40,8 @@ public class BotAlias extends com.pulumi.resources.CustomResource {
     @Export(name="botAliasLocaleSettings", type=List.class, parameters={BotAliasLocaleSettingsItem.class})
     private Output</* @Nullable */ List<BotAliasLocaleSettingsItem>> botAliasLocaleSettings;
 
-    public Output</* @Nullable */ List<BotAliasLocaleSettingsItem>> botAliasLocaleSettings() {
-        return this.botAliasLocaleSettings;
+    public Output<Optional<List<BotAliasLocaleSettingsItem>>> botAliasLocaleSettings() {
+        return Codegen.optional(this.botAliasLocaleSettings);
     }
     @Export(name="botAliasName", type=String.class, parameters={})
     private Output<String> botAliasName;
@@ -65,8 +66,8 @@ public class BotAlias extends com.pulumi.resources.CustomResource {
      * @return A list of tags to add to the bot alias.
      * 
      */
-    public Output</* @Nullable */ List<BotAliasTag>> botAliasTags() {
-        return this.botAliasTags;
+    public Output<Optional<List<BotAliasTag>>> botAliasTags() {
+        return Codegen.optional(this.botAliasTags);
     }
     @Export(name="botId", type=String.class, parameters={})
     private Output<String> botId;
@@ -77,20 +78,20 @@ public class BotAlias extends com.pulumi.resources.CustomResource {
     @Export(name="botVersion", type=String.class, parameters={})
     private Output</* @Nullable */ String> botVersion;
 
-    public Output</* @Nullable */ String> botVersion() {
-        return this.botVersion;
+    public Output<Optional<String>> botVersion() {
+        return Codegen.optional(this.botVersion);
     }
     @Export(name="conversationLogSettings", type=BotAliasConversationLogSettings.class, parameters={})
     private Output</* @Nullable */ BotAliasConversationLogSettings> conversationLogSettings;
 
-    public Output</* @Nullable */ BotAliasConversationLogSettings> conversationLogSettings() {
-        return this.conversationLogSettings;
+    public Output<Optional<BotAliasConversationLogSettings>> conversationLogSettings() {
+        return Codegen.optional(this.conversationLogSettings);
     }
     @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     /**
      * Determines whether Amazon Lex will use Amazon Comprehend to detect the sentiment of user utterances.
@@ -103,8 +104,8 @@ public class BotAlias extends com.pulumi.resources.CustomResource {
      * @return Determines whether Amazon Lex will use Amazon Comprehend to detect the sentiment of user utterances.
      * 
      */
-    public Output</* @Nullable */ SentimentAnalysisSettingsProperties> sentimentAnalysisSettings() {
-        return this.sentimentAnalysisSettings;
+    public Output<Optional<SentimentAnalysisSettingsProperties>> sentimentAnalysisSettings() {
+        return Codegen.optional(this.sentimentAnalysisSettings);
     }
 
     /**

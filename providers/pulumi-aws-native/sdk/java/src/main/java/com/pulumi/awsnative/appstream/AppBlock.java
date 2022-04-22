@@ -14,6 +14,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -37,14 +38,14 @@ public class AppBlock extends com.pulumi.resources.CustomResource {
     @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
-    public Output</* @Nullable */ String> description() {
-        return this.description;
+    public Output<Optional<String>> description() {
+        return Codegen.optional(this.description);
     }
     @Export(name="displayName", type=String.class, parameters={})
     private Output</* @Nullable */ String> displayName;
 
-    public Output</* @Nullable */ String> displayName() {
-        return this.displayName;
+    public Output<Optional<String>> displayName() {
+        return Codegen.optional(this.displayName);
     }
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
@@ -67,8 +68,8 @@ public class AppBlock extends com.pulumi.resources.CustomResource {
     @Export(name="tags", type=List.class, parameters={AppBlockTag.class})
     private Output</* @Nullable */ List<AppBlockTag>> tags;
 
-    public Output</* @Nullable */ List<AppBlockTag>> tags() {
-        return this.tags;
+    public Output<Optional<List<AppBlockTag>>> tags() {
+        return Codegen.optional(this.tags);
     }
 
     /**

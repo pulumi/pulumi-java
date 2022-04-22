@@ -14,6 +14,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -53,8 +54,8 @@ public class Table extends com.pulumi.resources.CustomResource {
      * @return The properties that determine whether magnetic store writes are enabled.
      * 
      */
-    public Output</* @Nullable */ MagneticStoreWritePropertiesProperties> magneticStoreWriteProperties() {
-        return this.magneticStoreWriteProperties;
+    public Output<Optional<MagneticStoreWritePropertiesProperties>> magneticStoreWriteProperties() {
+        return Codegen.optional(this.magneticStoreWriteProperties);
     }
     /**
      * The table name exposed as a read-only attribute.
@@ -81,8 +82,8 @@ public class Table extends com.pulumi.resources.CustomResource {
      * @return The retention duration of the memory store and the magnetic store.
      * 
      */
-    public Output</* @Nullable */ RetentionPropertiesProperties> retentionProperties() {
-        return this.retentionProperties;
+    public Output<Optional<RetentionPropertiesProperties>> retentionProperties() {
+        return Codegen.optional(this.retentionProperties);
     }
     /**
      * The name for the table. If you don&#39;t specify a name, AWS CloudFormation generates a unique physical ID and uses that ID for the table name.
@@ -95,8 +96,8 @@ public class Table extends com.pulumi.resources.CustomResource {
      * @return The name for the table. If you don&#39;t specify a name, AWS CloudFormation generates a unique physical ID and uses that ID for the table name.
      * 
      */
-    public Output</* @Nullable */ String> tableName() {
-        return this.tableName;
+    public Output<Optional<String>> tableName() {
+        return Codegen.optional(this.tableName);
     }
     /**
      * An array of key-value pairs to apply to this resource.
@@ -109,8 +110,8 @@ public class Table extends com.pulumi.resources.CustomResource {
      * @return An array of key-value pairs to apply to this resource.
      * 
      */
-    public Output</* @Nullable */ List<TableTag>> tags() {
-        return this.tags;
+    public Output<Optional<List<TableTag>>> tags() {
+        return Codegen.optional(this.tags);
     }
 
     /**

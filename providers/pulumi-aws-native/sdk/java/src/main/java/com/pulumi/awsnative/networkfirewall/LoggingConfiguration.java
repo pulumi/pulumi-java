@@ -10,6 +10,7 @@ import com.pulumi.core.annotations.Export;
 import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -27,8 +28,8 @@ public class LoggingConfiguration extends com.pulumi.resources.CustomResource {
     @Export(name="firewallName", type=String.class, parameters={})
     private Output</* @Nullable */ String> firewallName;
 
-    public Output</* @Nullable */ String> firewallName() {
-        return this.firewallName;
+    public Output<Optional<String>> firewallName() {
+        return Codegen.optional(this.firewallName);
     }
     @Export(name="loggingConfiguration", type=com.pulumi.awsnative.networkfirewall.outputs.LoggingConfiguration.class, parameters={})
     private Output<com.pulumi.awsnative.networkfirewall.outputs.LoggingConfiguration> loggingConfiguration;

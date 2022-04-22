@@ -12,6 +12,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -31,8 +32,8 @@ public class LocationFSxWindows extends com.pulumi.resources.CustomResource {
      * @return The name of the Windows domain that the FSx for Windows server belongs to.
      * 
      */
-    public Output</* @Nullable */ String> domain() {
-        return this.domain;
+    public Output<Optional<String>> domain() {
+        return Codegen.optional(this.domain);
     }
     /**
      * The Amazon Resource Name (ARN) for the FSx for Windows file system.
@@ -115,8 +116,8 @@ public class LocationFSxWindows extends com.pulumi.resources.CustomResource {
      * @return A subdirectory in the location&#39;s path.
      * 
      */
-    public Output</* @Nullable */ String> subdirectory() {
-        return this.subdirectory;
+    public Output<Optional<String>> subdirectory() {
+        return Codegen.optional(this.subdirectory);
     }
     /**
      * An array of key-value pairs to apply to this resource.
@@ -129,8 +130,8 @@ public class LocationFSxWindows extends com.pulumi.resources.CustomResource {
      * @return An array of key-value pairs to apply to this resource.
      * 
      */
-    public Output</* @Nullable */ List<LocationFSxWindowsTag>> tags() {
-        return this.tags;
+    public Output<Optional<List<LocationFSxWindowsTag>>> tags() {
+        return Codegen.optional(this.tags);
     }
     /**
      * The user who has the permissions to access files and folders in the FSx for Windows file system.

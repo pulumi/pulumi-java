@@ -12,6 +12,7 @@ import com.pulumi.core.annotations.Export;
 import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -45,8 +46,8 @@ public class Session extends com.pulumi.resources.CustomResource {
      * @return A enumeration value that specifies how frequently finding updates are published.
      * 
      */
-    public Output</* @Nullable */ SessionFindingPublishingFrequency> findingPublishingFrequency() {
-        return this.findingPublishingFrequency;
+    public Output<Optional<SessionFindingPublishingFrequency>> findingPublishingFrequency() {
+        return Codegen.optional(this.findingPublishingFrequency);
     }
     /**
      * Service role used by Macie
@@ -73,8 +74,8 @@ public class Session extends com.pulumi.resources.CustomResource {
      * @return A enumeration value that specifies the status of the Macie Session.
      * 
      */
-    public Output</* @Nullable */ SessionStatus> status() {
-        return this.status;
+    public Output<Optional<SessionStatus>> status() {
+        return Codegen.optional(this.status);
     }
 
     /**

@@ -16,6 +16,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -29,38 +30,38 @@ public class Datastore extends com.pulumi.resources.CustomResource {
     @Export(name="datastoreName", type=String.class, parameters={})
     private Output</* @Nullable */ String> datastoreName;
 
-    public Output</* @Nullable */ String> datastoreName() {
-        return this.datastoreName;
+    public Output<Optional<String>> datastoreName() {
+        return Codegen.optional(this.datastoreName);
     }
     @Export(name="datastorePartitions", type=DatastorePartitions.class, parameters={})
     private Output</* @Nullable */ DatastorePartitions> datastorePartitions;
 
-    public Output</* @Nullable */ DatastorePartitions> datastorePartitions() {
-        return this.datastorePartitions;
+    public Output<Optional<DatastorePartitions>> datastorePartitions() {
+        return Codegen.optional(this.datastorePartitions);
     }
     @Export(name="datastoreStorage", type=DatastoreStorage.class, parameters={})
     private Output</* @Nullable */ DatastoreStorage> datastoreStorage;
 
-    public Output</* @Nullable */ DatastoreStorage> datastoreStorage() {
-        return this.datastoreStorage;
+    public Output<Optional<DatastoreStorage>> datastoreStorage() {
+        return Codegen.optional(this.datastoreStorage);
     }
     @Export(name="fileFormatConfiguration", type=DatastoreFileFormatConfiguration.class, parameters={})
     private Output</* @Nullable */ DatastoreFileFormatConfiguration> fileFormatConfiguration;
 
-    public Output</* @Nullable */ DatastoreFileFormatConfiguration> fileFormatConfiguration() {
-        return this.fileFormatConfiguration;
+    public Output<Optional<DatastoreFileFormatConfiguration>> fileFormatConfiguration() {
+        return Codegen.optional(this.fileFormatConfiguration);
     }
     @Export(name="retentionPeriod", type=DatastoreRetentionPeriod.class, parameters={})
     private Output</* @Nullable */ DatastoreRetentionPeriod> retentionPeriod;
 
-    public Output</* @Nullable */ DatastoreRetentionPeriod> retentionPeriod() {
-        return this.retentionPeriod;
+    public Output<Optional<DatastoreRetentionPeriod>> retentionPeriod() {
+        return Codegen.optional(this.retentionPeriod);
     }
     @Export(name="tags", type=List.class, parameters={DatastoreTag.class})
     private Output</* @Nullable */ List<DatastoreTag>> tags;
 
-    public Output</* @Nullable */ List<DatastoreTag>> tags() {
-        return this.tags;
+    public Output<Optional<List<DatastoreTag>>> tags() {
+        return Codegen.optional(this.tags);
     }
 
     /**

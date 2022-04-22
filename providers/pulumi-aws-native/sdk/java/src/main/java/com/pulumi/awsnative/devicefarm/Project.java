@@ -13,6 +13,7 @@ import com.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -30,8 +31,8 @@ public class Project extends com.pulumi.resources.CustomResource {
     @Export(name="defaultJobTimeoutMinutes", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> defaultJobTimeoutMinutes;
 
-    public Output</* @Nullable */ Integer> defaultJobTimeoutMinutes() {
-        return this.defaultJobTimeoutMinutes;
+    public Output<Optional<Integer>> defaultJobTimeoutMinutes() {
+        return Codegen.optional(this.defaultJobTimeoutMinutes);
     }
     @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
@@ -42,8 +43,8 @@ public class Project extends com.pulumi.resources.CustomResource {
     @Export(name="tags", type=List.class, parameters={ProjectTag.class})
     private Output</* @Nullable */ List<ProjectTag>> tags;
 
-    public Output</* @Nullable */ List<ProjectTag>> tags() {
-        return this.tags;
+    public Output<Optional<List<ProjectTag>>> tags() {
+        return Codegen.optional(this.tags);
     }
 
     /**

@@ -16,6 +16,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -33,8 +34,8 @@ public class ScheduledQuery extends com.pulumi.resources.CustomResource {
     @Export(name="clientToken", type=String.class, parameters={})
     private Output</* @Nullable */ String> clientToken;
 
-    public Output</* @Nullable */ String> clientToken() {
-        return this.clientToken;
+    public Output<Optional<String>> clientToken() {
+        return Codegen.optional(this.clientToken);
     }
     @Export(name="errorReportConfiguration", type=ScheduledQueryErrorReportConfiguration.class, parameters={})
     private Output<ScheduledQueryErrorReportConfiguration> errorReportConfiguration;
@@ -45,8 +46,8 @@ public class ScheduledQuery extends com.pulumi.resources.CustomResource {
     @Export(name="kmsKeyId", type=String.class, parameters={})
     private Output</* @Nullable */ String> kmsKeyId;
 
-    public Output</* @Nullable */ String> kmsKeyId() {
-        return this.kmsKeyId;
+    public Output<Optional<String>> kmsKeyId() {
+        return Codegen.optional(this.kmsKeyId);
     }
     @Export(name="notificationConfiguration", type=ScheduledQueryNotificationConfiguration.class, parameters={})
     private Output<ScheduledQueryNotificationConfiguration> notificationConfiguration;
@@ -187,20 +188,20 @@ public class ScheduledQuery extends com.pulumi.resources.CustomResource {
     @Export(name="scheduledQueryName", type=String.class, parameters={})
     private Output</* @Nullable */ String> scheduledQueryName;
 
-    public Output</* @Nullable */ String> scheduledQueryName() {
-        return this.scheduledQueryName;
+    public Output<Optional<String>> scheduledQueryName() {
+        return Codegen.optional(this.scheduledQueryName);
     }
     @Export(name="tags", type=List.class, parameters={ScheduledQueryTag.class})
     private Output</* @Nullable */ List<ScheduledQueryTag>> tags;
 
-    public Output</* @Nullable */ List<ScheduledQueryTag>> tags() {
-        return this.tags;
+    public Output<Optional<List<ScheduledQueryTag>>> tags() {
+        return Codegen.optional(this.tags);
     }
     @Export(name="targetConfiguration", type=ScheduledQueryTargetConfiguration.class, parameters={})
     private Output</* @Nullable */ ScheduledQueryTargetConfiguration> targetConfiguration;
 
-    public Output</* @Nullable */ ScheduledQueryTargetConfiguration> targetConfiguration() {
-        return this.targetConfiguration;
+    public Output<Optional<ScheduledQueryTargetConfiguration>> targetConfiguration() {
+        return Codegen.optional(this.targetConfiguration);
     }
 
     /**

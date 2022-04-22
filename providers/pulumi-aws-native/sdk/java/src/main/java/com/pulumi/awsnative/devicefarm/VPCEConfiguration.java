@@ -12,6 +12,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -35,14 +36,14 @@ public class VPCEConfiguration extends com.pulumi.resources.CustomResource {
     @Export(name="tags", type=List.class, parameters={VPCEConfigurationTag.class})
     private Output</* @Nullable */ List<VPCEConfigurationTag>> tags;
 
-    public Output</* @Nullable */ List<VPCEConfigurationTag>> tags() {
-        return this.tags;
+    public Output<Optional<List<VPCEConfigurationTag>>> tags() {
+        return Codegen.optional(this.tags);
     }
     @Export(name="vpceConfigurationDescription", type=String.class, parameters={})
     private Output</* @Nullable */ String> vpceConfigurationDescription;
 
-    public Output</* @Nullable */ String> vpceConfigurationDescription() {
-        return this.vpceConfigurationDescription;
+    public Output<Optional<String>> vpceConfigurationDescription() {
+        return Codegen.optional(this.vpceConfigurationDescription);
     }
     @Export(name="vpceConfigurationName", type=String.class, parameters={})
     private Output<String> vpceConfigurationName;

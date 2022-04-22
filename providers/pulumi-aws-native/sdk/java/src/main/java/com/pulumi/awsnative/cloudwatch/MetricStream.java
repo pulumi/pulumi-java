@@ -13,6 +13,7 @@ import com.pulumi.core.annotations.ResourceType;
 import com.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -62,8 +63,8 @@ public class MetricStream extends com.pulumi.resources.CustomResource {
      * @return Define which metrics will be not streamed. Metrics matched by multiple instances of MetricStreamFilter are joined with an OR operation by default. If both IncludeFilters and ExcludeFilters are omitted, all metrics in the account will be streamed. IncludeFilters and ExcludeFilters are mutually exclusive. Default to null.
      * 
      */
-    public Output</* @Nullable */ List<MetricStreamFilter>> excludeFilters() {
-        return this.excludeFilters;
+    public Output<Optional<List<MetricStreamFilter>>> excludeFilters() {
+        return Codegen.optional(this.excludeFilters);
     }
     /**
      * The ARN of the Kinesis Firehose where to stream the data.
@@ -90,8 +91,8 @@ public class MetricStream extends com.pulumi.resources.CustomResource {
      * @return Define which metrics will be streamed. Metrics matched by multiple instances of MetricStreamFilter are joined with an OR operation by default. If both IncludeFilters and ExcludeFilters are omitted, all metrics in the account will be streamed. IncludeFilters and ExcludeFilters are mutually exclusive. Default to null.
      * 
      */
-    public Output</* @Nullable */ List<MetricStreamFilter>> includeFilters() {
-        return this.includeFilters;
+    public Output<Optional<List<MetricStreamFilter>>> includeFilters() {
+        return Codegen.optional(this.includeFilters);
     }
     /**
      * The date of the last update of the metric stream.
@@ -118,8 +119,8 @@ public class MetricStream extends com.pulumi.resources.CustomResource {
      * @return Name of the metric stream.
      * 
      */
-    public Output</* @Nullable */ String> name() {
-        return this.name;
+    public Output<Optional<String>> name() {
+        return Codegen.optional(this.name);
     }
     /**
      * The output format of the data streamed to the Kinesis Firehose.
@@ -174,8 +175,8 @@ public class MetricStream extends com.pulumi.resources.CustomResource {
      * @return A set of tags to assign to the delivery stream.
      * 
      */
-    public Output</* @Nullable */ List<MetricStreamTag>> tags() {
-        return this.tags;
+    public Output<Optional<List<MetricStreamTag>>> tags() {
+        return Codegen.optional(this.tags);
     }
 
     /**
