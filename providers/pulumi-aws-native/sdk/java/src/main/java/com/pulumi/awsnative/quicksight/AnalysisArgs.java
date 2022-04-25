@@ -42,6 +42,10 @@ public final class AnalysisArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="errors")
     private @Nullable Output<List<AnalysisErrorArgs>> errors;
 
+    /**
+     * @return &lt;p&gt;Errors associated with the analysis.&lt;/p&gt;
+     * 
+     */
     public Optional<Output<List<AnalysisErrorArgs>>> errors() {
         return Optional.ofNullable(this.errors);
     }
@@ -53,6 +57,10 @@ public final class AnalysisArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return &lt;p&gt;The descriptive name of the analysis.&lt;/p&gt;
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -76,6 +84,15 @@ public final class AnalysisArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="permissions")
     private @Nullable Output<List<AnalysisResourcePermissionArgs>> permissions;
 
+    /**
+     * @return &lt;p&gt;A structure that describes the principals and the resource-level permissions on an
+     *             analysis. You can use the &lt;code&gt;Permissions&lt;/code&gt; structure to grant permissions by
+     *             providing a list of AWS Identity and Access Management (IAM) action information for each
+     *             principal listed by Amazon Resource Name (ARN). &lt;/p&gt;
+     * 
+     *         &lt;p&gt;To specify no permissions, omit &lt;code&gt;Permissions&lt;/code&gt;.&lt;/p&gt;
+     * 
+     */
     public Optional<Output<List<AnalysisResourcePermissionArgs>>> permissions() {
         return Optional.ofNullable(this.permissions);
     }
@@ -95,6 +112,11 @@ public final class AnalysisArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<List<AnalysisTagArgs>> tags;
 
+    /**
+     * @return &lt;p&gt;Contains a map of the key-value pairs for the resource tag or tags assigned to the
+     *             analysis.&lt;/p&gt;
+     * 
+     */
     public Optional<Output<List<AnalysisTagArgs>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -106,6 +128,10 @@ public final class AnalysisArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="themeArn")
     private @Nullable Output<String> themeArn;
 
+    /**
+     * @return &lt;p&gt;The ARN of the theme of the analysis.&lt;/p&gt;
+     * 
+     */
     public Optional<Output<String>> themeArn() {
         return Optional.ofNullable(this.themeArn);
     }
@@ -160,24 +186,54 @@ public final class AnalysisArgs extends com.pulumi.resources.ResourceArgs {
             return awsAccountId(Output.of(awsAccountId));
         }
 
+        /**
+         * @param errors &lt;p&gt;Errors associated with the analysis.&lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder errors(@Nullable Output<List<AnalysisErrorArgs>> errors) {
             $.errors = errors;
             return this;
         }
 
+        /**
+         * @param errors &lt;p&gt;Errors associated with the analysis.&lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder errors(List<AnalysisErrorArgs> errors) {
             return errors(Output.of(errors));
         }
 
+        /**
+         * @param errors &lt;p&gt;Errors associated with the analysis.&lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder errors(AnalysisErrorArgs... errors) {
             return errors(List.of(errors));
         }
 
+        /**
+         * @param name &lt;p&gt;The descriptive name of the analysis.&lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name &lt;p&gt;The descriptive name of the analysis.&lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
@@ -191,15 +247,48 @@ public final class AnalysisArgs extends com.pulumi.resources.ResourceArgs {
             return parameters(Output.of(parameters));
         }
 
+        /**
+         * @param permissions &lt;p&gt;A structure that describes the principals and the resource-level permissions on an
+         *             analysis. You can use the &lt;code&gt;Permissions&lt;/code&gt; structure to grant permissions by
+         *             providing a list of AWS Identity and Access Management (IAM) action information for each
+         *             principal listed by Amazon Resource Name (ARN). &lt;/p&gt;
+         * 
+         *         &lt;p&gt;To specify no permissions, omit &lt;code&gt;Permissions&lt;/code&gt;.&lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder permissions(@Nullable Output<List<AnalysisResourcePermissionArgs>> permissions) {
             $.permissions = permissions;
             return this;
         }
 
+        /**
+         * @param permissions &lt;p&gt;A structure that describes the principals and the resource-level permissions on an
+         *             analysis. You can use the &lt;code&gt;Permissions&lt;/code&gt; structure to grant permissions by
+         *             providing a list of AWS Identity and Access Management (IAM) action information for each
+         *             principal listed by Amazon Resource Name (ARN). &lt;/p&gt;
+         * 
+         *         &lt;p&gt;To specify no permissions, omit &lt;code&gt;Permissions&lt;/code&gt;.&lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder permissions(List<AnalysisResourcePermissionArgs> permissions) {
             return permissions(Output.of(permissions));
         }
 
+        /**
+         * @param permissions &lt;p&gt;A structure that describes the principals and the resource-level permissions on an
+         *             analysis. You can use the &lt;code&gt;Permissions&lt;/code&gt; structure to grant permissions by
+         *             providing a list of AWS Identity and Access Management (IAM) action information for each
+         *             principal listed by Amazon Resource Name (ARN). &lt;/p&gt;
+         * 
+         *         &lt;p&gt;To specify no permissions, omit &lt;code&gt;Permissions&lt;/code&gt;.&lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder permissions(AnalysisResourcePermissionArgs... permissions) {
             return permissions(List.of(permissions));
         }
@@ -213,24 +302,57 @@ public final class AnalysisArgs extends com.pulumi.resources.ResourceArgs {
             return sourceEntity(Output.of(sourceEntity));
         }
 
+        /**
+         * @param tags &lt;p&gt;Contains a map of the key-value pairs for the resource tag or tags assigned to the
+         *             analysis.&lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<List<AnalysisTagArgs>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags &lt;p&gt;Contains a map of the key-value pairs for the resource tag or tags assigned to the
+         *             analysis.&lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(List<AnalysisTagArgs> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param tags &lt;p&gt;Contains a map of the key-value pairs for the resource tag or tags assigned to the
+         *             analysis.&lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(AnalysisTagArgs... tags) {
             return tags(List.of(tags));
         }
 
+        /**
+         * @param themeArn &lt;p&gt;The ARN of the theme of the analysis.&lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder themeArn(@Nullable Output<String> themeArn) {
             $.themeArn = themeArn;
             return this;
         }
 
+        /**
+         * @param themeArn &lt;p&gt;The ARN of the theme of the analysis.&lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder themeArn(String themeArn) {
             return themeArn(Output.of(themeArn));
         }

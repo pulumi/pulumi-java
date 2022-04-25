@@ -11,12 +11,12 @@ import java.util.Objects;
 @CustomType
 public final class ServiceSourceCodeVersion {
     /**
-     * Source Code Version Type
+     * @return Source Code Version Type
      * 
      */
     private final ServiceSourceCodeVersionType type;
     /**
-     * Source Code Version Value
+     * @return Source Code Version Value
      * 
      */
     private final String value;
@@ -30,16 +30,16 @@ public final class ServiceSourceCodeVersion {
     }
 
     /**
-     * Source Code Version Type
+     * @return Source Code Version Type
      * 
-    */
+     */
     public ServiceSourceCodeVersionType type() {
         return this.type;
     }
     /**
-     * Source Code Version Value
+     * @return Source Code Version Value
      * 
-    */
+     */
     public String value() {
         return this.value;
     }

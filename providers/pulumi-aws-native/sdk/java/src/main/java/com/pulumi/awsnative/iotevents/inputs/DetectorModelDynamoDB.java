@@ -26,6 +26,10 @@ public final class DetectorModelDynamoDB extends com.pulumi.resources.InvokeArgs
     @Import(name="hashKeyField", required=true)
     private String hashKeyField;
 
+    /**
+     * @return The name of the hash key (also called the partition key).
+     * 
+     */
     public String hashKeyField() {
         return this.hashKeyField;
     }
@@ -43,6 +47,16 @@ public final class DetectorModelDynamoDB extends com.pulumi.resources.InvokeArgs
     @Import(name="hashKeyType")
     private @Nullable String hashKeyType;
 
+    /**
+     * @return The data type for the hash key (also called the partition key). You can specify the following values:
+     * 
+     * * `STRING` - The hash key is a string.
+     * 
+     * * `NUMBER` - The hash key is a number.
+     * 
+     * If you don&#39;t specify `hashKeyType`, the default value is `STRING`.
+     * 
+     */
     public Optional<String> hashKeyType() {
         return Optional.ofNullable(this.hashKeyType);
     }
@@ -54,6 +68,10 @@ public final class DetectorModelDynamoDB extends com.pulumi.resources.InvokeArgs
     @Import(name="hashKeyValue", required=true)
     private String hashKeyValue;
 
+    /**
+     * @return The value of the hash key (also called the partition key).
+     * 
+     */
     public String hashKeyValue() {
         return this.hashKeyValue;
     }
@@ -73,6 +91,18 @@ public final class DetectorModelDynamoDB extends com.pulumi.resources.InvokeArgs
     @Import(name="operation")
     private @Nullable String operation;
 
+    /**
+     * @return The type of operation to perform. You can specify the following values:
+     * 
+     * * `INSERT` - Insert data as a new item into the DynamoDB table. This item uses the specified hash key as a partition key. If you specified a range key, the item uses the range key as a sort key.
+     * 
+     * * `UPDATE` - Update an existing item of the DynamoDB table with new data. This item&#39;s partition key must match the specified hash key. If you specified a range key, the range key must match the item&#39;s sort key.
+     * 
+     * * `DELETE` - Delete an existing item of the DynamoDB table. This item&#39;s partition key must match the specified hash key. If you specified a range key, the range key must match the item&#39;s sort key.
+     * 
+     * If you don&#39;t specify this parameter, AWS IoT Events triggers the `INSERT` operation.
+     * 
+     */
     public Optional<String> operation() {
         return Optional.ofNullable(this.operation);
     }
@@ -93,6 +123,12 @@ public final class DetectorModelDynamoDB extends com.pulumi.resources.InvokeArgs
     @Import(name="payloadField")
     private @Nullable String payloadField;
 
+    /**
+     * @return The name of the DynamoDB column that receives the action payload.
+     * 
+     * If you don&#39;t specify this parameter, the name of the DynamoDB column is `payload`.
+     * 
+     */
     public Optional<String> payloadField() {
         return Optional.ofNullable(this.payloadField);
     }
@@ -104,6 +140,10 @@ public final class DetectorModelDynamoDB extends com.pulumi.resources.InvokeArgs
     @Import(name="rangeKeyField")
     private @Nullable String rangeKeyField;
 
+    /**
+     * @return The name of the range key (also called the sort key).
+     * 
+     */
     public Optional<String> rangeKeyField() {
         return Optional.ofNullable(this.rangeKeyField);
     }
@@ -121,6 +161,16 @@ public final class DetectorModelDynamoDB extends com.pulumi.resources.InvokeArgs
     @Import(name="rangeKeyType")
     private @Nullable String rangeKeyType;
 
+    /**
+     * @return The data type for the range key (also called the sort key), You can specify the following values:
+     * 
+     * * `STRING` - The range key is a string.
+     * 
+     * * `NUMBER` - The range key is number.
+     * 
+     * If you don&#39;t specify `rangeKeyField`, the default value is `STRING`.
+     * 
+     */
     public Optional<String> rangeKeyType() {
         return Optional.ofNullable(this.rangeKeyType);
     }
@@ -132,6 +182,10 @@ public final class DetectorModelDynamoDB extends com.pulumi.resources.InvokeArgs
     @Import(name="rangeKeyValue")
     private @Nullable String rangeKeyValue;
 
+    /**
+     * @return The value of the range key (also called the sort key).
+     * 
+     */
     public Optional<String> rangeKeyValue() {
         return Optional.ofNullable(this.rangeKeyValue);
     }
@@ -143,6 +197,10 @@ public final class DetectorModelDynamoDB extends com.pulumi.resources.InvokeArgs
     @Import(name="tableName", required=true)
     private String tableName;
 
+    /**
+     * @return The name of the DynamoDB table.
+     * 
+     */
     public String tableName() {
         return this.tableName;
     }
@@ -180,21 +238,59 @@ public final class DetectorModelDynamoDB extends com.pulumi.resources.InvokeArgs
             $ = new DetectorModelDynamoDB(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param hashKeyField The name of the hash key (also called the partition key).
+         * 
+         * @return builder
+         * 
+         */
         public Builder hashKeyField(String hashKeyField) {
             $.hashKeyField = hashKeyField;
             return this;
         }
 
+        /**
+         * @param hashKeyType The data type for the hash key (also called the partition key). You can specify the following values:
+         * 
+         * * `STRING` - The hash key is a string.
+         * 
+         * * `NUMBER` - The hash key is a number.
+         * 
+         * If you don&#39;t specify `hashKeyType`, the default value is `STRING`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hashKeyType(@Nullable String hashKeyType) {
             $.hashKeyType = hashKeyType;
             return this;
         }
 
+        /**
+         * @param hashKeyValue The value of the hash key (also called the partition key).
+         * 
+         * @return builder
+         * 
+         */
         public Builder hashKeyValue(String hashKeyValue) {
             $.hashKeyValue = hashKeyValue;
             return this;
         }
 
+        /**
+         * @param operation The type of operation to perform. You can specify the following values:
+         * 
+         * * `INSERT` - Insert data as a new item into the DynamoDB table. This item uses the specified hash key as a partition key. If you specified a range key, the item uses the range key as a sort key.
+         * 
+         * * `UPDATE` - Update an existing item of the DynamoDB table with new data. This item&#39;s partition key must match the specified hash key. If you specified a range key, the range key must match the item&#39;s sort key.
+         * 
+         * * `DELETE` - Delete an existing item of the DynamoDB table. This item&#39;s partition key must match the specified hash key. If you specified a range key, the range key must match the item&#39;s sort key.
+         * 
+         * If you don&#39;t specify this parameter, AWS IoT Events triggers the `INSERT` operation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder operation(@Nullable String operation) {
             $.operation = operation;
             return this;
@@ -205,26 +301,64 @@ public final class DetectorModelDynamoDB extends com.pulumi.resources.InvokeArgs
             return this;
         }
 
+        /**
+         * @param payloadField The name of the DynamoDB column that receives the action payload.
+         * 
+         * If you don&#39;t specify this parameter, the name of the DynamoDB column is `payload`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder payloadField(@Nullable String payloadField) {
             $.payloadField = payloadField;
             return this;
         }
 
+        /**
+         * @param rangeKeyField The name of the range key (also called the sort key).
+         * 
+         * @return builder
+         * 
+         */
         public Builder rangeKeyField(@Nullable String rangeKeyField) {
             $.rangeKeyField = rangeKeyField;
             return this;
         }
 
+        /**
+         * @param rangeKeyType The data type for the range key (also called the sort key), You can specify the following values:
+         * 
+         * * `STRING` - The range key is a string.
+         * 
+         * * `NUMBER` - The range key is number.
+         * 
+         * If you don&#39;t specify `rangeKeyField`, the default value is `STRING`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rangeKeyType(@Nullable String rangeKeyType) {
             $.rangeKeyType = rangeKeyType;
             return this;
         }
 
+        /**
+         * @param rangeKeyValue The value of the range key (also called the sort key).
+         * 
+         * @return builder
+         * 
+         */
         public Builder rangeKeyValue(@Nullable String rangeKeyValue) {
             $.rangeKeyValue = rangeKeyValue;
             return this;
         }
 
+        /**
+         * @param tableName The name of the DynamoDB table.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tableName(String tableName) {
             $.tableName = tableName;
             return this;

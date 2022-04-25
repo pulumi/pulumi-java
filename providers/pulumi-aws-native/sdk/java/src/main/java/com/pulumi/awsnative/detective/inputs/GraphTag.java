@@ -25,6 +25,10 @@ public final class GraphTag extends com.pulumi.resources.InvokeArgs {
     @Import(name="key")
     private @Nullable String key;
 
+    /**
+     * @return The key name of the tag. You can specify a value that is 1 to 128 Unicode characters in length and cannot be prefixed with aws:. Valid characters are Unicode letters, digits, white space, and any of the following symbols: _ . : / = + - @
+     * 
+     */
     public Optional<String> key() {
         return Optional.ofNullable(this.key);
     }
@@ -36,6 +40,10 @@ public final class GraphTag extends com.pulumi.resources.InvokeArgs {
     @Import(name="value")
     private @Nullable String value;
 
+    /**
+     * @return The value for the tag. You can specify a value that is 0 to 256 Unicode characters in length and cannot be prefixed with aws:. Valid characters are Unicode letters, digits, white space, and any of the following symbols: _ . : / = + - @
+     * 
+     */
     public Optional<String> value() {
         return Optional.ofNullable(this.value);
     }
@@ -65,11 +73,23 @@ public final class GraphTag extends com.pulumi.resources.InvokeArgs {
             $ = new GraphTag(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param key The key name of the tag. You can specify a value that is 1 to 128 Unicode characters in length and cannot be prefixed with aws:. Valid characters are Unicode letters, digits, white space, and any of the following symbols: _ . : / = + - @
+         * 
+         * @return builder
+         * 
+         */
         public Builder key(@Nullable String key) {
             $.key = key;
             return this;
         }
 
+        /**
+         * @param value The value for the tag. You can specify a value that is 0 to 256 Unicode characters in length and cannot be prefixed with aws:. Valid characters are Unicode letters, digits, white space, and any of the following symbols: _ . : / = + - @
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(@Nullable String value) {
             $.value = value;
             return this;

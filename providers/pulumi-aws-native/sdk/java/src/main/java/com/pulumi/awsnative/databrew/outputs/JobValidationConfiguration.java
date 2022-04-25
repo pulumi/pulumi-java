@@ -13,7 +13,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class JobValidationConfiguration {
     /**
-     * Arn of the Ruleset
+     * @return Arn of the Ruleset
      * 
      */
     private final String rulesetArn;
@@ -28,9 +28,9 @@ public final class JobValidationConfiguration {
     }
 
     /**
-     * Arn of the Ruleset
+     * @return Arn of the Ruleset
      * 
-    */
+     */
     public String rulesetArn() {
         return this.rulesetArn;
     }

@@ -29,6 +29,10 @@ public final class RobotApplicationVersionArgs extends com.pulumi.resources.Reso
     @Import(name="currentRevisionId")
     private @Nullable Output<String> currentRevisionId;
 
+    /**
+     * @return The revision ID of robot application.
+     * 
+     */
     public Optional<Output<String>> currentRevisionId() {
         return Optional.ofNullable(this.currentRevisionId);
     }
@@ -67,11 +71,23 @@ public final class RobotApplicationVersionArgs extends com.pulumi.resources.Reso
             return application(Output.of(application));
         }
 
+        /**
+         * @param currentRevisionId The revision ID of robot application.
+         * 
+         * @return builder
+         * 
+         */
         public Builder currentRevisionId(@Nullable Output<String> currentRevisionId) {
             $.currentRevisionId = currentRevisionId;
             return this;
         }
 
+        /**
+         * @param currentRevisionId The revision ID of robot application.
+         * 
+         * @return builder
+         * 
+         */
         public Builder currentRevisionId(String currentRevisionId) {
             return currentRevisionId(Output.of(currentRevisionId));
         }

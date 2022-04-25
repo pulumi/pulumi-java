@@ -24,6 +24,10 @@ public final class AgentPermissionsProperties extends com.pulumi.resources.Invok
     @Import(name="principals", required=true)
     private List<String> principals;
 
+    /**
+     * @return The principals for the agent permissions.
+     * 
+     */
     public List<String> principals() {
         return this.principals;
     }
@@ -52,11 +56,23 @@ public final class AgentPermissionsProperties extends com.pulumi.resources.Invok
             $ = new AgentPermissionsProperties(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param principals The principals for the agent permissions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder principals(List<String> principals) {
             $.principals = principals;
             return this;
         }
 
+        /**
+         * @param principals The principals for the agent permissions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder principals(String... principals) {
             return principals(List.of(principals));
         }

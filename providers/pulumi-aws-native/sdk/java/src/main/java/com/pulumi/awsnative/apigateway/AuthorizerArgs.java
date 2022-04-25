@@ -24,6 +24,10 @@ public final class AuthorizerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="authType")
     private @Nullable Output<String> authType;
 
+    /**
+     * @return Optional customer-defined field, used in OpenAPI imports and exports without functional impact.
+     * 
+     */
     public Optional<Output<String>> authType() {
         return Optional.ofNullable(this.authType);
     }
@@ -35,6 +39,10 @@ public final class AuthorizerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="authorizerCredentials")
     private @Nullable Output<String> authorizerCredentials;
 
+    /**
+     * @return Specifies the required credentials as an IAM role for API Gateway to invoke the authorizer.
+     * 
+     */
     public Optional<Output<String>> authorizerCredentials() {
         return Optional.ofNullable(this.authorizerCredentials);
     }
@@ -46,6 +54,10 @@ public final class AuthorizerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="authorizerResultTtlInSeconds")
     private @Nullable Output<Integer> authorizerResultTtlInSeconds;
 
+    /**
+     * @return The TTL in seconds of cached authorizer results.
+     * 
+     */
     public Optional<Output<Integer>> authorizerResultTtlInSeconds() {
         return Optional.ofNullable(this.authorizerResultTtlInSeconds);
     }
@@ -57,6 +69,10 @@ public final class AuthorizerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="authorizerUri")
     private @Nullable Output<String> authorizerUri;
 
+    /**
+     * @return Specifies the authorizer&#39;s Uniform Resource Identifier (URI).
+     * 
+     */
     public Optional<Output<String>> authorizerUri() {
         return Optional.ofNullable(this.authorizerUri);
     }
@@ -68,6 +84,10 @@ public final class AuthorizerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="identitySource")
     private @Nullable Output<String> identitySource;
 
+    /**
+     * @return The identity source for which authorization is requested.
+     * 
+     */
     public Optional<Output<String>> identitySource() {
         return Optional.ofNullable(this.identitySource);
     }
@@ -79,6 +99,10 @@ public final class AuthorizerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="identityValidationExpression")
     private @Nullable Output<String> identityValidationExpression;
 
+    /**
+     * @return A validation expression for the incoming identity token.
+     * 
+     */
     public Optional<Output<String>> identityValidationExpression() {
         return Optional.ofNullable(this.identityValidationExpression);
     }
@@ -90,6 +114,10 @@ public final class AuthorizerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The name of the authorizer.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -101,6 +129,10 @@ public final class AuthorizerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="providerARNs")
     private @Nullable Output<List<String>> providerARNs;
 
+    /**
+     * @return A list of the Amazon Cognito user pool ARNs for the COGNITO_USER_POOLS authorizer.
+     * 
+     */
     public Optional<Output<List<String>>> providerARNs() {
         return Optional.ofNullable(this.providerARNs);
     }
@@ -112,6 +144,10 @@ public final class AuthorizerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="restApiId", required=true)
     private Output<String> restApiId;
 
+    /**
+     * @return The identifier of the API.
+     * 
+     */
     public Output<String> restApiId() {
         return this.restApiId;
     }
@@ -123,6 +159,10 @@ public final class AuthorizerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="type", required=true)
     private Output<String> type;
 
+    /**
+     * @return The authorizer type.
+     * 
+     */
     public Output<String> type() {
         return this.type;
     }
@@ -160,96 +200,222 @@ public final class AuthorizerArgs extends com.pulumi.resources.ResourceArgs {
             $ = new AuthorizerArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param authType Optional customer-defined field, used in OpenAPI imports and exports without functional impact.
+         * 
+         * @return builder
+         * 
+         */
         public Builder authType(@Nullable Output<String> authType) {
             $.authType = authType;
             return this;
         }
 
+        /**
+         * @param authType Optional customer-defined field, used in OpenAPI imports and exports without functional impact.
+         * 
+         * @return builder
+         * 
+         */
         public Builder authType(String authType) {
             return authType(Output.of(authType));
         }
 
+        /**
+         * @param authorizerCredentials Specifies the required credentials as an IAM role for API Gateway to invoke the authorizer.
+         * 
+         * @return builder
+         * 
+         */
         public Builder authorizerCredentials(@Nullable Output<String> authorizerCredentials) {
             $.authorizerCredentials = authorizerCredentials;
             return this;
         }
 
+        /**
+         * @param authorizerCredentials Specifies the required credentials as an IAM role for API Gateway to invoke the authorizer.
+         * 
+         * @return builder
+         * 
+         */
         public Builder authorizerCredentials(String authorizerCredentials) {
             return authorizerCredentials(Output.of(authorizerCredentials));
         }
 
+        /**
+         * @param authorizerResultTtlInSeconds The TTL in seconds of cached authorizer results.
+         * 
+         * @return builder
+         * 
+         */
         public Builder authorizerResultTtlInSeconds(@Nullable Output<Integer> authorizerResultTtlInSeconds) {
             $.authorizerResultTtlInSeconds = authorizerResultTtlInSeconds;
             return this;
         }
 
+        /**
+         * @param authorizerResultTtlInSeconds The TTL in seconds of cached authorizer results.
+         * 
+         * @return builder
+         * 
+         */
         public Builder authorizerResultTtlInSeconds(Integer authorizerResultTtlInSeconds) {
             return authorizerResultTtlInSeconds(Output.of(authorizerResultTtlInSeconds));
         }
 
+        /**
+         * @param authorizerUri Specifies the authorizer&#39;s Uniform Resource Identifier (URI).
+         * 
+         * @return builder
+         * 
+         */
         public Builder authorizerUri(@Nullable Output<String> authorizerUri) {
             $.authorizerUri = authorizerUri;
             return this;
         }
 
+        /**
+         * @param authorizerUri Specifies the authorizer&#39;s Uniform Resource Identifier (URI).
+         * 
+         * @return builder
+         * 
+         */
         public Builder authorizerUri(String authorizerUri) {
             return authorizerUri(Output.of(authorizerUri));
         }
 
+        /**
+         * @param identitySource The identity source for which authorization is requested.
+         * 
+         * @return builder
+         * 
+         */
         public Builder identitySource(@Nullable Output<String> identitySource) {
             $.identitySource = identitySource;
             return this;
         }
 
+        /**
+         * @param identitySource The identity source for which authorization is requested.
+         * 
+         * @return builder
+         * 
+         */
         public Builder identitySource(String identitySource) {
             return identitySource(Output.of(identitySource));
         }
 
+        /**
+         * @param identityValidationExpression A validation expression for the incoming identity token.
+         * 
+         * @return builder
+         * 
+         */
         public Builder identityValidationExpression(@Nullable Output<String> identityValidationExpression) {
             $.identityValidationExpression = identityValidationExpression;
             return this;
         }
 
+        /**
+         * @param identityValidationExpression A validation expression for the incoming identity token.
+         * 
+         * @return builder
+         * 
+         */
         public Builder identityValidationExpression(String identityValidationExpression) {
             return identityValidationExpression(Output.of(identityValidationExpression));
         }
 
+        /**
+         * @param name The name of the authorizer.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name of the authorizer.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param providerARNs A list of the Amazon Cognito user pool ARNs for the COGNITO_USER_POOLS authorizer.
+         * 
+         * @return builder
+         * 
+         */
         public Builder providerARNs(@Nullable Output<List<String>> providerARNs) {
             $.providerARNs = providerARNs;
             return this;
         }
 
+        /**
+         * @param providerARNs A list of the Amazon Cognito user pool ARNs for the COGNITO_USER_POOLS authorizer.
+         * 
+         * @return builder
+         * 
+         */
         public Builder providerARNs(List<String> providerARNs) {
             return providerARNs(Output.of(providerARNs));
         }
 
+        /**
+         * @param providerARNs A list of the Amazon Cognito user pool ARNs for the COGNITO_USER_POOLS authorizer.
+         * 
+         * @return builder
+         * 
+         */
         public Builder providerARNs(String... providerARNs) {
             return providerARNs(List.of(providerARNs));
         }
 
+        /**
+         * @param restApiId The identifier of the API.
+         * 
+         * @return builder
+         * 
+         */
         public Builder restApiId(Output<String> restApiId) {
             $.restApiId = restApiId;
             return this;
         }
 
+        /**
+         * @param restApiId The identifier of the API.
+         * 
+         * @return builder
+         * 
+         */
         public Builder restApiId(String restApiId) {
             return restApiId(Output.of(restApiId));
         }
 
+        /**
+         * @param type The authorizer type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(Output<String> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type The authorizer type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             return type(Output.of(type));
         }

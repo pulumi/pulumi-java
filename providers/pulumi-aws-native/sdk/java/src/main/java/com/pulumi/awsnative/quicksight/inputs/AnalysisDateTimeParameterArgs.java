@@ -25,6 +25,10 @@ public final class AnalysisDateTimeParameterArgs extends com.pulumi.resources.Re
     @Import(name="name", required=true)
     private Output<String> name;
 
+    /**
+     * @return &lt;p&gt;A display name for the date-time parameter.&lt;/p&gt;
+     * 
+     */
     public Output<String> name() {
         return this.name;
     }
@@ -36,6 +40,10 @@ public final class AnalysisDateTimeParameterArgs extends com.pulumi.resources.Re
     @Import(name="values", required=true)
     private Output<List<String>> values;
 
+    /**
+     * @return &lt;p&gt;The values for the date-time parameter.&lt;/p&gt;
+     * 
+     */
     public Output<List<String>> values() {
         return this.values;
     }
@@ -65,24 +73,54 @@ public final class AnalysisDateTimeParameterArgs extends com.pulumi.resources.Re
             $ = new AnalysisDateTimeParameterArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name &lt;p&gt;A display name for the date-time parameter.&lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name &lt;p&gt;A display name for the date-time parameter.&lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param values &lt;p&gt;The values for the date-time parameter.&lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder values(Output<List<String>> values) {
             $.values = values;
             return this;
         }
 
+        /**
+         * @param values &lt;p&gt;The values for the date-time parameter.&lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder values(List<String> values) {
             return values(Output.of(values));
         }
 
+        /**
+         * @param values &lt;p&gt;The values for the date-time parameter.&lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder values(String... values) {
             return values(List.of(values));
         }

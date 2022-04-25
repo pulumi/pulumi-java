@@ -14,18 +14,18 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ResourceSetResource {
     /**
-     * The component identifier of the resource, generated when DNS target resource is used.
+     * @return The component identifier of the resource, generated when DNS target resource is used.
      * 
      */
     private final @Nullable String componentId;
     private final @Nullable ResourceSetDNSTargetResource dnsTargetResource;
     /**
-     * A list of recovery group Amazon Resource Names (ARNs) and cell ARNs that this resource is contained within.
+     * @return A list of recovery group Amazon Resource Names (ARNs) and cell ARNs that this resource is contained within.
      * 
      */
     private final @Nullable List<String> readinessScopes;
     /**
-     * The Amazon Resource Name (ARN) of the AWS resource.
+     * @return The Amazon Resource Name (ARN) of the AWS resource.
      * 
      */
     private final @Nullable String resourceArn;
@@ -43,9 +43,9 @@ public final class ResourceSetResource {
     }
 
     /**
-     * The component identifier of the resource, generated when DNS target resource is used.
+     * @return The component identifier of the resource, generated when DNS target resource is used.
      * 
-    */
+     */
     public Optional<String> componentId() {
         return Optional.ofNullable(this.componentId);
     }
@@ -53,16 +53,16 @@ public final class ResourceSetResource {
         return Optional.ofNullable(this.dnsTargetResource);
     }
     /**
-     * A list of recovery group Amazon Resource Names (ARNs) and cell ARNs that this resource is contained within.
+     * @return A list of recovery group Amazon Resource Names (ARNs) and cell ARNs that this resource is contained within.
      * 
-    */
+     */
     public List<String> readinessScopes() {
         return this.readinessScopes == null ? List.of() : this.readinessScopes;
     }
     /**
-     * The Amazon Resource Name (ARN) of the AWS resource.
+     * @return The Amazon Resource Name (ARN) of the AWS resource.
      * 
-    */
+     */
     public Optional<String> resourceArn() {
         return Optional.ofNullable(this.resourceArn);
     }

@@ -36,6 +36,10 @@ public final class PackagingConfigurationMssPackageArgs extends com.pulumi.resou
     @Import(name="mssManifests", required=true)
     private Output<List<PackagingConfigurationMssManifestArgs>> mssManifests;
 
+    /**
+     * @return A list of MSS manifest configurations.
+     * 
+     */
     public Output<List<PackagingConfigurationMssManifestArgs>> mssManifests() {
         return this.mssManifests;
     }
@@ -82,15 +86,33 @@ public final class PackagingConfigurationMssPackageArgs extends com.pulumi.resou
             return encryption(Output.of(encryption));
         }
 
+        /**
+         * @param mssManifests A list of MSS manifest configurations.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mssManifests(Output<List<PackagingConfigurationMssManifestArgs>> mssManifests) {
             $.mssManifests = mssManifests;
             return this;
         }
 
+        /**
+         * @param mssManifests A list of MSS manifest configurations.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mssManifests(List<PackagingConfigurationMssManifestArgs> mssManifests) {
             return mssManifests(Output.of(mssManifests));
         }
 
+        /**
+         * @param mssManifests A list of MSS manifest configurations.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mssManifests(PackagingConfigurationMssManifestArgs... mssManifests) {
             return mssManifests(List.of(mssManifests));
         }

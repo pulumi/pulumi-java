@@ -28,6 +28,10 @@ public final class SchemaVersionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="schemaDefinition", required=true)
     private Output<String> schemaDefinition;
 
+    /**
+     * @return Complete definition of the schema in plain-text.
+     * 
+     */
     public Output<String> schemaDefinition() {
         return this.schemaDefinition;
     }
@@ -66,11 +70,23 @@ public final class SchemaVersionArgs extends com.pulumi.resources.ResourceArgs {
             return schema(Output.of(schema));
         }
 
+        /**
+         * @param schemaDefinition Complete definition of the schema in plain-text.
+         * 
+         * @return builder
+         * 
+         */
         public Builder schemaDefinition(Output<String> schemaDefinition) {
             $.schemaDefinition = schemaDefinition;
             return this;
         }
 
+        /**
+         * @param schemaDefinition Complete definition of the schema in plain-text.
+         * 
+         * @return builder
+         * 
+         */
         public Builder schemaDefinition(String schemaDefinition) {
             return schemaDefinition(Output.of(schemaDefinition));
         }

@@ -26,6 +26,10 @@ public final class StudioComponentActiveDirectoryComputerAttributeArgs extends c
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return &lt;p&gt;The name for the LDAP attribute.&lt;/p&gt;
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -37,6 +41,10 @@ public final class StudioComponentActiveDirectoryComputerAttributeArgs extends c
     @Import(name="value")
     private @Nullable Output<String> value;
 
+    /**
+     * @return &lt;p&gt;The value for the LDAP attribute.&lt;/p&gt;
+     * 
+     */
     public Optional<Output<String>> value() {
         return Optional.ofNullable(this.value);
     }
@@ -66,20 +74,44 @@ public final class StudioComponentActiveDirectoryComputerAttributeArgs extends c
             $ = new StudioComponentActiveDirectoryComputerAttributeArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name &lt;p&gt;The name for the LDAP attribute.&lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name &lt;p&gt;The name for the LDAP attribute.&lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param value &lt;p&gt;The value for the LDAP attribute.&lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(@Nullable Output<String> value) {
             $.value = value;
             return this;
         }
 
+        /**
+         * @param value &lt;p&gt;The value for the LDAP attribute.&lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(String value) {
             return value(Output.of(value));
         }

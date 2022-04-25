@@ -28,6 +28,10 @@ public final class DatasetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="dataFrequency")
     private @Nullable Output<String> dataFrequency;
 
+    /**
+     * @return Frequency of data collection. This parameter is required for RELATED_TIME_SERIES
+     * 
+     */
     public Optional<Output<String>> dataFrequency() {
         return Optional.ofNullable(this.dataFrequency);
     }
@@ -39,6 +43,10 @@ public final class DatasetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="datasetName")
     private @Nullable Output<String> datasetName;
 
+    /**
+     * @return A name for the dataset
+     * 
+     */
     public Optional<Output<String>> datasetName() {
         return Optional.ofNullable(this.datasetName);
     }
@@ -50,6 +58,10 @@ public final class DatasetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="datasetType", required=true)
     private Output<DatasetType> datasetType;
 
+    /**
+     * @return The dataset type
+     * 
+     */
     public Output<DatasetType> datasetType() {
         return this.datasetType;
     }
@@ -61,6 +73,10 @@ public final class DatasetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="domain", required=true)
     private Output<DatasetDomain> domain;
 
+    /**
+     * @return The domain associated with the dataset
+     * 
+     */
     public Output<DatasetDomain> domain() {
         return this.domain;
     }
@@ -116,38 +132,86 @@ public final class DatasetArgs extends com.pulumi.resources.ResourceArgs {
             $ = new DatasetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param dataFrequency Frequency of data collection. This parameter is required for RELATED_TIME_SERIES
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataFrequency(@Nullable Output<String> dataFrequency) {
             $.dataFrequency = dataFrequency;
             return this;
         }
 
+        /**
+         * @param dataFrequency Frequency of data collection. This parameter is required for RELATED_TIME_SERIES
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataFrequency(String dataFrequency) {
             return dataFrequency(Output.of(dataFrequency));
         }
 
+        /**
+         * @param datasetName A name for the dataset
+         * 
+         * @return builder
+         * 
+         */
         public Builder datasetName(@Nullable Output<String> datasetName) {
             $.datasetName = datasetName;
             return this;
         }
 
+        /**
+         * @param datasetName A name for the dataset
+         * 
+         * @return builder
+         * 
+         */
         public Builder datasetName(String datasetName) {
             return datasetName(Output.of(datasetName));
         }
 
+        /**
+         * @param datasetType The dataset type
+         * 
+         * @return builder
+         * 
+         */
         public Builder datasetType(Output<DatasetType> datasetType) {
             $.datasetType = datasetType;
             return this;
         }
 
+        /**
+         * @param datasetType The dataset type
+         * 
+         * @return builder
+         * 
+         */
         public Builder datasetType(DatasetType datasetType) {
             return datasetType(Output.of(datasetType));
         }
 
+        /**
+         * @param domain The domain associated with the dataset
+         * 
+         * @return builder
+         * 
+         */
         public Builder domain(Output<DatasetDomain> domain) {
             $.domain = domain;
             return this;
         }
 
+        /**
+         * @param domain The domain associated with the dataset
+         * 
+         * @return builder
+         * 
+         */
         public Builder domain(DatasetDomain domain) {
             return domain(Output.of(domain));
         }

@@ -34,6 +34,10 @@ public final class BotMessageGroupArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="variations")
     private @Nullable Output<List<BotMessageArgs>> variations;
 
+    /**
+     * @return Message variations to send to the user.
+     * 
+     */
     public Optional<Output<List<BotMessageArgs>>> variations() {
         return Optional.ofNullable(this.variations);
     }
@@ -72,15 +76,33 @@ public final class BotMessageGroupArgs extends com.pulumi.resources.ResourceArgs
             return message(Output.of(message));
         }
 
+        /**
+         * @param variations Message variations to send to the user.
+         * 
+         * @return builder
+         * 
+         */
         public Builder variations(@Nullable Output<List<BotMessageArgs>> variations) {
             $.variations = variations;
             return this;
         }
 
+        /**
+         * @param variations Message variations to send to the user.
+         * 
+         * @return builder
+         * 
+         */
         public Builder variations(List<BotMessageArgs> variations) {
             return variations(Output.of(variations));
         }
 
+        /**
+         * @param variations Message variations to send to the user.
+         * 
+         * @return builder
+         * 
+         */
         public Builder variations(BotMessageArgs... variations) {
             return variations(List.of(variations));
         }

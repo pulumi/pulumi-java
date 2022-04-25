@@ -26,6 +26,10 @@ public final class FunctionVpcConfig extends com.pulumi.resources.InvokeArgs {
     @Import(name="securityGroupIds")
     private @Nullable List<String> securityGroupIds;
 
+    /**
+     * @return A list of VPC security groups IDs.
+     * 
+     */
     public Optional<List<String>> securityGroupIds() {
         return Optional.ofNullable(this.securityGroupIds);
     }
@@ -37,6 +41,10 @@ public final class FunctionVpcConfig extends com.pulumi.resources.InvokeArgs {
     @Import(name="subnetIds")
     private @Nullable List<String> subnetIds;
 
+    /**
+     * @return A list of VPC subnet IDs.
+     * 
+     */
     public Optional<List<String>> subnetIds() {
         return Optional.ofNullable(this.subnetIds);
     }
@@ -66,20 +74,44 @@ public final class FunctionVpcConfig extends com.pulumi.resources.InvokeArgs {
             $ = new FunctionVpcConfig(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param securityGroupIds A list of VPC security groups IDs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder securityGroupIds(@Nullable List<String> securityGroupIds) {
             $.securityGroupIds = securityGroupIds;
             return this;
         }
 
+        /**
+         * @param securityGroupIds A list of VPC security groups IDs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder securityGroupIds(String... securityGroupIds) {
             return securityGroupIds(List.of(securityGroupIds));
         }
 
+        /**
+         * @param subnetIds A list of VPC subnet IDs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subnetIds(@Nullable List<String> subnetIds) {
             $.subnetIds = subnetIds;
             return this;
         }
 
+        /**
+         * @param subnetIds A list of VPC subnet IDs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subnetIds(String... subnetIds) {
             return subnetIds(List.of(subnetIds));
         }

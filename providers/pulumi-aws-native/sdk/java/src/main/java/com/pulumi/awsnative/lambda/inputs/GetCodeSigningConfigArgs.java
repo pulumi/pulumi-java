@@ -19,6 +19,10 @@ public final class GetCodeSigningConfigArgs extends com.pulumi.resources.InvokeA
     @Import(name="codeSigningConfigArn", required=true)
     private String codeSigningConfigArn;
 
+    /**
+     * @return A unique Arn for CodeSigningConfig resource
+     * 
+     */
     public String codeSigningConfigArn() {
         return this.codeSigningConfigArn;
     }
@@ -47,6 +51,12 @@ public final class GetCodeSigningConfigArgs extends com.pulumi.resources.InvokeA
             $ = new GetCodeSigningConfigArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param codeSigningConfigArn A unique Arn for CodeSigningConfig resource
+         * 
+         * @return builder
+         * 
+         */
         public Builder codeSigningConfigArn(String codeSigningConfigArn) {
             $.codeSigningConfigArn = codeSigningConfigArn;
             return this;

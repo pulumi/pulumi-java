@@ -24,6 +24,10 @@ public final class CellArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="cellName")
     private @Nullable Output<String> cellName;
 
+    /**
+     * @return The name of the cell to create.
+     * 
+     */
     public Optional<Output<String>> cellName() {
         return Optional.ofNullable(this.cellName);
     }
@@ -35,6 +39,10 @@ public final class CellArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="cells")
     private @Nullable Output<List<String>> cells;
 
+    /**
+     * @return A list of cell Amazon Resource Names (ARNs) contained within this cell, for use in nested cells. For example, Availability Zones within specific Regions.
+     * 
+     */
     public Optional<Output<List<String>>> cells() {
         return Optional.ofNullable(this.cells);
     }
@@ -46,6 +54,10 @@ public final class CellArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<List<CellTagArgs>> tags;
 
+    /**
+     * @return A collection of tags associated with a resource
+     * 
+     */
     public Optional<Output<List<CellTagArgs>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -76,37 +88,85 @@ public final class CellArgs extends com.pulumi.resources.ResourceArgs {
             $ = new CellArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param cellName The name of the cell to create.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cellName(@Nullable Output<String> cellName) {
             $.cellName = cellName;
             return this;
         }
 
+        /**
+         * @param cellName The name of the cell to create.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cellName(String cellName) {
             return cellName(Output.of(cellName));
         }
 
+        /**
+         * @param cells A list of cell Amazon Resource Names (ARNs) contained within this cell, for use in nested cells. For example, Availability Zones within specific Regions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cells(@Nullable Output<List<String>> cells) {
             $.cells = cells;
             return this;
         }
 
+        /**
+         * @param cells A list of cell Amazon Resource Names (ARNs) contained within this cell, for use in nested cells. For example, Availability Zones within specific Regions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cells(List<String> cells) {
             return cells(Output.of(cells));
         }
 
+        /**
+         * @param cells A list of cell Amazon Resource Names (ARNs) contained within this cell, for use in nested cells. For example, Availability Zones within specific Regions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cells(String... cells) {
             return cells(List.of(cells));
         }
 
+        /**
+         * @param tags A collection of tags associated with a resource
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<List<CellTagArgs>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags A collection of tags associated with a resource
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(List<CellTagArgs> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param tags A collection of tags associated with a resource
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(CellTagArgs... tags) {
             return tags(List.of(tags));
         }

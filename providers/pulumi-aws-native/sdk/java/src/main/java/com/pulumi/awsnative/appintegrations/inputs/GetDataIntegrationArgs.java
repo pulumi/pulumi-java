@@ -19,6 +19,10 @@ public final class GetDataIntegrationArgs extends com.pulumi.resources.InvokeArg
     @Import(name="id", required=true)
     private String id;
 
+    /**
+     * @return The unique identifer of the data integration.
+     * 
+     */
     public String id() {
         return this.id;
     }
@@ -47,6 +51,12 @@ public final class GetDataIntegrationArgs extends com.pulumi.resources.InvokeArg
             $ = new GetDataIntegrationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param id The unique identifer of the data integration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             $.id = id;
             return this;

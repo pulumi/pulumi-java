@@ -16,7 +16,7 @@ public final class SchedulingPolicyFairsharePolicy {
     private final @Nullable Double computeReservation;
     private final @Nullable Double shareDecaySeconds;
     /**
-     * List of Share Attributes
+     * @return List of Share Attributes
      * 
      */
     private final @Nullable List<SchedulingPolicyShareAttributes> shareDistribution;
@@ -38,9 +38,9 @@ public final class SchedulingPolicyFairsharePolicy {
         return Optional.ofNullable(this.shareDecaySeconds);
     }
     /**
-     * List of Share Attributes
+     * @return List of Share Attributes
      * 
-    */
+     */
     public List<SchedulingPolicyShareAttributes> shareDistribution() {
         return this.shareDistribution == null ? List.of() : this.shareDistribution;
     }

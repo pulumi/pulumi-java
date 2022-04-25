@@ -76,6 +76,10 @@ public final class LaunchArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<List<LaunchTagArgs>> tags;
 
+    /**
+     * @return An array of key-value pairs to apply to this resource.
+     * 
+     */
     public Optional<Output<List<LaunchTagArgs>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -186,15 +190,33 @@ public final class LaunchArgs extends com.pulumi.resources.ResourceArgs {
             return scheduledSplitsConfig(List.of(scheduledSplitsConfig));
         }
 
+        /**
+         * @param tags An array of key-value pairs to apply to this resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<List<LaunchTagArgs>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags An array of key-value pairs to apply to this resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(List<LaunchTagArgs> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param tags An array of key-value pairs to apply to this resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(LaunchTagArgs... tags) {
             return tags(List.of(tags));
         }

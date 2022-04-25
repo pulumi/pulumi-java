@@ -24,6 +24,10 @@ public final class LoggingConfigurationFieldToMatchSingleHeaderPropertiesArgs ex
     @Import(name="name", required=true)
     private Output<String> name;
 
+    /**
+     * @return The name of the query header to inspect.
+     * 
+     */
     public Output<String> name() {
         return this.name;
     }
@@ -52,11 +56,23 @@ public final class LoggingConfigurationFieldToMatchSingleHeaderPropertiesArgs ex
             $ = new LoggingConfigurationFieldToMatchSingleHeaderPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name The name of the query header to inspect.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name of the query header to inspect.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }

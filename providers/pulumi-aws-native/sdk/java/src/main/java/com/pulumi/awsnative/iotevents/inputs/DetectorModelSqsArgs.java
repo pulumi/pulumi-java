@@ -31,6 +31,10 @@ public final class DetectorModelSqsArgs extends com.pulumi.resources.ResourceArg
     @Import(name="queueUrl", required=true)
     private Output<String> queueUrl;
 
+    /**
+     * @return The URL of the SQS queue where the data is written.
+     * 
+     */
     public Output<String> queueUrl() {
         return this.queueUrl;
     }
@@ -42,6 +46,10 @@ public final class DetectorModelSqsArgs extends com.pulumi.resources.ResourceArg
     @Import(name="useBase64")
     private @Nullable Output<Boolean> useBase64;
 
+    /**
+     * @return Set this to `TRUE` if you want the data to be base-64 encoded before it is written to the queue. Otherwise, set this to `FALSE`.
+     * 
+     */
     public Optional<Output<Boolean>> useBase64() {
         return Optional.ofNullable(this.useBase64);
     }
@@ -81,20 +89,44 @@ public final class DetectorModelSqsArgs extends com.pulumi.resources.ResourceArg
             return payload(Output.of(payload));
         }
 
+        /**
+         * @param queueUrl The URL of the SQS queue where the data is written.
+         * 
+         * @return builder
+         * 
+         */
         public Builder queueUrl(Output<String> queueUrl) {
             $.queueUrl = queueUrl;
             return this;
         }
 
+        /**
+         * @param queueUrl The URL of the SQS queue where the data is written.
+         * 
+         * @return builder
+         * 
+         */
         public Builder queueUrl(String queueUrl) {
             return queueUrl(Output.of(queueUrl));
         }
 
+        /**
+         * @param useBase64 Set this to `TRUE` if you want the data to be base-64 encoded before it is written to the queue. Otherwise, set this to `FALSE`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder useBase64(@Nullable Output<Boolean> useBase64) {
             $.useBase64 = useBase64;
             return this;
         }
 
+        /**
+         * @param useBase64 Set this to `TRUE` if you want the data to be base-64 encoded before it is written to the queue. Otherwise, set this to `FALSE`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder useBase64(Boolean useBase64) {
             return useBase64(Output.of(useBase64));
         }

@@ -25,6 +25,10 @@ public final class ChannelIngestEndpoint extends com.pulumi.resources.InvokeArgs
     @Import(name="id")
     private @Nullable String id;
 
+    /**
+     * @return The system generated unique identifier for the IngestEndpoint
+     * 
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
@@ -36,6 +40,10 @@ public final class ChannelIngestEndpoint extends com.pulumi.resources.InvokeArgs
     @Import(name="password")
     private @Nullable String password;
 
+    /**
+     * @return The system generated password for ingest authentication.
+     * 
+     */
     public Optional<String> password() {
         return Optional.ofNullable(this.password);
     }
@@ -47,6 +55,10 @@ public final class ChannelIngestEndpoint extends com.pulumi.resources.InvokeArgs
     @Import(name="url")
     private @Nullable String url;
 
+    /**
+     * @return The ingest URL to which the source stream should be sent.
+     * 
+     */
     public Optional<String> url() {
         return Optional.ofNullable(this.url);
     }
@@ -58,6 +70,10 @@ public final class ChannelIngestEndpoint extends com.pulumi.resources.InvokeArgs
     @Import(name="username")
     private @Nullable String username;
 
+    /**
+     * @return The system generated username for ingest authentication.
+     * 
+     */
     public Optional<String> username() {
         return Optional.ofNullable(this.username);
     }
@@ -89,21 +105,45 @@ public final class ChannelIngestEndpoint extends com.pulumi.resources.InvokeArgs
             $ = new ChannelIngestEndpoint(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param id The system generated unique identifier for the IngestEndpoint
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(@Nullable String id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param password The system generated password for ingest authentication.
+         * 
+         * @return builder
+         * 
+         */
         public Builder password(@Nullable String password) {
             $.password = password;
             return this;
         }
 
+        /**
+         * @param url The ingest URL to which the source stream should be sent.
+         * 
+         * @return builder
+         * 
+         */
         public Builder url(@Nullable String url) {
             $.url = url;
             return this;
         }
 
+        /**
+         * @param username The system generated username for ingest authentication.
+         * 
+         * @return builder
+         * 
+         */
         public Builder username(@Nullable String username) {
             $.username = username;
             return this;

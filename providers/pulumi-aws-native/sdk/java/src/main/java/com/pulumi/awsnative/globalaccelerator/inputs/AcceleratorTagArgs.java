@@ -24,6 +24,10 @@ public final class AcceleratorTagArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="key", required=true)
     private Output<String> key;
 
+    /**
+     * @return Key of the tag. Value can be 1 to 127 characters.
+     * 
+     */
     public Output<String> key() {
         return this.key;
     }
@@ -35,6 +39,10 @@ public final class AcceleratorTagArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="value", required=true)
     private Output<String> value;
 
+    /**
+     * @return Value for the tag. Value can be 1 to 255 characters.
+     * 
+     */
     public Output<String> value() {
         return this.value;
     }
@@ -64,20 +72,44 @@ public final class AcceleratorTagArgs extends com.pulumi.resources.ResourceArgs 
             $ = new AcceleratorTagArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param key Key of the tag. Value can be 1 to 127 characters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder key(Output<String> key) {
             $.key = key;
             return this;
         }
 
+        /**
+         * @param key Key of the tag. Value can be 1 to 127 characters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder key(String key) {
             return key(Output.of(key));
         }
 
+        /**
+         * @param value Value for the tag. Value can be 1 to 255 characters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(Output<String> value) {
             $.value = value;
             return this;
         }
 
+        /**
+         * @param value Value for the tag. Value can be 1 to 255 characters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(String value) {
             return value(Output.of(value));
         }

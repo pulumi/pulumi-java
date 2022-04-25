@@ -31,6 +31,10 @@ public final class BotSlotValueElicitationSettingArgs extends com.pulumi.resourc
     @Import(name="defaultValueSpecification")
     private @Nullable Output<BotSlotDefaultValueSpecificationArgs> defaultValueSpecification;
 
+    /**
+     * @return A list of default values for a slot.
+     * 
+     */
     public Optional<Output<BotSlotDefaultValueSpecificationArgs>> defaultValueSpecification() {
         return Optional.ofNullable(this.defaultValueSpecification);
     }
@@ -42,6 +46,10 @@ public final class BotSlotValueElicitationSettingArgs extends com.pulumi.resourc
     @Import(name="promptSpecification")
     private @Nullable Output<BotPromptSpecificationArgs> promptSpecification;
 
+    /**
+     * @return The prompt that Amazon Lex uses to elicit the slot value from the user.
+     * 
+     */
     public Optional<Output<BotPromptSpecificationArgs>> promptSpecification() {
         return Optional.ofNullable(this.promptSpecification);
     }
@@ -53,6 +61,10 @@ public final class BotSlotValueElicitationSettingArgs extends com.pulumi.resourc
     @Import(name="sampleUtterances")
     private @Nullable Output<List<BotSampleUtteranceArgs>> sampleUtterances;
 
+    /**
+     * @return If you know a specific pattern that users might respond to an Amazon Lex request for a slot value, you can provide those utterances to improve accuracy.
+     * 
+     */
     public Optional<Output<List<BotSampleUtteranceArgs>>> sampleUtterances() {
         return Optional.ofNullable(this.sampleUtterances);
     }
@@ -64,6 +76,10 @@ public final class BotSlotValueElicitationSettingArgs extends com.pulumi.resourc
     @Import(name="slotConstraint", required=true)
     private Output<BotSlotConstraint> slotConstraint;
 
+    /**
+     * @return Specifies whether the slot is required or optional.
+     * 
+     */
     public Output<BotSlotConstraint> slotConstraint() {
         return this.slotConstraint;
     }
@@ -75,6 +91,10 @@ public final class BotSlotValueElicitationSettingArgs extends com.pulumi.resourc
     @Import(name="waitAndContinueSpecification")
     private @Nullable Output<BotWaitAndContinueSpecificationArgs> waitAndContinueSpecification;
 
+    /**
+     * @return Specifies the prompts that Amazon Lex uses while a bot is waiting for customer input.
+     * 
+     */
     public Optional<Output<BotWaitAndContinueSpecificationArgs>> waitAndContinueSpecification() {
         return Optional.ofNullable(this.waitAndContinueSpecification);
     }
@@ -107,51 +127,117 @@ public final class BotSlotValueElicitationSettingArgs extends com.pulumi.resourc
             $ = new BotSlotValueElicitationSettingArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param defaultValueSpecification A list of default values for a slot.
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultValueSpecification(@Nullable Output<BotSlotDefaultValueSpecificationArgs> defaultValueSpecification) {
             $.defaultValueSpecification = defaultValueSpecification;
             return this;
         }
 
+        /**
+         * @param defaultValueSpecification A list of default values for a slot.
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultValueSpecification(BotSlotDefaultValueSpecificationArgs defaultValueSpecification) {
             return defaultValueSpecification(Output.of(defaultValueSpecification));
         }
 
+        /**
+         * @param promptSpecification The prompt that Amazon Lex uses to elicit the slot value from the user.
+         * 
+         * @return builder
+         * 
+         */
         public Builder promptSpecification(@Nullable Output<BotPromptSpecificationArgs> promptSpecification) {
             $.promptSpecification = promptSpecification;
             return this;
         }
 
+        /**
+         * @param promptSpecification The prompt that Amazon Lex uses to elicit the slot value from the user.
+         * 
+         * @return builder
+         * 
+         */
         public Builder promptSpecification(BotPromptSpecificationArgs promptSpecification) {
             return promptSpecification(Output.of(promptSpecification));
         }
 
+        /**
+         * @param sampleUtterances If you know a specific pattern that users might respond to an Amazon Lex request for a slot value, you can provide those utterances to improve accuracy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sampleUtterances(@Nullable Output<List<BotSampleUtteranceArgs>> sampleUtterances) {
             $.sampleUtterances = sampleUtterances;
             return this;
         }
 
+        /**
+         * @param sampleUtterances If you know a specific pattern that users might respond to an Amazon Lex request for a slot value, you can provide those utterances to improve accuracy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sampleUtterances(List<BotSampleUtteranceArgs> sampleUtterances) {
             return sampleUtterances(Output.of(sampleUtterances));
         }
 
+        /**
+         * @param sampleUtterances If you know a specific pattern that users might respond to an Amazon Lex request for a slot value, you can provide those utterances to improve accuracy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sampleUtterances(BotSampleUtteranceArgs... sampleUtterances) {
             return sampleUtterances(List.of(sampleUtterances));
         }
 
+        /**
+         * @param slotConstraint Specifies whether the slot is required or optional.
+         * 
+         * @return builder
+         * 
+         */
         public Builder slotConstraint(Output<BotSlotConstraint> slotConstraint) {
             $.slotConstraint = slotConstraint;
             return this;
         }
 
+        /**
+         * @param slotConstraint Specifies whether the slot is required or optional.
+         * 
+         * @return builder
+         * 
+         */
         public Builder slotConstraint(BotSlotConstraint slotConstraint) {
             return slotConstraint(Output.of(slotConstraint));
         }
 
+        /**
+         * @param waitAndContinueSpecification Specifies the prompts that Amazon Lex uses while a bot is waiting for customer input.
+         * 
+         * @return builder
+         * 
+         */
         public Builder waitAndContinueSpecification(@Nullable Output<BotWaitAndContinueSpecificationArgs> waitAndContinueSpecification) {
             $.waitAndContinueSpecification = waitAndContinueSpecification;
             return this;
         }
 
+        /**
+         * @param waitAndContinueSpecification Specifies the prompts that Amazon Lex uses while a bot is waiting for customer input.
+         * 
+         * @return builder
+         * 
+         */
         public Builder waitAndContinueSpecification(BotWaitAndContinueSpecificationArgs waitAndContinueSpecification) {
             return waitAndContinueSpecification(Output.of(waitAndContinueSpecification));
         }

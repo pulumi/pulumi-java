@@ -24,6 +24,10 @@ public final class BotObfuscationSettingArgs extends com.pulumi.resources.Resour
     @Import(name="obfuscationSettingType", required=true)
     private Output<BotObfuscationSettingObfuscationSettingType> obfuscationSettingType;
 
+    /**
+     * @return Value that determines whether Amazon Lex obscures slot values in conversation logs. The default is to obscure the values.
+     * 
+     */
     public Output<BotObfuscationSettingObfuscationSettingType> obfuscationSettingType() {
         return this.obfuscationSettingType;
     }
@@ -52,11 +56,23 @@ public final class BotObfuscationSettingArgs extends com.pulumi.resources.Resour
             $ = new BotObfuscationSettingArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param obfuscationSettingType Value that determines whether Amazon Lex obscures slot values in conversation logs. The default is to obscure the values.
+         * 
+         * @return builder
+         * 
+         */
         public Builder obfuscationSettingType(Output<BotObfuscationSettingObfuscationSettingType> obfuscationSettingType) {
             $.obfuscationSettingType = obfuscationSettingType;
             return this;
         }
 
+        /**
+         * @param obfuscationSettingType Value that determines whether Amazon Lex obscures slot values in conversation logs. The default is to obscure the values.
+         * 
+         * @return builder
+         * 
+         */
         public Builder obfuscationSettingType(BotObfuscationSettingObfuscationSettingType obfuscationSettingType) {
             return obfuscationSettingType(Output.of(obfuscationSettingType));
         }

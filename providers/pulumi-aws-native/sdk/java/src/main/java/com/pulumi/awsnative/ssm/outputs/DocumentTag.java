@@ -12,12 +12,12 @@ import javax.annotation.Nullable;
 @CustomType
 public final class DocumentTag {
     /**
-     * The name of the tag.
+     * @return The name of the tag.
      * 
      */
     private final @Nullable String key;
     /**
-     * The value of the tag.
+     * @return The value of the tag.
      * 
      */
     private final @Nullable String value;
@@ -31,16 +31,16 @@ public final class DocumentTag {
     }
 
     /**
-     * The name of the tag.
+     * @return The name of the tag.
      * 
-    */
+     */
     public Optional<String> key() {
         return Optional.ofNullable(this.key);
     }
     /**
-     * The value of the tag.
+     * @return The value of the tag.
      * 
-    */
+     */
     public Optional<String> value() {
         return Optional.ofNullable(this.value);
     }

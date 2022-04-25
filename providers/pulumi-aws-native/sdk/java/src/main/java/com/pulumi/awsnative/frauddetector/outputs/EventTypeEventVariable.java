@@ -19,7 +19,7 @@ import javax.annotation.Nullable;
 public final class EventTypeEventVariable {
     private final @Nullable String arn;
     /**
-     * The time when the event type was created.
+     * @return The time when the event type was created.
      * 
      */
     private final @Nullable String createdTime;
@@ -27,19 +27,19 @@ public final class EventTypeEventVariable {
     private final @Nullable EventTypeEventVariableDataType dataType;
     private final @Nullable String defaultValue;
     /**
-     * The description.
+     * @return The description.
      * 
      */
     private final @Nullable String description;
     private final @Nullable Boolean inline;
     /**
-     * The time when the event type was last updated.
+     * @return The time when the event type was last updated.
      * 
      */
     private final @Nullable String lastUpdatedTime;
     private final @Nullable String name;
     /**
-     * Tags associated with this event type.
+     * @return Tags associated with this event type.
      * 
      */
     private final @Nullable List<EventTypeTag> tags;
@@ -75,9 +75,9 @@ public final class EventTypeEventVariable {
         return Optional.ofNullable(this.arn);
     }
     /**
-     * The time when the event type was created.
+     * @return The time when the event type was created.
      * 
-    */
+     */
     public Optional<String> createdTime() {
         return Optional.ofNullable(this.createdTime);
     }
@@ -91,9 +91,9 @@ public final class EventTypeEventVariable {
         return Optional.ofNullable(this.defaultValue);
     }
     /**
-     * The description.
+     * @return The description.
      * 
-    */
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
@@ -101,9 +101,9 @@ public final class EventTypeEventVariable {
         return Optional.ofNullable(this.inline);
     }
     /**
-     * The time when the event type was last updated.
+     * @return The time when the event type was last updated.
      * 
-    */
+     */
     public Optional<String> lastUpdatedTime() {
         return Optional.ofNullable(this.lastUpdatedTime);
     }
@@ -111,9 +111,9 @@ public final class EventTypeEventVariable {
         return Optional.ofNullable(this.name);
     }
     /**
-     * Tags associated with this event type.
+     * @return Tags associated with this event type.
      * 
-    */
+     */
     public List<EventTypeTag> tags() {
         return this.tags == null ? List.of() : this.tags;
     }

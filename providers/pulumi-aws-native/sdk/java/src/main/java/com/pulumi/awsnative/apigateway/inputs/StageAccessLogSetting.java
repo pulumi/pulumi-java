@@ -25,6 +25,10 @@ public final class StageAccessLogSetting extends com.pulumi.resources.InvokeArgs
     @Import(name="destinationArn")
     private @Nullable String destinationArn;
 
+    /**
+     * @return The Amazon Resource Name (ARN) of the CloudWatch Logs log group or Kinesis Data Firehose delivery stream to receive access logs. If you specify a Kinesis Data Firehose delivery stream, the stream name must begin with amazon-apigateway-. This parameter is required to enable access logging.
+     * 
+     */
     public Optional<String> destinationArn() {
         return Optional.ofNullable(this.destinationArn);
     }
@@ -36,6 +40,10 @@ public final class StageAccessLogSetting extends com.pulumi.resources.InvokeArgs
     @Import(name="format")
     private @Nullable String format;
 
+    /**
+     * @return A single line format of the access logs of data, as specified by selected $context variables (https://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-mapping-template-reference.html#context-variable-reference). The format must include at least $context.requestId. This parameter is required to enable access logging.
+     * 
+     */
     public Optional<String> format() {
         return Optional.ofNullable(this.format);
     }
@@ -65,11 +73,23 @@ public final class StageAccessLogSetting extends com.pulumi.resources.InvokeArgs
             $ = new StageAccessLogSetting(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param destinationArn The Amazon Resource Name (ARN) of the CloudWatch Logs log group or Kinesis Data Firehose delivery stream to receive access logs. If you specify a Kinesis Data Firehose delivery stream, the stream name must begin with amazon-apigateway-. This parameter is required to enable access logging.
+         * 
+         * @return builder
+         * 
+         */
         public Builder destinationArn(@Nullable String destinationArn) {
             $.destinationArn = destinationArn;
             return this;
         }
 
+        /**
+         * @param format A single line format of the access logs of data, as specified by selected $context variables (https://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-mapping-template-reference.html#context-variable-reference). The format must include at least $context.requestId. This parameter is required to enable access logging.
+         * 
+         * @return builder
+         * 
+         */
         public Builder format(@Nullable String format) {
             $.format = format;
             return this;

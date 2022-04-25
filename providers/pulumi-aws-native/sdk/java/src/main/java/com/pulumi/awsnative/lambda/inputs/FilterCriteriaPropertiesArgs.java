@@ -27,6 +27,10 @@ public final class FilterCriteriaPropertiesArgs extends com.pulumi.resources.Res
     @Import(name="filters")
     private @Nullable Output<List<EventSourceMappingFilterArgs>> filters;
 
+    /**
+     * @return List of filters of this FilterCriteria
+     * 
+     */
     public Optional<Output<List<EventSourceMappingFilterArgs>>> filters() {
         return Optional.ofNullable(this.filters);
     }
@@ -55,15 +59,33 @@ public final class FilterCriteriaPropertiesArgs extends com.pulumi.resources.Res
             $ = new FilterCriteriaPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param filters List of filters of this FilterCriteria
+         * 
+         * @return builder
+         * 
+         */
         public Builder filters(@Nullable Output<List<EventSourceMappingFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
+        /**
+         * @param filters List of filters of this FilterCriteria
+         * 
+         * @return builder
+         * 
+         */
         public Builder filters(List<EventSourceMappingFilterArgs> filters) {
             return filters(Output.of(filters));
         }
 
+        /**
+         * @param filters List of filters of this FilterCriteria
+         * 
+         * @return builder
+         * 
+         */
         public Builder filters(EventSourceMappingFilterArgs... filters) {
             return filters(List.of(filters));
         }

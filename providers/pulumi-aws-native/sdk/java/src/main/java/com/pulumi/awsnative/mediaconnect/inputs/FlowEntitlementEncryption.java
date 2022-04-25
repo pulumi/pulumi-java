@@ -27,6 +27,10 @@ public final class FlowEntitlementEncryption extends com.pulumi.resources.Invoke
     @Import(name="algorithm", required=true)
     private FlowEntitlementEncryptionAlgorithm algorithm;
 
+    /**
+     * @return The type of algorithm that is used for the encryption (such as aes128, aes192, or aes256).
+     * 
+     */
     public FlowEntitlementEncryptionAlgorithm algorithm() {
         return this.algorithm;
     }
@@ -38,6 +42,10 @@ public final class FlowEntitlementEncryption extends com.pulumi.resources.Invoke
     @Import(name="constantInitializationVector")
     private @Nullable String constantInitializationVector;
 
+    /**
+     * @return A 128-bit, 16-byte hex value represented by a 32-character string, to be used with the key for encrypting content. This parameter is not valid for static key encryption.
+     * 
+     */
     public Optional<String> constantInitializationVector() {
         return Optional.ofNullable(this.constantInitializationVector);
     }
@@ -49,6 +57,10 @@ public final class FlowEntitlementEncryption extends com.pulumi.resources.Invoke
     @Import(name="deviceId")
     private @Nullable String deviceId;
 
+    /**
+     * @return The value of one of the devices that you configured with your digital rights management (DRM) platform key provider. This parameter is required for SPEKE encryption and is not valid for static key encryption.
+     * 
+     */
     public Optional<String> deviceId() {
         return Optional.ofNullable(this.deviceId);
     }
@@ -60,6 +72,10 @@ public final class FlowEntitlementEncryption extends com.pulumi.resources.Invoke
     @Import(name="keyType")
     private @Nullable FlowEntitlementEncryptionKeyType keyType;
 
+    /**
+     * @return The type of key that is used for the encryption. If no keyType is provided, the service will use the default setting (static-key).
+     * 
+     */
     public Optional<FlowEntitlementEncryptionKeyType> keyType() {
         return Optional.ofNullable(this.keyType);
     }
@@ -71,6 +87,10 @@ public final class FlowEntitlementEncryption extends com.pulumi.resources.Invoke
     @Import(name="region")
     private @Nullable String region;
 
+    /**
+     * @return The AWS Region that the API Gateway proxy endpoint was created in. This parameter is required for SPEKE encryption and is not valid for static key encryption.
+     * 
+     */
     public Optional<String> region() {
         return Optional.ofNullable(this.region);
     }
@@ -82,6 +102,10 @@ public final class FlowEntitlementEncryption extends com.pulumi.resources.Invoke
     @Import(name="resourceId")
     private @Nullable String resourceId;
 
+    /**
+     * @return An identifier for the content. The service sends this value to the key server to identify the current endpoint. The resource ID is also known as the content ID. This parameter is required for SPEKE encryption and is not valid for static key encryption.
+     * 
+     */
     public Optional<String> resourceId() {
         return Optional.ofNullable(this.resourceId);
     }
@@ -93,6 +117,10 @@ public final class FlowEntitlementEncryption extends com.pulumi.resources.Invoke
     @Import(name="roleArn", required=true)
     private String roleArn;
 
+    /**
+     * @return The ARN of the role that you created during setup (when you set up AWS Elemental MediaConnect as a trusted entity).
+     * 
+     */
     public String roleArn() {
         return this.roleArn;
     }
@@ -104,6 +132,10 @@ public final class FlowEntitlementEncryption extends com.pulumi.resources.Invoke
     @Import(name="secretArn")
     private @Nullable String secretArn;
 
+    /**
+     * @return  The ARN of the secret that you created in AWS Secrets Manager to store the encryption key. This parameter is required for static key encryption and is not valid for SPEKE encryption.
+     * 
+     */
     public Optional<String> secretArn() {
         return Optional.ofNullable(this.secretArn);
     }
@@ -115,6 +147,10 @@ public final class FlowEntitlementEncryption extends com.pulumi.resources.Invoke
     @Import(name="url")
     private @Nullable String url;
 
+    /**
+     * @return The URL from the API Gateway proxy that you set up to talk to your key server. This parameter is required for SPEKE encryption and is not valid for static key encryption.
+     * 
+     */
     public Optional<String> url() {
         return Optional.ofNullable(this.url);
     }
@@ -151,46 +187,100 @@ public final class FlowEntitlementEncryption extends com.pulumi.resources.Invoke
             $ = new FlowEntitlementEncryption(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param algorithm The type of algorithm that is used for the encryption (such as aes128, aes192, or aes256).
+         * 
+         * @return builder
+         * 
+         */
         public Builder algorithm(FlowEntitlementEncryptionAlgorithm algorithm) {
             $.algorithm = algorithm;
             return this;
         }
 
+        /**
+         * @param constantInitializationVector A 128-bit, 16-byte hex value represented by a 32-character string, to be used with the key for encrypting content. This parameter is not valid for static key encryption.
+         * 
+         * @return builder
+         * 
+         */
         public Builder constantInitializationVector(@Nullable String constantInitializationVector) {
             $.constantInitializationVector = constantInitializationVector;
             return this;
         }
 
+        /**
+         * @param deviceId The value of one of the devices that you configured with your digital rights management (DRM) platform key provider. This parameter is required for SPEKE encryption and is not valid for static key encryption.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deviceId(@Nullable String deviceId) {
             $.deviceId = deviceId;
             return this;
         }
 
+        /**
+         * @param keyType The type of key that is used for the encryption. If no keyType is provided, the service will use the default setting (static-key).
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyType(@Nullable FlowEntitlementEncryptionKeyType keyType) {
             $.keyType = keyType;
             return this;
         }
 
+        /**
+         * @param region The AWS Region that the API Gateway proxy endpoint was created in. This parameter is required for SPEKE encryption and is not valid for static key encryption.
+         * 
+         * @return builder
+         * 
+         */
         public Builder region(@Nullable String region) {
             $.region = region;
             return this;
         }
 
+        /**
+         * @param resourceId An identifier for the content. The service sends this value to the key server to identify the current endpoint. The resource ID is also known as the content ID. This parameter is required for SPEKE encryption and is not valid for static key encryption.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceId(@Nullable String resourceId) {
             $.resourceId = resourceId;
             return this;
         }
 
+        /**
+         * @param roleArn The ARN of the role that you created during setup (when you set up AWS Elemental MediaConnect as a trusted entity).
+         * 
+         * @return builder
+         * 
+         */
         public Builder roleArn(String roleArn) {
             $.roleArn = roleArn;
             return this;
         }
 
+        /**
+         * @param secretArn  The ARN of the secret that you created in AWS Secrets Manager to store the encryption key. This parameter is required for static key encryption and is not valid for SPEKE encryption.
+         * 
+         * @return builder
+         * 
+         */
         public Builder secretArn(@Nullable String secretArn) {
             $.secretArn = secretArn;
             return this;
         }
 
+        /**
+         * @param url The URL from the API Gateway proxy that you set up to talk to your key server. This parameter is required for SPEKE encryption and is not valid for static key encryption.
+         * 
+         * @return builder
+         * 
+         */
         public Builder url(@Nullable String url) {
             $.url = url;
             return this;

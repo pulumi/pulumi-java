@@ -14,22 +14,22 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetTypeActivationResult {
     /**
-     * The Amazon Resource Name (ARN) of the extension.
+     * @return The Amazon Resource Name (ARN) of the extension.
      * 
      */
     private final @Nullable String arn;
     /**
-     * Whether to automatically update the extension in this account and region when a new minor version is published by the extension publisher. Major versions released by the publisher must be manually updated.
+     * @return Whether to automatically update the extension in this account and region when a new minor version is published by the extension publisher. Major versions released by the publisher must be manually updated.
      * 
      */
     private final @Nullable Boolean autoUpdate;
     /**
-     * The Major Version of the type you want to enable
+     * @return The Major Version of the type you want to enable
      * 
      */
     private final @Nullable String majorVersion;
     /**
-     * Manually updates a previously-enabled type to a new major or minor version, if available. You can also use this parameter to update the value of AutoUpdateEnabled
+     * @return Manually updates a previously-enabled type to a new major or minor version, if available. You can also use this parameter to update the value of AutoUpdateEnabled
      * 
      */
     private final @Nullable TypeActivationVersionBump versionBump;
@@ -47,30 +47,30 @@ public final class GetTypeActivationResult {
     }
 
     /**
-     * The Amazon Resource Name (ARN) of the extension.
+     * @return The Amazon Resource Name (ARN) of the extension.
      * 
-    */
+     */
     public Optional<String> arn() {
         return Optional.ofNullable(this.arn);
     }
     /**
-     * Whether to automatically update the extension in this account and region when a new minor version is published by the extension publisher. Major versions released by the publisher must be manually updated.
+     * @return Whether to automatically update the extension in this account and region when a new minor version is published by the extension publisher. Major versions released by the publisher must be manually updated.
      * 
-    */
+     */
     public Optional<Boolean> autoUpdate() {
         return Optional.ofNullable(this.autoUpdate);
     }
     /**
-     * The Major Version of the type you want to enable
+     * @return The Major Version of the type you want to enable
      * 
-    */
+     */
     public Optional<String> majorVersion() {
         return Optional.ofNullable(this.majorVersion);
     }
     /**
-     * Manually updates a previously-enabled type to a new major or minor version, if available. You can also use this parameter to update the value of AutoUpdateEnabled
+     * @return Manually updates a previously-enabled type to a new major or minor version, if available. You can also use this parameter to update the value of AutoUpdateEnabled
      * 
-    */
+     */
     public Optional<TypeActivationVersionBump> versionBump() {
         return Optional.ofNullable(this.versionBump);
     }

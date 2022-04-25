@@ -28,7 +28,7 @@ public final class GetWebACLResult {
     private final @Nullable String id;
     private final @Nullable String labelNamespace;
     /**
-     * Collection of Rules.
+     * @return Collection of Rules.
      * 
      */
     private final @Nullable List<WebACLRule> rules;
@@ -86,9 +86,9 @@ public final class GetWebACLResult {
         return Optional.ofNullable(this.labelNamespace);
     }
     /**
-     * Collection of Rules.
+     * @return Collection of Rules.
      * 
-    */
+     */
     public List<WebACLRule> rules() {
         return this.rules == null ? List.of() : this.rules;
     }

@@ -26,6 +26,10 @@ public final class ImagePipelineSchedule extends com.pulumi.resources.InvokeArgs
     @Import(name="pipelineExecutionStartCondition")
     private @Nullable ImagePipelineSchedulePipelineExecutionStartCondition pipelineExecutionStartCondition;
 
+    /**
+     * @return The condition configures when the pipeline should trigger a new image build.
+     * 
+     */
     public Optional<ImagePipelineSchedulePipelineExecutionStartCondition> pipelineExecutionStartCondition() {
         return Optional.ofNullable(this.pipelineExecutionStartCondition);
     }
@@ -37,6 +41,10 @@ public final class ImagePipelineSchedule extends com.pulumi.resources.InvokeArgs
     @Import(name="scheduleExpression")
     private @Nullable String scheduleExpression;
 
+    /**
+     * @return The expression determines how often EC2 Image Builder evaluates your pipelineExecutionStartCondition.
+     * 
+     */
     public Optional<String> scheduleExpression() {
         return Optional.ofNullable(this.scheduleExpression);
     }
@@ -66,11 +74,23 @@ public final class ImagePipelineSchedule extends com.pulumi.resources.InvokeArgs
             $ = new ImagePipelineSchedule(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param pipelineExecutionStartCondition The condition configures when the pipeline should trigger a new image build.
+         * 
+         * @return builder
+         * 
+         */
         public Builder pipelineExecutionStartCondition(@Nullable ImagePipelineSchedulePipelineExecutionStartCondition pipelineExecutionStartCondition) {
             $.pipelineExecutionStartCondition = pipelineExecutionStartCondition;
             return this;
         }
 
+        /**
+         * @param scheduleExpression The expression determines how often EC2 Image Builder evaluates your pipelineExecutionStartCondition.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scheduleExpression(@Nullable String scheduleExpression) {
             $.scheduleExpression = scheduleExpression;
             return this;

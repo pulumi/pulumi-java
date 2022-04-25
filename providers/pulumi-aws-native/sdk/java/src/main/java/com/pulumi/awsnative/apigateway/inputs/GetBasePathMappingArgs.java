@@ -19,6 +19,10 @@ public final class GetBasePathMappingArgs extends com.pulumi.resources.InvokeArg
     @Import(name="basePath", required=true)
     private String basePath;
 
+    /**
+     * @return The base path name that callers of the API must provide in the URL after the domain name.
+     * 
+     */
     public String basePath() {
         return this.basePath;
     }
@@ -30,6 +34,10 @@ public final class GetBasePathMappingArgs extends com.pulumi.resources.InvokeArg
     @Import(name="domainName", required=true)
     private String domainName;
 
+    /**
+     * @return The DomainName of an AWS::ApiGateway::DomainName resource.
+     * 
+     */
     public String domainName() {
         return this.domainName;
     }
@@ -59,11 +67,23 @@ public final class GetBasePathMappingArgs extends com.pulumi.resources.InvokeArg
             $ = new GetBasePathMappingArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param basePath The base path name that callers of the API must provide in the URL after the domain name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder basePath(String basePath) {
             $.basePath = basePath;
             return this;
         }
 
+        /**
+         * @param domainName The DomainName of an AWS::ApiGateway::DomainName resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder domainName(String domainName) {
             $.domainName = domainName;
             return this;

@@ -26,6 +26,10 @@ public final class LoggingFilterPropertiesArgs extends com.pulumi.resources.Reso
     @Import(name="defaultBehavior", required=true)
     private Output<LoggingConfigurationLoggingFilterPropertiesDefaultBehavior> defaultBehavior;
 
+    /**
+     * @return Default handling for logs that don&#39;t match any of the specified filtering conditions.
+     * 
+     */
     public Output<LoggingConfigurationLoggingFilterPropertiesDefaultBehavior> defaultBehavior() {
         return this.defaultBehavior;
     }
@@ -37,6 +41,10 @@ public final class LoggingFilterPropertiesArgs extends com.pulumi.resources.Reso
     @Import(name="filters", required=true)
     private Output<List<LoggingConfigurationFilterArgs>> filters;
 
+    /**
+     * @return The filters that you want to apply to the logs.
+     * 
+     */
     public Output<List<LoggingConfigurationFilterArgs>> filters() {
         return this.filters;
     }
@@ -66,24 +74,54 @@ public final class LoggingFilterPropertiesArgs extends com.pulumi.resources.Reso
             $ = new LoggingFilterPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param defaultBehavior Default handling for logs that don&#39;t match any of the specified filtering conditions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultBehavior(Output<LoggingConfigurationLoggingFilterPropertiesDefaultBehavior> defaultBehavior) {
             $.defaultBehavior = defaultBehavior;
             return this;
         }
 
+        /**
+         * @param defaultBehavior Default handling for logs that don&#39;t match any of the specified filtering conditions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultBehavior(LoggingConfigurationLoggingFilterPropertiesDefaultBehavior defaultBehavior) {
             return defaultBehavior(Output.of(defaultBehavior));
         }
 
+        /**
+         * @param filters The filters that you want to apply to the logs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder filters(Output<List<LoggingConfigurationFilterArgs>> filters) {
             $.filters = filters;
             return this;
         }
 
+        /**
+         * @param filters The filters that you want to apply to the logs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder filters(List<LoggingConfigurationFilterArgs> filters) {
             return filters(Output.of(filters));
         }
 
+        /**
+         * @param filters The filters that you want to apply to the logs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder filters(LoggingConfigurationFilterArgs... filters) {
             return filters(List.of(filters));
         }

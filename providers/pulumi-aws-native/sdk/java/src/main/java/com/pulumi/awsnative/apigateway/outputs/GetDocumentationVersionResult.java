@@ -12,7 +12,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetDocumentationVersionResult {
     /**
-     * The description of the API documentation snapshot.
+     * @return The description of the API documentation snapshot.
      * 
      */
     private final @Nullable String description;
@@ -23,9 +23,9 @@ public final class GetDocumentationVersionResult {
     }
 
     /**
-     * The description of the API documentation snapshot.
+     * @return The description of the API documentation snapshot.
      * 
-    */
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }

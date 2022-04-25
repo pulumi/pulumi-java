@@ -19,6 +19,10 @@ public final class GetFlowArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="flowArn", required=true)
     private String flowArn;
 
+    /**
+     * @return The Amazon Resource Name (ARN), a unique identifier for any AWS resource, of the flow.
+     * 
+     */
     public String flowArn() {
         return this.flowArn;
     }
@@ -47,6 +51,12 @@ public final class GetFlowArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetFlowArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param flowArn The Amazon Resource Name (ARN), a unique identifier for any AWS resource, of the flow.
+         * 
+         * @return builder
+         * 
+         */
         public Builder flowArn(String flowArn) {
             $.flowArn = flowArn;
             return this;

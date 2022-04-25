@@ -24,6 +24,10 @@ public final class ACLArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="aCLName")
     private @Nullable Output<String> aCLName;
 
+    /**
+     * @return The name of the acl.
+     * 
+     */
     public Optional<Output<String>> aCLName() {
         return Optional.ofNullable(this.aCLName);
     }
@@ -35,6 +39,10 @@ public final class ACLArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<List<ACLTagArgs>> tags;
 
+    /**
+     * @return An array of key-value pairs to apply to this cluster.
+     * 
+     */
     public Optional<Output<List<ACLTagArgs>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -46,6 +54,10 @@ public final class ACLArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="userNames")
     private @Nullable Output<List<String>> userNames;
 
+    /**
+     * @return List of users associated to this acl.
+     * 
+     */
     public Optional<Output<List<String>>> userNames() {
         return Optional.ofNullable(this.userNames);
     }
@@ -76,37 +88,85 @@ public final class ACLArgs extends com.pulumi.resources.ResourceArgs {
             $ = new ACLArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param aCLName The name of the acl.
+         * 
+         * @return builder
+         * 
+         */
         public Builder aCLName(@Nullable Output<String> aCLName) {
             $.aCLName = aCLName;
             return this;
         }
 
+        /**
+         * @param aCLName The name of the acl.
+         * 
+         * @return builder
+         * 
+         */
         public Builder aCLName(String aCLName) {
             return aCLName(Output.of(aCLName));
         }
 
+        /**
+         * @param tags An array of key-value pairs to apply to this cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<List<ACLTagArgs>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags An array of key-value pairs to apply to this cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(List<ACLTagArgs> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param tags An array of key-value pairs to apply to this cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(ACLTagArgs... tags) {
             return tags(List.of(tags));
         }
 
+        /**
+         * @param userNames List of users associated to this acl.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userNames(@Nullable Output<List<String>> userNames) {
             $.userNames = userNames;
             return this;
         }
 
+        /**
+         * @param userNames List of users associated to this acl.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userNames(List<String> userNames) {
             return userNames(Output.of(userNames));
         }
 
+        /**
+         * @param userNames List of users associated to this acl.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userNames(String... userNames) {
             return userNames(List.of(userNames));
         }

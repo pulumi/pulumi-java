@@ -19,6 +19,10 @@ public final class GetPublisherArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="publisherId", required=true)
     private String publisherId;
 
+    /**
+     * @return The publisher id assigned by CloudFormation for publishing in this region.
+     * 
+     */
     public String publisherId() {
         return this.publisherId;
     }
@@ -47,6 +51,12 @@ public final class GetPublisherArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetPublisherArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param publisherId The publisher id assigned by CloudFormation for publishing in this region.
+         * 
+         * @return builder
+         * 
+         */
         public Builder publisherId(String publisherId) {
             $.publisherId = publisherId;
             return this;

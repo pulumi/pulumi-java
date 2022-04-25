@@ -19,6 +19,10 @@ public final class GetLifecycleHookArgs extends com.pulumi.resources.InvokeArgs 
     @Import(name="autoScalingGroupName", required=true)
     private String autoScalingGroupName;
 
+    /**
+     * @return The name of the Auto Scaling group for the lifecycle hook.
+     * 
+     */
     public String autoScalingGroupName() {
         return this.autoScalingGroupName;
     }
@@ -30,6 +34,10 @@ public final class GetLifecycleHookArgs extends com.pulumi.resources.InvokeArgs 
     @Import(name="lifecycleHookName", required=true)
     private String lifecycleHookName;
 
+    /**
+     * @return The name of the lifecycle hook.
+     * 
+     */
     public String lifecycleHookName() {
         return this.lifecycleHookName;
     }
@@ -59,11 +67,23 @@ public final class GetLifecycleHookArgs extends com.pulumi.resources.InvokeArgs 
             $ = new GetLifecycleHookArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param autoScalingGroupName The name of the Auto Scaling group for the lifecycle hook.
+         * 
+         * @return builder
+         * 
+         */
         public Builder autoScalingGroupName(String autoScalingGroupName) {
             $.autoScalingGroupName = autoScalingGroupName;
             return this;
         }
 
+        /**
+         * @param lifecycleHookName The name of the lifecycle hook.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lifecycleHookName(String lifecycleHookName) {
             $.lifecycleHookName = lifecycleHookName;
             return this;

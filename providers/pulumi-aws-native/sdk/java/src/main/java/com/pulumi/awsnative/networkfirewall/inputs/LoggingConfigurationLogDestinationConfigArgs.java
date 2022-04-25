@@ -22,6 +22,10 @@ public final class LoggingConfigurationLogDestinationConfigArgs extends com.pulu
     @Import(name="logDestination", required=true)
     private Output<Object> logDestination;
 
+    /**
+     * @return A key-value pair to configure the logDestinations.
+     * 
+     */
     public Output<Object> logDestination() {
         return this.logDestination;
     }
@@ -66,11 +70,23 @@ public final class LoggingConfigurationLogDestinationConfigArgs extends com.pulu
             $ = new LoggingConfigurationLogDestinationConfigArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param logDestination A key-value pair to configure the logDestinations.
+         * 
+         * @return builder
+         * 
+         */
         public Builder logDestination(Output<Object> logDestination) {
             $.logDestination = logDestination;
             return this;
         }
 
+        /**
+         * @param logDestination A key-value pair to configure the logDestinations.
+         * 
+         * @return builder
+         * 
+         */
         public Builder logDestination(Object logDestination) {
             return logDestination(Output.of(logDestination));
         }

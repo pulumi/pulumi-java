@@ -26,6 +26,10 @@ public final class InstanceState extends com.pulumi.resources.InvokeArgs {
     @Import(name="code")
     private @Nullable Integer code;
 
+    /**
+     * @return Status code of the Instance.
+     * 
+     */
     public Optional<Integer> code() {
         return Optional.ofNullable(this.code);
     }
@@ -37,6 +41,10 @@ public final class InstanceState extends com.pulumi.resources.InvokeArgs {
     @Import(name="name")
     private @Nullable String name;
 
+    /**
+     * @return Status code of the Instance.
+     * 
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
@@ -66,11 +74,23 @@ public final class InstanceState extends com.pulumi.resources.InvokeArgs {
             $ = new InstanceState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param code Status code of the Instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder code(@Nullable Integer code) {
             $.code = code;
             return this;
         }
 
+        /**
+         * @param name Status code of the Instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable String name) {
             $.name = name;
             return this;

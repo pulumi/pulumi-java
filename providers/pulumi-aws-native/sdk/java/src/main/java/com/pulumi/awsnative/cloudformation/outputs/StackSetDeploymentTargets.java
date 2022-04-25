@@ -12,12 +12,12 @@ import javax.annotation.Nullable;
 @CustomType
 public final class StackSetDeploymentTargets {
     /**
-     * AWS accounts that you want to create stack instances in the specified Region(s) for.
+     * @return AWS accounts that you want to create stack instances in the specified Region(s) for.
      * 
      */
     private final @Nullable List<String> accounts;
     /**
-     * The organization root ID or organizational unit (OU) IDs to which StackSets deploys.
+     * @return The organization root ID or organizational unit (OU) IDs to which StackSets deploys.
      * 
      */
     private final @Nullable List<String> organizationalUnitIds;
@@ -31,16 +31,16 @@ public final class StackSetDeploymentTargets {
     }
 
     /**
-     * AWS accounts that you want to create stack instances in the specified Region(s) for.
+     * @return AWS accounts that you want to create stack instances in the specified Region(s) for.
      * 
-    */
+     */
     public List<String> accounts() {
         return this.accounts == null ? List.of() : this.accounts;
     }
     /**
-     * The organization root ID or organizational unit (OU) IDs to which StackSets deploys.
+     * @return The organization root ID or organizational unit (OU) IDs to which StackSets deploys.
      * 
-    */
+     */
     public List<String> organizationalUnitIds() {
         return this.organizationalUnitIds == null ? List.of() : this.organizationalUnitIds;
     }

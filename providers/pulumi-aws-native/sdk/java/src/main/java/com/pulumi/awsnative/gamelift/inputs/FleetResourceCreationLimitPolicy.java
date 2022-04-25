@@ -27,6 +27,10 @@ public final class FleetResourceCreationLimitPolicy extends com.pulumi.resources
     @Import(name="newGameSessionsPerCreator")
     private @Nullable Integer newGameSessionsPerCreator;
 
+    /**
+     * @return The maximum number of game sessions that an individual can create during the policy period.
+     * 
+     */
     public Optional<Integer> newGameSessionsPerCreator() {
         return Optional.ofNullable(this.newGameSessionsPerCreator);
     }
@@ -38,6 +42,10 @@ public final class FleetResourceCreationLimitPolicy extends com.pulumi.resources
     @Import(name="policyPeriodInMinutes")
     private @Nullable Integer policyPeriodInMinutes;
 
+    /**
+     * @return The time span used in evaluating the resource creation limit policy.
+     * 
+     */
     public Optional<Integer> policyPeriodInMinutes() {
         return Optional.ofNullable(this.policyPeriodInMinutes);
     }
@@ -67,11 +75,23 @@ public final class FleetResourceCreationLimitPolicy extends com.pulumi.resources
             $ = new FleetResourceCreationLimitPolicy(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param newGameSessionsPerCreator The maximum number of game sessions that an individual can create during the policy period.
+         * 
+         * @return builder
+         * 
+         */
         public Builder newGameSessionsPerCreator(@Nullable Integer newGameSessionsPerCreator) {
             $.newGameSessionsPerCreator = newGameSessionsPerCreator;
             return this;
         }
 
+        /**
+         * @param policyPeriodInMinutes The time span used in evaluating the resource creation limit policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder policyPeriodInMinutes(@Nullable Integer policyPeriodInMinutes) {
             $.policyPeriodInMinutes = policyPeriodInMinutes;
             return this;

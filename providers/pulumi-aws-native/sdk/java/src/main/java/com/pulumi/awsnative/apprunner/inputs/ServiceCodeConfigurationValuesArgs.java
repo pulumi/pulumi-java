@@ -29,6 +29,10 @@ public final class ServiceCodeConfigurationValuesArgs extends com.pulumi.resourc
     @Import(name="buildCommand")
     private @Nullable Output<String> buildCommand;
 
+    /**
+     * @return Build Command
+     * 
+     */
     public Optional<Output<String>> buildCommand() {
         return Optional.ofNullable(this.buildCommand);
     }
@@ -40,6 +44,10 @@ public final class ServiceCodeConfigurationValuesArgs extends com.pulumi.resourc
     @Import(name="port")
     private @Nullable Output<String> port;
 
+    /**
+     * @return Port
+     * 
+     */
     public Optional<Output<String>> port() {
         return Optional.ofNullable(this.port);
     }
@@ -51,6 +59,10 @@ public final class ServiceCodeConfigurationValuesArgs extends com.pulumi.resourc
     @Import(name="runtime", required=true)
     private Output<ServiceCodeConfigurationValuesRuntime> runtime;
 
+    /**
+     * @return Runtime
+     * 
+     */
     public Output<ServiceCodeConfigurationValuesRuntime> runtime() {
         return this.runtime;
     }
@@ -69,6 +81,10 @@ public final class ServiceCodeConfigurationValuesArgs extends com.pulumi.resourc
     @Import(name="startCommand")
     private @Nullable Output<String> startCommand;
 
+    /**
+     * @return Start Command
+     * 
+     */
     public Optional<Output<String>> startCommand() {
         return Optional.ofNullable(this.startCommand);
     }
@@ -101,29 +117,65 @@ public final class ServiceCodeConfigurationValuesArgs extends com.pulumi.resourc
             $ = new ServiceCodeConfigurationValuesArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param buildCommand Build Command
+         * 
+         * @return builder
+         * 
+         */
         public Builder buildCommand(@Nullable Output<String> buildCommand) {
             $.buildCommand = buildCommand;
             return this;
         }
 
+        /**
+         * @param buildCommand Build Command
+         * 
+         * @return builder
+         * 
+         */
         public Builder buildCommand(String buildCommand) {
             return buildCommand(Output.of(buildCommand));
         }
 
+        /**
+         * @param port Port
+         * 
+         * @return builder
+         * 
+         */
         public Builder port(@Nullable Output<String> port) {
             $.port = port;
             return this;
         }
 
+        /**
+         * @param port Port
+         * 
+         * @return builder
+         * 
+         */
         public Builder port(String port) {
             return port(Output.of(port));
         }
 
+        /**
+         * @param runtime Runtime
+         * 
+         * @return builder
+         * 
+         */
         public Builder runtime(Output<ServiceCodeConfigurationValuesRuntime> runtime) {
             $.runtime = runtime;
             return this;
         }
 
+        /**
+         * @param runtime Runtime
+         * 
+         * @return builder
+         * 
+         */
         public Builder runtime(ServiceCodeConfigurationValuesRuntime runtime) {
             return runtime(Output.of(runtime));
         }
@@ -141,11 +193,23 @@ public final class ServiceCodeConfigurationValuesArgs extends com.pulumi.resourc
             return runtimeEnvironmentVariables(List.of(runtimeEnvironmentVariables));
         }
 
+        /**
+         * @param startCommand Start Command
+         * 
+         * @return builder
+         * 
+         */
         public Builder startCommand(@Nullable Output<String> startCommand) {
             $.startCommand = startCommand;
             return this;
         }
 
+        /**
+         * @param startCommand Start Command
+         * 
+         * @return builder
+         * 
+         */
         public Builder startCommand(String startCommand) {
             return startCommand(Output.of(startCommand));
         }

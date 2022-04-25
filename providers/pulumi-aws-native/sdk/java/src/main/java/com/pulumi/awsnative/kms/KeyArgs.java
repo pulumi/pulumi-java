@@ -29,6 +29,10 @@ public final class KeyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return A description of the CMK. Use a description that helps you to distinguish this CMK from others in the account, such as its intended use.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -40,6 +44,10 @@ public final class KeyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="enableKeyRotation")
     private @Nullable Output<Boolean> enableKeyRotation;
 
+    /**
+     * @return Enables automatic rotation of the key material for the specified customer master key (CMK). By default, automation key rotation is not enabled.
+     * 
+     */
     public Optional<Output<Boolean>> enableKeyRotation() {
         return Optional.ofNullable(this.enableKeyRotation);
     }
@@ -51,6 +59,10 @@ public final class KeyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="enabled")
     private @Nullable Output<Boolean> enabled;
 
+    /**
+     * @return Specifies whether the customer master key (CMK) is enabled. Disabled CMKs cannot be used in cryptographic operations.
+     * 
+     */
     public Optional<Output<Boolean>> enabled() {
         return Optional.ofNullable(this.enabled);
     }
@@ -62,6 +74,10 @@ public final class KeyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="keyPolicy", required=true)
     private Output<Object> keyPolicy;
 
+    /**
+     * @return The key policy that authorizes use of the CMK. The key policy must observe the following rules.
+     * 
+     */
     public Output<Object> keyPolicy() {
         return this.keyPolicy;
     }
@@ -73,6 +89,10 @@ public final class KeyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="keySpec")
     private @Nullable Output<KeySpec> keySpec;
 
+    /**
+     * @return Specifies the type of CMK to create. The default value is SYMMETRIC_DEFAULT. This property is required only for asymmetric CMKs. You can&#39;t change the KeySpec value after the CMK is created.
+     * 
+     */
     public Optional<Output<KeySpec>> keySpec() {
         return Optional.ofNullable(this.keySpec);
     }
@@ -84,6 +104,10 @@ public final class KeyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="keyUsage")
     private @Nullable Output<KeyUsage> keyUsage;
 
+    /**
+     * @return Determines the cryptographic operations for which you can use the CMK. The default value is ENCRYPT_DECRYPT. This property is required only for asymmetric CMKs. You can&#39;t change the KeyUsage value after the CMK is created.
+     * 
+     */
     public Optional<Output<KeyUsage>> keyUsage() {
         return Optional.ofNullable(this.keyUsage);
     }
@@ -95,6 +119,10 @@ public final class KeyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="multiRegion")
     private @Nullable Output<Boolean> multiRegion;
 
+    /**
+     * @return Specifies whether the CMK should be Multi-Region. You can&#39;t change the MultiRegion value after the CMK is created.
+     * 
+     */
     public Optional<Output<Boolean>> multiRegion() {
         return Optional.ofNullable(this.multiRegion);
     }
@@ -106,6 +134,10 @@ public final class KeyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="pendingWindowInDays")
     private @Nullable Output<Integer> pendingWindowInDays;
 
+    /**
+     * @return Specifies the number of days in the waiting period before AWS KMS deletes a CMK that has been removed from a CloudFormation stack. Enter a value between 7 and 30 days. The default value is 30 days.
+     * 
+     */
     public Optional<Output<Integer>> pendingWindowInDays() {
         return Optional.ofNullable(this.pendingWindowInDays);
     }
@@ -117,6 +149,10 @@ public final class KeyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<List<KeyTagArgs>> tags;
 
+    /**
+     * @return An array of key-value pairs to apply to this resource.
+     * 
+     */
     public Optional<Output<List<KeyTagArgs>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -153,87 +189,201 @@ public final class KeyArgs extends com.pulumi.resources.ResourceArgs {
             $ = new KeyArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param description A description of the CMK. Use a description that helps you to distinguish this CMK from others in the account, such as its intended use.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description A description of the CMK. Use a description that helps you to distinguish this CMK from others in the account, such as its intended use.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param enableKeyRotation Enables automatic rotation of the key material for the specified customer master key (CMK). By default, automation key rotation is not enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableKeyRotation(@Nullable Output<Boolean> enableKeyRotation) {
             $.enableKeyRotation = enableKeyRotation;
             return this;
         }
 
+        /**
+         * @param enableKeyRotation Enables automatic rotation of the key material for the specified customer master key (CMK). By default, automation key rotation is not enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableKeyRotation(Boolean enableKeyRotation) {
             return enableKeyRotation(Output.of(enableKeyRotation));
         }
 
+        /**
+         * @param enabled Specifies whether the customer master key (CMK) is enabled. Disabled CMKs cannot be used in cryptographic operations.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabled(@Nullable Output<Boolean> enabled) {
             $.enabled = enabled;
             return this;
         }
 
+        /**
+         * @param enabled Specifies whether the customer master key (CMK) is enabled. Disabled CMKs cannot be used in cryptographic operations.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabled(Boolean enabled) {
             return enabled(Output.of(enabled));
         }
 
+        /**
+         * @param keyPolicy The key policy that authorizes use of the CMK. The key policy must observe the following rules.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyPolicy(Output<Object> keyPolicy) {
             $.keyPolicy = keyPolicy;
             return this;
         }
 
+        /**
+         * @param keyPolicy The key policy that authorizes use of the CMK. The key policy must observe the following rules.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyPolicy(Object keyPolicy) {
             return keyPolicy(Output.of(keyPolicy));
         }
 
+        /**
+         * @param keySpec Specifies the type of CMK to create. The default value is SYMMETRIC_DEFAULT. This property is required only for asymmetric CMKs. You can&#39;t change the KeySpec value after the CMK is created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keySpec(@Nullable Output<KeySpec> keySpec) {
             $.keySpec = keySpec;
             return this;
         }
 
+        /**
+         * @param keySpec Specifies the type of CMK to create. The default value is SYMMETRIC_DEFAULT. This property is required only for asymmetric CMKs. You can&#39;t change the KeySpec value after the CMK is created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keySpec(KeySpec keySpec) {
             return keySpec(Output.of(keySpec));
         }
 
+        /**
+         * @param keyUsage Determines the cryptographic operations for which you can use the CMK. The default value is ENCRYPT_DECRYPT. This property is required only for asymmetric CMKs. You can&#39;t change the KeyUsage value after the CMK is created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyUsage(@Nullable Output<KeyUsage> keyUsage) {
             $.keyUsage = keyUsage;
             return this;
         }
 
+        /**
+         * @param keyUsage Determines the cryptographic operations for which you can use the CMK. The default value is ENCRYPT_DECRYPT. This property is required only for asymmetric CMKs. You can&#39;t change the KeyUsage value after the CMK is created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyUsage(KeyUsage keyUsage) {
             return keyUsage(Output.of(keyUsage));
         }
 
+        /**
+         * @param multiRegion Specifies whether the CMK should be Multi-Region. You can&#39;t change the MultiRegion value after the CMK is created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder multiRegion(@Nullable Output<Boolean> multiRegion) {
             $.multiRegion = multiRegion;
             return this;
         }
 
+        /**
+         * @param multiRegion Specifies whether the CMK should be Multi-Region. You can&#39;t change the MultiRegion value after the CMK is created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder multiRegion(Boolean multiRegion) {
             return multiRegion(Output.of(multiRegion));
         }
 
+        /**
+         * @param pendingWindowInDays Specifies the number of days in the waiting period before AWS KMS deletes a CMK that has been removed from a CloudFormation stack. Enter a value between 7 and 30 days. The default value is 30 days.
+         * 
+         * @return builder
+         * 
+         */
         public Builder pendingWindowInDays(@Nullable Output<Integer> pendingWindowInDays) {
             $.pendingWindowInDays = pendingWindowInDays;
             return this;
         }
 
+        /**
+         * @param pendingWindowInDays Specifies the number of days in the waiting period before AWS KMS deletes a CMK that has been removed from a CloudFormation stack. Enter a value between 7 and 30 days. The default value is 30 days.
+         * 
+         * @return builder
+         * 
+         */
         public Builder pendingWindowInDays(Integer pendingWindowInDays) {
             return pendingWindowInDays(Output.of(pendingWindowInDays));
         }
 
+        /**
+         * @param tags An array of key-value pairs to apply to this resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<List<KeyTagArgs>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags An array of key-value pairs to apply to this resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(List<KeyTagArgs> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param tags An array of key-value pairs to apply to this resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(KeyTagArgs... tags) {
             return tags(List.of(tags));
         }

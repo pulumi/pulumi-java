@@ -19,6 +19,10 @@ public final class ApplicationInstanceTag extends com.pulumi.resources.InvokeArg
     @Import(name="key", required=true)
     private String key;
 
+    /**
+     * @return A string used to identify this tag
+     * 
+     */
     public String key() {
         return this.key;
     }
@@ -30,6 +34,10 @@ public final class ApplicationInstanceTag extends com.pulumi.resources.InvokeArg
     @Import(name="value", required=true)
     private String value;
 
+    /**
+     * @return A string containing the value for the tag
+     * 
+     */
     public String value() {
         return this.value;
     }
@@ -59,11 +67,23 @@ public final class ApplicationInstanceTag extends com.pulumi.resources.InvokeArg
             $ = new ApplicationInstanceTag(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param key A string used to identify this tag
+         * 
+         * @return builder
+         * 
+         */
         public Builder key(String key) {
             $.key = key;
             return this;
         }
 
+        /**
+         * @param value A string containing the value for the tag
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(String value) {
             $.value = value;
             return this;

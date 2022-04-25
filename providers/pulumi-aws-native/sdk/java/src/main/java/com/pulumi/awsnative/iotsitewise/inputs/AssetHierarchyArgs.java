@@ -24,6 +24,10 @@ public final class AssetHierarchyArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="childAssetId", required=true)
     private Output<String> childAssetId;
 
+    /**
+     * @return The ID of the child asset to be associated.
+     * 
+     */
     public Output<String> childAssetId() {
         return this.childAssetId;
     }
@@ -35,6 +39,10 @@ public final class AssetHierarchyArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="logicalId", required=true)
     private Output<String> logicalId;
 
+    /**
+     * @return The LogicalID of a hierarchy in the parent asset&#39;s model.
+     * 
+     */
     public Output<String> logicalId() {
         return this.logicalId;
     }
@@ -64,20 +72,44 @@ public final class AssetHierarchyArgs extends com.pulumi.resources.ResourceArgs 
             $ = new AssetHierarchyArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param childAssetId The ID of the child asset to be associated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder childAssetId(Output<String> childAssetId) {
             $.childAssetId = childAssetId;
             return this;
         }
 
+        /**
+         * @param childAssetId The ID of the child asset to be associated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder childAssetId(String childAssetId) {
             return childAssetId(Output.of(childAssetId));
         }
 
+        /**
+         * @param logicalId The LogicalID of a hierarchy in the parent asset&#39;s model.
+         * 
+         * @return builder
+         * 
+         */
         public Builder logicalId(Output<String> logicalId) {
             $.logicalId = logicalId;
             return this;
         }
 
+        /**
+         * @param logicalId The LogicalID of a hierarchy in the parent asset&#39;s model.
+         * 
+         * @return builder
+         * 
+         */
         public Builder logicalId(String logicalId) {
             return logicalId(Output.of(logicalId));
         }

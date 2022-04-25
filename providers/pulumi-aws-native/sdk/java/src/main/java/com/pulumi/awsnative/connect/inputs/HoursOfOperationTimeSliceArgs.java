@@ -24,6 +24,10 @@ public final class HoursOfOperationTimeSliceArgs extends com.pulumi.resources.Re
     @Import(name="hours", required=true)
     private Output<Integer> hours;
 
+    /**
+     * @return The hours.
+     * 
+     */
     public Output<Integer> hours() {
         return this.hours;
     }
@@ -35,6 +39,10 @@ public final class HoursOfOperationTimeSliceArgs extends com.pulumi.resources.Re
     @Import(name="minutes", required=true)
     private Output<Integer> minutes;
 
+    /**
+     * @return The minutes.
+     * 
+     */
     public Output<Integer> minutes() {
         return this.minutes;
     }
@@ -64,20 +72,44 @@ public final class HoursOfOperationTimeSliceArgs extends com.pulumi.resources.Re
             $ = new HoursOfOperationTimeSliceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param hours The hours.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hours(Output<Integer> hours) {
             $.hours = hours;
             return this;
         }
 
+        /**
+         * @param hours The hours.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hours(Integer hours) {
             return hours(Output.of(hours));
         }
 
+        /**
+         * @param minutes The minutes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder minutes(Output<Integer> minutes) {
             $.minutes = minutes;
             return this;
         }
 
+        /**
+         * @param minutes The minutes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder minutes(Integer minutes) {
             return minutes(Output.of(minutes));
         }

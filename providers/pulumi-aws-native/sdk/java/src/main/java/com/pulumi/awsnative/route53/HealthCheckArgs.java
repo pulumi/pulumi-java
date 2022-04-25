@@ -24,6 +24,10 @@ public final class HealthCheckArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="healthCheckConfig", required=true)
     private Output<HealthCheckConfigPropertiesArgs> healthCheckConfig;
 
+    /**
+     * @return A complex type that contains information about the health check.
+     * 
+     */
     public Output<HealthCheckConfigPropertiesArgs> healthCheckConfig() {
         return this.healthCheckConfig;
     }
@@ -35,6 +39,10 @@ public final class HealthCheckArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="healthCheckTags")
     private @Nullable Output<List<HealthCheckTagArgs>> healthCheckTags;
 
+    /**
+     * @return An array of key-value pairs to apply to this resource.
+     * 
+     */
     public Optional<Output<List<HealthCheckTagArgs>>> healthCheckTags() {
         return Optional.ofNullable(this.healthCheckTags);
     }
@@ -64,24 +72,54 @@ public final class HealthCheckArgs extends com.pulumi.resources.ResourceArgs {
             $ = new HealthCheckArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param healthCheckConfig A complex type that contains information about the health check.
+         * 
+         * @return builder
+         * 
+         */
         public Builder healthCheckConfig(Output<HealthCheckConfigPropertiesArgs> healthCheckConfig) {
             $.healthCheckConfig = healthCheckConfig;
             return this;
         }
 
+        /**
+         * @param healthCheckConfig A complex type that contains information about the health check.
+         * 
+         * @return builder
+         * 
+         */
         public Builder healthCheckConfig(HealthCheckConfigPropertiesArgs healthCheckConfig) {
             return healthCheckConfig(Output.of(healthCheckConfig));
         }
 
+        /**
+         * @param healthCheckTags An array of key-value pairs to apply to this resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder healthCheckTags(@Nullable Output<List<HealthCheckTagArgs>> healthCheckTags) {
             $.healthCheckTags = healthCheckTags;
             return this;
         }
 
+        /**
+         * @param healthCheckTags An array of key-value pairs to apply to this resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder healthCheckTags(List<HealthCheckTagArgs> healthCheckTags) {
             return healthCheckTags(Output.of(healthCheckTags));
         }
 
+        /**
+         * @param healthCheckTags An array of key-value pairs to apply to this resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder healthCheckTags(HealthCheckTagArgs... healthCheckTags) {
             return healthCheckTags(List.of(healthCheckTags));
         }

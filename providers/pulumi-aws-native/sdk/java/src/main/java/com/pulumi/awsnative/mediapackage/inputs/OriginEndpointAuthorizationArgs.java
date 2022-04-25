@@ -24,6 +24,10 @@ public final class OriginEndpointAuthorizationArgs extends com.pulumi.resources.
     @Import(name="cdnIdentifierSecret", required=true)
     private Output<String> cdnIdentifierSecret;
 
+    /**
+     * @return The Amazon Resource Name (ARN) for the secret in Secrets Manager that your Content Distribution Network (CDN) uses for authorization to access your endpoint.
+     * 
+     */
     public Output<String> cdnIdentifierSecret() {
         return this.cdnIdentifierSecret;
     }
@@ -35,6 +39,10 @@ public final class OriginEndpointAuthorizationArgs extends com.pulumi.resources.
     @Import(name="secretsRoleArn", required=true)
     private Output<String> secretsRoleArn;
 
+    /**
+     * @return The Amazon Resource Name (ARN) for the IAM role that allows MediaPackage to communicate with AWS Secrets Manager.
+     * 
+     */
     public Output<String> secretsRoleArn() {
         return this.secretsRoleArn;
     }
@@ -64,20 +72,44 @@ public final class OriginEndpointAuthorizationArgs extends com.pulumi.resources.
             $ = new OriginEndpointAuthorizationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param cdnIdentifierSecret The Amazon Resource Name (ARN) for the secret in Secrets Manager that your Content Distribution Network (CDN) uses for authorization to access your endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cdnIdentifierSecret(Output<String> cdnIdentifierSecret) {
             $.cdnIdentifierSecret = cdnIdentifierSecret;
             return this;
         }
 
+        /**
+         * @param cdnIdentifierSecret The Amazon Resource Name (ARN) for the secret in Secrets Manager that your Content Distribution Network (CDN) uses for authorization to access your endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cdnIdentifierSecret(String cdnIdentifierSecret) {
             return cdnIdentifierSecret(Output.of(cdnIdentifierSecret));
         }
 
+        /**
+         * @param secretsRoleArn The Amazon Resource Name (ARN) for the IAM role that allows MediaPackage to communicate with AWS Secrets Manager.
+         * 
+         * @return builder
+         * 
+         */
         public Builder secretsRoleArn(Output<String> secretsRoleArn) {
             $.secretsRoleArn = secretsRoleArn;
             return this;
         }
 
+        /**
+         * @param secretsRoleArn The Amazon Resource Name (ARN) for the IAM role that allows MediaPackage to communicate with AWS Secrets Manager.
+         * 
+         * @return builder
+         * 
+         */
         public Builder secretsRoleArn(String secretsRoleArn) {
             return secretsRoleArn(Output.of(secretsRoleArn));
         }

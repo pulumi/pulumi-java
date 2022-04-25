@@ -38,6 +38,11 @@ public final class LaunchProfileStreamConfiguration extends com.pulumi.resources
     @Import(name="ec2InstanceTypes", required=true)
     private List<LaunchProfileStreamingInstanceType> ec2InstanceTypes;
 
+    /**
+     * @return &lt;p&gt;The EC2 instance types that users can select from when launching a streaming session
+     *             with this launch profile.&lt;/p&gt;
+     * 
+     */
     public List<LaunchProfileStreamingInstanceType> ec2InstanceTypes() {
         return this.ec2InstanceTypes;
     }
@@ -52,6 +57,13 @@ public final class LaunchProfileStreamConfiguration extends com.pulumi.resources
     @Import(name="maxSessionLengthInMinutes")
     private @Nullable Double maxSessionLengthInMinutes;
 
+    /**
+     * @return &lt;p&gt;The length of time, in minutes, that a streaming session can be active before it is
+     *             stopped or terminated. After this point, Nimble Studio automatically terminates or
+     *             stops the session. The default length of time is 690 minutes, and the maximum length of
+     *             time is 30 days.&lt;/p&gt;
+     * 
+     */
     public Optional<Double> maxSessionLengthInMinutes() {
         return Optional.ofNullable(this.maxSessionLengthInMinutes);
     }
@@ -72,6 +84,19 @@ public final class LaunchProfileStreamConfiguration extends com.pulumi.resources
     @Import(name="maxStoppedSessionLengthInMinutes")
     private @Nullable Double maxStoppedSessionLengthInMinutes;
 
+    /**
+     * @return &lt;p&gt;Integer that determines if you can start and stop your sessions and how long a session
+     *             can stay in the STOPPED state. The default value is 0. The maximum value is 5760.&lt;/p&gt;
+     *         &lt;p&gt;If the value is missing or set to 0, your sessions can’t be stopped. If you then call
+     *             StopStreamingSession, the session fails. If the time that a session stays in the READY
+     *             state exceeds the maxSessionLengthInMinutes value, the session will automatically be
+     *             terminated by AWS (instead of stopped).&lt;/p&gt;
+     *         &lt;p&gt;If the value is set to a positive number, the session can be stopped. You can call
+     *             StopStreamingSession to stop sessions in the READY state. If the time that a session
+     *             stays in the READY state exceeds the maxSessionLengthInMinutes value, the session will
+     *             automatically be stopped by AWS (instead of terminated).&lt;/p&gt;
+     * 
+     */
     public Optional<Double> maxStoppedSessionLengthInMinutes() {
         return Optional.ofNullable(this.maxStoppedSessionLengthInMinutes);
     }
@@ -91,6 +116,11 @@ public final class LaunchProfileStreamConfiguration extends com.pulumi.resources
     @Import(name="streamingImageIds", required=true)
     private List<String> streamingImageIds;
 
+    /**
+     * @return &lt;p&gt;The streaming images that users can select from when launching a streaming session
+     *             with this launch profile.&lt;/p&gt;
+     * 
+     */
     public List<String> streamingImageIds() {
         return this.streamingImageIds;
     }
@@ -129,20 +159,58 @@ public final class LaunchProfileStreamConfiguration extends com.pulumi.resources
             return this;
         }
 
+        /**
+         * @param ec2InstanceTypes &lt;p&gt;The EC2 instance types that users can select from when launching a streaming session
+         *             with this launch profile.&lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder ec2InstanceTypes(List<LaunchProfileStreamingInstanceType> ec2InstanceTypes) {
             $.ec2InstanceTypes = ec2InstanceTypes;
             return this;
         }
 
+        /**
+         * @param ec2InstanceTypes &lt;p&gt;The EC2 instance types that users can select from when launching a streaming session
+         *             with this launch profile.&lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder ec2InstanceTypes(LaunchProfileStreamingInstanceType... ec2InstanceTypes) {
             return ec2InstanceTypes(List.of(ec2InstanceTypes));
         }
 
+        /**
+         * @param maxSessionLengthInMinutes &lt;p&gt;The length of time, in minutes, that a streaming session can be active before it is
+         *             stopped or terminated. After this point, Nimble Studio automatically terminates or
+         *             stops the session. The default length of time is 690 minutes, and the maximum length of
+         *             time is 30 days.&lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxSessionLengthInMinutes(@Nullable Double maxSessionLengthInMinutes) {
             $.maxSessionLengthInMinutes = maxSessionLengthInMinutes;
             return this;
         }
 
+        /**
+         * @param maxStoppedSessionLengthInMinutes &lt;p&gt;Integer that determines if you can start and stop your sessions and how long a session
+         *             can stay in the STOPPED state. The default value is 0. The maximum value is 5760.&lt;/p&gt;
+         *         &lt;p&gt;If the value is missing or set to 0, your sessions can’t be stopped. If you then call
+         *             StopStreamingSession, the session fails. If the time that a session stays in the READY
+         *             state exceeds the maxSessionLengthInMinutes value, the session will automatically be
+         *             terminated by AWS (instead of stopped).&lt;/p&gt;
+         *         &lt;p&gt;If the value is set to a positive number, the session can be stopped. You can call
+         *             StopStreamingSession to stop sessions in the READY state. If the time that a session
+         *             stays in the READY state exceeds the maxSessionLengthInMinutes value, the session will
+         *             automatically be stopped by AWS (instead of terminated).&lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxStoppedSessionLengthInMinutes(@Nullable Double maxStoppedSessionLengthInMinutes) {
             $.maxStoppedSessionLengthInMinutes = maxStoppedSessionLengthInMinutes;
             return this;
@@ -153,11 +221,25 @@ public final class LaunchProfileStreamConfiguration extends com.pulumi.resources
             return this;
         }
 
+        /**
+         * @param streamingImageIds &lt;p&gt;The streaming images that users can select from when launching a streaming session
+         *             with this launch profile.&lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder streamingImageIds(List<String> streamingImageIds) {
             $.streamingImageIds = streamingImageIds;
             return this;
         }
 
+        /**
+         * @param streamingImageIds &lt;p&gt;The streaming images that users can select from when launching a streaming session
+         *             with this launch profile.&lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder streamingImageIds(String... streamingImageIds) {
             return streamingImageIds(List.of(streamingImageIds));
         }

@@ -32,6 +32,10 @@ public final class OriginEndpointHlsManifest extends com.pulumi.resources.Invoke
     @Import(name="adMarkers")
     private @Nullable OriginEndpointHlsManifestAdMarkers adMarkers;
 
+    /**
+     * @return This setting controls how ad markers are included in the packaged OriginEndpoint. &#34;NONE&#34; will omit all SCTE-35 ad markers from the output. &#34;PASSTHROUGH&#34; causes the manifest to contain a copy of the SCTE-35 ad markers (comments) taken directly from the input HTTP Live Streaming (HLS) manifest. &#34;SCTE35_ENHANCED&#34; generates ad markers and blackout tags based on SCTE-35 messages in the input source. &#34;DATERANGE&#34; inserts EXT-X-DATERANGE tags to signal ad and program transition events in HLS and CMAF manifests. For this option, you must set a programDateTimeIntervalSeconds value that is greater than 0.
+     * 
+     */
     public Optional<OriginEndpointHlsManifestAdMarkers> adMarkers() {
         return Optional.ofNullable(this.adMarkers);
     }
@@ -43,6 +47,10 @@ public final class OriginEndpointHlsManifest extends com.pulumi.resources.Invoke
     @Import(name="adTriggers")
     private @Nullable List<OriginEndpointHlsManifestAdTriggersItem> adTriggers;
 
+    /**
+     * @return A list of SCTE-35 message types that are treated as ad markers in the output.  If empty, no ad markers are output.  Specify multiple items to create ad markers for all of the included message types.
+     * 
+     */
     public Optional<List<OriginEndpointHlsManifestAdTriggersItem>> adTriggers() {
         return Optional.ofNullable(this.adTriggers);
     }
@@ -61,6 +69,10 @@ public final class OriginEndpointHlsManifest extends com.pulumi.resources.Invoke
     @Import(name="id", required=true)
     private String id;
 
+    /**
+     * @return The ID of the manifest. The ID must be unique within the OriginEndpoint and it cannot be changed after it is created.
+     * 
+     */
     public String id() {
         return this.id;
     }
@@ -72,6 +84,10 @@ public final class OriginEndpointHlsManifest extends com.pulumi.resources.Invoke
     @Import(name="includeIframeOnlyStream")
     private @Nullable Boolean includeIframeOnlyStream;
 
+    /**
+     * @return When enabled, an I-Frame only stream will be included in the output.
+     * 
+     */
     public Optional<Boolean> includeIframeOnlyStream() {
         return Optional.ofNullable(this.includeIframeOnlyStream);
     }
@@ -83,6 +99,10 @@ public final class OriginEndpointHlsManifest extends com.pulumi.resources.Invoke
     @Import(name="manifestName")
     private @Nullable String manifestName;
 
+    /**
+     * @return An optional short string appended to the end of the OriginEndpoint URL. If not specified, defaults to the manifestName for the OriginEndpoint.
+     * 
+     */
     public Optional<String> manifestName() {
         return Optional.ofNullable(this.manifestName);
     }
@@ -94,6 +114,10 @@ public final class OriginEndpointHlsManifest extends com.pulumi.resources.Invoke
     @Import(name="playlistType")
     private @Nullable OriginEndpointHlsManifestPlaylistType playlistType;
 
+    /**
+     * @return The HTTP Live Streaming (HLS) playlist type. When either &#34;EVENT&#34; or &#34;VOD&#34; is specified, a corresponding EXT-X-PLAYLIST-TYPE entry will be included in the media playlist.
+     * 
+     */
     public Optional<OriginEndpointHlsManifestPlaylistType> playlistType() {
         return Optional.ofNullable(this.playlistType);
     }
@@ -105,6 +129,10 @@ public final class OriginEndpointHlsManifest extends com.pulumi.resources.Invoke
     @Import(name="playlistWindowSeconds")
     private @Nullable Integer playlistWindowSeconds;
 
+    /**
+     * @return Time window (in seconds) contained in each parent manifest.
+     * 
+     */
     public Optional<Integer> playlistWindowSeconds() {
         return Optional.ofNullable(this.playlistWindowSeconds);
     }
@@ -116,6 +144,10 @@ public final class OriginEndpointHlsManifest extends com.pulumi.resources.Invoke
     @Import(name="programDateTimeIntervalSeconds")
     private @Nullable Integer programDateTimeIntervalSeconds;
 
+    /**
+     * @return The interval (in seconds) between each EXT-X-PROGRAM-DATE-TIME tag inserted into manifests. Additionally, when an interval is specified ID3Timed Metadata messages will be generated every 5 seconds using the ingest time of the content. If the interval is not specified, or set to 0, then no EXT-X-PROGRAM-DATE-TIME tags will be inserted into manifests and no ID3Timed Metadata messages will be generated. Note that irrespective of this parameter, if any ID3 Timed Metadata is found in HTTP Live Streaming (HLS) input, it will be passed through to HLS output.
+     * 
+     */
     public Optional<Integer> programDateTimeIntervalSeconds() {
         return Optional.ofNullable(this.programDateTimeIntervalSeconds);
     }
@@ -127,6 +159,10 @@ public final class OriginEndpointHlsManifest extends com.pulumi.resources.Invoke
     @Import(name="url")
     private @Nullable String url;
 
+    /**
+     * @return The URL of the packaged OriginEndpoint for consumption.
+     * 
+     */
     public Optional<String> url() {
         return Optional.ofNullable(this.url);
     }
@@ -164,16 +200,34 @@ public final class OriginEndpointHlsManifest extends com.pulumi.resources.Invoke
             $ = new OriginEndpointHlsManifest(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param adMarkers This setting controls how ad markers are included in the packaged OriginEndpoint. &#34;NONE&#34; will omit all SCTE-35 ad markers from the output. &#34;PASSTHROUGH&#34; causes the manifest to contain a copy of the SCTE-35 ad markers (comments) taken directly from the input HTTP Live Streaming (HLS) manifest. &#34;SCTE35_ENHANCED&#34; generates ad markers and blackout tags based on SCTE-35 messages in the input source. &#34;DATERANGE&#34; inserts EXT-X-DATERANGE tags to signal ad and program transition events in HLS and CMAF manifests. For this option, you must set a programDateTimeIntervalSeconds value that is greater than 0.
+         * 
+         * @return builder
+         * 
+         */
         public Builder adMarkers(@Nullable OriginEndpointHlsManifestAdMarkers adMarkers) {
             $.adMarkers = adMarkers;
             return this;
         }
 
+        /**
+         * @param adTriggers A list of SCTE-35 message types that are treated as ad markers in the output.  If empty, no ad markers are output.  Specify multiple items to create ad markers for all of the included message types.
+         * 
+         * @return builder
+         * 
+         */
         public Builder adTriggers(@Nullable List<OriginEndpointHlsManifestAdTriggersItem> adTriggers) {
             $.adTriggers = adTriggers;
             return this;
         }
 
+        /**
+         * @param adTriggers A list of SCTE-35 message types that are treated as ad markers in the output.  If empty, no ad markers are output.  Specify multiple items to create ad markers for all of the included message types.
+         * 
+         * @return builder
+         * 
+         */
         public Builder adTriggers(OriginEndpointHlsManifestAdTriggersItem... adTriggers) {
             return adTriggers(List.of(adTriggers));
         }
@@ -183,36 +237,78 @@ public final class OriginEndpointHlsManifest extends com.pulumi.resources.Invoke
             return this;
         }
 
+        /**
+         * @param id The ID of the manifest. The ID must be unique within the OriginEndpoint and it cannot be changed after it is created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param includeIframeOnlyStream When enabled, an I-Frame only stream will be included in the output.
+         * 
+         * @return builder
+         * 
+         */
         public Builder includeIframeOnlyStream(@Nullable Boolean includeIframeOnlyStream) {
             $.includeIframeOnlyStream = includeIframeOnlyStream;
             return this;
         }
 
+        /**
+         * @param manifestName An optional short string appended to the end of the OriginEndpoint URL. If not specified, defaults to the manifestName for the OriginEndpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder manifestName(@Nullable String manifestName) {
             $.manifestName = manifestName;
             return this;
         }
 
+        /**
+         * @param playlistType The HTTP Live Streaming (HLS) playlist type. When either &#34;EVENT&#34; or &#34;VOD&#34; is specified, a corresponding EXT-X-PLAYLIST-TYPE entry will be included in the media playlist.
+         * 
+         * @return builder
+         * 
+         */
         public Builder playlistType(@Nullable OriginEndpointHlsManifestPlaylistType playlistType) {
             $.playlistType = playlistType;
             return this;
         }
 
+        /**
+         * @param playlistWindowSeconds Time window (in seconds) contained in each parent manifest.
+         * 
+         * @return builder
+         * 
+         */
         public Builder playlistWindowSeconds(@Nullable Integer playlistWindowSeconds) {
             $.playlistWindowSeconds = playlistWindowSeconds;
             return this;
         }
 
+        /**
+         * @param programDateTimeIntervalSeconds The interval (in seconds) between each EXT-X-PROGRAM-DATE-TIME tag inserted into manifests. Additionally, when an interval is specified ID3Timed Metadata messages will be generated every 5 seconds using the ingest time of the content. If the interval is not specified, or set to 0, then no EXT-X-PROGRAM-DATE-TIME tags will be inserted into manifests and no ID3Timed Metadata messages will be generated. Note that irrespective of this parameter, if any ID3 Timed Metadata is found in HTTP Live Streaming (HLS) input, it will be passed through to HLS output.
+         * 
+         * @return builder
+         * 
+         */
         public Builder programDateTimeIntervalSeconds(@Nullable Integer programDateTimeIntervalSeconds) {
             $.programDateTimeIntervalSeconds = programDateTimeIntervalSeconds;
             return this;
         }
 
+        /**
+         * @param url The URL of the packaged OriginEndpoint for consumption.
+         * 
+         * @return builder
+         * 
+         */
         public Builder url(@Nullable String url) {
             $.url = url;
             return this;

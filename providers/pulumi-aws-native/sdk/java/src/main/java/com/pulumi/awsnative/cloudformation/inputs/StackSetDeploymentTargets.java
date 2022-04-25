@@ -26,6 +26,10 @@ public final class StackSetDeploymentTargets extends com.pulumi.resources.Invoke
     @Import(name="accounts")
     private @Nullable List<String> accounts;
 
+    /**
+     * @return AWS accounts that you want to create stack instances in the specified Region(s) for.
+     * 
+     */
     public Optional<List<String>> accounts() {
         return Optional.ofNullable(this.accounts);
     }
@@ -37,6 +41,10 @@ public final class StackSetDeploymentTargets extends com.pulumi.resources.Invoke
     @Import(name="organizationalUnitIds")
     private @Nullable List<String> organizationalUnitIds;
 
+    /**
+     * @return The organization root ID or organizational unit (OU) IDs to which StackSets deploys.
+     * 
+     */
     public Optional<List<String>> organizationalUnitIds() {
         return Optional.ofNullable(this.organizationalUnitIds);
     }
@@ -66,20 +74,44 @@ public final class StackSetDeploymentTargets extends com.pulumi.resources.Invoke
             $ = new StackSetDeploymentTargets(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param accounts AWS accounts that you want to create stack instances in the specified Region(s) for.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accounts(@Nullable List<String> accounts) {
             $.accounts = accounts;
             return this;
         }
 
+        /**
+         * @param accounts AWS accounts that you want to create stack instances in the specified Region(s) for.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accounts(String... accounts) {
             return accounts(List.of(accounts));
         }
 
+        /**
+         * @param organizationalUnitIds The organization root ID or organizational unit (OU) IDs to which StackSets deploys.
+         * 
+         * @return builder
+         * 
+         */
         public Builder organizationalUnitIds(@Nullable List<String> organizationalUnitIds) {
             $.organizationalUnitIds = organizationalUnitIds;
             return this;
         }
 
+        /**
+         * @param organizationalUnitIds The organization root ID or organizational unit (OU) IDs to which StackSets deploys.
+         * 
+         * @return builder
+         * 
+         */
         public Builder organizationalUnitIds(String... organizationalUnitIds) {
             return organizationalUnitIds(List.of(organizationalUnitIds));
         }

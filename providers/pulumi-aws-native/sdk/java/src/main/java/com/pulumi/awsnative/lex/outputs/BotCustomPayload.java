@@ -10,7 +10,7 @@ import java.util.Objects;
 @CustomType
 public final class BotCustomPayload {
     /**
-     * The string that is sent to your application.
+     * @return The string that is sent to your application.
      * 
      */
     private final String value;
@@ -21,9 +21,9 @@ public final class BotCustomPayload {
     }
 
     /**
-     * The string that is sent to your application.
+     * @return The string that is sent to your application.
      * 
-    */
+     */
     public String value() {
         return this.value;
     }

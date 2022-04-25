@@ -12,12 +12,12 @@ import javax.annotation.Nullable;
 @CustomType
 public final class AlarmsProperties {
     /**
-     * The ARN of the IAM role that allows the alarm to perform actions and access AWS resources and services, such as AWS IoT Events.
+     * @return The ARN of the IAM role that allows the alarm to perform actions and access AWS resources and services, such as AWS IoT Events.
      * 
      */
     private final @Nullable String alarmRoleArn;
     /**
-     * The ARN of the AWS Lambda function that manages alarm notifications. For more information, see Managing alarm notifications in the AWS IoT Events Developer Guide.
+     * @return The ARN of the AWS Lambda function that manages alarm notifications. For more information, see Managing alarm notifications in the AWS IoT Events Developer Guide.
      * 
      */
     private final @Nullable String notificationLambdaArn;
@@ -31,16 +31,16 @@ public final class AlarmsProperties {
     }
 
     /**
-     * The ARN of the IAM role that allows the alarm to perform actions and access AWS resources and services, such as AWS IoT Events.
+     * @return The ARN of the IAM role that allows the alarm to perform actions and access AWS resources and services, such as AWS IoT Events.
      * 
-    */
+     */
     public Optional<String> alarmRoleArn() {
         return Optional.ofNullable(this.alarmRoleArn);
     }
     /**
-     * The ARN of the AWS Lambda function that manages alarm notifications. For more information, see Managing alarm notifications in the AWS IoT Events Developer Guide.
+     * @return The ARN of the AWS Lambda function that manages alarm notifications. For more information, see Managing alarm notifications in the AWS IoT Events Developer Guide.
      * 
-    */
+     */
     public Optional<String> notificationLambdaArn() {
         return Optional.ofNullable(this.notificationLambdaArn);
     }

@@ -28,6 +28,10 @@ public final class LoggingConfigurationFieldToMatchJsonBodyPropertiesMatchPatter
     @Import(name="all")
     private @Nullable Output<Object> all;
 
+    /**
+     * @return Match all of the elements. See also MatchScope in JsonBody. You must specify either this setting or the IncludedPaths setting, but not both.
+     * 
+     */
     public Optional<Output<Object>> all() {
         return Optional.ofNullable(this.all);
     }
@@ -39,6 +43,10 @@ public final class LoggingConfigurationFieldToMatchJsonBodyPropertiesMatchPatter
     @Import(name="includedPaths")
     private @Nullable Output<List<String>> includedPaths;
 
+    /**
+     * @return Match only the specified include paths. See also MatchScope in JsonBody.
+     * 
+     */
     public Optional<Output<List<String>>> includedPaths() {
         return Optional.ofNullable(this.includedPaths);
     }
@@ -68,24 +76,54 @@ public final class LoggingConfigurationFieldToMatchJsonBodyPropertiesMatchPatter
             $ = new LoggingConfigurationFieldToMatchJsonBodyPropertiesMatchPatternPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param all Match all of the elements. See also MatchScope in JsonBody. You must specify either this setting or the IncludedPaths setting, but not both.
+         * 
+         * @return builder
+         * 
+         */
         public Builder all(@Nullable Output<Object> all) {
             $.all = all;
             return this;
         }
 
+        /**
+         * @param all Match all of the elements. See also MatchScope in JsonBody. You must specify either this setting or the IncludedPaths setting, but not both.
+         * 
+         * @return builder
+         * 
+         */
         public Builder all(Object all) {
             return all(Output.of(all));
         }
 
+        /**
+         * @param includedPaths Match only the specified include paths. See also MatchScope in JsonBody.
+         * 
+         * @return builder
+         * 
+         */
         public Builder includedPaths(@Nullable Output<List<String>> includedPaths) {
             $.includedPaths = includedPaths;
             return this;
         }
 
+        /**
+         * @param includedPaths Match only the specified include paths. See also MatchScope in JsonBody.
+         * 
+         * @return builder
+         * 
+         */
         public Builder includedPaths(List<String> includedPaths) {
             return includedPaths(Output.of(includedPaths));
         }
 
+        /**
+         * @param includedPaths Match only the specified include paths. See also MatchScope in JsonBody.
+         * 
+         * @return builder
+         * 
+         */
         public Builder includedPaths(String... includedPaths) {
             return includedPaths(List.of(includedPaths));
         }

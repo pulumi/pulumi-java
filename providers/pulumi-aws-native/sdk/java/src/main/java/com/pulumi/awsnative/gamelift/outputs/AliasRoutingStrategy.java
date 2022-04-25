@@ -13,17 +13,17 @@ import javax.annotation.Nullable;
 @CustomType
 public final class AliasRoutingStrategy {
     /**
-     * A unique identifier for a fleet that the alias points to. If you specify SIMPLE for the Type property, you must specify this property.
+     * @return A unique identifier for a fleet that the alias points to. If you specify SIMPLE for the Type property, you must specify this property.
      * 
      */
     private final @Nullable String fleetId;
     /**
-     * The message text to be used with a terminal routing strategy. If you specify TERMINAL for the Type property, you must specify this property.
+     * @return The message text to be used with a terminal routing strategy. If you specify TERMINAL for the Type property, you must specify this property.
      * 
      */
     private final @Nullable String message;
     /**
-     * Simple routing strategy. The alias resolves to one specific fleet. Use this type when routing to active fleets.
+     * @return Simple routing strategy. The alias resolves to one specific fleet. Use this type when routing to active fleets.
      * 
      */
     private final AliasRoutingStrategyType type;
@@ -39,23 +39,23 @@ public final class AliasRoutingStrategy {
     }
 
     /**
-     * A unique identifier for a fleet that the alias points to. If you specify SIMPLE for the Type property, you must specify this property.
+     * @return A unique identifier for a fleet that the alias points to. If you specify SIMPLE for the Type property, you must specify this property.
      * 
-    */
+     */
     public Optional<String> fleetId() {
         return Optional.ofNullable(this.fleetId);
     }
     /**
-     * The message text to be used with a terminal routing strategy. If you specify TERMINAL for the Type property, you must specify this property.
+     * @return The message text to be used with a terminal routing strategy. If you specify TERMINAL for the Type property, you must specify this property.
      * 
-    */
+     */
     public Optional<String> message() {
         return Optional.ofNullable(this.message);
     }
     /**
-     * Simple routing strategy. The alias resolves to one specific fleet. Use this type when routing to active fleets.
+     * @return Simple routing strategy. The alias resolves to one specific fleet. Use this type when routing to active fleets.
      * 
-    */
+     */
     public AliasRoutingStrategyType type() {
         return this.type;
     }

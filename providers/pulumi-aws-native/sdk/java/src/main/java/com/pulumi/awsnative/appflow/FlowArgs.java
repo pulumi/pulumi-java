@@ -28,6 +28,10 @@ public final class FlowArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return Description of the flow.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -39,6 +43,10 @@ public final class FlowArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="destinationFlowConfigList", required=true)
     private Output<List<FlowDestinationFlowConfigArgs>> destinationFlowConfigList;
 
+    /**
+     * @return List of Destination connectors of the flow.
+     * 
+     */
     public Output<List<FlowDestinationFlowConfigArgs>> destinationFlowConfigList() {
         return this.destinationFlowConfigList;
     }
@@ -50,6 +58,10 @@ public final class FlowArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="flowName")
     private @Nullable Output<String> flowName;
 
+    /**
+     * @return Name of the flow.
+     * 
+     */
     public Optional<Output<String>> flowName() {
         return Optional.ofNullable(this.flowName);
     }
@@ -61,6 +73,10 @@ public final class FlowArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="kMSArn")
     private @Nullable Output<String> kMSArn;
 
+    /**
+     * @return The ARN of the AWS Key Management Service (AWS KMS) key that&#39;s used to encrypt your function&#39;s environment variables. If it&#39;s not provided, AWS Lambda uses a default service key.
+     * 
+     */
     public Optional<Output<String>> kMSArn() {
         return Optional.ofNullable(this.kMSArn);
     }
@@ -72,6 +88,10 @@ public final class FlowArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="sourceFlowConfig", required=true)
     private Output<FlowSourceFlowConfigArgs> sourceFlowConfig;
 
+    /**
+     * @return Configurations of Source connector of the flow.
+     * 
+     */
     public Output<FlowSourceFlowConfigArgs> sourceFlowConfig() {
         return this.sourceFlowConfig;
     }
@@ -83,6 +103,10 @@ public final class FlowArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<List<FlowTagArgs>> tags;
 
+    /**
+     * @return List of Tags.
+     * 
+     */
     public Optional<Output<List<FlowTagArgs>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -94,6 +118,10 @@ public final class FlowArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tasks", required=true)
     private Output<List<FlowTaskArgs>> tasks;
 
+    /**
+     * @return List of tasks for the flow.
+     * 
+     */
     public Output<List<FlowTaskArgs>> tasks() {
         return this.tasks;
     }
@@ -105,6 +133,10 @@ public final class FlowArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="triggerConfig", required=true)
     private Output<FlowTriggerConfigArgs> triggerConfig;
 
+    /**
+     * @return Trigger settings of the flow.
+     * 
+     */
     public Output<FlowTriggerConfigArgs> triggerConfig() {
         return this.triggerConfig;
     }
@@ -140,86 +172,200 @@ public final class FlowArgs extends com.pulumi.resources.ResourceArgs {
             $ = new FlowArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param description Description of the flow.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description Description of the flow.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param destinationFlowConfigList List of Destination connectors of the flow.
+         * 
+         * @return builder
+         * 
+         */
         public Builder destinationFlowConfigList(Output<List<FlowDestinationFlowConfigArgs>> destinationFlowConfigList) {
             $.destinationFlowConfigList = destinationFlowConfigList;
             return this;
         }
 
+        /**
+         * @param destinationFlowConfigList List of Destination connectors of the flow.
+         * 
+         * @return builder
+         * 
+         */
         public Builder destinationFlowConfigList(List<FlowDestinationFlowConfigArgs> destinationFlowConfigList) {
             return destinationFlowConfigList(Output.of(destinationFlowConfigList));
         }
 
+        /**
+         * @param destinationFlowConfigList List of Destination connectors of the flow.
+         * 
+         * @return builder
+         * 
+         */
         public Builder destinationFlowConfigList(FlowDestinationFlowConfigArgs... destinationFlowConfigList) {
             return destinationFlowConfigList(List.of(destinationFlowConfigList));
         }
 
+        /**
+         * @param flowName Name of the flow.
+         * 
+         * @return builder
+         * 
+         */
         public Builder flowName(@Nullable Output<String> flowName) {
             $.flowName = flowName;
             return this;
         }
 
+        /**
+         * @param flowName Name of the flow.
+         * 
+         * @return builder
+         * 
+         */
         public Builder flowName(String flowName) {
             return flowName(Output.of(flowName));
         }
 
+        /**
+         * @param kMSArn The ARN of the AWS Key Management Service (AWS KMS) key that&#39;s used to encrypt your function&#39;s environment variables. If it&#39;s not provided, AWS Lambda uses a default service key.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kMSArn(@Nullable Output<String> kMSArn) {
             $.kMSArn = kMSArn;
             return this;
         }
 
+        /**
+         * @param kMSArn The ARN of the AWS Key Management Service (AWS KMS) key that&#39;s used to encrypt your function&#39;s environment variables. If it&#39;s not provided, AWS Lambda uses a default service key.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kMSArn(String kMSArn) {
             return kMSArn(Output.of(kMSArn));
         }
 
+        /**
+         * @param sourceFlowConfig Configurations of Source connector of the flow.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceFlowConfig(Output<FlowSourceFlowConfigArgs> sourceFlowConfig) {
             $.sourceFlowConfig = sourceFlowConfig;
             return this;
         }
 
+        /**
+         * @param sourceFlowConfig Configurations of Source connector of the flow.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceFlowConfig(FlowSourceFlowConfigArgs sourceFlowConfig) {
             return sourceFlowConfig(Output.of(sourceFlowConfig));
         }
 
+        /**
+         * @param tags List of Tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<List<FlowTagArgs>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags List of Tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(List<FlowTagArgs> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param tags List of Tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(FlowTagArgs... tags) {
             return tags(List.of(tags));
         }
 
+        /**
+         * @param tasks List of tasks for the flow.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tasks(Output<List<FlowTaskArgs>> tasks) {
             $.tasks = tasks;
             return this;
         }
 
+        /**
+         * @param tasks List of tasks for the flow.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tasks(List<FlowTaskArgs> tasks) {
             return tasks(Output.of(tasks));
         }
 
+        /**
+         * @param tasks List of tasks for the flow.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tasks(FlowTaskArgs... tasks) {
             return tasks(List.of(tasks));
         }
 
+        /**
+         * @param triggerConfig Trigger settings of the flow.
+         * 
+         * @return builder
+         * 
+         */
         public Builder triggerConfig(Output<FlowTriggerConfigArgs> triggerConfig) {
             $.triggerConfig = triggerConfig;
             return this;
         }
 
+        /**
+         * @param triggerConfig Trigger settings of the flow.
+         * 
+         * @return builder
+         * 
+         */
         public Builder triggerConfig(FlowTriggerConfigArgs triggerConfig) {
             return triggerConfig(Output.of(triggerConfig));
         }

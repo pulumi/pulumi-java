@@ -27,6 +27,10 @@ public final class DetectorModelEvent extends com.pulumi.resources.InvokeArgs {
     @Import(name="actions")
     private @Nullable List<DetectorModelAction> actions;
 
+    /**
+     * @return The actions to be performed.
+     * 
+     */
     public Optional<List<DetectorModelAction>> actions() {
         return Optional.ofNullable(this.actions);
     }
@@ -38,6 +42,10 @@ public final class DetectorModelEvent extends com.pulumi.resources.InvokeArgs {
     @Import(name="condition")
     private @Nullable String condition;
 
+    /**
+     * @return The Boolean expression that, when `TRUE`, causes the `actions` to be performed. If not present, the `actions` are performed (=`TRUE`). If the expression result is not a `Boolean` value, the `actions` are not performed (=`FALSE`).
+     * 
+     */
     public Optional<String> condition() {
         return Optional.ofNullable(this.condition);
     }
@@ -49,6 +57,10 @@ public final class DetectorModelEvent extends com.pulumi.resources.InvokeArgs {
     @Import(name="eventName", required=true)
     private String eventName;
 
+    /**
+     * @return The name of the event.
+     * 
+     */
     public String eventName() {
         return this.eventName;
     }
@@ -79,20 +91,44 @@ public final class DetectorModelEvent extends com.pulumi.resources.InvokeArgs {
             $ = new DetectorModelEvent(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param actions The actions to be performed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder actions(@Nullable List<DetectorModelAction> actions) {
             $.actions = actions;
             return this;
         }
 
+        /**
+         * @param actions The actions to be performed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder actions(DetectorModelAction... actions) {
             return actions(List.of(actions));
         }
 
+        /**
+         * @param condition The Boolean expression that, when `TRUE`, causes the `actions` to be performed. If not present, the `actions` are performed (=`TRUE`). If the expression result is not a `Boolean` value, the `actions` are not performed (=`FALSE`).
+         * 
+         * @return builder
+         * 
+         */
         public Builder condition(@Nullable String condition) {
             $.condition = condition;
             return this;
         }
 
+        /**
+         * @param eventName The name of the event.
+         * 
+         * @return builder
+         * 
+         */
         public Builder eventName(String eventName) {
             $.eventName = eventName;
             return this;

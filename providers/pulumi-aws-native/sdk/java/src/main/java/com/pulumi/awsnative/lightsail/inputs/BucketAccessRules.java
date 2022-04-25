@@ -26,6 +26,10 @@ public final class BucketAccessRules extends com.pulumi.resources.InvokeArgs {
     @Import(name="allowPublicOverrides")
     private @Nullable Boolean allowPublicOverrides;
 
+    /**
+     * @return A Boolean value that indicates whether the access control list (ACL) permissions that are applied to individual objects override the getObject option that is currently specified.
+     * 
+     */
     public Optional<Boolean> allowPublicOverrides() {
         return Optional.ofNullable(this.allowPublicOverrides);
     }
@@ -37,6 +41,10 @@ public final class BucketAccessRules extends com.pulumi.resources.InvokeArgs {
     @Import(name="getObject")
     private @Nullable String getObject;
 
+    /**
+     * @return Specifies the anonymous access to all objects in a bucket.
+     * 
+     */
     public Optional<String> getObject() {
         return Optional.ofNullable(this.getObject);
     }
@@ -66,11 +74,23 @@ public final class BucketAccessRules extends com.pulumi.resources.InvokeArgs {
             $ = new BucketAccessRules(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param allowPublicOverrides A Boolean value that indicates whether the access control list (ACL) permissions that are applied to individual objects override the getObject option that is currently specified.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowPublicOverrides(@Nullable Boolean allowPublicOverrides) {
             $.allowPublicOverrides = allowPublicOverrides;
             return this;
         }
 
+        /**
+         * @param getObject Specifies the anonymous access to all objects in a bucket.
+         * 
+         * @return builder
+         * 
+         */
         public Builder getObject(@Nullable String getObject) {
             $.getObject = getObject;
             return this;

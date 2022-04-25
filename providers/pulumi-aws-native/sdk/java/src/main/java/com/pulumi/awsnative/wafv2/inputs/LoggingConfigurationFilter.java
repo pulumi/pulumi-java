@@ -22,6 +22,10 @@ public final class LoggingConfigurationFilter extends com.pulumi.resources.Invok
     @Import(name="behavior", required=true)
     private LoggingConfigurationFilterBehavior behavior;
 
+    /**
+     * @return How to handle logs that satisfy the filter&#39;s conditions and requirement.
+     * 
+     */
     public LoggingConfigurationFilterBehavior behavior() {
         return this.behavior;
     }
@@ -33,6 +37,10 @@ public final class LoggingConfigurationFilter extends com.pulumi.resources.Invok
     @Import(name="conditions", required=true)
     private List<LoggingConfigurationCondition> conditions;
 
+    /**
+     * @return Match conditions for the filter.
+     * 
+     */
     public List<LoggingConfigurationCondition> conditions() {
         return this.conditions;
     }
@@ -44,6 +52,10 @@ public final class LoggingConfigurationFilter extends com.pulumi.resources.Invok
     @Import(name="requirement", required=true)
     private LoggingConfigurationFilterRequirement requirement;
 
+    /**
+     * @return Logic to apply to the filtering conditions. You can specify that, in order to satisfy the filter, a log must match all conditions or must match at least one condition.
+     * 
+     */
     public LoggingConfigurationFilterRequirement requirement() {
         return this.requirement;
     }
@@ -74,20 +86,44 @@ public final class LoggingConfigurationFilter extends com.pulumi.resources.Invok
             $ = new LoggingConfigurationFilter(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param behavior How to handle logs that satisfy the filter&#39;s conditions and requirement.
+         * 
+         * @return builder
+         * 
+         */
         public Builder behavior(LoggingConfigurationFilterBehavior behavior) {
             $.behavior = behavior;
             return this;
         }
 
+        /**
+         * @param conditions Match conditions for the filter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder conditions(List<LoggingConfigurationCondition> conditions) {
             $.conditions = conditions;
             return this;
         }
 
+        /**
+         * @param conditions Match conditions for the filter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder conditions(LoggingConfigurationCondition... conditions) {
             return conditions(List.of(conditions));
         }
 
+        /**
+         * @param requirement Logic to apply to the filtering conditions. You can specify that, in order to satisfy the filter, a log must match all conditions or must match at least one condition.
+         * 
+         * @return builder
+         * 
+         */
         public Builder requirement(LoggingConfigurationFilterRequirement requirement) {
             $.requirement = requirement;
             return this;

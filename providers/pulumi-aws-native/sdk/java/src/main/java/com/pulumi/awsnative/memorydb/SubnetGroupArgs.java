@@ -24,6 +24,10 @@ public final class SubnetGroupArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return An optional description of the subnet group.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -35,6 +39,10 @@ public final class SubnetGroupArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="subnetGroupName")
     private @Nullable Output<String> subnetGroupName;
 
+    /**
+     * @return The name of the subnet group. This value must be unique as it also serves as the subnet group identifier.
+     * 
+     */
     public Optional<Output<String>> subnetGroupName() {
         return Optional.ofNullable(this.subnetGroupName);
     }
@@ -46,6 +54,10 @@ public final class SubnetGroupArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="subnetIds", required=true)
     private Output<List<String>> subnetIds;
 
+    /**
+     * @return A list of VPC subnet IDs for the subnet group.
+     * 
+     */
     public Output<List<String>> subnetIds() {
         return this.subnetIds;
     }
@@ -57,6 +69,10 @@ public final class SubnetGroupArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<List<SubnetGroupTagArgs>> tags;
 
+    /**
+     * @return An array of key-value pairs to apply to this subnet group.
+     * 
+     */
     public Optional<Output<List<SubnetGroupTagArgs>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -88,46 +104,106 @@ public final class SubnetGroupArgs extends com.pulumi.resources.ResourceArgs {
             $ = new SubnetGroupArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param description An optional description of the subnet group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description An optional description of the subnet group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param subnetGroupName The name of the subnet group. This value must be unique as it also serves as the subnet group identifier.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subnetGroupName(@Nullable Output<String> subnetGroupName) {
             $.subnetGroupName = subnetGroupName;
             return this;
         }
 
+        /**
+         * @param subnetGroupName The name of the subnet group. This value must be unique as it also serves as the subnet group identifier.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subnetGroupName(String subnetGroupName) {
             return subnetGroupName(Output.of(subnetGroupName));
         }
 
+        /**
+         * @param subnetIds A list of VPC subnet IDs for the subnet group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subnetIds(Output<List<String>> subnetIds) {
             $.subnetIds = subnetIds;
             return this;
         }
 
+        /**
+         * @param subnetIds A list of VPC subnet IDs for the subnet group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subnetIds(List<String> subnetIds) {
             return subnetIds(Output.of(subnetIds));
         }
 
+        /**
+         * @param subnetIds A list of VPC subnet IDs for the subnet group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subnetIds(String... subnetIds) {
             return subnetIds(List.of(subnetIds));
         }
 
+        /**
+         * @param tags An array of key-value pairs to apply to this subnet group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<List<SubnetGroupTagArgs>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags An array of key-value pairs to apply to this subnet group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(List<SubnetGroupTagArgs> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param tags An array of key-value pairs to apply to this subnet group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(SubnetGroupTagArgs... tags) {
             return tags(List.of(tags));
         }

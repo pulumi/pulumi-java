@@ -31,6 +31,10 @@ public final class BucketDataExport extends com.pulumi.resources.InvokeArgs {
     @Import(name="outputSchemaVersion", required=true)
     private String outputSchemaVersion;
 
+    /**
+     * @return The version of the output schema to use when exporting data.
+     * 
+     */
     public String outputSchemaVersion() {
         return this.outputSchemaVersion;
     }
@@ -65,6 +69,12 @@ public final class BucketDataExport extends com.pulumi.resources.InvokeArgs {
             return this;
         }
 
+        /**
+         * @param outputSchemaVersion The version of the output schema to use when exporting data.
+         * 
+         * @return builder
+         * 
+         */
         public Builder outputSchemaVersion(String outputSchemaVersion) {
             $.outputSchemaVersion = outputSchemaVersion;
             return this;

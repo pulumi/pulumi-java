@@ -27,6 +27,10 @@ public final class DataSourceErrorInfoArgs extends com.pulumi.resources.Resource
     @Import(name="message")
     private @Nullable Output<String> message;
 
+    /**
+     * @return &lt;p&gt;Error message.&lt;/p&gt;
+     * 
+     */
     public Optional<Output<String>> message() {
         return Optional.ofNullable(this.message);
     }
@@ -63,11 +67,23 @@ public final class DataSourceErrorInfoArgs extends com.pulumi.resources.Resource
             $ = new DataSourceErrorInfoArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param message &lt;p&gt;Error message.&lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder message(@Nullable Output<String> message) {
             $.message = message;
             return this;
         }
 
+        /**
+         * @param message &lt;p&gt;Error message.&lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder message(String message) {
             return message(Output.of(message));
         }

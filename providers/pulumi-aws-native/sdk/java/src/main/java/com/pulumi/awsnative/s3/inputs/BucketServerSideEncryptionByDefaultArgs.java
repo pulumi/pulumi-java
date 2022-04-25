@@ -27,6 +27,10 @@ public final class BucketServerSideEncryptionByDefaultArgs extends com.pulumi.re
     @Import(name="kMSMasterKeyID")
     private @Nullable Output<String> kMSMasterKeyID;
 
+    /**
+     * @return &#34;KMSMasterKeyID&#34; can only be used when you set the value of SSEAlgorithm as aws:kms.
+     * 
+     */
     public Optional<Output<String>> kMSMasterKeyID() {
         return Optional.ofNullable(this.kMSMasterKeyID);
     }
@@ -63,11 +67,23 @@ public final class BucketServerSideEncryptionByDefaultArgs extends com.pulumi.re
             $ = new BucketServerSideEncryptionByDefaultArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param kMSMasterKeyID &#34;KMSMasterKeyID&#34; can only be used when you set the value of SSEAlgorithm as aws:kms.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kMSMasterKeyID(@Nullable Output<String> kMSMasterKeyID) {
             $.kMSMasterKeyID = kMSMasterKeyID;
             return this;
         }
 
+        /**
+         * @param kMSMasterKeyID &#34;KMSMasterKeyID&#34; can only be used when you set the value of SSEAlgorithm as aws:kms.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kMSMasterKeyID(String kMSMasterKeyID) {
             return kMSMasterKeyID(Output.of(kMSMasterKeyID));
         }

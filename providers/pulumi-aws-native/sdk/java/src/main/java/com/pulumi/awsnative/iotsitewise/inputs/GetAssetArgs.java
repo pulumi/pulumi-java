@@ -19,6 +19,10 @@ public final class GetAssetArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="assetId", required=true)
     private String assetId;
 
+    /**
+     * @return The ID of the asset
+     * 
+     */
     public String assetId() {
         return this.assetId;
     }
@@ -47,6 +51,12 @@ public final class GetAssetArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetAssetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param assetId The ID of the asset
+         * 
+         * @return builder
+         * 
+         */
         public Builder assetId(String assetId) {
             $.assetId = assetId;
             return this;

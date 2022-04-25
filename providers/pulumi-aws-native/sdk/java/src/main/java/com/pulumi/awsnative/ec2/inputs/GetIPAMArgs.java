@@ -19,6 +19,10 @@ public final class GetIPAMArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="ipamId", required=true)
     private String ipamId;
 
+    /**
+     * @return Id of the IPAM.
+     * 
+     */
     public String ipamId() {
         return this.ipamId;
     }
@@ -47,6 +51,12 @@ public final class GetIPAMArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetIPAMArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param ipamId Id of the IPAM.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipamId(String ipamId) {
             $.ipamId = ipamId;
             return this;

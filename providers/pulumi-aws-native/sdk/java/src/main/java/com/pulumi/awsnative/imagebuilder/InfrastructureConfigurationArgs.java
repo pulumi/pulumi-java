@@ -27,6 +27,10 @@ public final class InfrastructureConfigurationArgs extends com.pulumi.resources.
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return The description of the infrastructure configuration.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -38,6 +42,10 @@ public final class InfrastructureConfigurationArgs extends com.pulumi.resources.
     @Import(name="instanceMetadataOptions")
     private @Nullable Output<InfrastructureConfigurationInstanceMetadataOptionsArgs> instanceMetadataOptions;
 
+    /**
+     * @return The instance metadata option settings for the infrastructure configuration.
+     * 
+     */
     public Optional<Output<InfrastructureConfigurationInstanceMetadataOptionsArgs>> instanceMetadataOptions() {
         return Optional.ofNullable(this.instanceMetadataOptions);
     }
@@ -49,6 +57,10 @@ public final class InfrastructureConfigurationArgs extends com.pulumi.resources.
     @Import(name="instanceProfileName", required=true)
     private Output<String> instanceProfileName;
 
+    /**
+     * @return The instance profile of the infrastructure configuration.
+     * 
+     */
     public Output<String> instanceProfileName() {
         return this.instanceProfileName;
     }
@@ -60,6 +72,10 @@ public final class InfrastructureConfigurationArgs extends com.pulumi.resources.
     @Import(name="instanceTypes")
     private @Nullable Output<List<String>> instanceTypes;
 
+    /**
+     * @return The instance types of the infrastructure configuration.
+     * 
+     */
     public Optional<Output<List<String>>> instanceTypes() {
         return Optional.ofNullable(this.instanceTypes);
     }
@@ -71,6 +87,10 @@ public final class InfrastructureConfigurationArgs extends com.pulumi.resources.
     @Import(name="keyPair")
     private @Nullable Output<String> keyPair;
 
+    /**
+     * @return The EC2 key pair of the infrastructure configuration..
+     * 
+     */
     public Optional<Output<String>> keyPair() {
         return Optional.ofNullable(this.keyPair);
     }
@@ -82,6 +102,10 @@ public final class InfrastructureConfigurationArgs extends com.pulumi.resources.
     @Import(name="logging")
     private @Nullable Output<InfrastructureConfigurationLoggingArgs> logging;
 
+    /**
+     * @return The logging configuration of the infrastructure configuration.
+     * 
+     */
     public Optional<Output<InfrastructureConfigurationLoggingArgs>> logging() {
         return Optional.ofNullable(this.logging);
     }
@@ -93,6 +117,10 @@ public final class InfrastructureConfigurationArgs extends com.pulumi.resources.
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The name of the infrastructure configuration.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -104,6 +132,10 @@ public final class InfrastructureConfigurationArgs extends com.pulumi.resources.
     @Import(name="resourceTags")
     private @Nullable Output<Object> resourceTags;
 
+    /**
+     * @return The tags attached to the resource created by Image Builder.
+     * 
+     */
     public Optional<Output<Object>> resourceTags() {
         return Optional.ofNullable(this.resourceTags);
     }
@@ -115,6 +147,10 @@ public final class InfrastructureConfigurationArgs extends com.pulumi.resources.
     @Import(name="securityGroupIds")
     private @Nullable Output<List<String>> securityGroupIds;
 
+    /**
+     * @return The security group IDs of the infrastructure configuration.
+     * 
+     */
     public Optional<Output<List<String>>> securityGroupIds() {
         return Optional.ofNullable(this.securityGroupIds);
     }
@@ -126,6 +162,10 @@ public final class InfrastructureConfigurationArgs extends com.pulumi.resources.
     @Import(name="snsTopicArn")
     private @Nullable Output<String> snsTopicArn;
 
+    /**
+     * @return The SNS Topic Amazon Resource Name (ARN) of the infrastructure configuration.
+     * 
+     */
     public Optional<Output<String>> snsTopicArn() {
         return Optional.ofNullable(this.snsTopicArn);
     }
@@ -137,6 +177,10 @@ public final class InfrastructureConfigurationArgs extends com.pulumi.resources.
     @Import(name="subnetId")
     private @Nullable Output<String> subnetId;
 
+    /**
+     * @return The subnet ID of the infrastructure configuration.
+     * 
+     */
     public Optional<Output<String>> subnetId() {
         return Optional.ofNullable(this.subnetId);
     }
@@ -148,6 +192,10 @@ public final class InfrastructureConfigurationArgs extends com.pulumi.resources.
     @Import(name="tags")
     private @Nullable Output<Object> tags;
 
+    /**
+     * @return The tags associated with the component.
+     * 
+     */
     public Optional<Output<Object>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -159,6 +207,10 @@ public final class InfrastructureConfigurationArgs extends com.pulumi.resources.
     @Import(name="terminateInstanceOnFailure")
     private @Nullable Output<Boolean> terminateInstanceOnFailure;
 
+    /**
+     * @return The terminate instance on failure configuration of the infrastructure configuration.
+     * 
+     */
     public Optional<Output<Boolean>> terminateInstanceOnFailure() {
         return Optional.ofNullable(this.terminateInstanceOnFailure);
     }
@@ -199,127 +251,295 @@ public final class InfrastructureConfigurationArgs extends com.pulumi.resources.
             $ = new InfrastructureConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param description The description of the infrastructure configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description The description of the infrastructure configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param instanceMetadataOptions The instance metadata option settings for the infrastructure configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceMetadataOptions(@Nullable Output<InfrastructureConfigurationInstanceMetadataOptionsArgs> instanceMetadataOptions) {
             $.instanceMetadataOptions = instanceMetadataOptions;
             return this;
         }
 
+        /**
+         * @param instanceMetadataOptions The instance metadata option settings for the infrastructure configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceMetadataOptions(InfrastructureConfigurationInstanceMetadataOptionsArgs instanceMetadataOptions) {
             return instanceMetadataOptions(Output.of(instanceMetadataOptions));
         }
 
+        /**
+         * @param instanceProfileName The instance profile of the infrastructure configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceProfileName(Output<String> instanceProfileName) {
             $.instanceProfileName = instanceProfileName;
             return this;
         }
 
+        /**
+         * @param instanceProfileName The instance profile of the infrastructure configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceProfileName(String instanceProfileName) {
             return instanceProfileName(Output.of(instanceProfileName));
         }
 
+        /**
+         * @param instanceTypes The instance types of the infrastructure configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceTypes(@Nullable Output<List<String>> instanceTypes) {
             $.instanceTypes = instanceTypes;
             return this;
         }
 
+        /**
+         * @param instanceTypes The instance types of the infrastructure configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceTypes(List<String> instanceTypes) {
             return instanceTypes(Output.of(instanceTypes));
         }
 
+        /**
+         * @param instanceTypes The instance types of the infrastructure configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceTypes(String... instanceTypes) {
             return instanceTypes(List.of(instanceTypes));
         }
 
+        /**
+         * @param keyPair The EC2 key pair of the infrastructure configuration..
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyPair(@Nullable Output<String> keyPair) {
             $.keyPair = keyPair;
             return this;
         }
 
+        /**
+         * @param keyPair The EC2 key pair of the infrastructure configuration..
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyPair(String keyPair) {
             return keyPair(Output.of(keyPair));
         }
 
+        /**
+         * @param logging The logging configuration of the infrastructure configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder logging(@Nullable Output<InfrastructureConfigurationLoggingArgs> logging) {
             $.logging = logging;
             return this;
         }
 
+        /**
+         * @param logging The logging configuration of the infrastructure configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder logging(InfrastructureConfigurationLoggingArgs logging) {
             return logging(Output.of(logging));
         }
 
+        /**
+         * @param name The name of the infrastructure configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name of the infrastructure configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param resourceTags The tags attached to the resource created by Image Builder.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceTags(@Nullable Output<Object> resourceTags) {
             $.resourceTags = resourceTags;
             return this;
         }
 
+        /**
+         * @param resourceTags The tags attached to the resource created by Image Builder.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceTags(Object resourceTags) {
             return resourceTags(Output.of(resourceTags));
         }
 
+        /**
+         * @param securityGroupIds The security group IDs of the infrastructure configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder securityGroupIds(@Nullable Output<List<String>> securityGroupIds) {
             $.securityGroupIds = securityGroupIds;
             return this;
         }
 
+        /**
+         * @param securityGroupIds The security group IDs of the infrastructure configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder securityGroupIds(List<String> securityGroupIds) {
             return securityGroupIds(Output.of(securityGroupIds));
         }
 
+        /**
+         * @param securityGroupIds The security group IDs of the infrastructure configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder securityGroupIds(String... securityGroupIds) {
             return securityGroupIds(List.of(securityGroupIds));
         }
 
+        /**
+         * @param snsTopicArn The SNS Topic Amazon Resource Name (ARN) of the infrastructure configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder snsTopicArn(@Nullable Output<String> snsTopicArn) {
             $.snsTopicArn = snsTopicArn;
             return this;
         }
 
+        /**
+         * @param snsTopicArn The SNS Topic Amazon Resource Name (ARN) of the infrastructure configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder snsTopicArn(String snsTopicArn) {
             return snsTopicArn(Output.of(snsTopicArn));
         }
 
+        /**
+         * @param subnetId The subnet ID of the infrastructure configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subnetId(@Nullable Output<String> subnetId) {
             $.subnetId = subnetId;
             return this;
         }
 
+        /**
+         * @param subnetId The subnet ID of the infrastructure configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subnetId(String subnetId) {
             return subnetId(Output.of(subnetId));
         }
 
+        /**
+         * @param tags The tags associated with the component.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Object> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags The tags associated with the component.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Object tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param terminateInstanceOnFailure The terminate instance on failure configuration of the infrastructure configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder terminateInstanceOnFailure(@Nullable Output<Boolean> terminateInstanceOnFailure) {
             $.terminateInstanceOnFailure = terminateInstanceOnFailure;
             return this;
         }
 
+        /**
+         * @param terminateInstanceOnFailure The terminate instance on failure configuration of the infrastructure configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder terminateInstanceOnFailure(Boolean terminateInstanceOnFailure) {
             return terminateInstanceOnFailure(Output.of(terminateInstanceOnFailure));
         }

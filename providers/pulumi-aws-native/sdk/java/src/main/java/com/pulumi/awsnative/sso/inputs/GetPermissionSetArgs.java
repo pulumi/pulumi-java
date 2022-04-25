@@ -19,6 +19,10 @@ public final class GetPermissionSetArgs extends com.pulumi.resources.InvokeArgs 
     @Import(name="instanceArn", required=true)
     private String instanceArn;
 
+    /**
+     * @return The sso instance arn that the permission set is owned.
+     * 
+     */
     public String instanceArn() {
         return this.instanceArn;
     }
@@ -30,6 +34,10 @@ public final class GetPermissionSetArgs extends com.pulumi.resources.InvokeArgs 
     @Import(name="permissionSetArn", required=true)
     private String permissionSetArn;
 
+    /**
+     * @return The permission set that the policy will be attached to
+     * 
+     */
     public String permissionSetArn() {
         return this.permissionSetArn;
     }
@@ -59,11 +67,23 @@ public final class GetPermissionSetArgs extends com.pulumi.resources.InvokeArgs 
             $ = new GetPermissionSetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param instanceArn The sso instance arn that the permission set is owned.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceArn(String instanceArn) {
             $.instanceArn = instanceArn;
             return this;
         }
 
+        /**
+         * @param permissionSetArn The permission set that the policy will be attached to
+         * 
+         * @return builder
+         * 
+         */
         public Builder permissionSetArn(String permissionSetArn) {
             $.permissionSetArn = permissionSetArn;
             return this;

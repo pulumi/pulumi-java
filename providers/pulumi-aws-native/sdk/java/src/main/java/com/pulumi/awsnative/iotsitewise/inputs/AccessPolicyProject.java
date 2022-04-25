@@ -25,6 +25,10 @@ public final class AccessPolicyProject extends com.pulumi.resources.InvokeArgs {
     @Import(name="id")
     private @Nullable String id;
 
+    /**
+     * @return The ID of the project.
+     * 
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
@@ -53,6 +57,12 @@ public final class AccessPolicyProject extends com.pulumi.resources.InvokeArgs {
             $ = new AccessPolicyProject(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param id The ID of the project.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(@Nullable String id) {
             $.id = id;
             return this;

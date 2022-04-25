@@ -25,6 +25,10 @@ public final class SiteArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return The description of the site.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -36,6 +40,10 @@ public final class SiteArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="globalNetworkId", required=true)
     private Output<String> globalNetworkId;
 
+    /**
+     * @return The ID of the global network.
+     * 
+     */
     public Output<String> globalNetworkId() {
         return this.globalNetworkId;
     }
@@ -47,6 +55,10 @@ public final class SiteArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="location")
     private @Nullable Output<SiteLocationArgs> location;
 
+    /**
+     * @return The location of the site.
+     * 
+     */
     public Optional<Output<SiteLocationArgs>> location() {
         return Optional.ofNullable(this.location);
     }
@@ -58,6 +70,10 @@ public final class SiteArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<List<SiteTagArgs>> tags;
 
+    /**
+     * @return The tags for the site.
+     * 
+     */
     public Optional<Output<List<SiteTagArgs>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -89,42 +105,96 @@ public final class SiteArgs extends com.pulumi.resources.ResourceArgs {
             $ = new SiteArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param description The description of the site.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description The description of the site.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param globalNetworkId The ID of the global network.
+         * 
+         * @return builder
+         * 
+         */
         public Builder globalNetworkId(Output<String> globalNetworkId) {
             $.globalNetworkId = globalNetworkId;
             return this;
         }
 
+        /**
+         * @param globalNetworkId The ID of the global network.
+         * 
+         * @return builder
+         * 
+         */
         public Builder globalNetworkId(String globalNetworkId) {
             return globalNetworkId(Output.of(globalNetworkId));
         }
 
+        /**
+         * @param location The location of the site.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable Output<SiteLocationArgs> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location The location of the site.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(SiteLocationArgs location) {
             return location(Output.of(location));
         }
 
+        /**
+         * @param tags The tags for the site.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<List<SiteTagArgs>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags The tags for the site.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(List<SiteTagArgs> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param tags The tags for the site.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(SiteTagArgs... tags) {
             return tags(List.of(tags));
         }

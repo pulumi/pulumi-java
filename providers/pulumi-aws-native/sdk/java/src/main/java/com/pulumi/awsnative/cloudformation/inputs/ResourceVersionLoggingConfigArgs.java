@@ -22,6 +22,10 @@ public final class ResourceVersionLoggingConfigArgs extends com.pulumi.resources
     @Import(name="logGroupName")
     private @Nullable Output<String> logGroupName;
 
+    /**
+     * @return The Amazon CloudWatch log group to which CloudFormation sends error logging information when invoking the type&#39;s handlers.
+     * 
+     */
     public Optional<Output<String>> logGroupName() {
         return Optional.ofNullable(this.logGroupName);
     }
@@ -33,6 +37,10 @@ public final class ResourceVersionLoggingConfigArgs extends com.pulumi.resources
     @Import(name="logRoleArn")
     private @Nullable Output<String> logRoleArn;
 
+    /**
+     * @return The ARN of the role that CloudFormation should assume when sending log entries to CloudWatch logs.
+     * 
+     */
     public Optional<Output<String>> logRoleArn() {
         return Optional.ofNullable(this.logRoleArn);
     }
@@ -62,20 +70,44 @@ public final class ResourceVersionLoggingConfigArgs extends com.pulumi.resources
             $ = new ResourceVersionLoggingConfigArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param logGroupName The Amazon CloudWatch log group to which CloudFormation sends error logging information when invoking the type&#39;s handlers.
+         * 
+         * @return builder
+         * 
+         */
         public Builder logGroupName(@Nullable Output<String> logGroupName) {
             $.logGroupName = logGroupName;
             return this;
         }
 
+        /**
+         * @param logGroupName The Amazon CloudWatch log group to which CloudFormation sends error logging information when invoking the type&#39;s handlers.
+         * 
+         * @return builder
+         * 
+         */
         public Builder logGroupName(String logGroupName) {
             return logGroupName(Output.of(logGroupName));
         }
 
+        /**
+         * @param logRoleArn The ARN of the role that CloudFormation should assume when sending log entries to CloudWatch logs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder logRoleArn(@Nullable Output<String> logRoleArn) {
             $.logRoleArn = logRoleArn;
             return this;
         }
 
+        /**
+         * @param logRoleArn The ARN of the role that CloudFormation should assume when sending log entries to CloudWatch logs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder logRoleArn(String logRoleArn) {
             return logRoleArn(Output.of(logRoleArn));
         }

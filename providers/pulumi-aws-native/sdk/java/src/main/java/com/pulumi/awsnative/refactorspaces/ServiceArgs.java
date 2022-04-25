@@ -69,6 +69,10 @@ public final class ServiceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<List<ServiceTagArgs>> tags;
 
+    /**
+     * @return Metadata that you can assign to help organize the frameworks that you create. Each tag is a key-value pair.
+     * 
+     */
     public Optional<Output<List<ServiceTagArgs>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -173,15 +177,33 @@ public final class ServiceArgs extends com.pulumi.resources.ResourceArgs {
             return name(Output.of(name));
         }
 
+        /**
+         * @param tags Metadata that you can assign to help organize the frameworks that you create. Each tag is a key-value pair.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<List<ServiceTagArgs>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags Metadata that you can assign to help organize the frameworks that you create. Each tag is a key-value pair.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(List<ServiceTagArgs> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param tags Metadata that you can assign to help organize the frameworks that you create. Each tag is a key-value pair.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(ServiceTagArgs... tags) {
             return tags(List.of(tags));
         }

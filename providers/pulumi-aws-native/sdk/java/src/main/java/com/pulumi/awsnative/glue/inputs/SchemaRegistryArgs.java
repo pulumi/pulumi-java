@@ -26,6 +26,10 @@ public final class SchemaRegistryArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="arn")
     private @Nullable Output<String> arn;
 
+    /**
+     * @return Amazon Resource Name for the Registry.
+     * 
+     */
     public Optional<Output<String>> arn() {
         return Optional.ofNullable(this.arn);
     }
@@ -37,6 +41,10 @@ public final class SchemaRegistryArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return Name of the registry in which the schema will be created.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -66,20 +74,44 @@ public final class SchemaRegistryArgs extends com.pulumi.resources.ResourceArgs 
             $ = new SchemaRegistryArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param arn Amazon Resource Name for the Registry.
+         * 
+         * @return builder
+         * 
+         */
         public Builder arn(@Nullable Output<String> arn) {
             $.arn = arn;
             return this;
         }
 
+        /**
+         * @param arn Amazon Resource Name for the Registry.
+         * 
+         * @return builder
+         * 
+         */
         public Builder arn(String arn) {
             return arn(Output.of(arn));
         }
 
+        /**
+         * @param name Name of the registry in which the schema will be created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Name of the registry in which the schema will be created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }

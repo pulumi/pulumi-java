@@ -23,6 +23,10 @@ public final class DatasetDatabaseInputDefinitionArgs extends com.pulumi.resourc
     @Import(name="databaseTableName")
     private @Nullable Output<String> databaseTableName;
 
+    /**
+     * @return Database table name
+     * 
+     */
     public Optional<Output<String>> databaseTableName() {
         return Optional.ofNullable(this.databaseTableName);
     }
@@ -34,6 +38,10 @@ public final class DatasetDatabaseInputDefinitionArgs extends com.pulumi.resourc
     @Import(name="glueConnectionName", required=true)
     private Output<String> glueConnectionName;
 
+    /**
+     * @return Glue connection name
+     * 
+     */
     public Output<String> glueConnectionName() {
         return this.glueConnectionName;
     }
@@ -45,6 +53,10 @@ public final class DatasetDatabaseInputDefinitionArgs extends com.pulumi.resourc
     @Import(name="queryString")
     private @Nullable Output<String> queryString;
 
+    /**
+     * @return Custom SQL to run against the provided AWS Glue connection. This SQL will be used as the input for DataBrew projects and jobs.
+     * 
+     */
     public Optional<Output<String>> queryString() {
         return Optional.ofNullable(this.queryString);
     }
@@ -83,29 +95,65 @@ public final class DatasetDatabaseInputDefinitionArgs extends com.pulumi.resourc
             $ = new DatasetDatabaseInputDefinitionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param databaseTableName Database table name
+         * 
+         * @return builder
+         * 
+         */
         public Builder databaseTableName(@Nullable Output<String> databaseTableName) {
             $.databaseTableName = databaseTableName;
             return this;
         }
 
+        /**
+         * @param databaseTableName Database table name
+         * 
+         * @return builder
+         * 
+         */
         public Builder databaseTableName(String databaseTableName) {
             return databaseTableName(Output.of(databaseTableName));
         }
 
+        /**
+         * @param glueConnectionName Glue connection name
+         * 
+         * @return builder
+         * 
+         */
         public Builder glueConnectionName(Output<String> glueConnectionName) {
             $.glueConnectionName = glueConnectionName;
             return this;
         }
 
+        /**
+         * @param glueConnectionName Glue connection name
+         * 
+         * @return builder
+         * 
+         */
         public Builder glueConnectionName(String glueConnectionName) {
             return glueConnectionName(Output.of(glueConnectionName));
         }
 
+        /**
+         * @param queryString Custom SQL to run against the provided AWS Glue connection. This SQL will be used as the input for DataBrew projects and jobs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder queryString(@Nullable Output<String> queryString) {
             $.queryString = queryString;
             return this;
         }
 
+        /**
+         * @param queryString Custom SQL to run against the provided AWS Glue connection. This SQL will be used as the input for DataBrew projects and jobs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder queryString(String queryString) {
             return queryString(Output.of(queryString));
         }

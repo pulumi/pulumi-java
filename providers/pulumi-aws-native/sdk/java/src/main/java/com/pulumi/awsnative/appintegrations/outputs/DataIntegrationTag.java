@@ -10,12 +10,12 @@ import java.util.Objects;
 @CustomType
 public final class DataIntegrationTag {
     /**
-     * A key to identify the tag.
+     * @return A key to identify the tag.
      * 
      */
     private final String key;
     /**
-     * Corresponding tag value for the key.
+     * @return Corresponding tag value for the key.
      * 
      */
     private final String value;
@@ -29,16 +29,16 @@ public final class DataIntegrationTag {
     }
 
     /**
-     * A key to identify the tag.
+     * @return A key to identify the tag.
      * 
-    */
+     */
     public String key() {
         return this.key;
     }
     /**
-     * Corresponding tag value for the key.
+     * @return Corresponding tag value for the key.
      * 
-    */
+     */
     public String value() {
         return this.value;
     }

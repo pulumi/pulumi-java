@@ -25,6 +25,10 @@ public final class MitigationActionArgs extends com.pulumi.resources.ResourceArg
     @Import(name="actionName")
     private @Nullable Output<String> actionName;
 
+    /**
+     * @return A unique identifier for the mitigation action.
+     * 
+     */
     public Optional<Output<String>> actionName() {
         return Optional.ofNullable(this.actionName);
     }
@@ -50,6 +54,10 @@ public final class MitigationActionArgs extends com.pulumi.resources.ResourceArg
     @Import(name="tags")
     private @Nullable Output<List<MitigationActionTagArgs>> tags;
 
+    /**
+     * @return An array of key-value pairs to apply to this resource.
+     * 
+     */
     public Optional<Output<List<MitigationActionTagArgs>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -81,11 +89,23 @@ public final class MitigationActionArgs extends com.pulumi.resources.ResourceArg
             $ = new MitigationActionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param actionName A unique identifier for the mitigation action.
+         * 
+         * @return builder
+         * 
+         */
         public Builder actionName(@Nullable Output<String> actionName) {
             $.actionName = actionName;
             return this;
         }
 
+        /**
+         * @param actionName A unique identifier for the mitigation action.
+         * 
+         * @return builder
+         * 
+         */
         public Builder actionName(String actionName) {
             return actionName(Output.of(actionName));
         }
@@ -108,15 +128,33 @@ public final class MitigationActionArgs extends com.pulumi.resources.ResourceArg
             return roleArn(Output.of(roleArn));
         }
 
+        /**
+         * @param tags An array of key-value pairs to apply to this resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<List<MitigationActionTagArgs>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags An array of key-value pairs to apply to this resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(List<MitigationActionTagArgs> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param tags An array of key-value pairs to apply to this resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(MitigationActionTagArgs... tags) {
             return tags(List.of(tags));
         }

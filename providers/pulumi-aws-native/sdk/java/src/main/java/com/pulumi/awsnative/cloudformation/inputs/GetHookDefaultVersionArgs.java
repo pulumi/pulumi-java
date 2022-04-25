@@ -19,6 +19,10 @@ public final class GetHookDefaultVersionArgs extends com.pulumi.resources.Invoke
     @Import(name="arn", required=true)
     private String arn;
 
+    /**
+     * @return The Amazon Resource Name (ARN) of the type. This is used to uniquely identify a HookDefaultVersion
+     * 
+     */
     public String arn() {
         return this.arn;
     }
@@ -47,6 +51,12 @@ public final class GetHookDefaultVersionArgs extends com.pulumi.resources.Invoke
             $ = new GetHookDefaultVersionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param arn The Amazon Resource Name (ARN) of the type. This is used to uniquely identify a HookDefaultVersion
+         * 
+         * @return builder
+         * 
+         */
         public Builder arn(String arn) {
             $.arn = arn;
             return this;

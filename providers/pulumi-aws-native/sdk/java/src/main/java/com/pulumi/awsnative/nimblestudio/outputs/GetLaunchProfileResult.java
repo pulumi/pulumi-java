@@ -14,25 +14,25 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetLaunchProfileResult {
     /**
-     * &lt;p&gt;The description.&lt;/p&gt;
+     * @return &lt;p&gt;The description.&lt;/p&gt;
      * 
      */
     private final @Nullable String description;
     private final @Nullable String launchProfileId;
     /**
-     * &lt;p&gt;The version number of the protocol that is used by the launch profile. The only valid
+     * @return &lt;p&gt;The version number of the protocol that is used by the launch profile. The only valid
      *             version is &#34;2021-03-31&#34;.&lt;/p&gt;
      * 
      */
     private final @Nullable List<String> launchProfileProtocolVersions;
     /**
-     * &lt;p&gt;The name for the launch profile.&lt;/p&gt;
+     * @return &lt;p&gt;The name for the launch profile.&lt;/p&gt;
      * 
      */
     private final @Nullable String name;
     private final @Nullable LaunchProfileStreamConfiguration streamConfiguration;
     /**
-     * &lt;p&gt;Unique identifiers for a collection of studio components that can be used with this
+     * @return &lt;p&gt;Unique identifiers for a collection of studio components that can be used with this
      *             launch profile.&lt;/p&gt;
      * 
      */
@@ -55,9 +55,9 @@ public final class GetLaunchProfileResult {
     }
 
     /**
-     * &lt;p&gt;The description.&lt;/p&gt;
+     * @return &lt;p&gt;The description.&lt;/p&gt;
      * 
-    */
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
@@ -65,17 +65,17 @@ public final class GetLaunchProfileResult {
         return Optional.ofNullable(this.launchProfileId);
     }
     /**
-     * &lt;p&gt;The version number of the protocol that is used by the launch profile. The only valid
+     * @return &lt;p&gt;The version number of the protocol that is used by the launch profile. The only valid
      *             version is &#34;2021-03-31&#34;.&lt;/p&gt;
      * 
-    */
+     */
     public List<String> launchProfileProtocolVersions() {
         return this.launchProfileProtocolVersions == null ? List.of() : this.launchProfileProtocolVersions;
     }
     /**
-     * &lt;p&gt;The name for the launch profile.&lt;/p&gt;
+     * @return &lt;p&gt;The name for the launch profile.&lt;/p&gt;
      * 
-    */
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
@@ -83,10 +83,10 @@ public final class GetLaunchProfileResult {
         return Optional.ofNullable(this.streamConfiguration);
     }
     /**
-     * &lt;p&gt;Unique identifiers for a collection of studio components that can be used with this
+     * @return &lt;p&gt;Unique identifiers for a collection of studio components that can be used with this
      *             launch profile.&lt;/p&gt;
      * 
-    */
+     */
     public List<String> studioComponentIds() {
         return this.studioComponentIds == null ? List.of() : this.studioComponentIds;
     }

@@ -19,6 +19,10 @@ public final class GetTransitGatewayRegistrationArgs extends com.pulumi.resource
     @Import(name="globalNetworkId", required=true)
     private String globalNetworkId;
 
+    /**
+     * @return The ID of the global network.
+     * 
+     */
     public String globalNetworkId() {
         return this.globalNetworkId;
     }
@@ -30,6 +34,10 @@ public final class GetTransitGatewayRegistrationArgs extends com.pulumi.resource
     @Import(name="transitGatewayArn", required=true)
     private String transitGatewayArn;
 
+    /**
+     * @return The Amazon Resource Name (ARN) of the transit gateway.
+     * 
+     */
     public String transitGatewayArn() {
         return this.transitGatewayArn;
     }
@@ -59,11 +67,23 @@ public final class GetTransitGatewayRegistrationArgs extends com.pulumi.resource
             $ = new GetTransitGatewayRegistrationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param globalNetworkId The ID of the global network.
+         * 
+         * @return builder
+         * 
+         */
         public Builder globalNetworkId(String globalNetworkId) {
             $.globalNetworkId = globalNetworkId;
             return this;
         }
 
+        /**
+         * @param transitGatewayArn The Amazon Resource Name (ARN) of the transit gateway.
+         * 
+         * @return builder
+         * 
+         */
         public Builder transitGatewayArn(String transitGatewayArn) {
             $.transitGatewayArn = transitGatewayArn;
             return this;

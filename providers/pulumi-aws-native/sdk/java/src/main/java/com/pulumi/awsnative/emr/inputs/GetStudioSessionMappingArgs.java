@@ -20,6 +20,10 @@ public final class GetStudioSessionMappingArgs extends com.pulumi.resources.Invo
     @Import(name="identityName", required=true)
     private String identityName;
 
+    /**
+     * @return The name of the user or group. For more information, see UserName and DisplayName in the AWS SSO Identity Store API Reference. Either IdentityName or IdentityId must be specified.
+     * 
+     */
     public String identityName() {
         return this.identityName;
     }
@@ -31,6 +35,10 @@ public final class GetStudioSessionMappingArgs extends com.pulumi.resources.Invo
     @Import(name="identityType", required=true)
     private StudioSessionMappingIdentityType identityType;
 
+    /**
+     * @return Specifies whether the identity to map to the Studio is a user or a group.
+     * 
+     */
     public StudioSessionMappingIdentityType identityType() {
         return this.identityType;
     }
@@ -42,6 +50,10 @@ public final class GetStudioSessionMappingArgs extends com.pulumi.resources.Invo
     @Import(name="studioId", required=true)
     private String studioId;
 
+    /**
+     * @return The ID of the Amazon EMR Studio to which the user or group will be mapped.
+     * 
+     */
     public String studioId() {
         return this.studioId;
     }
@@ -72,16 +84,34 @@ public final class GetStudioSessionMappingArgs extends com.pulumi.resources.Invo
             $ = new GetStudioSessionMappingArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param identityName The name of the user or group. For more information, see UserName and DisplayName in the AWS SSO Identity Store API Reference. Either IdentityName or IdentityId must be specified.
+         * 
+         * @return builder
+         * 
+         */
         public Builder identityName(String identityName) {
             $.identityName = identityName;
             return this;
         }
 
+        /**
+         * @param identityType Specifies whether the identity to map to the Studio is a user or a group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder identityType(StudioSessionMappingIdentityType identityType) {
             $.identityType = identityType;
             return this;
         }
 
+        /**
+         * @param studioId The ID of the Amazon EMR Studio to which the user or group will be mapped.
+         * 
+         * @return builder
+         * 
+         */
         public Builder studioId(String studioId) {
             $.studioId = studioId;
             return this;

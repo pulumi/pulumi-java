@@ -25,6 +25,10 @@ public final class MonitoringScheduleConstraintsResource extends com.pulumi.reso
     @Import(name="s3Uri")
     private @Nullable String s3Uri;
 
+    /**
+     * @return The Amazon S3 URI for baseline constraint file in Amazon S3 that the current monitoring job should validated against.
+     * 
+     */
     public Optional<String> s3Uri() {
         return Optional.ofNullable(this.s3Uri);
     }
@@ -53,6 +57,12 @@ public final class MonitoringScheduleConstraintsResource extends com.pulumi.reso
             $ = new MonitoringScheduleConstraintsResource(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param s3Uri The Amazon S3 URI for baseline constraint file in Amazon S3 that the current monitoring job should validated against.
+         * 
+         * @return builder
+         * 
+         */
         public Builder s3Uri(@Nullable String s3Uri) {
             $.s3Uri = s3Uri;
             return this;

@@ -26,6 +26,10 @@ public final class BucketNoncurrentVersionTransition extends com.pulumi.resource
     @Import(name="newerNoncurrentVersions")
     private @Nullable Integer newerNoncurrentVersions;
 
+    /**
+     * @return Specified the number of newer noncurrent and current versions that must exists before performing the associated action
+     * 
+     */
     public Optional<Integer> newerNoncurrentVersions() {
         return Optional.ofNullable(this.newerNoncurrentVersions);
     }
@@ -37,6 +41,10 @@ public final class BucketNoncurrentVersionTransition extends com.pulumi.resource
     @Import(name="storageClass", required=true)
     private BucketNoncurrentVersionTransitionStorageClass storageClass;
 
+    /**
+     * @return The class of storage used to store the object.
+     * 
+     */
     public BucketNoncurrentVersionTransitionStorageClass storageClass() {
         return this.storageClass;
     }
@@ -48,6 +56,10 @@ public final class BucketNoncurrentVersionTransition extends com.pulumi.resource
     @Import(name="transitionInDays", required=true)
     private Integer transitionInDays;
 
+    /**
+     * @return Specifies the number of days an object is noncurrent before Amazon S3 can perform the associated action.
+     * 
+     */
     public Integer transitionInDays() {
         return this.transitionInDays;
     }
@@ -78,16 +90,34 @@ public final class BucketNoncurrentVersionTransition extends com.pulumi.resource
             $ = new BucketNoncurrentVersionTransition(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param newerNoncurrentVersions Specified the number of newer noncurrent and current versions that must exists before performing the associated action
+         * 
+         * @return builder
+         * 
+         */
         public Builder newerNoncurrentVersions(@Nullable Integer newerNoncurrentVersions) {
             $.newerNoncurrentVersions = newerNoncurrentVersions;
             return this;
         }
 
+        /**
+         * @param storageClass The class of storage used to store the object.
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageClass(BucketNoncurrentVersionTransitionStorageClass storageClass) {
             $.storageClass = storageClass;
             return this;
         }
 
+        /**
+         * @param transitionInDays Specifies the number of days an object is noncurrent before Amazon S3 can perform the associated action.
+         * 
+         * @return builder
+         * 
+         */
         public Builder transitionInDays(Integer transitionInDays) {
             $.transitionInDays = transitionInDays;
             return this;

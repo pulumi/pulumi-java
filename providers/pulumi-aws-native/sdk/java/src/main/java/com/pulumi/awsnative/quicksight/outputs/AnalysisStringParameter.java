@@ -11,12 +11,12 @@ import java.util.Objects;
 @CustomType
 public final class AnalysisStringParameter {
     /**
-     * &lt;p&gt;A display name for a string parameter.&lt;/p&gt;
+     * @return &lt;p&gt;A display name for a string parameter.&lt;/p&gt;
      * 
      */
     private final String name;
     /**
-     * &lt;p&gt;The values of a string parameter.&lt;/p&gt;
+     * @return &lt;p&gt;The values of a string parameter.&lt;/p&gt;
      * 
      */
     private final List<String> values;
@@ -30,16 +30,16 @@ public final class AnalysisStringParameter {
     }
 
     /**
-     * &lt;p&gt;A display name for a string parameter.&lt;/p&gt;
+     * @return &lt;p&gt;A display name for a string parameter.&lt;/p&gt;
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * &lt;p&gt;The values of a string parameter.&lt;/p&gt;
+     * @return &lt;p&gt;The values of a string parameter.&lt;/p&gt;
      * 
-    */
+     */
     public List<String> values() {
         return this.values;
     }

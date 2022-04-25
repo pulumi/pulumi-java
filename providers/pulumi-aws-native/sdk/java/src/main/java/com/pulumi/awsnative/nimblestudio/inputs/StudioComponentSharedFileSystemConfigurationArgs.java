@@ -26,6 +26,10 @@ public final class StudioComponentSharedFileSystemConfigurationArgs extends com.
     @Import(name="endpoint")
     private @Nullable Output<String> endpoint;
 
+    /**
+     * @return &lt;p&gt;The endpoint of the shared file system that is accessed by the studio component resource.&lt;/p&gt;
+     * 
+     */
     public Optional<Output<String>> endpoint() {
         return Optional.ofNullable(this.endpoint);
     }
@@ -37,6 +41,10 @@ public final class StudioComponentSharedFileSystemConfigurationArgs extends com.
     @Import(name="fileSystemId")
     private @Nullable Output<String> fileSystemId;
 
+    /**
+     * @return &lt;p&gt;The unique identifier for a file system.&lt;/p&gt;
+     * 
+     */
     public Optional<Output<String>> fileSystemId() {
         return Optional.ofNullable(this.fileSystemId);
     }
@@ -48,6 +56,10 @@ public final class StudioComponentSharedFileSystemConfigurationArgs extends com.
     @Import(name="linuxMountPoint")
     private @Nullable Output<String> linuxMountPoint;
 
+    /**
+     * @return &lt;p&gt;The mount location for a shared file system on a Linux virtual workstation.&lt;/p&gt;
+     * 
+     */
     public Optional<Output<String>> linuxMountPoint() {
         return Optional.ofNullable(this.linuxMountPoint);
     }
@@ -59,6 +71,10 @@ public final class StudioComponentSharedFileSystemConfigurationArgs extends com.
     @Import(name="shareName")
     private @Nullable Output<String> shareName;
 
+    /**
+     * @return &lt;p&gt;The name of the file share.&lt;/p&gt;
+     * 
+     */
     public Optional<Output<String>> shareName() {
         return Optional.ofNullable(this.shareName);
     }
@@ -70,6 +86,10 @@ public final class StudioComponentSharedFileSystemConfigurationArgs extends com.
     @Import(name="windowsMountDrive")
     private @Nullable Output<String> windowsMountDrive;
 
+    /**
+     * @return &lt;p&gt;The mount location for a shared file system on a Windows virtual workstation.&lt;/p&gt;
+     * 
+     */
     public Optional<Output<String>> windowsMountDrive() {
         return Optional.ofNullable(this.windowsMountDrive);
     }
@@ -102,47 +122,107 @@ public final class StudioComponentSharedFileSystemConfigurationArgs extends com.
             $ = new StudioComponentSharedFileSystemConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param endpoint &lt;p&gt;The endpoint of the shared file system that is accessed by the studio component resource.&lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder endpoint(@Nullable Output<String> endpoint) {
             $.endpoint = endpoint;
             return this;
         }
 
+        /**
+         * @param endpoint &lt;p&gt;The endpoint of the shared file system that is accessed by the studio component resource.&lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder endpoint(String endpoint) {
             return endpoint(Output.of(endpoint));
         }
 
+        /**
+         * @param fileSystemId &lt;p&gt;The unique identifier for a file system.&lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder fileSystemId(@Nullable Output<String> fileSystemId) {
             $.fileSystemId = fileSystemId;
             return this;
         }
 
+        /**
+         * @param fileSystemId &lt;p&gt;The unique identifier for a file system.&lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder fileSystemId(String fileSystemId) {
             return fileSystemId(Output.of(fileSystemId));
         }
 
+        /**
+         * @param linuxMountPoint &lt;p&gt;The mount location for a shared file system on a Linux virtual workstation.&lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder linuxMountPoint(@Nullable Output<String> linuxMountPoint) {
             $.linuxMountPoint = linuxMountPoint;
             return this;
         }
 
+        /**
+         * @param linuxMountPoint &lt;p&gt;The mount location for a shared file system on a Linux virtual workstation.&lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder linuxMountPoint(String linuxMountPoint) {
             return linuxMountPoint(Output.of(linuxMountPoint));
         }
 
+        /**
+         * @param shareName &lt;p&gt;The name of the file share.&lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder shareName(@Nullable Output<String> shareName) {
             $.shareName = shareName;
             return this;
         }
 
+        /**
+         * @param shareName &lt;p&gt;The name of the file share.&lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder shareName(String shareName) {
             return shareName(Output.of(shareName));
         }
 
+        /**
+         * @param windowsMountDrive &lt;p&gt;The mount location for a shared file system on a Windows virtual workstation.&lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder windowsMountDrive(@Nullable Output<String> windowsMountDrive) {
             $.windowsMountDrive = windowsMountDrive;
             return this;
         }
 
+        /**
+         * @param windowsMountDrive &lt;p&gt;The mount location for a shared file system on a Windows virtual workstation.&lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder windowsMountDrive(String windowsMountDrive) {
             return windowsMountDrive(Output.of(windowsMountDrive));
         }

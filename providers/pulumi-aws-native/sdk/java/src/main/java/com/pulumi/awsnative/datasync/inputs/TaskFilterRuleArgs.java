@@ -27,6 +27,10 @@ public final class TaskFilterRuleArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="filterType")
     private @Nullable Output<TaskFilterRuleFilterType> filterType;
 
+    /**
+     * @return The type of filter rule to apply. AWS DataSync only supports the SIMPLE_PATTERN rule type.
+     * 
+     */
     public Optional<Output<TaskFilterRuleFilterType>> filterType() {
         return Optional.ofNullable(this.filterType);
     }
@@ -38,6 +42,10 @@ public final class TaskFilterRuleArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="value")
     private @Nullable Output<String> value;
 
+    /**
+     * @return A single filter string that consists of the patterns to include or exclude. The patterns are delimited by &#34;|&#34;.
+     * 
+     */
     public Optional<Output<String>> value() {
         return Optional.ofNullable(this.value);
     }
@@ -67,20 +75,44 @@ public final class TaskFilterRuleArgs extends com.pulumi.resources.ResourceArgs 
             $ = new TaskFilterRuleArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param filterType The type of filter rule to apply. AWS DataSync only supports the SIMPLE_PATTERN rule type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder filterType(@Nullable Output<TaskFilterRuleFilterType> filterType) {
             $.filterType = filterType;
             return this;
         }
 
+        /**
+         * @param filterType The type of filter rule to apply. AWS DataSync only supports the SIMPLE_PATTERN rule type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder filterType(TaskFilterRuleFilterType filterType) {
             return filterType(Output.of(filterType));
         }
 
+        /**
+         * @param value A single filter string that consists of the patterns to include or exclude. The patterns are delimited by &#34;|&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(@Nullable Output<String> value) {
             $.value = value;
             return this;
         }
 
+        /**
+         * @param value A single filter string that consists of the patterns to include or exclude. The patterns are delimited by &#34;|&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(String value) {
             return value(Output.of(value));
         }

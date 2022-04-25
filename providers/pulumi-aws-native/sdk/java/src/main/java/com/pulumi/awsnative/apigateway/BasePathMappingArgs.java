@@ -22,6 +22,10 @@ public final class BasePathMappingArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="basePath")
     private @Nullable Output<String> basePath;
 
+    /**
+     * @return The base path name that callers of the API must provide in the URL after the domain name.
+     * 
+     */
     public Optional<Output<String>> basePath() {
         return Optional.ofNullable(this.basePath);
     }
@@ -33,6 +37,10 @@ public final class BasePathMappingArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="domainName", required=true)
     private Output<String> domainName;
 
+    /**
+     * @return The DomainName of an AWS::ApiGateway::DomainName resource.
+     * 
+     */
     public Output<String> domainName() {
         return this.domainName;
     }
@@ -44,6 +52,10 @@ public final class BasePathMappingArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="restApiId")
     private @Nullable Output<String> restApiId;
 
+    /**
+     * @return The ID of the API.
+     * 
+     */
     public Optional<Output<String>> restApiId() {
         return Optional.ofNullable(this.restApiId);
     }
@@ -55,6 +67,10 @@ public final class BasePathMappingArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="stage")
     private @Nullable Output<String> stage;
 
+    /**
+     * @return The name of the API&#39;s stage.
+     * 
+     */
     public Optional<Output<String>> stage() {
         return Optional.ofNullable(this.stage);
     }
@@ -86,38 +102,86 @@ public final class BasePathMappingArgs extends com.pulumi.resources.ResourceArgs
             $ = new BasePathMappingArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param basePath The base path name that callers of the API must provide in the URL after the domain name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder basePath(@Nullable Output<String> basePath) {
             $.basePath = basePath;
             return this;
         }
 
+        /**
+         * @param basePath The base path name that callers of the API must provide in the URL after the domain name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder basePath(String basePath) {
             return basePath(Output.of(basePath));
         }
 
+        /**
+         * @param domainName The DomainName of an AWS::ApiGateway::DomainName resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder domainName(Output<String> domainName) {
             $.domainName = domainName;
             return this;
         }
 
+        /**
+         * @param domainName The DomainName of an AWS::ApiGateway::DomainName resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder domainName(String domainName) {
             return domainName(Output.of(domainName));
         }
 
+        /**
+         * @param restApiId The ID of the API.
+         * 
+         * @return builder
+         * 
+         */
         public Builder restApiId(@Nullable Output<String> restApiId) {
             $.restApiId = restApiId;
             return this;
         }
 
+        /**
+         * @param restApiId The ID of the API.
+         * 
+         * @return builder
+         * 
+         */
         public Builder restApiId(String restApiId) {
             return restApiId(Output.of(restApiId));
         }
 
+        /**
+         * @param stage The name of the API&#39;s stage.
+         * 
+         * @return builder
+         * 
+         */
         public Builder stage(@Nullable Output<String> stage) {
             $.stage = stage;
             return this;
         }
 
+        /**
+         * @param stage The name of the API&#39;s stage.
+         * 
+         * @return builder
+         * 
+         */
         public Builder stage(String stage) {
             return stage(Output.of(stage));
         }

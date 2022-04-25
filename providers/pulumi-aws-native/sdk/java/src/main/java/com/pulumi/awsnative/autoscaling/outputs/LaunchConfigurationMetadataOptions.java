@@ -13,17 +13,17 @@ import javax.annotation.Nullable;
 @CustomType
 public final class LaunchConfigurationMetadataOptions {
     /**
-     * This parameter enables or disables the HTTP metadata endpoint on your instances.
+     * @return This parameter enables or disables the HTTP metadata endpoint on your instances.
      * 
      */
     private final @Nullable String httpEndpoint;
     /**
-     * The desired HTTP PUT response hop limit for instance metadata requests.
+     * @return The desired HTTP PUT response hop limit for instance metadata requests.
      * 
      */
     private final @Nullable Integer httpPutResponseHopLimit;
     /**
-     * The state of token usage for your instance metadata requests.
+     * @return The state of token usage for your instance metadata requests.
      * 
      */
     private final @Nullable String httpTokens;
@@ -39,23 +39,23 @@ public final class LaunchConfigurationMetadataOptions {
     }
 
     /**
-     * This parameter enables or disables the HTTP metadata endpoint on your instances.
+     * @return This parameter enables or disables the HTTP metadata endpoint on your instances.
      * 
-    */
+     */
     public Optional<String> httpEndpoint() {
         return Optional.ofNullable(this.httpEndpoint);
     }
     /**
-     * The desired HTTP PUT response hop limit for instance metadata requests.
+     * @return The desired HTTP PUT response hop limit for instance metadata requests.
      * 
-    */
+     */
     public Optional<Integer> httpPutResponseHopLimit() {
         return Optional.ofNullable(this.httpPutResponseHopLimit);
     }
     /**
-     * The state of token usage for your instance metadata requests.
+     * @return The state of token usage for your instance metadata requests.
      * 
-    */
+     */
     public Optional<String> httpTokens() {
         return Optional.ofNullable(this.httpTokens);
     }

@@ -24,6 +24,10 @@ public final class HealthCheckAlarmIdentifierArgs extends com.pulumi.resources.R
     @Import(name="name", required=true)
     private Output<String> name;
 
+    /**
+     * @return The name of the CloudWatch alarm that you want Amazon Route 53 health checkers to use to determine whether this health check is healthy.
+     * 
+     */
     public Output<String> name() {
         return this.name;
     }
@@ -35,6 +39,10 @@ public final class HealthCheckAlarmIdentifierArgs extends com.pulumi.resources.R
     @Import(name="region", required=true)
     private Output<String> region;
 
+    /**
+     * @return For the CloudWatch alarm that you want Route 53 health checkers to use to determine whether this health check is healthy, the region that the alarm was created in.
+     * 
+     */
     public Output<String> region() {
         return this.region;
     }
@@ -64,20 +72,44 @@ public final class HealthCheckAlarmIdentifierArgs extends com.pulumi.resources.R
             $ = new HealthCheckAlarmIdentifierArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name The name of the CloudWatch alarm that you want Amazon Route 53 health checkers to use to determine whether this health check is healthy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name of the CloudWatch alarm that you want Amazon Route 53 health checkers to use to determine whether this health check is healthy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param region For the CloudWatch alarm that you want Route 53 health checkers to use to determine whether this health check is healthy, the region that the alarm was created in.
+         * 
+         * @return builder
+         * 
+         */
         public Builder region(Output<String> region) {
             $.region = region;
             return this;
         }
 
+        /**
+         * @param region For the CloudWatch alarm that you want Route 53 health checkers to use to determine whether this health check is healthy, the region that the alarm was created in.
+         * 
+         * @return builder
+         * 
+         */
         public Builder region(String region) {
             return region(Output.of(region));
         }

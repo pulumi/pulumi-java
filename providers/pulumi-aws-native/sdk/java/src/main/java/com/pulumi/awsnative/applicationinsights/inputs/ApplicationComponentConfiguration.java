@@ -27,6 +27,10 @@ public final class ApplicationComponentConfiguration extends com.pulumi.resource
     @Import(name="configurationDetails")
     private @Nullable ApplicationConfigurationDetails configurationDetails;
 
+    /**
+     * @return The configuration settings
+     * 
+     */
     public Optional<ApplicationConfigurationDetails> configurationDetails() {
         return Optional.ofNullable(this.configurationDetails);
     }
@@ -38,6 +42,10 @@ public final class ApplicationComponentConfiguration extends com.pulumi.resource
     @Import(name="subComponentTypeConfigurations")
     private @Nullable List<ApplicationSubComponentTypeConfiguration> subComponentTypeConfigurations;
 
+    /**
+     * @return Sub component configurations of the component.
+     * 
+     */
     public Optional<List<ApplicationSubComponentTypeConfiguration>> subComponentTypeConfigurations() {
         return Optional.ofNullable(this.subComponentTypeConfigurations);
     }
@@ -67,16 +75,34 @@ public final class ApplicationComponentConfiguration extends com.pulumi.resource
             $ = new ApplicationComponentConfiguration(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param configurationDetails The configuration settings
+         * 
+         * @return builder
+         * 
+         */
         public Builder configurationDetails(@Nullable ApplicationConfigurationDetails configurationDetails) {
             $.configurationDetails = configurationDetails;
             return this;
         }
 
+        /**
+         * @param subComponentTypeConfigurations Sub component configurations of the component.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subComponentTypeConfigurations(@Nullable List<ApplicationSubComponentTypeConfiguration> subComponentTypeConfigurations) {
             $.subComponentTypeConfigurations = subComponentTypeConfigurations;
             return this;
         }
 
+        /**
+         * @param subComponentTypeConfigurations Sub component configurations of the component.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subComponentTypeConfigurations(ApplicationSubComponentTypeConfiguration... subComponentTypeConfigurations) {
             return subComponentTypeConfigurations(List.of(subComponentTypeConfigurations));
         }

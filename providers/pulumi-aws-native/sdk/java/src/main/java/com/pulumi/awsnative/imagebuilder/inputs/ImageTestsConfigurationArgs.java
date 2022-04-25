@@ -27,6 +27,10 @@ public final class ImageTestsConfigurationArgs extends com.pulumi.resources.Reso
     @Import(name="imageTestsEnabled")
     private @Nullable Output<Boolean> imageTestsEnabled;
 
+    /**
+     * @return ImageTestsEnabled
+     * 
+     */
     public Optional<Output<Boolean>> imageTestsEnabled() {
         return Optional.ofNullable(this.imageTestsEnabled);
     }
@@ -38,6 +42,10 @@ public final class ImageTestsConfigurationArgs extends com.pulumi.resources.Reso
     @Import(name="timeoutMinutes")
     private @Nullable Output<Integer> timeoutMinutes;
 
+    /**
+     * @return TimeoutMinutes
+     * 
+     */
     public Optional<Output<Integer>> timeoutMinutes() {
         return Optional.ofNullable(this.timeoutMinutes);
     }
@@ -67,20 +75,44 @@ public final class ImageTestsConfigurationArgs extends com.pulumi.resources.Reso
             $ = new ImageTestsConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param imageTestsEnabled ImageTestsEnabled
+         * 
+         * @return builder
+         * 
+         */
         public Builder imageTestsEnabled(@Nullable Output<Boolean> imageTestsEnabled) {
             $.imageTestsEnabled = imageTestsEnabled;
             return this;
         }
 
+        /**
+         * @param imageTestsEnabled ImageTestsEnabled
+         * 
+         * @return builder
+         * 
+         */
         public Builder imageTestsEnabled(Boolean imageTestsEnabled) {
             return imageTestsEnabled(Output.of(imageTestsEnabled));
         }
 
+        /**
+         * @param timeoutMinutes TimeoutMinutes
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeoutMinutes(@Nullable Output<Integer> timeoutMinutes) {
             $.timeoutMinutes = timeoutMinutes;
             return this;
         }
 
+        /**
+         * @param timeoutMinutes TimeoutMinutes
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeoutMinutes(Integer timeoutMinutes) {
             return timeoutMinutes(Output.of(timeoutMinutes));
         }

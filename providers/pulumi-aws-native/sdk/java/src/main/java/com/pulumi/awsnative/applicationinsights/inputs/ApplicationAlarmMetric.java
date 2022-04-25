@@ -23,6 +23,10 @@ public final class ApplicationAlarmMetric extends com.pulumi.resources.InvokeArg
     @Import(name="alarmMetricName", required=true)
     private String alarmMetricName;
 
+    /**
+     * @return The name of the metric to be monitored for the component.
+     * 
+     */
     public String alarmMetricName() {
         return this.alarmMetricName;
     }
@@ -51,6 +55,12 @@ public final class ApplicationAlarmMetric extends com.pulumi.resources.InvokeArg
             $ = new ApplicationAlarmMetric(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param alarmMetricName The name of the metric to be monitored for the component.
+         * 
+         * @return builder
+         * 
+         */
         public Builder alarmMetricName(String alarmMetricName) {
             $.alarmMetricName = alarmMetricName;
             return this;

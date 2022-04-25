@@ -28,6 +28,10 @@ public final class LicenseArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="beneficiary")
     private @Nullable Output<String> beneficiary;
 
+    /**
+     * @return Beneficiary of the license.
+     * 
+     */
     public Optional<Output<String>> beneficiary() {
         return Optional.ofNullable(this.beneficiary);
     }
@@ -53,6 +57,10 @@ public final class LicenseArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="homeRegion", required=true)
     private Output<String> homeRegion;
 
+    /**
+     * @return Home region for the created license.
+     * 
+     */
     public Output<String> homeRegion() {
         return this.homeRegion;
     }
@@ -78,6 +86,10 @@ public final class LicenseArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="licenseName")
     private @Nullable Output<String> licenseName;
 
+    /**
+     * @return Name for the created license.
+     * 
+     */
     public Optional<Output<String>> licenseName() {
         return Optional.ofNullable(this.licenseName);
     }
@@ -89,6 +101,10 @@ public final class LicenseArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="productName", required=true)
     private Output<String> productName;
 
+    /**
+     * @return Product name for the created license.
+     * 
+     */
     public Output<String> productName() {
         return this.productName;
     }
@@ -100,6 +116,10 @@ public final class LicenseArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="productSKU")
     private @Nullable Output<String> productSKU;
 
+    /**
+     * @return ProductSKU of the license.
+     * 
+     */
     public Optional<Output<String>> productSKU() {
         return Optional.ofNullable(this.productSKU);
     }
@@ -152,11 +172,23 @@ public final class LicenseArgs extends com.pulumi.resources.ResourceArgs {
             $ = new LicenseArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param beneficiary Beneficiary of the license.
+         * 
+         * @return builder
+         * 
+         */
         public Builder beneficiary(@Nullable Output<String> beneficiary) {
             $.beneficiary = beneficiary;
             return this;
         }
 
+        /**
+         * @param beneficiary Beneficiary of the license.
+         * 
+         * @return builder
+         * 
+         */
         public Builder beneficiary(String beneficiary) {
             return beneficiary(Output.of(beneficiary));
         }
@@ -183,11 +215,23 @@ public final class LicenseArgs extends com.pulumi.resources.ResourceArgs {
             return entitlements(List.of(entitlements));
         }
 
+        /**
+         * @param homeRegion Home region for the created license.
+         * 
+         * @return builder
+         * 
+         */
         public Builder homeRegion(Output<String> homeRegion) {
             $.homeRegion = homeRegion;
             return this;
         }
 
+        /**
+         * @param homeRegion Home region for the created license.
+         * 
+         * @return builder
+         * 
+         */
         public Builder homeRegion(String homeRegion) {
             return homeRegion(Output.of(homeRegion));
         }
@@ -214,29 +258,65 @@ public final class LicenseArgs extends com.pulumi.resources.ResourceArgs {
             return licenseMetadata(List.of(licenseMetadata));
         }
 
+        /**
+         * @param licenseName Name for the created license.
+         * 
+         * @return builder
+         * 
+         */
         public Builder licenseName(@Nullable Output<String> licenseName) {
             $.licenseName = licenseName;
             return this;
         }
 
+        /**
+         * @param licenseName Name for the created license.
+         * 
+         * @return builder
+         * 
+         */
         public Builder licenseName(String licenseName) {
             return licenseName(Output.of(licenseName));
         }
 
+        /**
+         * @param productName Product name for the created license.
+         * 
+         * @return builder
+         * 
+         */
         public Builder productName(Output<String> productName) {
             $.productName = productName;
             return this;
         }
 
+        /**
+         * @param productName Product name for the created license.
+         * 
+         * @return builder
+         * 
+         */
         public Builder productName(String productName) {
             return productName(Output.of(productName));
         }
 
+        /**
+         * @param productSKU ProductSKU of the license.
+         * 
+         * @return builder
+         * 
+         */
         public Builder productSKU(@Nullable Output<String> productSKU) {
             $.productSKU = productSKU;
             return this;
         }
 
+        /**
+         * @param productSKU ProductSKU of the license.
+         * 
+         * @return builder
+         * 
+         */
         public Builder productSKU(String productSKU) {
             return productSKU(Output.of(productSKU));
         }

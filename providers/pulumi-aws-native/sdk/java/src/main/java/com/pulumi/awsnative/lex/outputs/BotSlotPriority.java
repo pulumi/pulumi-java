@@ -12,7 +12,7 @@ import java.util.Objects;
 public final class BotSlotPriority {
     private final Integer priority;
     /**
-     * The name of the slot.
+     * @return The name of the slot.
      * 
      */
     private final String slotName;
@@ -29,9 +29,9 @@ public final class BotSlotPriority {
         return this.priority;
     }
     /**
-     * The name of the slot.
+     * @return The name of the slot.
      * 
-    */
+     */
     public String slotName() {
         return this.slotName;
     }

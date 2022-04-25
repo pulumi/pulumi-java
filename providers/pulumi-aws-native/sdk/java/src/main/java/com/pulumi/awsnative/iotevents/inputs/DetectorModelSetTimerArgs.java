@@ -27,6 +27,10 @@ public final class DetectorModelSetTimerArgs extends com.pulumi.resources.Resour
     @Import(name="durationExpression")
     private @Nullable Output<String> durationExpression;
 
+    /**
+     * @return The duration of the timer, in seconds. You can use a string expression that includes numbers, variables (`$variable.&lt;variable-name&gt;`), and input values (`$input.&lt;input-name&gt;.&lt;path-to-datum&gt;`) as the duration. The range of the duration is `1-31622400` seconds. To ensure accuracy, the minimum duration is `60` seconds. The evaluated result of the duration is rounded down to the nearest whole number.
+     * 
+     */
     public Optional<Output<String>> durationExpression() {
         return Optional.ofNullable(this.durationExpression);
     }
@@ -38,6 +42,10 @@ public final class DetectorModelSetTimerArgs extends com.pulumi.resources.Resour
     @Import(name="seconds")
     private @Nullable Output<Integer> seconds;
 
+    /**
+     * @return The number of seconds until the timer expires. The minimum value is `60` seconds to ensure accuracy. The maximum value is `31622400` seconds.
+     * 
+     */
     public Optional<Output<Integer>> seconds() {
         return Optional.ofNullable(this.seconds);
     }
@@ -49,6 +57,10 @@ public final class DetectorModelSetTimerArgs extends com.pulumi.resources.Resour
     @Import(name="timerName", required=true)
     private Output<String> timerName;
 
+    /**
+     * @return The name of the timer.
+     * 
+     */
     public Output<String> timerName() {
         return this.timerName;
     }
@@ -79,29 +91,65 @@ public final class DetectorModelSetTimerArgs extends com.pulumi.resources.Resour
             $ = new DetectorModelSetTimerArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param durationExpression The duration of the timer, in seconds. You can use a string expression that includes numbers, variables (`$variable.&lt;variable-name&gt;`), and input values (`$input.&lt;input-name&gt;.&lt;path-to-datum&gt;`) as the duration. The range of the duration is `1-31622400` seconds. To ensure accuracy, the minimum duration is `60` seconds. The evaluated result of the duration is rounded down to the nearest whole number.
+         * 
+         * @return builder
+         * 
+         */
         public Builder durationExpression(@Nullable Output<String> durationExpression) {
             $.durationExpression = durationExpression;
             return this;
         }
 
+        /**
+         * @param durationExpression The duration of the timer, in seconds. You can use a string expression that includes numbers, variables (`$variable.&lt;variable-name&gt;`), and input values (`$input.&lt;input-name&gt;.&lt;path-to-datum&gt;`) as the duration. The range of the duration is `1-31622400` seconds. To ensure accuracy, the minimum duration is `60` seconds. The evaluated result of the duration is rounded down to the nearest whole number.
+         * 
+         * @return builder
+         * 
+         */
         public Builder durationExpression(String durationExpression) {
             return durationExpression(Output.of(durationExpression));
         }
 
+        /**
+         * @param seconds The number of seconds until the timer expires. The minimum value is `60` seconds to ensure accuracy. The maximum value is `31622400` seconds.
+         * 
+         * @return builder
+         * 
+         */
         public Builder seconds(@Nullable Output<Integer> seconds) {
             $.seconds = seconds;
             return this;
         }
 
+        /**
+         * @param seconds The number of seconds until the timer expires. The minimum value is `60` seconds to ensure accuracy. The maximum value is `31622400` seconds.
+         * 
+         * @return builder
+         * 
+         */
         public Builder seconds(Integer seconds) {
             return seconds(Output.of(seconds));
         }
 
+        /**
+         * @param timerName The name of the timer.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timerName(Output<String> timerName) {
             $.timerName = timerName;
             return this;
         }
 
+        /**
+         * @param timerName The name of the timer.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timerName(String timerName) {
             return timerName(Output.of(timerName));
         }

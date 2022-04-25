@@ -27,6 +27,10 @@ public final class StudioEncryptionConfigurationArgs extends com.pulumi.resource
     @Import(name="keyArn")
     private @Nullable Output<String> keyArn;
 
+    /**
+     * @return &lt;p&gt;The ARN for a KMS key that is used to encrypt studio data.&lt;/p&gt;
+     * 
+     */
     public Optional<Output<String>> keyArn() {
         return Optional.ofNullable(this.keyArn);
     }
@@ -63,11 +67,23 @@ public final class StudioEncryptionConfigurationArgs extends com.pulumi.resource
             $ = new StudioEncryptionConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param keyArn &lt;p&gt;The ARN for a KMS key that is used to encrypt studio data.&lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyArn(@Nullable Output<String> keyArn) {
             $.keyArn = keyArn;
             return this;
         }
 
+        /**
+         * @param keyArn &lt;p&gt;The ARN for a KMS key that is used to encrypt studio data.&lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyArn(String keyArn) {
             return keyArn(Output.of(keyArn));
         }

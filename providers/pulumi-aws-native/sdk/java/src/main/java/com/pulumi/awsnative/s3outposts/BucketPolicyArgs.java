@@ -21,6 +21,10 @@ public final class BucketPolicyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="bucket", required=true)
     private Output<String> bucket;
 
+    /**
+     * @return The Amazon Resource Name (ARN) of the specified bucket.
+     * 
+     */
     public Output<String> bucket() {
         return this.bucket;
     }
@@ -32,6 +36,10 @@ public final class BucketPolicyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="policyDocument", required=true)
     private Output<Object> policyDocument;
 
+    /**
+     * @return A policy document containing permissions to add to the specified bucket.
+     * 
+     */
     public Output<Object> policyDocument() {
         return this.policyDocument;
     }
@@ -61,20 +69,44 @@ public final class BucketPolicyArgs extends com.pulumi.resources.ResourceArgs {
             $ = new BucketPolicyArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param bucket The Amazon Resource Name (ARN) of the specified bucket.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bucket(Output<String> bucket) {
             $.bucket = bucket;
             return this;
         }
 
+        /**
+         * @param bucket The Amazon Resource Name (ARN) of the specified bucket.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bucket(String bucket) {
             return bucket(Output.of(bucket));
         }
 
+        /**
+         * @param policyDocument A policy document containing permissions to add to the specified bucket.
+         * 
+         * @return builder
+         * 
+         */
         public Builder policyDocument(Output<Object> policyDocument) {
             $.policyDocument = policyDocument;
             return this;
         }
 
+        /**
+         * @param policyDocument A policy document containing permissions to add to the specified bucket.
+         * 
+         * @return builder
+         * 
+         */
         public Builder policyDocument(Object policyDocument) {
             return policyDocument(Output.of(policyDocument));
         }

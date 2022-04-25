@@ -19,6 +19,10 @@ public final class GetCanaryArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return Name of the canary.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -47,6 +51,12 @@ public final class GetCanaryArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetCanaryArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name Name of the canary.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;

@@ -35,6 +35,10 @@ public final class SecurityProfileBehavior extends com.pulumi.resources.InvokeAr
     @Import(name="metric")
     private @Nullable String metric;
 
+    /**
+     * @return What is measured by the behavior.
+     * 
+     */
     public Optional<String> metric() {
         return Optional.ofNullable(this.metric);
     }
@@ -53,6 +57,10 @@ public final class SecurityProfileBehavior extends com.pulumi.resources.InvokeAr
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return The name for the behavior.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -64,6 +72,10 @@ public final class SecurityProfileBehavior extends com.pulumi.resources.InvokeAr
     @Import(name="suppressAlerts")
     private @Nullable Boolean suppressAlerts;
 
+    /**
+     * @return Manage Detect alarm SNS notifications by setting behavior notification to on or suppressed. Detect will continue to performing device behavior evaluations. However, suppressed alarms wouldn&#39;t be forwarded for SNS notification.
+     * 
+     */
     public Optional<Boolean> suppressAlerts() {
         return Optional.ofNullable(this.suppressAlerts);
     }
@@ -101,6 +113,12 @@ public final class SecurityProfileBehavior extends com.pulumi.resources.InvokeAr
             return this;
         }
 
+        /**
+         * @param metric What is measured by the behavior.
+         * 
+         * @return builder
+         * 
+         */
         public Builder metric(@Nullable String metric) {
             $.metric = metric;
             return this;
@@ -111,11 +129,23 @@ public final class SecurityProfileBehavior extends com.pulumi.resources.InvokeAr
             return this;
         }
 
+        /**
+         * @param name The name for the behavior.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param suppressAlerts Manage Detect alarm SNS notifications by setting behavior notification to on or suppressed. Detect will continue to performing device behavior evaluations. However, suppressed alarms wouldn&#39;t be forwarded for SNS notification.
+         * 
+         * @return builder
+         * 
+         */
         public Builder suppressAlerts(@Nullable Boolean suppressAlerts) {
             $.suppressAlerts = suppressAlerts;
             return this;

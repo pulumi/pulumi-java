@@ -34,6 +34,10 @@ public final class DetectorEventVariable extends com.pulumi.resources.InvokeArgs
     @Import(name="createdTime")
     private @Nullable String createdTime;
 
+    /**
+     * @return The time when the event variable was created.
+     * 
+     */
     public Optional<String> createdTime() {
         return Optional.ofNullable(this.createdTime);
     }
@@ -66,6 +70,10 @@ public final class DetectorEventVariable extends com.pulumi.resources.InvokeArgs
     @Import(name="description")
     private @Nullable String description;
 
+    /**
+     * @return The description.
+     * 
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
@@ -84,6 +92,10 @@ public final class DetectorEventVariable extends com.pulumi.resources.InvokeArgs
     @Import(name="lastUpdatedTime")
     private @Nullable String lastUpdatedTime;
 
+    /**
+     * @return The time when the event variable was last updated.
+     * 
+     */
     public Optional<String> lastUpdatedTime() {
         return Optional.ofNullable(this.lastUpdatedTime);
     }
@@ -102,6 +114,10 @@ public final class DetectorEventVariable extends com.pulumi.resources.InvokeArgs
     @Import(name="tags")
     private @Nullable List<DetectorTag> tags;
 
+    /**
+     * @return Tags associated with this event variable.
+     * 
+     */
     public Optional<List<DetectorTag>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -152,6 +168,12 @@ public final class DetectorEventVariable extends com.pulumi.resources.InvokeArgs
             return this;
         }
 
+        /**
+         * @param createdTime The time when the event variable was created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder createdTime(@Nullable String createdTime) {
             $.createdTime = createdTime;
             return this;
@@ -172,6 +194,12 @@ public final class DetectorEventVariable extends com.pulumi.resources.InvokeArgs
             return this;
         }
 
+        /**
+         * @param description The description.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable String description) {
             $.description = description;
             return this;
@@ -182,6 +210,12 @@ public final class DetectorEventVariable extends com.pulumi.resources.InvokeArgs
             return this;
         }
 
+        /**
+         * @param lastUpdatedTime The time when the event variable was last updated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastUpdatedTime(@Nullable String lastUpdatedTime) {
             $.lastUpdatedTime = lastUpdatedTime;
             return this;
@@ -192,11 +226,23 @@ public final class DetectorEventVariable extends com.pulumi.resources.InvokeArgs
             return this;
         }
 
+        /**
+         * @param tags Tags associated with this event variable.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable List<DetectorTag> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags Tags associated with this event variable.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(DetectorTag... tags) {
             return tags(List.of(tags));
         }

@@ -22,6 +22,10 @@ public final class UsagePlanQuotaSettings extends com.pulumi.resources.InvokeArg
     @Import(name="limit")
     private @Nullable Integer limit;
 
+    /**
+     * @return The maximum number of requests that users can make within the specified time period.
+     * 
+     */
     public Optional<Integer> limit() {
         return Optional.ofNullable(this.limit);
     }
@@ -33,6 +37,10 @@ public final class UsagePlanQuotaSettings extends com.pulumi.resources.InvokeArg
     @Import(name="offset")
     private @Nullable Integer offset;
 
+    /**
+     * @return For the initial time period, the number of requests to subtract from the specified limit. When you first implement a usage plan, the plan might start in the middle of the week or month. With this property, you can decrease the limit for this initial time period.
+     * 
+     */
     public Optional<Integer> offset() {
         return Optional.ofNullable(this.offset);
     }
@@ -44,6 +52,10 @@ public final class UsagePlanQuotaSettings extends com.pulumi.resources.InvokeArg
     @Import(name="period")
     private @Nullable String period;
 
+    /**
+     * @return The time period for which the maximum limit of requests applies, such as DAY or WEEK. For valid values, see the period property for the UsagePlan resource in the Amazon API Gateway REST API Reference.
+     * 
+     */
     public Optional<String> period() {
         return Optional.ofNullable(this.period);
     }
@@ -74,16 +86,34 @@ public final class UsagePlanQuotaSettings extends com.pulumi.resources.InvokeArg
             $ = new UsagePlanQuotaSettings(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param limit The maximum number of requests that users can make within the specified time period.
+         * 
+         * @return builder
+         * 
+         */
         public Builder limit(@Nullable Integer limit) {
             $.limit = limit;
             return this;
         }
 
+        /**
+         * @param offset For the initial time period, the number of requests to subtract from the specified limit. When you first implement a usage plan, the plan might start in the middle of the week or month. With this property, you can decrease the limit for this initial time period.
+         * 
+         * @return builder
+         * 
+         */
         public Builder offset(@Nullable Integer offset) {
             $.offset = offset;
             return this;
         }
 
+        /**
+         * @param period The time period for which the maximum limit of requests applies, such as DAY or WEEK. For valid values, see the period property for the UsagePlan resource in the Amazon API Gateway REST API Reference.
+         * 
+         * @return builder
+         * 
+         */
         public Builder period(@Nullable String period) {
             $.period = period;
             return this;

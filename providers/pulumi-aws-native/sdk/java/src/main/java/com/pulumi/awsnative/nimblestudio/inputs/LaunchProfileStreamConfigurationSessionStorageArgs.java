@@ -29,6 +29,11 @@ public final class LaunchProfileStreamConfigurationSessionStorageArgs extends co
     @Import(name="mode")
     private @Nullable Output<List<LaunchProfileStreamingSessionStorageMode>> mode;
 
+    /**
+     * @return &lt;p&gt;Allows artists to upload files to their workstations. The only valid option is
+     *                 &lt;code&gt;UPLOAD&lt;/code&gt;.&lt;/p&gt;
+     * 
+     */
     public Optional<Output<List<LaunchProfileStreamingSessionStorageMode>>> mode() {
         return Optional.ofNullable(this.mode);
     }
@@ -65,15 +70,36 @@ public final class LaunchProfileStreamConfigurationSessionStorageArgs extends co
             $ = new LaunchProfileStreamConfigurationSessionStorageArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param mode &lt;p&gt;Allows artists to upload files to their workstations. The only valid option is
+         *                 &lt;code&gt;UPLOAD&lt;/code&gt;.&lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder mode(@Nullable Output<List<LaunchProfileStreamingSessionStorageMode>> mode) {
             $.mode = mode;
             return this;
         }
 
+        /**
+         * @param mode &lt;p&gt;Allows artists to upload files to their workstations. The only valid option is
+         *                 &lt;code&gt;UPLOAD&lt;/code&gt;.&lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder mode(List<LaunchProfileStreamingSessionStorageMode> mode) {
             return mode(Output.of(mode));
         }
 
+        /**
+         * @param mode &lt;p&gt;Allows artists to upload files to their workstations. The only valid option is
+         *                 &lt;code&gt;UPLOAD&lt;/code&gt;.&lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder mode(LaunchProfileStreamingSessionStorageMode... mode) {
             return mode(List.of(mode));
         }

@@ -25,6 +25,10 @@ public final class ConnectorAutoScaling extends com.pulumi.resources.InvokeArgs 
     @Import(name="maxWorkerCount", required=true)
     private Integer maxWorkerCount;
 
+    /**
+     * @return The maximum number of workers for a connector.
+     * 
+     */
     public Integer maxWorkerCount() {
         return this.maxWorkerCount;
     }
@@ -36,6 +40,10 @@ public final class ConnectorAutoScaling extends com.pulumi.resources.InvokeArgs 
     @Import(name="mcuCount", required=true)
     private Integer mcuCount;
 
+    /**
+     * @return Specifies how many MSK Connect Units (MCU) as the minimum scaling unit.
+     * 
+     */
     public Integer mcuCount() {
         return this.mcuCount;
     }
@@ -47,6 +55,10 @@ public final class ConnectorAutoScaling extends com.pulumi.resources.InvokeArgs 
     @Import(name="minWorkerCount", required=true)
     private Integer minWorkerCount;
 
+    /**
+     * @return The minimum number of workers for a connector.
+     * 
+     */
     public Integer minWorkerCount() {
         return this.minWorkerCount;
     }
@@ -93,16 +105,34 @@ public final class ConnectorAutoScaling extends com.pulumi.resources.InvokeArgs 
             $ = new ConnectorAutoScaling(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param maxWorkerCount The maximum number of workers for a connector.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxWorkerCount(Integer maxWorkerCount) {
             $.maxWorkerCount = maxWorkerCount;
             return this;
         }
 
+        /**
+         * @param mcuCount Specifies how many MSK Connect Units (MCU) as the minimum scaling unit.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mcuCount(Integer mcuCount) {
             $.mcuCount = mcuCount;
             return this;
         }
 
+        /**
+         * @param minWorkerCount The minimum number of workers for a connector.
+         * 
+         * @return builder
+         * 
+         */
         public Builder minWorkerCount(Integer minWorkerCount) {
             $.minWorkerCount = minWorkerCount;
             return this;

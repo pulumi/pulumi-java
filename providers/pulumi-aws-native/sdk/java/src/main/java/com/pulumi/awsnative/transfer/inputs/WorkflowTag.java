@@ -23,6 +23,10 @@ public final class WorkflowTag extends com.pulumi.resources.InvokeArgs {
     @Import(name="key", required=true)
     private String key;
 
+    /**
+     * @return The name assigned to the tag that you create.
+     * 
+     */
     public String key() {
         return this.key;
     }
@@ -34,6 +38,10 @@ public final class WorkflowTag extends com.pulumi.resources.InvokeArgs {
     @Import(name="value", required=true)
     private String value;
 
+    /**
+     * @return Contains one or more values that you assigned to the key name you create.
+     * 
+     */
     public String value() {
         return this.value;
     }
@@ -63,11 +71,23 @@ public final class WorkflowTag extends com.pulumi.resources.InvokeArgs {
             $ = new WorkflowTag(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param key The name assigned to the tag that you create.
+         * 
+         * @return builder
+         * 
+         */
         public Builder key(String key) {
             $.key = key;
             return this;
         }
 
+        /**
+         * @param value Contains one or more values that you assigned to the key name you create.
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(String value) {
             $.value = value;
             return this;

@@ -28,6 +28,10 @@ public final class ContactStageArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="durationInMinutes", required=true)
     private Output<Integer> durationInMinutes;
 
+    /**
+     * @return The time to wait until beginning the next stage.
+     * 
+     */
     public Output<Integer> durationInMinutes() {
         return this.durationInMinutes;
     }
@@ -39,6 +43,10 @@ public final class ContactStageArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="targets")
     private @Nullable Output<List<ContactTargetsArgs>> targets;
 
+    /**
+     * @return The contacts or contact methods that the escalation plan or engagement plan is engaging.
+     * 
+     */
     public Optional<Output<List<ContactTargetsArgs>>> targets() {
         return Optional.ofNullable(this.targets);
     }
@@ -68,24 +76,54 @@ public final class ContactStageArgs extends com.pulumi.resources.ResourceArgs {
             $ = new ContactStageArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param durationInMinutes The time to wait until beginning the next stage.
+         * 
+         * @return builder
+         * 
+         */
         public Builder durationInMinutes(Output<Integer> durationInMinutes) {
             $.durationInMinutes = durationInMinutes;
             return this;
         }
 
+        /**
+         * @param durationInMinutes The time to wait until beginning the next stage.
+         * 
+         * @return builder
+         * 
+         */
         public Builder durationInMinutes(Integer durationInMinutes) {
             return durationInMinutes(Output.of(durationInMinutes));
         }
 
+        /**
+         * @param targets The contacts or contact methods that the escalation plan or engagement plan is engaging.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targets(@Nullable Output<List<ContactTargetsArgs>> targets) {
             $.targets = targets;
             return this;
         }
 
+        /**
+         * @param targets The contacts or contact methods that the escalation plan or engagement plan is engaging.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targets(List<ContactTargetsArgs> targets) {
             return targets(Output.of(targets));
         }
 
+        /**
+         * @param targets The contacts or contact methods that the escalation plan or engagement plan is engaging.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targets(ContactTargetsArgs... targets) {
             return targets(List.of(targets));
         }

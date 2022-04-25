@@ -14,7 +14,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class LaunchProfileStreamConfigurationSessionStorage {
     /**
-     * &lt;p&gt;Allows artists to upload files to their workstations. The only valid option is
+     * @return &lt;p&gt;Allows artists to upload files to their workstations. The only valid option is
      *                 &lt;code&gt;UPLOAD&lt;/code&gt;.&lt;/p&gt;
      * 
      */
@@ -30,10 +30,10 @@ public final class LaunchProfileStreamConfigurationSessionStorage {
     }
 
     /**
-     * &lt;p&gt;Allows artists to upload files to their workstations. The only valid option is
+     * @return &lt;p&gt;Allows artists to upload files to their workstations. The only valid option is
      *                 &lt;code&gt;UPLOAD&lt;/code&gt;.&lt;/p&gt;
      * 
-    */
+     */
     public List<LaunchProfileStreamingSessionStorageMode> mode() {
         return this.mode == null ? List.of() : this.mode;
     }

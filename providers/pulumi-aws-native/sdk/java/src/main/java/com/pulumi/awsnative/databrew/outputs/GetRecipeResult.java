@@ -14,7 +14,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetRecipeResult {
     /**
-     * Description of the recipe
+     * @return Description of the recipe
      * 
      */
     private final @Nullable String description;
@@ -29,9 +29,9 @@ public final class GetRecipeResult {
     }
 
     /**
-     * Description of the recipe
+     * @return Description of the recipe
      * 
-    */
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }

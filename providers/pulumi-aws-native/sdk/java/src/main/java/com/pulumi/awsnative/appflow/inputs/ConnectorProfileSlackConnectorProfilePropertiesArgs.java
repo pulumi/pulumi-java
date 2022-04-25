@@ -20,6 +20,10 @@ public final class ConnectorProfileSlackConnectorProfilePropertiesArgs extends c
     @Import(name="instanceUrl", required=true)
     private Output<String> instanceUrl;
 
+    /**
+     * @return The location of the Slack resource
+     * 
+     */
     public Output<String> instanceUrl() {
         return this.instanceUrl;
     }
@@ -48,11 +52,23 @@ public final class ConnectorProfileSlackConnectorProfilePropertiesArgs extends c
             $ = new ConnectorProfileSlackConnectorProfilePropertiesArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param instanceUrl The location of the Slack resource
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceUrl(Output<String> instanceUrl) {
             $.instanceUrl = instanceUrl;
             return this;
         }
 
+        /**
+         * @param instanceUrl The location of the Slack resource
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceUrl(String instanceUrl) {
             return instanceUrl(Output.of(instanceUrl));
         }

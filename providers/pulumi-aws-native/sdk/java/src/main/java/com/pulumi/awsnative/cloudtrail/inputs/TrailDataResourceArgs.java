@@ -27,6 +27,10 @@ public final class TrailDataResourceArgs extends com.pulumi.resources.ResourceAr
     @Import(name="type", required=true)
     private Output<String> type;
 
+    /**
+     * @return The resource type in which you want to log data events. You can specify AWS::S3::Object or AWS::Lambda::Function resources.
+     * 
+     */
     public Output<String> type() {
         return this.type;
     }
@@ -38,6 +42,10 @@ public final class TrailDataResourceArgs extends com.pulumi.resources.ResourceAr
     @Import(name="values")
     private @Nullable Output<List<String>> values;
 
+    /**
+     * @return An array of Amazon Resource Name (ARN) strings or partial ARN strings for the specified objects.
+     * 
+     */
     public Optional<Output<List<String>>> values() {
         return Optional.ofNullable(this.values);
     }
@@ -67,24 +75,54 @@ public final class TrailDataResourceArgs extends com.pulumi.resources.ResourceAr
             $ = new TrailDataResourceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param type The resource type in which you want to log data events. You can specify AWS::S3::Object or AWS::Lambda::Function resources.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(Output<String> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type The resource type in which you want to log data events. You can specify AWS::S3::Object or AWS::Lambda::Function resources.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             return type(Output.of(type));
         }
 
+        /**
+         * @param values An array of Amazon Resource Name (ARN) strings or partial ARN strings for the specified objects.
+         * 
+         * @return builder
+         * 
+         */
         public Builder values(@Nullable Output<List<String>> values) {
             $.values = values;
             return this;
         }
 
+        /**
+         * @param values An array of Amazon Resource Name (ARN) strings or partial ARN strings for the specified objects.
+         * 
+         * @return builder
+         * 
+         */
         public Builder values(List<String> values) {
             return values(Output.of(values));
         }
 
+        /**
+         * @param values An array of Amazon Resource Name (ARN) strings or partial ARN strings for the specified objects.
+         * 
+         * @return builder
+         * 
+         */
         public Builder values(String... values) {
             return values(List.of(values));
         }

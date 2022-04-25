@@ -24,6 +24,10 @@ public final class LocationS3S3ConfigArgs extends com.pulumi.resources.ResourceA
     @Import(name="bucketAccessRoleArn", required=true)
     private Output<String> bucketAccessRoleArn;
 
+    /**
+     * @return The ARN of the IAM role of the Amazon S3 bucket.
+     * 
+     */
     public Output<String> bucketAccessRoleArn() {
         return this.bucketAccessRoleArn;
     }
@@ -52,11 +56,23 @@ public final class LocationS3S3ConfigArgs extends com.pulumi.resources.ResourceA
             $ = new LocationS3S3ConfigArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param bucketAccessRoleArn The ARN of the IAM role of the Amazon S3 bucket.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bucketAccessRoleArn(Output<String> bucketAccessRoleArn) {
             $.bucketAccessRoleArn = bucketAccessRoleArn;
             return this;
         }
 
+        /**
+         * @param bucketAccessRoleArn The ARN of the IAM role of the Amazon S3 bucket.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bucketAccessRoleArn(String bucketAccessRoleArn) {
             return bucketAccessRoleArn(Output.of(bucketAccessRoleArn));
         }

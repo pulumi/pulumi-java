@@ -32,6 +32,10 @@ public final class FlowSalesforceDestinationPropertiesArgs extends com.pulumi.re
     @Import(name="idFieldNames")
     private @Nullable Output<List<String>> idFieldNames;
 
+    /**
+     * @return List of fields used as ID when performing a write operation.
+     * 
+     */
     public Optional<Output<List<String>>> idFieldNames() {
         return Optional.ofNullable(this.idFieldNames);
     }
@@ -86,15 +90,33 @@ public final class FlowSalesforceDestinationPropertiesArgs extends com.pulumi.re
             return errorHandlingConfig(Output.of(errorHandlingConfig));
         }
 
+        /**
+         * @param idFieldNames List of fields used as ID when performing a write operation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder idFieldNames(@Nullable Output<List<String>> idFieldNames) {
             $.idFieldNames = idFieldNames;
             return this;
         }
 
+        /**
+         * @param idFieldNames List of fields used as ID when performing a write operation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder idFieldNames(List<String> idFieldNames) {
             return idFieldNames(Output.of(idFieldNames));
         }
 
+        /**
+         * @param idFieldNames List of fields used as ID when performing a write operation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder idFieldNames(String... idFieldNames) {
             return idFieldNames(List.of(idFieldNames));
         }

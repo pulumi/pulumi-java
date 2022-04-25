@@ -23,6 +23,10 @@ public final class SessionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="findingPublishingFrequency")
     private @Nullable Output<SessionFindingPublishingFrequency> findingPublishingFrequency;
 
+    /**
+     * @return A enumeration value that specifies how frequently finding updates are published.
+     * 
+     */
     public Optional<Output<SessionFindingPublishingFrequency>> findingPublishingFrequency() {
         return Optional.ofNullable(this.findingPublishingFrequency);
     }
@@ -34,6 +38,10 @@ public final class SessionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="status")
     private @Nullable Output<SessionStatus> status;
 
+    /**
+     * @return A enumeration value that specifies the status of the Macie Session.
+     * 
+     */
     public Optional<Output<SessionStatus>> status() {
         return Optional.ofNullable(this.status);
     }
@@ -63,20 +71,44 @@ public final class SessionArgs extends com.pulumi.resources.ResourceArgs {
             $ = new SessionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param findingPublishingFrequency A enumeration value that specifies how frequently finding updates are published.
+         * 
+         * @return builder
+         * 
+         */
         public Builder findingPublishingFrequency(@Nullable Output<SessionFindingPublishingFrequency> findingPublishingFrequency) {
             $.findingPublishingFrequency = findingPublishingFrequency;
             return this;
         }
 
+        /**
+         * @param findingPublishingFrequency A enumeration value that specifies how frequently finding updates are published.
+         * 
+         * @return builder
+         * 
+         */
         public Builder findingPublishingFrequency(SessionFindingPublishingFrequency findingPublishingFrequency) {
             return findingPublishingFrequency(Output.of(findingPublishingFrequency));
         }
 
+        /**
+         * @param status A enumeration value that specifies the status of the Macie Session.
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(@Nullable Output<SessionStatus> status) {
             $.status = status;
             return this;
         }
 
+        /**
+         * @param status A enumeration value that specifies the status of the Macie Session.
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(SessionStatus status) {
             return status(Output.of(status));
         }

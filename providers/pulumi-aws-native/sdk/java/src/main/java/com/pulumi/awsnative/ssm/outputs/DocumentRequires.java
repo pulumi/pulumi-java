@@ -12,12 +12,12 @@ import javax.annotation.Nullable;
 @CustomType
 public final class DocumentRequires {
     /**
-     * The name of the required SSM document. The name can be an Amazon Resource Name (ARN).
+     * @return The name of the required SSM document. The name can be an Amazon Resource Name (ARN).
      * 
      */
     private final @Nullable String name;
     /**
-     * The document version required by the current document.
+     * @return The document version required by the current document.
      * 
      */
     private final @Nullable String version;
@@ -31,16 +31,16 @@ public final class DocumentRequires {
     }
 
     /**
-     * The name of the required SSM document. The name can be an Amazon Resource Name (ARN).
+     * @return The name of the required SSM document. The name can be an Amazon Resource Name (ARN).
      * 
-    */
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
-     * The document version required by the current document.
+     * @return The document version required by the current document.
      * 
-    */
+     */
     public Optional<String> version() {
         return Optional.ofNullable(this.version);
     }

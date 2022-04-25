@@ -23,6 +23,10 @@ public final class CanaryRunConfig extends com.pulumi.resources.InvokeArgs {
     @Import(name="activeTracing")
     private @Nullable Boolean activeTracing;
 
+    /**
+     * @return Enable active tracing if set to true
+     * 
+     */
     public Optional<Boolean> activeTracing() {
         return Optional.ofNullable(this.activeTracing);
     }
@@ -34,6 +38,10 @@ public final class CanaryRunConfig extends com.pulumi.resources.InvokeArgs {
     @Import(name="environmentVariables")
     private @Nullable Object environmentVariables;
 
+    /**
+     * @return Environment variable key-value pairs.
+     * 
+     */
     public Optional<Object> environmentVariables() {
         return Optional.ofNullable(this.environmentVariables);
     }
@@ -45,6 +53,10 @@ public final class CanaryRunConfig extends com.pulumi.resources.InvokeArgs {
     @Import(name="memoryInMB")
     private @Nullable Integer memoryInMB;
 
+    /**
+     * @return Provide maximum memory available for canary in MB
+     * 
+     */
     public Optional<Integer> memoryInMB() {
         return Optional.ofNullable(this.memoryInMB);
     }
@@ -56,6 +68,10 @@ public final class CanaryRunConfig extends com.pulumi.resources.InvokeArgs {
     @Import(name="timeoutInSeconds")
     private @Nullable Integer timeoutInSeconds;
 
+    /**
+     * @return Provide maximum canary timeout per run in seconds
+     * 
+     */
     public Optional<Integer> timeoutInSeconds() {
         return Optional.ofNullable(this.timeoutInSeconds);
     }
@@ -87,21 +103,45 @@ public final class CanaryRunConfig extends com.pulumi.resources.InvokeArgs {
             $ = new CanaryRunConfig(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param activeTracing Enable active tracing if set to true
+         * 
+         * @return builder
+         * 
+         */
         public Builder activeTracing(@Nullable Boolean activeTracing) {
             $.activeTracing = activeTracing;
             return this;
         }
 
+        /**
+         * @param environmentVariables Environment variable key-value pairs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder environmentVariables(@Nullable Object environmentVariables) {
             $.environmentVariables = environmentVariables;
             return this;
         }
 
+        /**
+         * @param memoryInMB Provide maximum memory available for canary in MB
+         * 
+         * @return builder
+         * 
+         */
         public Builder memoryInMB(@Nullable Integer memoryInMB) {
             $.memoryInMB = memoryInMB;
             return this;
         }
 
+        /**
+         * @param timeoutInSeconds Provide maximum canary timeout per run in seconds
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeoutInSeconds(@Nullable Integer timeoutInSeconds) {
             $.timeoutInSeconds = timeoutInSeconds;
             return this;

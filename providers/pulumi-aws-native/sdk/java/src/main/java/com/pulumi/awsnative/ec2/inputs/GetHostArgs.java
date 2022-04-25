@@ -19,6 +19,10 @@ public final class GetHostArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="hostId", required=true)
     private String hostId;
 
+    /**
+     * @return Id of the host created.
+     * 
+     */
     public String hostId() {
         return this.hostId;
     }
@@ -47,6 +51,12 @@ public final class GetHostArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetHostArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param hostId Id of the host created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hostId(String hostId) {
             $.hostId = hostId;
             return this;

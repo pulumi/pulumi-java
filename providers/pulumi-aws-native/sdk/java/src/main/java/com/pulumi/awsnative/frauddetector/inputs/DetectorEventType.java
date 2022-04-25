@@ -27,6 +27,10 @@ public final class DetectorEventType extends com.pulumi.resources.InvokeArgs {
     @Import(name="arn")
     private @Nullable String arn;
 
+    /**
+     * @return The ARN of the event type.
+     * 
+     */
     public Optional<String> arn() {
         return Optional.ofNullable(this.arn);
     }
@@ -38,6 +42,10 @@ public final class DetectorEventType extends com.pulumi.resources.InvokeArgs {
     @Import(name="createdTime")
     private @Nullable String createdTime;
 
+    /**
+     * @return The time when the event type was created.
+     * 
+     */
     public Optional<String> createdTime() {
         return Optional.ofNullable(this.createdTime);
     }
@@ -49,6 +57,10 @@ public final class DetectorEventType extends com.pulumi.resources.InvokeArgs {
     @Import(name="description")
     private @Nullable String description;
 
+    /**
+     * @return The description of the event type.
+     * 
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
@@ -88,6 +100,10 @@ public final class DetectorEventType extends com.pulumi.resources.InvokeArgs {
     @Import(name="lastUpdatedTime")
     private @Nullable String lastUpdatedTime;
 
+    /**
+     * @return The time when the event type was last updated.
+     * 
+     */
     public Optional<String> lastUpdatedTime() {
         return Optional.ofNullable(this.lastUpdatedTime);
     }
@@ -99,6 +115,10 @@ public final class DetectorEventType extends com.pulumi.resources.InvokeArgs {
     @Import(name="name")
     private @Nullable String name;
 
+    /**
+     * @return The name for the event type
+     * 
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
@@ -110,6 +130,10 @@ public final class DetectorEventType extends com.pulumi.resources.InvokeArgs {
     @Import(name="tags")
     private @Nullable List<DetectorTag> tags;
 
+    /**
+     * @return Tags associated with this event type.
+     * 
+     */
     public Optional<List<DetectorTag>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -147,16 +171,34 @@ public final class DetectorEventType extends com.pulumi.resources.InvokeArgs {
             $ = new DetectorEventType(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param arn The ARN of the event type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder arn(@Nullable String arn) {
             $.arn = arn;
             return this;
         }
 
+        /**
+         * @param createdTime The time when the event type was created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder createdTime(@Nullable String createdTime) {
             $.createdTime = createdTime;
             return this;
         }
 
+        /**
+         * @param description The description of the event type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable String description) {
             $.description = description;
             return this;
@@ -194,21 +236,45 @@ public final class DetectorEventType extends com.pulumi.resources.InvokeArgs {
             return labels(List.of(labels));
         }
 
+        /**
+         * @param lastUpdatedTime The time when the event type was last updated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastUpdatedTime(@Nullable String lastUpdatedTime) {
             $.lastUpdatedTime = lastUpdatedTime;
             return this;
         }
 
+        /**
+         * @param name The name for the event type
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param tags Tags associated with this event type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable List<DetectorTag> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags Tags associated with this event type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(DetectorTag... tags) {
             return tags(List.of(tags));
         }

@@ -25,6 +25,10 @@ public final class PermissionSetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return The permission set description.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -36,6 +40,10 @@ public final class PermissionSetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="inlinePolicy")
     private @Nullable Output<Object> inlinePolicy;
 
+    /**
+     * @return The inline policy to put in permission set.
+     * 
+     */
     public Optional<Output<Object>> inlinePolicy() {
         return Optional.ofNullable(this.inlinePolicy);
     }
@@ -47,6 +55,10 @@ public final class PermissionSetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="instanceArn", required=true)
     private Output<String> instanceArn;
 
+    /**
+     * @return The sso instance arn that the permission set is owned.
+     * 
+     */
     public Output<String> instanceArn() {
         return this.instanceArn;
     }
@@ -65,6 +77,10 @@ public final class PermissionSetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The name you want to assign to this permission set.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -76,6 +92,10 @@ public final class PermissionSetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="relayStateType")
     private @Nullable Output<String> relayStateType;
 
+    /**
+     * @return The relay state URL that redirect links to any service in the AWS Management Console.
+     * 
+     */
     public Optional<Output<String>> relayStateType() {
         return Optional.ofNullable(this.relayStateType);
     }
@@ -87,6 +107,10 @@ public final class PermissionSetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="sessionDuration")
     private @Nullable Output<String> sessionDuration;
 
+    /**
+     * @return The length of time that a user can be signed in to an AWS account.
+     * 
+     */
     public Optional<Output<String>> sessionDuration() {
         return Optional.ofNullable(this.sessionDuration);
     }
@@ -129,29 +153,65 @@ public final class PermissionSetArgs extends com.pulumi.resources.ResourceArgs {
             $ = new PermissionSetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param description The permission set description.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description The permission set description.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param inlinePolicy The inline policy to put in permission set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder inlinePolicy(@Nullable Output<Object> inlinePolicy) {
             $.inlinePolicy = inlinePolicy;
             return this;
         }
 
+        /**
+         * @param inlinePolicy The inline policy to put in permission set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder inlinePolicy(Object inlinePolicy) {
             return inlinePolicy(Output.of(inlinePolicy));
         }
 
+        /**
+         * @param instanceArn The sso instance arn that the permission set is owned.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceArn(Output<String> instanceArn) {
             $.instanceArn = instanceArn;
             return this;
         }
 
+        /**
+         * @param instanceArn The sso instance arn that the permission set is owned.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceArn(String instanceArn) {
             return instanceArn(Output.of(instanceArn));
         }
@@ -169,29 +229,65 @@ public final class PermissionSetArgs extends com.pulumi.resources.ResourceArgs {
             return managedPolicies(List.of(managedPolicies));
         }
 
+        /**
+         * @param name The name you want to assign to this permission set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name you want to assign to this permission set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param relayStateType The relay state URL that redirect links to any service in the AWS Management Console.
+         * 
+         * @return builder
+         * 
+         */
         public Builder relayStateType(@Nullable Output<String> relayStateType) {
             $.relayStateType = relayStateType;
             return this;
         }
 
+        /**
+         * @param relayStateType The relay state URL that redirect links to any service in the AWS Management Console.
+         * 
+         * @return builder
+         * 
+         */
         public Builder relayStateType(String relayStateType) {
             return relayStateType(Output.of(relayStateType));
         }
 
+        /**
+         * @param sessionDuration The length of time that a user can be signed in to an AWS account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sessionDuration(@Nullable Output<String> sessionDuration) {
             $.sessionDuration = sessionDuration;
             return this;
         }
 
+        /**
+         * @param sessionDuration The length of time that a user can be signed in to an AWS account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sessionDuration(String sessionDuration) {
             return sessionDuration(Output.of(sessionDuration));
         }

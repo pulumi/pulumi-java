@@ -24,6 +24,10 @@ public final class ReadinessCheckArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="readinessCheckName")
     private @Nullable Output<String> readinessCheckName;
 
+    /**
+     * @return Name of the ReadinessCheck to create.
+     * 
+     */
     public Optional<Output<String>> readinessCheckName() {
         return Optional.ofNullable(this.readinessCheckName);
     }
@@ -35,6 +39,10 @@ public final class ReadinessCheckArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="resourceSetName")
     private @Nullable Output<String> resourceSetName;
 
+    /**
+     * @return The name of the resource set to check.
+     * 
+     */
     public Optional<Output<String>> resourceSetName() {
         return Optional.ofNullable(this.resourceSetName);
     }
@@ -46,6 +54,10 @@ public final class ReadinessCheckArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="tags")
     private @Nullable Output<List<ReadinessCheckTagArgs>> tags;
 
+    /**
+     * @return A collection of tags associated with a resource.
+     * 
+     */
     public Optional<Output<List<ReadinessCheckTagArgs>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -76,33 +88,75 @@ public final class ReadinessCheckArgs extends com.pulumi.resources.ResourceArgs 
             $ = new ReadinessCheckArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param readinessCheckName Name of the ReadinessCheck to create.
+         * 
+         * @return builder
+         * 
+         */
         public Builder readinessCheckName(@Nullable Output<String> readinessCheckName) {
             $.readinessCheckName = readinessCheckName;
             return this;
         }
 
+        /**
+         * @param readinessCheckName Name of the ReadinessCheck to create.
+         * 
+         * @return builder
+         * 
+         */
         public Builder readinessCheckName(String readinessCheckName) {
             return readinessCheckName(Output.of(readinessCheckName));
         }
 
+        /**
+         * @param resourceSetName The name of the resource set to check.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceSetName(@Nullable Output<String> resourceSetName) {
             $.resourceSetName = resourceSetName;
             return this;
         }
 
+        /**
+         * @param resourceSetName The name of the resource set to check.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceSetName(String resourceSetName) {
             return resourceSetName(Output.of(resourceSetName));
         }
 
+        /**
+         * @param tags A collection of tags associated with a resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<List<ReadinessCheckTagArgs>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags A collection of tags associated with a resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(List<ReadinessCheckTagArgs> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param tags A collection of tags associated with a resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(ReadinessCheckTagArgs... tags) {
             return tags(List.of(tags));
         }

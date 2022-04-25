@@ -26,6 +26,10 @@ public final class DataCatalogArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return A description of the data catalog to be created.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -37,6 +41,10 @@ public final class DataCatalogArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The name of the data catalog to create. The catalog name must be unique for the AWS account and can use a maximum of 128 alphanumeric, underscore, at sign, or hyphen characters.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -48,6 +56,10 @@ public final class DataCatalogArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="parameters")
     private @Nullable Output<Object> parameters;
 
+    /**
+     * @return Specifies the Lambda function or functions to use for creating the data catalog. This is a mapping whose values depend on the catalog type.
+     * 
+     */
     public Optional<Output<Object>> parameters() {
         return Optional.ofNullable(this.parameters);
     }
@@ -59,6 +71,10 @@ public final class DataCatalogArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<List<DataCatalogTagArgs>> tags;
 
+    /**
+     * @return A list of comma separated tags to add to the data catalog that is created.
+     * 
+     */
     public Optional<Output<List<DataCatalogTagArgs>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -70,6 +86,10 @@ public final class DataCatalogArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="type", required=true)
     private Output<DataCatalogType> type;
 
+    /**
+     * @return The type of data catalog to create: LAMBDA for a federated catalog, GLUE for AWS Glue Catalog, or HIVE for an external hive metastore.
+     * 
+     */
     public Output<DataCatalogType> type() {
         return this.type;
     }
@@ -102,51 +122,117 @@ public final class DataCatalogArgs extends com.pulumi.resources.ResourceArgs {
             $ = new DataCatalogArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param description A description of the data catalog to be created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description A description of the data catalog to be created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param name The name of the data catalog to create. The catalog name must be unique for the AWS account and can use a maximum of 128 alphanumeric, underscore, at sign, or hyphen characters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name of the data catalog to create. The catalog name must be unique for the AWS account and can use a maximum of 128 alphanumeric, underscore, at sign, or hyphen characters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param parameters Specifies the Lambda function or functions to use for creating the data catalog. This is a mapping whose values depend on the catalog type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameters(@Nullable Output<Object> parameters) {
             $.parameters = parameters;
             return this;
         }
 
+        /**
+         * @param parameters Specifies the Lambda function or functions to use for creating the data catalog. This is a mapping whose values depend on the catalog type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameters(Object parameters) {
             return parameters(Output.of(parameters));
         }
 
+        /**
+         * @param tags A list of comma separated tags to add to the data catalog that is created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<List<DataCatalogTagArgs>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags A list of comma separated tags to add to the data catalog that is created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(List<DataCatalogTagArgs> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param tags A list of comma separated tags to add to the data catalog that is created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(DataCatalogTagArgs... tags) {
             return tags(List.of(tags));
         }
 
+        /**
+         * @param type The type of data catalog to create: LAMBDA for a federated catalog, GLUE for AWS Glue Catalog, or HIVE for an external hive metastore.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(Output<DataCatalogType> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type The type of data catalog to create: LAMBDA for a federated catalog, GLUE for AWS Glue Catalog, or HIVE for an external hive metastore.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(DataCatalogType type) {
             return type(Output.of(type));
         }

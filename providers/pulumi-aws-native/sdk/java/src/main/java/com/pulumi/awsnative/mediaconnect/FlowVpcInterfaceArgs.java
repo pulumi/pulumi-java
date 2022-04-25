@@ -23,6 +23,10 @@ public final class FlowVpcInterfaceArgs extends com.pulumi.resources.ResourceArg
     @Import(name="flowArn", required=true)
     private Output<String> flowArn;
 
+    /**
+     * @return The Amazon Resource Name (ARN), a unique identifier for any AWS resource, of the flow.
+     * 
+     */
     public Output<String> flowArn() {
         return this.flowArn;
     }
@@ -34,6 +38,10 @@ public final class FlowVpcInterfaceArgs extends com.pulumi.resources.ResourceArg
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return Immutable and has to be a unique against other VpcInterfaces in this Flow.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -45,6 +53,10 @@ public final class FlowVpcInterfaceArgs extends com.pulumi.resources.ResourceArg
     @Import(name="roleArn", required=true)
     private Output<String> roleArn;
 
+    /**
+     * @return Role Arn MediaConnect can assumes to create ENIs in customer&#39;s account.
+     * 
+     */
     public Output<String> roleArn() {
         return this.roleArn;
     }
@@ -56,6 +68,10 @@ public final class FlowVpcInterfaceArgs extends com.pulumi.resources.ResourceArg
     @Import(name="securityGroupIds", required=true)
     private Output<List<String>> securityGroupIds;
 
+    /**
+     * @return Security Group IDs to be used on ENI.
+     * 
+     */
     public Output<List<String>> securityGroupIds() {
         return this.securityGroupIds;
     }
@@ -67,6 +83,10 @@ public final class FlowVpcInterfaceArgs extends com.pulumi.resources.ResourceArg
     @Import(name="subnetId", required=true)
     private Output<String> subnetId;
 
+    /**
+     * @return Subnet must be in the AZ of the Flow
+     * 
+     */
     public Output<String> subnetId() {
         return this.subnetId;
     }
@@ -99,51 +119,117 @@ public final class FlowVpcInterfaceArgs extends com.pulumi.resources.ResourceArg
             $ = new FlowVpcInterfaceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param flowArn The Amazon Resource Name (ARN), a unique identifier for any AWS resource, of the flow.
+         * 
+         * @return builder
+         * 
+         */
         public Builder flowArn(Output<String> flowArn) {
             $.flowArn = flowArn;
             return this;
         }
 
+        /**
+         * @param flowArn The Amazon Resource Name (ARN), a unique identifier for any AWS resource, of the flow.
+         * 
+         * @return builder
+         * 
+         */
         public Builder flowArn(String flowArn) {
             return flowArn(Output.of(flowArn));
         }
 
+        /**
+         * @param name Immutable and has to be a unique against other VpcInterfaces in this Flow.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Immutable and has to be a unique against other VpcInterfaces in this Flow.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param roleArn Role Arn MediaConnect can assumes to create ENIs in customer&#39;s account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder roleArn(Output<String> roleArn) {
             $.roleArn = roleArn;
             return this;
         }
 
+        /**
+         * @param roleArn Role Arn MediaConnect can assumes to create ENIs in customer&#39;s account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder roleArn(String roleArn) {
             return roleArn(Output.of(roleArn));
         }
 
+        /**
+         * @param securityGroupIds Security Group IDs to be used on ENI.
+         * 
+         * @return builder
+         * 
+         */
         public Builder securityGroupIds(Output<List<String>> securityGroupIds) {
             $.securityGroupIds = securityGroupIds;
             return this;
         }
 
+        /**
+         * @param securityGroupIds Security Group IDs to be used on ENI.
+         * 
+         * @return builder
+         * 
+         */
         public Builder securityGroupIds(List<String> securityGroupIds) {
             return securityGroupIds(Output.of(securityGroupIds));
         }
 
+        /**
+         * @param securityGroupIds Security Group IDs to be used on ENI.
+         * 
+         * @return builder
+         * 
+         */
         public Builder securityGroupIds(String... securityGroupIds) {
             return securityGroupIds(List.of(securityGroupIds));
         }
 
+        /**
+         * @param subnetId Subnet must be in the AZ of the Flow
+         * 
+         * @return builder
+         * 
+         */
         public Builder subnetId(Output<String> subnetId) {
             $.subnetId = subnetId;
             return this;
         }
 
+        /**
+         * @param subnetId Subnet must be in the AZ of the Flow
+         * 
+         * @return builder
+         * 
+         */
         public Builder subnetId(String subnetId) {
             return subnetId(Output.of(subnetId));
         }

@@ -10,7 +10,7 @@ import java.util.Objects;
 @CustomType
 public final class GatewayGreengrass {
     /**
-     * The ARN of the Greengrass group.
+     * @return The ARN of the Greengrass group.
      * 
      */
     private final String groupArn;
@@ -21,9 +21,9 @@ public final class GatewayGreengrass {
     }
 
     /**
-     * The ARN of the Greengrass group.
+     * @return The ARN of the Greengrass group.
      * 
-    */
+     */
     public String groupArn() {
         return this.groupArn;
     }

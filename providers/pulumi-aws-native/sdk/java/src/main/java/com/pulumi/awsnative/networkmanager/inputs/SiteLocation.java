@@ -25,6 +25,10 @@ public final class SiteLocation extends com.pulumi.resources.InvokeArgs {
     @Import(name="address")
     private @Nullable String address;
 
+    /**
+     * @return The physical address.
+     * 
+     */
     public Optional<String> address() {
         return Optional.ofNullable(this.address);
     }
@@ -36,6 +40,10 @@ public final class SiteLocation extends com.pulumi.resources.InvokeArgs {
     @Import(name="latitude")
     private @Nullable String latitude;
 
+    /**
+     * @return The latitude.
+     * 
+     */
     public Optional<String> latitude() {
         return Optional.ofNullable(this.latitude);
     }
@@ -47,6 +55,10 @@ public final class SiteLocation extends com.pulumi.resources.InvokeArgs {
     @Import(name="longitude")
     private @Nullable String longitude;
 
+    /**
+     * @return The longitude.
+     * 
+     */
     public Optional<String> longitude() {
         return Optional.ofNullable(this.longitude);
     }
@@ -77,16 +89,34 @@ public final class SiteLocation extends com.pulumi.resources.InvokeArgs {
             $ = new SiteLocation(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param address The physical address.
+         * 
+         * @return builder
+         * 
+         */
         public Builder address(@Nullable String address) {
             $.address = address;
             return this;
         }
 
+        /**
+         * @param latitude The latitude.
+         * 
+         * @return builder
+         * 
+         */
         public Builder latitude(@Nullable String latitude) {
             $.latitude = latitude;
             return this;
         }
 
+        /**
+         * @param longitude The longitude.
+         * 
+         * @return builder
+         * 
+         */
         public Builder longitude(@Nullable String longitude) {
             $.longitude = longitude;
             return this;

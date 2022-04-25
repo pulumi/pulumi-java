@@ -26,6 +26,10 @@ public final class BucketReplicationConfigurationArgs extends com.pulumi.resourc
     @Import(name="role", required=true)
     private Output<String> role;
 
+    /**
+     * @return The Amazon Resource Name (ARN) of the AWS Identity and Access Management (IAM) role that Amazon S3 assumes when replicating objects.
+     * 
+     */
     public Output<String> role() {
         return this.role;
     }
@@ -37,6 +41,10 @@ public final class BucketReplicationConfigurationArgs extends com.pulumi.resourc
     @Import(name="rules", required=true)
     private Output<List<BucketReplicationRuleArgs>> rules;
 
+    /**
+     * @return A container for one or more replication rules.
+     * 
+     */
     public Output<List<BucketReplicationRuleArgs>> rules() {
         return this.rules;
     }
@@ -66,24 +74,54 @@ public final class BucketReplicationConfigurationArgs extends com.pulumi.resourc
             $ = new BucketReplicationConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param role The Amazon Resource Name (ARN) of the AWS Identity and Access Management (IAM) role that Amazon S3 assumes when replicating objects.
+         * 
+         * @return builder
+         * 
+         */
         public Builder role(Output<String> role) {
             $.role = role;
             return this;
         }
 
+        /**
+         * @param role The Amazon Resource Name (ARN) of the AWS Identity and Access Management (IAM) role that Amazon S3 assumes when replicating objects.
+         * 
+         * @return builder
+         * 
+         */
         public Builder role(String role) {
             return role(Output.of(role));
         }
 
+        /**
+         * @param rules A container for one or more replication rules.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rules(Output<List<BucketReplicationRuleArgs>> rules) {
             $.rules = rules;
             return this;
         }
 
+        /**
+         * @param rules A container for one or more replication rules.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rules(List<BucketReplicationRuleArgs> rules) {
             return rules(Output.of(rules));
         }
 
+        /**
+         * @param rules A container for one or more replication rules.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rules(BucketReplicationRuleArgs... rules) {
             return rules(List.of(rules));
         }

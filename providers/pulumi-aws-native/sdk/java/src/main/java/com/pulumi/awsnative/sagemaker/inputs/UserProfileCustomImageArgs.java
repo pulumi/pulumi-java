@@ -27,6 +27,10 @@ public final class UserProfileCustomImageArgs extends com.pulumi.resources.Resou
     @Import(name="appImageConfigName", required=true)
     private Output<String> appImageConfigName;
 
+    /**
+     * @return The Name of the AppImageConfig.
+     * 
+     */
     public Output<String> appImageConfigName() {
         return this.appImageConfigName;
     }
@@ -38,6 +42,10 @@ public final class UserProfileCustomImageArgs extends com.pulumi.resources.Resou
     @Import(name="imageName", required=true)
     private Output<String> imageName;
 
+    /**
+     * @return The name of the CustomImage. Must be unique to your account.
+     * 
+     */
     public Output<String> imageName() {
         return this.imageName;
     }
@@ -49,6 +57,10 @@ public final class UserProfileCustomImageArgs extends com.pulumi.resources.Resou
     @Import(name="imageVersionNumber")
     private @Nullable Output<Integer> imageVersionNumber;
 
+    /**
+     * @return The version number of the CustomImage.
+     * 
+     */
     public Optional<Output<Integer>> imageVersionNumber() {
         return Optional.ofNullable(this.imageVersionNumber);
     }
@@ -79,29 +91,65 @@ public final class UserProfileCustomImageArgs extends com.pulumi.resources.Resou
             $ = new UserProfileCustomImageArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param appImageConfigName The Name of the AppImageConfig.
+         * 
+         * @return builder
+         * 
+         */
         public Builder appImageConfigName(Output<String> appImageConfigName) {
             $.appImageConfigName = appImageConfigName;
             return this;
         }
 
+        /**
+         * @param appImageConfigName The Name of the AppImageConfig.
+         * 
+         * @return builder
+         * 
+         */
         public Builder appImageConfigName(String appImageConfigName) {
             return appImageConfigName(Output.of(appImageConfigName));
         }
 
+        /**
+         * @param imageName The name of the CustomImage. Must be unique to your account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder imageName(Output<String> imageName) {
             $.imageName = imageName;
             return this;
         }
 
+        /**
+         * @param imageName The name of the CustomImage. Must be unique to your account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder imageName(String imageName) {
             return imageName(Output.of(imageName));
         }
 
+        /**
+         * @param imageVersionNumber The version number of the CustomImage.
+         * 
+         * @return builder
+         * 
+         */
         public Builder imageVersionNumber(@Nullable Output<Integer> imageVersionNumber) {
             $.imageVersionNumber = imageVersionNumber;
             return this;
         }
 
+        /**
+         * @param imageVersionNumber The version number of the CustomImage.
+         * 
+         * @return builder
+         * 
+         */
         public Builder imageVersionNumber(Integer imageVersionNumber) {
             return imageVersionNumber(Output.of(imageVersionNumber));
         }

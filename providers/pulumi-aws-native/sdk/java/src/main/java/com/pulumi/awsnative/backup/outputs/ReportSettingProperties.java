@@ -12,12 +12,12 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ReportSettingProperties {
     /**
-     * The Amazon Resource Names (ARNs) of the frameworks a report covers.
+     * @return The Amazon Resource Names (ARNs) of the frameworks a report covers.
      * 
      */
     private final @Nullable List<String> frameworkArns;
     /**
-     * Identifies the report template for the report. Reports are built using a report template. The report templates are: `BACKUP_JOB_REPORT | COPY_JOB_REPORT | RESTORE_JOB_REPORT`
+     * @return Identifies the report template for the report. Reports are built using a report template. The report templates are: `BACKUP_JOB_REPORT | COPY_JOB_REPORT | RESTORE_JOB_REPORT`
      * 
      */
     private final String reportTemplate;
@@ -31,16 +31,16 @@ public final class ReportSettingProperties {
     }
 
     /**
-     * The Amazon Resource Names (ARNs) of the frameworks a report covers.
+     * @return The Amazon Resource Names (ARNs) of the frameworks a report covers.
      * 
-    */
+     */
     public List<String> frameworkArns() {
         return this.frameworkArns == null ? List.of() : this.frameworkArns;
     }
     /**
-     * Identifies the report template for the report. Reports are built using a report template. The report templates are: `BACKUP_JOB_REPORT | COPY_JOB_REPORT | RESTORE_JOB_REPORT`
+     * @return Identifies the report template for the report. Reports are built using a report template. The report templates are: `BACKUP_JOB_REPORT | COPY_JOB_REPORT | RESTORE_JOB_REPORT`
      * 
-    */
+     */
     public String reportTemplate() {
         return this.reportTemplate;
     }

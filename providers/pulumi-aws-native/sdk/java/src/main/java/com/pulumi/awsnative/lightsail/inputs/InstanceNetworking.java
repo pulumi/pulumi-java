@@ -34,6 +34,10 @@ public final class InstanceNetworking extends com.pulumi.resources.InvokeArgs {
     @Import(name="ports", required=true)
     private List<InstancePort> ports;
 
+    /**
+     * @return Ports to the Instance.
+     * 
+     */
     public List<InstancePort> ports() {
         return this.ports;
     }
@@ -68,11 +72,23 @@ public final class InstanceNetworking extends com.pulumi.resources.InvokeArgs {
             return this;
         }
 
+        /**
+         * @param ports Ports to the Instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ports(List<InstancePort> ports) {
             $.ports = ports;
             return this;
         }
 
+        /**
+         * @param ports Ports to the Instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ports(InstancePort... ports) {
             return ports(List.of(ports));
         }

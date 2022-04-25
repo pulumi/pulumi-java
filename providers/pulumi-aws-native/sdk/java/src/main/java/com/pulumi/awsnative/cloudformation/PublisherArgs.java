@@ -23,6 +23,10 @@ public final class PublisherArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="acceptTermsAndConditions", required=true)
     private Output<Boolean> acceptTermsAndConditions;
 
+    /**
+     * @return Whether you accept the terms and conditions for publishing extensions in the CloudFormation registry. You must accept the terms and conditions in order to publish public extensions to the CloudFormation registry. The terms and conditions can be found at https://cloudformation-registry-documents.s3.amazonaws.com/Terms_and_Conditions_for_AWS_CloudFormation_Registry_Publishers.pdf
+     * 
+     */
     public Output<Boolean> acceptTermsAndConditions() {
         return this.acceptTermsAndConditions;
     }
@@ -34,6 +38,10 @@ public final class PublisherArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="connectionArn")
     private @Nullable Output<String> connectionArn;
 
+    /**
+     * @return If you are using a Bitbucket or GitHub account for identity verification, the Amazon Resource Name (ARN) for your connection to that account.
+     * 
+     */
     public Optional<Output<String>> connectionArn() {
         return Optional.ofNullable(this.connectionArn);
     }
@@ -63,20 +71,44 @@ public final class PublisherArgs extends com.pulumi.resources.ResourceArgs {
             $ = new PublisherArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param acceptTermsAndConditions Whether you accept the terms and conditions for publishing extensions in the CloudFormation registry. You must accept the terms and conditions in order to publish public extensions to the CloudFormation registry. The terms and conditions can be found at https://cloudformation-registry-documents.s3.amazonaws.com/Terms_and_Conditions_for_AWS_CloudFormation_Registry_Publishers.pdf
+         * 
+         * @return builder
+         * 
+         */
         public Builder acceptTermsAndConditions(Output<Boolean> acceptTermsAndConditions) {
             $.acceptTermsAndConditions = acceptTermsAndConditions;
             return this;
         }
 
+        /**
+         * @param acceptTermsAndConditions Whether you accept the terms and conditions for publishing extensions in the CloudFormation registry. You must accept the terms and conditions in order to publish public extensions to the CloudFormation registry. The terms and conditions can be found at https://cloudformation-registry-documents.s3.amazonaws.com/Terms_and_Conditions_for_AWS_CloudFormation_Registry_Publishers.pdf
+         * 
+         * @return builder
+         * 
+         */
         public Builder acceptTermsAndConditions(Boolean acceptTermsAndConditions) {
             return acceptTermsAndConditions(Output.of(acceptTermsAndConditions));
         }
 
+        /**
+         * @param connectionArn If you are using a Bitbucket or GitHub account for identity verification, the Amazon Resource Name (ARN) for your connection to that account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectionArn(@Nullable Output<String> connectionArn) {
             $.connectionArn = connectionArn;
             return this;
         }
 
+        /**
+         * @param connectionArn If you are using a Bitbucket or GitHub account for identity verification, the Amazon Resource Name (ARN) for your connection to that account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectionArn(String connectionArn) {
             return connectionArn(Output.of(connectionArn));
         }

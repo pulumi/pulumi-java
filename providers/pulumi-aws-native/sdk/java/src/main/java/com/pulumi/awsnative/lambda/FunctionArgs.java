@@ -41,6 +41,10 @@ public final class FunctionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="code", required=true)
     private Output<FunctionCodeArgs> code;
 
+    /**
+     * @return The code for the function.
+     * 
+     */
     public Output<FunctionCodeArgs> code() {
         return this.code;
     }
@@ -52,6 +56,10 @@ public final class FunctionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="codeSigningConfigArn")
     private @Nullable Output<String> codeSigningConfigArn;
 
+    /**
+     * @return A unique Arn for CodeSigningConfig resource
+     * 
+     */
     public Optional<Output<String>> codeSigningConfigArn() {
         return Optional.ofNullable(this.codeSigningConfigArn);
     }
@@ -63,6 +71,10 @@ public final class FunctionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="deadLetterConfig")
     private @Nullable Output<FunctionDeadLetterConfigArgs> deadLetterConfig;
 
+    /**
+     * @return A dead letter queue configuration that specifies the queue or topic where Lambda sends asynchronous events when they fail processing.
+     * 
+     */
     public Optional<Output<FunctionDeadLetterConfigArgs>> deadLetterConfig() {
         return Optional.ofNullable(this.deadLetterConfig);
     }
@@ -74,6 +86,10 @@ public final class FunctionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return A description of the function.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -85,6 +101,10 @@ public final class FunctionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="environment")
     private @Nullable Output<FunctionEnvironmentArgs> environment;
 
+    /**
+     * @return Environment variables that are accessible from function code during execution.
+     * 
+     */
     public Optional<Output<FunctionEnvironmentArgs>> environment() {
         return Optional.ofNullable(this.environment);
     }
@@ -96,6 +116,10 @@ public final class FunctionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="fileSystemConfigs")
     private @Nullable Output<List<FunctionFileSystemConfigArgs>> fileSystemConfigs;
 
+    /**
+     * @return Connection settings for an Amazon EFS file system. To connect a function to a file system, a mount target must be available in every Availability Zone that your function connects to. If your template contains an AWS::EFS::MountTarget resource, you must also specify a DependsOn attribute to ensure that the mount target is created or updated before the function.
+     * 
+     */
     public Optional<Output<List<FunctionFileSystemConfigArgs>>> fileSystemConfigs() {
         return Optional.ofNullable(this.fileSystemConfigs);
     }
@@ -107,6 +131,10 @@ public final class FunctionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="functionName")
     private @Nullable Output<String> functionName;
 
+    /**
+     * @return The name of the Lambda function, up to 64 characters in length. If you don&#39;t specify a name, AWS CloudFormation generates one.
+     * 
+     */
     public Optional<Output<String>> functionName() {
         return Optional.ofNullable(this.functionName);
     }
@@ -118,6 +146,10 @@ public final class FunctionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="handler")
     private @Nullable Output<String> handler;
 
+    /**
+     * @return The name of the method within your code that Lambda calls to execute your function. The format includes the file name. It can also include namespaces and other qualifiers, depending on the runtime
+     * 
+     */
     public Optional<Output<String>> handler() {
         return Optional.ofNullable(this.handler);
     }
@@ -129,6 +161,10 @@ public final class FunctionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="imageConfig")
     private @Nullable Output<FunctionImageConfigArgs> imageConfig;
 
+    /**
+     * @return ImageConfig
+     * 
+     */
     public Optional<Output<FunctionImageConfigArgs>> imageConfig() {
         return Optional.ofNullable(this.imageConfig);
     }
@@ -140,6 +176,10 @@ public final class FunctionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="kmsKeyArn")
     private @Nullable Output<String> kmsKeyArn;
 
+    /**
+     * @return The ARN of the AWS Key Management Service (AWS KMS) key that&#39;s used to encrypt your function&#39;s environment variables. If it&#39;s not provided, AWS Lambda uses a default service key.
+     * 
+     */
     public Optional<Output<String>> kmsKeyArn() {
         return Optional.ofNullable(this.kmsKeyArn);
     }
@@ -151,6 +191,10 @@ public final class FunctionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="layers")
     private @Nullable Output<List<String>> layers;
 
+    /**
+     * @return A list of function layers to add to the function&#39;s execution environment. Specify each layer by its ARN, including the version.
+     * 
+     */
     public Optional<Output<List<String>>> layers() {
         return Optional.ofNullable(this.layers);
     }
@@ -162,6 +206,10 @@ public final class FunctionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="memorySize")
     private @Nullable Output<Integer> memorySize;
 
+    /**
+     * @return The amount of memory that your function has access to. Increasing the function&#39;s memory also increases its CPU allocation. The default value is 128 MB. The value must be a multiple of 64 MB.
+     * 
+     */
     public Optional<Output<Integer>> memorySize() {
         return Optional.ofNullable(this.memorySize);
     }
@@ -173,6 +221,10 @@ public final class FunctionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="packageType")
     private @Nullable Output<FunctionPackageType> packageType;
 
+    /**
+     * @return PackageType.
+     * 
+     */
     public Optional<Output<FunctionPackageType>> packageType() {
         return Optional.ofNullable(this.packageType);
     }
@@ -184,6 +236,10 @@ public final class FunctionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="reservedConcurrentExecutions")
     private @Nullable Output<Integer> reservedConcurrentExecutions;
 
+    /**
+     * @return The number of simultaneous executions to reserve for the function.
+     * 
+     */
     public Optional<Output<Integer>> reservedConcurrentExecutions() {
         return Optional.ofNullable(this.reservedConcurrentExecutions);
     }
@@ -195,6 +251,10 @@ public final class FunctionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="role", required=true)
     private Output<String> role;
 
+    /**
+     * @return The Amazon Resource Name (ARN) of the function&#39;s execution role.
+     * 
+     */
     public Output<String> role() {
         return this.role;
     }
@@ -206,6 +266,10 @@ public final class FunctionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="runtime")
     private @Nullable Output<String> runtime;
 
+    /**
+     * @return The identifier of the function&#39;s runtime.
+     * 
+     */
     public Optional<Output<String>> runtime() {
         return Optional.ofNullable(this.runtime);
     }
@@ -217,6 +281,10 @@ public final class FunctionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<List<FunctionTagArgs>> tags;
 
+    /**
+     * @return A list of tags to apply to the function.
+     * 
+     */
     public Optional<Output<List<FunctionTagArgs>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -228,6 +296,10 @@ public final class FunctionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="timeout")
     private @Nullable Output<Integer> timeout;
 
+    /**
+     * @return The amount of time that Lambda allows a function to run before stopping it. The default is 3 seconds. The maximum allowed value is 900 seconds.
+     * 
+     */
     public Optional<Output<Integer>> timeout() {
         return Optional.ofNullable(this.timeout);
     }
@@ -239,6 +311,10 @@ public final class FunctionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tracingConfig")
     private @Nullable Output<FunctionTracingConfigArgs> tracingConfig;
 
+    /**
+     * @return Set Mode to Active to sample and trace a subset of incoming requests with AWS X-Ray.
+     * 
+     */
     public Optional<Output<FunctionTracingConfigArgs>> tracingConfig() {
         return Optional.ofNullable(this.tracingConfig);
     }
@@ -250,6 +326,10 @@ public final class FunctionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="vpcConfig")
     private @Nullable Output<FunctionVpcConfigArgs> vpcConfig;
 
+    /**
+     * @return For network connectivity to AWS resources in a VPC, specify a list of security groups and subnets in the VPC.
+     * 
+     */
     public Optional<Output<FunctionVpcConfigArgs>> vpcConfig() {
         return Optional.ofNullable(this.vpcConfig);
     }
@@ -311,194 +391,452 @@ public final class FunctionArgs extends com.pulumi.resources.ResourceArgs {
             return architectures(List.of(architectures));
         }
 
+        /**
+         * @param code The code for the function.
+         * 
+         * @return builder
+         * 
+         */
         public Builder code(Output<FunctionCodeArgs> code) {
             $.code = code;
             return this;
         }
 
+        /**
+         * @param code The code for the function.
+         * 
+         * @return builder
+         * 
+         */
         public Builder code(FunctionCodeArgs code) {
             return code(Output.of(code));
         }
 
+        /**
+         * @param codeSigningConfigArn A unique Arn for CodeSigningConfig resource
+         * 
+         * @return builder
+         * 
+         */
         public Builder codeSigningConfigArn(@Nullable Output<String> codeSigningConfigArn) {
             $.codeSigningConfigArn = codeSigningConfigArn;
             return this;
         }
 
+        /**
+         * @param codeSigningConfigArn A unique Arn for CodeSigningConfig resource
+         * 
+         * @return builder
+         * 
+         */
         public Builder codeSigningConfigArn(String codeSigningConfigArn) {
             return codeSigningConfigArn(Output.of(codeSigningConfigArn));
         }
 
+        /**
+         * @param deadLetterConfig A dead letter queue configuration that specifies the queue or topic where Lambda sends asynchronous events when they fail processing.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deadLetterConfig(@Nullable Output<FunctionDeadLetterConfigArgs> deadLetterConfig) {
             $.deadLetterConfig = deadLetterConfig;
             return this;
         }
 
+        /**
+         * @param deadLetterConfig A dead letter queue configuration that specifies the queue or topic where Lambda sends asynchronous events when they fail processing.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deadLetterConfig(FunctionDeadLetterConfigArgs deadLetterConfig) {
             return deadLetterConfig(Output.of(deadLetterConfig));
         }
 
+        /**
+         * @param description A description of the function.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description A description of the function.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param environment Environment variables that are accessible from function code during execution.
+         * 
+         * @return builder
+         * 
+         */
         public Builder environment(@Nullable Output<FunctionEnvironmentArgs> environment) {
             $.environment = environment;
             return this;
         }
 
+        /**
+         * @param environment Environment variables that are accessible from function code during execution.
+         * 
+         * @return builder
+         * 
+         */
         public Builder environment(FunctionEnvironmentArgs environment) {
             return environment(Output.of(environment));
         }
 
+        /**
+         * @param fileSystemConfigs Connection settings for an Amazon EFS file system. To connect a function to a file system, a mount target must be available in every Availability Zone that your function connects to. If your template contains an AWS::EFS::MountTarget resource, you must also specify a DependsOn attribute to ensure that the mount target is created or updated before the function.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fileSystemConfigs(@Nullable Output<List<FunctionFileSystemConfigArgs>> fileSystemConfigs) {
             $.fileSystemConfigs = fileSystemConfigs;
             return this;
         }
 
+        /**
+         * @param fileSystemConfigs Connection settings for an Amazon EFS file system. To connect a function to a file system, a mount target must be available in every Availability Zone that your function connects to. If your template contains an AWS::EFS::MountTarget resource, you must also specify a DependsOn attribute to ensure that the mount target is created or updated before the function.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fileSystemConfigs(List<FunctionFileSystemConfigArgs> fileSystemConfigs) {
             return fileSystemConfigs(Output.of(fileSystemConfigs));
         }
 
+        /**
+         * @param fileSystemConfigs Connection settings for an Amazon EFS file system. To connect a function to a file system, a mount target must be available in every Availability Zone that your function connects to. If your template contains an AWS::EFS::MountTarget resource, you must also specify a DependsOn attribute to ensure that the mount target is created or updated before the function.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fileSystemConfigs(FunctionFileSystemConfigArgs... fileSystemConfigs) {
             return fileSystemConfigs(List.of(fileSystemConfigs));
         }
 
+        /**
+         * @param functionName The name of the Lambda function, up to 64 characters in length. If you don&#39;t specify a name, AWS CloudFormation generates one.
+         * 
+         * @return builder
+         * 
+         */
         public Builder functionName(@Nullable Output<String> functionName) {
             $.functionName = functionName;
             return this;
         }
 
+        /**
+         * @param functionName The name of the Lambda function, up to 64 characters in length. If you don&#39;t specify a name, AWS CloudFormation generates one.
+         * 
+         * @return builder
+         * 
+         */
         public Builder functionName(String functionName) {
             return functionName(Output.of(functionName));
         }
 
+        /**
+         * @param handler The name of the method within your code that Lambda calls to execute your function. The format includes the file name. It can also include namespaces and other qualifiers, depending on the runtime
+         * 
+         * @return builder
+         * 
+         */
         public Builder handler(@Nullable Output<String> handler) {
             $.handler = handler;
             return this;
         }
 
+        /**
+         * @param handler The name of the method within your code that Lambda calls to execute your function. The format includes the file name. It can also include namespaces and other qualifiers, depending on the runtime
+         * 
+         * @return builder
+         * 
+         */
         public Builder handler(String handler) {
             return handler(Output.of(handler));
         }
 
+        /**
+         * @param imageConfig ImageConfig
+         * 
+         * @return builder
+         * 
+         */
         public Builder imageConfig(@Nullable Output<FunctionImageConfigArgs> imageConfig) {
             $.imageConfig = imageConfig;
             return this;
         }
 
+        /**
+         * @param imageConfig ImageConfig
+         * 
+         * @return builder
+         * 
+         */
         public Builder imageConfig(FunctionImageConfigArgs imageConfig) {
             return imageConfig(Output.of(imageConfig));
         }
 
+        /**
+         * @param kmsKeyArn The ARN of the AWS Key Management Service (AWS KMS) key that&#39;s used to encrypt your function&#39;s environment variables. If it&#39;s not provided, AWS Lambda uses a default service key.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kmsKeyArn(@Nullable Output<String> kmsKeyArn) {
             $.kmsKeyArn = kmsKeyArn;
             return this;
         }
 
+        /**
+         * @param kmsKeyArn The ARN of the AWS Key Management Service (AWS KMS) key that&#39;s used to encrypt your function&#39;s environment variables. If it&#39;s not provided, AWS Lambda uses a default service key.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kmsKeyArn(String kmsKeyArn) {
             return kmsKeyArn(Output.of(kmsKeyArn));
         }
 
+        /**
+         * @param layers A list of function layers to add to the function&#39;s execution environment. Specify each layer by its ARN, including the version.
+         * 
+         * @return builder
+         * 
+         */
         public Builder layers(@Nullable Output<List<String>> layers) {
             $.layers = layers;
             return this;
         }
 
+        /**
+         * @param layers A list of function layers to add to the function&#39;s execution environment. Specify each layer by its ARN, including the version.
+         * 
+         * @return builder
+         * 
+         */
         public Builder layers(List<String> layers) {
             return layers(Output.of(layers));
         }
 
+        /**
+         * @param layers A list of function layers to add to the function&#39;s execution environment. Specify each layer by its ARN, including the version.
+         * 
+         * @return builder
+         * 
+         */
         public Builder layers(String... layers) {
             return layers(List.of(layers));
         }
 
+        /**
+         * @param memorySize The amount of memory that your function has access to. Increasing the function&#39;s memory also increases its CPU allocation. The default value is 128 MB. The value must be a multiple of 64 MB.
+         * 
+         * @return builder
+         * 
+         */
         public Builder memorySize(@Nullable Output<Integer> memorySize) {
             $.memorySize = memorySize;
             return this;
         }
 
+        /**
+         * @param memorySize The amount of memory that your function has access to. Increasing the function&#39;s memory also increases its CPU allocation. The default value is 128 MB. The value must be a multiple of 64 MB.
+         * 
+         * @return builder
+         * 
+         */
         public Builder memorySize(Integer memorySize) {
             return memorySize(Output.of(memorySize));
         }
 
+        /**
+         * @param packageType PackageType.
+         * 
+         * @return builder
+         * 
+         */
         public Builder packageType(@Nullable Output<FunctionPackageType> packageType) {
             $.packageType = packageType;
             return this;
         }
 
+        /**
+         * @param packageType PackageType.
+         * 
+         * @return builder
+         * 
+         */
         public Builder packageType(FunctionPackageType packageType) {
             return packageType(Output.of(packageType));
         }
 
+        /**
+         * @param reservedConcurrentExecutions The number of simultaneous executions to reserve for the function.
+         * 
+         * @return builder
+         * 
+         */
         public Builder reservedConcurrentExecutions(@Nullable Output<Integer> reservedConcurrentExecutions) {
             $.reservedConcurrentExecutions = reservedConcurrentExecutions;
             return this;
         }
 
+        /**
+         * @param reservedConcurrentExecutions The number of simultaneous executions to reserve for the function.
+         * 
+         * @return builder
+         * 
+         */
         public Builder reservedConcurrentExecutions(Integer reservedConcurrentExecutions) {
             return reservedConcurrentExecutions(Output.of(reservedConcurrentExecutions));
         }
 
+        /**
+         * @param role The Amazon Resource Name (ARN) of the function&#39;s execution role.
+         * 
+         * @return builder
+         * 
+         */
         public Builder role(Output<String> role) {
             $.role = role;
             return this;
         }
 
+        /**
+         * @param role The Amazon Resource Name (ARN) of the function&#39;s execution role.
+         * 
+         * @return builder
+         * 
+         */
         public Builder role(String role) {
             return role(Output.of(role));
         }
 
+        /**
+         * @param runtime The identifier of the function&#39;s runtime.
+         * 
+         * @return builder
+         * 
+         */
         public Builder runtime(@Nullable Output<String> runtime) {
             $.runtime = runtime;
             return this;
         }
 
+        /**
+         * @param runtime The identifier of the function&#39;s runtime.
+         * 
+         * @return builder
+         * 
+         */
         public Builder runtime(String runtime) {
             return runtime(Output.of(runtime));
         }
 
+        /**
+         * @param tags A list of tags to apply to the function.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<List<FunctionTagArgs>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags A list of tags to apply to the function.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(List<FunctionTagArgs> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param tags A list of tags to apply to the function.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(FunctionTagArgs... tags) {
             return tags(List.of(tags));
         }
 
+        /**
+         * @param timeout The amount of time that Lambda allows a function to run before stopping it. The default is 3 seconds. The maximum allowed value is 900 seconds.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeout(@Nullable Output<Integer> timeout) {
             $.timeout = timeout;
             return this;
         }
 
+        /**
+         * @param timeout The amount of time that Lambda allows a function to run before stopping it. The default is 3 seconds. The maximum allowed value is 900 seconds.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeout(Integer timeout) {
             return timeout(Output.of(timeout));
         }
 
+        /**
+         * @param tracingConfig Set Mode to Active to sample and trace a subset of incoming requests with AWS X-Ray.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tracingConfig(@Nullable Output<FunctionTracingConfigArgs> tracingConfig) {
             $.tracingConfig = tracingConfig;
             return this;
         }
 
+        /**
+         * @param tracingConfig Set Mode to Active to sample and trace a subset of incoming requests with AWS X-Ray.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tracingConfig(FunctionTracingConfigArgs tracingConfig) {
             return tracingConfig(Output.of(tracingConfig));
         }
 
+        /**
+         * @param vpcConfig For network connectivity to AWS resources in a VPC, specify a list of security groups and subnets in the VPC.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vpcConfig(@Nullable Output<FunctionVpcConfigArgs> vpcConfig) {
             $.vpcConfig = vpcConfig;
             return this;
         }
 
+        /**
+         * @param vpcConfig For network connectivity to AWS resources in a VPC, specify a list of security groups and subnets in the VPC.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vpcConfig(FunctionVpcConfigArgs vpcConfig) {
             return vpcConfig(Output.of(vpcConfig));
         }

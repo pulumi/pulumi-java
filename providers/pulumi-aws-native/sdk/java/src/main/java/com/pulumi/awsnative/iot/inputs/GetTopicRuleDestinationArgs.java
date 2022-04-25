@@ -19,6 +19,10 @@ public final class GetTopicRuleDestinationArgs extends com.pulumi.resources.Invo
     @Import(name="arn", required=true)
     private String arn;
 
+    /**
+     * @return Amazon Resource Name (ARN).
+     * 
+     */
     public String arn() {
         return this.arn;
     }
@@ -47,6 +51,12 @@ public final class GetTopicRuleDestinationArgs extends com.pulumi.resources.Invo
             $ = new GetTopicRuleDestinationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param arn Amazon Resource Name (ARN).
+         * 
+         * @return builder
+         * 
+         */
         public Builder arn(String arn) {
             $.arn = arn;
             return this;

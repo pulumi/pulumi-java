@@ -19,6 +19,10 @@ public final class GetACLArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="aCLName", required=true)
     private String aCLName;
 
+    /**
+     * @return The name of the acl.
+     * 
+     */
     public String aCLName() {
         return this.aCLName;
     }
@@ -47,6 +51,12 @@ public final class GetACLArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetACLArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param aCLName The name of the acl.
+         * 
+         * @return builder
+         * 
+         */
         public Builder aCLName(String aCLName) {
             $.aCLName = aCLName;
             return this;

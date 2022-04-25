@@ -26,6 +26,10 @@ public final class InstanceMonthlyTransferArgs extends com.pulumi.resources.Reso
     @Import(name="gbPerMonthAllocated")
     private @Nullable Output<String> gbPerMonthAllocated;
 
+    /**
+     * @return GbPerMonthAllocated of the Instance.
+     * 
+     */
     public Optional<Output<String>> gbPerMonthAllocated() {
         return Optional.ofNullable(this.gbPerMonthAllocated);
     }
@@ -54,11 +58,23 @@ public final class InstanceMonthlyTransferArgs extends com.pulumi.resources.Reso
             $ = new InstanceMonthlyTransferArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param gbPerMonthAllocated GbPerMonthAllocated of the Instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder gbPerMonthAllocated(@Nullable Output<String> gbPerMonthAllocated) {
             $.gbPerMonthAllocated = gbPerMonthAllocated;
             return this;
         }
 
+        /**
+         * @param gbPerMonthAllocated GbPerMonthAllocated of the Instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder gbPerMonthAllocated(String gbPerMonthAllocated) {
             return gbPerMonthAllocated(Output.of(gbPerMonthAllocated));
         }

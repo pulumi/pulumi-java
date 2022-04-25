@@ -38,6 +38,10 @@ public final class BotLocaleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="intents")
     private @Nullable Output<List<BotIntentArgs>> intents;
 
+    /**
+     * @return List of intents
+     * 
+     */
     public Optional<Output<List<BotIntentArgs>>> intents() {
         return Optional.ofNullable(this.intents);
     }
@@ -63,6 +67,10 @@ public final class BotLocaleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="slotTypes")
     private @Nullable Output<List<BotSlotTypeArgs>> slotTypes;
 
+    /**
+     * @return List of SlotTypes
+     * 
+     */
     public Optional<Output<List<BotSlotTypeArgs>>> slotTypes() {
         return Optional.ofNullable(this.slotTypes);
     }
@@ -112,15 +120,33 @@ public final class BotLocaleArgs extends com.pulumi.resources.ResourceArgs {
             return description(Output.of(description));
         }
 
+        /**
+         * @param intents List of intents
+         * 
+         * @return builder
+         * 
+         */
         public Builder intents(@Nullable Output<List<BotIntentArgs>> intents) {
             $.intents = intents;
             return this;
         }
 
+        /**
+         * @param intents List of intents
+         * 
+         * @return builder
+         * 
+         */
         public Builder intents(List<BotIntentArgs> intents) {
             return intents(Output.of(intents));
         }
 
+        /**
+         * @param intents List of intents
+         * 
+         * @return builder
+         * 
+         */
         public Builder intents(BotIntentArgs... intents) {
             return intents(List.of(intents));
         }
@@ -143,15 +169,33 @@ public final class BotLocaleArgs extends com.pulumi.resources.ResourceArgs {
             return nluConfidenceThreshold(Output.of(nluConfidenceThreshold));
         }
 
+        /**
+         * @param slotTypes List of SlotTypes
+         * 
+         * @return builder
+         * 
+         */
         public Builder slotTypes(@Nullable Output<List<BotSlotTypeArgs>> slotTypes) {
             $.slotTypes = slotTypes;
             return this;
         }
 
+        /**
+         * @param slotTypes List of SlotTypes
+         * 
+         * @return builder
+         * 
+         */
         public Builder slotTypes(List<BotSlotTypeArgs> slotTypes) {
             return slotTypes(Output.of(slotTypes));
         }
 
+        /**
+         * @param slotTypes List of SlotTypes
+         * 
+         * @return builder
+         * 
+         */
         public Builder slotTypes(BotSlotTypeArgs... slotTypes) {
             return slotTypes(List.of(slotTypes));
         }

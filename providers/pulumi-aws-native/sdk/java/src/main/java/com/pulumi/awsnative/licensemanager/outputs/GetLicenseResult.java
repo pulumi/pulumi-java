@@ -18,42 +18,42 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetLicenseResult {
     /**
-     * Beneficiary of the license.
+     * @return Beneficiary of the license.
      * 
      */
     private final @Nullable String beneficiary;
     private final @Nullable LicenseConsumptionConfiguration consumptionConfiguration;
     private final @Nullable List<LicenseEntitlement> entitlements;
     /**
-     * Home region for the created license.
+     * @return Home region for the created license.
      * 
      */
     private final @Nullable String homeRegion;
     private final @Nullable LicenseIssuerData issuer;
     /**
-     * Amazon Resource Name is a unique name for each resource.
+     * @return Amazon Resource Name is a unique name for each resource.
      * 
      */
     private final @Nullable String licenseArn;
     private final @Nullable List<LicenseMetadata> licenseMetadata;
     /**
-     * Name for the created license.
+     * @return Name for the created license.
      * 
      */
     private final @Nullable String licenseName;
     /**
-     * Product name for the created license.
+     * @return Product name for the created license.
      * 
      */
     private final @Nullable String productName;
     /**
-     * ProductSKU of the license.
+     * @return ProductSKU of the license.
      * 
      */
     private final @Nullable String productSKU;
     private final @Nullable LicenseValidityDateFormat validity;
     /**
-     * The version of the license.
+     * @return The version of the license.
      * 
      */
     private final @Nullable String version;
@@ -87,9 +87,9 @@ public final class GetLicenseResult {
     }
 
     /**
-     * Beneficiary of the license.
+     * @return Beneficiary of the license.
      * 
-    */
+     */
     public Optional<String> beneficiary() {
         return Optional.ofNullable(this.beneficiary);
     }
@@ -100,9 +100,9 @@ public final class GetLicenseResult {
         return this.entitlements == null ? List.of() : this.entitlements;
     }
     /**
-     * Home region for the created license.
+     * @return Home region for the created license.
      * 
-    */
+     */
     public Optional<String> homeRegion() {
         return Optional.ofNullable(this.homeRegion);
     }
@@ -110,9 +110,9 @@ public final class GetLicenseResult {
         return Optional.ofNullable(this.issuer);
     }
     /**
-     * Amazon Resource Name is a unique name for each resource.
+     * @return Amazon Resource Name is a unique name for each resource.
      * 
-    */
+     */
     public Optional<String> licenseArn() {
         return Optional.ofNullable(this.licenseArn);
     }
@@ -120,23 +120,23 @@ public final class GetLicenseResult {
         return this.licenseMetadata == null ? List.of() : this.licenseMetadata;
     }
     /**
-     * Name for the created license.
+     * @return Name for the created license.
      * 
-    */
+     */
     public Optional<String> licenseName() {
         return Optional.ofNullable(this.licenseName);
     }
     /**
-     * Product name for the created license.
+     * @return Product name for the created license.
      * 
-    */
+     */
     public Optional<String> productName() {
         return Optional.ofNullable(this.productName);
     }
     /**
-     * ProductSKU of the license.
+     * @return ProductSKU of the license.
      * 
-    */
+     */
     public Optional<String> productSKU() {
         return Optional.ofNullable(this.productSKU);
     }
@@ -144,9 +144,9 @@ public final class GetLicenseResult {
         return Optional.ofNullable(this.validity);
     }
     /**
-     * The version of the license.
+     * @return The version of the license.
      * 
-    */
+     */
     public Optional<String> version() {
         return Optional.ofNullable(this.version);
     }

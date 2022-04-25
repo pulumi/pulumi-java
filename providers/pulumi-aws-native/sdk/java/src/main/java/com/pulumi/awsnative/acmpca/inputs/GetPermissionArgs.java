@@ -19,6 +19,10 @@ public final class GetPermissionArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="certificateAuthorityArn", required=true)
     private String certificateAuthorityArn;
 
+    /**
+     * @return The Amazon Resource Name (ARN) of the Private Certificate Authority that grants the permission.
+     * 
+     */
     public String certificateAuthorityArn() {
         return this.certificateAuthorityArn;
     }
@@ -30,6 +34,10 @@ public final class GetPermissionArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="principal", required=true)
     private String principal;
 
+    /**
+     * @return The AWS service or identity that receives the permission. At this time, the only valid principal is acm.amazonaws.com.
+     * 
+     */
     public String principal() {
         return this.principal;
     }
@@ -59,11 +67,23 @@ public final class GetPermissionArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetPermissionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param certificateAuthorityArn The Amazon Resource Name (ARN) of the Private Certificate Authority that grants the permission.
+         * 
+         * @return builder
+         * 
+         */
         public Builder certificateAuthorityArn(String certificateAuthorityArn) {
             $.certificateAuthorityArn = certificateAuthorityArn;
             return this;
         }
 
+        /**
+         * @param principal The AWS service or identity that receives the permission. At this time, the only valid principal is acm.amazonaws.com.
+         * 
+         * @return builder
+         * 
+         */
         public Builder principal(String principal) {
             $.principal = principal;
             return this;

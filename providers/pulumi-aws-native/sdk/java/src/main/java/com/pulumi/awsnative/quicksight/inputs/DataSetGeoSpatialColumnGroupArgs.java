@@ -28,6 +28,10 @@ public final class DataSetGeoSpatialColumnGroupArgs extends com.pulumi.resources
     @Import(name="columns", required=true)
     private Output<List<String>> columns;
 
+    /**
+     * @return &lt;p&gt;Columns in this hierarchy.&lt;/p&gt;
+     * 
+     */
     public Output<List<String>> columns() {
         return this.columns;
     }
@@ -46,6 +50,10 @@ public final class DataSetGeoSpatialColumnGroupArgs extends com.pulumi.resources
     @Import(name="name", required=true)
     private Output<String> name;
 
+    /**
+     * @return &lt;p&gt;A display name for the hierarchy.&lt;/p&gt;
+     * 
+     */
     public Output<String> name() {
         return this.name;
     }
@@ -76,15 +84,33 @@ public final class DataSetGeoSpatialColumnGroupArgs extends com.pulumi.resources
             $ = new DataSetGeoSpatialColumnGroupArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param columns &lt;p&gt;Columns in this hierarchy.&lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder columns(Output<List<String>> columns) {
             $.columns = columns;
             return this;
         }
 
+        /**
+         * @param columns &lt;p&gt;Columns in this hierarchy.&lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder columns(List<String> columns) {
             return columns(Output.of(columns));
         }
 
+        /**
+         * @param columns &lt;p&gt;Columns in this hierarchy.&lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder columns(String... columns) {
             return columns(List.of(columns));
         }
@@ -98,11 +124,23 @@ public final class DataSetGeoSpatialColumnGroupArgs extends com.pulumi.resources
             return countryCode(Output.of(countryCode));
         }
 
+        /**
+         * @param name &lt;p&gt;A display name for the hierarchy.&lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name &lt;p&gt;A display name for the hierarchy.&lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }

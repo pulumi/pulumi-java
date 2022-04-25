@@ -14,12 +14,12 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetDeviceResult {
     /**
-     * The Edge Device you want to register against a device fleet
+     * @return The Edge Device you want to register against a device fleet
      * 
      */
     private final @Nullable Device device;
     /**
-     * Associate tags with the resource
+     * @return Associate tags with the resource
      * 
      */
     private final @Nullable List<DeviceTag> tags;
@@ -33,16 +33,16 @@ public final class GetDeviceResult {
     }
 
     /**
-     * The Edge Device you want to register against a device fleet
+     * @return The Edge Device you want to register against a device fleet
      * 
-    */
+     */
     public Optional<Device> device() {
         return Optional.ofNullable(this.device);
     }
     /**
-     * Associate tags with the resource
+     * @return Associate tags with the resource
      * 
-    */
+     */
     public List<DeviceTag> tags() {
         return this.tags == null ? List.of() : this.tags;
     }

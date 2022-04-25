@@ -33,6 +33,10 @@ public final class RecordingConfigurationArgs extends com.pulumi.resources.Resou
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return Recording Configuration Name.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -44,6 +48,10 @@ public final class RecordingConfigurationArgs extends com.pulumi.resources.Resou
     @Import(name="tags")
     private @Nullable Output<List<RecordingConfigurationTagArgs>> tags;
 
+    /**
+     * @return A list of key-value pairs that contain metadata for the asset model.
+     * 
+     */
     public Optional<Output<List<RecordingConfigurationTagArgs>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -91,24 +99,54 @@ public final class RecordingConfigurationArgs extends com.pulumi.resources.Resou
             return destinationConfiguration(Output.of(destinationConfiguration));
         }
 
+        /**
+         * @param name Recording Configuration Name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Recording Configuration Name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param tags A list of key-value pairs that contain metadata for the asset model.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<List<RecordingConfigurationTagArgs>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags A list of key-value pairs that contain metadata for the asset model.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(List<RecordingConfigurationTagArgs> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param tags A list of key-value pairs that contain metadata for the asset model.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(RecordingConfigurationTagArgs... tags) {
             return tags(List.of(tags));
         }

@@ -26,6 +26,10 @@ public final class DetectorModelDefinitionArgs extends com.pulumi.resources.Reso
     @Import(name="initialStateName", required=true)
     private Output<String> initialStateName;
 
+    /**
+     * @return The state that is entered at the creation of each detector (instance).
+     * 
+     */
     public Output<String> initialStateName() {
         return this.initialStateName;
     }
@@ -37,6 +41,10 @@ public final class DetectorModelDefinitionArgs extends com.pulumi.resources.Reso
     @Import(name="states", required=true)
     private Output<List<DetectorModelStateArgs>> states;
 
+    /**
+     * @return Information about the states of the detector.
+     * 
+     */
     public Output<List<DetectorModelStateArgs>> states() {
         return this.states;
     }
@@ -66,24 +74,54 @@ public final class DetectorModelDefinitionArgs extends com.pulumi.resources.Reso
             $ = new DetectorModelDefinitionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param initialStateName The state that is entered at the creation of each detector (instance).
+         * 
+         * @return builder
+         * 
+         */
         public Builder initialStateName(Output<String> initialStateName) {
             $.initialStateName = initialStateName;
             return this;
         }
 
+        /**
+         * @param initialStateName The state that is entered at the creation of each detector (instance).
+         * 
+         * @return builder
+         * 
+         */
         public Builder initialStateName(String initialStateName) {
             return initialStateName(Output.of(initialStateName));
         }
 
+        /**
+         * @param states Information about the states of the detector.
+         * 
+         * @return builder
+         * 
+         */
         public Builder states(Output<List<DetectorModelStateArgs>> states) {
             $.states = states;
             return this;
         }
 
+        /**
+         * @param states Information about the states of the detector.
+         * 
+         * @return builder
+         * 
+         */
         public Builder states(List<DetectorModelStateArgs> states) {
             return states(Output.of(states));
         }
 
+        /**
+         * @param states Information about the states of the detector.
+         * 
+         * @return builder
+         * 
+         */
         public Builder states(DetectorModelStateArgs... states) {
             return states(List.of(states));
         }

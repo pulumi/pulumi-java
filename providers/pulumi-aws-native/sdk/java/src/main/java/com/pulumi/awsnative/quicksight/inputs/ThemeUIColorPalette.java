@@ -29,6 +29,10 @@ public final class ThemeUIColorPalette extends com.pulumi.resources.InvokeArgs {
     @Import(name="accent")
     private @Nullable String accent;
 
+    /**
+     * @return &lt;p&gt;This color is that applies to selected states and buttons.&lt;/p&gt;
+     * 
+     */
     public Optional<String> accent() {
         return Optional.ofNullable(this.accent);
     }
@@ -41,6 +45,11 @@ public final class ThemeUIColorPalette extends com.pulumi.resources.InvokeArgs {
     @Import(name="accentForeground")
     private @Nullable String accentForeground;
 
+    /**
+     * @return &lt;p&gt;The foreground color that applies to any text or other elements that appear over the
+     *             accent color.&lt;/p&gt;
+     * 
+     */
     public Optional<String> accentForeground() {
         return Optional.ofNullable(this.accentForeground);
     }
@@ -52,6 +61,10 @@ public final class ThemeUIColorPalette extends com.pulumi.resources.InvokeArgs {
     @Import(name="danger")
     private @Nullable String danger;
 
+    /**
+     * @return &lt;p&gt;The color that applies to error messages.&lt;/p&gt;
+     * 
+     */
     public Optional<String> danger() {
         return Optional.ofNullable(this.danger);
     }
@@ -64,6 +77,11 @@ public final class ThemeUIColorPalette extends com.pulumi.resources.InvokeArgs {
     @Import(name="dangerForeground")
     private @Nullable String dangerForeground;
 
+    /**
+     * @return &lt;p&gt;The foreground color that applies to any text or other elements that appear over the
+     *             error color.&lt;/p&gt;
+     * 
+     */
     public Optional<String> dangerForeground() {
         return Optional.ofNullable(this.dangerForeground);
     }
@@ -76,6 +94,11 @@ public final class ThemeUIColorPalette extends com.pulumi.resources.InvokeArgs {
     @Import(name="dimension")
     private @Nullable String dimension;
 
+    /**
+     * @return &lt;p&gt;The color that applies to the names of fields that are identified as
+     *             dimensions.&lt;/p&gt;
+     * 
+     */
     public Optional<String> dimension() {
         return Optional.ofNullable(this.dimension);
     }
@@ -88,6 +111,11 @@ public final class ThemeUIColorPalette extends com.pulumi.resources.InvokeArgs {
     @Import(name="dimensionForeground")
     private @Nullable String dimensionForeground;
 
+    /**
+     * @return &lt;p&gt;The foreground color that applies to any text or other elements that appear over the
+     *             dimension color.&lt;/p&gt;
+     * 
+     */
     public Optional<String> dimensionForeground() {
         return Optional.ofNullable(this.dimensionForeground);
     }
@@ -99,6 +127,10 @@ public final class ThemeUIColorPalette extends com.pulumi.resources.InvokeArgs {
     @Import(name="measure")
     private @Nullable String measure;
 
+    /**
+     * @return &lt;p&gt;The color that applies to the names of fields that are identified as measures.&lt;/p&gt;
+     * 
+     */
     public Optional<String> measure() {
         return Optional.ofNullable(this.measure);
     }
@@ -111,6 +143,11 @@ public final class ThemeUIColorPalette extends com.pulumi.resources.InvokeArgs {
     @Import(name="measureForeground")
     private @Nullable String measureForeground;
 
+    /**
+     * @return &lt;p&gt;The foreground color that applies to any text or other elements that appear over the
+     *             measure color.&lt;/p&gt;
+     * 
+     */
     public Optional<String> measureForeground() {
         return Optional.ofNullable(this.measureForeground);
     }
@@ -122,6 +159,10 @@ public final class ThemeUIColorPalette extends com.pulumi.resources.InvokeArgs {
     @Import(name="primaryBackground")
     private @Nullable String primaryBackground;
 
+    /**
+     * @return &lt;p&gt;The background color that applies to visuals and other high emphasis UI.&lt;/p&gt;
+     * 
+     */
     public Optional<String> primaryBackground() {
         return Optional.ofNullable(this.primaryBackground);
     }
@@ -134,6 +175,11 @@ public final class ThemeUIColorPalette extends com.pulumi.resources.InvokeArgs {
     @Import(name="primaryForeground")
     private @Nullable String primaryForeground;
 
+    /**
+     * @return &lt;p&gt;The color of text and other foreground elements that appear over the primary
+     *             background regions, such as grid lines, borders, table banding, icons, and so on.&lt;/p&gt;
+     * 
+     */
     public Optional<String> primaryForeground() {
         return Optional.ofNullable(this.primaryForeground);
     }
@@ -145,6 +191,10 @@ public final class ThemeUIColorPalette extends com.pulumi.resources.InvokeArgs {
     @Import(name="secondaryBackground")
     private @Nullable String secondaryBackground;
 
+    /**
+     * @return &lt;p&gt;The background color that applies to the sheet background and sheet controls.&lt;/p&gt;
+     * 
+     */
     public Optional<String> secondaryBackground() {
         return Optional.ofNullable(this.secondaryBackground);
     }
@@ -157,6 +207,11 @@ public final class ThemeUIColorPalette extends com.pulumi.resources.InvokeArgs {
     @Import(name="secondaryForeground")
     private @Nullable String secondaryForeground;
 
+    /**
+     * @return &lt;p&gt;The foreground color that applies to any sheet title, sheet control text, or UI that
+     *             appears over the secondary background.&lt;/p&gt;
+     * 
+     */
     public Optional<String> secondaryForeground() {
         return Optional.ofNullable(this.secondaryForeground);
     }
@@ -169,6 +224,11 @@ public final class ThemeUIColorPalette extends com.pulumi.resources.InvokeArgs {
     @Import(name="success")
     private @Nullable String success;
 
+    /**
+     * @return &lt;p&gt;The color that applies to success messages, for example the check mark for a
+     *             successful download.&lt;/p&gt;
+     * 
+     */
     public Optional<String> success() {
         return Optional.ofNullable(this.success);
     }
@@ -181,6 +241,11 @@ public final class ThemeUIColorPalette extends com.pulumi.resources.InvokeArgs {
     @Import(name="successForeground")
     private @Nullable String successForeground;
 
+    /**
+     * @return &lt;p&gt;The foreground color that applies to any text or other elements that appear over the
+     *             success color.&lt;/p&gt;
+     * 
+     */
     public Optional<String> successForeground() {
         return Optional.ofNullable(this.successForeground);
     }
@@ -192,6 +257,10 @@ public final class ThemeUIColorPalette extends com.pulumi.resources.InvokeArgs {
     @Import(name="warning")
     private @Nullable String warning;
 
+    /**
+     * @return &lt;p&gt;This color that applies to warning and informational messages.&lt;/p&gt;
+     * 
+     */
     public Optional<String> warning() {
         return Optional.ofNullable(this.warning);
     }
@@ -204,6 +273,11 @@ public final class ThemeUIColorPalette extends com.pulumi.resources.InvokeArgs {
     @Import(name="warningForeground")
     private @Nullable String warningForeground;
 
+    /**
+     * @return &lt;p&gt;The foreground color that applies to any text or other elements that appear over the
+     *             warning color.&lt;/p&gt;
+     * 
+     */
     public Optional<String> warningForeground() {
         return Optional.ofNullable(this.warningForeground);
     }
@@ -247,81 +321,187 @@ public final class ThemeUIColorPalette extends com.pulumi.resources.InvokeArgs {
             $ = new ThemeUIColorPalette(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param accent &lt;p&gt;This color is that applies to selected states and buttons.&lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder accent(@Nullable String accent) {
             $.accent = accent;
             return this;
         }
 
+        /**
+         * @param accentForeground &lt;p&gt;The foreground color that applies to any text or other elements that appear over the
+         *             accent color.&lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder accentForeground(@Nullable String accentForeground) {
             $.accentForeground = accentForeground;
             return this;
         }
 
+        /**
+         * @param danger &lt;p&gt;The color that applies to error messages.&lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder danger(@Nullable String danger) {
             $.danger = danger;
             return this;
         }
 
+        /**
+         * @param dangerForeground &lt;p&gt;The foreground color that applies to any text or other elements that appear over the
+         *             error color.&lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder dangerForeground(@Nullable String dangerForeground) {
             $.dangerForeground = dangerForeground;
             return this;
         }
 
+        /**
+         * @param dimension &lt;p&gt;The color that applies to the names of fields that are identified as
+         *             dimensions.&lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder dimension(@Nullable String dimension) {
             $.dimension = dimension;
             return this;
         }
 
+        /**
+         * @param dimensionForeground &lt;p&gt;The foreground color that applies to any text or other elements that appear over the
+         *             dimension color.&lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder dimensionForeground(@Nullable String dimensionForeground) {
             $.dimensionForeground = dimensionForeground;
             return this;
         }
 
+        /**
+         * @param measure &lt;p&gt;The color that applies to the names of fields that are identified as measures.&lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder measure(@Nullable String measure) {
             $.measure = measure;
             return this;
         }
 
+        /**
+         * @param measureForeground &lt;p&gt;The foreground color that applies to any text or other elements that appear over the
+         *             measure color.&lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder measureForeground(@Nullable String measureForeground) {
             $.measureForeground = measureForeground;
             return this;
         }
 
+        /**
+         * @param primaryBackground &lt;p&gt;The background color that applies to visuals and other high emphasis UI.&lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder primaryBackground(@Nullable String primaryBackground) {
             $.primaryBackground = primaryBackground;
             return this;
         }
 
+        /**
+         * @param primaryForeground &lt;p&gt;The color of text and other foreground elements that appear over the primary
+         *             background regions, such as grid lines, borders, table banding, icons, and so on.&lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder primaryForeground(@Nullable String primaryForeground) {
             $.primaryForeground = primaryForeground;
             return this;
         }
 
+        /**
+         * @param secondaryBackground &lt;p&gt;The background color that applies to the sheet background and sheet controls.&lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder secondaryBackground(@Nullable String secondaryBackground) {
             $.secondaryBackground = secondaryBackground;
             return this;
         }
 
+        /**
+         * @param secondaryForeground &lt;p&gt;The foreground color that applies to any sheet title, sheet control text, or UI that
+         *             appears over the secondary background.&lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder secondaryForeground(@Nullable String secondaryForeground) {
             $.secondaryForeground = secondaryForeground;
             return this;
         }
 
+        /**
+         * @param success &lt;p&gt;The color that applies to success messages, for example the check mark for a
+         *             successful download.&lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder success(@Nullable String success) {
             $.success = success;
             return this;
         }
 
+        /**
+         * @param successForeground &lt;p&gt;The foreground color that applies to any text or other elements that appear over the
+         *             success color.&lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder successForeground(@Nullable String successForeground) {
             $.successForeground = successForeground;
             return this;
         }
 
+        /**
+         * @param warning &lt;p&gt;This color that applies to warning and informational messages.&lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder warning(@Nullable String warning) {
             $.warning = warning;
             return this;
         }
 
+        /**
+         * @param warningForeground &lt;p&gt;The foreground color that applies to any text or other elements that appear over the
+         *             warning color.&lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder warningForeground(@Nullable String warningForeground) {
             $.warningForeground = warningForeground;
             return this;

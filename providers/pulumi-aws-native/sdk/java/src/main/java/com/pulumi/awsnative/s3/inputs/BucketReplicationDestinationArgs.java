@@ -73,6 +73,10 @@ public final class BucketReplicationDestinationArgs extends com.pulumi.resources
     @Import(name="storageClass")
     private @Nullable Output<BucketReplicationDestinationStorageClass> storageClass;
 
+    /**
+     * @return The storage class to use when replicating objects, such as S3 Standard or reduced redundancy.
+     * 
+     */
     public Optional<Output<BucketReplicationDestinationStorageClass>> storageClass() {
         return Optional.ofNullable(this.storageClass);
     }
@@ -161,11 +165,23 @@ public final class BucketReplicationDestinationArgs extends com.pulumi.resources
             return replicationTime(Output.of(replicationTime));
         }
 
+        /**
+         * @param storageClass The storage class to use when replicating objects, such as S3 Standard or reduced redundancy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageClass(@Nullable Output<BucketReplicationDestinationStorageClass> storageClass) {
             $.storageClass = storageClass;
             return this;
         }
 
+        /**
+         * @param storageClass The storage class to use when replicating objects, such as S3 Standard or reduced redundancy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageClass(BucketReplicationDestinationStorageClass storageClass) {
             return storageClass(Output.of(storageClass));
         }

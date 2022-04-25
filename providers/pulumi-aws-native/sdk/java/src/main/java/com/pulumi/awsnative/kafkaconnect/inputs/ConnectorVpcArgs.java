@@ -25,6 +25,10 @@ public final class ConnectorVpcArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="securityGroups", required=true)
     private Output<List<String>> securityGroups;
 
+    /**
+     * @return The AWS security groups to associate with the elastic network interfaces in order to specify what the connector has access to.
+     * 
+     */
     public Output<List<String>> securityGroups() {
         return this.securityGroups;
     }
@@ -36,6 +40,10 @@ public final class ConnectorVpcArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="subnets", required=true)
     private Output<List<String>> subnets;
 
+    /**
+     * @return The list of subnets to connect to in the virtual private cloud (VPC). AWS creates elastic network interfaces inside these subnets.
+     * 
+     */
     public Output<List<String>> subnets() {
         return this.subnets;
     }
@@ -65,28 +73,64 @@ public final class ConnectorVpcArgs extends com.pulumi.resources.ResourceArgs {
             $ = new ConnectorVpcArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param securityGroups The AWS security groups to associate with the elastic network interfaces in order to specify what the connector has access to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder securityGroups(Output<List<String>> securityGroups) {
             $.securityGroups = securityGroups;
             return this;
         }
 
+        /**
+         * @param securityGroups The AWS security groups to associate with the elastic network interfaces in order to specify what the connector has access to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder securityGroups(List<String> securityGroups) {
             return securityGroups(Output.of(securityGroups));
         }
 
+        /**
+         * @param securityGroups The AWS security groups to associate with the elastic network interfaces in order to specify what the connector has access to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder securityGroups(String... securityGroups) {
             return securityGroups(List.of(securityGroups));
         }
 
+        /**
+         * @param subnets The list of subnets to connect to in the virtual private cloud (VPC). AWS creates elastic network interfaces inside these subnets.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subnets(Output<List<String>> subnets) {
             $.subnets = subnets;
             return this;
         }
 
+        /**
+         * @param subnets The list of subnets to connect to in the virtual private cloud (VPC). AWS creates elastic network interfaces inside these subnets.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subnets(List<String> subnets) {
             return subnets(Output.of(subnets));
         }
 
+        /**
+         * @param subnets The list of subnets to connect to in the virtual private cloud (VPC). AWS creates elastic network interfaces inside these subnets.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subnets(String... subnets) {
             return subnets(List.of(subnets));
         }

@@ -15,42 +15,42 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ProviderAssumeRoleArgs {
     /**
-     * Number of seconds to restrict the assume role session duration.
+     * @return Number of seconds to restrict the assume role session duration.
      * 
      */
     private final @Nullable Output<Integer> durationSeconds;
     /**
-     * External identifier to use when assuming the role.
+     * @return External identifier to use when assuming the role.
      * 
      */
     private final @Nullable Output<String> externalId;
     /**
-     * IAM Policy JSON describing further restricting permissions for the IAM Role being assumed.
+     * @return IAM Policy JSON describing further restricting permissions for the IAM Role being assumed.
      * 
      */
     private final @Nullable Output<String> policy;
     /**
-     * Set of Amazon Resource Names (ARNs) of IAM Policies describing further restricting permissions for the role.
+     * @return Set of Amazon Resource Names (ARNs) of IAM Policies describing further restricting permissions for the role.
      * 
      */
     private final @Nullable Output<List<String>> policyArns;
     /**
-     * Amazon Resource Name (ARN) of the IAM Role to assume.
+     * @return Amazon Resource Name (ARN) of the IAM Role to assume.
      * 
      */
     private final @Nullable Output<String> roleArn;
     /**
-     * Session name to use when assuming the role.
+     * @return Session name to use when assuming the role.
      * 
      */
     private final @Nullable Output<String> sessionName;
     /**
-     * Map of assume role session tags.
+     * @return Map of assume role session tags.
      * 
      */
     private final @Nullable Output<Map<String,String>> tags;
     /**
-     * A list of keys for session tags that you want to set as transitive. If you set a tag key as transitive, the corresponding key and value passes to subsequent sessions in a role chain.
+     * @return A list of keys for session tags that you want to set as transitive. If you set a tag key as transitive, the corresponding key and value passes to subsequent sessions in a role chain.
      * 
      */
     private final @Nullable Output<List<String>> transitiveTagKeys;
@@ -76,58 +76,58 @@ public final class ProviderAssumeRoleArgs {
     }
 
     /**
-     * Number of seconds to restrict the assume role session duration.
+     * @return Number of seconds to restrict the assume role session duration.
      * 
-    */
+     */
     public @Nullable Output<Integer> durationSeconds() {
         return this.durationSeconds;
     }
     /**
-     * External identifier to use when assuming the role.
+     * @return External identifier to use when assuming the role.
      * 
-    */
+     */
     public @Nullable Output<String> externalId() {
         return this.externalId;
     }
     /**
-     * IAM Policy JSON describing further restricting permissions for the IAM Role being assumed.
+     * @return IAM Policy JSON describing further restricting permissions for the IAM Role being assumed.
      * 
-    */
+     */
     public @Nullable Output<String> policy() {
         return this.policy;
     }
     /**
-     * Set of Amazon Resource Names (ARNs) of IAM Policies describing further restricting permissions for the role.
+     * @return Set of Amazon Resource Names (ARNs) of IAM Policies describing further restricting permissions for the role.
      * 
-    */
+     */
     public @Nullable Output<List<String>> policyArns() {
         return this.policyArns;
     }
     /**
-     * Amazon Resource Name (ARN) of the IAM Role to assume.
+     * @return Amazon Resource Name (ARN) of the IAM Role to assume.
      * 
-    */
+     */
     public @Nullable Output<String> roleArn() {
         return this.roleArn;
     }
     /**
-     * Session name to use when assuming the role.
+     * @return Session name to use when assuming the role.
      * 
-    */
+     */
     public @Nullable Output<String> sessionName() {
         return this.sessionName;
     }
     /**
-     * Map of assume role session tags.
+     * @return Map of assume role session tags.
      * 
-    */
+     */
     public @Nullable Output<Map<String,String>> tags() {
         return this.tags;
     }
     /**
-     * A list of keys for session tags that you want to set as transitive. If you set a tag key as transitive, the corresponding key and value passes to subsequent sessions in a role chain.
+     * @return A list of keys for session tags that you want to set as transitive. If you set a tag key as transitive, the corresponding key and value passes to subsequent sessions in a role chain.
      * 
-    */
+     */
     public @Nullable Output<List<String>> transitiveTagKeys() {
         return this.transitiveTagKeys;
     }

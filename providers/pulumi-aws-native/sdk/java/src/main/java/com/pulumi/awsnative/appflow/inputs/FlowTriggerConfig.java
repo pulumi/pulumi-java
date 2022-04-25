@@ -26,6 +26,10 @@ public final class FlowTriggerConfig extends com.pulumi.resources.InvokeArgs {
     @Import(name="triggerProperties")
     private @Nullable FlowScheduledTriggerProperties triggerProperties;
 
+    /**
+     * @return Details required based on the type of trigger
+     * 
+     */
     public Optional<FlowScheduledTriggerProperties> triggerProperties() {
         return Optional.ofNullable(this.triggerProperties);
     }
@@ -37,6 +41,10 @@ public final class FlowTriggerConfig extends com.pulumi.resources.InvokeArgs {
     @Import(name="triggerType", required=true)
     private FlowTriggerType triggerType;
 
+    /**
+     * @return Trigger type of the flow
+     * 
+     */
     public FlowTriggerType triggerType() {
         return this.triggerType;
     }
@@ -66,11 +74,23 @@ public final class FlowTriggerConfig extends com.pulumi.resources.InvokeArgs {
             $ = new FlowTriggerConfig(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param triggerProperties Details required based on the type of trigger
+         * 
+         * @return builder
+         * 
+         */
         public Builder triggerProperties(@Nullable FlowScheduledTriggerProperties triggerProperties) {
             $.triggerProperties = triggerProperties;
             return this;
         }
 
+        /**
+         * @param triggerType Trigger type of the flow
+         * 
+         * @return builder
+         * 
+         */
         public Builder triggerType(FlowTriggerType triggerType) {
             $.triggerType = triggerType;
             return this;

@@ -27,6 +27,10 @@ public final class CertificateAuthorityArgs extends com.pulumi.resources.Resourc
     @Import(name="csrExtensions")
     private @Nullable Output<CertificateAuthorityCsrExtensionsArgs> csrExtensions;
 
+    /**
+     * @return Structure that contains CSR pass through extension information used by the CreateCertificateAuthority action.
+     * 
+     */
     public Optional<Output<CertificateAuthorityCsrExtensionsArgs>> csrExtensions() {
         return Optional.ofNullable(this.csrExtensions);
     }
@@ -38,6 +42,10 @@ public final class CertificateAuthorityArgs extends com.pulumi.resources.Resourc
     @Import(name="keyAlgorithm", required=true)
     private Output<String> keyAlgorithm;
 
+    /**
+     * @return Public key algorithm and size, in bits, of the key pair that your CA creates when it issues a certificate.
+     * 
+     */
     public Output<String> keyAlgorithm() {
         return this.keyAlgorithm;
     }
@@ -49,6 +57,10 @@ public final class CertificateAuthorityArgs extends com.pulumi.resources.Resourc
     @Import(name="keyStorageSecurityStandard")
     private @Nullable Output<String> keyStorageSecurityStandard;
 
+    /**
+     * @return KeyStorageSecurityStadard defines a cryptographic key management compliance standard used for handling CA keys.
+     * 
+     */
     public Optional<Output<String>> keyStorageSecurityStandard() {
         return Optional.ofNullable(this.keyStorageSecurityStandard);
     }
@@ -60,6 +72,10 @@ public final class CertificateAuthorityArgs extends com.pulumi.resources.Resourc
     @Import(name="revocationConfiguration")
     private @Nullable Output<CertificateAuthorityRevocationConfigurationArgs> revocationConfiguration;
 
+    /**
+     * @return Certificate revocation information used by the CreateCertificateAuthority and UpdateCertificateAuthority actions.
+     * 
+     */
     public Optional<Output<CertificateAuthorityRevocationConfigurationArgs>> revocationConfiguration() {
         return Optional.ofNullable(this.revocationConfiguration);
     }
@@ -71,6 +87,10 @@ public final class CertificateAuthorityArgs extends com.pulumi.resources.Resourc
     @Import(name="signingAlgorithm", required=true)
     private Output<String> signingAlgorithm;
 
+    /**
+     * @return Algorithm your CA uses to sign certificate requests.
+     * 
+     */
     public Output<String> signingAlgorithm() {
         return this.signingAlgorithm;
     }
@@ -82,6 +102,10 @@ public final class CertificateAuthorityArgs extends com.pulumi.resources.Resourc
     @Import(name="subject", required=true)
     private Output<CertificateAuthoritySubjectArgs> subject;
 
+    /**
+     * @return Structure that contains X.500 distinguished name information for your CA.
+     * 
+     */
     public Output<CertificateAuthoritySubjectArgs> subject() {
         return this.subject;
     }
@@ -100,6 +124,10 @@ public final class CertificateAuthorityArgs extends com.pulumi.resources.Resourc
     @Import(name="type", required=true)
     private Output<String> type;
 
+    /**
+     * @return The type of the certificate authority.
+     * 
+     */
     public Output<String> type() {
         return this.type;
     }
@@ -135,56 +163,128 @@ public final class CertificateAuthorityArgs extends com.pulumi.resources.Resourc
             $ = new CertificateAuthorityArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param csrExtensions Structure that contains CSR pass through extension information used by the CreateCertificateAuthority action.
+         * 
+         * @return builder
+         * 
+         */
         public Builder csrExtensions(@Nullable Output<CertificateAuthorityCsrExtensionsArgs> csrExtensions) {
             $.csrExtensions = csrExtensions;
             return this;
         }
 
+        /**
+         * @param csrExtensions Structure that contains CSR pass through extension information used by the CreateCertificateAuthority action.
+         * 
+         * @return builder
+         * 
+         */
         public Builder csrExtensions(CertificateAuthorityCsrExtensionsArgs csrExtensions) {
             return csrExtensions(Output.of(csrExtensions));
         }
 
+        /**
+         * @param keyAlgorithm Public key algorithm and size, in bits, of the key pair that your CA creates when it issues a certificate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyAlgorithm(Output<String> keyAlgorithm) {
             $.keyAlgorithm = keyAlgorithm;
             return this;
         }
 
+        /**
+         * @param keyAlgorithm Public key algorithm and size, in bits, of the key pair that your CA creates when it issues a certificate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyAlgorithm(String keyAlgorithm) {
             return keyAlgorithm(Output.of(keyAlgorithm));
         }
 
+        /**
+         * @param keyStorageSecurityStandard KeyStorageSecurityStadard defines a cryptographic key management compliance standard used for handling CA keys.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyStorageSecurityStandard(@Nullable Output<String> keyStorageSecurityStandard) {
             $.keyStorageSecurityStandard = keyStorageSecurityStandard;
             return this;
         }
 
+        /**
+         * @param keyStorageSecurityStandard KeyStorageSecurityStadard defines a cryptographic key management compliance standard used for handling CA keys.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyStorageSecurityStandard(String keyStorageSecurityStandard) {
             return keyStorageSecurityStandard(Output.of(keyStorageSecurityStandard));
         }
 
+        /**
+         * @param revocationConfiguration Certificate revocation information used by the CreateCertificateAuthority and UpdateCertificateAuthority actions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder revocationConfiguration(@Nullable Output<CertificateAuthorityRevocationConfigurationArgs> revocationConfiguration) {
             $.revocationConfiguration = revocationConfiguration;
             return this;
         }
 
+        /**
+         * @param revocationConfiguration Certificate revocation information used by the CreateCertificateAuthority and UpdateCertificateAuthority actions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder revocationConfiguration(CertificateAuthorityRevocationConfigurationArgs revocationConfiguration) {
             return revocationConfiguration(Output.of(revocationConfiguration));
         }
 
+        /**
+         * @param signingAlgorithm Algorithm your CA uses to sign certificate requests.
+         * 
+         * @return builder
+         * 
+         */
         public Builder signingAlgorithm(Output<String> signingAlgorithm) {
             $.signingAlgorithm = signingAlgorithm;
             return this;
         }
 
+        /**
+         * @param signingAlgorithm Algorithm your CA uses to sign certificate requests.
+         * 
+         * @return builder
+         * 
+         */
         public Builder signingAlgorithm(String signingAlgorithm) {
             return signingAlgorithm(Output.of(signingAlgorithm));
         }
 
+        /**
+         * @param subject Structure that contains X.500 distinguished name information for your CA.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subject(Output<CertificateAuthoritySubjectArgs> subject) {
             $.subject = subject;
             return this;
         }
 
+        /**
+         * @param subject Structure that contains X.500 distinguished name information for your CA.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subject(CertificateAuthoritySubjectArgs subject) {
             return subject(Output.of(subject));
         }
@@ -202,11 +302,23 @@ public final class CertificateAuthorityArgs extends com.pulumi.resources.Resourc
             return tags(List.of(tags));
         }
 
+        /**
+         * @param type The type of the certificate authority.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(Output<String> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type The type of the certificate authority.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             return type(Output.of(type));
         }

@@ -23,7 +23,7 @@ public final class GetDataSourceResult {
     private final @Nullable String roleArn;
     private final @Nullable String schedule;
     /**
-     * Tags for labeling the data source
+     * @return Tags for labeling the data source
      * 
      */
     private final @Nullable List<DataSourceTag> tags;
@@ -75,9 +75,9 @@ public final class GetDataSourceResult {
         return Optional.ofNullable(this.schedule);
     }
     /**
-     * Tags for labeling the data source
+     * @return Tags for labeling the data source
      * 
-    */
+     */
     public List<DataSourceTag> tags() {
         return this.tags == null ? List.of() : this.tags;
     }

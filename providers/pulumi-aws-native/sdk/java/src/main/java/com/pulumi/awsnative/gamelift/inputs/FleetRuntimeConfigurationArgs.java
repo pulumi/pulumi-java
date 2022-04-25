@@ -32,6 +32,10 @@ public final class FleetRuntimeConfigurationArgs extends com.pulumi.resources.Re
     @Import(name="gameSessionActivationTimeoutSeconds")
     private @Nullable Output<Integer> gameSessionActivationTimeoutSeconds;
 
+    /**
+     * @return The maximum amount of time (in seconds) that a game session can remain in status ACTIVATING. If the game session is not active before the timeout, activation is terminated and the game session status is changed to TERMINATED.
+     * 
+     */
     public Optional<Output<Integer>> gameSessionActivationTimeoutSeconds() {
         return Optional.ofNullable(this.gameSessionActivationTimeoutSeconds);
     }
@@ -43,6 +47,10 @@ public final class FleetRuntimeConfigurationArgs extends com.pulumi.resources.Re
     @Import(name="maxConcurrentGameSessionActivations")
     private @Nullable Output<Integer> maxConcurrentGameSessionActivations;
 
+    /**
+     * @return The maximum number of game sessions with status ACTIVATING to allow on an instance simultaneously. This setting limits the amount of instance resources that can be used for new game activations at any one time.
+     * 
+     */
     public Optional<Output<Integer>> maxConcurrentGameSessionActivations() {
         return Optional.ofNullable(this.maxConcurrentGameSessionActivations);
     }
@@ -54,6 +62,10 @@ public final class FleetRuntimeConfigurationArgs extends com.pulumi.resources.Re
     @Import(name="serverProcesses")
     private @Nullable Output<List<FleetServerProcessArgs>> serverProcesses;
 
+    /**
+     * @return A collection of server process configurations that describe which server processes to run on each instance in a fleet.
+     * 
+     */
     public Optional<Output<List<FleetServerProcessArgs>>> serverProcesses() {
         return Optional.ofNullable(this.serverProcesses);
     }
@@ -84,33 +96,75 @@ public final class FleetRuntimeConfigurationArgs extends com.pulumi.resources.Re
             $ = new FleetRuntimeConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param gameSessionActivationTimeoutSeconds The maximum amount of time (in seconds) that a game session can remain in status ACTIVATING. If the game session is not active before the timeout, activation is terminated and the game session status is changed to TERMINATED.
+         * 
+         * @return builder
+         * 
+         */
         public Builder gameSessionActivationTimeoutSeconds(@Nullable Output<Integer> gameSessionActivationTimeoutSeconds) {
             $.gameSessionActivationTimeoutSeconds = gameSessionActivationTimeoutSeconds;
             return this;
         }
 
+        /**
+         * @param gameSessionActivationTimeoutSeconds The maximum amount of time (in seconds) that a game session can remain in status ACTIVATING. If the game session is not active before the timeout, activation is terminated and the game session status is changed to TERMINATED.
+         * 
+         * @return builder
+         * 
+         */
         public Builder gameSessionActivationTimeoutSeconds(Integer gameSessionActivationTimeoutSeconds) {
             return gameSessionActivationTimeoutSeconds(Output.of(gameSessionActivationTimeoutSeconds));
         }
 
+        /**
+         * @param maxConcurrentGameSessionActivations The maximum number of game sessions with status ACTIVATING to allow on an instance simultaneously. This setting limits the amount of instance resources that can be used for new game activations at any one time.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxConcurrentGameSessionActivations(@Nullable Output<Integer> maxConcurrentGameSessionActivations) {
             $.maxConcurrentGameSessionActivations = maxConcurrentGameSessionActivations;
             return this;
         }
 
+        /**
+         * @param maxConcurrentGameSessionActivations The maximum number of game sessions with status ACTIVATING to allow on an instance simultaneously. This setting limits the amount of instance resources that can be used for new game activations at any one time.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxConcurrentGameSessionActivations(Integer maxConcurrentGameSessionActivations) {
             return maxConcurrentGameSessionActivations(Output.of(maxConcurrentGameSessionActivations));
         }
 
+        /**
+         * @param serverProcesses A collection of server process configurations that describe which server processes to run on each instance in a fleet.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serverProcesses(@Nullable Output<List<FleetServerProcessArgs>> serverProcesses) {
             $.serverProcesses = serverProcesses;
             return this;
         }
 
+        /**
+         * @param serverProcesses A collection of server process configurations that describe which server processes to run on each instance in a fleet.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serverProcesses(List<FleetServerProcessArgs> serverProcesses) {
             return serverProcesses(Output.of(serverProcesses));
         }
 
+        /**
+         * @param serverProcesses A collection of server process configurations that describe which server processes to run on each instance in a fleet.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serverProcesses(FleetServerProcessArgs... serverProcesses) {
             return serverProcesses(List.of(serverProcesses));
         }

@@ -17,42 +17,42 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetAssetModelResult {
     /**
-     * The ARN of the asset model, which has the following format.
+     * @return The ARN of the asset model, which has the following format.
      * 
      */
     private final @Nullable String assetModelArn;
     /**
-     * The composite asset models that are part of this asset model. Composite asset models are asset models that contain specific properties.
+     * @return The composite asset models that are part of this asset model. Composite asset models are asset models that contain specific properties.
      * 
      */
     private final @Nullable List<AssetModelCompositeModel> assetModelCompositeModels;
     /**
-     * A description for the asset model.
+     * @return A description for the asset model.
      * 
      */
     private final @Nullable String assetModelDescription;
     /**
-     * The hierarchy definitions of the asset model. Each hierarchy specifies an asset model whose assets can be children of any other assets created from this asset model. You can specify up to 10 hierarchies per asset model.
+     * @return The hierarchy definitions of the asset model. Each hierarchy specifies an asset model whose assets can be children of any other assets created from this asset model. You can specify up to 10 hierarchies per asset model.
      * 
      */
     private final @Nullable List<AssetModelHierarchy> assetModelHierarchies;
     /**
-     * The ID of the asset model.
+     * @return The ID of the asset model.
      * 
      */
     private final @Nullable String assetModelId;
     /**
-     * A unique, friendly name for the asset model.
+     * @return A unique, friendly name for the asset model.
      * 
      */
     private final @Nullable String assetModelName;
     /**
-     * The property definitions of the asset model. You can specify up to 200 properties per asset model.
+     * @return The property definitions of the asset model. You can specify up to 200 properties per asset model.
      * 
      */
     private final @Nullable List<AssetModelProperty> assetModelProperties;
     /**
-     * A list of key-value pairs that contain metadata for the asset model.
+     * @return A list of key-value pairs that contain metadata for the asset model.
      * 
      */
     private final @Nullable List<AssetModelTag> tags;
@@ -78,58 +78,58 @@ public final class GetAssetModelResult {
     }
 
     /**
-     * The ARN of the asset model, which has the following format.
+     * @return The ARN of the asset model, which has the following format.
      * 
-    */
+     */
     public Optional<String> assetModelArn() {
         return Optional.ofNullable(this.assetModelArn);
     }
     /**
-     * The composite asset models that are part of this asset model. Composite asset models are asset models that contain specific properties.
+     * @return The composite asset models that are part of this asset model. Composite asset models are asset models that contain specific properties.
      * 
-    */
+     */
     public List<AssetModelCompositeModel> assetModelCompositeModels() {
         return this.assetModelCompositeModels == null ? List.of() : this.assetModelCompositeModels;
     }
     /**
-     * A description for the asset model.
+     * @return A description for the asset model.
      * 
-    */
+     */
     public Optional<String> assetModelDescription() {
         return Optional.ofNullable(this.assetModelDescription);
     }
     /**
-     * The hierarchy definitions of the asset model. Each hierarchy specifies an asset model whose assets can be children of any other assets created from this asset model. You can specify up to 10 hierarchies per asset model.
+     * @return The hierarchy definitions of the asset model. Each hierarchy specifies an asset model whose assets can be children of any other assets created from this asset model. You can specify up to 10 hierarchies per asset model.
      * 
-    */
+     */
     public List<AssetModelHierarchy> assetModelHierarchies() {
         return this.assetModelHierarchies == null ? List.of() : this.assetModelHierarchies;
     }
     /**
-     * The ID of the asset model.
+     * @return The ID of the asset model.
      * 
-    */
+     */
     public Optional<String> assetModelId() {
         return Optional.ofNullable(this.assetModelId);
     }
     /**
-     * A unique, friendly name for the asset model.
+     * @return A unique, friendly name for the asset model.
      * 
-    */
+     */
     public Optional<String> assetModelName() {
         return Optional.ofNullable(this.assetModelName);
     }
     /**
-     * The property definitions of the asset model. You can specify up to 200 properties per asset model.
+     * @return The property definitions of the asset model. You can specify up to 200 properties per asset model.
      * 
-    */
+     */
     public List<AssetModelProperty> assetModelProperties() {
         return this.assetModelProperties == null ? List.of() : this.assetModelProperties;
     }
     /**
-     * A list of key-value pairs that contain metadata for the asset model.
+     * @return A list of key-value pairs that contain metadata for the asset model.
      * 
-    */
+     */
     public List<AssetModelTag> tags() {
         return this.tags == null ? List.of() : this.tags;
     }

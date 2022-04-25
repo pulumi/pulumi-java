@@ -19,6 +19,10 @@ public final class GetVpcConnectorArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="vpcConnectorArn", required=true)
     private String vpcConnectorArn;
 
+    /**
+     * @return The Amazon Resource Name (ARN) of this VPC connector.
+     * 
+     */
     public String vpcConnectorArn() {
         return this.vpcConnectorArn;
     }
@@ -47,6 +51,12 @@ public final class GetVpcConnectorArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetVpcConnectorArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param vpcConnectorArn The Amazon Resource Name (ARN) of this VPC connector.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vpcConnectorArn(String vpcConnectorArn) {
             $.vpcConnectorArn = vpcConnectorArn;
             return this;

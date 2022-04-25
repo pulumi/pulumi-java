@@ -19,6 +19,10 @@ public final class GetContactArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="arn", required=true)
     private String arn;
 
+    /**
+     * @return The Amazon Resource Name (ARN) of the contact.
+     * 
+     */
     public String arn() {
         return this.arn;
     }
@@ -47,6 +51,12 @@ public final class GetContactArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetContactArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param arn The Amazon Resource Name (ARN) of the contact.
+         * 
+         * @return builder
+         * 
+         */
         public Builder arn(String arn) {
             $.arn = arn;
             return this;

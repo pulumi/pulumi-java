@@ -22,6 +22,10 @@ public final class LoggingConfigurationCondition extends com.pulumi.resources.In
     @Import(name="actionCondition")
     private @Nullable LoggingConfigurationConditionActionConditionProperties actionCondition;
 
+    /**
+     * @return A single action condition.
+     * 
+     */
     public Optional<LoggingConfigurationConditionActionConditionProperties> actionCondition() {
         return Optional.ofNullable(this.actionCondition);
     }
@@ -33,6 +37,10 @@ public final class LoggingConfigurationCondition extends com.pulumi.resources.In
     @Import(name="labelNameCondition")
     private @Nullable LoggingConfigurationConditionLabelNameConditionProperties labelNameCondition;
 
+    /**
+     * @return A single label name condition.
+     * 
+     */
     public Optional<LoggingConfigurationConditionLabelNameConditionProperties> labelNameCondition() {
         return Optional.ofNullable(this.labelNameCondition);
     }
@@ -62,11 +70,23 @@ public final class LoggingConfigurationCondition extends com.pulumi.resources.In
             $ = new LoggingConfigurationCondition(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param actionCondition A single action condition.
+         * 
+         * @return builder
+         * 
+         */
         public Builder actionCondition(@Nullable LoggingConfigurationConditionActionConditionProperties actionCondition) {
             $.actionCondition = actionCondition;
             return this;
         }
 
+        /**
+         * @param labelNameCondition A single label name condition.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labelNameCondition(@Nullable LoggingConfigurationConditionLabelNameConditionProperties labelNameCondition) {
             $.labelNameCondition = labelNameCondition;
             return this;

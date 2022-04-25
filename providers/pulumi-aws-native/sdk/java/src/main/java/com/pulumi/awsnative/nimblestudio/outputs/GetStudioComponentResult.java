@@ -18,27 +18,27 @@ import javax.annotation.Nullable;
 public final class GetStudioComponentResult {
     private final @Nullable StudioComponentConfiguration configuration;
     /**
-     * &lt;p&gt;The description.&lt;/p&gt;
+     * @return &lt;p&gt;The description.&lt;/p&gt;
      * 
      */
     private final @Nullable String description;
     /**
-     * &lt;p&gt;The EC2 security groups that control access to the studio component.&lt;/p&gt;
+     * @return &lt;p&gt;The EC2 security groups that control access to the studio component.&lt;/p&gt;
      * 
      */
     private final @Nullable List<String> ec2SecurityGroupIds;
     /**
-     * &lt;p&gt;Initialization scripts for studio components.&lt;/p&gt;
+     * @return &lt;p&gt;Initialization scripts for studio components.&lt;/p&gt;
      * 
      */
     private final @Nullable List<StudioComponentInitializationScript> initializationScripts;
     /**
-     * &lt;p&gt;The name for the studio component.&lt;/p&gt;
+     * @return &lt;p&gt;The name for the studio component.&lt;/p&gt;
      * 
      */
     private final @Nullable String name;
     /**
-     * &lt;p&gt;Parameters for the studio component scripts.&lt;/p&gt;
+     * @return &lt;p&gt;Parameters for the studio component scripts.&lt;/p&gt;
      * 
      */
     private final @Nullable List<StudioComponentScriptParameterKeyValue> scriptParameters;
@@ -69,37 +69,37 @@ public final class GetStudioComponentResult {
         return Optional.ofNullable(this.configuration);
     }
     /**
-     * &lt;p&gt;The description.&lt;/p&gt;
+     * @return &lt;p&gt;The description.&lt;/p&gt;
      * 
-    */
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
-     * &lt;p&gt;The EC2 security groups that control access to the studio component.&lt;/p&gt;
+     * @return &lt;p&gt;The EC2 security groups that control access to the studio component.&lt;/p&gt;
      * 
-    */
+     */
     public List<String> ec2SecurityGroupIds() {
         return this.ec2SecurityGroupIds == null ? List.of() : this.ec2SecurityGroupIds;
     }
     /**
-     * &lt;p&gt;Initialization scripts for studio components.&lt;/p&gt;
+     * @return &lt;p&gt;Initialization scripts for studio components.&lt;/p&gt;
      * 
-    */
+     */
     public List<StudioComponentInitializationScript> initializationScripts() {
         return this.initializationScripts == null ? List.of() : this.initializationScripts;
     }
     /**
-     * &lt;p&gt;The name for the studio component.&lt;/p&gt;
+     * @return &lt;p&gt;The name for the studio component.&lt;/p&gt;
      * 
-    */
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
-     * &lt;p&gt;Parameters for the studio component scripts.&lt;/p&gt;
+     * @return &lt;p&gt;Parameters for the studio component scripts.&lt;/p&gt;
      * 
-    */
+     */
     public List<StudioComponentScriptParameterKeyValue> scriptParameters() {
         return this.scriptParameters == null ? List.of() : this.scriptParameters;
     }

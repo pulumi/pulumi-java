@@ -37,6 +37,10 @@ public final class AssociationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="associationName")
     private @Nullable Output<String> associationName;
 
+    /**
+     * @return The name of the association.
+     * 
+     */
     public Optional<Output<String>> associationName() {
         return Optional.ofNullable(this.associationName);
     }
@@ -69,6 +73,10 @@ public final class AssociationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="documentVersion")
     private @Nullable Output<String> documentVersion;
 
+    /**
+     * @return The version of the SSM document to associate with the target.
+     * 
+     */
     public Optional<Output<String>> documentVersion() {
         return Optional.ofNullable(this.documentVersion);
     }
@@ -80,6 +88,10 @@ public final class AssociationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="instanceId")
     private @Nullable Output<String> instanceId;
 
+    /**
+     * @return The ID of the instance that the SSM document is associated with.
+     * 
+     */
     public Optional<Output<String>> instanceId() {
         return Optional.ofNullable(this.instanceId);
     }
@@ -105,6 +117,10 @@ public final class AssociationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The name of the SSM document.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -123,6 +139,10 @@ public final class AssociationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="parameters")
     private @Nullable Output<Object> parameters;
 
+    /**
+     * @return Parameter values that the SSM document uses at runtime.
+     * 
+     */
     public Optional<Output<Object>> parameters() {
         return Optional.ofNullable(this.parameters);
     }
@@ -134,6 +154,10 @@ public final class AssociationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="scheduleExpression")
     private @Nullable Output<String> scheduleExpression;
 
+    /**
+     * @return A Cron or Rate expression that specifies when the association is applied to the target.
+     * 
+     */
     public Optional<Output<String>> scheduleExpression() {
         return Optional.ofNullable(this.scheduleExpression);
     }
@@ -152,6 +176,10 @@ public final class AssociationArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="targets")
     private @Nullable Output<List<AssociationTargetArgs>> targets;
 
+    /**
+     * @return The targets that the SSM document sends commands to.
+     * 
+     */
     public Optional<Output<List<AssociationTargetArgs>>> targets() {
         return Optional.ofNullable(this.targets);
     }
@@ -211,11 +239,23 @@ public final class AssociationArgs extends com.pulumi.resources.ResourceArgs {
             return applyOnlyAtCronInterval(Output.of(applyOnlyAtCronInterval));
         }
 
+        /**
+         * @param associationName The name of the association.
+         * 
+         * @return builder
+         * 
+         */
         public Builder associationName(@Nullable Output<String> associationName) {
             $.associationName = associationName;
             return this;
         }
 
+        /**
+         * @param associationName The name of the association.
+         * 
+         * @return builder
+         * 
+         */
         public Builder associationName(String associationName) {
             return associationName(Output.of(associationName));
         }
@@ -251,20 +291,44 @@ public final class AssociationArgs extends com.pulumi.resources.ResourceArgs {
             return complianceSeverity(Output.of(complianceSeverity));
         }
 
+        /**
+         * @param documentVersion The version of the SSM document to associate with the target.
+         * 
+         * @return builder
+         * 
+         */
         public Builder documentVersion(@Nullable Output<String> documentVersion) {
             $.documentVersion = documentVersion;
             return this;
         }
 
+        /**
+         * @param documentVersion The version of the SSM document to associate with the target.
+         * 
+         * @return builder
+         * 
+         */
         public Builder documentVersion(String documentVersion) {
             return documentVersion(Output.of(documentVersion));
         }
 
+        /**
+         * @param instanceId The ID of the instance that the SSM document is associated with.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceId(@Nullable Output<String> instanceId) {
             $.instanceId = instanceId;
             return this;
         }
 
+        /**
+         * @param instanceId The ID of the instance that the SSM document is associated with.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceId(String instanceId) {
             return instanceId(Output.of(instanceId));
         }
@@ -287,11 +351,23 @@ public final class AssociationArgs extends com.pulumi.resources.ResourceArgs {
             return maxErrors(Output.of(maxErrors));
         }
 
+        /**
+         * @param name The name of the SSM document.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name of the SSM document.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
@@ -305,20 +381,44 @@ public final class AssociationArgs extends com.pulumi.resources.ResourceArgs {
             return outputLocation(Output.of(outputLocation));
         }
 
+        /**
+         * @param parameters Parameter values that the SSM document uses at runtime.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameters(@Nullable Output<Object> parameters) {
             $.parameters = parameters;
             return this;
         }
 
+        /**
+         * @param parameters Parameter values that the SSM document uses at runtime.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameters(Object parameters) {
             return parameters(Output.of(parameters));
         }
 
+        /**
+         * @param scheduleExpression A Cron or Rate expression that specifies when the association is applied to the target.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scheduleExpression(@Nullable Output<String> scheduleExpression) {
             $.scheduleExpression = scheduleExpression;
             return this;
         }
 
+        /**
+         * @param scheduleExpression A Cron or Rate expression that specifies when the association is applied to the target.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scheduleExpression(String scheduleExpression) {
             return scheduleExpression(Output.of(scheduleExpression));
         }
@@ -332,15 +432,33 @@ public final class AssociationArgs extends com.pulumi.resources.ResourceArgs {
             return syncCompliance(Output.of(syncCompliance));
         }
 
+        /**
+         * @param targets The targets that the SSM document sends commands to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targets(@Nullable Output<List<AssociationTargetArgs>> targets) {
             $.targets = targets;
             return this;
         }
 
+        /**
+         * @param targets The targets that the SSM document sends commands to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targets(List<AssociationTargetArgs> targets) {
             return targets(Output.of(targets));
         }
 
+        /**
+         * @param targets The targets that the SSM document sends commands to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targets(AssociationTargetArgs... targets) {
             return targets(List.of(targets));
         }

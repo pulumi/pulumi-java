@@ -23,6 +23,10 @@ public final class AttributesItemPropertiesArgs extends com.pulumi.resources.Res
     @Import(name="attributeName")
     private @Nullable Output<String> attributeName;
 
+    /**
+     * @return Name of the dataset field
+     * 
+     */
     public Optional<Output<String>> attributeName() {
         return Optional.ofNullable(this.attributeName);
     }
@@ -34,6 +38,10 @@ public final class AttributesItemPropertiesArgs extends com.pulumi.resources.Res
     @Import(name="attributeType")
     private @Nullable Output<DatasetAttributesItemPropertiesAttributeType> attributeType;
 
+    /**
+     * @return Data type of the field
+     * 
+     */
     public Optional<Output<DatasetAttributesItemPropertiesAttributeType>> attributeType() {
         return Optional.ofNullable(this.attributeType);
     }
@@ -63,20 +71,44 @@ public final class AttributesItemPropertiesArgs extends com.pulumi.resources.Res
             $ = new AttributesItemPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param attributeName Name of the dataset field
+         * 
+         * @return builder
+         * 
+         */
         public Builder attributeName(@Nullable Output<String> attributeName) {
             $.attributeName = attributeName;
             return this;
         }
 
+        /**
+         * @param attributeName Name of the dataset field
+         * 
+         * @return builder
+         * 
+         */
         public Builder attributeName(String attributeName) {
             return attributeName(Output.of(attributeName));
         }
 
+        /**
+         * @param attributeType Data type of the field
+         * 
+         * @return builder
+         * 
+         */
         public Builder attributeType(@Nullable Output<DatasetAttributesItemPropertiesAttributeType> attributeType) {
             $.attributeType = attributeType;
             return this;
         }
 
+        /**
+         * @param attributeType Data type of the field
+         * 
+         * @return builder
+         * 
+         */
         public Builder attributeType(DatasetAttributesItemPropertiesAttributeType attributeType) {
             return attributeType(Output.of(attributeType));
         }

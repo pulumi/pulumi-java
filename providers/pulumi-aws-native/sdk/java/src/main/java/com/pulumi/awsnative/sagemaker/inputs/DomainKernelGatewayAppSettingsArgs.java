@@ -28,6 +28,10 @@ public final class DomainKernelGatewayAppSettingsArgs extends com.pulumi.resourc
     @Import(name="customImages")
     private @Nullable Output<List<DomainCustomImageArgs>> customImages;
 
+    /**
+     * @return A list of custom SageMaker images that are configured to run as a KernelGateway app.
+     * 
+     */
     public Optional<Output<List<DomainCustomImageArgs>>> customImages() {
         return Optional.ofNullable(this.customImages);
     }
@@ -39,6 +43,10 @@ public final class DomainKernelGatewayAppSettingsArgs extends com.pulumi.resourc
     @Import(name="defaultResourceSpec")
     private @Nullable Output<DomainResourceSpecArgs> defaultResourceSpec;
 
+    /**
+     * @return The default instance type and the Amazon Resource Name (ARN) of the default SageMaker image used by the KernelGateway app.
+     * 
+     */
     public Optional<Output<DomainResourceSpecArgs>> defaultResourceSpec() {
         return Optional.ofNullable(this.defaultResourceSpec);
     }
@@ -68,24 +76,54 @@ public final class DomainKernelGatewayAppSettingsArgs extends com.pulumi.resourc
             $ = new DomainKernelGatewayAppSettingsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param customImages A list of custom SageMaker images that are configured to run as a KernelGateway app.
+         * 
+         * @return builder
+         * 
+         */
         public Builder customImages(@Nullable Output<List<DomainCustomImageArgs>> customImages) {
             $.customImages = customImages;
             return this;
         }
 
+        /**
+         * @param customImages A list of custom SageMaker images that are configured to run as a KernelGateway app.
+         * 
+         * @return builder
+         * 
+         */
         public Builder customImages(List<DomainCustomImageArgs> customImages) {
             return customImages(Output.of(customImages));
         }
 
+        /**
+         * @param customImages A list of custom SageMaker images that are configured to run as a KernelGateway app.
+         * 
+         * @return builder
+         * 
+         */
         public Builder customImages(DomainCustomImageArgs... customImages) {
             return customImages(List.of(customImages));
         }
 
+        /**
+         * @param defaultResourceSpec The default instance type and the Amazon Resource Name (ARN) of the default SageMaker image used by the KernelGateway app.
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultResourceSpec(@Nullable Output<DomainResourceSpecArgs> defaultResourceSpec) {
             $.defaultResourceSpec = defaultResourceSpec;
             return this;
         }
 
+        /**
+         * @param defaultResourceSpec The default instance type and the Amazon Resource Name (ARN) of the default SageMaker image used by the KernelGateway app.
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultResourceSpec(DomainResourceSpecArgs defaultResourceSpec) {
             return defaultResourceSpec(Output.of(defaultResourceSpec));
         }

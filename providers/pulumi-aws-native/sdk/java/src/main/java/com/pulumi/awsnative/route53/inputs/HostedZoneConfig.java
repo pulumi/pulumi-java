@@ -27,6 +27,10 @@ public final class HostedZoneConfig extends com.pulumi.resources.InvokeArgs {
     @Import(name="comment")
     private @Nullable String comment;
 
+    /**
+     * @return Any comments that you want to include about the hosted zone.
+     * 
+     */
     public Optional<String> comment() {
         return Optional.ofNullable(this.comment);
     }
@@ -55,6 +59,12 @@ public final class HostedZoneConfig extends com.pulumi.resources.InvokeArgs {
             $ = new HostedZoneConfig(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param comment Any comments that you want to include about the hosted zone.
+         * 
+         * @return builder
+         * 
+         */
         public Builder comment(@Nullable String comment) {
             $.comment = comment;
             return this;

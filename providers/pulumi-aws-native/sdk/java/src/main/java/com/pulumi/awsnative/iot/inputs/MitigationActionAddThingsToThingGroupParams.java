@@ -27,6 +27,10 @@ public final class MitigationActionAddThingsToThingGroupParams extends com.pulum
     @Import(name="overrideDynamicGroups")
     private @Nullable Boolean overrideDynamicGroups;
 
+    /**
+     * @return Specifies if this mitigation action can move the things that triggered the mitigation action out of one or more dynamic thing groups.
+     * 
+     */
     public Optional<Boolean> overrideDynamicGroups() {
         return Optional.ofNullable(this.overrideDynamicGroups);
     }
@@ -38,6 +42,10 @@ public final class MitigationActionAddThingsToThingGroupParams extends com.pulum
     @Import(name="thingGroupNames", required=true)
     private List<String> thingGroupNames;
 
+    /**
+     * @return The list of groups to which you want to add the things that triggered the mitigation action.
+     * 
+     */
     public List<String> thingGroupNames() {
         return this.thingGroupNames;
     }
@@ -67,16 +75,34 @@ public final class MitigationActionAddThingsToThingGroupParams extends com.pulum
             $ = new MitigationActionAddThingsToThingGroupParams(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param overrideDynamicGroups Specifies if this mitigation action can move the things that triggered the mitigation action out of one or more dynamic thing groups.
+         * 
+         * @return builder
+         * 
+         */
         public Builder overrideDynamicGroups(@Nullable Boolean overrideDynamicGroups) {
             $.overrideDynamicGroups = overrideDynamicGroups;
             return this;
         }
 
+        /**
+         * @param thingGroupNames The list of groups to which you want to add the things that triggered the mitigation action.
+         * 
+         * @return builder
+         * 
+         */
         public Builder thingGroupNames(List<String> thingGroupNames) {
             $.thingGroupNames = thingGroupNames;
             return this;
         }
 
+        /**
+         * @param thingGroupNames The list of groups to which you want to add the things that triggered the mitigation action.
+         * 
+         * @return builder
+         * 
+         */
         public Builder thingGroupNames(String... thingGroupNames) {
             return thingGroupNames(List.of(thingGroupNames));
         }

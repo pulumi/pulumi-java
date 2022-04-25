@@ -24,6 +24,10 @@ public final class ServiceEncryptionConfigurationArgs extends com.pulumi.resourc
     @Import(name="kmsKey", required=true)
     private Output<String> kmsKey;
 
+    /**
+     * @return The KMS Key
+     * 
+     */
     public Output<String> kmsKey() {
         return this.kmsKey;
     }
@@ -52,11 +56,23 @@ public final class ServiceEncryptionConfigurationArgs extends com.pulumi.resourc
             $ = new ServiceEncryptionConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param kmsKey The KMS Key
+         * 
+         * @return builder
+         * 
+         */
         public Builder kmsKey(Output<String> kmsKey) {
             $.kmsKey = kmsKey;
             return this;
         }
 
+        /**
+         * @param kmsKey The KMS Key
+         * 
+         * @return builder
+         * 
+         */
         public Builder kmsKey(String kmsKey) {
             return kmsKey(Output.of(kmsKey));
         }

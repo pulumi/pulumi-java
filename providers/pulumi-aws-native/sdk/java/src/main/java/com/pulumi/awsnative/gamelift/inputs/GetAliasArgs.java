@@ -19,6 +19,10 @@ public final class GetAliasArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="aliasId", required=true)
     private String aliasId;
 
+    /**
+     * @return Unique alias ID
+     * 
+     */
     public String aliasId() {
         return this.aliasId;
     }
@@ -47,6 +51,12 @@ public final class GetAliasArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetAliasArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param aliasId Unique alias ID
+         * 
+         * @return builder
+         * 
+         */
         public Builder aliasId(String aliasId) {
             $.aliasId = aliasId;
             return this;

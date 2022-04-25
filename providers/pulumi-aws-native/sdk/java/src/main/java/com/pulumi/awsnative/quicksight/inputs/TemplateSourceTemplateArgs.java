@@ -24,6 +24,10 @@ public final class TemplateSourceTemplateArgs extends com.pulumi.resources.Resou
     @Import(name="arn", required=true)
     private Output<String> arn;
 
+    /**
+     * @return &lt;p&gt;The Amazon Resource Name (ARN) of the resource.&lt;/p&gt;
+     * 
+     */
     public Output<String> arn() {
         return this.arn;
     }
@@ -52,11 +56,23 @@ public final class TemplateSourceTemplateArgs extends com.pulumi.resources.Resou
             $ = new TemplateSourceTemplateArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param arn &lt;p&gt;The Amazon Resource Name (ARN) of the resource.&lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder arn(Output<String> arn) {
             $.arn = arn;
             return this;
         }
 
+        /**
+         * @param arn &lt;p&gt;The Amazon Resource Name (ARN) of the resource.&lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder arn(String arn) {
             return arn(Output.of(arn));
         }

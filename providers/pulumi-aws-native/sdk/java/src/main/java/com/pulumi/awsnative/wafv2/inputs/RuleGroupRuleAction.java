@@ -28,6 +28,10 @@ public final class RuleGroupRuleAction extends com.pulumi.resources.InvokeArgs {
     @Import(name="allow")
     private @Nullable RuleGroupRuleActionAllowProperties allow;
 
+    /**
+     * @return Allow traffic towards application.
+     * 
+     */
     public Optional<RuleGroupRuleActionAllowProperties> allow() {
         return Optional.ofNullable(this.allow);
     }
@@ -39,6 +43,10 @@ public final class RuleGroupRuleAction extends com.pulumi.resources.InvokeArgs {
     @Import(name="block")
     private @Nullable RuleGroupRuleActionBlockProperties block;
 
+    /**
+     * @return Block traffic towards application.
+     * 
+     */
     public Optional<RuleGroupRuleActionBlockProperties> block() {
         return Optional.ofNullable(this.block);
     }
@@ -50,6 +58,10 @@ public final class RuleGroupRuleAction extends com.pulumi.resources.InvokeArgs {
     @Import(name="captcha")
     private @Nullable RuleGroupRuleActionCaptchaProperties captcha;
 
+    /**
+     * @return Checks valid token exists with request.
+     * 
+     */
     public Optional<RuleGroupRuleActionCaptchaProperties> captcha() {
         return Optional.ofNullable(this.captcha);
     }
@@ -61,6 +73,10 @@ public final class RuleGroupRuleAction extends com.pulumi.resources.InvokeArgs {
     @Import(name="count")
     private @Nullable RuleGroupRuleActionCountProperties count;
 
+    /**
+     * @return Count traffic towards application.
+     * 
+     */
     public Optional<RuleGroupRuleActionCountProperties> count() {
         return Optional.ofNullable(this.count);
     }
@@ -92,21 +108,45 @@ public final class RuleGroupRuleAction extends com.pulumi.resources.InvokeArgs {
             $ = new RuleGroupRuleAction(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param allow Allow traffic towards application.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allow(@Nullable RuleGroupRuleActionAllowProperties allow) {
             $.allow = allow;
             return this;
         }
 
+        /**
+         * @param block Block traffic towards application.
+         * 
+         * @return builder
+         * 
+         */
         public Builder block(@Nullable RuleGroupRuleActionBlockProperties block) {
             $.block = block;
             return this;
         }
 
+        /**
+         * @param captcha Checks valid token exists with request.
+         * 
+         * @return builder
+         * 
+         */
         public Builder captcha(@Nullable RuleGroupRuleActionCaptchaProperties captcha) {
             $.captcha = captcha;
             return this;
         }
 
+        /**
+         * @param count Count traffic towards application.
+         * 
+         * @return builder
+         * 
+         */
         public Builder count(@Nullable RuleGroupRuleActionCountProperties count) {
             $.count = count;
             return this;

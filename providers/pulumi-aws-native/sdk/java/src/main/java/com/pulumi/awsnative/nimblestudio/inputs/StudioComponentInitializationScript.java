@@ -27,6 +27,10 @@ public final class StudioComponentInitializationScript extends com.pulumi.resour
     @Import(name="launchProfileProtocolVersion")
     private @Nullable String launchProfileProtocolVersion;
 
+    /**
+     * @return &lt;p&gt;The version number of the protocol that is used by the launch profile. The only valid version is &#34;2021-03-31&#34;.&lt;/p&gt;
+     * 
+     */
     public Optional<String> launchProfileProtocolVersion() {
         return Optional.ofNullable(this.launchProfileProtocolVersion);
     }
@@ -52,6 +56,10 @@ public final class StudioComponentInitializationScript extends com.pulumi.resour
     @Import(name="script")
     private @Nullable String script;
 
+    /**
+     * @return &lt;p&gt;The initialization script.&lt;/p&gt;
+     * 
+     */
     public Optional<String> script() {
         return Optional.ofNullable(this.script);
     }
@@ -83,6 +91,12 @@ public final class StudioComponentInitializationScript extends com.pulumi.resour
             $ = new StudioComponentInitializationScript(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param launchProfileProtocolVersion &lt;p&gt;The version number of the protocol that is used by the launch profile. The only valid version is &#34;2021-03-31&#34;.&lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder launchProfileProtocolVersion(@Nullable String launchProfileProtocolVersion) {
             $.launchProfileProtocolVersion = launchProfileProtocolVersion;
             return this;
@@ -98,6 +112,12 @@ public final class StudioComponentInitializationScript extends com.pulumi.resour
             return this;
         }
 
+        /**
+         * @param script &lt;p&gt;The initialization script.&lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder script(@Nullable String script) {
             $.script = script;
             return this;

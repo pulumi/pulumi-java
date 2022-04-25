@@ -31,6 +31,10 @@ public final class PackagingConfigurationSpekeKeyProvider extends com.pulumi.res
     @Import(name="systemIds", required=true)
     private List<String> systemIds;
 
+    /**
+     * @return The system IDs to include in key requests.
+     * 
+     */
     public List<String> systemIds() {
         return this.systemIds;
     }
@@ -42,6 +46,10 @@ public final class PackagingConfigurationSpekeKeyProvider extends com.pulumi.res
     @Import(name="url", required=true)
     private String url;
 
+    /**
+     * @return The URL of the external key provider service.
+     * 
+     */
     public String url() {
         return this.url;
     }
@@ -77,15 +85,33 @@ public final class PackagingConfigurationSpekeKeyProvider extends com.pulumi.res
             return this;
         }
 
+        /**
+         * @param systemIds The system IDs to include in key requests.
+         * 
+         * @return builder
+         * 
+         */
         public Builder systemIds(List<String> systemIds) {
             $.systemIds = systemIds;
             return this;
         }
 
+        /**
+         * @param systemIds The system IDs to include in key requests.
+         * 
+         * @return builder
+         * 
+         */
         public Builder systemIds(String... systemIds) {
             return systemIds(List.of(systemIds));
         }
 
+        /**
+         * @param url The URL of the external key provider service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder url(String url) {
             $.url = url;
             return this;

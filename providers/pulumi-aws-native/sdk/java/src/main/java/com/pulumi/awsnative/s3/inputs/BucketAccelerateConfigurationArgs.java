@@ -20,6 +20,10 @@ public final class BucketAccelerateConfigurationArgs extends com.pulumi.resource
     @Import(name="accelerationStatus", required=true)
     private Output<BucketAccelerateConfigurationAccelerationStatus> accelerationStatus;
 
+    /**
+     * @return Configures the transfer acceleration state for an Amazon S3 bucket.
+     * 
+     */
     public Output<BucketAccelerateConfigurationAccelerationStatus> accelerationStatus() {
         return this.accelerationStatus;
     }
@@ -48,11 +52,23 @@ public final class BucketAccelerateConfigurationArgs extends com.pulumi.resource
             $ = new BucketAccelerateConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param accelerationStatus Configures the transfer acceleration state for an Amazon S3 bucket.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accelerationStatus(Output<BucketAccelerateConfigurationAccelerationStatus> accelerationStatus) {
             $.accelerationStatus = accelerationStatus;
             return this;
         }
 
+        /**
+         * @param accelerationStatus Configures the transfer acceleration state for an Amazon S3 bucket.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accelerationStatus(BucketAccelerateConfigurationAccelerationStatus accelerationStatus) {
             return accelerationStatus(Output.of(accelerationStatus));
         }

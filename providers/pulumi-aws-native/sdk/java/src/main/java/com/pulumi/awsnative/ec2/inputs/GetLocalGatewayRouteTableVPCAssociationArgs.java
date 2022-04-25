@@ -19,6 +19,10 @@ public final class GetLocalGatewayRouteTableVPCAssociationArgs extends com.pulum
     @Import(name="localGatewayRouteTableVpcAssociationId", required=true)
     private String localGatewayRouteTableVpcAssociationId;
 
+    /**
+     * @return The ID of the association.
+     * 
+     */
     public String localGatewayRouteTableVpcAssociationId() {
         return this.localGatewayRouteTableVpcAssociationId;
     }
@@ -47,6 +51,12 @@ public final class GetLocalGatewayRouteTableVPCAssociationArgs extends com.pulum
             $ = new GetLocalGatewayRouteTableVPCAssociationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param localGatewayRouteTableVpcAssociationId The ID of the association.
+         * 
+         * @return builder
+         * 
+         */
         public Builder localGatewayRouteTableVpcAssociationId(String localGatewayRouteTableVpcAssociationId) {
             $.localGatewayRouteTableVpcAssociationId = localGatewayRouteTableVpcAssociationId;
             return this;

@@ -28,6 +28,10 @@ public final class RuleGroupJsonMatchPatternArgs extends com.pulumi.resources.Re
     @Import(name="all")
     private @Nullable Output<Object> all;
 
+    /**
+     * @return Inspect all parts of the web request&#39;s JSON body.
+     * 
+     */
     public Optional<Output<Object>> all() {
         return Optional.ofNullable(this.all);
     }
@@ -64,11 +68,23 @@ public final class RuleGroupJsonMatchPatternArgs extends com.pulumi.resources.Re
             $ = new RuleGroupJsonMatchPatternArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param all Inspect all parts of the web request&#39;s JSON body.
+         * 
+         * @return builder
+         * 
+         */
         public Builder all(@Nullable Output<Object> all) {
             $.all = all;
             return this;
         }
 
+        /**
+         * @param all Inspect all parts of the web request&#39;s JSON body.
+         * 
+         * @return builder
+         * 
+         */
         public Builder all(Object all) {
             return all(Output.of(all));
         }

@@ -27,6 +27,10 @@ public final class LoggingConfigurationFieldToMatchJsonBodyProperties extends co
     @Import(name="invalidFallbackBehavior")
     private @Nullable LoggingConfigurationFieldToMatchJsonBodyPropertiesInvalidFallbackBehavior invalidFallbackBehavior;
 
+    /**
+     * @return What AWS WAF should do if it fails to completely parse the JSON body.
+     * 
+     */
     public Optional<LoggingConfigurationFieldToMatchJsonBodyPropertiesInvalidFallbackBehavior> invalidFallbackBehavior() {
         return Optional.ofNullable(this.invalidFallbackBehavior);
     }
@@ -38,6 +42,10 @@ public final class LoggingConfigurationFieldToMatchJsonBodyProperties extends co
     @Import(name="matchPattern", required=true)
     private LoggingConfigurationFieldToMatchJsonBodyPropertiesMatchPatternProperties matchPattern;
 
+    /**
+     * @return The patterns to look for in the JSON body. AWS WAF inspects the results of these pattern matches against the rule inspection criteria.
+     * 
+     */
     public LoggingConfigurationFieldToMatchJsonBodyPropertiesMatchPatternProperties matchPattern() {
         return this.matchPattern;
     }
@@ -49,6 +57,10 @@ public final class LoggingConfigurationFieldToMatchJsonBodyProperties extends co
     @Import(name="matchScope", required=true)
     private LoggingConfigurationFieldToMatchJsonBodyPropertiesMatchScope matchScope;
 
+    /**
+     * @return The parts of the JSON to match against using the MatchPattern. If you specify All, AWS WAF matches against keys and values.
+     * 
+     */
     public LoggingConfigurationFieldToMatchJsonBodyPropertiesMatchScope matchScope() {
         return this.matchScope;
     }
@@ -79,16 +91,34 @@ public final class LoggingConfigurationFieldToMatchJsonBodyProperties extends co
             $ = new LoggingConfigurationFieldToMatchJsonBodyProperties(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param invalidFallbackBehavior What AWS WAF should do if it fails to completely parse the JSON body.
+         * 
+         * @return builder
+         * 
+         */
         public Builder invalidFallbackBehavior(@Nullable LoggingConfigurationFieldToMatchJsonBodyPropertiesInvalidFallbackBehavior invalidFallbackBehavior) {
             $.invalidFallbackBehavior = invalidFallbackBehavior;
             return this;
         }
 
+        /**
+         * @param matchPattern The patterns to look for in the JSON body. AWS WAF inspects the results of these pattern matches against the rule inspection criteria.
+         * 
+         * @return builder
+         * 
+         */
         public Builder matchPattern(LoggingConfigurationFieldToMatchJsonBodyPropertiesMatchPatternProperties matchPattern) {
             $.matchPattern = matchPattern;
             return this;
         }
 
+        /**
+         * @param matchScope The parts of the JSON to match against using the MatchPattern. If you specify All, AWS WAF matches against keys and values.
+         * 
+         * @return builder
+         * 
+         */
         public Builder matchScope(LoggingConfigurationFieldToMatchJsonBodyPropertiesMatchScope matchScope) {
             $.matchScope = matchScope;
             return this;

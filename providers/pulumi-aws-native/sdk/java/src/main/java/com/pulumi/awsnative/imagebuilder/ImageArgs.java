@@ -25,6 +25,10 @@ public final class ImageArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="containerRecipeArn")
     private @Nullable Output<String> containerRecipeArn;
 
+    /**
+     * @return The Amazon Resource Name (ARN) of the container recipe that defines how images are configured and tested.
+     * 
+     */
     public Optional<Output<String>> containerRecipeArn() {
         return Optional.ofNullable(this.containerRecipeArn);
     }
@@ -36,6 +40,10 @@ public final class ImageArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="distributionConfigurationArn")
     private @Nullable Output<String> distributionConfigurationArn;
 
+    /**
+     * @return The Amazon Resource Name (ARN) of the distribution configuration.
+     * 
+     */
     public Optional<Output<String>> distributionConfigurationArn() {
         return Optional.ofNullable(this.distributionConfigurationArn);
     }
@@ -47,6 +55,10 @@ public final class ImageArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="enhancedImageMetadataEnabled")
     private @Nullable Output<Boolean> enhancedImageMetadataEnabled;
 
+    /**
+     * @return Collects additional information about the image being created, including the operating system (OS) version and package list.
+     * 
+     */
     public Optional<Output<Boolean>> enhancedImageMetadataEnabled() {
         return Optional.ofNullable(this.enhancedImageMetadataEnabled);
     }
@@ -58,6 +70,10 @@ public final class ImageArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="imageRecipeArn")
     private @Nullable Output<String> imageRecipeArn;
 
+    /**
+     * @return The Amazon Resource Name (ARN) of the image recipe that defines how images are configured, tested, and assessed.
+     * 
+     */
     public Optional<Output<String>> imageRecipeArn() {
         return Optional.ofNullable(this.imageRecipeArn);
     }
@@ -69,6 +85,10 @@ public final class ImageArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="imageTestsConfiguration")
     private @Nullable Output<ImageTestsConfigurationArgs> imageTestsConfiguration;
 
+    /**
+     * @return The image tests configuration used when creating this image.
+     * 
+     */
     public Optional<Output<ImageTestsConfigurationArgs>> imageTestsConfiguration() {
         return Optional.ofNullable(this.imageTestsConfiguration);
     }
@@ -80,6 +100,10 @@ public final class ImageArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="infrastructureConfigurationArn")
     private @Nullable Output<String> infrastructureConfigurationArn;
 
+    /**
+     * @return The Amazon Resource Name (ARN) of the infrastructure configuration.
+     * 
+     */
     public Optional<Output<String>> infrastructureConfigurationArn() {
         return Optional.ofNullable(this.infrastructureConfigurationArn);
     }
@@ -91,6 +115,10 @@ public final class ImageArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<Object> tags;
 
+    /**
+     * @return The tags associated with the image.
+     * 
+     */
     public Optional<Output<Object>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -125,65 +153,149 @@ public final class ImageArgs extends com.pulumi.resources.ResourceArgs {
             $ = new ImageArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param containerRecipeArn The Amazon Resource Name (ARN) of the container recipe that defines how images are configured and tested.
+         * 
+         * @return builder
+         * 
+         */
         public Builder containerRecipeArn(@Nullable Output<String> containerRecipeArn) {
             $.containerRecipeArn = containerRecipeArn;
             return this;
         }
 
+        /**
+         * @param containerRecipeArn The Amazon Resource Name (ARN) of the container recipe that defines how images are configured and tested.
+         * 
+         * @return builder
+         * 
+         */
         public Builder containerRecipeArn(String containerRecipeArn) {
             return containerRecipeArn(Output.of(containerRecipeArn));
         }
 
+        /**
+         * @param distributionConfigurationArn The Amazon Resource Name (ARN) of the distribution configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder distributionConfigurationArn(@Nullable Output<String> distributionConfigurationArn) {
             $.distributionConfigurationArn = distributionConfigurationArn;
             return this;
         }
 
+        /**
+         * @param distributionConfigurationArn The Amazon Resource Name (ARN) of the distribution configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder distributionConfigurationArn(String distributionConfigurationArn) {
             return distributionConfigurationArn(Output.of(distributionConfigurationArn));
         }
 
+        /**
+         * @param enhancedImageMetadataEnabled Collects additional information about the image being created, including the operating system (OS) version and package list.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enhancedImageMetadataEnabled(@Nullable Output<Boolean> enhancedImageMetadataEnabled) {
             $.enhancedImageMetadataEnabled = enhancedImageMetadataEnabled;
             return this;
         }
 
+        /**
+         * @param enhancedImageMetadataEnabled Collects additional information about the image being created, including the operating system (OS) version and package list.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enhancedImageMetadataEnabled(Boolean enhancedImageMetadataEnabled) {
             return enhancedImageMetadataEnabled(Output.of(enhancedImageMetadataEnabled));
         }
 
+        /**
+         * @param imageRecipeArn The Amazon Resource Name (ARN) of the image recipe that defines how images are configured, tested, and assessed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder imageRecipeArn(@Nullable Output<String> imageRecipeArn) {
             $.imageRecipeArn = imageRecipeArn;
             return this;
         }
 
+        /**
+         * @param imageRecipeArn The Amazon Resource Name (ARN) of the image recipe that defines how images are configured, tested, and assessed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder imageRecipeArn(String imageRecipeArn) {
             return imageRecipeArn(Output.of(imageRecipeArn));
         }
 
+        /**
+         * @param imageTestsConfiguration The image tests configuration used when creating this image.
+         * 
+         * @return builder
+         * 
+         */
         public Builder imageTestsConfiguration(@Nullable Output<ImageTestsConfigurationArgs> imageTestsConfiguration) {
             $.imageTestsConfiguration = imageTestsConfiguration;
             return this;
         }
 
+        /**
+         * @param imageTestsConfiguration The image tests configuration used when creating this image.
+         * 
+         * @return builder
+         * 
+         */
         public Builder imageTestsConfiguration(ImageTestsConfigurationArgs imageTestsConfiguration) {
             return imageTestsConfiguration(Output.of(imageTestsConfiguration));
         }
 
+        /**
+         * @param infrastructureConfigurationArn The Amazon Resource Name (ARN) of the infrastructure configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder infrastructureConfigurationArn(@Nullable Output<String> infrastructureConfigurationArn) {
             $.infrastructureConfigurationArn = infrastructureConfigurationArn;
             return this;
         }
 
+        /**
+         * @param infrastructureConfigurationArn The Amazon Resource Name (ARN) of the infrastructure configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder infrastructureConfigurationArn(String infrastructureConfigurationArn) {
             return infrastructureConfigurationArn(Output.of(infrastructureConfigurationArn));
         }
 
+        /**
+         * @param tags The tags associated with the image.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Object> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags The tags associated with the image.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Object tags) {
             return tags(Output.of(tags));
         }

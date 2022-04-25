@@ -25,7 +25,7 @@ public final class GetBotAliasResult {
     private final @Nullable BotAliasConversationLogSettings conversationLogSettings;
     private final @Nullable String description;
     /**
-     * Determines whether Amazon Lex will use Amazon Comprehend to detect the sentiment of user utterances.
+     * @return Determines whether Amazon Lex will use Amazon Comprehend to detect the sentiment of user utterances.
      * 
      */
     private final @Nullable SentimentAnalysisSettingsProperties sentimentAnalysisSettings;
@@ -77,9 +77,9 @@ public final class GetBotAliasResult {
         return Optional.ofNullable(this.description);
     }
     /**
-     * Determines whether Amazon Lex will use Amazon Comprehend to detect the sentiment of user utterances.
+     * @return Determines whether Amazon Lex will use Amazon Comprehend to detect the sentiment of user utterances.
      * 
-    */
+     */
     public Optional<SentimentAnalysisSettingsProperties> sentimentAnalysisSettings() {
         return Optional.ofNullable(this.sentimentAnalysisSettings);
     }

@@ -24,6 +24,10 @@ public final class ClientCertificateArgs extends com.pulumi.resources.ResourceAr
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return A description of the client certificate.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -35,6 +39,10 @@ public final class ClientCertificateArgs extends com.pulumi.resources.ResourceAr
     @Import(name="tags")
     private @Nullable Output<List<ClientCertificateTagArgs>> tags;
 
+    /**
+     * @return An array of arbitrary tags (key-value pairs) to associate with the client certificate.
+     * 
+     */
     public Optional<Output<List<ClientCertificateTagArgs>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -64,24 +72,54 @@ public final class ClientCertificateArgs extends com.pulumi.resources.ResourceAr
             $ = new ClientCertificateArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param description A description of the client certificate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description A description of the client certificate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param tags An array of arbitrary tags (key-value pairs) to associate with the client certificate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<List<ClientCertificateTagArgs>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags An array of arbitrary tags (key-value pairs) to associate with the client certificate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(List<ClientCertificateTagArgs> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param tags An array of arbitrary tags (key-value pairs) to associate with the client certificate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(ClientCertificateTagArgs... tags) {
             return tags(List.of(tags));
         }

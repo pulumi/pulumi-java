@@ -24,6 +24,10 @@ public final class AgentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="activationKey", required=true)
     private Output<String> activationKey;
 
+    /**
+     * @return Activation key of the Agent.
+     * 
+     */
     public Output<String> activationKey() {
         return this.activationKey;
     }
@@ -35,6 +39,10 @@ public final class AgentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="agentName")
     private @Nullable Output<String> agentName;
 
+    /**
+     * @return The name configured for the agent. Text reference used to identify the agent in the console.
+     * 
+     */
     public Optional<Output<String>> agentName() {
         return Optional.ofNullable(this.agentName);
     }
@@ -46,6 +54,10 @@ public final class AgentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="securityGroupArns")
     private @Nullable Output<List<String>> securityGroupArns;
 
+    /**
+     * @return The ARNs of the security group used to protect your data transfer task subnets.
+     * 
+     */
     public Optional<Output<List<String>>> securityGroupArns() {
         return Optional.ofNullable(this.securityGroupArns);
     }
@@ -57,6 +69,10 @@ public final class AgentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="subnetArns")
     private @Nullable Output<List<String>> subnetArns;
 
+    /**
+     * @return The ARNs of the subnets in which DataSync will create elastic network interfaces for each data transfer task.
+     * 
+     */
     public Optional<Output<List<String>>> subnetArns() {
         return Optional.ofNullable(this.subnetArns);
     }
@@ -68,6 +84,10 @@ public final class AgentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<List<AgentTagArgs>> tags;
 
+    /**
+     * @return An array of key-value pairs to apply to this resource.
+     * 
+     */
     public Optional<Output<List<AgentTagArgs>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -79,6 +99,10 @@ public final class AgentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="vpcEndpointId")
     private @Nullable Output<String> vpcEndpointId;
 
+    /**
+     * @return The ID of the VPC endpoint that the agent has access to.
+     * 
+     */
     public Optional<Output<String>> vpcEndpointId() {
         return Optional.ofNullable(this.vpcEndpointId);
     }
@@ -112,68 +136,158 @@ public final class AgentArgs extends com.pulumi.resources.ResourceArgs {
             $ = new AgentArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param activationKey Activation key of the Agent.
+         * 
+         * @return builder
+         * 
+         */
         public Builder activationKey(Output<String> activationKey) {
             $.activationKey = activationKey;
             return this;
         }
 
+        /**
+         * @param activationKey Activation key of the Agent.
+         * 
+         * @return builder
+         * 
+         */
         public Builder activationKey(String activationKey) {
             return activationKey(Output.of(activationKey));
         }
 
+        /**
+         * @param agentName The name configured for the agent. Text reference used to identify the agent in the console.
+         * 
+         * @return builder
+         * 
+         */
         public Builder agentName(@Nullable Output<String> agentName) {
             $.agentName = agentName;
             return this;
         }
 
+        /**
+         * @param agentName The name configured for the agent. Text reference used to identify the agent in the console.
+         * 
+         * @return builder
+         * 
+         */
         public Builder agentName(String agentName) {
             return agentName(Output.of(agentName));
         }
 
+        /**
+         * @param securityGroupArns The ARNs of the security group used to protect your data transfer task subnets.
+         * 
+         * @return builder
+         * 
+         */
         public Builder securityGroupArns(@Nullable Output<List<String>> securityGroupArns) {
             $.securityGroupArns = securityGroupArns;
             return this;
         }
 
+        /**
+         * @param securityGroupArns The ARNs of the security group used to protect your data transfer task subnets.
+         * 
+         * @return builder
+         * 
+         */
         public Builder securityGroupArns(List<String> securityGroupArns) {
             return securityGroupArns(Output.of(securityGroupArns));
         }
 
+        /**
+         * @param securityGroupArns The ARNs of the security group used to protect your data transfer task subnets.
+         * 
+         * @return builder
+         * 
+         */
         public Builder securityGroupArns(String... securityGroupArns) {
             return securityGroupArns(List.of(securityGroupArns));
         }
 
+        /**
+         * @param subnetArns The ARNs of the subnets in which DataSync will create elastic network interfaces for each data transfer task.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subnetArns(@Nullable Output<List<String>> subnetArns) {
             $.subnetArns = subnetArns;
             return this;
         }
 
+        /**
+         * @param subnetArns The ARNs of the subnets in which DataSync will create elastic network interfaces for each data transfer task.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subnetArns(List<String> subnetArns) {
             return subnetArns(Output.of(subnetArns));
         }
 
+        /**
+         * @param subnetArns The ARNs of the subnets in which DataSync will create elastic network interfaces for each data transfer task.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subnetArns(String... subnetArns) {
             return subnetArns(List.of(subnetArns));
         }
 
+        /**
+         * @param tags An array of key-value pairs to apply to this resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<List<AgentTagArgs>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags An array of key-value pairs to apply to this resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(List<AgentTagArgs> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param tags An array of key-value pairs to apply to this resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(AgentTagArgs... tags) {
             return tags(List.of(tags));
         }
 
+        /**
+         * @param vpcEndpointId The ID of the VPC endpoint that the agent has access to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vpcEndpointId(@Nullable Output<String> vpcEndpointId) {
             $.vpcEndpointId = vpcEndpointId;
             return this;
         }
 
+        /**
+         * @param vpcEndpointId The ID of the VPC endpoint that the agent has access to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vpcEndpointId(String vpcEndpointId) {
             return vpcEndpointId(Output.of(vpcEndpointId));
         }

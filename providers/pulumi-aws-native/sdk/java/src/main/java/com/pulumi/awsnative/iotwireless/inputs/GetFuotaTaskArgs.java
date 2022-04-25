@@ -19,6 +19,10 @@ public final class GetFuotaTaskArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="id", required=true)
     private String id;
 
+    /**
+     * @return FUOTA task id. Returned after successful create.
+     * 
+     */
     public String id() {
         return this.id;
     }
@@ -47,6 +51,12 @@ public final class GetFuotaTaskArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetFuotaTaskArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param id FUOTA task id. Returned after successful create.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             $.id = id;
             return this;

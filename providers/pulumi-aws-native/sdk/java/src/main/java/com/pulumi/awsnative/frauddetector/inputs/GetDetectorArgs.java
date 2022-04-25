@@ -19,6 +19,10 @@ public final class GetDetectorArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="arn", required=true)
     private String arn;
 
+    /**
+     * @return The ARN of the detector.
+     * 
+     */
     public String arn() {
         return this.arn;
     }
@@ -47,6 +51,12 @@ public final class GetDetectorArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetDetectorArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param arn The ARN of the detector.
+         * 
+         * @return builder
+         * 
+         */
         public Builder arn(String arn) {
             $.arn = arn;
             return this;

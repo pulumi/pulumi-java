@@ -20,72 +20,72 @@ import javax.annotation.Nullable;
 @CustomType
 public final class MethodIntegration {
     /**
-     * A list of request parameters whose values API Gateway caches.
+     * @return A list of request parameters whose values API Gateway caches.
      * 
      */
     private final @Nullable List<String> cacheKeyParameters;
     /**
-     * An API-specific tag group of related cached parameters.
+     * @return An API-specific tag group of related cached parameters.
      * 
      */
     private final @Nullable String cacheNamespace;
     /**
-     * The ID of the VpcLink used for the integration when connectionType=VPC_LINK, otherwise undefined.
+     * @return The ID of the VpcLink used for the integration when connectionType=VPC_LINK, otherwise undefined.
      * 
      */
     private final @Nullable String connectionId;
     /**
-     * The type of the network connection to the integration endpoint.
+     * @return The type of the network connection to the integration endpoint.
      * 
      */
     private final @Nullable MethodIntegrationConnectionType connectionType;
     /**
-     * Specifies how to handle request payload content type conversions.
+     * @return Specifies how to handle request payload content type conversions.
      * 
      */
     private final @Nullable MethodIntegrationContentHandling contentHandling;
     /**
-     * The credentials that are required for the integration.
+     * @return The credentials that are required for the integration.
      * 
      */
     private final @Nullable String credentials;
     /**
-     * The integration&#39;s HTTP method type.
+     * @return The integration&#39;s HTTP method type.
      * 
      */
     private final @Nullable String integrationHttpMethod;
     /**
-     * The response that API Gateway provides after a method&#39;s backend completes processing a request.
+     * @return The response that API Gateway provides after a method&#39;s backend completes processing a request.
      * 
      */
     private final @Nullable List<MethodIntegrationResponse> integrationResponses;
     /**
-     * Indicates when API Gateway passes requests to the targeted backend.
+     * @return Indicates when API Gateway passes requests to the targeted backend.
      * 
      */
     private final @Nullable MethodIntegrationPassthroughBehavior passthroughBehavior;
     /**
-     * The request parameters that API Gateway sends with the backend request.
+     * @return The request parameters that API Gateway sends with the backend request.
      * 
      */
     private final @Nullable Object requestParameters;
     /**
-     * A map of Apache Velocity templates that are applied on the request payload.
+     * @return A map of Apache Velocity templates that are applied on the request payload.
      * 
      */
     private final @Nullable Object requestTemplates;
     /**
-     * Custom timeout between 50 and 29,000 milliseconds.
+     * @return Custom timeout between 50 and 29,000 milliseconds.
      * 
      */
     private final @Nullable Integer timeoutInMillis;
     /**
-     * The type of backend that your method is running.
+     * @return The type of backend that your method is running.
      * 
      */
     private final MethodIntegrationType type;
     /**
-     * The Uniform Resource Identifier (URI) for the integration.
+     * @return The Uniform Resource Identifier (URI) for the integration.
      * 
      */
     private final @Nullable String uri;
@@ -123,100 +123,100 @@ public final class MethodIntegration {
     }
 
     /**
-     * A list of request parameters whose values API Gateway caches.
+     * @return A list of request parameters whose values API Gateway caches.
      * 
-    */
+     */
     public List<String> cacheKeyParameters() {
         return this.cacheKeyParameters == null ? List.of() : this.cacheKeyParameters;
     }
     /**
-     * An API-specific tag group of related cached parameters.
+     * @return An API-specific tag group of related cached parameters.
      * 
-    */
+     */
     public Optional<String> cacheNamespace() {
         return Optional.ofNullable(this.cacheNamespace);
     }
     /**
-     * The ID of the VpcLink used for the integration when connectionType=VPC_LINK, otherwise undefined.
+     * @return The ID of the VpcLink used for the integration when connectionType=VPC_LINK, otherwise undefined.
      * 
-    */
+     */
     public Optional<String> connectionId() {
         return Optional.ofNullable(this.connectionId);
     }
     /**
-     * The type of the network connection to the integration endpoint.
+     * @return The type of the network connection to the integration endpoint.
      * 
-    */
+     */
     public Optional<MethodIntegrationConnectionType> connectionType() {
         return Optional.ofNullable(this.connectionType);
     }
     /**
-     * Specifies how to handle request payload content type conversions.
+     * @return Specifies how to handle request payload content type conversions.
      * 
-    */
+     */
     public Optional<MethodIntegrationContentHandling> contentHandling() {
         return Optional.ofNullable(this.contentHandling);
     }
     /**
-     * The credentials that are required for the integration.
+     * @return The credentials that are required for the integration.
      * 
-    */
+     */
     public Optional<String> credentials() {
         return Optional.ofNullable(this.credentials);
     }
     /**
-     * The integration&#39;s HTTP method type.
+     * @return The integration&#39;s HTTP method type.
      * 
-    */
+     */
     public Optional<String> integrationHttpMethod() {
         return Optional.ofNullable(this.integrationHttpMethod);
     }
     /**
-     * The response that API Gateway provides after a method&#39;s backend completes processing a request.
+     * @return The response that API Gateway provides after a method&#39;s backend completes processing a request.
      * 
-    */
+     */
     public List<MethodIntegrationResponse> integrationResponses() {
         return this.integrationResponses == null ? List.of() : this.integrationResponses;
     }
     /**
-     * Indicates when API Gateway passes requests to the targeted backend.
+     * @return Indicates when API Gateway passes requests to the targeted backend.
      * 
-    */
+     */
     public Optional<MethodIntegrationPassthroughBehavior> passthroughBehavior() {
         return Optional.ofNullable(this.passthroughBehavior);
     }
     /**
-     * The request parameters that API Gateway sends with the backend request.
+     * @return The request parameters that API Gateway sends with the backend request.
      * 
-    */
+     */
     public Optional<Object> requestParameters() {
         return Optional.ofNullable(this.requestParameters);
     }
     /**
-     * A map of Apache Velocity templates that are applied on the request payload.
+     * @return A map of Apache Velocity templates that are applied on the request payload.
      * 
-    */
+     */
     public Optional<Object> requestTemplates() {
         return Optional.ofNullable(this.requestTemplates);
     }
     /**
-     * Custom timeout between 50 and 29,000 milliseconds.
+     * @return Custom timeout between 50 and 29,000 milliseconds.
      * 
-    */
+     */
     public Optional<Integer> timeoutInMillis() {
         return Optional.ofNullable(this.timeoutInMillis);
     }
     /**
-     * The type of backend that your method is running.
+     * @return The type of backend that your method is running.
      * 
-    */
+     */
     public MethodIntegrationType type() {
         return this.type;
     }
     /**
-     * The Uniform Resource Identifier (URI) for the integration.
+     * @return The Uniform Resource Identifier (URI) for the integration.
      * 
-    */
+     */
     public Optional<String> uri() {
         return Optional.ofNullable(this.uri);
     }

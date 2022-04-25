@@ -25,6 +25,10 @@ public final class ReportPlanTag extends com.pulumi.resources.InvokeArgs {
     @Import(name="key")
     private @Nullable String key;
 
+    /**
+     * @return The key name of the tag. You can specify a value that is 1 to 128 Unicode characters in length and cannot be prefixed with aws:. You can use any of the following characters: the set of Unicode letters, digits, whitespace, _, ., /, =, +, and -.
+     * 
+     */
     public Optional<String> key() {
         return Optional.ofNullable(this.key);
     }
@@ -36,6 +40,10 @@ public final class ReportPlanTag extends com.pulumi.resources.InvokeArgs {
     @Import(name="value")
     private @Nullable String value;
 
+    /**
+     * @return The value for the tag. You can specify a value that is 0 to 256 Unicode characters in length and cannot be prefixed with aws:. You can use any of the following characters: the set of Unicode letters, digits, whitespace, _, ., /, =, +, and -.
+     * 
+     */
     public Optional<String> value() {
         return Optional.ofNullable(this.value);
     }
@@ -65,11 +73,23 @@ public final class ReportPlanTag extends com.pulumi.resources.InvokeArgs {
             $ = new ReportPlanTag(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param key The key name of the tag. You can specify a value that is 1 to 128 Unicode characters in length and cannot be prefixed with aws:. You can use any of the following characters: the set of Unicode letters, digits, whitespace, _, ., /, =, +, and -.
+         * 
+         * @return builder
+         * 
+         */
         public Builder key(@Nullable String key) {
             $.key = key;
             return this;
         }
 
+        /**
+         * @param value The value for the tag. You can specify a value that is 0 to 256 Unicode characters in length and cannot be prefixed with aws:. You can use any of the following characters: the set of Unicode letters, digits, whitespace, _, ., /, =, +, and -.
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(@Nullable String value) {
             $.value = value;
             return this;

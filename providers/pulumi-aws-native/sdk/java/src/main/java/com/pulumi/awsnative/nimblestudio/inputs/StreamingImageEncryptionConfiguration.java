@@ -26,6 +26,10 @@ public final class StreamingImageEncryptionConfiguration extends com.pulumi.reso
     @Import(name="keyArn")
     private @Nullable String keyArn;
 
+    /**
+     * @return &lt;p&gt;The ARN for a KMS key that is used to encrypt studio data.&lt;/p&gt;
+     * 
+     */
     public Optional<String> keyArn() {
         return Optional.ofNullable(this.keyArn);
     }
@@ -62,6 +66,12 @@ public final class StreamingImageEncryptionConfiguration extends com.pulumi.reso
             $ = new StreamingImageEncryptionConfiguration(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param keyArn &lt;p&gt;The ARN for a KMS key that is used to encrypt studio data.&lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyArn(@Nullable String keyArn) {
             $.keyArn = keyArn;
             return this;

@@ -43,6 +43,10 @@ public final class FileSystemArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="bypassPolicyLockoutSafetyCheck")
     private @Nullable Output<Boolean> bypassPolicyLockoutSafetyCheck;
 
+    /**
+     * @return Whether to bypass the FileSystemPolicy lockout safety check. The policy lockout safety check determines whether the policy in the request will prevent the principal making the request to be locked out from making future PutFileSystemPolicy requests on the file system. Set BypassPolicyLockoutSafetyCheck to True only when you intend to prevent the principal that is making the request from making a subsequent PutFileSystemPolicy request on the file system. Defaults to false
+     * 
+     */
     public Optional<Output<Boolean>> bypassPolicyLockoutSafetyCheck() {
         return Optional.ofNullable(this.bypassPolicyLockoutSafetyCheck);
     }
@@ -155,11 +159,23 @@ public final class FileSystemArgs extends com.pulumi.resources.ResourceArgs {
             return backupPolicy(Output.of(backupPolicy));
         }
 
+        /**
+         * @param bypassPolicyLockoutSafetyCheck Whether to bypass the FileSystemPolicy lockout safety check. The policy lockout safety check determines whether the policy in the request will prevent the principal making the request to be locked out from making future PutFileSystemPolicy requests on the file system. Set BypassPolicyLockoutSafetyCheck to True only when you intend to prevent the principal that is making the request from making a subsequent PutFileSystemPolicy request on the file system. Defaults to false
+         * 
+         * @return builder
+         * 
+         */
         public Builder bypassPolicyLockoutSafetyCheck(@Nullable Output<Boolean> bypassPolicyLockoutSafetyCheck) {
             $.bypassPolicyLockoutSafetyCheck = bypassPolicyLockoutSafetyCheck;
             return this;
         }
 
+        /**
+         * @param bypassPolicyLockoutSafetyCheck Whether to bypass the FileSystemPolicy lockout safety check. The policy lockout safety check determines whether the policy in the request will prevent the principal making the request to be locked out from making future PutFileSystemPolicy requests on the file system. Set BypassPolicyLockoutSafetyCheck to True only when you intend to prevent the principal that is making the request from making a subsequent PutFileSystemPolicy request on the file system. Defaults to false
+         * 
+         * @return builder
+         * 
+         */
         public Builder bypassPolicyLockoutSafetyCheck(Boolean bypassPolicyLockoutSafetyCheck) {
             return bypassPolicyLockoutSafetyCheck(Output.of(bypassPolicyLockoutSafetyCheck));
         }

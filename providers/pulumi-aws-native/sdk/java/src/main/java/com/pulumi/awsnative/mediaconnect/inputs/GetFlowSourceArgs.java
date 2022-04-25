@@ -19,6 +19,10 @@ public final class GetFlowSourceArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="sourceArn", required=true)
     private String sourceArn;
 
+    /**
+     * @return The ARN of the source.
+     * 
+     */
     public String sourceArn() {
         return this.sourceArn;
     }
@@ -47,6 +51,12 @@ public final class GetFlowSourceArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetFlowSourceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param sourceArn The ARN of the source.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceArn(String sourceArn) {
             $.sourceArn = sourceArn;
             return this;

@@ -37,6 +37,10 @@ public final class PackagingConfigurationHlsPackageArgs extends com.pulumi.resou
     @Import(name="hlsManifests", required=true)
     private Output<List<PackagingConfigurationHlsManifestArgs>> hlsManifests;
 
+    /**
+     * @return A list of HLS manifest configurations.
+     * 
+     */
     public Output<List<PackagingConfigurationHlsManifestArgs>> hlsManifests() {
         return this.hlsManifests;
     }
@@ -55,6 +59,10 @@ public final class PackagingConfigurationHlsPackageArgs extends com.pulumi.resou
     @Import(name="useAudioRenditionGroup")
     private @Nullable Output<Boolean> useAudioRenditionGroup;
 
+    /**
+     * @return When enabled, audio streams will be placed in rendition groups in the output.
+     * 
+     */
     public Optional<Output<Boolean>> useAudioRenditionGroup() {
         return Optional.ofNullable(this.useAudioRenditionGroup);
     }
@@ -95,15 +103,33 @@ public final class PackagingConfigurationHlsPackageArgs extends com.pulumi.resou
             return encryption(Output.of(encryption));
         }
 
+        /**
+         * @param hlsManifests A list of HLS manifest configurations.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hlsManifests(Output<List<PackagingConfigurationHlsManifestArgs>> hlsManifests) {
             $.hlsManifests = hlsManifests;
             return this;
         }
 
+        /**
+         * @param hlsManifests A list of HLS manifest configurations.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hlsManifests(List<PackagingConfigurationHlsManifestArgs> hlsManifests) {
             return hlsManifests(Output.of(hlsManifests));
         }
 
+        /**
+         * @param hlsManifests A list of HLS manifest configurations.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hlsManifests(PackagingConfigurationHlsManifestArgs... hlsManifests) {
             return hlsManifests(List.of(hlsManifests));
         }
@@ -117,11 +143,23 @@ public final class PackagingConfigurationHlsPackageArgs extends com.pulumi.resou
             return segmentDurationSeconds(Output.of(segmentDurationSeconds));
         }
 
+        /**
+         * @param useAudioRenditionGroup When enabled, audio streams will be placed in rendition groups in the output.
+         * 
+         * @return builder
+         * 
+         */
         public Builder useAudioRenditionGroup(@Nullable Output<Boolean> useAudioRenditionGroup) {
             $.useAudioRenditionGroup = useAudioRenditionGroup;
             return this;
         }
 
+        /**
+         * @param useAudioRenditionGroup When enabled, audio streams will be placed in rendition groups in the output.
+         * 
+         * @return builder
+         * 
+         */
         public Builder useAudioRenditionGroup(Boolean useAudioRenditionGroup) {
             return useAudioRenditionGroup(Output.of(useAudioRenditionGroup));
         }

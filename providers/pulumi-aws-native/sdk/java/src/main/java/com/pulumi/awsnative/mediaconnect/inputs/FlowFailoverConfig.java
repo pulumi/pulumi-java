@@ -26,6 +26,10 @@ public final class FlowFailoverConfig extends com.pulumi.resources.InvokeArgs {
     @Import(name="recoveryWindow")
     private @Nullable Integer recoveryWindow;
 
+    /**
+     * @return Search window time to look for dash-7 packets
+     * 
+     */
     public Optional<Integer> recoveryWindow() {
         return Optional.ofNullable(this.recoveryWindow);
     }
@@ -62,6 +66,12 @@ public final class FlowFailoverConfig extends com.pulumi.resources.InvokeArgs {
             $ = new FlowFailoverConfig(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param recoveryWindow Search window time to look for dash-7 packets
+         * 
+         * @return builder
+         * 
+         */
         public Builder recoveryWindow(@Nullable Integer recoveryWindow) {
             $.recoveryWindow = recoveryWindow;
             return this;

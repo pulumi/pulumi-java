@@ -25,6 +25,10 @@ public final class SamplingRuleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="attributes")
     private @Nullable Output<Object> attributes;
 
+    /**
+     * @return Matches attributes derived from the request.
+     * 
+     */
     public Optional<Output<Object>> attributes() {
         return Optional.ofNullable(this.attributes);
     }
@@ -36,6 +40,10 @@ public final class SamplingRuleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="fixedRate")
     private @Nullable Output<Double> fixedRate;
 
+    /**
+     * @return The percentage of matching requests to instrument, after the reservoir is exhausted.
+     * 
+     */
     public Optional<Output<Double>> fixedRate() {
         return Optional.ofNullable(this.fixedRate);
     }
@@ -47,6 +55,10 @@ public final class SamplingRuleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="hTTPMethod")
     private @Nullable Output<String> hTTPMethod;
 
+    /**
+     * @return Matches the HTTP method from a request URL.
+     * 
+     */
     public Optional<Output<String>> hTTPMethod() {
         return Optional.ofNullable(this.hTTPMethod);
     }
@@ -58,6 +70,10 @@ public final class SamplingRuleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="host")
     private @Nullable Output<String> host;
 
+    /**
+     * @return Matches the hostname from a request URL.
+     * 
+     */
     public Optional<Output<String>> host() {
         return Optional.ofNullable(this.host);
     }
@@ -69,6 +85,10 @@ public final class SamplingRuleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="priority")
     private @Nullable Output<Integer> priority;
 
+    /**
+     * @return The priority of the sampling rule.
+     * 
+     */
     public Optional<Output<Integer>> priority() {
         return Optional.ofNullable(this.priority);
     }
@@ -80,6 +100,10 @@ public final class SamplingRuleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="reservoirSize")
     private @Nullable Output<Integer> reservoirSize;
 
+    /**
+     * @return A fixed number of matching requests to instrument per second, prior to applying the fixed rate. The reservoir is not used directly by services, but applies to all services using the rule collectively.
+     * 
+     */
     public Optional<Output<Integer>> reservoirSize() {
         return Optional.ofNullable(this.reservoirSize);
     }
@@ -91,6 +115,10 @@ public final class SamplingRuleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceARN")
     private @Nullable Output<String> resourceARN;
 
+    /**
+     * @return Matches the ARN of the AWS resource on which the service runs.
+     * 
+     */
     public Optional<Output<String>> resourceARN() {
         return Optional.ofNullable(this.resourceARN);
     }
@@ -116,6 +144,10 @@ public final class SamplingRuleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="serviceName")
     private @Nullable Output<String> serviceName;
 
+    /**
+     * @return Matches the name that the service uses to identify itself in segments.
+     * 
+     */
     public Optional<Output<String>> serviceName() {
         return Optional.ofNullable(this.serviceName);
     }
@@ -127,6 +159,10 @@ public final class SamplingRuleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="serviceType")
     private @Nullable Output<String> serviceType;
 
+    /**
+     * @return Matches the origin that the service uses to identify its type in segments.
+     * 
+     */
     public Optional<Output<String>> serviceType() {
         return Optional.ofNullable(this.serviceType);
     }
@@ -138,6 +174,10 @@ public final class SamplingRuleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="uRLPath")
     private @Nullable Output<String> uRLPath;
 
+    /**
+     * @return Matches the path from a request URL.
+     * 
+     */
     public Optional<Output<String>> uRLPath() {
         return Optional.ofNullable(this.uRLPath);
     }
@@ -149,6 +189,10 @@ public final class SamplingRuleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="version")
     private @Nullable Output<Integer> version;
 
+    /**
+     * @return The version of the sampling rule format (1)
+     * 
+     */
     public Optional<Output<Integer>> version() {
         return Optional.ofNullable(this.version);
     }
@@ -189,65 +233,149 @@ public final class SamplingRuleArgs extends com.pulumi.resources.ResourceArgs {
             $ = new SamplingRuleArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param attributes Matches attributes derived from the request.
+         * 
+         * @return builder
+         * 
+         */
         public Builder attributes(@Nullable Output<Object> attributes) {
             $.attributes = attributes;
             return this;
         }
 
+        /**
+         * @param attributes Matches attributes derived from the request.
+         * 
+         * @return builder
+         * 
+         */
         public Builder attributes(Object attributes) {
             return attributes(Output.of(attributes));
         }
 
+        /**
+         * @param fixedRate The percentage of matching requests to instrument, after the reservoir is exhausted.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fixedRate(@Nullable Output<Double> fixedRate) {
             $.fixedRate = fixedRate;
             return this;
         }
 
+        /**
+         * @param fixedRate The percentage of matching requests to instrument, after the reservoir is exhausted.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fixedRate(Double fixedRate) {
             return fixedRate(Output.of(fixedRate));
         }
 
+        /**
+         * @param hTTPMethod Matches the HTTP method from a request URL.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hTTPMethod(@Nullable Output<String> hTTPMethod) {
             $.hTTPMethod = hTTPMethod;
             return this;
         }
 
+        /**
+         * @param hTTPMethod Matches the HTTP method from a request URL.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hTTPMethod(String hTTPMethod) {
             return hTTPMethod(Output.of(hTTPMethod));
         }
 
+        /**
+         * @param host Matches the hostname from a request URL.
+         * 
+         * @return builder
+         * 
+         */
         public Builder host(@Nullable Output<String> host) {
             $.host = host;
             return this;
         }
 
+        /**
+         * @param host Matches the hostname from a request URL.
+         * 
+         * @return builder
+         * 
+         */
         public Builder host(String host) {
             return host(Output.of(host));
         }
 
+        /**
+         * @param priority The priority of the sampling rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder priority(@Nullable Output<Integer> priority) {
             $.priority = priority;
             return this;
         }
 
+        /**
+         * @param priority The priority of the sampling rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder priority(Integer priority) {
             return priority(Output.of(priority));
         }
 
+        /**
+         * @param reservoirSize A fixed number of matching requests to instrument per second, prior to applying the fixed rate. The reservoir is not used directly by services, but applies to all services using the rule collectively.
+         * 
+         * @return builder
+         * 
+         */
         public Builder reservoirSize(@Nullable Output<Integer> reservoirSize) {
             $.reservoirSize = reservoirSize;
             return this;
         }
 
+        /**
+         * @param reservoirSize A fixed number of matching requests to instrument per second, prior to applying the fixed rate. The reservoir is not used directly by services, but applies to all services using the rule collectively.
+         * 
+         * @return builder
+         * 
+         */
         public Builder reservoirSize(Integer reservoirSize) {
             return reservoirSize(Output.of(reservoirSize));
         }
 
+        /**
+         * @param resourceARN Matches the ARN of the AWS resource on which the service runs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceARN(@Nullable Output<String> resourceARN) {
             $.resourceARN = resourceARN;
             return this;
         }
 
+        /**
+         * @param resourceARN Matches the ARN of the AWS resource on which the service runs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceARN(String resourceARN) {
             return resourceARN(Output.of(resourceARN));
         }
@@ -270,38 +398,86 @@ public final class SamplingRuleArgs extends com.pulumi.resources.ResourceArgs {
             return ruleName(Output.of(ruleName));
         }
 
+        /**
+         * @param serviceName Matches the name that the service uses to identify itself in segments.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceName(@Nullable Output<String> serviceName) {
             $.serviceName = serviceName;
             return this;
         }
 
+        /**
+         * @param serviceName Matches the name that the service uses to identify itself in segments.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceName(String serviceName) {
             return serviceName(Output.of(serviceName));
         }
 
+        /**
+         * @param serviceType Matches the origin that the service uses to identify its type in segments.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceType(@Nullable Output<String> serviceType) {
             $.serviceType = serviceType;
             return this;
         }
 
+        /**
+         * @param serviceType Matches the origin that the service uses to identify its type in segments.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceType(String serviceType) {
             return serviceType(Output.of(serviceType));
         }
 
+        /**
+         * @param uRLPath Matches the path from a request URL.
+         * 
+         * @return builder
+         * 
+         */
         public Builder uRLPath(@Nullable Output<String> uRLPath) {
             $.uRLPath = uRLPath;
             return this;
         }
 
+        /**
+         * @param uRLPath Matches the path from a request URL.
+         * 
+         * @return builder
+         * 
+         */
         public Builder uRLPath(String uRLPath) {
             return uRLPath(Output.of(uRLPath));
         }
 
+        /**
+         * @param version The version of the sampling rule format (1)
+         * 
+         * @return builder
+         * 
+         */
         public Builder version(@Nullable Output<Integer> version) {
             $.version = version;
             return this;
         }
 
+        /**
+         * @param version The version of the sampling rule format (1)
+         * 
+         * @return builder
+         * 
+         */
         public Builder version(Integer version) {
             return version(Output.of(version));
         }

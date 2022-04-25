@@ -28,6 +28,10 @@ public final class LoggingConfigurationFieldToMatchArgs extends com.pulumi.resou
     @Import(name="jsonBody")
     private @Nullable Output<LoggingConfigurationFieldToMatchJsonBodyPropertiesArgs> jsonBody;
 
+    /**
+     * @return Inspect the request body as JSON. The request body immediately follows the request headers. This is the part of a request that contains any additional data that you want to send to your web server as the HTTP request body, such as data from a form.
+     * 
+     */
     public Optional<Output<LoggingConfigurationFieldToMatchJsonBodyPropertiesArgs>> jsonBody() {
         return Optional.ofNullable(this.jsonBody);
     }
@@ -39,6 +43,10 @@ public final class LoggingConfigurationFieldToMatchArgs extends com.pulumi.resou
     @Import(name="method")
     private @Nullable Output<Object> method;
 
+    /**
+     * @return Inspect the HTTP method. The method indicates the type of operation that the request is asking the origin to perform.
+     * 
+     */
     public Optional<Output<Object>> method() {
         return Optional.ofNullable(this.method);
     }
@@ -50,6 +58,10 @@ public final class LoggingConfigurationFieldToMatchArgs extends com.pulumi.resou
     @Import(name="queryString")
     private @Nullable Output<Object> queryString;
 
+    /**
+     * @return Inspect the query string. This is the part of a URL that appears after a ? character, if any.
+     * 
+     */
     public Optional<Output<Object>> queryString() {
         return Optional.ofNullable(this.queryString);
     }
@@ -61,6 +73,10 @@ public final class LoggingConfigurationFieldToMatchArgs extends com.pulumi.resou
     @Import(name="singleHeader")
     private @Nullable Output<LoggingConfigurationFieldToMatchSingleHeaderPropertiesArgs> singleHeader;
 
+    /**
+     * @return Inspect a single header. Provide the name of the header to inspect, for example, User-Agent or Referer. This setting isn&#39;t case sensitive.
+     * 
+     */
     public Optional<Output<LoggingConfigurationFieldToMatchSingleHeaderPropertiesArgs>> singleHeader() {
         return Optional.ofNullable(this.singleHeader);
     }
@@ -72,6 +88,10 @@ public final class LoggingConfigurationFieldToMatchArgs extends com.pulumi.resou
     @Import(name="uriPath")
     private @Nullable Output<Object> uriPath;
 
+    /**
+     * @return Inspect the request URI path. This is the part of a web request that identifies a resource, for example, /images/daily-ad.jpg.
+     * 
+     */
     public Optional<Output<Object>> uriPath() {
         return Optional.ofNullable(this.uriPath);
     }
@@ -104,47 +124,107 @@ public final class LoggingConfigurationFieldToMatchArgs extends com.pulumi.resou
             $ = new LoggingConfigurationFieldToMatchArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param jsonBody Inspect the request body as JSON. The request body immediately follows the request headers. This is the part of a request that contains any additional data that you want to send to your web server as the HTTP request body, such as data from a form.
+         * 
+         * @return builder
+         * 
+         */
         public Builder jsonBody(@Nullable Output<LoggingConfigurationFieldToMatchJsonBodyPropertiesArgs> jsonBody) {
             $.jsonBody = jsonBody;
             return this;
         }
 
+        /**
+         * @param jsonBody Inspect the request body as JSON. The request body immediately follows the request headers. This is the part of a request that contains any additional data that you want to send to your web server as the HTTP request body, such as data from a form.
+         * 
+         * @return builder
+         * 
+         */
         public Builder jsonBody(LoggingConfigurationFieldToMatchJsonBodyPropertiesArgs jsonBody) {
             return jsonBody(Output.of(jsonBody));
         }
 
+        /**
+         * @param method Inspect the HTTP method. The method indicates the type of operation that the request is asking the origin to perform.
+         * 
+         * @return builder
+         * 
+         */
         public Builder method(@Nullable Output<Object> method) {
             $.method = method;
             return this;
         }
 
+        /**
+         * @param method Inspect the HTTP method. The method indicates the type of operation that the request is asking the origin to perform.
+         * 
+         * @return builder
+         * 
+         */
         public Builder method(Object method) {
             return method(Output.of(method));
         }
 
+        /**
+         * @param queryString Inspect the query string. This is the part of a URL that appears after a ? character, if any.
+         * 
+         * @return builder
+         * 
+         */
         public Builder queryString(@Nullable Output<Object> queryString) {
             $.queryString = queryString;
             return this;
         }
 
+        /**
+         * @param queryString Inspect the query string. This is the part of a URL that appears after a ? character, if any.
+         * 
+         * @return builder
+         * 
+         */
         public Builder queryString(Object queryString) {
             return queryString(Output.of(queryString));
         }
 
+        /**
+         * @param singleHeader Inspect a single header. Provide the name of the header to inspect, for example, User-Agent or Referer. This setting isn&#39;t case sensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder singleHeader(@Nullable Output<LoggingConfigurationFieldToMatchSingleHeaderPropertiesArgs> singleHeader) {
             $.singleHeader = singleHeader;
             return this;
         }
 
+        /**
+         * @param singleHeader Inspect a single header. Provide the name of the header to inspect, for example, User-Agent or Referer. This setting isn&#39;t case sensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder singleHeader(LoggingConfigurationFieldToMatchSingleHeaderPropertiesArgs singleHeader) {
             return singleHeader(Output.of(singleHeader));
         }
 
+        /**
+         * @param uriPath Inspect the request URI path. This is the part of a web request that identifies a resource, for example, /images/daily-ad.jpg.
+         * 
+         * @return builder
+         * 
+         */
         public Builder uriPath(@Nullable Output<Object> uriPath) {
             $.uriPath = uriPath;
             return this;
         }
 
+        /**
+         * @param uriPath Inspect the request URI path. This is the part of a web request that identifies a resource, for example, /images/daily-ad.jpg.
+         * 
+         * @return builder
+         * 
+         */
         public Builder uriPath(Object uriPath) {
             return uriPath(Output.of(uriPath));
         }

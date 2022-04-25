@@ -25,6 +25,10 @@ public final class StudioComponentScriptParameterKeyValue extends com.pulumi.res
     @Import(name="key")
     private @Nullable String key;
 
+    /**
+     * @return &lt;p&gt;A script parameter key.&lt;/p&gt;
+     * 
+     */
     public Optional<String> key() {
         return Optional.ofNullable(this.key);
     }
@@ -36,6 +40,10 @@ public final class StudioComponentScriptParameterKeyValue extends com.pulumi.res
     @Import(name="value")
     private @Nullable String value;
 
+    /**
+     * @return &lt;p&gt;A script parameter value.&lt;/p&gt;
+     * 
+     */
     public Optional<String> value() {
         return Optional.ofNullable(this.value);
     }
@@ -65,11 +73,23 @@ public final class StudioComponentScriptParameterKeyValue extends com.pulumi.res
             $ = new StudioComponentScriptParameterKeyValue(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param key &lt;p&gt;A script parameter key.&lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder key(@Nullable String key) {
             $.key = key;
             return this;
         }
 
+        /**
+         * @param value &lt;p&gt;A script parameter value.&lt;/p&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(@Nullable String value) {
             $.value = value;
             return this;

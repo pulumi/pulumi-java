@@ -19,6 +19,10 @@ public final class GetAddonArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="addonName", required=true)
     private String addonName;
 
+    /**
+     * @return Name of Addon
+     * 
+     */
     public String addonName() {
         return this.addonName;
     }
@@ -30,6 +34,10 @@ public final class GetAddonArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="clusterName", required=true)
     private String clusterName;
 
+    /**
+     * @return Name of Cluster
+     * 
+     */
     public String clusterName() {
         return this.clusterName;
     }
@@ -59,11 +67,23 @@ public final class GetAddonArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetAddonArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param addonName Name of Addon
+         * 
+         * @return builder
+         * 
+         */
         public Builder addonName(String addonName) {
             $.addonName = addonName;
             return this;
         }
 
+        /**
+         * @param clusterName Name of Cluster
+         * 
+         * @return builder
+         * 
+         */
         public Builder clusterName(String clusterName) {
             $.clusterName = clusterName;
             return this;

@@ -23,6 +23,10 @@ public final class KeySigningKeyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="hostedZoneId", required=true)
     private Output<String> hostedZoneId;
 
+    /**
+     * @return The unique string (ID) used to identify a hosted zone.
+     * 
+     */
     public Output<String> hostedZoneId() {
         return this.hostedZoneId;
     }
@@ -34,6 +38,10 @@ public final class KeySigningKeyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="keyManagementServiceArn", required=true)
     private Output<String> keyManagementServiceArn;
 
+    /**
+     * @return The Amazon resource name (ARN) for a customer managed key (CMK) in AWS Key Management Service (KMS). The KeyManagementServiceArn must be unique for each key signing key (KSK) in a single hosted zone.
+     * 
+     */
     public Output<String> keyManagementServiceArn() {
         return this.keyManagementServiceArn;
     }
@@ -45,6 +53,10 @@ public final class KeySigningKeyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return An alphanumeric string used to identify a key signing key (KSK). Name must be unique for each key signing key in the same hosted zone.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -56,6 +68,10 @@ public final class KeySigningKeyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="status", required=true)
     private Output<KeySigningKeyStatus> status;
 
+    /**
+     * @return A string specifying the initial status of the key signing key (KSK). You can set the value to ACTIVE or INACTIVE.
+     * 
+     */
     public Output<KeySigningKeyStatus> status() {
         return this.status;
     }
@@ -87,38 +103,86 @@ public final class KeySigningKeyArgs extends com.pulumi.resources.ResourceArgs {
             $ = new KeySigningKeyArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param hostedZoneId The unique string (ID) used to identify a hosted zone.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hostedZoneId(Output<String> hostedZoneId) {
             $.hostedZoneId = hostedZoneId;
             return this;
         }
 
+        /**
+         * @param hostedZoneId The unique string (ID) used to identify a hosted zone.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hostedZoneId(String hostedZoneId) {
             return hostedZoneId(Output.of(hostedZoneId));
         }
 
+        /**
+         * @param keyManagementServiceArn The Amazon resource name (ARN) for a customer managed key (CMK) in AWS Key Management Service (KMS). The KeyManagementServiceArn must be unique for each key signing key (KSK) in a single hosted zone.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyManagementServiceArn(Output<String> keyManagementServiceArn) {
             $.keyManagementServiceArn = keyManagementServiceArn;
             return this;
         }
 
+        /**
+         * @param keyManagementServiceArn The Amazon resource name (ARN) for a customer managed key (CMK) in AWS Key Management Service (KMS). The KeyManagementServiceArn must be unique for each key signing key (KSK) in a single hosted zone.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyManagementServiceArn(String keyManagementServiceArn) {
             return keyManagementServiceArn(Output.of(keyManagementServiceArn));
         }
 
+        /**
+         * @param name An alphanumeric string used to identify a key signing key (KSK). Name must be unique for each key signing key in the same hosted zone.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name An alphanumeric string used to identify a key signing key (KSK). Name must be unique for each key signing key in the same hosted zone.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param status A string specifying the initial status of the key signing key (KSK). You can set the value to ACTIVE or INACTIVE.
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(Output<KeySigningKeyStatus> status) {
             $.status = status;
             return this;
         }
 
+        /**
+         * @param status A string specifying the initial status of the key signing key (KSK). You can set the value to ACTIVE or INACTIVE.
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(KeySigningKeyStatus status) {
             return status(Output.of(status));
         }

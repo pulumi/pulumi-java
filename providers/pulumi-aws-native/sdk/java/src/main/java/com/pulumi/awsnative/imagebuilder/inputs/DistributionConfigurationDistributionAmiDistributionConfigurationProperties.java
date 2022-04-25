@@ -28,6 +28,10 @@ public final class DistributionConfigurationDistributionAmiDistributionConfigura
     @Import(name="amiTags")
     private @Nullable Object amiTags;
 
+    /**
+     * @return The tags to apply to AMIs distributed to this Region.
+     * 
+     */
     public Optional<Object> amiTags() {
         return Optional.ofNullable(this.amiTags);
     }
@@ -39,6 +43,10 @@ public final class DistributionConfigurationDistributionAmiDistributionConfigura
     @Import(name="description")
     private @Nullable String description;
 
+    /**
+     * @return The description of the AMI distribution configuration.
+     * 
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
@@ -50,6 +58,10 @@ public final class DistributionConfigurationDistributionAmiDistributionConfigura
     @Import(name="kmsKeyId")
     private @Nullable String kmsKeyId;
 
+    /**
+     * @return The KMS key identifier used to encrypt the distributed image.
+     * 
+     */
     public Optional<String> kmsKeyId() {
         return Optional.ofNullable(this.kmsKeyId);
     }
@@ -61,6 +73,10 @@ public final class DistributionConfigurationDistributionAmiDistributionConfigura
     @Import(name="launchPermissionConfiguration")
     private @Nullable DistributionConfigurationDistributionAmiDistributionConfigurationPropertiesLaunchPermissionConfigurationProperties launchPermissionConfiguration;
 
+    /**
+     * @return Launch permissions can be used to configure which AWS accounts can use the AMI to launch instances.
+     * 
+     */
     public Optional<DistributionConfigurationDistributionAmiDistributionConfigurationPropertiesLaunchPermissionConfigurationProperties> launchPermissionConfiguration() {
         return Optional.ofNullable(this.launchPermissionConfiguration);
     }
@@ -72,6 +88,10 @@ public final class DistributionConfigurationDistributionAmiDistributionConfigura
     @Import(name="name")
     private @Nullable String name;
 
+    /**
+     * @return The name of the AMI distribution configuration.
+     * 
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
@@ -83,6 +103,10 @@ public final class DistributionConfigurationDistributionAmiDistributionConfigura
     @Import(name="targetAccountIds")
     private @Nullable List<String> targetAccountIds;
 
+    /**
+     * @return The ID of accounts to which you want to distribute an image.
+     * 
+     */
     public Optional<List<String>> targetAccountIds() {
         return Optional.ofNullable(this.targetAccountIds);
     }
@@ -116,36 +140,78 @@ public final class DistributionConfigurationDistributionAmiDistributionConfigura
             $ = new DistributionConfigurationDistributionAmiDistributionConfigurationProperties(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param amiTags The tags to apply to AMIs distributed to this Region.
+         * 
+         * @return builder
+         * 
+         */
         public Builder amiTags(@Nullable Object amiTags) {
             $.amiTags = amiTags;
             return this;
         }
 
+        /**
+         * @param description The description of the AMI distribution configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable String description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param kmsKeyId The KMS key identifier used to encrypt the distributed image.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kmsKeyId(@Nullable String kmsKeyId) {
             $.kmsKeyId = kmsKeyId;
             return this;
         }
 
+        /**
+         * @param launchPermissionConfiguration Launch permissions can be used to configure which AWS accounts can use the AMI to launch instances.
+         * 
+         * @return builder
+         * 
+         */
         public Builder launchPermissionConfiguration(@Nullable DistributionConfigurationDistributionAmiDistributionConfigurationPropertiesLaunchPermissionConfigurationProperties launchPermissionConfiguration) {
             $.launchPermissionConfiguration = launchPermissionConfiguration;
             return this;
         }
 
+        /**
+         * @param name The name of the AMI distribution configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param targetAccountIds The ID of accounts to which you want to distribute an image.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetAccountIds(@Nullable List<String> targetAccountIds) {
             $.targetAccountIds = targetAccountIds;
             return this;
         }
 
+        /**
+         * @param targetAccountIds The ID of accounts to which you want to distribute an image.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetAccountIds(String... targetAccountIds) {
             return targetAccountIds(List.of(targetAccountIds));
         }

@@ -22,6 +22,10 @@ public final class FunctionImageConfig extends com.pulumi.resources.InvokeArgs {
     @Import(name="command")
     private @Nullable List<String> command;
 
+    /**
+     * @return Command.
+     * 
+     */
     public Optional<List<String>> command() {
         return Optional.ofNullable(this.command);
     }
@@ -33,6 +37,10 @@ public final class FunctionImageConfig extends com.pulumi.resources.InvokeArgs {
     @Import(name="entryPoint")
     private @Nullable List<String> entryPoint;
 
+    /**
+     * @return EntryPoint.
+     * 
+     */
     public Optional<List<String>> entryPoint() {
         return Optional.ofNullable(this.entryPoint);
     }
@@ -44,6 +52,10 @@ public final class FunctionImageConfig extends com.pulumi.resources.InvokeArgs {
     @Import(name="workingDirectory")
     private @Nullable String workingDirectory;
 
+    /**
+     * @return WorkingDirectory.
+     * 
+     */
     public Optional<String> workingDirectory() {
         return Optional.ofNullable(this.workingDirectory);
     }
@@ -74,24 +86,54 @@ public final class FunctionImageConfig extends com.pulumi.resources.InvokeArgs {
             $ = new FunctionImageConfig(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param command Command.
+         * 
+         * @return builder
+         * 
+         */
         public Builder command(@Nullable List<String> command) {
             $.command = command;
             return this;
         }
 
+        /**
+         * @param command Command.
+         * 
+         * @return builder
+         * 
+         */
         public Builder command(String... command) {
             return command(List.of(command));
         }
 
+        /**
+         * @param entryPoint EntryPoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder entryPoint(@Nullable List<String> entryPoint) {
             $.entryPoint = entryPoint;
             return this;
         }
 
+        /**
+         * @param entryPoint EntryPoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder entryPoint(String... entryPoint) {
             return entryPoint(List.of(entryPoint));
         }
 
+        /**
+         * @param workingDirectory WorkingDirectory.
+         * 
+         * @return builder
+         * 
+         */
         public Builder workingDirectory(@Nullable String workingDirectory) {
             $.workingDirectory = workingDirectory;
             return this;

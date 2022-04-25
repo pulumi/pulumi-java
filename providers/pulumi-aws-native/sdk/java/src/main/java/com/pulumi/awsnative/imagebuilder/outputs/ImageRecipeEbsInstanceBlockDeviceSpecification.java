@@ -15,42 +15,42 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ImageRecipeEbsInstanceBlockDeviceSpecification {
     /**
-     * Use to configure delete on termination of the associated device.
+     * @return Use to configure delete on termination of the associated device.
      * 
      */
     private final @Nullable Boolean deleteOnTermination;
     /**
-     * Use to configure device encryption.
+     * @return Use to configure device encryption.
      * 
      */
     private final @Nullable Boolean encrypted;
     /**
-     * Use to configure device IOPS.
+     * @return Use to configure device IOPS.
      * 
      */
     private final @Nullable Integer iops;
     /**
-     * Use to configure the KMS key to use when encrypting the device.
+     * @return Use to configure the KMS key to use when encrypting the device.
      * 
      */
     private final @Nullable String kmsKeyId;
     /**
-     * The snapshot that defines the device contents.
+     * @return The snapshot that defines the device contents.
      * 
      */
     private final @Nullable String snapshotId;
     /**
-     * For GP3 volumes only – The throughput in MiB/s that the volume supports.
+     * @return For GP3 volumes only – The throughput in MiB/s that the volume supports.
      * 
      */
     private final @Nullable Integer throughput;
     /**
-     * Use to override the device&#39;s volume size.
+     * @return Use to override the device&#39;s volume size.
      * 
      */
     private final @Nullable Integer volumeSize;
     /**
-     * Use to override the device&#39;s volume type.
+     * @return Use to override the device&#39;s volume type.
      * 
      */
     private final @Nullable ImageRecipeEbsInstanceBlockDeviceSpecificationVolumeType volumeType;
@@ -76,58 +76,58 @@ public final class ImageRecipeEbsInstanceBlockDeviceSpecification {
     }
 
     /**
-     * Use to configure delete on termination of the associated device.
+     * @return Use to configure delete on termination of the associated device.
      * 
-    */
+     */
     public Optional<Boolean> deleteOnTermination() {
         return Optional.ofNullable(this.deleteOnTermination);
     }
     /**
-     * Use to configure device encryption.
+     * @return Use to configure device encryption.
      * 
-    */
+     */
     public Optional<Boolean> encrypted() {
         return Optional.ofNullable(this.encrypted);
     }
     /**
-     * Use to configure device IOPS.
+     * @return Use to configure device IOPS.
      * 
-    */
+     */
     public Optional<Integer> iops() {
         return Optional.ofNullable(this.iops);
     }
     /**
-     * Use to configure the KMS key to use when encrypting the device.
+     * @return Use to configure the KMS key to use when encrypting the device.
      * 
-    */
+     */
     public Optional<String> kmsKeyId() {
         return Optional.ofNullable(this.kmsKeyId);
     }
     /**
-     * The snapshot that defines the device contents.
+     * @return The snapshot that defines the device contents.
      * 
-    */
+     */
     public Optional<String> snapshotId() {
         return Optional.ofNullable(this.snapshotId);
     }
     /**
-     * For GP3 volumes only – The throughput in MiB/s that the volume supports.
+     * @return For GP3 volumes only – The throughput in MiB/s that the volume supports.
      * 
-    */
+     */
     public Optional<Integer> throughput() {
         return Optional.ofNullable(this.throughput);
     }
     /**
-     * Use to override the device&#39;s volume size.
+     * @return Use to override the device&#39;s volume size.
      * 
-    */
+     */
     public Optional<Integer> volumeSize() {
         return Optional.ofNullable(this.volumeSize);
     }
     /**
-     * Use to override the device&#39;s volume type.
+     * @return Use to override the device&#39;s volume type.
      * 
-    */
+     */
     public Optional<ImageRecipeEbsInstanceBlockDeviceSpecificationVolumeType> volumeType() {
         return Optional.ofNullable(this.volumeType);
     }

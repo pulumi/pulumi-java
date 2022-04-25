@@ -24,6 +24,10 @@ public final class AlertArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="action", required=true)
     private Output<AlertActionArgs> action;
 
+    /**
+     * @return The action to be taken by the alert when an anomaly is detected.
+     * 
+     */
     public Output<AlertActionArgs> action() {
         return this.action;
     }
@@ -35,6 +39,10 @@ public final class AlertArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="alertDescription")
     private @Nullable Output<String> alertDescription;
 
+    /**
+     * @return A description for the alert.
+     * 
+     */
     public Optional<Output<String>> alertDescription() {
         return Optional.ofNullable(this.alertDescription);
     }
@@ -46,6 +54,10 @@ public final class AlertArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="alertName")
     private @Nullable Output<String> alertName;
 
+    /**
+     * @return The name of the alert. If not provided, a name is generated automatically.
+     * 
+     */
     public Optional<Output<String>> alertName() {
         return Optional.ofNullable(this.alertName);
     }
@@ -57,6 +69,10 @@ public final class AlertArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="alertSensitivityThreshold", required=true)
     private Output<Integer> alertSensitivityThreshold;
 
+    /**
+     * @return A number between 0 and 100 (inclusive) that tunes the sensitivity of the alert.
+     * 
+     */
     public Output<Integer> alertSensitivityThreshold() {
         return this.alertSensitivityThreshold;
     }
@@ -68,6 +84,10 @@ public final class AlertArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="anomalyDetectorArn", required=true)
     private Output<String> anomalyDetectorArn;
 
+    /**
+     * @return The Amazon resource name (ARN) of the Anomaly Detector to alert.
+     * 
+     */
     public Output<String> anomalyDetectorArn() {
         return this.anomalyDetectorArn;
     }
@@ -100,47 +120,107 @@ public final class AlertArgs extends com.pulumi.resources.ResourceArgs {
             $ = new AlertArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param action The action to be taken by the alert when an anomaly is detected.
+         * 
+         * @return builder
+         * 
+         */
         public Builder action(Output<AlertActionArgs> action) {
             $.action = action;
             return this;
         }
 
+        /**
+         * @param action The action to be taken by the alert when an anomaly is detected.
+         * 
+         * @return builder
+         * 
+         */
         public Builder action(AlertActionArgs action) {
             return action(Output.of(action));
         }
 
+        /**
+         * @param alertDescription A description for the alert.
+         * 
+         * @return builder
+         * 
+         */
         public Builder alertDescription(@Nullable Output<String> alertDescription) {
             $.alertDescription = alertDescription;
             return this;
         }
 
+        /**
+         * @param alertDescription A description for the alert.
+         * 
+         * @return builder
+         * 
+         */
         public Builder alertDescription(String alertDescription) {
             return alertDescription(Output.of(alertDescription));
         }
 
+        /**
+         * @param alertName The name of the alert. If not provided, a name is generated automatically.
+         * 
+         * @return builder
+         * 
+         */
         public Builder alertName(@Nullable Output<String> alertName) {
             $.alertName = alertName;
             return this;
         }
 
+        /**
+         * @param alertName The name of the alert. If not provided, a name is generated automatically.
+         * 
+         * @return builder
+         * 
+         */
         public Builder alertName(String alertName) {
             return alertName(Output.of(alertName));
         }
 
+        /**
+         * @param alertSensitivityThreshold A number between 0 and 100 (inclusive) that tunes the sensitivity of the alert.
+         * 
+         * @return builder
+         * 
+         */
         public Builder alertSensitivityThreshold(Output<Integer> alertSensitivityThreshold) {
             $.alertSensitivityThreshold = alertSensitivityThreshold;
             return this;
         }
 
+        /**
+         * @param alertSensitivityThreshold A number between 0 and 100 (inclusive) that tunes the sensitivity of the alert.
+         * 
+         * @return builder
+         * 
+         */
         public Builder alertSensitivityThreshold(Integer alertSensitivityThreshold) {
             return alertSensitivityThreshold(Output.of(alertSensitivityThreshold));
         }
 
+        /**
+         * @param anomalyDetectorArn The Amazon resource name (ARN) of the Anomaly Detector to alert.
+         * 
+         * @return builder
+         * 
+         */
         public Builder anomalyDetectorArn(Output<String> anomalyDetectorArn) {
             $.anomalyDetectorArn = anomalyDetectorArn;
             return this;
         }
 
+        /**
+         * @param anomalyDetectorArn The Amazon resource name (ARN) of the Anomaly Detector to alert.
+         * 
+         * @return builder
+         * 
+         */
         public Builder anomalyDetectorArn(String anomalyDetectorArn) {
             return anomalyDetectorArn(Output.of(anomalyDetectorArn));
         }

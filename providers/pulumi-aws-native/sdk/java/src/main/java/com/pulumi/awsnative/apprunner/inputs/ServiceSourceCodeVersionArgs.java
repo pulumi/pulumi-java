@@ -25,6 +25,10 @@ public final class ServiceSourceCodeVersionArgs extends com.pulumi.resources.Res
     @Import(name="type", required=true)
     private Output<ServiceSourceCodeVersionType> type;
 
+    /**
+     * @return Source Code Version Type
+     * 
+     */
     public Output<ServiceSourceCodeVersionType> type() {
         return this.type;
     }
@@ -36,6 +40,10 @@ public final class ServiceSourceCodeVersionArgs extends com.pulumi.resources.Res
     @Import(name="value", required=true)
     private Output<String> value;
 
+    /**
+     * @return Source Code Version Value
+     * 
+     */
     public Output<String> value() {
         return this.value;
     }
@@ -65,20 +73,44 @@ public final class ServiceSourceCodeVersionArgs extends com.pulumi.resources.Res
             $ = new ServiceSourceCodeVersionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param type Source Code Version Type
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(Output<ServiceSourceCodeVersionType> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type Source Code Version Type
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(ServiceSourceCodeVersionType type) {
             return type(Output.of(type));
         }
 
+        /**
+         * @param value Source Code Version Value
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(Output<String> value) {
             $.value = value;
             return this;
         }
 
+        /**
+         * @param value Source Code Version Value
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(String value) {
             return value(Output.of(value));
         }

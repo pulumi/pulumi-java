@@ -22,6 +22,10 @@ public final class ClusterEndpoint extends com.pulumi.resources.InvokeArgs {
     @Import(name="address")
     private @Nullable String address;
 
+    /**
+     * @return The DNS address of the primary read-write node.
+     * 
+     */
     public Optional<String> address() {
         return Optional.ofNullable(this.address);
     }
@@ -33,6 +37,10 @@ public final class ClusterEndpoint extends com.pulumi.resources.InvokeArgs {
     @Import(name="port")
     private @Nullable Integer port;
 
+    /**
+     * @return The port number that the engine is listening on.
+     * 
+     */
     public Optional<Integer> port() {
         return Optional.ofNullable(this.port);
     }
@@ -62,11 +70,23 @@ public final class ClusterEndpoint extends com.pulumi.resources.InvokeArgs {
             $ = new ClusterEndpoint(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param address The DNS address of the primary read-write node.
+         * 
+         * @return builder
+         * 
+         */
         public Builder address(@Nullable String address) {
             $.address = address;
             return this;
         }
 
+        /**
+         * @param port The port number that the engine is listening on.
+         * 
+         * @return builder
+         * 
+         */
         public Builder port(@Nullable Integer port) {
             $.port = port;
             return this;

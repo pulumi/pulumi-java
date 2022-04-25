@@ -10,12 +10,12 @@ import java.util.Objects;
 @CustomType
 public final class FlowTag {
     /**
-     * A string used to identify this tag
+     * @return A string used to identify this tag
      * 
      */
     private final String key;
     /**
-     * A string containing the value for the tag
+     * @return A string containing the value for the tag
      * 
      */
     private final String value;
@@ -29,16 +29,16 @@ public final class FlowTag {
     }
 
     /**
-     * A string used to identify this tag
+     * @return A string used to identify this tag
      * 
-    */
+     */
     public String key() {
         return this.key;
     }
     /**
-     * A string containing the value for the tag
+     * @return A string containing the value for the tag
      * 
-    */
+     */
     public String value() {
         return this.value;
     }

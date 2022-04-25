@@ -17,35 +17,35 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ThemeVersion {
     /**
-     * &lt;p&gt;The Amazon Resource Name (ARN) of the resource.&lt;/p&gt;
+     * @return &lt;p&gt;The Amazon Resource Name (ARN) of the resource.&lt;/p&gt;
      * 
      */
     private final @Nullable String arn;
     /**
-     * &lt;p&gt;The Amazon QuickSight-defined ID of the theme that a custom theme inherits from. All
+     * @return &lt;p&gt;The Amazon QuickSight-defined ID of the theme that a custom theme inherits from. All
      *             themes initially inherit from a default QuickSight theme.&lt;/p&gt;
      * 
      */
     private final @Nullable String baseThemeId;
     private final @Nullable ThemeConfiguration configuration;
     /**
-     * &lt;p&gt;The date and time that this theme version was created.&lt;/p&gt;
+     * @return &lt;p&gt;The date and time that this theme version was created.&lt;/p&gt;
      * 
      */
     private final @Nullable String createdTime;
     /**
-     * &lt;p&gt;The description of the theme.&lt;/p&gt;
+     * @return &lt;p&gt;The description of the theme.&lt;/p&gt;
      * 
      */
     private final @Nullable String description;
     /**
-     * &lt;p&gt;Errors associated with the theme.&lt;/p&gt;
+     * @return &lt;p&gt;Errors associated with the theme.&lt;/p&gt;
      * 
      */
     private final @Nullable List<ThemeError> errors;
     private final @Nullable ThemeResourceStatus status;
     /**
-     * &lt;p&gt;The version number of the theme.&lt;/p&gt;
+     * @return &lt;p&gt;The version number of the theme.&lt;/p&gt;
      * 
      */
     private final @Nullable Double versionNumber;
@@ -71,17 +71,17 @@ public final class ThemeVersion {
     }
 
     /**
-     * &lt;p&gt;The Amazon Resource Name (ARN) of the resource.&lt;/p&gt;
+     * @return &lt;p&gt;The Amazon Resource Name (ARN) of the resource.&lt;/p&gt;
      * 
-    */
+     */
     public Optional<String> arn() {
         return Optional.ofNullable(this.arn);
     }
     /**
-     * &lt;p&gt;The Amazon QuickSight-defined ID of the theme that a custom theme inherits from. All
+     * @return &lt;p&gt;The Amazon QuickSight-defined ID of the theme that a custom theme inherits from. All
      *             themes initially inherit from a default QuickSight theme.&lt;/p&gt;
      * 
-    */
+     */
     public Optional<String> baseThemeId() {
         return Optional.ofNullable(this.baseThemeId);
     }
@@ -89,23 +89,23 @@ public final class ThemeVersion {
         return Optional.ofNullable(this.configuration);
     }
     /**
-     * &lt;p&gt;The date and time that this theme version was created.&lt;/p&gt;
+     * @return &lt;p&gt;The date and time that this theme version was created.&lt;/p&gt;
      * 
-    */
+     */
     public Optional<String> createdTime() {
         return Optional.ofNullable(this.createdTime);
     }
     /**
-     * &lt;p&gt;The description of the theme.&lt;/p&gt;
+     * @return &lt;p&gt;The description of the theme.&lt;/p&gt;
      * 
-    */
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
-     * &lt;p&gt;Errors associated with the theme.&lt;/p&gt;
+     * @return &lt;p&gt;Errors associated with the theme.&lt;/p&gt;
      * 
-    */
+     */
     public List<ThemeError> errors() {
         return this.errors == null ? List.of() : this.errors;
     }
@@ -113,9 +113,9 @@ public final class ThemeVersion {
         return Optional.ofNullable(this.status);
     }
     /**
-     * &lt;p&gt;The version number of the theme.&lt;/p&gt;
+     * @return &lt;p&gt;The version number of the theme.&lt;/p&gt;
      * 
-    */
+     */
     public Optional<Double> versionNumber() {
         return Optional.ofNullable(this.versionNumber);
     }

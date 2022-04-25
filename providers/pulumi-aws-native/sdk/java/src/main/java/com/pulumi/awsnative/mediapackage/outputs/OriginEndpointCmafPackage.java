@@ -18,17 +18,17 @@ import javax.annotation.Nullable;
 public final class OriginEndpointCmafPackage {
     private final @Nullable OriginEndpointCmafEncryption encryption;
     /**
-     * A list of HLS manifest configurations
+     * @return A list of HLS manifest configurations
      * 
      */
     private final @Nullable List<OriginEndpointHlsManifest> hlsManifests;
     /**
-     * Duration (in seconds) of each segment. Actual segments will be rounded to the nearest multiple of the source segment duration.
+     * @return Duration (in seconds) of each segment. Actual segments will be rounded to the nearest multiple of the source segment duration.
      * 
      */
     private final @Nullable Integer segmentDurationSeconds;
     /**
-     * An optional custom string that is prepended to the name of each segment. If not specified, it defaults to the ChannelId.
+     * @return An optional custom string that is prepended to the name of each segment. If not specified, it defaults to the ChannelId.
      * 
      */
     private final @Nullable String segmentPrefix;
@@ -52,23 +52,23 @@ public final class OriginEndpointCmafPackage {
         return Optional.ofNullable(this.encryption);
     }
     /**
-     * A list of HLS manifest configurations
+     * @return A list of HLS manifest configurations
      * 
-    */
+     */
     public List<OriginEndpointHlsManifest> hlsManifests() {
         return this.hlsManifests == null ? List.of() : this.hlsManifests;
     }
     /**
-     * Duration (in seconds) of each segment. Actual segments will be rounded to the nearest multiple of the source segment duration.
+     * @return Duration (in seconds) of each segment. Actual segments will be rounded to the nearest multiple of the source segment duration.
      * 
-    */
+     */
     public Optional<Integer> segmentDurationSeconds() {
         return Optional.ofNullable(this.segmentDurationSeconds);
     }
     /**
-     * An optional custom string that is prepended to the name of each segment. If not specified, it defaults to the ChannelId.
+     * @return An optional custom string that is prepended to the name of each segment. If not specified, it defaults to the ChannelId.
      * 
-    */
+     */
     public Optional<String> segmentPrefix() {
         return Optional.ofNullable(this.segmentPrefix);
     }

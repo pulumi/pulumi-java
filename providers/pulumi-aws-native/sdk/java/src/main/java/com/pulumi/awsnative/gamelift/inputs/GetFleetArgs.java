@@ -19,6 +19,10 @@ public final class GetFleetArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="fleetId", required=true)
     private String fleetId;
 
+    /**
+     * @return Unique fleet ID
+     * 
+     */
     public String fleetId() {
         return this.fleetId;
     }
@@ -47,6 +51,12 @@ public final class GetFleetArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetFleetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param fleetId Unique fleet ID
+         * 
+         * @return builder
+         * 
+         */
         public Builder fleetId(String fleetId) {
             $.fleetId = fleetId;
             return this;
